@@ -1,0 +1,13 @@
+:root,
+    /*Dark Purple*/
+    :root.option1 { 
+        --marine-green: #636b3f;
+        --deep-green: #2b361c;
+        --barium-yellow: #fefae3;
+        --sepia-e37: #d4a369;
+        --leather: #b17036;
+    }
+
+a {
+    color: var(--barium-yellow);
+}

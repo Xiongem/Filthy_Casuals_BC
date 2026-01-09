@@ -1,0 +1,46 @@
+:root,
+    /*Dark Purple*/
+    :root.option1 { 
+        --marine-green: #636b3f;
+        --deep-green: #2b361c;
+        --barium-yellow: #fefae3;
+        --sepia-e37: #d4a369;
+        --leather: #b17036;
+    }
+@media only screen and (min-width: 200px) {
+    body {
+        background-color: var(--sepia-e37);
+    }
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .wrapper-content {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .title-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    h1 {
+        color: var(--deep-green);
+    }
+    .link-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .inputs {
+        margin-bottom: 1em;
+        background-color: var(--barium-yellow);
+        accent-color: var(--marine-green);
+        border: 2px solid var(--marine-green);
+        border-radius: 4px;
+        height: 2em;
+        padding-left: 0.5em;
+    }
+    .labels {
+        color: var(--deep-green);
+    }
+}
