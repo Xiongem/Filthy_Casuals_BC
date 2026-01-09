@@ -7,7 +7,7 @@
     <meta property="og:description" content="A competition for filthy casuals."> 
     <meta property="og:image" content=""> 
     <meta property="og:url" content="">
-    <title>Login</title>
+    <title>One-time Passcode</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="website icon" type="webp" href="">
@@ -19,26 +19,28 @@
     <div class="wrapper">
         <div class="wrapper-content">
             <div class="title-wrapper">
-                <h1>Login</h1>
+                <h1>Account Creation Checkpoint</h1>
             </div>
-            <label for="email" class="labels">Email:</label>
-            <input type="email"
-                name="email"
-                id="email"
-                class="inputs"
-                required>
-            <label for="password" class="labels">Password:</label>
-            <input type="password"
-                name="password"
-                id="password"
+            <div class="label-wrapper">
+                <label>One-time Passcode:</label>
+                    <div class="questionMark-wrapper">
+                        <img id="questionMark" src="images/questionMark.webp" alt="question mark icon">
+                        <div class="popup-wrapper" id="OTPExplain">
+                            <div class="popup">
+                                <h4>This is a closed site that's only available to members.</h4>
+                                <h4>If you're part of the Book Challenge on discord, reach out to 
+                                    the site dev who will give you a one-time passcode to input below.</h4>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <input type="text"
+                name="OTP"
+                id="OTP"
                 class="inputs"
                 required>
             <div class="button-wrapper">
-                <button type="submit" id="loginButton" class="inputs">Login</button>
-            </div>
-            <div class="link-wrapper">
-                <a href="onetimePasscode.html">One-Time Passcode</a>
-                <a href="">Forgot Password?</a>
+                <button type="submit" id="OTPButton" class="inputs">Submit</button>
             </div>
         </div>
     </div>

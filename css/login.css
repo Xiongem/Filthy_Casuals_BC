@@ -14,6 +14,7 @@
     .wrapper {
         display: flex;
         justify-content: center;
+        margin-top: 3em;
     }
     .wrapper-content {
         display: flex;
@@ -23,9 +24,51 @@
     .title-wrapper {
         display: flex;
         justify-content: center;
+        text-align: center;
+        margin-bottom: 2em;
     }
     h1 {
         color: var(--deep-green);
+    }
+    .label-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    .questionMark-wrapper {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+    }
+    #questionMark {
+        width: 0.7em;
+        height: fit-content;
+        padding: 0 0 2px 2px;
+    }
+    .popup-wrapper {
+        position: absolute;
+        display: none;
+        width: 13.5em;
+        height: fit-content;
+        background-color: var(--barium-yellow);
+        border: 2px solid var(--deep-green);
+        border-radius: 4px;
+        padding: 8px;
+    }
+    .questionMark-wrapper:hover .popup-wrapper {
+        display: flex;
+    }
+    .button-wrapper {
+        display: flex;
+        justify-content: end;
+    }
+    #loginButton, #OTPButton {
+        background-color: var(--marine-green);
+        color: var(--barium-yellow);
+        border: none;
+        border-radius: 12px;
+        width: 5em;
+        height: 2.5em;
+        cursor: pointer;
     }
     .link-wrapper {
         display: flex;
@@ -43,4 +86,20 @@
     .labels {
         color: var(--deep-green);
     }
+}
+
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+
+@media only screen and (min-width: 720px) {
+
+}
+
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+
+@media only screen and (min-width: 1200px) {
+
 }

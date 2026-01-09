@@ -7,6 +7,14 @@
         --sepia-e37: #d4a369;
         --leather: #b17036;
     }
+/** UNIVERSAL*/
+h1, h2, h3, h4, h5, h6, p, body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
 
 a {
     color: var(--barium-yellow);
