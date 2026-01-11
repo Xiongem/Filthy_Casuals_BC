@@ -22,7 +22,7 @@
             <div class="title-wrapper">
                 <h1>Account Creation</h1>
             </div>
-            <form id="signup" action="php-processes/create-account" method="post" class="wrapper-content">
+            <form id="signup" action="" method="post">
                 <label class="labels">Email:</label>
                 <input type="email"
                     name="email"
@@ -41,13 +41,15 @@
                     id="password"
                     class="inputs"
                     required>
-                <label class="labels">Retype Password:</label>
+                <div class="span-wrapper">
+                    <label class="labels">Retype Password:</label>
+                    <span id="passwordError" class="error"></span>
+                </div>
                 <input type="password"
                     name="retypePassword"
                     id="retypePassword"
                     class="inputs"
                     required>
-                <span id="passwordError" class="error"></span>
                 <div class="checkbox-wrapper">
                     <label class="labels">Click to show password</label>
                     <input type="checkbox"
@@ -83,7 +85,6 @@
                 const username = document.getElementById('name').value;
                 const password = document.getElementById('password').value;
                 const confirmPassword = document.getElementById('retypePassword').value;
-                // const submitBtn = document.getElementById('accountButton');
                 const errorElement = document.getElementById('passwordError');
     
                 let isValid = true;

@@ -65,6 +65,10 @@
         display: flex;
         justify-content: space-evenly;
     }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
     .inputs {
         margin-bottom: 1em;
         background-color: var(--barium-yellow);
@@ -85,6 +89,10 @@
     }
     .labels {
         color: var(--deep-green);
+    }
+    .span-wrapper {
+        display: flex;
+        justify-content: space-between;
     }
     .checkbox-wrapper {
         margin-bottom: 2em;
@@ -145,7 +153,19 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 720px) {
-
+    .wrapper-content {
+        width: 60%;
+    }
+    .inputs {
+        height: 3em;
+    }
+    .popup-wrapper {
+        width: 17em;
+    }
+    .profile-picture {
+        height: 200px;
+        width: 200px;
+    }
 }
 
 /** ####################### *//** ####################### *//** ####################### */
@@ -153,5 +173,20 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1200px) {
-
+    .wrapper-content {
+        width: 40%;
+    }
+    .title-wrapper {
+        margin-bottom: 3em;
+    }
+    .inputs {
+        margin-bottom: 3em;
+    }
+    .popup-wrapper {
+        width: 17em;
+    }
+    .profile-picture {
+        height: 200px;
+        width: 200px;
+    }
 }
