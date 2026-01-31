@@ -8,9 +8,6 @@
         --leather: #b17036;
     }
 @media only screen and (min-width: 200px) {
-    body {
-        background-color: var(--sepia-e37);
-    }
     .wrapper {
         display: flex;
         justify-content: center;

@@ -1,0 +1,73 @@
+:root,
+    /*Dark Purple*/
+    :root.option1 { 
+        --marine-green: #636b3f;
+        --deep-green: #2b361c;
+        --barium-yellow: #fefae3;
+        --sepia-e37: #d4a369;
+        --leather: #b17036;
+    }
+@media only screen and (min-width: 200px) {
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 1em; */
+    }
+    #nav-menu-icon {
+        position: relative;
+        font-size: 44px;
+        padding: 0.4em;
+        z-index: 10;
+        color: var(--deep-green);
+    }
+    .nav-menu-wrapper {
+        position: absolute;
+        display: none;
+        top: 0;
+        width: 35%;
+        background-color: var(--marine-green);
+        z-index: 1;
+        border-radius: 0 0 12px 0;
+    }
+    .nav-menu-content {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: 100%;
+        padding: 5em 1.5em 1em 1em;
+    }
+    .nav-item {
+        margin: 0.5em 0;
+        font-size: 18px;
+    }
+    .icon-wrapper:hover .nav-menu-wrapper {
+        display: flex;
+    }
+    .icon-wrapper:hover #nav-menu-icon {
+        color: var(--leather);
+    }
+    #login {
+        text-decoration: none;
+        font-size: 30px;
+        color: var(--deep-green);
+        padding: 0 0.5em;
+        font-weight: 600;
+    }
+}
+
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+
+@media only screen and (min-width: 720px) {
+
+}
+
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+
+@media only screen and (min-width: 1200px) {
+
+}
