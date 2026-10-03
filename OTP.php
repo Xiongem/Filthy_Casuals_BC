@@ -20,7 +20,7 @@ dbConnect();
     <title>OTP Creation</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="website icon" type="webp" href="">
+    <!-- <link rel="website icon" type="webp" href=""> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script>
     <script src="javascript/scripts.js"></script>
