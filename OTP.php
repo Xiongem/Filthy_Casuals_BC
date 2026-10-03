@@ -66,13 +66,13 @@ dbConnect();
                 $oneTimePass = bin2hex(random_bytes(16));
             ?>
             //assign values
-            var oneTimePass = "<?= $oneTimePass ?>";
+            var oneTimePass = <?= json_encode($oneTimePass) ?>;
             //begin post method
             $.post("php/createOTP.php", {
                 //DATA
                 oneTimePass: oneTimePass
             }, function(response) {
-                showOTP(<?= $oneTimePass ?>);
+                showOTP(<?= json_encode($oneTimePass) ?>);
             });
         }
     </script>
