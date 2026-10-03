@@ -66,7 +66,7 @@ dbConnect();
                 $oneTimePass = bin2hex(random_bytes(16));
             ?>
             //assign values
-            var oneTimePass = <?= $oneTimePass ?>;
+            var oneTimePass = "<?= $oneTimePass ?>";
             //begin post method
             $.post("php/createOTP.php", {
                 //DATA
