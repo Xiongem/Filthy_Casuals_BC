@@ -1,8 +1,26 @@
 <?php 
 if ($_SERVER["REQUEST_METHOD"] === "POST") { 
     ob_start();
-    require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
+    require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
     dbConnect();
+    
+    //query
+    $sql = sprintf("SELECT * FROM one_time_passcodes
+                    WHERE passcode = '%s'",
+                    $_SESSION["conn"]->real_escape_string($_POST["OTP"]));
+
+    $result = $_SESSION["conn"]->query($sql);
+
+    $passcode = $result->fetch_assoc();
+
+    if ($passcode) {
+        if () {
+            session_start();
+        $_SESSION['passcode_verified'] = true;
+        header("Location: createAccount.php");
+        exit;
+        }
+    }
 }
 ?>
 <!DOCTYPE html>
