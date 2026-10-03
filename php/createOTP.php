@@ -8,6 +8,8 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
+$oneTimePass_hash = $_POST['oneTimePass_hash'];
+
 $stmt = $_SESSION["conn"] -> prepare("INSERT INTO oneTimePasscodes (oneTimePass_hash) VALUES (?)");
     $stmt->bind_param("s",
                         $oneTimePass_hash);
