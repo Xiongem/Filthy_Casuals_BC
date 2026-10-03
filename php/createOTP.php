@@ -8,11 +8,11 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
-$oneTimePass_hash = $_POST['oneTimePass_hash'];
+$oneTimePass = $_POST['oneTimePass'];
 
-$stmt = $_SESSION["conn"] -> prepare("INSERT INTO oneTimePasscodes (oneTimePass_hash) VALUES (?)");
+$stmt = $_SESSION["conn"] -> prepare("INSERT INTO oneTimePasscodes (oneTimePass) VALUES (?)");
     $stmt->bind_param("s",
-                        $oneTimePass_hash);
+                        $oneTimePass);
 
 if ($stmt -> execute()) {
     echo "New record created successfully. One-time passcode: " . $oneTimePass;

@@ -64,16 +64,15 @@ dbConnect();
         function createOTP() {
             <?php
                 $oneTimePass = bin2hex(random_bytes(16));
-                $oneTimePass_hash = hash("sha256", $oneTimePass);
             ?>
             //assign values
-            var oneTimePass_hash = <?= json_encode($oneTimePass_hash) ?>;
+            var oneTimePass = <?= $oneTimePass ?>;
             //begin post method
             $.post("php/createOTP.php", {
                 //DATA
-                oneTimePass_hash: oneTimePass_hash
+                oneTimePass: oneTimePass
             }, function(response) {
-                showOTP(<?= json_encode($oneTimePass) ?>);
+                showOTP(<?= $oneTimePass ?>);
             });
         }
     </script>
