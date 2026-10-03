@@ -1,3 +1,10 @@
+<?php 
+if ($_SERVER["REQUEST_METHOD"] === "POST") { 
+    ob_start();
+    require($_SERVER['DOCUMENT_ROOT'] . '/php-processes/utilities.php');
+    dbConnect();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +49,7 @@
             <div class="button-wrapper">
                 <button type="submit" id="OTPButton" class="inputs buttons">Submit</button>
             </div>
-            <a href="createAccount.html">account creation</a>
+            <a href="createAccount.php">account creation</a>
         </div>
     </div>
 </body>
