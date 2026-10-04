@@ -1,3 +1,13 @@
+<?php
+    ob_start();
+    require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
+    dbConnect();
+
+    if (!isset($_SESSION['passcode_verified']) || $_SESSION['passcode_verified'] !== true) {
+        header("Location: onetimePasscode.php");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

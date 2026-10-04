@@ -28,19 +28,7 @@ dbConnect();
 </head>
 <body>
     <header>
-        <div class="nav-wrapper" id="nav-wrapper">
-            <div class="icon-wrapper">
-                <i class="fa fa-bars" id="nav-menu-icon"></i>
-                <div class="nav-menu-wrapper" id="nav-menu-wrapper">
-                    <div class="nav-menu-content" id="nav-menu-content">
-                        <a class="nav-item">Home</a>
-                        <a class="nav-item">Settings</a>
-                        <a class="nav-item">Logout</a>
-                    </div>
-                </div>
-            </div>
-            <a href="login.html" id="login">login</a>
-        </div>
+        <?= makeNav() ?>
     </header>
     <div class="wrapper">
         <div class="wrapper-content">
