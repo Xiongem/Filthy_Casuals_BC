@@ -1,45 +1,4 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('log_errors', 'On');
-ini_set('error_log', '/path/to/php_errors.log');
 
-$is_invalid = false;
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-    ob_start();
-    require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
-    dbConnect();
-
-    //query
-    $sql = sprintf("SELECT * FROM users
-                    WHERE username = '%s'",
-                    $_SESSION["conn"]->real_escape_string($_POST["username"]));
-
-    $result = $_SESSION["conn"]->query($sql);
-
-    $user = $result->fetch_assoc();
-
-    if ($user) {
-
-        if (password_verify($_POST["password"], $user["password_hash"])) && $user["verified"] == 1){
-
-          session_start();
-
-          $_SESSION['loggedin'] = true;
-          $_SESSION["user_id"] = $user["user_id"];
-
-            header("Location: index.php");
-          exit;
-        }
-    }
-
-    $is_invalid = true;
-
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
