@@ -22,10 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($passcode) {
         if ($OTP === $_POST["OTP"]) {
+            echo "hello";
             session_start();
-        $_SESSION['passcode_verified'] = true;
-        header("Location: createAccount.php?user_id=" . $user_id);
-        exit;
+            $_SESSION['passcode_verified'] = true;
+            header("Location: createAccount.php?user_id=" . $user_id);
+            exit;
         }
         else {
             $_SESSION['passcode_verified'] = false;
