@@ -7,6 +7,7 @@ ini_set('error_log', '/path/to/php_errors.log');
     ob_start();
     require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
     dbConnect();
+    session_start();
 
     if (!isset($_SESSION['passcode_verified']) || $_SESSION['passcode_verified'] !== true) {
         header("Location: onetimePasscode.php");
