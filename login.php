@@ -22,8 +22,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $user = $result->fetch_assoc();
 
     if ($user) {
+        if ($user["verified"] == 1) {}
+            if (password_verify($_POST["password"], $user["password_hash"]) ){
 
-        
+                session_start();
+
+                $_SESSION['loggedin'] = true;
+                $_SESSION["user_id"] = $user["user_id"];
+
+                    header("Location: index.php");
+                exit;
+            }
+        } 
     }
 
     $is_invalid = true;
