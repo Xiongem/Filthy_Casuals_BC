@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($user) {
 
-        if (password_verify($_POST["pwd"], $user["password_hash"])) && $user["verified"] == 1){
+        if (password_verify($_POST["password"], $user["password_hash"])) && $user["verified"] == 1){
 
           session_start();
 
@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <button type="submit" id="loginButton" class="inputs buttons">Login</button>
             </div>
             <div class="link-wrapper">
-                <a href="onetimePasscode.php">One-Time Passcode</a>
+                <a href="onetimePasscode.php">Account Creation</a>
                 <a href="">Forgot Password?</a>
             </div>
         </div>

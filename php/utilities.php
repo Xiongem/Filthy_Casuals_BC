@@ -24,7 +24,7 @@ function makeNav() {
                     </div>
                 </div>
             </div>
-            <a href="login.html" id="login">login</a>
+            <a href="login.php" id="login">login</a>
         </div>
     HTML;
     echo $htmlContent;

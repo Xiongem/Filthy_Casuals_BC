@@ -167,7 +167,7 @@
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 601px) {
     .wrapper-content {
         width: 60%;
     }
@@ -187,7 +187,7 @@
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
     .wrapper-content {
         width: 40%;
     }
@@ -204,4 +204,12 @@
         height: 200px;
         width: 200px;
     }
+}
+.error {
+    color: red;
+    font-size: 14px;
+}
+.success {
+    color: green;
+    font-size: 14px;
 }

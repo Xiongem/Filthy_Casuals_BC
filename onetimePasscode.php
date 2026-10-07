@@ -13,12 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $passcode = $result->fetch_assoc();
     $OTP = $passcode['oneTimePass'];
+    $user_id = $passcode['user_id'];
 
     if ($passcode) {
         if ($OTP === $_POST["OTP"]) {
             session_start();
         $_SESSION['passcode_verified'] = true;
-        header("Location: createAccount.php");
+        header("Location: createAccount.php?user_id=" . $user_id);
         exit;
         }
         else {

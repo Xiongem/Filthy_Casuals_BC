@@ -7,6 +7,77 @@
         header("Location: onetimePasscode.php");
         exit;
     }
+    
+$user_id = $_GET['user_id'];
+
+if (empty($_POST["username"])) {
+    die("Username is required");
+}
+
+if (! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+    die("Valid email is required");
+}
+
+if (strlen($_POST["password"]) < 8) {
+    die("Password must be at least 8 characters");
+}
+
+if ( ! preg_match("/[a-z]/i", $_POST["password"])) {
+    die("Password must contain at least one letter");
+}
+
+if ( ! preg_match("/[0-9]/i", $_POST["password"])) {
+    die("Password must contain at least one number");
+}
+
+if ($_POST["password"] !== $_POST["confirm_password"]) {
+    die("Passwords must match");
+}
+
+
+$password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+
+$filename = $_FILES["profilePicture"]["name"];
+    $tempname = $_FILES["profilePicture"]["tmp_name"];
+    $folder = "./images/userPFP/" . $filename;
+
+if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $_POST["profilePicture"]) {
+    $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("issss",
+                        $_POST["user_id"],
+                        $_POST["username"],
+                        $_POST["email"],
+                        $password_hash,
+                        $filename);
+
+
+    if ($stmt -> execute() && move_uploaded_file($tempname, $folder)) {
+        $sql = sprintf("SELECT * FROM users
+                        WHERE username = '%s'",
+                        $_SESSION["conn"]->real_escape_string($_POST["username"]));
+
+        $result = $_SESSION["conn"]->query($sql);
+
+        $user = $result->fetch_assoc();
+
+            unset($_SESSION['createAccount']);
+            $_SESSION["user_id"] = $user["user_id"];
+            $_SESSION["createAccount"] = true;
+            
+            header("Location: /mailVerification.php");
+            exit;
+        } else {
+            die("something went wrong");
+    }
+} else {
+    $_SESSION["createAccount"] = false;
+            
+    header("Location: /createAccount.php");
+}
+
+
+$stmt -> close();
+mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +96,50 @@
     <script src="javascript/scripts.js"></script>
     <script src="https://use.fontawesome.com/fe459689b4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function checkName(){
+            var username = document.getElementById("username").value;
+            
+            if(username){
+                $.ajax({
+                type: 'post',
+                url: 'php/checkData.php',
+                data: {
+                    username: username,
+                },
+                success: function (data) {
+                    $('#user-availability-status').html(data);
+                }
+                });
+            }
+            else{
+                $('#user-availability-status').html("");
+                console.log("Something went wrong")
+                return false;
+            }
+        }
+        function checkEmail(){
+            var email = document.getElementById("email").value;
+            
+            if(email){
+                $.ajax({
+                type: 'post',
+                url: 'php/checkData.php',
+                data: {
+                    email: email,
+                },
+                success: function (data) {
+                    $('#email-availability-status').html(data);
+                }
+                });
+            }
+            else{
+                $('#email-availability-status').html("");
+                console.log("Something went wrong")
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -32,34 +147,50 @@
             <div class="title-wrapper">
                 <h1>Account Creation</h1>
             </div>
-            <form id="signup" action="" method="post">
+            <form id="signup" action="php/process-createAccount.php" method="post">
                 <label class="labels">Email:</label>
                 <input type="email"
                     name="email"
                     id="email"
                     class="inputs"
+                    onchange="checkEmail();"
                     required>
+
+                <span id="email-availability-status"></span>
+
                 <label class="labels">Name/Nickname:</label>
                 <input type="text"
-                    name="name"
-                    id="name"
+                    name="username"
+                    id="username"
                     class="inputs"
+                    onchange="checkName();"
                     required>
+
+                <span id="user-availability-status"></span>
+
                 <label class="labels">Password:</label>
                 <input type="password"
                     name="password"
                     id="password"
                     class="inputs"
                     required>
+
+                <input type="hidden"
+                    name="user_id"
+                    id="user_id"
+                    value="<?php echo htmlspecialchars($user_id); ?>">
+
                 <div class="span-wrapper">
                     <label class="labels">Retype Password:</label>
                     <span id="passwordError" class="error"></span>
                 </div>
+
                 <input type="password"
                     name="retypePassword"
                     id="retypePassword"
                     class="inputs"
                     required>
+
                 <div class="checkbox-wrapper">
                     <label class="labels">Click to show password</label>
                     <input type="checkbox"
@@ -67,6 +198,7 @@
                         id="revealPass"
                         onclick="showPassword()">
                 </div>
+
                 <div class="upload-wrapper">
                     <label class="labels">Upload Profile Picture:</label>
                     <div class="profile-picture">
@@ -74,12 +206,19 @@
                             <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
                         </h1>
                         <input
+                            name="profilePicture"
                             class="file-uploader"
                             type="file"
+                            enctype="multipart/form-data"
                             onchange="upload()"
                             accept="image/*">
                     </div>
                 </div>
+
+                <?php if ($_SESSION["createAccount"] === false): ?>
+                    <em class="required">Please Fill Out All Fields</em>
+                <?php endif; ?>
+
                 <div class="button-wrapper">
                     <button type="submit" id="accountButton" class="inputs buttons">Submit</button>
                 </div>
@@ -92,22 +231,14 @@
             });
     
             function validateForm() {
-                const username = document.getElementById('name').value;
                 const password = document.getElementById('password').value;
                 const confirmPassword = document.getElementById('retypePassword').value;
                 const errorElement = document.getElementById('passwordError');
-    
-                let isValid = true;
-    
-                if (!username || !password || !confirmPassword) {
-                    isValid = false;
-                }
     
                 if (password !== confirmPassword) {
                     errorElement.textContent = 'Passwords must match';
                     errorElement.classList.remove('success');
                     errorElement.classList.add('error');
-                    isValid = false;
                 } else {
                     errorElement.textContent = 'Passwords match';
                     errorElement.classList.remove('error');
