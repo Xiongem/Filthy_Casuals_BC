@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     echo "hello 1";
     //query
-    $sql = sprintf("SELECT * FROM one_time_passcodes
+    $sql = sprintf("SELECT * FROM oneTimePasscodes
                     WHERE passcode = '%s'",
                     $_SESSION["conn"]->real_escape_string($_POST["OTP"]));
 
