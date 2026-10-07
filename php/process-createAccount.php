@@ -1,8 +1,19 @@
 <?php
-ob_start();
-require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
-dbConnect();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 'On');
+ini_set('error_log', '/path/to/php_errors.log');
 
+    ob_start();
+    require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
+    dbConnect();
+
+    if (!isset($_SESSION['passcode_verified']) || $_SESSION['passcode_verified'] !== true) {
+        header("Location: onetimePasscode.php");
+        exit;
+    }
+    
+$user_id = $_POST['user_id'];
 
 if (empty($_POST["username"])) {
     die("Username is required");
@@ -35,9 +46,9 @@ $filename = $_FILES["profilePicture"]["name"];
     $tempname = $_FILES["profilePicture"]["tmp_name"];
     $folder = "./images/userPFP/" . $filename;
 
-if ($_POST["username"] !== "" && $_POST["email"] !== "" && $_POST["password"] !== "") {
+if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $_POST["profilePicture"]) {
     $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss",
+    $stmt->bind_param("issss",
                         $_POST["user_id"],
                         $_POST["username"],
                         $_POST["email"],
@@ -58,7 +69,7 @@ if ($_POST["username"] !== "" && $_POST["email"] !== "" && $_POST["password"] !=
             $_SESSION["user_id"] = $user["user_id"];
             $_SESSION["createAccount"] = true;
             
-            header("Location: /login.php");
+            header("Location: /mailVerification.php");
             exit;
         } else {
             die("something went wrong");
