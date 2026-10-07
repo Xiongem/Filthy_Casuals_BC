@@ -12,7 +12,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
     dbConnect();
 
-    
+    //query
+    $sql = sprintf("SELECT * FROM users
+                    WHERE username = '%s'",
+                    $_SESSION["conn"]->real_escape_string($_POST["username"]));
+
+    $result = $_SESSION["conn"]->query($sql);
+
+    $user = $result->fetch_assoc();
+
+    if ($user) {
+
+        
+    }
+
+    $is_invalid = true;
 
 }
 
