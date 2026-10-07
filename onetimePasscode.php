@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
     dbConnect();
     
+    echo "hello 1";
     //query
     $sql = sprintf("SELECT * FROM one_time_passcodes
                     WHERE passcode = '%s'",
@@ -22,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($passcode) {
         if ($OTP === $_POST["OTP"]) {
-            echo "hello";
+            echo "hello 2";
             session_start();
             $_SESSION['passcode_verified'] = true;
             header("Location: createAccount.php?user_id=" . $user_id);
