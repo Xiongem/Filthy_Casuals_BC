@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <button type="submit" id="OTPButton" class="inputs buttons">Submit</button>
                 </div>
             </form>
-            <a href="createAccount.php">account creation</a>
+            <!-- <a href="createAccount.php">account creation</a> -->
         </div>
     </div>
 </body>
