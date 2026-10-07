@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         </div>
                     </div>
             </div>
-            <form action="createAccount.php" method="post">
+            <form action="#" method="post">
                 <input type="text"
                     name="OTP"
                     id="OTP"
