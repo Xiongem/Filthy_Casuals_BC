@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $user = $result->fetch_assoc();
 
     if ($user) {
-        if ($user["verified"] == 1) {}
+        if ($user["verified"] == 1) {
             if (password_verify($_POST["password"], $user["password_hash"]) ){
 
                 session_start();
