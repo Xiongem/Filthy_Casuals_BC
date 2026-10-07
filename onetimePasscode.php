@@ -64,14 +64,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         </div>
                     </div>
             </div>
-            <input type="text"
-                name="OTP"
-                id="OTP"
-                class="inputs"
-                required>
-            <div class="button-wrapper">
-                <button type="submit" id="OTPButton" class="inputs buttons">Submit</button>
-            </div>
+            <form action="createAccount.php" method="post">
+                <input type="text"
+                    name="OTP"
+                    id="OTP"
+                    class="inputs"
+                    required>
+                <div class="button-wrapper">
+                    <button type="submit" id="OTPButton" class="inputs buttons">Submit</button>
+                </div>
+            </form>
             <a href="createAccount.php">account creation</a>
         </div>
     </div>

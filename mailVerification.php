@@ -12,23 +12,41 @@ require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 
 $mail = new PHPMailer\PHPMailer\PHPMailer;
 dbConnect();
+session_start();
 
-$email = $_POST["email"];
-$username = $_POST["username"];
+$userID = $_SESSION["user_id"];
 
+ $sql = "SELECT email, username FROM users WHERE id = $userID";
+        $result = $_SESSION["conn"]->query($sql);
+        $user = $result->fetch_assoc();
 
-if ($email && $username) {
+//* Create a unique token for email verification
+$token = bin2hex(random_bytes(16));
+$token_hash = hash("sha256", $token);
+$expiry = date("Y-m-d H:i:s",time() + 60 * 30);
+
+//* Store the token and expiry in the database for the user
+$sql = "UPDATE users SET verification_hash = ?, verification_expires_at = ? WHERE id = ?";
+    $stmt = $_SESSION["conn"] -> prepare($sql);
+    $stmt->bind_param("sssi", 
+                            $token_hash, $expiry, $user['email'], $userID);
+    $stmt -> execute() ;
+
+//* Send the verification email to the user
+if ($user['email'] && $user['username']) {
     $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
 
-    $mail -> setFrom("noreply@filthycasualsBC.com");
-    $mail -> addAddress($email);
+    $mail -> setFrom("noreply@filthycasualsbc.com");
+    $mail -> addAddress($user['email']);
     $mail->Subject = "Account Creation Verification";
     $mail -> Body = <<<END
         Hello, 
         <br><br>
         Thank you for creating an account with us! <br>
+        We need to make sure you're not a bot trying to infiltrate the system. <br>
         Please click the link below to verify your email address: <br>
-        Click <a href="http://filthycasualsBC.com/verify-email.php?token=$token">here</a> to verify your email.
+        Click <a href="http://filthycasualsbc.com/verify-email.php?token=$token">here</a> to verify your email. <br>
+        This link will expire in 30 minutes.
         <br><br>
         If you did not make this request, please ignore this email.
         <br><br>
@@ -39,7 +57,8 @@ if ($email && $username) {
     } catch(Exception $e) {
         echo "Message could not be sent. Mail Sending error: {$mail->ErrorInfo}";
     }
-header("Location: /index.php");
+
+    header("Location: /verificationSent.php");
 } else {
-    header("Location: /contact.php?result=fail");
+    echo "Error occurred while sending verification email.";
 }
