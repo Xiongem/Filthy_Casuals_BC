@@ -56,7 +56,7 @@ echo "hello 1";
 
     $filename = $_FILES['profilePicture']['name'];
         $tempname = $_FILES['profilePicture']['tmp_name'];
-        $folder = "images/userPFP/" . $filename;
+        $folder = "./images/userPFP/" . $filename;
 
     if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $filename) {
         $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
@@ -87,7 +87,7 @@ echo "hello 1";
         }
     } else {
         $_SESSION["createAccount"] = false;
-                echo "something went wrong";
+                echo "something went wrong 2";
         // header("Location: /createAccount.php");
     }
 
