@@ -39,7 +39,7 @@ $userID = $_SESSION["user_id"];
 <body>
     <header>
         <?= makeNav() ?>
-        <?php if ($admin == 0) { ?>
+        <?php if ($admin == 1) { ?>
             <a href="OTP.php" class="nav-item">One-Time Passcode</a>
         <?php } ?>
     </header>
