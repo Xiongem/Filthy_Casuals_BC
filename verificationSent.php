@@ -23,7 +23,7 @@ $userID = $_SESSION["user_id"];
     <meta property="og:description" content="A competition for filthy casuals."> 
     <meta property="og:image" content=""> 
     <meta property="og:url" content="">
-    <title>Account Creation</title>
+    <title>Verification Sent</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
