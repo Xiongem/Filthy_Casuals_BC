@@ -7,11 +7,10 @@ ini_set('error_log', '/path/to/php_errors.log');
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
-session_start();
 
 $userID = $_SESSION["user_id"];
 
- $sql = "SELECT email, username FROM users WHERE id = $userID";
+ $sql = "SELECT email, username FROM users WHERE user_id = $userID";
         $result = $_SESSION["conn"]->query($sql);
         $user = $result->fetch_assoc();
 ?>
