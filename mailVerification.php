@@ -28,36 +28,7 @@ $expiry = date("Y-m-d H:i:s",time() + 60 * 30);
 $sql = "UPDATE users SET verification_hash = ?, verification_expires_at = ? WHERE user_id = ?";
     $stmt = $_SESSION["conn"] -> prepare($sql);
     $stmt->bind_param("ssi", 
-                            $token_hash, $expiry, $user['user_id']);
+                            $token_hash, 
+                            $expiry, 
+                            $userID);
     $stmt -> execute() ;
-
-//* Send the verification email to the user
-if ($user['email'] && $user['username']) {
-    $mail = require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
-
-    $mail -> setFrom("noreply@filthycasualsbc.com");
-    $mail -> addAddress($user['email']);
-    $mail->Subject = "Account Creation Verification";
-    $mail -> Body = <<<END
-        Hello, 
-        <br><br>
-        Thank you for creating an account with us! <br>
-        We need to make sure you're not a bot trying to infiltrate the system. <br>
-        Please click the link below to verify your email address: <br>
-        Click <a href="http://filthycasualsbc.com/verify-email.php?token=$token">here</a> to verify your email. <br>
-        This link will expire in 30 minutes.
-        <br><br>
-        If you did not make this request, please ignore this email.
-        <br><br>
-        This process is automated, please do not reply to this email.
-    END;
-    Try {
-        $mail ->send();
-    } catch(Exception $e) {
-        echo "Message could not be sent. Mail Sending error: {$mail->ErrorInfo}";
-    }
-
-    header("Location: /verificationSent.php");
-} else {
-    echo "Error occurred while sending verification email.";
-}
