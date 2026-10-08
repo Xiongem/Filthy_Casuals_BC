@@ -5,6 +5,7 @@ ini_set('log_errors', 'On');
 ini_set('error_log', '/path/to/php_errors.log');
 
 $user_id = $_GET['user_id'];
+$_SESSION["createAccount"] = true;
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -67,7 +67,6 @@ if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $_POST["profi
 
             unset($_SESSION['createAccount']);
             $_SESSION["user_id"] = $user["user_id"];
-            $_SESSION["createAccount"] = true;
             
             header("Location: /mailVerification.php");
             exit;
