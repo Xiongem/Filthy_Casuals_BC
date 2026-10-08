@@ -185,7 +185,7 @@ mysqli_close($conn);
                 <input type="hidden"
                     name="user_id"
                     id="user_id"
-                    value="<?php echo htmlspecialchars($user_id); ?>">
+                    value="<?= $user_id; ?>">
 
                 <div class="span-wrapper">
                     <label class="labels">Retype Password:</label>
