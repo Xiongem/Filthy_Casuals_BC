@@ -20,6 +20,7 @@ function makeNav() {
             $result = $_SESSION["conn"]->query($sql);
             $user = $result->fetch_assoc();
                 $pfp = $user['pfp'];
+                $admin = $user['admin'];
         $htmlContent = <<<HTML
             <div class="nav-wrapper" id="nav-wrapper">
                 <div class="icon-wrapper">
