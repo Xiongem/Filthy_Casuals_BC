@@ -44,10 +44,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 echo "hello 1";
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
-echo $_FILES["profilePicture"]["name"];
-    $filename = $_FILES["profilePicture"]["name"];
-        $tempname = $_FILES["profilePicture"]["tmp_name"];
-        $folder = "./images/userPFP/" . $filename;
+
+    $image = $_FILES['profilePicture']['name'];
+
+$tmp = $_FILES['profilePicture']['tmp_name'];
+
+$folder = "uploads/".$image;
+
+
+
+echo $_FILES['profilePicture'];
+    // $filename = $_FILES["profilePicture"]["name"];
+    //     $tempname = $_FILES["profilePicture"]["tmp_name"];
+    //     $folder = "./images/userPFP/" . $filename;
 
     if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $_POST["profilePicture"]) {
         $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
