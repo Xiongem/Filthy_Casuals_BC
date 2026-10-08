@@ -10,7 +10,7 @@ dbConnect();
 forceLogin();
 
 $userID = $_SESSION["user_id"];
-$now = time();
+$now = date("Y-m-d H:i:s",time());
 
 echo $now;
 ?>
