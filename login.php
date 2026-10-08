@@ -14,8 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     //query
     $sql = sprintf("SELECT * FROM users
-                    WHERE username = '%s'",
-                    $_SESSION["conn"]->real_escape_string($_POST["username"]));
+                    WHERE email = '%s'",
+                    $_SESSION["conn"]->real_escape_string($_POST["email"]));
 
     $result = $_SESSION["conn"]->query($sql);
 
