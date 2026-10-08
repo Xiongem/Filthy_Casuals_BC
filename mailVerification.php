@@ -24,3 +24,14 @@ $token = bin2hex(random_bytes(16));
 $token_hash = hash("sha256", $token);
 $expiry = date("Y-m-d H:i:s",time() + 60 * 30);
 echo "Token: ". $token . "<br>";
+
+//* Store the token and expiry in the database for the user
+$sql = "UPDATE users SET verification_hash = ?, verification_expires_at = ? WHERE user_id = ?";
+    $stmt = $_SESSION["conn"] -> prepare($sql);
+    $stmt->bind_param("ssi", 
+                            $token_hash, 
+                            $expiry, 
+                            $userID);
+    $stmt -> execute() ;
+
+echo "Token stored in database for user ID: $userID <br>";
