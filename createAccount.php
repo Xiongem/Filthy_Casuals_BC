@@ -154,7 +154,7 @@ echo $_FILES["profilePicture"];
             <div class="title-wrapper">
                 <h1>Account Creation</h1>
             </div>
-            <form id="signup" action="#" method="post">
+            <form id="signup" action="#" method="post" enctype="multipart/form-data">
                 <label class="labels">Email:</label>
                 <input type="email"
                     name="email"
@@ -211,9 +211,9 @@ echo $_FILES["profilePicture"];
                             name="profilePicture"
                             class="file-uploader"
                             type="file"
-                            enctype="multipart/form-data"
                             onchange="upload()"
-                            accept="image/*">
+                            
+                            value="">
                     </div>
                 </div>
 
