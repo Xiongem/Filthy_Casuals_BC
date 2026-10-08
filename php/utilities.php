@@ -46,12 +46,12 @@ function makeNav() {
                     <div class="dropdown-content" id="navDropContent">
                         <a id="update" href="update.php">
                             <div class="update-icon">
-                                <i class="fa fa-crosshairs"></i>
+                                <i class="fa fa-cross"></i>
                             </div>
                         </a>
-                        if ($admin) {
+                        <?= if ($admin) { ?>
                             <a href="OTP.php" class="nav-item">One-Time Passcode</a>
-                        }
+                        <?= } ?>
                     </div>
                 </div>
             </div>
