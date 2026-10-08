@@ -81,10 +81,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 
         header("Location: /createAccount.php");
     }
-}
 
-$stmt -> close();
-mysqli_close($conn);
+    $stmt -> close();
+    mysqli_close($conn);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
