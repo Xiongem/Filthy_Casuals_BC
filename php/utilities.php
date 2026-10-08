@@ -10,6 +10,8 @@ function dbConnect() {
     $_SESSION["conn"] = mysqli_connect($servername, $username, $password, $database);
     if (!$_SESSION["conn"]) {die("Connection failed: " . mysqli_connect_error()); }
 }
+dbConnect();
+$userID = $_SESSION["user_id"];
 
 function makeNav() {
     $htmlContent = <<<HTML
@@ -29,4 +31,14 @@ function makeNav() {
     HTML;
     echo $htmlContent;
 }
-?>
+
+function forceLogin() {
+//    echo("forceLogin start"."<br>");
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+//    echo "Welcome to the member's area, " . htmlspecialchars($_SESSION["user_id"]) . "!";
+    } else {
+        echo ("redirecting");
+        header("Location: /login.php");
+        exit();
+    }   
+}
