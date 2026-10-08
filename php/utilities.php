@@ -26,10 +26,14 @@ function makeNav() {
                     <i class="fa fa-bars" id="nav-menu-icon"></i>
                     <div class="nav-menu-wrapper" id="nav-menu-wrapper">
                         <div class="nav-menu-content" id="nav-menu-content">
-                            <a class="nav-item" href="index.php">Home</a>
                             <a class="nav-item" href="challenges.php">Challenges</a>
                             <a class="nav-item" href="rules.php">Rules</a>
                             <a class="nav-item" href="settings.php">Settings</a>
+                            <a id="update" href="update.php">
+                                <div class="update-icon">
+                                    <i class="fa fa-crosshairs"></i>
+                                </div>
+                            </a>
                             <a class="nav-item" href="logout.php">Logout</a>
                         </div>
                     </div>
@@ -37,6 +41,18 @@ function makeNav() {
                 <a href="profile.php" id="profile">
                     <img src="uploads/$pfp" alt="Profile Picture" id="profile-picture">
                 </a>
+                <div class="dropdown-wrapper" id="navDrop">
+                    <div class="dropdown-content" id="navDropContent">
+                        <a id="update" href="update.php">
+                            <div class="update-icon">
+                                <i class="fa fa-crosshairs"></i>
+                            </div>
+                        </a>
+                        if ($admin) {
+                            <a href="OTP.php" class="nav-item">One-Time Passcode</a>
+                        }
+                    </div>
+                </div>
             </div>
         HTML;
         echo $htmlContent;
