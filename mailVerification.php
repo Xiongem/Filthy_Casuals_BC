@@ -7,11 +7,11 @@ ini_set('error_log', '/path/to/php_errors.log');
 ob_start();
 
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
+dbConnect();
 require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 
 $mail = new PHPMailer\PHPMailer\PHPMailer;
-dbConnect();
 
 $userID = $_SESSION["user_id"];
 
