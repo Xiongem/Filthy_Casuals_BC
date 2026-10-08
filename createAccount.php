@@ -45,54 +45,44 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 echo "hello 1";
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-//     $image = $_FILES['profilePicture']['name'];
-
-// $tmp = $_FILES['profilePicture']['tmp_name'];
-
-// $folder = "uploads/".$image;
-
-
-
-
     $filename = $_FILES['profilePicture']['name'];
         $tempname = $_FILES['profilePicture']['tmp_name'];
         $folder = "./images/userPFP/" . $filename;
 
-    if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $filename) {
-        $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("issss",
-                            $user_id,
-                            $_POST["username"],
-                            $_POST["email"],
-                            $password_hash,
-                            $filename);
+    if (move_uploaded_file($tempname, $folder)) {
+        if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $filename) {
+            $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
+            $stmt->bind_param("issss",
+                                $user_id,
+                                $_POST["username"],
+                                $_POST["email"],
+                                $password_hash,
+                                $filename);
 
 
-        if ($stmt -> execute() && move_uploaded_file($tempname, $folder)) {
-            $sql = sprintf("SELECT * FROM users
-                            WHERE username = '%s'",
-                            $_SESSION["conn"]->real_escape_string($_POST["username"]));
+            if ($stmt -> execute()) {
+                $sql = sprintf("SELECT * FROM users
+                                WHERE username = '%s'",
+                                $_SESSION["conn"]->real_escape_string($_POST["username"]));
 
-            $result = $_SESSION["conn"]->query($sql);
+                $result = $_SESSION["conn"]->query($sql);
 
-            $user = $result->fetch_assoc();
+                $user = $result->fetch_assoc();
 
-                unset($_SESSION['createAccount']);
-                $_SESSION["user_id"] = $user["user_id"];
-                
-                header("Location: /mailVerification.php");
-                exit;
-            } else {
-                die("something went wrong");
+                    unset($_SESSION['createAccount']);
+                    $_SESSION["user_id"] = $user["user_id"];
+                    
+                    header("Location: /mailVerification.php");
+                    exit;
+                } else {
+                    die("something went wrong");
+            }
         }
     } else {
         $_SESSION["createAccount"] = false;
                 echo "something went wrong 2";
-        // header("Location: /createAccount.php");
+        // header("Location: /createAccount.php?user_id=" . $user_id );
     }
-
-    // $stmt -> close();
-    // mysqli_close($conn);
 }
 ?>
 <!DOCTYPE html>
