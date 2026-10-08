@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $_POST["profilePicture"]) {
         $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("issss",
-                            $_POST["user_id"],
+                            $user_id,
                             $_POST["username"],
                             $_POST["email"],
                             $password_hash,
@@ -181,11 +181,6 @@ mysqli_close($conn);
                     id="password"
                     class="inputs"
                     required>
-
-                <input type="hidden"
-                    name="user_id"
-                    id="user_id"
-                    value="<?= $user_id; ?>">
 
                 <div class="span-wrapper">
                     <label class="labels">Retype Password:</label>
