@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die("Passwords must match");
     }
 
-
+echo "hello";
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 echo $_FILES["profilePicture"];
     $filename = $_FILES["profilePicture"]["name"];
