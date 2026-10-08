@@ -10,26 +10,28 @@ function dbConnect() {
     $_SESSION["conn"] = mysqli_connect($servername, $username, $password, $database);
     if (!$_SESSION["conn"]) {die("Connection failed: " . mysqli_connect_error()); }
 }
-dbConnect();
-$userID = $_SESSION["user_id"];
 
 function makeNav() {
-    $htmlContent = <<<HTML
-        <div class="nav-wrapper" id="nav-wrapper">
-            <div class="icon-wrapper">
-                <i class="fa fa-bars" id="nav-menu-icon"></i>
-                <div class="nav-menu-wrapper" id="nav-menu-wrapper">
-                    <div class="nav-menu-content" id="nav-menu-content">
-                        <a class="nav-item">Home</a>
-                        <a class="nav-item">Settings</a>
-                        <a class="nav-item">Logout</a>
+        $htmlContent = <<<HTML
+            <div class="nav-wrapper" id="nav-wrapper">
+                <div class="icon-wrapper">
+                    <i class="fa fa-bars" id="nav-menu-icon"></i>
+                    <div class="nav-menu-wrapper" id="nav-menu-wrapper">
+                        <div class="nav-menu-content" id="nav-menu-content">
+                            <a class="nav-item" href="index.php">Home</a>
+                            <a class="nav-item" href="challenges.php">Challenges</a>
+                            <a class="nav-item" href="rules.php">Rules</a>
+                            <a class="nav-item" href="settings.php">Settings</a>
+                            <a class="nav-item" href="logout.php">Logout</a>
+                        </div>
                     </div>
                 </div>
+                <a href="profile.php" id="profile">
+                    <img src="uploads/<?= $pfpImage ?>" alt="Profile Picture" id="profile-picture">
+                </a>
             </div>
-            <a href="login.php" id="login">login</a>
-        </div>
-    HTML;
-    echo $htmlContent;
+        HTML;
+        echo $htmlContent;
 }
 
 function forceLogin() {
