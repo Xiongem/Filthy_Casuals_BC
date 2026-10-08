@@ -53,12 +53,12 @@ echo "hello 1";
 
 
 
-echo $_FILES['profilePicture'];
+
     $filename = $_FILES['profilePicture']['name'];
         $tempname = $_FILES['profilePicture']['tmp_name'];
         $folder = "images/userPFP/" . $filename;
 
-    if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $_POST["profilePicture"]) {
+    if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $filename) {
         $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("issss",
                             $user_id,
@@ -91,8 +91,8 @@ echo $_FILES['profilePicture'];
         // header("Location: /createAccount.php");
     }
 
-    $stmt -> close();
-    mysqli_close($conn);
+    // $stmt -> close();
+    // mysqli_close($conn);
 }
 ?>
 <!DOCTYPE html>
