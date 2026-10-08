@@ -1,3 +1,22 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 'On');
+ini_set('error_log', '/path/to/php_errors.log');
+
+ob_start();
+require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
+dbConnect();
+forceLogin();
+
+$userID = $_SESSION["user_id"];
+
+ $sql = "SELECT * FROM users WHERE user_id = $userID";
+        $result = $_SESSION["conn"]->query($sql);
+        $user = $result->fetch_assoc();
+            $pfp = $user['pfp'];
+            $admin = $user['admin'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +36,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    
+    <header>
+        <?= makeNav() ?>
+    </header>
     <div class="update-wrapper">
         <div class="update-content">
             <h1>Update Your Reading History</h1>
