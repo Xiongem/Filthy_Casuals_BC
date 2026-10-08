@@ -45,19 +45,36 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 echo "hello 1";
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-    $filename = $_FILES['profilePicture']['name'];
-        $tempname = $_FILES['profilePicture']['tmp_name'];
-        $folder = "./images/userPFP/" . $filename;
+$image=$_FILES['profilePicture'];
 
-    if (move_uploaded_file($tempname, $folder)) {
-        if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $filename) {
+$allowed=['jpg','jpeg','png','gif','webp'];
+
+$extension=strtolower(
+pathinfo(
+$image['name'],
+PATHINFO_EXTENSION));
+
+if(!in_array($extension,$allowed))
+die("Invalid Image");
+
+if($image['size']>2097152)
+die("Image Too Large");
+
+$newName=time().".".$extension;
+
+    // $image = $_FILES['profilePicture']['name'];
+    //     $tempname = $_FILES['profilePicture']['tmp_name'];
+    //     $folder = "./images/userPFP/" . $image;
+
+    if (move_uploaded_file($image['tmp_name'], "images/userPFP/".$newName)) {
+        if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $image) {
             $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
             $stmt->bind_param("issss",
                                 $user_id,
                                 $_POST["username"],
                                 $_POST["email"],
                                 $password_hash,
-                                $filename);
+                                $newName);
 
 
             if ($stmt -> execute()) {
