@@ -25,16 +25,12 @@ if (strtotime($user["verification_expires_at"]) <= time()) {
 
 if ($user["verification_hash"] === $token_hash) {
     $verified = 1;
-    $token_hash = "";
-    $expiry = null;
     $userID = $_SESSION["user_id"];
 
-    $sql = "UPDATE users SET verified = ?, verification_hash = ?, verification_expires_at = ? WHERE user_id = ?";
+    $sql = "UPDATE users SET verified = ?, verification_hash = NULL, verification_expires_at = NULL WHERE user_id = ?";
         $stmt = $_SESSION["conn"] -> prepare($sql);
-        $stmt->bind_param("issi", 
+        $stmt->bind_param("ii", 
                                 $verified, 
-                                $token_hash,
-                                $expiry,
                                 $userID);
         $stmt -> execute() ;
 }
