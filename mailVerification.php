@@ -3,9 +3,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 'On');
 ini_set('error_log', '/path/to/php_errors.log');
-echo "hello 1";
+
 ob_start();
-echo "hello 2";
+
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 require($_SERVER['DOCUMENT_ROOT'] . '/mailer.php');

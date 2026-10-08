@@ -5,6 +5,7 @@ ini_set('log_errors', 'On');
 ini_set('error_log', '/path/to/php_errors.log');
 
 ob_start();
+require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 session_start();
 
