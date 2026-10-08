@@ -66,7 +66,7 @@ $newName=time().".".$extension;
     //     $tempname = $_FILES['profilePicture']['tmp_name'];
     //     $folder = "./images/userPFP/" . $image;
 
-    if (move_uploaded_file($image['tmp_name'], "/uploads/".$newName)) {
+    if (move_uploaded_file($image['tmp_name'], "uploads/".$newName)) {
         if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $image) {
             $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
             $stmt->bind_param("issss",
