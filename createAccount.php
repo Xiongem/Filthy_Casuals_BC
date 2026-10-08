@@ -45,18 +45,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 echo "hello 1";
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-    $image = $_FILES['profilePicture']['name'];
+//     $image = $_FILES['profilePicture']['name'];
 
-$tmp = $_FILES['profilePicture']['tmp_name'];
+// $tmp = $_FILES['profilePicture']['tmp_name'];
 
-$folder = "uploads/".$image;
+// $folder = "uploads/".$image;
 
 
 
 echo $_FILES['profilePicture'];
-    // $filename = $_FILES["profilePicture"]["name"];
-    //     $tempname = $_FILES["profilePicture"]["tmp_name"];
-    //     $folder = "./images/userPFP/" . $filename;
+    $filename = $_FILES['profilePicture']['name'];
+        $tempname = $_FILES['profilePicture']['tmp_name'];
+        $folder = "images/userPFP/" . $filename;
 
     if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $_POST["profilePicture"]) {
         $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
@@ -87,8 +87,8 @@ echo $_FILES['profilePicture'];
         }
     } else {
         $_SESSION["createAccount"] = false;
-                
-        header("Location: /createAccount.php");
+                echo "something went wrong";
+        // header("Location: /createAccount.php");
     }
 
     $stmt -> close();
