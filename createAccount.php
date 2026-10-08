@@ -154,7 +154,7 @@ mysqli_close($conn);
             <div class="title-wrapper">
                 <h1>Account Creation</h1>
             </div>
-            <form id="signup" action="php/process-createAccount.php" method="post">
+            <form id="signup" action="#" method="post">
                 <label class="labels">Email:</label>
                 <input type="email"
                     name="email"
