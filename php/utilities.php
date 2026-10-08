@@ -35,7 +35,7 @@ function makeNav() {
                     </div>
                 </div>
                 <a href="profile.php" id="profile">
-                    <img src='uploads/<?= $pfp ?>' alt="Profile Picture" id="profile-picture">
+                    <img src="uploads/<?= $pfp; ?>" alt="Profile Picture" id="profile-picture">
                 </a>
             </div>
         HTML;
