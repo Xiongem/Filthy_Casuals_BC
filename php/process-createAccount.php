@@ -13,7 +13,9 @@ ini_set('error_log', '/path/to/php_errors.log');
         exit;
     }
     
-$user_id = $_POST['user_id'];
+// $user_id = $_POST['user_id'];
+$user_id = $_GET['user_id'];
+$_SESSION["createAccount"] = true;
 
 if (empty($_POST["username"])) {
     die("Username is required");
