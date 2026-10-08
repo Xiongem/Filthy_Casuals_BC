@@ -49,9 +49,6 @@ function makeNav() {
                                 <i class="fa fa-plus"></i>
                             </div>
                         </a>
-                        <?= if ($admin == 0) { ?>
-                            <a href="OTP.php" class="nav-item">One-Time Passcode</a>
-                        <?= } ?>
                     </div>
                 </div>
             </div>

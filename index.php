@@ -15,6 +15,7 @@ $userID = $_SESSION["user_id"];
         $result = $_SESSION["conn"]->query($sql);
         $user = $result->fetch_assoc();
             $pfp = $user['pfp'];
+            $admin = $user['admin'];
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +39,9 @@ $userID = $_SESSION["user_id"];
 <body>
     <header>
         <?= makeNav() ?>
+        <?= if ($admin == 0) { ?>
+            <a href="OTP.php" class="nav-item">One-Time Passcode</a>
+        <?= } ?>
     </header>
 </body>
 </html>
