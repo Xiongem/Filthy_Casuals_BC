@@ -46,7 +46,7 @@ function makeNav() {
                     <div class="dropdown-content" id="navDropContent">
                         <a id="update" href="update.php">
                             <div class="update-icon">
-                                <i class="fa fa-cross"></i>
+                                <i class="fa fa-plus"></i>
                             </div>
                         </a>
                         <?= if ($admin) { ?>
