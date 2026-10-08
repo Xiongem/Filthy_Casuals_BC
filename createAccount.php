@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
-
+echo $_FILES["profilePicture"];
     $filename = $_FILES["profilePicture"]["name"];
         $tempname = $_FILES["profilePicture"]["tmp_name"];
         $folder = "./images/userPFP/" . $filename;
