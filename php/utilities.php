@@ -11,6 +11,14 @@ function dbConnect() {
     if (!$_SESSION["conn"]) {die("Connection failed: " . mysqli_connect_error()); }
 }
 
+dbConnect();
+$userID = $_SESSION["user_id"];
+
+ $sql = "SELECT * FROM users WHERE user_id = $userID";
+        $result = $_SESSION["conn"]->query($sql);
+        $user = $result->fetch_assoc();
+            $pfp = $user['pfp'];
+
 function makeNav() {
         $htmlContent = <<<HTML
             <div class="nav-wrapper" id="nav-wrapper">
