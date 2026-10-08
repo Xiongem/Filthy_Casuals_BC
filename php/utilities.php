@@ -12,14 +12,14 @@ function dbConnect() {
 }
 
 dbConnect();
-$userID = $_SESSION["user_id"];
-
- $sql = "SELECT * FROM users WHERE user_id = $userID";
-        $result = $_SESSION["conn"]->query($sql);
-        $user = $result->fetch_assoc();
-            $pfp = $user['pfp'];
 
 function makeNav() {
+    $userID = $_SESSION["user_id"];
+
+    $sql = "SELECT * FROM users WHERE user_id = $userID";
+            $result = $_SESSION["conn"]->query($sql);
+            $user = $result->fetch_assoc();
+                $pfp = $user['pfp'];
         $htmlContent = <<<HTML
             <div class="nav-wrapper" id="nav-wrapper">
                 <div class="icon-wrapper">
