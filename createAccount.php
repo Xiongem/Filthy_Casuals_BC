@@ -13,7 +13,6 @@ ini_set('error_log', '/path/to/php_errors.log');
         exit;
     }
     
-// $user_id = $_POST['user_id'];
 $user_id = $_GET['user_id'];
 $_SESSION["createAccount"] = true;
 
@@ -42,29 +41,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die("Passwords must match");
     }
 
-echo "hello 1";
+
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-$image=$_FILES['profilePicture'];
+    $image=$_FILES['profilePicture'];
 
-$allowed=['jpg','jpeg','png','gif','webp'];
+    $allowed=['jpg','jpeg','png','gif','webp'];
 
-$extension=strtolower(
-pathinfo(
-$image['name'],
-PATHINFO_EXTENSION));
+    $extension=strtolower(
+    pathinfo(
+    $image['name'],
+    PATHINFO_EXTENSION));
 
-if(!in_array($extension,$allowed))
-die("Invalid Image");
+    if(!in_array($extension,$allowed))
+    die("Invalid Image");
 
-if($image['size']>2097152)
-die("Image Too Large");
+    if($image['size']>2097152)
+    die("Image Too Large");
 
-$newName=time().".".$extension;
-
-    // $image = $_FILES['profilePicture']['name'];
-    //     $tempname = $_FILES['profilePicture']['tmp_name'];
-    //     $folder = "./images/userPFP/" . $image;
+    $newName=time().".".$extension;
 
     if (move_uploaded_file($image['tmp_name'], "uploads/".$newName)) {
         if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $image) {
@@ -92,13 +87,12 @@ $newName=time().".".$extension;
                     header("Location: /mailVerification.php");
                     exit;
                 } else {
-                    die("something went wrong");
+                    die("failed to create account");
             }
         }
     } else {
         $_SESSION["createAccount"] = false;
-                echo "something went wrong 2";
-        // header("Location: /createAccount.php?user_id=" . $user_id );
+        die("failed to upload image");
     }
 }
 ?>
