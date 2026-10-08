@@ -24,7 +24,7 @@ if (strtotime($user["verification_expires_at"]) <= time()) {
 }
 
 if ($user["verification_hash"] === $token_hash) {
-    $verified = 1
+    $verified = 1;
     $userID = $_SESSION["user_id"];
 
     $sql = "UPDATE users SET verified = ? WHERE user_id = ?";
