@@ -12,11 +12,10 @@ require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 
 $mail = new PHPMailer\PHPMailer\PHPMailer;
 dbConnect();
-session_start();
 
 $userID = $_SESSION["user_id"];
 
- $sql = "SELECT email, username FROM users WHERE id = $userID";
+ $sql = "SELECT email, username FROM users WHERE user_id = $userID";
         $result = $_SESSION["conn"]->query($sql);
         $user = $result->fetch_assoc();
 
@@ -26,10 +25,10 @@ $token_hash = hash("sha256", $token);
 $expiry = date("Y-m-d H:i:s",time() + 60 * 30);
 
 //* Store the token and expiry in the database for the user
-$sql = "UPDATE users SET verification_hash = ?, verification_expires_at = ? WHERE id = ?";
+$sql = "UPDATE users SET verification_hash = ?, verification_expires_at = ? WHERE user_id = ?";
     $stmt = $_SESSION["conn"] -> prepare($sql);
-    $stmt->bind_param("sssi", 
-                            $token_hash, $expiry, $user['email'], $userID);
+    $stmt->bind_param("ssi", 
+                            $token_hash, $expiry, $user['user_id']);
     $stmt -> execute() ;
 
 //* Send the verification email to the user
