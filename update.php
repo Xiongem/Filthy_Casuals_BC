@@ -17,9 +17,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <header>
-        <?= makeNav() ?>
-    </header>
+    
     <div class="update-wrapper">
         <div class="update-content">
             <h1>Update Your Reading History</h1>
