@@ -7,7 +7,7 @@
     <meta property="og:description" content="A competition for filthy casuals."> 
     <meta property="og:image" content=""> 
     <meta property="og:url" content="">
-    <title>Update</title>
+    <title>Update Reading History</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
