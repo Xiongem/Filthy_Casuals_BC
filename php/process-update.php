@@ -6,6 +6,7 @@ ini_set('error_log', '/path/to/php_errors.log');
 
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/php/modMath.php');
 dbConnect();
 
 $userID = $_SESSION["user_id"];
@@ -16,6 +17,18 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 
 $month = date('n');
 $totalPoints = calculateTotalPoints($_POST["pages"], $_POST["mod-1"], $_POST["mod-2"]);
+
+if (isset($_POST["diffDate"])) {
+    $dateFinished = $_POST["dateFinished"];
+} else {
+    $dateFinished = date('Y-m-d');
+}
+
+if (isset($_POST["ongoing"])) {
+    $ongoing = 1;
+} else {
+    $ongoing = 0;
+}
 
 
 $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`userID`, 
@@ -39,7 +52,7 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`userID`,
                         $dateFinished,
                         $_POST["dateStarted"],
                         $_POST["pages"],
-                        isset($_POST["ongoing"]) ? 1 : 0,
+                        $ongoing,
                         $_POST["mod-1"],
                         $_POST["mod-2"],
                         $_POST["comment"],
