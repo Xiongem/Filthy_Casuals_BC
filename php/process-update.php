@@ -12,15 +12,13 @@ $userID = $_SESSION["user_id"];
 
 $sql = "SELECT * FROM users WHERE user_id = $userID";
             $result = $_SESSION["conn"]->query($sql);
-            $user = $result->fetch_assoc();
+            $user = $result->fetch_assoc();  
 
-    $totalPoints = $user["totalPoints"] + $_POST["pages"];
+$month = date('n');
+$totalPoints = calculateTotalPoints($_POST["pages"], $_POST["mod-1"], $_POST["mod-2"]);
 
 
-
-    
-
-$stmt = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`userID`, 
+$stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`userID`, 
                                                                 `username`, 
                                                                 `title`, 
                                                                 `author`, 
@@ -33,7 +31,7 @@ $stmt = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`userID`,
                                                                 `comment`, 
                                                                 `month`, 
                                                                 `totalPoints`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("isssssiiiisii",
+    $stmt1->bind_param("isssssiiiisii",
                         $userID,
                         $user["username"],
                         $_POST["title"],
@@ -48,7 +46,13 @@ $stmt = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`userID`,
                         $month,
                         $totalPoints);
 
-if ($stmt -> execute()) {
+if ($stmt1 -> execute()) {
+    $newPointsMonth = $user["PointsMonth"] + $totalPoints;
+    $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` SET `PointsMonth` = ? WHERE `user_id` = ?");
+        $stmt2->bind_param("ii", 
+                            $newPointsMonth, 
+                            $userID);
+        
         header("Location: /readHistory.php?user_id=$userID");
         
         exit;

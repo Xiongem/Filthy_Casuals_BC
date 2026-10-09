@@ -94,11 +94,13 @@ $userID = $_SESSION["user_id"];
                     <option value="1">Normal</option>
                     <option value="2">Manga/Comic</option>
                     <option value="3">Challenge</option>
-                    <option value="4">Buddy Read</option>
-                    <option value="5">Friend Recommendation</option>
-                    <option value="6">Seasonal</option>
-                    <option value="7">Read-a-thon</option>
-                    <option value="8">Educational</option>
+                    <option value="4">Challenge: Manga/Comics</option>
+                    <option value="5">Buddy Read</option>
+                    <option value="6">Friend Recommendation</option>
+                    <option value="7">Seasonal</option>
+                    <option value="8">Read-a-thon</option>
+                    <option value="9">Educational</option>
+                    <option value="10">Educational: Manga/Comics</option>
                 </select>
 
                 <label for="mod-2" class="labels">Modifier 2:</label>
@@ -110,6 +112,7 @@ $userID = $_SESSION["user_id"];
                     <option value="5">Seasonal</option>
                     <option value="6">Read-a-thon</option>
                     <option value="7">Educational</option>
+                    <option value="8">Educational: Manga/Comics</option>
                 </select>
 
                 <textarea name="comment" id="comment" class="inputs" placeholder="Any comments about what you read:"></textarea>
