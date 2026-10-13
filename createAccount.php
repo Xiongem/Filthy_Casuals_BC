@@ -44,55 +44,97 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-    $image=$_FILES['profilePicture'];
+    $image = $_FILES['profilePicture'];
 
-    $allowed=['jpg','jpeg','png','gif','webp'];
+    // $allowed=['jpg','jpeg','png','gif','webp'];
 
-    $extension=strtolower(
-    pathinfo(
-    $image['name'],
-    PATHINFO_EXTENSION));
+    // $extension=strtolower(
+    // pathinfo(
+    // $image['name'],
+    // PATHINFO_EXTENSION));
 
-    if(!in_array($extension,$allowed))
-    die("Invalid Image");
+    // if(!in_array($extension,$allowed))
+    // die("Invalid Image");
 
-    if($image['size']>2097152)
-    die("Image Too Large");
-
-    $newName=time().".".$extension;
-
-    if (move_uploaded_file($image['tmp_name'], "uploads/".$newName)) {
-        if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $image) {
-            $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfp) VALUES (?, ?, ?, ?, ?)");
-            $stmt->bind_param("issss",
-                                $user_id,
-                                $_POST["username"],
-                                $_POST["email"],
-                                $password_hash,
-                                $newName);
+    // if($image['size']>2097152)
+    // die("Image Too Large");
 
 
-            if ($stmt -> execute()) {
-                $sql = sprintf("SELECT * FROM users
-                                WHERE username = '%s'",
-                                $_SESSION["conn"]->real_escape_string($_POST["username"]));
 
-                $result = $_SESSION["conn"]->query($sql);
+    if ($image === null) {
+        return ['error', 'Please choose an image file.', null];
+    }
 
-                $user = $result->fetch_assoc();
+    if (($image['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_NO_FILE) {
+        return ['error', 'Please choose an image file.', null];
+    }
 
-                    unset($_SESSION['createAccount']);
-                    $_SESSION["user_id"] = $user["user_id"];
-                    
-                    header("Location: /mailVerification.php");
-                    exit;
-                } else {
-                    die("failed to create account");
-            }
+    if (($image['size'] ?? 0) > 2097152) {
+        return ['error', 'Image size must be 5 MB or less.', null];
+    }
+
+    $tmpName = $image['tmp_name'] ?? '';
+    if ($tmpName === '' || !is_uploaded_file($tmpName)) {
+        return ['error', 'The uploaded file is not valid.', null];
+    }
+
+    $imageInfo = @getimagesize($tmpName);
+    if ($imageInfo === false || empty($imageInfo['mime'])) {
+        return ['error', 'Please upload a valid image file.', null];
+    }
+
+    $imageName = trim((string) ($image['name'] ?? ''));
+    if ($imageName === '') {
+        $imageName = 'image';
+    }
+
+    $allowedMimeTypes = [
+        'image/jpeg',
+        'image/png',
+        'image/gif',
+        'image/webp',
+    ];
+
+    $mimeType = $imageInfo['mime'];
+    if (!in_array($mimeType, $allowedMimeTypes, true)) {
+        return ['error', 'Only JPG, PNG, GIF, and WebP files are allowed.', null];
+    }
+
+    $imageData = file_get_contents($tmpName);
+    if ($imageData === false) {
+        return ['error', 'Unable to read the uploaded file.', null];
+    }
+
+
+    if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $image) {
+        $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfpName, pfpType, pfpData) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("issssss",
+                            $user_id,
+                            $_POST["username"],
+                            $_POST["email"],
+                            $password_hash,
+                            $imageName,
+                            $mimeType,
+                            $imageData);
+
+
+        if ($stmt -> execute()) {
+            $sql = sprintf("SELECT * FROM users
+                            WHERE username = '%s'",
+                            $_SESSION["conn"]->real_escape_string($_POST["username"]));
+
+            $result = $_SESSION["conn"]->query($sql);
+
+            $user = $result->fetch_assoc();
+
+                unset($_SESSION['createAccount']);
+                $_SESSION["user_id"] = $user["user_id"];
+                
+                header("Location: /mailVerification.php");
+                exit;
+            } else {
+                die("failed to create account");
         }
-    } else {
-        $_SESSION["createAccount"] = false;
-        die("failed to upload image");
     }
 }
 ?>
