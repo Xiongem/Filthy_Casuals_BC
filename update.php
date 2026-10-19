@@ -136,13 +136,13 @@ $today = date("Y-m-d");
 
         <script>
             function showDateFinished() {
-                var dateDiff = document.getElementById('diffDate');
-                if (dateDiff.value == 1) {
-                    document.getElementById('dateFinishedWrapper').style.display = "flex";
-                } else if (dateDiff.value == 0) {
-                    document.getElementById('dateFinishedWrapper').style.display = "none";
-                }
-                
+                // var dateDiff = document.getElementById('diffDate');
+                // if (dateDiff.value == 1) {
+                //     document.getElementById('dateFinishedWrapper').style.display = "flex";
+                // } else if (dateDiff.value == 0) {
+                //     document.getElementById('dateFinishedWrapper').style.display = "none";
+                // }
+                document.getElementById('dateFinishedWrapper').classList.toggle("hide");
             }
         </script>
 </body>
