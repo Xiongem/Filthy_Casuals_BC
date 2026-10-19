@@ -31,7 +31,7 @@ if (isset($_POST["ongoing"])) {
 }
 
 
-$stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`userID`, 
+$stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`, 
                                                                 `username`, 
                                                                 `title`, 
                                                                 `author`, 
