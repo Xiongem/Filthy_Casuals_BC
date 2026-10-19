@@ -49,7 +49,7 @@ function makeNav() {
                 <a href="profile.php" id="profile">
                     <!-- <img src="uploads/$pfp" alt="Profile Picture" id="profile-picture"> -->
                     <img src="data:$imageType; base64, $imageData;" alt="$imageName;" id="profile-picture">
-                    <img src="data:$imageType;base64,' . $imageData . '" alt="$imageName">
+                    <img src="data:$imageType;base64, . $imageData . " alt="$imageName">
 
                 </a>
                 <div class="dropdown-wrapper" id="navDrop">
