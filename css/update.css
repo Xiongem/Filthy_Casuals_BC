@@ -1,0 +1,7 @@
+@media only screen and (min-width: 200px) {
+    .update-content, form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
