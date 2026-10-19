@@ -98,4 +98,4 @@ function calculateTotalPoints($pages, $mod1, $mod2) {
     $pointsMod2 = modMath2($pages, $mod2);
     $totalPoints = $pointsMod1 + $pointsMod2;
     return round($totalPoints);
-}
+} 
