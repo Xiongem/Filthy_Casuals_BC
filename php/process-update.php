@@ -62,9 +62,9 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
 if ($stmt1 -> execute()) {
     $newPointsMonth = $user["PointsMonth"] + $totalPoints;
     $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` SET `PointsMonth` = ? WHERE `user_id` = ?");
-        $stmt2->bind_param("ii", 
+        $stmt2->bind_param("is", 
                             $newPointsMonth, 
-                            $userID);
+                            $user["username"]);
     if ($stmt2->execute()) {
         header("Location: /readHistory.php?user_id=$userID");
         
