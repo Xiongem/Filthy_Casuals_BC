@@ -44,7 +44,7 @@ $month = date('n');
 <body>
     <header>
         <?= makeNav() ?>
-        echo '<img src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';
+        <?php echo '<img src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">'; ?>
         <?php if ($admin == 1) { ?>
             <a href="OTP.php" class="nav-item">One-Time Passcode</a>
         <?php } ?>
