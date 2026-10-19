@@ -83,7 +83,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     if (isset($readHistory['comment'])) {
                         $comment = $readHistory['comment'];
                     } else {
-                        $comment = '';
+                        $comment = 'none';
                     }
                     $month = $readHistory['month'];
                     $totalPoints = $readHistory['totalPoints'];
