@@ -36,6 +36,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/readHistory.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script>
