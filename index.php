@@ -16,6 +16,9 @@ $userID = $_SESSION["user_id"];
         $user = $result->fetch_assoc();
             $pfp = $user['pfp'];
             $admin = $user['admin'];
+            $imageName = htmlspecialchars($user['pfpName']);
+                $imageType = $user['pfpType'];
+                $imageData = base64_encode($user['pfpData']);
 
 $month = date('n');
 ?>
@@ -41,6 +44,7 @@ $month = date('n');
 <body>
     <header>
         <?= makeNav() ?>
+        echo '<img src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';
         <?php if ($admin == 1) { ?>
             <a href="OTP.php" class="nav-item">One-Time Passcode</a>
         <?php } ?>
