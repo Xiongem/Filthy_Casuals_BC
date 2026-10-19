@@ -62,7 +62,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             <?php
             if ($readHistory) {
                 echo "hello1";
-                while ($rows = $result->fetch_assoc()) {
+                while ($readHistory = $result->fetch_assoc()) {
                     $title = $readHistory['title'];
                     $author = $readHistory['author'];
                     $finishedDate = $readHistory['finishedDate'];
