@@ -28,7 +28,7 @@ dbConnect();
 </head>
 <body>
     <header>
-        <?= makeNav() ?>
+        
     </header>
     <div class="wrapper">
         <div class="wrapper-content">
