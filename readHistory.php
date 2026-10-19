@@ -80,7 +80,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     } else {
                         $ongoingChecked = 'no';
                     }
-                    if (isset($readHistory['comment']) || $readHistory['comment'] != '') {
+                    if (isset($readHistory['comment']) || $readHistory['comment'] !== '') {
                         $comment = $readHistory['comment'];
                     } else {
                         $comment = 'none';
