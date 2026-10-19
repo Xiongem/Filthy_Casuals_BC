@@ -66,10 +66,10 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $title = $readHistory['title'];
                     $author = $readHistory['author'];
                     $finishedDate = $readHistory['finishedDate'];
-                    if (isset($readHistory['startedDate'])) {
+                    if ($readHistory['startedDate'] !== 0000-00-00) {
                         $startedDate = $readHistory['startedDate'];
                     } else {
-                        $startedDate = '';
+                        $startedDate = 'none';
                     }
                     $pages = $readHistory['pages'];
                     $mod1 = $readHistory['mod1'];
@@ -90,13 +90,13 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($title) . "</td>";
                 echo "<td>" . htmlspecialchars($author) . "</td>";
-                echo "<td>" . htmlspecialchars($finishedDate) . "</td>";
                 echo "<td>" . htmlspecialchars($startedDate) . "</td>";
+                echo "<td>" . htmlspecialchars($finishedDate) . "</td>";
                 echo "<td>" . htmlspecialchars($pages) . "</td>";
                 echo "<td>" . $ongoingChecked . "</td>";
+                echo "<td>" . htmlspecialchars($comment) . "</td>";
                 echo "<td>" . htmlspecialchars($month) . "</td>";
                 echo "<td>" . htmlspecialchars($totalPoints) . "</td>";
-                echo "<td>" . htmlspecialchars($comment) . "</td>";
                 echo "</tr>";
             }} else {
                 echo "<tr><td colspan='9'>No reading history found.</td></tr>";
