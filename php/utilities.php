@@ -11,7 +11,7 @@ function dbConnect() {
     if (!$_SESSION["conn"]) {die("Connection failed: " . mysqli_connect_error()); }
 }
 
-dbConnect();
+// dbConnect();
 
 function makeNav() {
     $userID = $_SESSION["user_id"];
