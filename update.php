@@ -16,7 +16,7 @@ $userID = $_SESSION["user_id"];
         $user = $result->fetch_assoc();
             $admin = $user['admin'];
 
-$today = date("m-d-Y");
+$today = date("Y-m-d");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,16 +64,19 @@ $today = date("m-d-Y");
                     <input type="checkbox"
                         name="diffDate"
                         id="diffDate"
-                        class="inputs">
+                        class="inputs"
+                        onclick="showDateFinished();">
                 </div>
 
-                <label for="dateFinished" class="labels">Date Finished:</label>
-                <input type="date"
-                    name="dateFinished"
-                    id="dateFinished"
-                    class="inputs"
-                    value="<?=$today?>"
-                    required>
+                <div id="dateFinishedWrapper" class="hide">
+                    <label for="dateFinished" class="labels">Date Finished:</label>
+                    <input type="date"
+                        name="dateFinished"
+                        id="dateFinished"
+                        class="inputs"
+                        value="<?=$today?>"
+                        required>
+                </div>
 
                 <label for="dateStarted" class="labels">Date Started:</label>
                 <input type="date"
@@ -88,11 +91,13 @@ $today = date("m-d-Y");
                     class="inputs"
                     required>
 
-                <label for="ongoing" class="labels">Ongoing:</label>
-                <input type="checkbox"
-                    name="ongoing"
-                    id="ongoing"
-                    class="inputs">
+                <div class="box-wrapper">
+                    <label for="ongoing" class="labels">Ongoing:</label>
+                    <input type="checkbox"
+                        name="ongoing"
+                        id="ongoing"
+                        class="inputs">
+                </div>
 
                 <label for="mod-1" class="labels">Modifier 1:</label>
                 <select name="mod-1" id="mod-1" class="inputs">
@@ -128,5 +133,17 @@ $today = date("m-d-Y");
 
             </form>
         </div>
+
+        <script>
+            function showDateFinished() {
+                var dateDiff = document.getElementById('diffDate');
+                if (dateDiff.value == 1) {
+                    document.getElementById('dateFinishedWrapper').style.display = "flex";
+                } else if (dateDiff.value == 0) {
+                    document.getElementById('dateFinishedWrapper').style.display = "none";
+                }
+                
+            }
+        </script>
 </body>
 </html>
