@@ -29,7 +29,8 @@ function makeNav() {
                 
                 
         
-            echo '<div class="nav-wrapper" id="nav-wrapper">
+        $htmlContent = <<<HTML
+            <div class="nav-wrapper" id="nav-wrapper">
                 <div class="icon-wrapper">
                     <i class="fa fa-bars" id="nav-menu-icon"></i>
                     <div class="nav-menu-wrapper" id="nav-menu-wrapper">
@@ -47,8 +48,8 @@ function makeNav() {
                     </div>
                 </div>
                 <a href="profile.php" id="profile">
-                    <img src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';
-                echo '</a>
+                    <img src="data:$imageType;base64,' . '$imageData' . '" alt="$imageName">';
+                </a>
                 <div class="dropdown-wrapper" id="navDrop">
                     <div class="dropdown-content" id="navDropContent">
                         <a id="update" href="update.php">
@@ -58,7 +59,9 @@ function makeNav() {
                         </a>
                     </div>
                 </div>
-            </div>';
+            </div>
+        HTML;
+        echo $htmlContent;
 }
 
 function forceLogin() {
@@ -71,3 +74,35 @@ function forceLogin() {
         exit();
     }   
 }
+
+
+            // echo '<div class="nav-wrapper" id="nav-wrapper">
+            //     <div class="icon-wrapper">
+            //         <i class="fa fa-bars" id="nav-menu-icon"></i>
+            //         <div class="nav-menu-wrapper" id="nav-menu-wrapper">
+            //             <div class="nav-menu-content" id="nav-menu-content">
+            //                 <a class="nav-item" href="challenges.php">Challenges</a>
+            //                 <a class="nav-item" href="rules.php">Rules</a>
+            //                 <a class="nav-item" href="settings.php">Settings</a>
+            //                 <a id="update" href="update.php">
+            //                     <div class="update-icon">
+            //                         <i class="fa fa-crosshairs"></i>
+            //                     </div>
+            //                 </a>
+            //                 <a class="nav-item" href="logout.php">Logout</a>
+            //             </div>
+            //         </div>
+            //     </div>
+            //     <a href="profile.php" id="profile">
+            //         <img src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';
+            //     echo '</a>
+            //     <div class="dropdown-wrapper" id="navDrop">
+            //         <div class="dropdown-content" id="navDropContent">
+            //             <a id="update" href="update.php">
+            //                 <div class="update-icon">
+            //                     <i class="fa fa-plus"></i>
+            //                 </div>
+            //             </a>
+            //         </div>
+            //     </div>
+            // </div>';
