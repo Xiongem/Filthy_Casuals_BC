@@ -47,7 +47,6 @@ $month = date('n');
         <?php if ($admin == 1) { ?>
             <a href="OTP.php" class="nav-item">One-Time Passcode</a>
         <?php } ?>
-        <?= $month ?>
     </header>
 </body>
 </html>
