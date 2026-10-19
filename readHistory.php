@@ -61,7 +61,6 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             </tr>
             <?php
             if ($result->num_rows > 0) {
-                echo "hello2";
                 while ($readHistory = $result->fetch_assoc()) {
                     $title = $readHistory['title'];
                     $author = $readHistory['author'];

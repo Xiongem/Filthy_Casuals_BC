@@ -15,6 +15,8 @@ $userID = $_SESSION["user_id"];
         $result = $_SESSION["conn"]->query($sql);
         $user = $result->fetch_assoc();
             $admin = $user['admin'];
+
+$today = date("Y-m-d");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,6 +70,7 @@ $userID = $_SESSION["user_id"];
                     name="dateFinished"
                     id="dateFinished"
                     class="inputs"
+                    value="<?=$today?>"
                     required>
 
                 <label for="dateStarted" class="labels">Date Started:</label>
