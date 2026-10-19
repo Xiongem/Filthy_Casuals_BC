@@ -54,48 +54,48 @@ function modMath1($pages, $mod1) {
     }
 }
 
-function modMath2($pagesMod1, $mod2) {
+function modMath2($pages, $mod2) {
     if ($mod2 == 1) {
         // Normal: no extra points
-        $pagesMod2 = $pagesMod1 * 0;
+        $pagesMod2 = $pages * 0;
         return $pagesMod2;
     } elseif ($mod2 == 2) {
         //Challenge: extra 10%
-        $pagesMod2 = $pagesMod1 * 0.10;
+        $pagesMod2 = $pages * 0.10;
         return $pagesMod2;
     } elseif ($mod2 == 3) {
         //Buddy Read: extra 25%
-        $pagesMod2 = $pagesMod1 * 0.25;
+        $pagesMod2 = $pages * 0.25;
         return $pagesMod2;
     } elseif ($mod2 == 4) {
         //Friend Recommendation: extra 25%
-        $pagesMod2 = $pagesMod1 * 0.25;
+        $pagesMod2 = $pages * 0.25;
         return $pagesMod2;
     } elseif ($mod2 == 5) {
         //Seasonal: extra 25%
-        $pagesMod2 = $pagesMod1 * 0.25;
+        $pagesMod2 = $pages * 0.25;
         return $pagesMod2;
     } elseif ($mod2 == 6) {
         //Read-a-thon: extra 25%
-        $pagesMod2 = $pagesMod1 * 0.25;
+        $pagesMod2 = $pages * 0.25;
         return $pagesMod2;
     } elseif ($mod2 == 7) {
         //Education: extra 200%
-        $pagesMod2 = $pagesMod1 * 2;
+        $pagesMod2 = $pages * 2;
         return $pagesMod2;
     }  elseif ($mod2 == 8) {
         //Education: Manga/Comics: extra 100%
-        $pagesMod2 = $pagesMod1 * 1;
+        $pagesMod2 = $pages * 1;
         return $pagesMod2;
     } else {
-        $pagesMod2 = $pagesMod1;
+        $pagesMod2 = $pages;
         return $pagesMod2;
     }
 }
 
 function calculateTotalPoints($pages, $mod1, $mod2) {
     $pointsMod1 = modMath1($pages, $mod1);
-    $pointsMod2 = modMath2($pointsMod1, $mod2);
+    $pointsMod2 = modMath2($pages, $mod2);
     $totalPoints = $pointsMod1 + $pointsMod2;
     return round($totalPoints);
 }
