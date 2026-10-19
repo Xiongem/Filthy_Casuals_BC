@@ -63,24 +63,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($image === null) {
         return ['error', 'Please choose an image file.', null];
+        echo "Please choose an image file.1";
     }
 
     if (($image['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_NO_FILE) {
         return ['error', 'Please choose an image file.', null];
+        echo "Please choose an image file.2";
     }
 
     if (($image['size'] ?? 0) > 2097152) {
         return ['error', 'Image size must be 5 MB or less.', null];
+        echo "Image size must be 5 MB or less.";
     }
 
     $tmpName = $image['tmp_name'] ?? '';
     if ($tmpName === '' || !is_uploaded_file($tmpName)) {
         return ['error', 'The uploaded file is not valid.', null];
+        echo "The uploaded file is not valid.";
     }
 
     $imageInfo = @getimagesize($tmpName);
     if ($imageInfo === false || empty($imageInfo['mime'])) {
         return ['error', 'Please upload a valid image file.', null];
+        echo "Please upload a valid image file.";
     }
 
     $imageName = trim((string) ($image['name'] ?? ''));
@@ -98,11 +103,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mimeType = $imageInfo['mime'];
     if (!in_array($mimeType, $allowedMimeTypes, true)) {
         return ['error', 'Only JPG, PNG, GIF, and WebP files are allowed.', null];
+        echo "Only JPG, PNG, GIF, and WebP files are allowed.";
     }
 
     $imageData = file_get_contents($tmpName);
     if ($imageData === false) {
         return ['error', 'Unable to read the uploaded file.', null];
+        echo "Unable to read the uploaded file.";
     }
 
 
@@ -116,6 +123,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             $imageName,
                             $mimeType,
                             $imageData);
+
+                            echo "bound params";
 
 
         if ($stmt -> execute()) {
