@@ -41,6 +41,9 @@
         margin: 0.5em 0;
         font-size: 18px;
     }
+    #update {
+        display: flex;
+    }
     .icon-wrapper:hover .nav-menu-wrapper {
         display: flex;
     }
