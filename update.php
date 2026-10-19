@@ -42,7 +42,7 @@ $userID = $_SESSION["user_id"];
     <div class="update-wrapper">
         <div class="update-content">
             <h1>Update Your Reading History</h1>
-            <form action="process-update.php" method="post">
+            <form action="php/process-update.php" method="post">
                 <label for="title" class="labels">Book Title:</label>
                 <input type="text"
                     name="title"
