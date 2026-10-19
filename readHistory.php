@@ -16,7 +16,6 @@ $userID = $_GET["user_id"];
 $sql = "SELECT * FROM users WHERE user_id = $userID";
         $result = $_SESSION["conn"]->query($sql);
         $user = $result->fetch_assoc();
-            $pfp = $user['pfp'];
             $admin = $user['admin'];
 
  $sql = "SELECT * FROM readHistory WHERE user_id = $userID";
@@ -76,9 +75,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $mod2 = $readHistory['mod2'];
                     $ongoing = $readHistory['ongoing'];
                     if ($ongoing == 1) {
-                        $ongoingChecked = 'checked';
+                        $ongoingChecked = 'yes';
                     } else {
-                        $ongoingChecked = '';
+                        $ongoingChecked = 'no';
                     }
                     if (isset($readHistory['comment'])) {
                         $comment = $readHistory['comment'];
