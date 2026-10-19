@@ -20,7 +20,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 
  $sql = "SELECT * FROM readHistory WHERE user_id = $userID";
         $result = $_SESSION["conn"]->query($sql);
-        $readHistory = $result->fetch_assoc();
+        // $readHistory = $result->fetch_assoc();
             
 ?>
 
@@ -60,7 +60,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <th>Total Points</th>
             </tr>
             <?php
-            if ($readHistory) {
+            if ($result->num_rows > 0) {
                 echo "hello1";
                 while ($readHistory = $result->fetch_assoc()) {
                     $title = $readHistory['title'];
