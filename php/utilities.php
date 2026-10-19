@@ -28,8 +28,8 @@ function makeNav() {
 
                 
                 
-        $htmlContent = <<<HTML
-            <div class="nav-wrapper" id="nav-wrapper">
+        
+            echo '<div class="nav-wrapper" id="nav-wrapper">
                 <div class="icon-wrapper">
                     <i class="fa fa-bars" id="nav-menu-icon"></i>
                     <div class="nav-menu-wrapper" id="nav-menu-wrapper">
@@ -50,8 +50,9 @@ function makeNav() {
                     <!-- <img src="uploads/$pfp" alt="Profile Picture" id="profile-picture"> -->
                     <img src="data:$imageType; base64, $imageData;" alt="$imageName;" id="profile-picture">
                     <img src="data:$imageType;base64, . $imageData . " alt="$imageName">
+                    <img src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';
 
-                </a>
+                echo '</a>
                 <div class="dropdown-wrapper" id="navDrop">
                     <div class="dropdown-content" id="navDropContent">
                         <a id="update" href="update.php">
@@ -61,9 +62,7 @@ function makeNav() {
                         </a>
                     </div>
                 </div>
-            </div>
-        HTML;
-        echo $htmlContent;
+            </div>';
 }
 
 function forceLogin() {
