@@ -28,3 +28,10 @@ a {
 .error {
     color: red;
 }
+
+@media only screen and (min-width: 200px) {
+    #profile {
+        width: 6em;
+        height: fit-content;
+    }
+}
