@@ -30,8 +30,9 @@ a {
 }
 
 @media only screen and (min-width: 200px) {
-    #profile {
+    #profile, #profilePic {
         width: 6em;
         height: fit-content;
     }
+    
 }
