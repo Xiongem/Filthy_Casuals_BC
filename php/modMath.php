@@ -6,7 +6,7 @@ ini_set('error_log', '/path/to/php_errors.log');
 
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
-dbConnect();
+// dbConnect();
 
 function modMath1($pages, $mod1) {
     if ($mod1 == 1) {
