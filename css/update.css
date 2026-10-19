@@ -4,4 +4,7 @@
         flex-direction: column;
         align-items: center;
     }
+    .box-wrapper {
+        display: flex;
+    }
 }

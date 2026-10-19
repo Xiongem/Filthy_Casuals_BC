@@ -16,7 +16,7 @@ $userID = $_SESSION["user_id"];
         $user = $result->fetch_assoc();
             $admin = $user['admin'];
 
-$today = date("Y-m-d");
+$today = date("m-d-Y");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,11 +59,13 @@ $today = date("Y-m-d");
                     class="inputs"
                     required>
 
-                <label for="diffDate" class="labels">Click if your finish date is not today:</label>
-                <input type="checkbox"
-                    name="diffDate"
-                    id="diffDate"
-                    class="inputs">
+                <div class="box-wrapper">
+                    <label for="diffDate" class="labels">Click if your finish date is not today:</label>
+                    <input type="checkbox"
+                        name="diffDate"
+                        id="diffDate"
+                        class="inputs">
+                </div>
 
                 <label for="dateFinished" class="labels">Date Finished:</label>
                 <input type="date"
