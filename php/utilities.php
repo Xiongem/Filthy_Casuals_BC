@@ -19,7 +19,6 @@ function makeNav() {
     $sql = "SELECT * FROM users WHERE user_id = $userID";
             $result = $_SESSION["conn"]->query($sql);
             $user = $result->fetch_assoc();
-                $pfp = $user['pfp'];
                 $admin = $user['admin'];
                 // $image = imageDataUri($user['pfpType'], $user['pfpData']);
                 $imageName = htmlspecialchars($user['pfpName']);

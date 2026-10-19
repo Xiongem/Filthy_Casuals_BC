@@ -14,7 +14,6 @@ $userID = $_SESSION["user_id"];
  $sql = "SELECT * FROM users WHERE user_id = $userID";
         $result = $_SESSION["conn"]->query($sql);
         $user = $result->fetch_assoc();
-            $pfp = $user['pfp'];
             $admin = $user['admin'];
             $imageName = htmlspecialchars($user['pfpName']);
                 $imageType = $user['pfpType'];
