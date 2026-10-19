@@ -65,10 +65,13 @@ if ($stmt1 -> execute()) {
         $stmt2->bind_param("ii", 
                             $newPointsMonth, 
                             $userID);
-        
+    if ($stmt2->execute()) {
         header("Location: /readHistory.php?user_id=$userID");
         
         exit;
     } else {
         die("an unexpected error occured");
+    }
+} else {
+    die("an unexpected error occured");
 }
