@@ -93,7 +93,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 echo "<td>" . htmlspecialchars($finishedDate) . "</td>";
                 echo "<td>" . htmlspecialchars($startedDate) . "</td>";
                 echo "<td>" . htmlspecialchars($pages) . "</td>";
-                echo "<td>" . $ongoing . "</td>";
+                echo "<td>" . $ongoingChecked . "</td>";
                 echo "<td>" . htmlspecialchars($month) . "</td>";
                 echo "<td>" . htmlspecialchars($totalPoints) . "</td>";
                 echo "<td>" . htmlspecialchars($comment) . "</td>";
