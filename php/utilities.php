@@ -21,6 +21,13 @@ function makeNav() {
             $user = $result->fetch_assoc();
                 $pfp = $user['pfp'];
                 $admin = $user['admin'];
+                // $image = imageDataUri($user['pfpType'], $user['pfpData']);
+                $imageName = htmlspecialchars($user['pfpName']);
+                $imageType = $user['pfpType'];
+                $imageData = base64_encode($user['pfpData']);
+
+                
+                
         $htmlContent = <<<HTML
             <div class="nav-wrapper" id="nav-wrapper">
                 <div class="icon-wrapper">
@@ -40,7 +47,8 @@ function makeNav() {
                     </div>
                 </div>
                 <a href="profile.php" id="profile">
-                    <img src="uploads/$pfp" alt="Profile Picture" id="profile-picture">
+                    <!-- <img src="uploads/$pfp" alt="Profile Picture" id="profile-picture"> -->
+                    <img src="data:$imageType; base64, $imageData;" alt="$imageName;" id="profile-picture">
                 </a>
                 <div class="dropdown-wrapper" id="navDrop">
                     <div class="dropdown-content" id="navDropContent">
