@@ -45,7 +45,7 @@ $today = date("Y-m-d");
         <div class="update-content">
             <h1>Update Your Reading History</h1>
             <form action="php/process-update.php" method="post">
-                <label for="title" class="labels">Book Title:</label>
+                <label for="title" class="labels">Title:</label>
                 <input type="text"
                     name="title"
                     id="title"
@@ -136,12 +136,6 @@ $today = date("Y-m-d");
 
         <script>
             function showDateFinished() {
-                // var dateDiff = document.getElementById('diffDate');
-                // if (dateDiff.value == 1) {
-                //     document.getElementById('dateFinishedWrapper').style.display = "flex";
-                // } else if (dateDiff.value == 0) {
-                //     document.getElementById('dateFinishedWrapper').style.display = "none";
-                // }
                 document.getElementById('dateFinishedWrapper').classList.toggle("hide");
             }
         </script>
