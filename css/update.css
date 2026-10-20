@@ -65,5 +65,9 @@
         transform: rotate(45deg);
         border-color: var(--sepia-e37);
         border-style: solid;
-}
+    }
+    input[type="textarea"] {
+        height: 8em;
+        resize: vertical;
+    }
 }

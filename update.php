@@ -142,7 +142,8 @@ $today = date("Y-m-d");
                     <option value="8">Educational: Manga/Comics</option>
                 </select>
 
-                <textarea name="comment" id="comment" class="inputs" placeholder="Any comments about what you read:"></textarea>
+                <label for="comment" class="labels">Comment:</label>
+                <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)"></textarea>
 
                 <div class="button-wrapper">
                     <button type="submit" id="updateButton" class="inputs buttons">Update</button>
