@@ -34,6 +34,9 @@
         height: 3em;
     }
     input[type="checkbox"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
