@@ -66,19 +66,21 @@ a {
     .icon-wrapper:hover #nav-menu-icon {
         color: var(--leather);
     }
-    #profile, #profilePic {
-        width: 4em;
-        height: 4em;
-    }
     #profile {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0.4em;
+        width: 4em;
+        height: 4em;
 
         border-radius: 50%;
         border: var(--deep-green) 2px solid;
         background-color: var(--barium-yellow);
+    }
+    #profilePic {
+        width: 3em;
+        height: 3em;
     }
     
 }
