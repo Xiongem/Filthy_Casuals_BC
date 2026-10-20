@@ -68,11 +68,11 @@ a {
     }
     #profile, #profilePic {
         width: 4em;
-        height: fit-content;
+        height: 4em;
     }
     #profile {
         padding: 0.4em;
-        border-radius: 50% 50%;
+        border-radius: 50%;
         border: var(--deep-green) 2px solid;
         background-color: var(--barium-yellow);
     }
