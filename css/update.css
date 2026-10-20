@@ -26,6 +26,9 @@
     .labels {
         font-size: 18px;
     }
+    .page-wrapper {
+        display: flex;
+    }
     .mod-wrapper {
         display: grid;
         grid-template-columns: 40% 40%;

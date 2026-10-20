@@ -101,12 +101,14 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
-                <label for="pages" class="labels">Number of Pages:</label>
-                <input type="number"
-                    name="pages"
-                    id="pages"
-                    class="inputs"
-                    required>
+                <div class="page-wrapper">
+                    <label for="pages" class="labels">Number of Pages:</label>
+                    <input type="number"
+                        name="pages"
+                        id="pages"
+                        class="inputs"
+                        required>
+                </div>
 
                 <div class="box-wrapper">
                     <label for="ongoing" class="labels">Ongoing:</label>
