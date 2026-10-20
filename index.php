@@ -45,7 +45,9 @@ $month = date('n');
         <?= makeNav() ?>
         
         <?php if ($admin == 1) { ?>
+        <div>
             <a href="OTP.php" class="nav-item">One-Time Passcode</a>
+        </div>
         <?php } ?>
     </header>
 </body>

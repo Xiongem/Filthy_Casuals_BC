@@ -44,7 +44,8 @@ function makeNav() {
                 </div>
                 <a href="profile.php" id="profile">
                     <img id="profilePic" src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';
-            echo '</a>';     
+            echo '</a>
+            </div>';   
 }
 
 function forceLogin() {
