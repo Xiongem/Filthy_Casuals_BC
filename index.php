@@ -44,6 +44,7 @@ $admin = 0;
 <body>
     <header>
         <?= makeNav() ?>
+        <?= "hello" . $user["username"] ?>
     </header>
 </body>
 </html>
