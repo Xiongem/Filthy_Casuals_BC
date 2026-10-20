@@ -170,9 +170,11 @@ $today = date("Y-m-d");
             var select2 = document.getElementById('mod-2');
 
             if (select1.value == 1) {
-                select1.style.backgroundColor = "#808080"
+                select1.style.backgroundColor = "#808080";
+                console.log("grey");
             } else if (select1.value == 2) {
-                select1.style.backgroundColor = "#800080"
+                select1.style.backgroundColor = "#800080";
+                console.log("purple");
             }
 
             // switch (select1.value) {
