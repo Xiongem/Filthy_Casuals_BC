@@ -71,7 +71,11 @@ a {
         height: 4em;
     }
     #profile {
-        padding: 0.4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.4em;
+
         border-radius: 50%;
         border: var(--deep-green) 2px solid;
         background-color: var(--barium-yellow);
