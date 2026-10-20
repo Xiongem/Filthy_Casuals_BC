@@ -23,8 +23,6 @@ function makeNav() {
                 $imageType = $user['pfpType'];
                 $imageData = base64_encode($user['pfpData']);
 
-                $admin = 0;
-
         echo '<div class="nav-wrapper" id="nav-wrapper">
                 <div class="icon-wrapper" id="icon-wrapper"">
                     <i class="fa fa-bars" id="nav-menu-icon"></i>

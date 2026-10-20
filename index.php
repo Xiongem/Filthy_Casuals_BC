@@ -20,7 +20,6 @@ $userID = $_SESSION["user_id"];
                 $imageData = base64_encode($user['pfpData']);
 
 $month = date('n');
-$admin = 0;
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +43,6 @@ $admin = 0;
 <body>
     <header>
         <?= makeNav() ?>
-        <?= "hello " . $admin ?>
     </header>
 </body>
 </html>
