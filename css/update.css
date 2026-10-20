@@ -58,6 +58,7 @@
     } */
     .hidden-wrapper {
         height: 3em;
+        padding-left: 1em;
     }
     #comment {
         height: 12em;
