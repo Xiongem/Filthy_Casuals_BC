@@ -21,7 +21,7 @@
     .box-wrapper {
         display: flex;
         align-items: center;
-        margin-bottom: 1em;
+        /* margin-bottom: 1em; */
     }
     .labels {
         font-size: 18px;
@@ -59,6 +59,7 @@
     .hidden-wrapper {
         height: 3em;
         padding-left: 1em;
+        margin-bottom: 1em;
     }
     #comment {
         height: 12em;
