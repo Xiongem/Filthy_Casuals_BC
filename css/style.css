@@ -120,6 +120,38 @@ a {
         color: var(--deep-green);
         text-align: center;
     }
+    input[type="checkbox"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: var(--barium-yellow);
+        accent-color: var(--marine-green);
+        border: 2px solid var(--marine-green);
+        border-radius: 4px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        position: relative;
+    }
+    input[type="checkbox"]:checked {
+        background-color: var(--marine-green);
+        border: 2px solid var(--deep-green);
+    }
+    input[type="checkbox"]:checked::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 1px;
+        width: 6px;
+        height: 12px;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+        border-color: var(--sepia-e37);
+        border-style: solid;
+    }
     
 }
 /** ####################### *//** ####################### *//** ####################### */
