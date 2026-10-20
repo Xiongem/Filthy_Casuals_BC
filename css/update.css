@@ -34,7 +34,7 @@
     .mod-content {
         display: flex;
         flex-direction: column;
-        justify-self: center;
+        /* justify-self: center; */
     }
     /* .inputs {
         width: 90%;
