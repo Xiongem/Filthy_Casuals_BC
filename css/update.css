@@ -1,3 +1,12 @@
+:root,
+    /*Dark Purple*/
+    :root.option1 { 
+        --marine-green: #636b3f;
+        --deep-green: #2b361c;
+        --barium-yellow: #fefae3;
+        --sepia-e37: #d4a369;
+        --leather: #b17036;
+    }
 @media only screen and (min-width: 200px) {
     .update-content, form {
         display: flex;
@@ -23,5 +32,11 @@
     } */
     .hidden-wrapper {
         height: 3em;
+    }
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: var(--barium-yellow);
     }
 }
