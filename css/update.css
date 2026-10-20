@@ -14,7 +14,7 @@
     .inputs {
         width: 80%;
     }
-    #dateFinished {
+    .dates {
         width: fit-content;
     }
 }

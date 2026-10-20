@@ -75,7 +75,7 @@ $today = date("Y-m-d");
                     <input type="date"
                         name="dateFinished"
                         id="dateFinished"
-                        class="inputs"
+                        class="inputs dates"
                         value="<?=$today?>"
                         required>
                 </div>
@@ -84,7 +84,7 @@ $today = date("Y-m-d");
                 <input type="date"
                     name="dateStarted"
                     id="dateStarted"
-                    class="inputs">
+                    class="inputs dates">
 
                 <label for="pages" class="labels">Number of Pages:</label>
                 <input type="number"
