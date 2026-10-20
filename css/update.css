@@ -6,5 +6,12 @@
     }
     .box-wrapper {
         display: flex;
+        align-items: center;
+    }
+    .labels {
+        font-size: 18px;
+    }
+    .inputs {
+        width: 80%;
     }
 }
