@@ -67,8 +67,13 @@ a {
         color: var(--leather);
     }
     #profile, #profilePic {
-        width: 6em;
+        width: 4em;
         height: fit-content;
+    }
+    #profile {
+        padding: 0.4em;
+        border-radius: 50%;
+        border: var(--deep-green) 2px solid;
     }
     
 }
