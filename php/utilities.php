@@ -23,7 +23,7 @@ function makeNav() {
                 $imageType = $user['pfpType'];
                 $imageData = base64_encode($user['pfpData']);
 
-            echo '<div class="nav-wrapper" id="nav-wrapper">
+        echo '<div class="nav-wrapper" id="nav-wrapper">
                 <div class="icon-wrapper">
                     <i class="fa fa-bars" id="nav-menu-icon"></i>
                     <div class="nav-menu-wrapper" id="nav-menu-wrapper">
@@ -35,7 +35,7 @@ function makeNav() {
                             <a id="update" href="update.php">
                                 update
                                 <div class="update-icon">
-                                    <i class="fa fa-crosshairs"></i>
+                                    <i class="fa fa-plus"></i>
                                 </div>
                             </a>
                             <a class="nav-item" href="logout.php">Logout</a>
@@ -44,17 +44,7 @@ function makeNav() {
                 </div>
                 <a href="profile.php" id="profile">
                     <img id="profilePic" src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';
-                echo '</a>
-                <div class="dropdown-wrapper" id="navDrop">
-                    <div class="dropdown-content" id="navDropContent">
-                        <a id="update" href="update.php">
-                            <div class="update-icon">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>';
+            echo '</a>';     
 }
 
 function forceLogin() {
