@@ -35,7 +35,7 @@ function makeNav() {
                             <a id="update" class="nav-item href="update.php">
                                 update
                                 <div class="update-icon">
-                                    <i class="fa fa-plus"></i>
+                                    <i class="fa fa-plus" id="icon"></i>
                                 </div>
                             </a>';
                             if ($admin == 1) {
