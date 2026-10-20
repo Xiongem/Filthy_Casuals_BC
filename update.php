@@ -83,7 +83,7 @@ $today = date("Y-m-d");
                 </div>
 
                 <div class="box-wrapper">
-                    <label for="startDate" class="labels">CSet start date:</label>
+                    <label for="startDate" class="labels">Set start date:</label>
                     <input type="checkbox"
                         name="startDate"
                         id="startDate"
