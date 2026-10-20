@@ -66,7 +66,7 @@ $today = date("Y-m-d");
                     <input type="checkbox"
                         name="diffDate"
                         id="diffDate"
-                        class="inputs"
+                        class="checkbox"
                         onclick="showDateFinished();">
                 </div>
 
@@ -100,7 +100,7 @@ $today = date("Y-m-d");
                     <input type="checkbox"
                         name="ongoing"
                         id="ongoing"
-                        class="inputs">
+                        class="checkbox">
                 </div>
 
                 <label for="mod-1" class="labels">Modifier 1:</label>
