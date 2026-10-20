@@ -54,38 +54,6 @@
     #comment {
         height: 8em;
         resize: vertical;
-    }
-    select {
-        margin-bottom: 1em;
-        accent-color: var(--marine-green);
-        border: 2px solid var(--marine-green);
-        border-radius: 4px;
-        height: 2.5em;
-        padding-left: 0.5em;
-    }
-
-    .normal {
-        background-color: grey;
-    }
-    .manga {
-        background-color: purple;
-    }
-    .challenge {
-        background-color: orangered;
-    }
-    .buddy {
-
-    }
-    .friend {
-
-    }
-    .season {
-
-    }
-    .RAT {
-
-    }
-    .education {
-
+        background-color: #800080;
     }
 }
