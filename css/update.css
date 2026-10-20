@@ -17,11 +17,11 @@
     .dates {
         width: fit-content;
     }
-    #diffDate {
+    /* #diffDate {
         width: fit-content;
         margin-left: 0.5em;
-    }
-    #dateFinishedWrapper {
+    } */
+    .hidden-wrapper {
         height: 3em;
     }
 }

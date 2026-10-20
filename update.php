@@ -70,14 +70,16 @@ $today = date("Y-m-d");
                         onclick="showDateFinished();">
                 </div>
 
-                <div id="dateFinishedWrapper" class="hide">
-                    <label for="dateFinished" class="labels">Date Finished:</label>
-                    <input type="date"
-                        name="dateFinished"
-                        id="dateFinished"
-                        class="inputs dates"
-                        value="<?=$today?>"
-                        required>
+                <div class="hidden-wrapper">
+                    <div id="dateFinishedWrapper" class="hide">
+                        <label for="dateFinished" class="labels">Date Finished:</label>
+                        <input type="date"
+                            name="dateFinished"
+                            id="dateFinished"
+                            class="inputs dates"
+                            value="<?=$today?>"
+                            required>
+                    </div>
                 </div>
 
                 <label for="dateStarted" class="labels">Date Started:</label>
