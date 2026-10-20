@@ -37,7 +37,7 @@ function upload() {
 }
 
 function showNav(){
-  var navWrapper = document.getElementById('nav-menu-wrapper');
+  var navWrapper = document.getElementById('icon-wrapper');
   var navIcon = document.getElementById('nav-menu-icon');
 
   navWrapper.classList.toggle('show');
