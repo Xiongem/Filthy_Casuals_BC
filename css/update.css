@@ -42,6 +42,7 @@
         border: 2px solid var(--marine-green);
         border-radius: 4px;
         height: 2.5em;
+        width: 2.5em;
         cursor: pointer;
         position: relative;
     }
