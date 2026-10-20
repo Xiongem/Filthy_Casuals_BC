@@ -28,12 +28,13 @@
     }
     .mod-wrapper {
         display: grid;
-        grid-template-columns: 50% 50%;
-        row-gap: 1em;
+        grid-template-columns: 40% 40%;
+        /* row-gap: 1em; */
     }
     .mod-content {
         display: flex;
         flex-direction: column;
+        justify-self: center;
     }
     /* .inputs {
         width: 90%;
