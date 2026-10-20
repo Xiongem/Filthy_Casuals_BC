@@ -35,3 +35,11 @@ function upload() {
     profilePicture.style.backgroundImage = `url(${fileReaderEvent.target.result})`;
   }
 }
+
+function showNav(){
+  var navWrapper = document.getElementById('nav-menu-wrapper');
+  var navIcon = document.getElementById('nav-menu-icon');
+
+  navWrapper.classList.toggle('show');
+  navIcon.classList.toggle('leather');
+}
