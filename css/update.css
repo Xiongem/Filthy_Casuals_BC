@@ -29,9 +29,10 @@
     .page-wrapper {
         display: flex;
         align-items: center;
+        margin-bottom: 1em;
     }
     #pages {
-        margin-left: 0.5em;
+        margin: 0 0 0 0.5em;
     }
     .mod-wrapper {
         display: grid;
