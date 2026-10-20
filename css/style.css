@@ -72,8 +72,9 @@ a {
     }
     #profile {
         padding: 0.4em;
-        border-radius: 50%;
+        border-radius: 50% 50%;
         border: var(--deep-green) 2px solid;
+        background-color: var(--barium-yellow);
     }
     
 }
