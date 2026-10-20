@@ -44,8 +44,8 @@
         accent-color: var(--marine-green);
         border: 2px solid var(--marine-green);
         border-radius: 4px;
-        height: 2.5em;
-        width: 2.5em;
+        width: 20px;
+        height: 20px;
         cursor: pointer;
         position: relative;
     }
