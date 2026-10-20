@@ -28,6 +28,10 @@
     }
     .page-wrapper {
         display: flex;
+        align-items: center;
+    }
+    #pages {
+        margin-left: 0.5em;
     }
     .mod-wrapper {
         display: grid;
