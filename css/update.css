@@ -16,12 +16,13 @@
     .box-wrapper {
         display: flex;
         align-items: center;
+        margin-bottom: 1em;
     }
     .labels {
         font-size: 18px;
     }
     .inputs {
-        width: 80%;
+        width: 90%;
     }
     .dates {
         width: fit-content;
