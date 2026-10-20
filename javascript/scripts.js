@@ -37,12 +37,11 @@ function upload() {
 }
 
 function showNav(){
-  // var navWrapper = document.getElementById('icon-wrapper');
   var navMenu = document.getElementById('nav-menu-wrapper');
   var navIcon = document.getElementById('nav-menu-icon');
 
 
   navMenu.classList.toggle('show');
   navIcon.classList.toggle('leather');
-  console.log("hello");
+  console.log("hello2");
 }
