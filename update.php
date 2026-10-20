@@ -116,31 +116,37 @@ $today = date("Y-m-d");
                         class="checkbox">
                 </div>
 
-                <label for="mod-1" class="labels">Modifier 1:</label>
-                <select name="mod-1" id="mod-1" class="inputs">
-                    <option value="1">Normal</option>
-                    <option value="2">Manga/Comic</option>
-                    <option value="3">Challenge</option>
-                    <option value="4">Challenge: Manga/Comics</option>
-                    <option value="5">Buddy Read</option>
-                    <option value="6">Friend Recommendation</option>
-                    <option value="7">Seasonal</option>
-                    <option value="8">Read-a-thon</option>
-                    <option value="9">Educational</option>
-                    <option value="10">Educational: Manga/Comics</option>
-                </select>
+                <div class="mod-wrapper">
+                    <div id="mod1-wrapper" class="mod-content">
+                        <label for="mod-1" class="labels">Modifier 1:</label>
+                        <select name="mod-1" id="mod-1" class="inputs">
+                            <option value="1">Normal</option>
+                            <option value="2">Manga/Comic</option>
+                            <option value="3">Challenge</option>
+                            <option value="4">Challenge: Manga/Comics</option>
+                            <option value="5">Buddy Read</option>
+                            <option value="6">Friend Recommendation</option>
+                            <option value="7">Seasonal</option>
+                            <option value="8">Read-a-thon</option>
+                            <option value="9">Educational</option>
+                            <option value="10">Educational: Manga/Comics</option>
+                        </select>
+                    </div>
 
-                <label for="mod-2" class="labels">Modifier 2:</label>
-                <select name="mod-2" id="mod-2" class="inputs">
-                    <option value="1">Normal</option>
-                    <option value="2">Challenge</option>
-                    <option value="3">Buddy Read</option>
-                    <option value="4">Friend Recommendation</option>
-                    <option value="5">Seasonal</option>
-                    <option value="6">Read-a-thon</option>
-                    <option value="7">Educational</option>
-                    <option value="8">Educational: Manga/Comics</option>
-                </select>
+                    <div id="mod2-wrapper" class="mod-content">
+                        <label for="mod-2" class="labels">Modifier 2:</label>
+                        <select name="mod-2" id="mod-2" class="inputs">
+                            <option value="1">Normal</option>
+                            <option value="2">Challenge</option>
+                            <option value="3">Buddy Read</option>
+                            <option value="4">Friend Recommendation</option>
+                            <option value="5">Seasonal</option>
+                            <option value="6">Read-a-thon</option>
+                            <option value="7">Educational</option>
+                            <option value="8">Educational: Manga/Comics</option>
+                        </select>
+                    </div>
+                </div>
 
                 <label for="comment" class="labels">Comment:</label>
                 <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)"></textarea>
