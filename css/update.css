@@ -52,8 +52,7 @@
         height: 3em;
     }
     #comment {
-        height: 8em;
+        height: 12em;
         resize: vertical;
-        background-color: #800080;
     }
 }

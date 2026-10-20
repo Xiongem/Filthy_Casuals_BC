@@ -165,29 +165,6 @@ $today = date("Y-m-d");
             function showDateStarted() {
                 document.getElementById('dateStartedWrapper').classList.toggle("hide");
             }
-
-            var select1 = document.getElementById('mod-1');
-            var select2 = document.getElementById('mod-2');
-
-            if (select1.value == 1) {
-                select1.style.backgroundColor = "#808080";
-                console.log("grey");
-            } else if (select1.value == 2) {
-                select1.style.backgroundColor = "#800080";
-                console.log("purple");
-            }
-
-            // switch (select1.value) {
-            //     case 1:
-            //         select1.style.backgroundColor = "#808080"
-            //         break;
-            //     case 2:
-            //         select1.style.backgroundColor = "#800080"
-            //         break;
-
-            //     default:
-            //         break;
-            // }
         </script>
 </body>
 </html>
