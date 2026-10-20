@@ -119,7 +119,7 @@ $today = date("Y-m-d");
                 <div class="mod-wrapper">
                     <div id="mod1-wrapper" class="mod-content">
                         <label for="mod-1" class="labels">Modifier 1:</label>
-                        <select name="mod-1" id="mod-1" class="inputs">
+                        <select name="mod-1" id="mod-1">
                             <option id="normal1" class="normal" value="1">Normal</option>
                             <option id="manga1" class="manga" value="2">Manga/Comic</option>
                             <option id="challenge1" class="challenge" value="3">Challenge</option>
@@ -135,7 +135,7 @@ $today = date("Y-m-d");
 
                     <div id="mod2-wrapper" class="mod-content">
                         <label for="mod-2" class="labels">Modifier 2:</label>
-                        <select name="mod-2" id="mod-2" class="inputs">
+                        <select name="mod-2" id="mod-2">
                             <option id="normal2" class="normal" value="1">Normal</option>
                             <option id="challenge2" class="challenge" value="2">Challenge</option>
                             <option id="buddy2" class="buddy" value="3">Buddy Read</option>
