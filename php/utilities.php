@@ -32,7 +32,7 @@ function makeNav() {
                             <a class="nav-item" href="challenges.php">Challenges</a>
                             <a class="nav-item" href="rules.php">Rules</a>
                             <a class="nav-item" href="settings.php">Settings</a>
-                            <a id="update" class="nav-item href="update.php">
+                            <a id="update" class="nav-item" href="update.php">
                                 update
                                 <div class="update-icon">
                                     <i class="fa fa-plus" id="icon"></i>
