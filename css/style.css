@@ -62,10 +62,10 @@ a {
     }
     /* .icon-wrapper:hover .nav-menu-wrapper {
         display: flex;
-    }
+    } */
     .icon-wrapper:hover #nav-menu-icon {
         color: var(--leather);
-    } */
+    }
     #profile, #profilePic {
         width: 6em;
         height: fit-content;
