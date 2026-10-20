@@ -42,4 +42,5 @@ function showNav(){
 
   navWrapper.classList.toggle('show');
   navIcon.classList.toggle('leather');
+  console.log("hello");
 }
