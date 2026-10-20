@@ -43,7 +43,9 @@ $today = date("Y-m-d");
     </header>
     <div class="update-wrapper">
         <div class="update-content">
-            <h1>Update Your Reading History</h1>
+            <div class="title-wrapper">
+                <h1>Update Your Reading History</h1>
+            </div>
             <form action="php/process-update.php" method="post">
                 <label for="title" class="labels">Title:</label>
                 <input type="text"
