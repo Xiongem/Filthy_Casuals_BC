@@ -135,7 +135,7 @@ $today = date("Y-m-d");
 
                     <div id="mod2-wrapper" class="mod-content">
                         <label for="mod-2" class="labels">Modifier 2:</label>
-                        <select name="mod-2" id="mod-2" class="inputs" onchange="selectChange();">
+                        <select name="mod-2" id="mod-2" class="inputs">
                             <option value="1">Normal</option>
                             <option value="2">Challenge</option>
                             <option value="3">Buddy Read</option>
@@ -166,23 +166,20 @@ $today = date("Y-m-d");
                 document.getElementById('dateStartedWrapper').classList.toggle("hide");
             }
 
-            function selectChange() {
-                var select1 = document.getElementById('mod-1');
-                var select2 = document.getElementById('mod-2');
+            var select1 = document.getElementById('mod-1');
+            var select2 = document.getElementById('mod-2');
 
-                switch (select1.value) {
-                    case 1:
-                        select1.style.backgroundColor = "#808080"
-                        break;
-                    case 2:
-                        select1.style.backgroundColor = "#800080"
-                        break;
+            switch (select1.value) {
+                case 1:
+                    select1.style.backgroundColor = "#808080"
+                    break;
+                case 2:
+                    select1.style.backgroundColor = "#808080"
+                    break;
 
-                    default:
-                        break;
-                }
+                default:
+                    break;
             }
-            
         </script>
 </body>
 </html>
