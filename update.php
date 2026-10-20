@@ -110,7 +110,7 @@ $today = date("Y-m-d");
                         required>
                 </div>
 
-                <div class="box-wrapper">
+                <div class="box-wrapper" id="ongoingWrapper">
                     <label for="ongoing" class="labels">Ongoing:</label>
                     <input type="checkbox"
                         name="ongoing"
