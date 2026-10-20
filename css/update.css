@@ -17,6 +17,10 @@
     .dates {
         width: fit-content;
     }
+    #diffDate {
+        width: fit-content;
+        margin-left: 0.5em;
+    }
     #dateFinishedWrapper {
         height: 3em;
     }
