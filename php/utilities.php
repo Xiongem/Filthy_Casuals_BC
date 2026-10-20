@@ -37,8 +37,11 @@ function makeNav() {
                                 <div class="update-icon">
                                     <i class="fa fa-plus"></i>
                                 </div>
-                            </a>
-                            <a class="nav-item" href="logout.php">Logout</a>
+                            </a>';
+                            if ($admin == 1) {
+                            echo '<a href="OTP.php" class="nav-item">One-Time Passcode</a>';
+                            }
+                        echo '<a class="nav-item" href="logout.php">Logout</a>
                         </div>
                     </div>
                 </div>
