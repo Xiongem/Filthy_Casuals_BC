@@ -57,6 +57,7 @@ a {
         display: flex;
         justify-content: end;
         flex-wrap: wrap;
+        text-align: center;
         width: fit-content;
         margin: 0.5em 0;
         font-size: 24px;
@@ -117,6 +118,7 @@ a {
     }
     .labels {
         color: var(--deep-green);
+        text-align: center;
     }
     
 }
