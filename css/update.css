@@ -13,6 +13,9 @@
         flex-direction: column;
         /* align-items: center; */
     }
+    form {
+        width: 90%;
+    }
     .box-wrapper {
         display: flex;
         align-items: center;
@@ -21,9 +24,9 @@
     .labels {
         font-size: 18px;
     }
-    .inputs {
+    /* .inputs {
         width: 90%;
-    }
+    } */
     .dates {
         width: fit-content;
     }
