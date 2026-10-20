@@ -33,7 +33,7 @@ $today = date("Y-m-d");
     <link rel="stylesheet" href="css/update.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script> -->
     <script src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -82,11 +82,24 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
-                <label for="dateStarted" class="labels">Date Started:</label>
-                <input type="date"
-                    name="dateStarted"
-                    id="dateStarted"
-                    class="inputs dates">
+                <div class="box-wrapper">
+                    <label for="startDate" class="labels">CSet start date:</label>
+                    <input type="checkbox"
+                        name="startDate"
+                        id="startDate"
+                        class="checkbox"
+                        onclick="showDateStarted();">
+                </div>
+
+                <div class="hidden-wrapper">
+                    <div id="dateStartedWrapper" class="hide">
+                        <label for="dateStarted" class="labels">Date Started:</label>
+                        <input type="date"
+                            name="dateStarted"
+                            id="dateStarted"
+                            class="inputs dates">
+                    </div>
+                </div>
 
                 <label for="pages" class="labels">Number of Pages:</label>
                 <input type="number"
@@ -141,6 +154,9 @@ $today = date("Y-m-d");
         <script>
             function showDateFinished() {
                 document.getElementById('dateFinishedWrapper').classList.toggle("hide");
+            }
+            function showDateStarted() {
+                document.getElementById('dateStartedWrapper').classList.toggle("hide");
             }
         </script>
 </body>
