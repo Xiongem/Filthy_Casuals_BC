@@ -17,4 +17,7 @@
     .dates {
         width: fit-content;
     }
+    #dateFinishedWrapper {
+        height: 3em;
+    }
 }
