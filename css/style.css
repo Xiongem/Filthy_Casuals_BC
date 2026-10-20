@@ -89,6 +89,28 @@ a {
         width: 2.5em;
         height: 2.5em;
     }
+
+    .inputs {
+        margin-bottom: 1em;
+        background-color: var(--barium-yellow);
+        accent-color: var(--marine-green);
+        border: 2px solid var(--marine-green);
+        border-radius: 4px;
+        height: 2.5em;
+        padding-left: 0.5em;
+    }
+    .buttons {
+        background-color: var(--marine-green);
+        color: var(--barium-yellow);
+        border: none;
+        border-radius: 12px;
+        width: 5em;
+        height: 2.5em;
+        cursor: pointer;
+    }
+    .labels {
+        color: var(--deep-green);
+    }
     
 }
 /** ####################### *//** ####################### *//** ####################### */
