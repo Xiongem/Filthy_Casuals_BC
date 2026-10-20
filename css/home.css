@@ -25,7 +25,7 @@
         position: absolute;
         display: none;
         top: 0;
-        width: 35%;
+        width: 20em;
         background-color: var(--marine-green);
         z-index: 1;
         border-radius: 0 0 12px 0;
