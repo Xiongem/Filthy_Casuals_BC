@@ -29,6 +29,7 @@
     .mod-wrapper {
         display: grid;
         grid-template-columns: 40% 40%;
+        justify-content: space-around;
         /* row-gap: 1em; */
     }
     .mod-content {
