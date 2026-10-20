@@ -32,6 +32,7 @@
         justify-content: space-around;
         /* row-gap: 1em; */
     }
+
     .mod-content {
         display: flex;
         flex-direction: column;
@@ -53,5 +54,30 @@
     #comment {
         height: 8em;
         resize: vertical;
+    }
+
+    .normal {
+        background-color: grey;
+    }
+    .manga {
+
+    }
+    .challenge {
+
+    }
+    .buddy {
+
+    }
+    .friend {
+
+    }
+    .season {
+
+    }
+    .RAT {
+
+    }
+    .education {
+
     }
 }

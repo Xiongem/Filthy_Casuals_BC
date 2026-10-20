@@ -120,30 +120,30 @@ $today = date("Y-m-d");
                     <div id="mod1-wrapper" class="mod-content">
                         <label for="mod-1" class="labels">Modifier 1:</label>
                         <select name="mod-1" id="mod-1" class="inputs">
-                            <option value="1">Normal</option>
-                            <option value="2">Manga/Comic</option>
-                            <option value="3">Challenge</option>
-                            <option value="4">Challenge: Manga/Comics</option>
-                            <option value="5">Buddy Read</option>
-                            <option value="6">Friend Recommendation</option>
-                            <option value="7">Seasonal</option>
-                            <option value="8">Read-a-thon</option>
-                            <option value="9">Educational</option>
-                            <option value="10">Educational: Manga/Comics</option>
+                            <option id="normal1" class="normal" value="1">Normal</option>
+                            <option id="manga1" class="manga" value="2">Manga/Comic</option>
+                            <option id="challenge1" class="challenge" value="3">Challenge</option>
+                            <option id="chalManga1" class="challenge" value="4">Challenge: Manga/Comics</option>
+                            <option id="buddy1" class="buddy" value="5">Buddy Read</option>
+                            <option id="friend1" class="friend" value="6">Friend Recommendation</option>
+                            <option id="season1" class="season" value="7">Seasonal</option>
+                            <option id="RAT1" class="RAT" value="8">Read-a-thon</option>
+                            <option id="education1" class="education" value="9">Educational</option>
+                            <option id="eduManga1" class="education" value="10">Educational: Manga/Comics</option>
                         </select>
                     </div>
 
                     <div id="mod2-wrapper" class="mod-content">
                         <label for="mod-2" class="labels">Modifier 2:</label>
                         <select name="mod-2" id="mod-2" class="inputs">
-                            <option value="1">Normal</option>
-                            <option value="2">Challenge</option>
-                            <option value="3">Buddy Read</option>
-                            <option value="4">Friend Recommendation</option>
-                            <option value="5">Seasonal</option>
-                            <option value="6">Read-a-thon</option>
-                            <option value="7">Educational</option>
-                            <option value="8">Educational: Manga/Comics</option>
+                            <option id="normal2" class="normal" value="1">Normal</option>
+                            <option id="challenge2" class="challenge" value="2">Challenge</option>
+                            <option id="buddy2" class="buddy" value="3">Buddy Read</option>
+                            <option id="friend2" class="friend" value="4">Friend Recommendation</option>
+                            <option id="season2" class="season" value="5">Seasonal</option>
+                            <option id="RAT2" class="RAT" value="6">Read-a-thon</option>
+                            <option id="education2" class="education" value="7">Educational</option>
+                            <option id="eduManga2" class="education" value="8">Educational: Manga/Comics</option>
                         </select>
                     </div>
                 </div>
