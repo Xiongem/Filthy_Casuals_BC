@@ -107,6 +107,10 @@ a {
         height: 2.5em;
         padding-left: 0.5em;
     }
+    .button-wrapper {
+        display: flex;
+        justify-content: end;
+    }
     .buttons {
         background-color: var(--marine-green);
         color: var(--barium-yellow);

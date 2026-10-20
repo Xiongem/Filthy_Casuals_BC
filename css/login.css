@@ -48,10 +48,6 @@
     .questionMark-wrapper:hover .popup-wrapper {
         display: flex;
     }
-    .button-wrapper {
-        display: flex;
-        justify-content: end;
-    }
     .link-wrapper {
         display: flex;
         justify-content: space-evenly;
