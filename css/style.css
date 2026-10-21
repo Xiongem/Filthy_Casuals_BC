@@ -170,10 +170,10 @@ a {
         background: var(--marine-green);
         clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%, 20% 50%);
         margin: 0 0.3em;
-        padding-left: 8px;
+        /* padding-left: 10px; */
     }
     .tag-content {
-        padding: 0 8px;
+        margin: 0 12px 0 10px;
     }
 }
 /** ####################### *//** ####################### *//** ####################### */
