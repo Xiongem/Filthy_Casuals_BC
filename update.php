@@ -81,10 +81,8 @@ $today = date("Y-m-d");
                         onkeypress="clickPress(event)">
 
                     <a id="search_results0" class="searchResult" onclick="setTag()"></a>
-                </div>
 
-                <div class="notch-wrapper" id="notchWrapper">
-                    
+                    <div class="notch-wrapper" id="notchWrapper"></div>
                 </div>
 
                 <div class="box-wrapper">
