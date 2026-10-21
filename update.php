@@ -34,8 +34,9 @@ $today = date("Y-m-d");
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script> -->
-    <script src="javascript/scripts.js"></script>
+    <script type="text/javascript" src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/ajax_tags.js"> </script>
 </head>
 <body>
     <header>
@@ -72,10 +73,11 @@ $today = date("Y-m-d");
 
                 <div class="tag-wrapper">
                     <label for="tags" class="labels">Tags:</label>
-                    <input type="text"
-                        name="tags"
-                        id="tags"
-                        class="inputs">
+                    <input type="text" 
+                        name="tags" 
+                        id="tags" 
+                        onkeyup="autocomplet0()">
+
                     <div class="notch-wrapper" id="notchWrapper">
                         <div class="notch-arrow">
                             <p class="tag-content">fanfic</p>
@@ -87,6 +89,7 @@ $today = date("Y-m-d");
                             <p class="tag-content">work</p>
                         </div>
                     </div>
+                    <span result="tags_results0"></span>
                 </div>
 
                 <div class="box-wrapper">
