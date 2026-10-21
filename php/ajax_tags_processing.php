@@ -21,9 +21,6 @@ while ($row = mysqli_fetch_array($result)) {
     if ($num_rows0 !='1') {
         //
     } else {
-        // echo "$tags0";
-        foreach ($tags0 as $t) { 
-            echo "<div class='tag'>$t</div>"; 
-        }
+        echo "$tags0";
     }
 } 
