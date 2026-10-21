@@ -101,17 +101,39 @@ $today = date("Y-m-d");
                         console.log(keyword0);
                         
                         if (keyword0.length > min_length) {
-                            $.ajax({
-                                url: 'ajax_tags_processing.php',
-                                type: 'POST',
-                                data: {keyword0:keyword0},
-                                success:function(data){
-                                    $('#search_results0').show();
-                                    $('#search_results0').html(data);
-                                }
+                            $.post("ajax_tags_processing.php", {
+                                //DATA
+                                keyword0:keyword0
+                            }, function(data) {
+                                $('#search_results0').show();
+                                $('#search_results0').html(data);
                             });
+                            // $.ajax({
+                            //     url: 'ajax_tags_processing.php',
+                            //     type: 'POST',
+                            //     data: {keyword0:keyword0},
+                            //     success:function(data){
+                            //         $('#search_results0').show();
+                            //         $('#search_results0').html(data);
+                            //     }
+                            // });
                         } else {
                             $('#search_results0').hide();
+                        }
+
+                        function createOTP() {
+                            <?php
+                                $oneTimePass = bin2hex(random_bytes(16));
+                            ?>
+                            //assign values
+                            var oneTimePass = <?= json_encode($oneTimePass) ?>;
+                            //begin post method
+                            $.post("php/createOTP.php", {
+                                //DATA
+                                oneTimePass: oneTimePass
+                            }, function(response) {
+                                showOTP(<?= json_encode($oneTimePass) ?>);
+                            });
                         }
                     }
 
