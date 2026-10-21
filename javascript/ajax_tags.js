@@ -23,6 +23,7 @@ function autocomplet0() {
 // }
 
 function setTag() {
+    var keyword0 = document.getElementById('tags_id0');
     //where to put everything
         var container = document.getElementById("notchWrapper"); 
     //creates an element
@@ -37,7 +38,7 @@ function setTag() {
 
     $('#search_results0').html("");
     $('#search_results0').hide();
-    var keyword0 = document.getElementById('tags_id0');
+    
     keyword0.value = '';
 }
 
