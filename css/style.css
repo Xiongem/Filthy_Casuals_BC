@@ -161,7 +161,8 @@ a {
     
 
     .notch-arrow {
-        width: 60px;
+        min-width: 60px;
+        width: fit-content;
         height: 30px;
         background: var(--marine-green);
         clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%, 20% 50%);

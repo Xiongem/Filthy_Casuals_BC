@@ -68,7 +68,9 @@ $today = date("Y-m-d");
                         id="tags"
                         class="inputs">
                     <div class="notch-wrapper" id="notchWrapper">
-                        <div class="notch-arrow"></div>
+                        <div class="notch-arrow">
+                            <p class="tag-content" id="<?= $tag ?>">fanfic</p>
+                        </div>
                         <div class="notch-arrow"></div>
                         <div class="notch-arrow"></div>
                     </div>
