@@ -23,17 +23,8 @@ function autocomplet0() {
 // }
 
 function setTag() {
-    var container = document.getElementById("notchWrapper"); //where to put the thing
-
-    <div class="notch-arrow" id="tagContainer">
-        <p class="tag-content" id="tagContent"></p>
-    </div>
-    
-    $('#search_results0').html("");
-    $('#search_results0').hide();
-    var keyword0 = document.getElementById('tags_id0');
-    keyword0.value = '';
-
+    //where to put everything
+        var container = document.getElementById("notchWrapper"); 
     //creates an element
         var tag = document.createElement("div"); 
     //  assigns attributes to the input
@@ -42,6 +33,12 @@ function setTag() {
     // appends the input to the container
         container.appendChild(player);
         $('#keyword0').html(keyword0);
+
+
+    $('#search_results0').html("");
+    $('#search_results0').hide();
+    var keyword0 = document.getElementById('tags_id0');
+    keyword0.value = '';
 }
 
 // function displayPlayers(){
