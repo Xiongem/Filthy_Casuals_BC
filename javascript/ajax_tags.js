@@ -32,7 +32,7 @@ function setTag() {
         tag.setAttribute("id", keyword0);
     // appends the input to the container
         container.appendChild(tag);
-        $('#keyword0').html(keyword0);
+        $('#keyword0').html('<p class="tag-content" id="tagContent">keyword0</p>');
 
 
     $('#search_results0').html("");
@@ -60,4 +60,4 @@ function setTag() {
                     //appends the input to the container
 //                 document.getElementById("showPlayers").appendChild(player);
 //             }
-//         }'<p class="tag-content" id="tagContent">keyword0</p>'
+//         }
