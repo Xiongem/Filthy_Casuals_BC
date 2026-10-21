@@ -10,7 +10,7 @@ dbConnect();
 
 $string0 = $_POST['keyword0'];
 
-$sql = "SELECT tags FROM tags WHERE tags LIKE '%$string0%'";
+$sql = "SELECT tags FROM tags WHERE tags = $string0 ";
     $result = $_SESSION["conn"]->query($sql);
 
 echo "got results";
@@ -22,4 +22,4 @@ echo "got results";
 //     } else {
 //         echo "$tags0";
 //     }
-// }
+// } LIKE '%$string0%'
