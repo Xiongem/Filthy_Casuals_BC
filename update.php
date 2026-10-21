@@ -61,6 +61,19 @@ $today = date("Y-m-d");
                     class="inputs"
                     required>
 
+                <div class="tag-wrapper">
+                    <label for="tags" class="labels">Tags:</label>
+                    <input type="text"
+                        name="tags"
+                        id="tags"
+                        class="inputs">
+                    <div class="notch-wrapper" id="notchWrapper">
+                        <div class="notch-arrow"></div>
+                        <div class="notch-arrow"></div>
+                        <div class="notch-arrow"></div>
+                    </div>
+                </div>
+
                 <div class="box-wrapper">
                     <label for="diffDate" class="labels">Click if your finish date is not today:</label>
                     <input type="checkbox"
@@ -147,19 +160,6 @@ $today = date("Y-m-d");
                             <option value="7">Educational</option>
                             <option value="8">Educational: Manga/Comics</option>
                         </select>
-                    </div>
-                </div>
-
-                <div class="tag-wrapper">
-                    <label for="tags" class="labels">Tags:</label>
-                    <input type="text"
-                        name="tags"
-                        id="tags"
-                        class="inputs">
-                    <div class="notch-wrapper" id="notchWrapper">
-                        <div class="notch-arrow"></div>
-                        <div class="notch-arrow"></div>
-                        <div class="notch-arrow"></div>
                     </div>
                 </div>
 
