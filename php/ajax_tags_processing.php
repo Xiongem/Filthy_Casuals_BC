@@ -16,7 +16,7 @@ $tags0 = array();
 $sql = "SELECT tags FROM tags WHERE tags LIKE '% $string0 %' OR tags LIKE '$string0 %' OR tags LIKE '% $string0' OR tags = '$string0' ";
     $result = $_SESSION["conn"]->query($sql);
 
-    if ($result->numRows()>0) {
+    if ($result->num_rows > 0) {
         while ($row = mysqli_fetch_array($result)) {
             $tags0 = array_merge($tags0, explode(" ", $row[0]));
         }
