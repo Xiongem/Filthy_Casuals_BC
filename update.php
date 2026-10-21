@@ -79,7 +79,7 @@ $today = date("Y-m-d");
                         onkeyup="autocomplet0()"> -->
                     <input type="text" name="keyword0" id="tags_id0" onkeyup="autocomplet0()">
 
-                    <div class="notch-wrapper" id="notchWrapper">
+                    <!-- <div class="notch-wrapper" id="notchWrapper">
                         <div class="notch-arrow">
                             <p class="tag-content">fanfic</p>
                         </div>
@@ -89,7 +89,7 @@ $today = date("Y-m-d");
                         <div class="notch-arrow">
                             <p class="tag-content">work</p>
                         </div>
-                    </div>
+                    </div> -->
                     <span id="search_results0"></span>
                 </div>
 
