@@ -150,6 +150,15 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
+                <div class="tag-wrapper">
+                    <label for="tags" class="labels">Tags:</label>
+                    <input type="text"
+                        name="tags"
+                        id="tags"
+                        class="inputs">
+                    <span class="notch-arrow"></span>
+                </div>
+
                 <label for="comment" class="labels">Comment:</label>
                 <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)"></textarea>
 
