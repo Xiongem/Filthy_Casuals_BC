@@ -13,13 +13,13 @@ $string0 = $_POST['keyword0'];
 $sql = "SELECT tags FROM tags WHERE tags LIKE '%$string0%'";
     $result = $_SESSION["conn"]->query($sql);
 
-
-while ($row = mysqli_fetch_array($result)) {
-    $tags0 = $row['tags'];
-    $num_rows0 = mysqli_num_rows($result);
-    if ($num_rows0 !='1') {
-        //
-    } else {
-        echo "$tags0";
-    }
-}
+echo "got results";
+// while ($row = mysqli_fetch_array($result)) {
+//     $tags0 = $row['tags'];
+//     $num_rows0 = mysqli_num_rows($result);
+//     if ($num_rows0 !='1') {
+//         //
+//     } else {
+//         echo "$tags0";
+//     }
+// }
