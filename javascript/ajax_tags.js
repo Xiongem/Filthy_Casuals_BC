@@ -23,23 +23,23 @@ function autocomplet0() {
 // }
 
 function setTag() {
-    var keyword0 = document.getElementById('tags_id0').value;
+    var searchResult = document.getElementById('search_results0').value;
     //where to put everything
         var container = document.getElementById("notchWrapper"); 
     //creates an element
-        var tag = document.createElement("div"); 
+        var newTag = document.createElement("div"); 
     //  assigns attributes to the input
-        tag.setAttribute("class", "notch-arrow");
-        tag.setAttribute("id", keyword0);
+        newTag.setAttribute("class", "notch-arrow");
+        newTag.setAttribute("id", searchResult);
     // appends the input to the container
         container.appendChild(tag);
-        keyword0.innerHTML = "<p class='tag-content' id='tagContent'>keyword0</p>";
+        searchResult.innerHTML = "<p class='tag-content' id='tagContent'>searchResult</p>";
 
 
     $('#search_results0').html("");
     $('#search_results0').hide();
     
-    keyword0.value = '';
+    searchResult.value = '';
 }
 
 // function displayPlayers(){
