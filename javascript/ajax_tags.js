@@ -25,7 +25,7 @@ function setTag() {
             type: 'POST',
             data: {searchResult:searchResult},
             success:function(data){
-                var container = document.getElementById("notchWrapper"); 
+                // var container = document.getElementById("notchWrapper"); 
                 $('#notchWrapper').append(data);
 
                 $('#search_results0').html("");
@@ -37,8 +37,9 @@ function setTag() {
 }
 
 function removeTag(tagName) {
-    var removedTag = tagName;
-    removeTag.remove();
+    console.log(tagName);
+    
+    tagName.remove();
 }
 
 
