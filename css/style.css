@@ -209,3 +209,6 @@ a {
 .leather {
     color: #b17036;
 }
+.required {
+    color: red;
+}
