@@ -156,9 +156,11 @@ $today = date("Y-m-d");
                         name="tags"
                         id="tags"
                         class="inputs">
-                    <div class="notch-arrow"></div>
-                    <div class="notch-arrow"></div>
-                    <div class="notch-arrow"></div>
+                    <div class="notch-wrapper" id="notchWrapper">
+                        <div class="notch-arrow"></div>
+                        <div class="notch-arrow"></div>
+                        <div class="notch-arrow"></div>
+                    </div>
                 </div>
 
                 <label for="comment" class="labels">Comment:</label>

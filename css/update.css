@@ -56,6 +56,11 @@
         width: fit-content;
         margin-left: 0.5em;
     } */
+    .notch-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
     .hidden-wrapper {
         height: 3em;
         padding-left: 1em;
