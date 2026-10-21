@@ -22,8 +22,8 @@ function autocomplet0() {
 //     $('#search_results0').hide();
 // }
 
-function setTag() {
-    var searchResult = document.getElementById('search_results0').value;
+function setTag(result) {
+    var searchResult = result;
     console.log(searchResult);
     
     //where to put everything
