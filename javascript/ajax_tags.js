@@ -24,25 +24,15 @@ function autocomplet0() {
 
 function setTag() {
     searchResult = document.getElementById('search_results0').textContent;
-    console.log(searchResult);
-    
-    //where to put everything
-        var container = document.getElementById("notchWrapper"); 
-    //creates an element
-        var newTag = document.createElement("div"); 
-    //  assigns attributes to the input
-        newTag.setAttribute("class", "notch-arrow");
-        newTag.setAttribute("id", searchResult);
-    // appends the input to the container
-        container.appendChild(newTag);
-        
-        // var tagValue = $('#searchResult');
-        $('#test').innerHTML = "<p class='tag-content' id='tagContent'>searchResult</p>";
-
-    $('#search_results0').html("");
-    $('#search_results0').hide();
-    var keyword0 = document.getElementById('tags_id0').value;
-    keyword0.value = '';
+    $.ajax({
+            url: 'php/ajax_tags_creation.php',
+            type: 'POST',
+            data: {searchResult:searchResult},
+            success:function(data){
+                $('#notchWrapper').show();
+                $('#notchWrapper').html(data);
+            }
+        });
 }
 
 
@@ -67,6 +57,27 @@ function setTag() {
     
 //     searchResult.value = '';
 // }
+
+// searchResult = document.getElementById('search_results0').textContent;
+//     console.log(searchResult);
+    
+//     //where to put everything
+//         var container = document.getElementById("notchWrapper"); 
+//     //creates an element
+//         var newTag = document.createElement("div"); 
+//     //  assigns attributes to the input
+//         newTag.setAttribute("class", "notch-arrow");
+//         newTag.setAttribute("id", searchResult);
+//     // appends the input to the container
+//         container.appendChild(newTag);
+        
+//         // var tagValue = $('#searchResult');
+//         $('#test').innerHTML = "<p class='tag-content' id='tagContent'>searchResult</p>";
+
+//     $('#search_results0').html("");
+//     $('#search_results0').hide();
+//     var keyword0 = document.getElementById('tags_id0').value;
+//     keyword0.value = '';
 
 // function displayPlayers(){
 //             let players = document.getElementById("playerNumber");x
