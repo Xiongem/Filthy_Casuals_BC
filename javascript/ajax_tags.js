@@ -30,7 +30,7 @@ function setTag() {
             data: {searchResult:searchResult},
             success:function(data){
                 var container = document.getElementById("notchWrapper"); 
-                $('#notchWrapper').appendChild(container.html(data));
+                $('#notchWrapper').appendChild().html(data);
                 // .show();
                 // $('#notchWrapper').html(data);
 
