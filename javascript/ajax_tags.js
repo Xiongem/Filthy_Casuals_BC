@@ -29,8 +29,15 @@ function setTag() {
             type: 'POST',
             data: {searchResult:searchResult},
             success:function(data){
-                $('#notchWrapper').show();
-                $('#notchWrapper').html(data);
+                var container = document.getElementById("notchWrapper"); 
+                $('#notchWrapper').appendChild(container.html(data));
+                // .show();
+                // $('#notchWrapper').html(data);
+
+                $('#search_results0').html("");
+                $('#search_results0').hide();
+                
+                searchResult.value = '';
             }
         });
 }
