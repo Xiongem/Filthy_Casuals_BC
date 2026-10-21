@@ -26,6 +26,7 @@ $test = $_POST["test"];
 echo"$test";
 
 $insert_tags = implode(",", $tags);
+print_r($insert_tags);
 
 if (isset($_POST["diffDate"])) {
     $dateFinished = $_POST["dateFinished"];
