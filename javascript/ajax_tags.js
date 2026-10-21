@@ -36,6 +36,11 @@ function setTag() {
         });
 }
 
+function removeTag(tagName) {
+    var removedTag = tagName;
+    removeTag.remove();
+}
+
 
 // function setTag(result) {
 //     var searchResult = result;
