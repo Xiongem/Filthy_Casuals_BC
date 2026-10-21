@@ -12,13 +12,20 @@ $string0 = $_POST['keyword0'];
 
 // echo "result: " . $string0;
 
-$sql = "SELECT tags FROM tags WHERE tags LIKE '% $string0 %' OR tags LIKE '$string0 %' OR tags LIKE '% $string0' OR tags = '$string0' ";
+$sql = "SELECT tags FROM tags WHERE tags LIKE '%$string0%' ";
     $result = $_SESSION["conn"]->query($sql);
 
-        $tags0 = $row['tags'];
-        $num_rows0 = mysqli_num_rows($result);
-        if ($num_rows0 !='1') {
-            //
-        } else {
-            echo "$tags0";
-        }
+while ($row = mysqli_fetch_array($result)) {
+    $tags0 = $row['tags'];
+    $num_rows0 = mysqli_num_rows($result);
+    if ($num_rows0 !='1') {
+        //
+    } else {
+        echo "$tags0";
+        // for($i=0;$i<count($tags0);$i++) {
+        //     echo $tags0;
+        //     if($i<count($tags0)-1) echo ",\n";
+        // }
+
+    }
+} 
