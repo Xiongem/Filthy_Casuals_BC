@@ -60,4 +60,4 @@ function setTag() {
                     //appends the input to the container
 //                 document.getElementById("showPlayers").appendChild(player);
 //             }
-//         }
+//         }'<p class="tag-content" id="tagContent">keyword0</p>'
