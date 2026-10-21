@@ -90,7 +90,7 @@ $today = date("Y-m-d");
                             <p class="tag-content">work</p>
                         </div>
                     </div>
-                    <span result="tags_results0"></span>
+                    <span id="search_results0"></span>
                 </div>
 
                 <script>
@@ -101,22 +101,6 @@ $today = date("Y-m-d");
                         console.log(keyword0);
                         
                         if (keyword0.length > min_length) {
-                            // console.log('hello1');
-                            // $.post("php/ajax_tags_processing.php", {
-                            //     //DATA
-                            //     keyword0:keyword0
-                            // }, function(data) {
-                            //     $('#search_results0').show();
-                            //     $('#search_results0').html(data);
-                            // });
-
-                            // $.post("php/createOTP.php", {
-                            //     //DATA
-                            //     oneTimePass: oneTimePass
-                            // }, function(response) {
-                                
-                            // });
-
                             $.ajax({
                                 url: 'php/ajax_tags_processing.php',
                                 type: 'POST',
@@ -131,10 +115,10 @@ $today = date("Y-m-d");
                         }
                     }
 
-                    function set_item(item) {
-                        $('#search_id0').val(item);
-                        $('#search_results0').hide();
-                    }
+                    // function set_item(item) {
+                    //     $('#search_id0').val(item);
+                    //     $('#search_results0').hide();
+                    // }
                 </script>
 
                 <div class="box-wrapper">
