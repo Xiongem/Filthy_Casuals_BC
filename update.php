@@ -73,10 +73,11 @@ $today = date("Y-m-d");
 
                 <div class="tag-wrapper">
                     <label for="tags" class="labels">Tags:</label>
-                    <input type="text" 
+                    <!-- <input type="text" 
                         name="tags" 
                         id="tags" 
-                        onkeyup="autocomplet0()">
+                        onkeyup="autocomplet0()"> -->
+                    <input type="text" name="keyword0" id="tags_id0" onkeyup="autocomplet0()">
 
                     <div class="notch-wrapper" id="notchWrapper">
                         <div class="notch-arrow">

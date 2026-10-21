@@ -1,11 +1,11 @@
 function autocomplet0() {
 	var min_length = 0; // min characters to display the autocomplete
-	var tags = $('#search_id0').val();
-	if (tags.length >= min_length) {
+	var keyword0 = $('#search_id0').val();
+	if (keyword.length >= min_length) {
 		$.ajax({
 			url: 'ajax_tags_processing.php',
 			type: 'POST',
-			data: {tags:tags},
+			data: {keyword0:keyword0},
 			success:function(data){
 				$('#search_results0').show();
 				$('#search_results0').html(data);
