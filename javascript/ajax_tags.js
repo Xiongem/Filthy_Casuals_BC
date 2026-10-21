@@ -26,6 +26,9 @@ function setTag() {
             data: {searchResult:searchResult},
             success:function(data){
                 $('#notchWrapper').append(data);
+                // $('#tag').val(function() {
+                //     return this.value + " " + data;
+                // });
 
                 $('#search_results0').html("");
                 $('#search_results0').hide();
@@ -37,6 +40,10 @@ function setTag() {
 
 function removeTag(tagName) {    
     tagName.remove();
+
+    // $('#tag').val(function() {
+    //     return this.value - " " - tagName;
+    // });
 }
 
 function clickPress(event) {
@@ -48,6 +55,9 @@ function clickPress(event) {
             data: {searchResult:createTag},
             success:function(data){
                 $('#notchWrapper').append(data);
+                // $('#tag').val(function() {
+                //     return this.value + " " + data;
+                // });
 
                 $('#search_results0').html("");
                 $('#search_results0').hide();

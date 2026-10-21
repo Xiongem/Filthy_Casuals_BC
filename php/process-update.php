@@ -18,6 +18,10 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 $month = date('n');
 $totalPoints = calculateTotalPoints($_POST["pages"], $_POST["mod-1"], $_POST["mod-2"]);
 
+$tags = $_POST["tag"][$newTag];
+
+$insert_tags = implode(",", $tags);
+
 if (isset($_POST["diffDate"])) {
     $dateFinished = $_POST["dateFinished"];
 } else {
@@ -40,11 +44,12 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                                                                 `pages`, 
                                                                 `ongoing`, 
                                                                 `mod1`, 
-                                                                `mod2`, 
+                                                                `mod2`,
+                                                                `tags`, 
                                                                 `comment`, 
                                                                 `month`, 
-                                                                `totalPoints`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt1->bind_param("isssssiiiisii",
+                                                                `totalPoints`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt1->bind_param("isssssiiiissii",
                         $userID,
                         $user["username"],
                         $_POST["title"],
@@ -55,6 +60,7 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                         $ongoing,
                         $_POST["mod-1"],
                         $_POST["mod-2"],
+                        $insert_tags,
                         $_POST["comment"],
                         $month,
                         $totalPoints);
@@ -66,6 +72,19 @@ if ($stmt1 -> execute()) {
                             $newPointsMonth, 
                             $userID);
     if ($stmt2->execute()) {
+
+        // $sql = "SELECT tags FROM tags";
+        //         $result = $_SESSION["conn"]->query($sql);
+
+        foreach ($tags as $key => $value) {
+            $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
+                ON DUPLICATE KEY UPDATE `tags` = ?;");
+            $stmt3->bind_param("s", 
+                                $value);
+
+            $stmt3->execute();
+        }
+                
         header("Location: /readHistory.php?user_id=$userID");
         
         exit;

@@ -84,6 +84,7 @@ $today = date("Y-m-d");
                 </div>
 
                 <div class="notch-wrapper" id="notchWrapper"></div>
+                <!-- <input type="hidden" name="tag" id="tag" value=""> -->
 
                 <div class="box-wrapper">
                     <label for="diffDate" class="labels">Click if your finish date is not today:</label>
