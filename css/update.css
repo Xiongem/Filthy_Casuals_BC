@@ -60,7 +60,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 5em;
+        height: 6em;
         margin-bottom: 1em;
     }
     .notch-wrapper {
