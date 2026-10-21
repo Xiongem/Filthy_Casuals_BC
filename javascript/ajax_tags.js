@@ -25,7 +25,6 @@ function setTag() {
             type: 'POST',
             data: {searchResult:searchResult},
             success:function(data){
-                // var container = document.getElementById("notchWrapper"); 
                 $('#notchWrapper').append(data);
 
                 $('#search_results0').html("");
@@ -36,12 +35,28 @@ function setTag() {
         });
 }
 
-function removeTag(tagName) {
-    console.log(tagName);
-    
+function removeTag(tagName) {    
     tagName.remove();
 }
 
+function clickPress(event) {
+    if (event.key == "Enter") {
+        var createTag = document.getElementById('tags_id0').value;
+        $.ajax({
+            url: 'php/ajax_tags_creation.php',
+            type: 'POST',
+            data: {createTag:createTag},
+            success:function(data){
+                $('#notchWrapper').append(data);
+
+                $('#search_results0').html("");
+                $('#search_results0').hide();
+                var keyword0 = document.getElementById('tags_id0');
+                keyword0.value = '';
+            }
+        });
+    }
+}
 
 // function setTag(result) {
 //     var searchResult = result;
