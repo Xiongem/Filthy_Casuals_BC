@@ -33,7 +33,7 @@ function setTag() {
         tag.setAttribute("id", keyword0);
     // appends the input to the container
         container.appendChild(tag);
-        $('#keyword0').html("<p class='tag-content' id='tagContent'>keyword0</p>");
+        keyword0.innerHTML = "<p class='tag-content' id='tagContent'>keyword0</p>";
 
 
     $('#search_results0').html("");
