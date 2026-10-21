@@ -46,9 +46,9 @@ $today = date("Y-m-d");
             <div class="title-wrapper">
                 <h1>Update Your Reading History</h1>
             </div>
-            <div class="instructions">
-                <span class="required">*</span><span> = required</span>
-            </div>
+            <!-- <div class="instructions">
+                <span class="required">* </span><span>= required</span>
+            </div> -->
             <form action="php/process-update.php" method="post">
                 <div class="label-wrapper">
                     <label for="title" class="labels">Title:</label>
