@@ -71,8 +71,12 @@ $today = date("Y-m-d");
                         <div class="notch-arrow">
                             <p class="tag-content" id="<?= $tag ?>">fanfic</p>
                         </div>
-                        <div class="notch-arrow"></div>
-                        <div class="notch-arrow"></div>
+                        <div class="notch-arrow">
+                            <p class="tag-content" id="<?= $tag ?>">webtoon</p>
+                        </div>
+                        <div class="notch-arrow">
+                            <p class="tag-content" id="<?= $tag ?>">work</p>
+                        </div>
                     </div>
                 </div>
 
