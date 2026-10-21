@@ -64,13 +64,14 @@
         display: flex;
         flex-direction: column;
         /* justify-content: center; */
-        height: 6em;
+        height: 7em;
         margin-bottom: 1em;
     }
     .searchResult {
         color: var(--barium-yellow);
         text-decoration: underline;
         cursor: pointer;
+        margin-bottom: 0.5em;
     }
     .notch-wrapper {
         display: flex;
