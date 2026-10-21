@@ -108,6 +108,14 @@ $today = date("Y-m-d");
                                 $('#search_results0').show();
                                 $('#search_results0').html(data);
                             });
+
+                            // $.post("php/createOTP.php", {
+                            //     //DATA
+                            //     oneTimePass: oneTimePass
+                            // }, function(response) {
+                                
+                            // });
+                            
                             // $.ajax({
                             //     url: 'ajax_tags_processing.php',
                             //     type: 'POST',

@@ -8,6 +8,8 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
+echo "connected to db";
+
 $string0 = $_POST['keyword0'];
 
 echo "result: " . $string0;
