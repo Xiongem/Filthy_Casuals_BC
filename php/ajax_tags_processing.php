@@ -21,11 +21,6 @@ while ($row = mysqli_fetch_array($result)) {
     if ($num_rows0 !='1') {
         //
     } else {
-        echo "$tags0";
-        // for($i=0;$i<count($tags0);$i++) {
-        //     echo $tags0;
-        //     if($i<count($tags0)-1) echo ",\n";
-        // }
-
+        echo "<a>$tags0</a>";
     }
 } 
