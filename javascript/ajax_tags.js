@@ -37,7 +37,7 @@ function setTag() {
         container.appendChild(newTag);
         
         // var tagValue = $('#searchResult');
-        searchResult.innerHTML = "<p class='tag-content' id='tagContent'>searchResult</p>";
+        $('#test').innerHTML = "<p class='tag-content' id='tagContent'>searchResult</p>";
 
     $('#search_results0').html("");
     $('#search_results0').hide();
