@@ -69,13 +69,13 @@ $today = date("Y-m-d");
                         class="inputs">
                     <div class="notch-wrapper" id="notchWrapper">
                         <div class="notch-arrow">
-                            <p class="tag-content" id="<?= $tag ?>">fanfic</p>
+                            <p class="tag-content">fanfic</p>
                         </div>
                         <div class="notch-arrow">
-                            <p class="tag-content" id="<?= $tag ?>">webtoon</p>
+                            <p class="tag-content">webtoon</p>
                         </div>
                         <div class="notch-arrow">
-                            <p class="tag-content" id="<?= $tag ?>">work</p>
+                            <p class="tag-content">work</p>
                         </div>
                     </div>
                 </div>
