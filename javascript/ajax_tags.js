@@ -29,9 +29,9 @@ function setTag() {
             type: 'POST',
             data: {searchResult:searchResult},
             success:function(data){
-                // var container = document.getElementById("notchWrapper"); 
+                var container = document.getElementById("notchWrapper"); 
                 // $('#notchWrapper').appendChild().html(data);
-                $('#notchWrapper').html(data).appendTo(document.body);
+                $('#notchWrapper').html(data).appendTo(container);
                 // .show();
                 // $('#notchWrapper').html(data);
 
