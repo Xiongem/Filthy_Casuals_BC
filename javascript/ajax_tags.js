@@ -24,6 +24,8 @@ function autocomplet0() {
 
 function setTag() {
     var searchResult = document.getElementById('search_results0').value;
+    console.log(searchResult);
+    
     //where to put everything
         var container = document.getElementById("notchWrapper"); 
     //creates an element
@@ -33,8 +35,7 @@ function setTag() {
         newTag.setAttribute("id", searchResult);
     // appends the input to the container
         container.appendChild(newTag);
-        var tagValue = document.getElementById("searchResult").value;
-        tagValue.innerHTML = "<p class='tag-content' id='tagContent'>searchResult</p>";
+        
 
 
     $('#search_results0').html("");
@@ -62,4 +63,5 @@ function setTag() {
                     //appends the input to the container
 //                 document.getElementById("showPlayers").appendChild(player);
 //             }
-//         }
+//         }var tagValue = document.getElementById("searchResult").value;
+        // tagValue.innerHTML = "<p class='tag-content' id='tagContent'>searchResult</p>";
