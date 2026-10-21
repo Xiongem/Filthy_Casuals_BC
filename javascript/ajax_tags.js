@@ -22,8 +22,8 @@ function autocomplet0() {
 //     $('#search_results0').hide();
 // }
 
-function setTag(result) {
-    var searchResult = result;
+function setTag() {
+    searchResult = document.getElementById('search_results0').html();
     console.log(searchResult);
     
     //where to put everything
@@ -43,6 +43,29 @@ function setTag(result) {
     
     searchResult.value = '';
 }
+
+
+// function setTag(result) {
+//     var searchResult = result;
+//     console.log(searchResult);
+    
+//     //where to put everything
+//         var container = document.getElementById("notchWrapper"); 
+//     //creates an element
+//         var newTag = document.createElement("div"); 
+//     //  assigns attributes to the input
+//         newTag.setAttribute("class", "notch-arrow");
+//         newTag.setAttribute("id", searchResult);
+//     // appends the input to the container
+//         container.appendChild(newTag);
+        
+
+
+//     $('#search_results0').html("");
+//     $('#search_results0').hide();
+    
+//     searchResult.value = '';
+// }
 
 // function displayPlayers(){
 //             let players = document.getElementById("playerNumber");x

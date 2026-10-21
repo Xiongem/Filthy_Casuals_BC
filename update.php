@@ -79,7 +79,7 @@ $today = date("Y-m-d");
                         class="inputs" 
                         onkeyup="autocomplet0()">
 
-                    <a id="search_results0" onclick="setTag($('#search_results0').value)"></a>
+                    <a id="search_results0" onclick="setTag()"></a>
                 </div>
 
                 <div class="notch-wrapper" id="notchWrapper">
