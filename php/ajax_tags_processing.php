@@ -10,7 +10,7 @@ dbConnect();
 
 $string0 = $_POST['keyword0'];
 $sql0 = "SELECT tags FROM tags WHERE tags LIKE '%$string0%' ";
-$sql0_query = $con->query($sql0);
+$sql0_query = $_SESSION["conn"]->query($sql0);
 
 while ($row = mysqli_fetch_array($sql0_query)) {
   $tags0 = $row['tags'];
