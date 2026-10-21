@@ -22,12 +22,25 @@ function autocomplet0() {
 //     $('#search_results0').hide();
 // }
 
-// function setTag() {
-//     $('#search_results0').html("");
-//     $('#search_results0').hide();
+function setTag() {
+    $('#search_results0').html("");
+    $('#search_results0').hide();
 
+    var container = document.getElementById("tagContainer");
 
-// }
+    while (container.hasChildNodes()) {
+        container.removeChild(container.lastChild);
+    }
+    for (let i = 0; i < tag_number.value; i++) {
+        container.appendChild(document.createTextNode(keyword0));
+        var player = document.createElement("input");
+        player.setAttribute("type", "text");
+        player.setAttribute("class", "tag");
+        player.setAttribute("name", "tag" + (i));
+        player.setAttribute("id", keyword0);
+        document.getElementById("showPlayers").appendChild(player);
+    }
+}
 
 // function displayPlayers(){
 //             let players = document.getElementById("playerNumber");

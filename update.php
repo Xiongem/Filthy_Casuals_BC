@@ -83,7 +83,7 @@ $today = date("Y-m-d");
                 </div>
 
                 <div class="notch-wrapper" id="notchWrapper">
-                    <div class="notch-arrow">
+                    <div class="notch-arrow" id="tagContainer">
                         <p class="tag-content" id="tagContent"></p>
                     </div>
                 </div>
