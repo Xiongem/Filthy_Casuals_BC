@@ -82,7 +82,8 @@ if ($stmt1 -> execute()) {
         foreach ($tags as $key => $value) {
             $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
                 ON DUPLICATE KEY UPDATE `tags` = ?;");
-            $stmt3->bind_param("s", 
+            $stmt3->bind_param("ss", 
+                                $value,
                                 $value);
 
             $stmt3->execute();
