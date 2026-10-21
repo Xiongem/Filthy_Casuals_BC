@@ -161,6 +161,9 @@ a {
     
 
     .notch-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         min-width: 60px;
         width: fit-content;
         height: 30px;
