@@ -120,21 +120,6 @@ $today = date("Y-m-d");
                         } else {
                             $('#search_results0').hide();
                         }
-
-                        function createOTP() {
-                            <?php
-                                $oneTimePass = bin2hex(random_bytes(16));
-                            ?>
-                            //assign values
-                            var oneTimePass = <?= json_encode($oneTimePass) ?>;
-                            //begin post method
-                            $.post("php/createOTP.php", {
-                                //DATA
-                                oneTimePass: oneTimePass
-                            }, function(response) {
-                                showOTP(<?= json_encode($oneTimePass) ?>);
-                            });
-                        }
                     }
 
                     function set_item(item) {
