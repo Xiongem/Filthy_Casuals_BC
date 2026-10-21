@@ -80,7 +80,7 @@ $today = date("Y-m-d");
                         onkeyup="autocomplet0()"
                         onkeypress="clickPress(event)">
 
-                    <a id="search_results0" onclick="setTag()"></a>
+                    <a id="search_results0" class="searchResult" onclick="setTag()"></a>
                 </div>
 
                 <div class="notch-wrapper" id="notchWrapper">

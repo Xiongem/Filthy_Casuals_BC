@@ -67,10 +67,18 @@
         height: 6em;
         margin-bottom: 1em;
     }
+    .searchResult {
+        color: var(--barium-yellow);
+        text-decoration: underline;
+        cursor: pointer;
+    }
     .notch-wrapper {
         display: flex;
         flex-direction: row;
         width: 100%;
+    }
+    .notch-arrow {
+        cursor: pointer;
     }
     .hidden-wrapper {
         height: 3em;
