@@ -72,12 +72,12 @@ $today = date("Y-m-d");
                     required>
 
                 <div class="tag-wrapper">
-                    <label for="tags" class="labels">Tags:</label>
-                    <!-- <input type="text" 
-                        name="tags" 
-                        id="tags" 
-                        onkeyup="autocomplet0()"> -->
-                    <input type="text" name="keyword0" id="tags_id0" onkeyup="autocomplet0()">
+                    <label for="keyword0" class="labels">Tags:</label>
+                    <input type="text" 
+                        name="keyword0" 
+                        id="tags_id0" 
+                        class="inputs" 
+                        onkeyup="autocomplet0()">
 
                     <!-- <div class="notch-wrapper" id="notchWrapper">
                         <div class="notch-arrow">
@@ -97,8 +97,6 @@ $today = date("Y-m-d");
                     function autocomplet0() {
                         var min_length = 0; // min characters to display the autocomplete
                         var keyword0 = document.getElementById('tags_id0').value;
-                        // var keyword0 = $('tags_id0').value;
-                        console.log(keyword0);
                         
                         if (keyword0.length > min_length) {
                             $.ajax({
