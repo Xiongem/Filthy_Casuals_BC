@@ -40,8 +40,8 @@ function setTag() {
 
     $('#search_results0').html("");
     $('#search_results0').hide();
-    
-    searchResult.value = '';
+    var keyword0 = document.getElementById('tags_id0').value;
+    keyword0.value = '';
 }
 
 
