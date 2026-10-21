@@ -81,9 +81,9 @@ $today = date("Y-m-d");
                         onkeypress="clickPress(event)">
 
                     <a id="search_results0" class="searchResult" onclick="setTag()"></a>
-
-                    <div class="notch-wrapper" id="notchWrapper"></div>
                 </div>
+
+                <div class="notch-wrapper" id="notchWrapper"></div>
 
                 <div class="box-wrapper">
                     <label for="diffDate" class="labels">Click if your finish date is not today:</label>
