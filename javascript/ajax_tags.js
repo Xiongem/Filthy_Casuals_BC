@@ -16,7 +16,7 @@ function autocomplet0() {
 	}
 }
 
-function set_item(item) {
-	$('#search_id0').val(item);
-	$('#search_results0').hide();
-}
+// function set_item(item) {
+// 	$('#search_id0').val(item);
+// 	$('#search_results0').hide();
+// }
