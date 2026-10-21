@@ -101,14 +101,14 @@ $today = date("Y-m-d");
                         console.log(keyword0);
                         
                         if (keyword0.length > min_length) {
-                            console.log('hello1');
-                            $.post("ajax_tags_processing.php", {
-                                //DATA
-                                keyword0:keyword0
-                            }, function(data) {
-                                $('#search_results0').show();
-                                $('#search_results0').html(data);
-                            });
+                            // console.log('hello1');
+                            // $.post("php/ajax_tags_processing.php", {
+                            //     //DATA
+                            //     keyword0:keyword0
+                            // }, function(data) {
+                            //     $('#search_results0').show();
+                            //     $('#search_results0').html(data);
+                            // });
 
                             // $.post("php/createOTP.php", {
                             //     //DATA
@@ -117,15 +117,15 @@ $today = date("Y-m-d");
                                 
                             // });
 
-                            // $.ajax({
-                            //     url: 'ajax_tags_processing.php',
-                            //     type: 'POST',
-                            //     data: {keyword0:keyword0},
-                            //     success:function(data){
-                            //         $('#search_results0').show();
-                            //         $('#search_results0').html(data);
-                            //     }
-                            // });
+                            $.ajax({
+                                url: 'php/ajax_tags_processing.php',
+                                type: 'POST',
+                                data: {keyword0:keyword0},
+                                success:function(data){
+                                    $('#search_results0').show();
+                                    $('#search_results0').html(data);
+                                }
+                            });
                         } else {
                             $('#search_results0').hide();
                         }
