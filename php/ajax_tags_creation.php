@@ -14,6 +14,7 @@ $newTag = $_POST['searchResult'];
     $htmlContent = <<<HTML
         <div class="notch-arrow" id="$newTag">
             <p class='tag-content' id='tagContent'>$newTag</p>
+            <input type="hidden" name="tag_$newTag" id="tag_$newTag" value="$newTag">
         </div>
     HTML;
         echo $htmlContent;
