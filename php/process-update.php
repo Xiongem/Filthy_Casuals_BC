@@ -18,7 +18,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 $month = date('n');
 $totalPoints = calculateTotalPoints($_POST["pages"], $_POST["mod-1"], $_POST["mod-2"]);
 
-$tags = $_POST["tag"][$newTag];
+$tags = $_POST["tag"];
 
 print_r($tags);
 
