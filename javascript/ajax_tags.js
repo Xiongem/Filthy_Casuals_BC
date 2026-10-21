@@ -30,8 +30,8 @@ function setTag() {
 
                 $('#search_results0').html("");
                 $('#search_results0').hide();
-                
-                $('#tags_id0').value = '';
+                var keyword0 = document.getElementById('tags_id0');
+                keyword0.value = '';
             }
         });
 }
@@ -79,24 +79,3 @@ function setTag() {
 //     $('#search_results0').hide();
 //     var keyword0 = document.getElementById('tags_id0').value;
 //     keyword0.value = '';
-
-// function displayPlayers(){
-//             let players = document.getElementById("playerNumber");x
-//             var container = document.getElementById("showPlayers"); //where to put everything
-//             while (container.hasChildNodes()) {
-//                 container.removeChild(container.lastChild);
-//             }
-//             for (let i = 0; i < players.value; i++) {
-                    //assigns a label
-//                 container.appendChild(document.createTextNode("Player " + (i+1))); 
-                    //creates an element
-//                 var player = document.createElement("input"); 
-                    //assigns attributes to the input
-//                 player.setAttribute("type", "text");
-//                 player.setAttribute("class", "playerInput");
-//                 player.setAttribute("name", "gameplayer" + (i+1));
-//                 player.setAttribute("id", (i+1));
-                    //appends the input to the container
-//                 document.getElementById("showPlayers").appendChild(player);
-//             }
-//         }
