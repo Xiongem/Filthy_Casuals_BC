@@ -23,7 +23,7 @@ function autocomplet0() {
 // }
 
 function setTag() {
-    searchResult = document.getElementById('search_results0').html();
+    searchResult = document.getElementById('search_results0').textContent;
     console.log(searchResult);
     
     //where to put everything
