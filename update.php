@@ -156,7 +156,7 @@ $today = date("Y-m-d");
                         name="tags"
                         id="tags"
                         class="inputs">
-                    <span class="notch-arrow"></span>
+                    <div class="notch-arrow"></div>
                 </div>
 
                 <label for="comment" class="labels">Comment:</label>
