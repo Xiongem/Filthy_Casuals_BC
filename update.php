@@ -47,19 +47,23 @@ $today = date("Y-m-d");
                 <h1>Update Your Reading History</h1>
             </div>
             <div class="instructions">
-                <span class="required">*</span><p> = required</p>
+                <span class="required">*</span><span> = required</span>
             </div>
             <form action="php/process-update.php" method="post">
-                <label for="title" class="labels">Title:</label>
-                <span class="required">*</span>
+                <div class="label-wrapper">
+                    <label for="title" class="labels">Title:</label>
+                    <span class="required">*</span>
+                </div>
                 <input type="text"
                     name="title"
                     id="title"
                     class="inputs"
                     required>
 
-                <label for="author" class="labels">Author:</label>
-                <span class="required">*</span>
+                <div class="label-wrapper">
+                    <label for="author" class="labels">Author:</label>
+                    <span class="required">*</span>
+                </div>
                 <input type="text"
                     name="author"
                     id="author"
@@ -126,8 +130,10 @@ $today = date("Y-m-d");
                 </div>
 
                 <div class="page-wrapper">
-                    <label for="pages" class="labels">Number of Pages:</label>
-                    <span class="required">*</span>
+                    <div class="label-wrapper">
+                        <label for="pages" class="labels">Number of Pages:</label>
+                        <span class="required">*</span>
+                    </div>
                     <input type="number"
                         name="pages"
                         id="pages"

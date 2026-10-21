@@ -13,6 +13,9 @@
         flex-direction: column;
         align-items: center;
     }
+    .instructions, .label-wrapper {
+        display: flex;
+    }
     form {
         display: flex;
         flex-direction: column;
