@@ -17,10 +17,6 @@ function autocomplet0() {
     }
 }
 
-// function set_item(item) {
-//     $('#search_id0').val(item);
-//     $('#search_results0').hide();
-// }
 
 function setTag() {
     searchResult = document.getElementById('search_results0').textContent;
@@ -30,15 +26,12 @@ function setTag() {
             data: {searchResult:searchResult},
             success:function(data){
                 var container = document.getElementById("notchWrapper"); 
-                // $('#notchWrapper').appendChild().html(data);
-                $('#notchWrapper').html(data).appendTo(container);
-                // .show();
-                // $('#notchWrapper').html(data);
+                $('#notchWrapper').append(data);
 
                 $('#search_results0').html("");
                 $('#search_results0').hide();
                 
-                $('tags_id0').value = '';
+                $('#tags_id0').value = '';
             }
         });
 }
