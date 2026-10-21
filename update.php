@@ -96,7 +96,7 @@ $today = date("Y-m-d");
                 <script>
                     function autocomplet0() {
                         var min_length = 0; // min characters to display the autocomplete
-                        var keyword0 = $('tags_id0');
+                        var keyword0 = $('tags_id0').value;
                         console.log(keyword0);
                         
                         if (keyword0.length >= min_length) {
