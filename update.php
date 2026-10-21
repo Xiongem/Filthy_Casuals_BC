@@ -36,7 +36,7 @@ $today = date("Y-m-d");
     <!-- <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script> -->
     <script type="text/javascript" src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascript/ajax_tags.js"> </script>
+    <!-- <script type="text/javascript" src="javascript/ajax_tags.js"> </script> -->
 </head>
 <body>
     <header>
@@ -92,6 +92,31 @@ $today = date("Y-m-d");
                     </div>
                     <span result="tags_results0"></span>
                 </div>
+
+                <script>
+                    function autocomplet0() {
+                        var min_length = 0; // min characters to display the autocomplete
+                        var keyword0 = $('#search_id0').val();
+                        if (keyword0.length >= min_length) {
+                            $.ajax({
+                                url: 'ajax_tags_processing.php',
+                                type: 'POST',
+                                data: {keyword0:keyword0},
+                                success:function(data){
+                                    $('#search_results0').show();
+                                    $('#search_results0').html(data);
+                                }
+                            });
+                        } else {
+                            $('#search_results0').hide();
+                        }
+                    }
+
+                    function set_item(item) {
+                        $('#search_id0').val(item);
+                        $('#search_results0').hide();
+                    }
+                </script>
 
                 <div class="box-wrapper">
                     <label for="diffDate" class="labels">Click if your finish date is not today:</label>
