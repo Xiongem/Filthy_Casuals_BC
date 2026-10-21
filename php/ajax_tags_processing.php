@@ -10,8 +10,8 @@ dbConnect();
 
 $string0 = $_POST['keyword0'];
 
-// $sql = "SELECT tags FROM tags WHERE tags = $string0 ";
-//     $result = $_SESSION["conn"]->query($sql);
+$sql = "SELECT tags FROM tags WHERE tags = $string0 ";
+    $result = $_SESSION["conn"]->query($sql);
 
 echo $string0;
 // while ($row = mysqli_fetch_array($result)) {
