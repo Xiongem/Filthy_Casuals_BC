@@ -31,7 +31,7 @@ function setTag() {
         tag.setAttribute("class", "notch-arrow");
         tag.setAttribute("id", keyword0);
     // appends the input to the container
-        container.appendChild(player);
+        container.appendChild(tag);
         $('#keyword0').html(keyword0);
 
 
