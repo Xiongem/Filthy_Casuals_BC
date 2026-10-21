@@ -114,10 +114,10 @@ $today = date("Y-m-d");
                         }
                     }
 
-                    // function set_item(item) {
-                    //     $('#search_id0').val(item);
-                    //     $('#search_results0').hide();
-                    // }
+                    function set_item(item) {
+                        $('#search_id0').val(item);
+                        $('#search_results0').hide();
+                    }
                 </script>
 
                 <div class="box-wrapper">
