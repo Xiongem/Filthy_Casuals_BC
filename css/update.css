@@ -57,7 +57,9 @@
         margin-left: 0.5em;
     } */
     .tag-wrapper {
-        height: 6em;
+        display: flex;
+        align-items: center;
+        height: 5em;
         margin-bottom: 1em;
     }
     .notch-wrapper {
