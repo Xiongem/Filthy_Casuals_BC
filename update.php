@@ -100,7 +100,7 @@ $today = date("Y-m-d");
                         // var keyword0 = $('tags_id0').value;
                         console.log(keyword0);
                         
-                        if (keyword0.length > min_length) {\
+                        if (keyword0.length > min_length) {
                             console.log('hello1');
                             $.post("ajax_tags_processing.php", {
                                 //DATA
