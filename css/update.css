@@ -56,6 +56,10 @@
         width: fit-content;
         margin-left: 0.5em;
     } */
+    .tag-wrapper {
+        height: 6em;
+        margin-bottom: 1em;
+    }
     .notch-wrapper {
         display: flex;
         flex-direction: row;
