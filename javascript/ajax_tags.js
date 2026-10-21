@@ -23,40 +23,44 @@ function autocomplet0() {
 // }
 
 function setTag() {
+    var container = document.getElementById("notchWrapper"); //where to put the thing
+
+    <div class="notch-arrow" id="tagContainer">
+        <p class="tag-content" id="tagContent"></p>
+    </div>
+    
     $('#search_results0').html("");
     $('#search_results0').hide();
     var keyword0 = document.getElementById('tags_id0');
     keyword0.value = '';
 
-    // var container = document.getElementById("tagContainer");
-
-    // while (container.hasChildNodes()) {
-    //     container.removeChild(container.lastChild);
-    // }
-    // for (let i = 0; i < tag_number.value; i++) {
-    //     container.appendChild(document.createTextNode(keyword0));
-    //     var player = document.createElement("input");
-    //     player.setAttribute("type", "text");
-    //     player.setAttribute("class", "tag");
-    //     player.setAttribute("name", "tag" + (i));
-    //     player.setAttribute("id", keyword0);
-    //     document.getElementById("showPlayers").appendChild(player);
-    // }
+    //creates an element
+        var tag = document.createElement("div"); 
+    //  assigns attributes to the input
+        tag.setAttribute("class", "notch-arrow");
+        tag.setAttribute("id", keyword0);
+    // appends the input to the container
+        container.appendChild(player);
+        $('#keyword0').html(keyword0);
 }
 
 // function displayPlayers(){
-//             let players = document.getElementById("playerNumber");
-//             var container = document.getElementById("showPlayers");
+//             let players = document.getElementById("playerNumber");x
+//             var container = document.getElementById("showPlayers"); //where to put everything
 //             while (container.hasChildNodes()) {
 //                 container.removeChild(container.lastChild);
 //             }
 //             for (let i = 0; i < players.value; i++) {
-//                 container.appendChild(document.createTextNode("Player " + (i+1)));
-//                 var player = document.createElement("input");
+                    //assigns a label
+//                 container.appendChild(document.createTextNode("Player " + (i+1))); 
+                    //creates an element
+//                 var player = document.createElement("input"); 
+                    //assigns attributes to the input
 //                 player.setAttribute("type", "text");
 //                 player.setAttribute("class", "playerInput");
 //                 player.setAttribute("name", "gameplayer" + (i+1));
 //                 player.setAttribute("id", (i+1));
+                    //appends the input to the container
 //                 document.getElementById("showPlayers").appendChild(player);
 //             }
 //         }
