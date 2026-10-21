@@ -25,6 +25,7 @@ function autocomplet0() {
 function setTag() {
     $('#search_results0').html("");
     $('#search_results0').hide();
+    keyword0.value = '';
 
     // var container = document.getElementById("tagContainer");
 
