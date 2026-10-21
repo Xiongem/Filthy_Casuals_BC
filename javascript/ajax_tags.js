@@ -32,7 +32,7 @@ function setTag() {
         newTag.setAttribute("class", "notch-arrow");
         newTag.setAttribute("id", searchResult);
     // appends the input to the container
-        container.appendChild(tag);
+        container.appendChild(newTag);
         searchResult.innerHTML = "<p class='tag-content' id='tagContent'>searchResult</p>";
 
 
