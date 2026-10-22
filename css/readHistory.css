@@ -23,8 +23,9 @@
     .table-item, .table-head {
         text-align: center;
         align-items: center;
-        border-left: 1px solid var(--leather);
-        border-right: 1px solid var(--leather);
+        /* border-left: 1px solid var(--leather);
+        border-right: 1px solid var(--leather); */
+        border: 1px solid var(--leather);
         min-width: 5em;
     }
     .table-head {
@@ -36,7 +37,7 @@
         width: 100%;
         /* column-gap: 8px; */
         grid-template-columns: repeat(9, 1fr);
-        border: 1px solid var(--leather);
+        /* border: 1px solid var(--leather); */
     }
     .notch-wrapper {
         display: flex;
