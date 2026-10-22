@@ -77,17 +77,15 @@ $ID = $_GET["user_id"];
                 </div>
                 <?php
                 
-                    $total_pages_ongoing = $_SESSION["conn"]->query("SELECT * 
-                                                                    FROM readHistory 
-                                                                    WHERE user_id = $ID AND `ongoing` = 1")->num_rows;
+                    $total_pages_ongoing = $_SESSION["conn"]->query("SELECT * FROM `readHistory` WHERE `user_id` = $ID AND `ongoing` = 1")->num_rows;
 
                     $page_ongoing = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
                     $num_results_on_page_ongoing = 15;
                 if ($total_pages_ongoing > 0) {
                     if ($stmt1 = $_SESSION["conn"]->prepare("SELECT * 
-                                                            FROM readHistory 
-                                                            WHERE user_id = $ID AND `ongoing` = 1 
+                                                            FROM `readHistory`
+                                                            WHERE `user_id` = $ID AND `ongoing` = 1 
                                                             ORDER BY `month` 
                                                             DESC LIMIT ?,?")) {
                         // Calculate the page to get the results we need from our table.
