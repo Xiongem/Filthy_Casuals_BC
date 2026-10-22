@@ -38,7 +38,7 @@ function makeNav() {
                                     <i class="fa fa-plus" id="icon"></i>
                                 </div>
                             </a>
-                            <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>';
+                            <a class="nav-item" href="readHistory.php?user_id=' . $userID .'">History</a>';
                             if ($admin == 1) {
                                 echo '<a href="OTP.php" class="nav-item">Passcode</a>';
                             }
