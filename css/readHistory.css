@@ -85,7 +85,8 @@
         min-width: 12em;
     }
     .title, .author, .date {
-        width: fit-content;
+        word-break: normal;
+        overflow-wrap: break-word;
     }
     .edit {
         min-width: 3em;
