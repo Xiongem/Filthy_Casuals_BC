@@ -60,7 +60,7 @@
         width: 12em;
     }
     .edit {
-        width: 3em;
+        min-width: 3em;
     }
     
 }
