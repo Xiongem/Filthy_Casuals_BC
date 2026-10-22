@@ -62,6 +62,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         </div>
         <div class="history-table">
             <div class="row">
+                <div class="table-head edit">Edit</div>
                 <div class="table-head title">Title</div>
                 <div class="table-head author">Author</div>
                 <div class="table-head date">Date Started</div>
