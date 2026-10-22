@@ -26,6 +26,7 @@
         width: 100%;
         background-color: var(--marine-green);
         padding: 8px;
+        column-span: 10;
     }
     .table-item, .table-head {
         display: flex;
