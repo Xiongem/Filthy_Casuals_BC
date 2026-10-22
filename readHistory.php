@@ -72,7 +72,7 @@ $ID = $_GET["user_id"];
                     <div class="table-head date">Date Started</div>
                     <div class="table-head date">Date Finished</div>
                     <div class="table-head ongoing">Ongoing?</div>
-                    <div class="table-head points">Total Points</div>
+                    <div class="table-head points">Points</div>
                     <div class="table-head comment">Comment</div>
                 </div>
                 <?php
@@ -257,7 +257,7 @@ $ID = $_GET["user_id"];
                     <div class="table-head date">Date Finished</div>
                     <div class="table-head ongoing">Ongoing?</div>
                     <div class="table-head month">Month</div>
-                    <div class="table-head points">Total Points</div>
+                    <div class="table-head points">Points</div>
                     <div class="table-head comment">Comment</div>
                 </div>
                 <?php

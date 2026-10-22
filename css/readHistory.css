@@ -86,9 +86,8 @@
     .title, .comment {
         min-width: 12em;
     } */
-    .title, .author, .date {
+    .title, .author {
         width: 10em;
-        
     }
     .comment {
         min-width: 12em;
