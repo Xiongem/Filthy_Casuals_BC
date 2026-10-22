@@ -99,7 +99,22 @@
         min-width: 14em;
     }
     .edit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        /* border-left: 1px solid var(--leather);
+        border-right: 1px solid var(--leather); */
+        border: 1px solid var(--leather);
         width: 1em;
+        padding: 4px;
+
+        white-space: pre-wrap;      /* Webkit */    
+        white-space: -moz-pre-wrap; /* Firefox */     
+        white-space: -pre-wrap;     /* Opera <7 */    
+        white-space: -o-pre-wrap;   /* Opera 7 */     
+        word-wrap: break-word;      /* IE */ 
     }
     #edit-icon {
         cursor: pointer;

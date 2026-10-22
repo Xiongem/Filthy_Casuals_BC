@@ -64,7 +64,7 @@ $ID = $_GET["user_id"];
                     <h2>Ongoing Reads</h2>
                 </div>
                 <div class="row">
-                    <div class="table-head edit">Edit</div>
+                    <div class="edit">Edit</div>
                     <div class="table-head title">Title</div>
                     <div class="table-head author">Author</div>
                     <div class="table-head pages">Pages</div>
@@ -238,7 +238,7 @@ $ID = $_GET["user_id"];
                         <div class="month-title"><?= $tableMonth ?></div>
                     </div>
                     <div class="row">
-                        <div class="table-item edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
+                        <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
                         <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
                         <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
                         <div class="table-item pages"> <?= htmlspecialchars($pages) ?> </div>
@@ -311,7 +311,7 @@ $ID = $_GET["user_id"];
                     <h2>Full History</h2>
                 </div>
                 <div class="row">
-                    <div class="table-head edit">Edit</div>
+                    <div class="edit">Edit</div>
                     <div class="table-head title">Title</div>
                     <div class="table-head author">Author</div>
                     <div class="table-head pages">Pages</div>
@@ -439,7 +439,7 @@ $ID = $_GET["user_id"];
                         $totalPoints = $readHistory['totalPoints']; 
                     ?>
                     <div class="row">
-                        <div class="table-item edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
+                        <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
                         <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
                         <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
                         <div class="table-item pages"> <?= htmlspecialchars($pages) ?> </div>
