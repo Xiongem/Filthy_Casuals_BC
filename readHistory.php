@@ -20,7 +20,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 
  $sql = "SELECT * FROM readHistory WHERE user_id = $userID";
         $result = $_SESSION["conn"]->query($sql);
-        // $readHistory = $result->fetch_assoc();
+        $readHistory = $result->fetch_assoc();
 
         print_r($readHistory['tags']);
             
