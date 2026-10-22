@@ -54,10 +54,10 @@
     }
 
     .author, .date {
-        width: 8em;
+        min-width: 8em;
     }
     .title, .comment {
-        width: 12em;
+        min-width: 12em;
     }
     .edit {
         min-width: 3em;
