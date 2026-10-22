@@ -84,6 +84,9 @@
     .title, .comment {
         min-width: 12em;
     }
+    .title, .author, .date {
+        width: fit-content;
+    }
     .edit {
         min-width: 3em;
     }
