@@ -334,6 +334,45 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
             <?php }} else { ?>
                 <div class="not-found">No Reading History Found</div>
             <?php } ?>
+            <?php if (ceil($total_pages / $num_results_on_page) > 1) { ?>
+                <div class="pages-wrapper">
+                <?php if ($page > 1) { ?>
+                    <a class="prev" href="readHistory.php?page=<?php echo $page-1 ?>">Prev</a>
+                <?php } ?>
+                
+                <?php if ($page > 3) { ?>
+                    <a class="start" href="readHistory.php?page=1">1</a>
+                    <span class="dots">...</span>
+                <?php } ?>
+
+                <?php if ($page-2 > 0) {?>
+                    <a class="page" href="readHistory.php?page=<?php echo $page-2 ?>"><?php echo $page-2 ?></a>
+                <?php } ?>
+                <?php if ($page-1 > 0) {?>
+                    <a class="page" href="readHistory.php?page=<?php echo $page-1 ?>"><?php echo $page-1 ?></a>
+                <?php } ?>
+
+                <a class="currentpage" href="readHistory.php?page=<?php echo $page ?>"><?php echo $page ?></a>
+
+                <?php if ($page+1 < ceil($total_pages / $num_results_on_page)+1) {?>
+                    <a class="page" href="readHistory.php?page=<?php echo $page+1 ?>"><?php echo $page+1 ?></a>
+                <?php } ?>
+                <?php if ($page+2 < ceil($total_pages / $num_results_on_page)+1) {?>
+                    <a class="page" href="readHistory.php?page=<?php echo $page+2 ?>"><?php echo $page+2 ?></a>
+                <?php } ?>
+
+                <?php if ($page < ceil($total_pages / $num_results_on_page)-2) {?>
+                    <span class="dots">...</span>
+                    <a class="end" href="readHistory.php?page=<?php echo ceil($total_pages / $num_results_on_page) ?>"><?php echo ceil($total_pages / $num_results_on_page) ?></a>
+                <?php } ?>
+
+                <?php if ($page < ceil($total_pages / $num_results_on_page)) {?>
+                    <a class="next" href="readHistory.php?page=<?php echo $page+1 ?>">Next</a>
+                <?php } ?>
+            </div>
+            <?php } else { ?>
+                <div class="not-found">No Ongoing Reading History Found</div>
+            <?php } ?>
         </div>
     </div>
 </body>
