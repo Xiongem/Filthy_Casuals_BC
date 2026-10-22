@@ -59,7 +59,6 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
         </div>
 
 
-        <div class="full-wrapper">
             <div class="history-table">
                 <div class="sub-heading-wrapper">
                     <h2>Ongoing Reads</h2>
@@ -240,11 +239,11 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 <?php } ?>
                 </div>
             <?php } ?>
-        </div>
+        
 
 
 
-        <div class="full-wrapper">
+        
             <div class="history-table">
                 <div class="sub-heading-wrapper">
                     <h2>Full History</h2>
@@ -379,7 +378,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 <?php } ?>
                 </div>
             <?php } ?> 
-        </div>
+        
 
 
     </div>
