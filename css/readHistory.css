@@ -107,7 +107,7 @@
         /* border-left: 1px solid var(--leather);
         border-right: 1px solid var(--leather); */
         border: 1px solid var(--leather);
-        width: 1em;
+        width: 3em;
         padding: 4px;
 
         white-space: pre-wrap;      /* Webkit */    
