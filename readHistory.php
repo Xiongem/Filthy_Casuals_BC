@@ -71,7 +71,9 @@ $ID = $_GET["user_id"];
                     <div class="table-head month">Month</div>
                     <div class="table-head date">Date Started</div>
                     <div class="table-head date">Date Finished</div>
-                    <div class="table-head ongoing">Ongoing?</div>
+                    <div class="table-head ongoing">Ongoing</div>
+                    <div class="table-head mod">mod1</div>
+                    <div class="table-head mod">mod2</div>
                     <div class="table-head points">Points</div>
                     <div class="table-head comment">Comment</div>
                 </div>
@@ -110,7 +112,65 @@ $ID = $_GET["user_id"];
                         }
                         $pages = $readHistory['pages'];
                         $mod1 = $readHistory['mod1'];
+                        switch ($mod1) {
+                            case 1:
+                                $mod1 = "normal";
+                                break;
+                            case 2:
+                                $mod1 = "manga/comic";
+                                break;
+                            case 3:
+                                $mod1 = "challenge";
+                                break;
+                            case 4:
+                                $mod1 = "challenge: manga/comic";
+                                break;
+                            case 5:
+                                $mod1 = "buddy read";
+                                break;
+                            case 6:
+                                $mod1 = "friend rec";
+                                break;
+                            case 7:
+                                $mod1 = "seasonal";
+                                break;
+                            case 8:
+                                $mod1 = "read-a-thon";
+                                break;
+                            case 9:
+                                $mod1 = "educational";
+                                break;
+                            case 10:
+                                $mod1 = "educational: manga/comic";
+                                break;
+                        }
                         $mod2 = $readHistory['mod2'];
+                        switch ($mod2) {
+                            case 1:
+                                $mod2 = "normal";
+                                break;
+                            case 2:
+                                $mod2 = "challenge";
+                                break;
+                            case 3:
+                                $mod2 = "buddy read";
+                                break;
+                            case 4:
+                                $mod2 = "friend rec";
+                                break;
+                            case 5:
+                                $mod2 = "seasonal";
+                                break;
+                            case 6:
+                                $mod2 = "read-a-thon";
+                                break;
+                            case 7:
+                                $mod2 = "educational";
+                                break;
+                            case 8:
+                                $mod2 = "educational: manga/comic";
+                                break;
+                        }
                         $ongoing = $readHistory['ongoing'];
                         if ($readHistory['tags'] !== NULL) {
                             $tags = explode(",", $readHistory['tags']);
@@ -186,6 +246,8 @@ $ID = $_GET["user_id"];
                         <div class="table-item date"> <?= htmlspecialchars($startedDate) ?> </div>
                         <div class="table-item date"> <?= htmlspecialchars($finishedDate) ?></div>
                         <div class="table-item ongoing"> <?= $ongoingChecked ?> </div>
+                        <div class="table-item mod"> <?= $mod1 ?> </div>
+                        <div class="table-item mod"> <?= $mod2 ?> </div>
                         <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
                         <div class="table-item comment"> <?= htmlspecialchars($comment) ?> </div>
                     </div>
@@ -255,8 +317,10 @@ $ID = $_GET["user_id"];
                     <div class="table-head pages">Pages</div>
                     <div class="table-head date">Date Started</div>
                     <div class="table-head date">Date Finished</div>
-                    <div class="table-head ongoing">Ongoing?</div>
+                    <div class="table-head ongoing">Ongoing</div>
                     <div class="table-head month">Month</div>
+                    <div class="table-head mod">mod1</div>
+                    <div class="table-head mod">mod2</div>
                     <div class="table-head points">Points</div>
                     <div class="table-head comment">Comment</div>
                 </div>
@@ -325,6 +389,8 @@ $ID = $_GET["user_id"];
                         <div class="table-item date"> <?= htmlspecialchars($finishedDate) ?></div>
                         <div class="table-item ongoing"> <?= $ongoingChecked ?> </div>
                         <div class="table-item month"> <?= htmlspecialchars($month) ?> </div>
+                        <div class="table-item mod"> <?= $mod1 ?> </div>
+                        <div class="table-item mod"> <?= $mod2 ?> </div>
                         <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
                         <div class="table-item comment"> <?= htmlspecialchars($comment) ?> </div>
                     </div>
