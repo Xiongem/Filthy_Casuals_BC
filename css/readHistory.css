@@ -54,10 +54,12 @@
     }
 
     .author, .date {
+        display: flex;
         min-width: 8em;
         flex-grow: 2;
     }
     .title, .comment {
+        display: flex;
         min-width: 12em;
         flex-grow: 3;
     }
