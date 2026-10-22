@@ -12,6 +12,7 @@ forceLogin();
 $userID = $_SESSION["user_id"];
 
 $ID = $_GET["user_id"];
+echo $ID;
 
 // $sql = "SELECT * FROM users WHERE user_id = $ID";
 //         $result = $_SESSION["conn"]->query($sql);
