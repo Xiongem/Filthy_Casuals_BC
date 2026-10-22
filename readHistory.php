@@ -173,7 +173,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                     }
             ?>
                 <div class="row">
-                    <div class="month-title"><h1> <?= $tableMonth ?> </h1></div>
+                    <div class="month-title"><?= $tableMonth ?></div>
                 </div>
                 <div class="row">
                     <div class="table-item edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
