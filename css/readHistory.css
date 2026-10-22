@@ -41,7 +41,7 @@
         display: grid;
         width: 100%;
         /* column-gap: 8px; */
-        grid-template-columns: repeat(10, 1fr);
+        /* grid-template-columns: repeat(10, 1fr); */
         grid-template-columns: 2% 15% 15% 15% 15% 3% 5% 5% 5% 20%;
         /* border: 1px solid var(--leather); */
     }
