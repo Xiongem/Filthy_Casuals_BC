@@ -234,7 +234,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                     <?php } ?>
                 </div>
                 <?php }} else { ?>
-                    <div>No Ongoing Reading History Found</div>
+                    <div class="not-found">No Ongoing Reading History Found</div>
                 <?php } ?>
         </div>
 
@@ -332,7 +332,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                     <?php } ?>
                 </div>
             <?php }} else { ?>
-                <div>No Ongoing Reading History Found</div>
+                <div class="not-found">No Reading History Found</div>
             <?php } ?>
         </div>
     </div>
