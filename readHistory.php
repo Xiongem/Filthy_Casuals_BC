@@ -57,13 +57,13 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             <div class="row">
                 <div class="table-head title">Title</div>
                 <div class="table-head author">Author</div>
-                <div class="table-head sDate">Date Started</div>
-                <div class="table-head fDate">Date Finished</div>
+                <div class="table-head date">Date Started</div>
+                <div class="table-head date">Date Finished</div>
                 <div class="table-head pages">Pages</div>
                 <div class="table-head ongoing">Ongoing?</div>
-                <div class="table-head comment">Comment</div>
                 <div class="table-head month">Month</div>
                 <div class="table-head points">Total Points</div>
+                <div class="table-head comment">Comment</div>
             </div>
             <?php
             if ($result->num_rows > 0) {
@@ -105,13 +105,13 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <div class="row">
                     <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
                     <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
-                    <div class="table-item sDate"> <?= htmlspecialchars($startedDate) ?> </div>
-                    <div class="table-item fDate"> <?= htmlspecialchars($finishedDate) ?></div>
+                    <div class="table-item date"> <?= htmlspecialchars($startedDate) ?> </div>
+                    <div class="table-item date"> <?= htmlspecialchars($finishedDate) ?></div>
                     <div class="table-item pages"> <?= htmlspecialchars($pages) ?> </div>
                     <div class="table-item ongoing"> <?= $ongoingChecked ?> </div>
-                    <div class="table-item comment"> <?= htmlspecialchars($comment) ?> </div>
                     <div class="table-item month"> <?= htmlspecialchars($month) ?> </div>
                     <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
+                    <div class="table-item comment"> <?= htmlspecialchars($comment) ?> </div>
                 </div>
                 <div class="notch-wrapper" id="notchWrapper">
                     <?php if (isset($readHistory['tags'])) { ?>

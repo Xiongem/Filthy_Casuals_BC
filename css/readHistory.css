@@ -12,8 +12,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 8px;
-        margin-bottom: 1em;
+        margin: 0 1em 1em 1em;
     }
     .history-table {
         display: flex;
@@ -54,7 +53,10 @@
         margin: 4px 0.3em;
     }
 
-    .title {
+    .title, .author, .date {
         width: 8em;
+    }
+    .comment {
+        width: 12em;
     }
 }
