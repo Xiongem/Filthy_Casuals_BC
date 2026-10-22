@@ -12,7 +12,6 @@ forceLogin();
 $userID = $_SESSION["user_id"];
 
 $ID = $_GET["user_id"];
-echo $ID;
 
 // $sql = "SELECT * FROM users WHERE user_id = $ID";
 //         $result = $_SESSION["conn"]->query($sql);
@@ -206,7 +205,7 @@ echo $ID;
             <?php if (ceil($total_pages_ongoing / $num_results_on_page_ongoing) > 1) { ?>
                 <div class="pages-wrapper">
                 <?php if ($page_ongoing > 1) { ?>
-                    <a class="prev" href="readHistory.php?page=<?php echo $page_ongoing-1 ?>">Prev</a>
+                    <a class="prev" href="readHistory.php?user_id=<?=$userID?>?page=<?php echo $page_ongoing-1 ?>">Prev</a>
                 <?php } ?>
                 
                 <?php if ($page_ongoing > 3) { ?>
