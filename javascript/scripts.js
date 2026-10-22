@@ -49,7 +49,7 @@ function showBackground() {
   // body.style.overflow = "unset";
 }
 
-function showEditPopup() {
+function editRead() {
   $("#editPopup").css({"display": "flex"});
   // var editPopup = document.getElementById("project-popup");
   // editPopup.style.display = "flex";
@@ -57,7 +57,7 @@ function showEditPopup() {
   // editPopup.scrollIntoView();
   setTimeout(hideBackground, 500);
 }
-function hideEditPopup() {
+function closeEditRead() {
   $("#editPopup").hide();
   $("#body").css({"height": "unset", "overflow": "unset"});
   // var body = document.getElementById("body");
