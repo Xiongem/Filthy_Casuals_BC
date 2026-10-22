@@ -52,7 +52,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             <h1>Your Reading History</h1>
         </div>
         <div class="history-table">
-            <div class="row">
+            <!-- <div class="row"> -->
                 <div class="table-head">Title</div>
                 <div class="table-head">Audivor</div>
                 <div class="table-head">Date Finished</div>
@@ -62,7 +62,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <div class="table-head">Comment</div>
                 <div class="table-head">Mondiv</div>
                 <div class="table-head">Total Points</div>
-            </div>
+            <!-- </div> -->
             <?php
             if ($result->num_rows > 0) {
                 while ($readHistory = $result->fetch_assoc()) {
@@ -98,7 +98,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $month = $readHistory['month'];
                     $totalPoints = $readHistory['totalPoints']; 
                 ?>
-                <div class="row">
+                <!-- <div class="row"> -->
                     <div class="table-item"> <?= htmlspecialchars($title) ?> </div>
                     <div class="table-item"> <?= htmlspecialchars($author) ?> </div>
                     <div class="table-item"> <?= htmlspecialchars($startedDate) ?> </div>
@@ -108,8 +108,8 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     <div class="table-item"> <?= htmlspecialchars($comment) ?> </div>
                     <div class="table-item"> <?= htmlspecialchars($month) ?> </div>
                     <div class="table-item"> <?= htmlspecialchars($totalPoints) ?> </div>
-                </div>
-                <div class="row notch-wrapper" id="notchWrapper">
+                <!-- </div> -->
+                <!-- <div class="row notch-wrapper" id="notchWrapper"> -->
                     <?php if (isset($readHistory['tags'])) { ?>
                         <?php foreach ($tags as $key => $value) { ?>
                             <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
@@ -117,7 +117,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                             </div>
                         <?php } ?>
                     <?php } ?>
-                </div>
+                <!-- </div> -->
             <?php }} else { ?> 
                 <tr><td colspan='9'>No reading history found.</td></tr>
             <?php } ?>
