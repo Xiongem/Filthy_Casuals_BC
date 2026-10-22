@@ -51,18 +51,18 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         <div class="title-wrapper">
             <h1>Your Reading History</h1>
         </div>
-        <table class="history-table">
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Date Finished</th>
-                <th>Date Started</th>
-                <th>Pages</th>
-                <th>Ongoing?</th>
-                <th>Comment</th>
-                <th>Month</th>
-                <th>Total Points</th>
-            </tr>
+        <div class="history-table">
+            <div class="row">
+                <div class="table-head">Title</div>
+                <div class="table-head">Audivor</div>
+                <div class="table-head">Date Finished</div>
+                <div class="table-head">Date Started</div>
+                <div class="table-head">Pages</div>
+                <div class="table-head">Ongoing?</div>
+                <div class="table-head">Comment</div>
+                <div class="table-head">Mondiv</div>
+                <div class="table-head">Total Points</div>
+            </div>
             <?php
             if ($result->num_rows > 0) {
                 while ($readHistory = $result->fetch_assoc()) {
@@ -98,26 +98,30 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $month = $readHistory['month'];
                     $totalPoints = $readHistory['totalPoints']; 
                 ?>
-                <tr>
-                    <td> <?= htmlspecialchars($title) ?> </td>
-                    <td> <?= htmlspecialchars($author) ?> </td>
-                    <td> <?= htmlspecialchars($startedDate) ?> </td>
-                    <td> <?= htmlspecialchars($finishedDate) ?></td>
-                    <td> <?= htmlspecialchars($pages) ?> </td>
-                    <td> <?= $ongoingChecked ?> </td>
-                    <td> <?= htmlspecialchars($comment) ?> </td>
-                    <td> <?= htmlspecialchars($month) ?> </td>
-                    <td> <?= htmlspecialchars($totalPoints) ?> </td>
-                </tr>
-                <tr>
-                    <div>
-                        <p>test</p>
-                    </div>
-                </tr>
+                <div class="row">
+                    <div class="table-item"> <?= htmlspecialchars($title) ?> </div>
+                    <div class="table-item"> <?= htmlspecialchars($author) ?> </div>
+                    <div class="table-item"> <?= htmlspecialchars($startedDate) ?> </div>
+                    <div class="table-item"> <?= htmlspecialchars($finishedDate) ?></div>
+                    <div class="table-item"> <?= htmlspecialchars($pages) ?> </div>
+                    <div class="table-item"> <?= $ongoingChecked ?> </div>
+                    <div class="table-item"> <?= htmlspecialchars($comment) ?> </div>
+                    <div class="table-item"> <?= htmlspecialchars($month) ?> </div>
+                    <div class="table-item"> <?= htmlspecialchars($totalPoints) ?> </div>
+                </div>
+                <div class="row notch-wrapper" id="notchWrapper">
+                    <?php if (isset($readHistory['tags'])) { ?>
+                        <?php foreach ($tags as $key => $value) { ?>
+                            <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
+                                <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
+                </div>
             <?php }} else { ?> 
                 <tr><td colspan='9'>No reading history found.</td></tr>
             <?php } ?>
-        </table>
+        </div>
     </div>
 </body>
 </html>
