@@ -100,7 +100,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $month = $readHistory['month'];
                     $totalPoints = $readHistory['totalPoints']; 
 
-                    print_r($tags);
+                    // print_r($tags);
                 ?>
                 <div class="row">
                     <div class="table-item"> <?= htmlspecialchars($title) ?> </div>
