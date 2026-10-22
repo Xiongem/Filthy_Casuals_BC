@@ -19,7 +19,7 @@
         flex-direction: column;
         width: 100%;
         overflow-x: auto;
-        border: 1px solid var(--leather);
+        border: 2px solid var(--leather);
     }
     .table-item, .table-head {
         display: flex;
