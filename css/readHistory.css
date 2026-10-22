@@ -59,6 +59,8 @@
     .title, .comment {
         width: 12em;
     }
-
+    .edit {
+        width: 3em;
+    }
     
 }
