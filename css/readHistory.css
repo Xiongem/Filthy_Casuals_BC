@@ -85,6 +85,7 @@
         min-width: 12em;
     }
     .title, .author, .date {
+        max-width: 14em;
         hyphens: auto;
         overflow-wrap: break-word;
     }
