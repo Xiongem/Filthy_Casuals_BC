@@ -41,9 +41,11 @@
         min-width: 5em;
         padding: 4px;
 
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: pre-wrap;      /* Webkit */    
+        white-space: -moz-pre-wrap; /* Firefox */     
+        white-space: -pre-wrap;     /* Opera <7 */    
+        white-space: -o-pre-wrap;   /* Opera 7 */     
+        word-wrap: break-word;      /* IE */ 
     }
     .table-head {
         background-color: var(--deep-green);
@@ -86,11 +88,7 @@
     } */
     .title, .author, .date {
         width: 10em;
-        white-space: pre-wrap;      /* Webkit */    
-        white-space: -moz-pre-wrap; /* Firefox */     
-        white-space: -pre-wrap;     /* Opera <7 */    
-        white-space: -o-pre-wrap;   /* Opera 7 */     
-        word-wrap: break-word;      /* IE */ 
+        
     }
     .comment {
         min-width: 12em;
