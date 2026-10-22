@@ -88,6 +88,7 @@
         width: 12em;
         hyphens: auto;
         overflow-wrap: break-word;
+        word-wrap: break-all
     }
     .edit {
         min-width: 3em;
