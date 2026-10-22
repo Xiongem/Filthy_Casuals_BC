@@ -9,7 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 forceLogin();
 
-// $userID = $_SESSION["user_id"];
+$userID = $_SESSION["user_id"];
 
 $userID = $_GET["user_id"];
 
