@@ -22,6 +22,10 @@
         text-align: center;
         border: 1px solid var(--leather);
     }
+    .table-head {
+        background-color: var(--deep-green);
+        color: var(--barium-yellow);
+    }
     .row {
         display: grid;
         /* column-gap: 8px; */
