@@ -74,6 +74,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 <div class="table-head comment">Comment</div>
             </div>
             <?php
+            
                 $total_pages_ongoing = $_SESSION["conn"]->query("SELECT * 
                                                                 FROM readHistory 
                                                                 WHERE user_id = $ID AND `ongoing` = 1")->num_rows;
@@ -81,7 +82,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 $page_ongoing = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
                 $num_results_on_page_ongoing = 15;
-
+            if ($result_ongoing->num_rows > 0) {
                 if ($stmt1 = $_SESSION["conn"]->prepare("SELECT * 
                                                         FROM readHistory 
                                                         WHERE user_id = $ID AND `ongoing` = 1 
@@ -95,7 +96,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                     $result_ongoing = $stmt1->get_result();
                     $stmt1->close();
                 }
-
+            
                 while ($readHistory = $result_ongoing->fetch_assoc()) {
                     $title = $readHistory['title'];
                     $author = $readHistory['author'];
@@ -232,6 +233,8 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                         <a class="next" href="readHistory.php?page=<?php echo $page_ongoing+1 ?>">Next</a>
                     <?php } ?>
                 </div>
+                <?php }} else { ?>
+                    <div>No Ongoing Reading History Found</div>
                 <?php } ?>
         </div>
 
@@ -259,7 +262,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
                 $num_results_on_page = 15;
-
+            if ($result_ongoing->num_rows > 0) {
                 if ($stmt = $_SESSION["conn"]->prepare("SELECT * 
                                                         FROM readHistory 
                                                         WHERE user_id = $ID 
@@ -328,6 +331,8 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                         <?php } ?>
                     <?php } ?>
                 </div>
+            <?php }} else { ?>
+                <div>No Ongoing Reading History Found</div>
             <?php } ?>
         </div>
     </div>
