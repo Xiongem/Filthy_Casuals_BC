@@ -55,9 +55,11 @@
 
     .author, .date {
         min-width: 8em;
+        flex-grow: 2;
     }
     .title, .comment {
         min-width: 12em;
+        flex-grow: 3;
     }
     .edit {
         min-width: 3em;
