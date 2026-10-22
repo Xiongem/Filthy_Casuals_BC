@@ -60,6 +60,8 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
         <div class="title-wrapper">
             <h1>Your Reading History</h1>
         </div>
+        <!--//? MAKE IT SO TABLE SHOWS RESULTS BY MONTH AND USER CAN PAGE THROUGH BASED ON MONTH-->
+        <!--//* ADD ONGOING SECTION-->
         <div class="history-table">
             <div class="row">
                 <div class="table-head edit">Edit</div>
