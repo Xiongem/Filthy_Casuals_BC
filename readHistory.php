@@ -244,7 +244,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
 
 
         
-            <div class="history-table">
+            <div class="history-table" id="fullHistory">
                 <div class="sub-heading-wrapper">
                     <h2>Full History</h2>
                 </div>

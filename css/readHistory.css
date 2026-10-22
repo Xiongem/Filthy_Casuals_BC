@@ -21,6 +21,9 @@
         overflow-x: auto;
         border: 2px solid var(--leather);
     }
+    #fullHistory {
+        margin-top: 2em;
+    }
     .sub-heading-wrapper {
         width: 100%;
         background-color: var(--marine-green);
