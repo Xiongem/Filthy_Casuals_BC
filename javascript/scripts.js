@@ -35,3 +35,33 @@ function upload() {
     profilePicture.style.backgroundImage = `url(${fileReaderEvent.target.result})`;
   }
 }
+
+function hideBackground() {
+  $("#body").css({"height": "100%", "overflow": "hidden"});
+  // var body = document.getElementById("body");
+  // body.style.height = "100%";
+  // body.style.overflow = "hidden";
+}
+function showBackground() {
+  $("#body").css({"height": "unset", "overflow": "unset"});
+  // var body = document.getElementById("body");
+  // body.style.height = "unset";
+  // body.style.overflow = "unset";
+}
+
+function showEditPopup() {
+  $("#editPopup").css({"display": "flex"});
+  // var editPopup = document.getElementById("project-popup");
+  // editPopup.style.display = "flex";
+  $("#editPopup").scrollIntoView();
+  // editPopup.scrollIntoView();
+  setTimeout(hideBackground, 500);
+}
+function hideEditPopup() {
+  $("#editPopup").hide();
+  $("#body").css({"height": "unset", "overflow": "unset"});
+  // var body = document.getElementById("body");
+  // document.getElementById("project-popup").style.display = "none";
+  // body.style.height = "unset";
+  // body.style.overflow = "unset";
+}

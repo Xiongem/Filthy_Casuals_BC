@@ -45,7 +45,14 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
     <script src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body>
+<body id="body">
+    <div class="popup-wrapper hide" id="editPopup">
+        <div class="popup-container">
+            <div class="popup-content">
+                <h1>Edit The Thing</h1>
+            </div>
+        </div>
+    </div>
     <header>
         <?= makeNav() ?>
     </header>
@@ -103,6 +110,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     // print_r($tags);
                 ?>
                 <div class="row">
+                    <div class="table-item edit" id="edit"><i class="fa fa-gear" onclick="editRead()"></i></div>
                     <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
                     <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
                     <div class="table-item date"> <?= htmlspecialchars($startedDate) ?> </div>
@@ -127,5 +135,10 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             <?php } ?>
         </div>
     </div>
+    <!-- <script>
+        function editRead() {
+            $('#editPopup').show()
+        }
+    </script> -->
 </body>
 </html>
