@@ -61,6 +61,7 @@
     }
     .edit {
         min-width: 3em;
+        max-width: 4em;
     }
     #edit-icon {
         cursor: pointer;
