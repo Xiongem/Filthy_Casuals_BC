@@ -48,6 +48,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         <?= makeNav() ?>
     </header>
     <div class="history-wrapper" id="historyWrapper">
+        <div class="title-wrapper">
+            <h1>Your Reading History</h1>
+        </div>
         <table class="history-table">
             <tr>
                 <th>Title</th>
