@@ -69,4 +69,46 @@
     #edit-icon {
         cursor: pointer;
     }
+
+
+    .pages-wrapper {
+        padding: 10px 0;
+        justify-content: space-between;
+        margin: 0 0.5em;
+    }
+    .pages-wrapper a {
+        padding-right: 10px;
+        background-color: #e2e6e6;
+        padding: 8px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        color: #616872;
+        border-radius: 4px;
+    }
+    .pages-wrapper a:hover {
+        background-color: #d4dada;
+    }
+    .pages-wrapper .next a, .pages-wrapper .prev a {
+        text-transform: uppercase;
+		font-size: 12px;
+    }
+    .pages-wrapper .currentpage a {
+        background-color: var(--accent-1);
+    }
+    .pages-wrapper .currentpage a:hover {
+        background-color: var(--accent-1);
+    }
+    .link-wrapper {
+        display: flex;
+        justify-content: end;
+        padding: 0 1em;
+    }
+    .link {
+        /* cursor: pointer; */
+        padding-left: 0.3em;
+    }
+    .link, .fa-repeat {
+        cursor: pointer;
+    }
 }
