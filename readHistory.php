@@ -92,14 +92,15 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
             </div>
             <?php
                 $total_pages_ongoing = $_SESSION["conn"]->query("SELECT * 
-                                                            FROM readHistory 
-                                                            WHERE user_id = $ID AND `ongoing` = 1")->num_rows;
+                                                                FROM readHistory 
+                                                                WHERE user_id = $ID AND `ongoing` = 1")->num_rows;
 
                 $page_ongoing = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
                 $num_results_on_page_ongoing = 15;
 
-                if ($stmt1 = $_SESSION["conn"]->prepare("SELECT * readHistory 
+                if ($stmt1 = $_SESSION["conn"]->prepare("SELECT * 
+                                                        FROM readHistory 
                                                         WHERE user_id = $ID AND `ongoing` = 1 
                                                         ORDER BY `month` 
                                                         DESC LIMIT ?,?")) {
@@ -268,13 +269,16 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 <div class="table-head comment">Comment</div>
             </div>
             <?php
-                $total_pages = $_SESSION["conn"]->query("SELECT * FROM readHistory WHERE user_id = $ID")->num_rows;
+                $total_pages = $_SESSION["conn"]->query("SELECT * 
+                                                        FROM readHistory 
+                                                        WHERE user_id = $ID")->num_rows;
 
                 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
                 $num_results_on_page = 15;
 
-                if ($stmt = $_SESSION["conn"]->prepare("SELECT * readHistory 
+                if ($stmt = $_SESSION["conn"]->prepare("SELECT * 
+                                                        FROM readHistory 
                                                         WHERE user_id = $ID 
                                                         ORDER BY `finishedDate` 
                                                         DESC LIMIT ?,?")) {
