@@ -20,10 +20,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 
  $sql = "SELECT * FROM readHistory WHERE user_id = $userID";
         $result = $_SESSION["conn"]->query($sql);
-        $readHistory = $result->fetch_assoc();
-
-        print_r($readHistory['tags']);
-            
+        // $readHistory = $result->fetch_assoc();            
 ?>
 
 <!DOCTYPE html>
@@ -68,6 +65,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             <?php
             if ($result->num_rows > 0) {
                 while ($readHistory = $result->fetch_assoc()) {
+                    print_r($readHistory['tags']);
                     $title = $readHistory['title'];
                     $author = $readHistory['author'];
                     $finishedDate = $readHistory['finishedDate'];
