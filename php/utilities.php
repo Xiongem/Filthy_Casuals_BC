@@ -13,11 +13,12 @@ function dbConnect() {
 
 function makeNav() {
     $userID = $_SESSION["user_id"];
+    $admin = $_SESSION["admin"];
 
     $sql = "SELECT * FROM users WHERE user_id = $userID";
             $result = $_SESSION["conn"]->query($sql);
             $user = $result->fetch_assoc();
-                $admin = $user['admin'];
+                // $admin = $user['admin'];
                 // $image = imageDataUri($user['pfpType'], $user['pfpData']);
                 $imageName = htmlspecialchars($user['pfpName']);
                 $imageType = $user['pfpType'];
