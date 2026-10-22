@@ -80,7 +80,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $mod1 = $readHistory['mod1'];
                     $mod2 = $readHistory['mod2'];
                     $ongoing = $readHistory['ongoing'];
-                    if (isset($readHistory['tags'])) {
+                    if ($readHistory['tags'] !== NULL) {
                         $tags = explode(",", $readHistory['tags']);
                     } else {
                         $tags = "";
