@@ -291,7 +291,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                     $stmt->close();
                 }
 
-                while ($row = $result->fetch_assoc()) {
+                while ($readHistory = $result->fetch_assoc()) {
                     $title = $readHistory['title'];
                     $author = $readHistory['author'];
                     $finishedDate = $readHistory['finishedDate'];
