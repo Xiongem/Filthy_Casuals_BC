@@ -119,9 +119,8 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                         <?php } ?>
                     </div>
                 </tr>
-            <?php }
-                }
-            } else { ?> 
+            <?php } ?>
+            <?php }} else { ?> 
                 <tr><td colspan='9'>No reading history found.</td></tr>
             <?php } ?>
         </table>
