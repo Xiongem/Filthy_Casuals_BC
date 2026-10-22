@@ -22,7 +22,7 @@
     }
     .table-item, .table-head {
         text-align: center;
-        align-self: center;
+        align-items: center;
         border-left: 1px solid var(--leather);
         border-right: 1px solid var(--leather);
         min-width: 5em;
