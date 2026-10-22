@@ -206,37 +206,37 @@ echo $ID;
             <?php if (ceil($total_pages_ongoing / $num_results_on_page_ongoing) > 1) { ?>
                 <div class="pages-wrapper">
                 <?php if ($page_ongoing > 1) { ?>
-                    <a class="prev" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page_ongoing-1 ?>">Prev</a>
+                    <a class="prev" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page_ongoing-1 ?>">Prev</a>
                 <?php } ?>
                 
                 <?php if ($page_ongoing > 3) { ?>
-                    <a class="start" href="readHistory.php?user_id=<?=$ID?>?page=1">1</a>
+                    <a class="start" href="readHistory.php?user_id=<?=$ID?>&page=1">1</a>
                     <span class="dots">...</span>
                 <?php } ?>
 
                 <?php if ($page_ongoing-2 > 0) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page_ongoing-2 ?>"><?php echo $page_ongoing-2 ?></a>
+                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page_ongoing-2 ?>"><?php echo $page_ongoing-2 ?></a>
                 <?php } ?>
                 <?php if ($page_ongoing-1 > 0) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page_ongoing-1 ?>"><?php echo $page_ongoing-1 ?></a>
+                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page_ongoing-1 ?>"><?php echo $page_ongoing-1 ?></a>
                 <?php } ?>
 
-                <a class="currentpage" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page_ongoing ?>"><?php echo $page_ongoing ?></a>
+                <a class="currentpage" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page_ongoing ?>"><?php echo $page_ongoing ?></a>
 
                 <?php if ($page_ongoing+1 < ceil($total_pages_ongoing / $num_results_on_page_ongoing)+1) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page_ongoing+1 ?>"><?php echo $page_ongoing+1 ?></a>
+                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page_ongoing+1 ?>"><?php echo $page_ongoing+1 ?></a>
                 <?php } ?>
                 <?php if ($page_ongoing+2 < ceil($total_pages_ongoing / $num_results_on_page_ongoing)+1) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page_ongoing+2 ?>"><?php echo $page_ongoing+2 ?></a>
+                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page_ongoing+2 ?>"><?php echo $page_ongoing+2 ?></a>
                 <?php } ?>
 
                 <?php if ($page_ongoing < ceil($total_pages_ongoing / $num_results_on_page_ongoing)-2) {?>
                     <span class="dots">...</span>
-                    <a class="end" href="readHistory.php??user_id=<?=$ID?>page=<?php echo ceil($total_pages_ongoing / $num_results_on_page_ongoing) ?>"><?php echo ceil($total_pages_ongoing / $num_results_on_page_ongoing) ?></a>
+                    <a class="end" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo ceil($total_pages_ongoing / $num_results_on_page_ongoing) ?>"><?php echo ceil($total_pages_ongoing / $num_results_on_page_ongoing) ?></a>
                 <?php } ?>
 
                 <?php if ($page_ongoing < ceil($total_pages_ongoing / $num_results_on_page_ongoing)) {?>
-                    <a class="next" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page_ongoing+1 ?>">Next</a>
+                    <a class="next" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page_ongoing+1 ?>">Next</a>
                 <?php } ?>
                 </div>
             <?php } ?>
@@ -345,37 +345,37 @@ echo $ID;
             <?php if (ceil($total_pages / $num_results_on_page) > 1) { ?>
                 <div class="pages-wrapper">
                 <?php if ($page > 1) { ?>
-                    <a class="prev" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page-1 ?>">Prev</a>
+                    <a class="prev" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page-1 ?>">Prev</a>
                 <?php } ?>
                 
                 <?php if ($page > 3) { ?>
-                    <a class="start" href="readHistory.php?user_id=<?=$ID?>?page=1">1</a>
+                    <a class="start" href="readHistory.php?user_id=<?=$ID?>&page=1">1</a>
                     <span class="dots">...</span>
                 <?php } ?>
 
                 <?php if ($page-2 > 0) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page-2 ?>"><?php echo $page-2 ?></a>
+                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page-2 ?>"><?php echo $page-2 ?></a>
                 <?php } ?>
                 <?php if ($page-1 > 0) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page-1 ?>"><?php echo $page-1 ?></a>
+                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page-1 ?>"><?php echo $page-1 ?></a>
                 <?php } ?>
 
-                <a class="currentpage" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page ?>"><?php echo $page ?></a>
+                <a class="currentpage" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page ?>"><?php echo $page ?></a>
 
                 <?php if ($page+1 < ceil($total_pages / $num_results_on_page)+1) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page+1 ?>"><?php echo $page+1 ?></a>
+                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page+1 ?>"><?php echo $page+1 ?></a>
                 <?php } ?>
                 <?php if ($page+2 < ceil($total_pages / $num_results_on_page)+1) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page+2 ?>"><?php echo $page+2 ?></a>
+                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page+2 ?>"><?php echo $page+2 ?></a>
                 <?php } ?>
 
                 <?php if ($page < ceil($total_pages / $num_results_on_page)-2) {?>
                     <span class="dots">...</span>
-                    <a class="end" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo ceil($total_pages / $num_results_on_page) ?>"><?php echo ceil($total_pages / $num_results_on_page) ?></a>
+                    <a class="end" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo ceil($total_pages / $num_results_on_page) ?>"><?php echo ceil($total_pages / $num_results_on_page) ?></a>
                 <?php } ?>
 
                 <?php if ($page < ceil($total_pages / $num_results_on_page)) {?>
-                    <a class="next" href="readHistory.php?user_id=<?=$ID?>?page=<?php echo $page+1 ?>">Next</a>
+                    <a class="next" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page+1 ?>">Next</a>
                 <?php } ?>
                 </div>
             <?php } ?> 
