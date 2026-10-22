@@ -1,3 +1,12 @@
+:root,
+    /*Dark Purple*/
+    :root.option1 { 
+        --marine-green: #636b3f;
+        --deep-green: #2b361c;
+        --barium-yellow: #fefae3;
+        --sepia-e37: #d4a369;
+        --leather: #b17036;
+    }
 @media only screen and (min-width: 200px) {
     .history-wrapper {
         display: flex;
@@ -8,6 +17,10 @@
         display: flex;
         flex-direction: column;
         width: 90%;
+    }
+    .table-item, .table-head {
+        text-align: center;
+        border: 1px solid var(--leather);
     }
     .row {
         display: grid;
