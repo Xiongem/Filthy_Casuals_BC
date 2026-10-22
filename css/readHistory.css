@@ -1,6 +1,8 @@
 @media only screen and (min-width: 200px) {
-    td {
-        justify-self: center;
+    .history-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .history-table {
         display: flex;
@@ -11,5 +13,8 @@
         display: grid;
         column-gap: 8px;
         grid-template-columns: repeat(9, 1fr);
+    }
+    .notch-wrapper {
+        display: flex;
     }
 }

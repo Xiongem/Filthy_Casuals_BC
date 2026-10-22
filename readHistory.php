@@ -54,13 +54,13 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         <div class="history-table">
             <div class="row">
                 <div class="table-head">Title</div>
-                <div class="table-head">Audivor</div>
+                <div class="table-head">Author</div>
                 <div class="table-head">Date Finished</div>
                 <div class="table-head">Date Started</div>
                 <div class="table-head">Pages</div>
                 <div class="table-head">Ongoing?</div>
                 <div class="table-head">Comment</div>
-                <div class="table-head">Mondiv</div>
+                <div class="table-head">Month</div>
                 <div class="table-head">Total Points</div>
             </div>
             <?php
