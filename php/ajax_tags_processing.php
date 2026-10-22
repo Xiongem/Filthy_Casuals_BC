@@ -15,7 +15,7 @@ $string0 = $_POST['keyword0'];
 $sql = "SELECT tags FROM tags WHERE tags LIKE '%$string0%' ";
     $result = $_SESSION["conn"]->query($sql);
 
-while ($row = mysqli_fetch_array($result)) {
+while ($row = $result -> fetch_assoc()) {
     $tags0 = $row['tags'];
     $num_rows0 = mysqli_num_rows($result);
     if ($num_rows0 !='1') {

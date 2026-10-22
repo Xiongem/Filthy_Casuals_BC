@@ -80,6 +80,8 @@ $today = date("Y-m-d");
                         onkeyup="autocomplet0()"
                         onkeypress="clickPress(event)">
 
+                        <!-- //?ADD BUTTON TO ALLOW PEEPS TO ADD NEW TAGS WITHOUT NEEDING ENTER KEY -->
+
                     <a id="search_results0" class="searchResult" onclick="setTag()"></a>
                 </div>
 

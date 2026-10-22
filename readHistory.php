@@ -75,6 +75,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $mod1 = $readHistory['mod1'];
                     $mod2 = $readHistory['mod2'];
                     $ongoing = $readHistory['ongoing'];
+                    $tags = explode(",", $readHistory['tags']);
                     if ($ongoing == 1) {
                         $ongoingChecked = 'yes';
                     } else {
@@ -88,21 +89,29 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                         $comment = '';
                     }
                     $month = $readHistory['month'];
-                    $totalPoints = $readHistory['totalPoints'];
-                echo "<tr>";
-                echo "<td>" . htmlspecialchars($title) . "</td>";
-                echo "<td>" . htmlspecialchars($author) . "</td>";
-                echo "<td>" . htmlspecialchars($startedDate) . "</td>";
-                echo "<td>" . htmlspecialchars($finishedDate) . "</td>";
-                echo "<td>" . htmlspecialchars($pages) . "</td>";
-                echo "<td>" . $ongoingChecked . "</td>";
-                echo "<td>" . htmlspecialchars($comment) . "</td>";
-                echo "<td>" . htmlspecialchars($month) . "</td>";
-                echo "<td>" . htmlspecialchars($totalPoints) . "</td>";
-                echo "</tr>";
-            }} else {
-                echo "<tr><td colspan='9'>No reading history found.</td></tr>";
-            }
+                    $totalPoints = $readHistory['totalPoints']; 
+                ?>
+                <tr>
+                    <td> <?= htmlspecialchars($title) ?> </td>
+                    <td> <?= htmlspecialchars($author) ?> </td>
+                    <td> <?= htmlspecialchars($startedDate) ?> </td>
+                    <td> <?= htmlspecialchars($finishedDate) ?></td>
+                    <td> <?= htmlspecialchars($pages) ?> </td>
+                    <td> <?= $ongoingChecked ?> </td>
+                    <td> <?= htmlspecialchars($comment) ?> </td>
+                    <td> <?= htmlspecialchars($month) ?> </td>
+                    <td> <?= htmlspecialchars($totalPoints) ?> </td>
+                </tr>
+                <div class="notch-wrapper" id="notchWrapper">
+                    <?php foreach ($tags as $key => $value) { ?>
+                        <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
+                            <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
+                        </div>
+                    <?php } ?>
+                </div>
+            <?php }} else { ?> 
+                <tr><td colspan='9'>No reading history found.</td></tr>
+            <?php } ?>
             ?>
     </div>
 </body>
