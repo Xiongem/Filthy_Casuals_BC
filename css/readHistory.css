@@ -12,16 +12,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0 8px;
+        margin-bottom: 1em;
     }
     .history-table {
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
     }
     .table-item, .table-head {
         text-align: center;
         border-left: 1px solid var(--leather);
         border-right: 1px solid var(--leather);
+        min-width: 5em;
     }
     .table-head {
         background-color: var(--deep-green);
@@ -37,6 +40,10 @@
     .notch-wrapper {
         display: flex;
         border: 1px solid var(--leather);
-        padding: 0.5em;
+        padding: 8px;
+    }
+
+    .title {
+        width: 8em;
     }
 }

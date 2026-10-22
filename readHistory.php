@@ -55,15 +55,15 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         </div>
         <div class="history-table">
             <div class="row">
-                <div class="table-head">Title</div>
-                <div class="table-head">Author</div>
-                <div class="table-head">Date Finished</div>
-                <div class="table-head">Date Started</div>
-                <div class="table-head">Pages</div>
-                <div class="table-head">Ongoing?</div>
-                <div class="table-head">Comment</div>
-                <div class="table-head">Month</div>
-                <div class="table-head">Total Points</div>
+                <div class="table-head title">Title</div>
+                <div class="table-head author">Author</div>
+                <div class="table-head sDate">Date Started</div>
+                <div class="table-head fDate">Date Finished</div>
+                <div class="table-head pages">Pages</div>
+                <div class="table-head ongoing">Ongoing?</div>
+                <div class="table-head comment">Comment</div>
+                <div class="table-head month">Month</div>
+                <div class="table-head points">Total Points</div>
             </div>
             <?php
             if ($result->num_rows > 0) {
@@ -71,10 +71,10 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $title = $readHistory['title'];
                     $author = $readHistory['author'];
                     $finishedDate = $readHistory['finishedDate'];
-                    if ($readHistory['startedDate'] !== 0000-00-00) {
-                        $startedDate = $readHistory['startedDate'];
-                    } else {
+                    if ($readHistory['startedDate'] == 0000-00-00) {
                         $startedDate = 'none';
+                    } else {
+                        $startedDate = $readHistory['startedDate'];
                     }
                     $pages = $readHistory['pages'];
                     $mod1 = $readHistory['mod1'];
@@ -103,15 +103,15 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     // print_r($tags);
                 ?>
                 <div class="row">
-                    <div class="table-item"> <?= htmlspecialchars($title) ?> </div>
-                    <div class="table-item"> <?= htmlspecialchars($author) ?> </div>
-                    <div class="table-item"> <?= htmlspecialchars($startedDate) ?> </div>
-                    <div class="table-item"> <?= htmlspecialchars($finishedDate) ?></div>
-                    <div class="table-item"> <?= htmlspecialchars($pages) ?> </div>
-                    <div class="table-item"> <?= $ongoingChecked ?> </div>
-                    <div class="table-item"> <?= htmlspecialchars($comment) ?> </div>
-                    <div class="table-item"> <?= htmlspecialchars($month) ?> </div>
-                    <div class="table-item"> <?= htmlspecialchars($totalPoints) ?> </div>
+                    <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
+                    <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
+                    <div class="table-item sDate"> <?= htmlspecialchars($startedDate) ?> </div>
+                    <div class="table-item fDate"> <?= htmlspecialchars($finishedDate) ?></div>
+                    <div class="table-item pages"> <?= htmlspecialchars($pages) ?> </div>
+                    <div class="table-item ongoing"> <?= $ongoingChecked ?> </div>
+                    <div class="table-item comment"> <?= htmlspecialchars($comment) ?> </div>
+                    <div class="table-item month"> <?= htmlspecialchars($month) ?> </div>
+                    <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
                 </div>
                 <div class="notch-wrapper" id="notchWrapper">
                     <?php if (isset($readHistory['tags'])) { ?>
