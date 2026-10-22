@@ -82,7 +82,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 $page_ongoing = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
                 $num_results_on_page_ongoing = 15;
-            if ($total_pages_ongoing->num_rows > 0) {
+            if ($total_pages_ongoing > 0) {
                 if ($stmt1 = $_SESSION["conn"]->prepare("SELECT * 
                                                         FROM readHistory 
                                                         WHERE user_id = $ID AND `ongoing` = 1 
@@ -262,7 +262,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
                 $num_results_on_page = 15;
-            if ($total_pages->num_rows > 0) {
+            if ($total_pages > 0) {
                 if ($stmt = $_SESSION["conn"]->prepare("SELECT * 
                                                         FROM readHistory 
                                                         WHERE user_id = $ID 
