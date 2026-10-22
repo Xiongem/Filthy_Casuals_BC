@@ -110,7 +110,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     <td> <?= htmlspecialchars($totalPoints) ?> </td>
                 </tr>
                 <tr>
-                    <td>test</td>
+                    <div>
+                        <p>test</p>
+                    </div>
                 </tr>
             <?php }} else { ?> 
                 <tr><td colspan='9'>No reading history found.</td></tr>
