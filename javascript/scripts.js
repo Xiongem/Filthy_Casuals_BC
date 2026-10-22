@@ -53,7 +53,10 @@ function editRead() {
   $("#editPopup").css({"display": "flex"});
   // var editPopup = document.getElementById("project-popup");
   // editPopup.style.display = "flex";
-  $("#editPopup").scrollIntoView();
+  $("#editPopup").scrollIntoView({
+    behavior: "smooth", // or "auto" or "instant"
+    block: "start" // or "end"
+});
   // editPopup.scrollIntoView();
   setTimeout(hideBackground, 500);
 }
