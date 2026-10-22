@@ -85,7 +85,7 @@
         min-width: 12em;
     }
     .title, .author, .date {
-        word-break: normal;
+        hyphens: auto;
         overflow-wrap: break-word;
     }
     .edit {
