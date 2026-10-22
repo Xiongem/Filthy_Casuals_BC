@@ -42,6 +42,7 @@
         width: 100%;
         /* column-gap: 8px; */
         grid-template-columns: repeat(10, 1fr);
+        grid-template-columns: 2% 15% 15% 15% 15% 3% 5% 5% 5% 20%;
         /* border: 1px solid var(--leather); */
     }
     .notch-wrapper {
@@ -53,7 +54,7 @@
         margin: 4px 0.3em;
     }
 
-    .author, .date {
+    /* .author, .date {
         display: flex;
         min-width: 8em;
         flex-grow: 2;
@@ -66,7 +67,7 @@
     .edit {
         min-width: 3em;
         max-width: 4em;
-    }
+    } */
     #edit-icon {
         cursor: pointer;
     }

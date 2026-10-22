@@ -9,16 +9,16 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 forceLogin();
 
-// $userID = $_SESSION["user_id"];
+$userID = $_SESSION["user_id"];
 
-$userID = $_GET["user_id"];
+$ID = $_GET["user_id"];
 
-$sql = "SELECT * FROM users WHERE user_id = $userID";
+$sql = "SELECT * FROM users WHERE user_id = $ID";
         $result = $_SESSION["conn"]->query($sql);
         $user = $result->fetch_assoc();
             $admin = $user['admin'];
 
- $sql = "SELECT * FROM readHistory WHERE user_id = $userID";
+ $sql = "SELECT * FROM readHistory WHERE user_id = $ID";
         $result = $_SESSION["conn"]->query($sql);
         // $readHistory = $result->fetch_assoc();
 
