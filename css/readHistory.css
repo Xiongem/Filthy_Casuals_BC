@@ -24,7 +24,7 @@
     }
     .row {
         display: grid;
-        column-gap: 8px;
+        /* column-gap: 8px; */
         grid-template-columns: repeat(9, 1fr);
     }
     .notch-wrapper {
