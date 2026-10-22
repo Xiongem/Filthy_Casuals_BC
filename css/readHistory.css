@@ -20,7 +20,8 @@
     }
     .table-item, .table-head {
         text-align: center;
-        border: 1px solid var(--leather);
+        border-left: 1px solid var(--leather);
+        border-right: 1px solid var(--leather);
     }
     .table-head {
         background-color: var(--deep-green);
@@ -30,9 +31,12 @@
         display: grid;
         /* column-gap: 8px; */
         grid-template-columns: repeat(9, 1fr);
+        border-top: 1px solid var(--leather);
+        border-bottom: 1px solid var(--leather);
     }
     .notch-wrapper {
         display: flex;
         border: 1px solid var(--leather);
+        padding: 0.5em;
     }
 }
