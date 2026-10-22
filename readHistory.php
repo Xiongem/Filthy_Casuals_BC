@@ -65,9 +65,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <div class="table-head edit">Edit</div>
                 <div class="table-head title">Title</div>
                 <div class="table-head author">Author</div>
+                <div class="table-head pages">Pages</div>
                 <div class="table-head date">Date Started</div>
                 <div class="table-head date">Date Finished</div>
-                <div class="table-head pages">Pages</div>
                 <div class="table-head ongoing">Ongoing?</div>
                 <div class="table-head month">Month</div>
                 <div class="table-head points">Total Points</div>
@@ -114,9 +114,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     <div class="table-item edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
                     <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
                     <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
+                    <div class="table-item pages"> <?= htmlspecialchars($pages) ?> </div>
                     <div class="table-item date"> <?= htmlspecialchars($startedDate) ?> </div>
                     <div class="table-item date"> <?= htmlspecialchars($finishedDate) ?></div>
-                    <div class="table-item pages"> <?= htmlspecialchars($pages) ?> </div>
                     <div class="table-item ongoing"> <?= $ongoingChecked ?> </div>
                     <div class="table-item month"> <?= htmlspecialchars($month) ?> </div>
                     <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
