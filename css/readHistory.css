@@ -14,13 +14,15 @@
         align-items: center;
         margin: 0 1em 1em 1em;
     }
+    .full-wrapper {
+        margin-bottom: 2em;
+    }
     .history-table {
         display: flex;
         flex-direction: column;
         width: 100%;
         overflow-x: auto;
         border: 2px solid var(--leather);
-        margin-bottom: 2em;
     }
     .sub-heading-wrapper {
         width: 100%;
