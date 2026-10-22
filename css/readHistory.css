@@ -67,7 +67,7 @@
     .notch-wrapper {
         display: flex;
         width: 100%;
-        border: 1px solid var(--leather);
+        /* border: 1px solid var(--leather); */
     }
     .notch-arrow {
         margin: 4px 0.3em;
@@ -78,17 +78,19 @@
         font-size: 10px;
     }
 
-    .author, .date {
+    /* .author, .date {
         min-width: 8em;
     }
     .title, .comment {
         min-width: 12em;
-    }
+    } */
     .title, .author, .date {
         width: 12em;
         hyphens: auto;
         overflow-wrap: break-word;
-        word-wrap: break-all
+    }
+    .comment {
+        min-width: 12em;
     }
     .edit {
         min-width: 3em;
