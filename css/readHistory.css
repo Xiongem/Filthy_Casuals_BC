@@ -41,8 +41,7 @@
         display: grid;
         width: 100%;
         /* column-gap: 8px; */
-        /* grid-template-columns: repeat(10, 1fr); */
-        grid-template-columns: 5% 15% 15% 15% 15% 5% 5% 5% 5% 15%;
+        grid-template-columns: repeat(10, 1fr);
         /* border: 1px solid var(--leather); */
     }
     .notch-wrapper {
@@ -54,20 +53,15 @@
         margin: 4px 0.3em;
     }
 
-    /* .author, .date {
-        display: flex;
+    .author, .date {
         min-width: 8em;
-        flex-grow: 2;
     }
     .title, .comment {
-        display: flex;
         min-width: 12em;
-        flex-grow: 3;
     }
     .edit {
         min-width: 3em;
-        max-width: 4em;
-    } */
+    }
     #edit-icon {
         cursor: pointer;
     }
