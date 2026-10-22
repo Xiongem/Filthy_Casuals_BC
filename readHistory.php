@@ -20,9 +20,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 
  $sql = "SELECT * FROM readHistory WHERE user_id = $userID";
         $result = $_SESSION["conn"]->query($sql);
-        $readHistory = $result->fetch_assoc();
+        // $readHistory = $result->fetch_assoc();
 
-        print_r($readHistory['tags']);
+        
             
 ?>
 
@@ -101,6 +101,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $totalPoints = $readHistory['totalPoints']; 
                 ?>
                 <div class="row">
+                    <?= print_r($readHistory['tags']); ?>
                     <div class="table-item"> <?= htmlspecialchars($title) ?> </div>
                     <div class="table-item"> <?= htmlspecialchars($author) ?> </div>
                     <div class="table-item"> <?= htmlspecialchars($startedDate) ?> </div>
