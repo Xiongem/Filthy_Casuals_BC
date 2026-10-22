@@ -80,6 +80,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $ongoing = $readHistory['ongoing'];
                     if (isset($readHistory['tags'])) {
                         $tags = explode(",", $readHistory['tags']);
+                         foreach ($tags as $key => $value) {
+                            $tags[$key] = trim($value);
+                         }
                     } else {
                         $tags = "";
                     }
@@ -111,11 +114,11 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 </div>
                 <div class="notch-wrapper" id="notchWrapper">
                     <?php if (isset($readHistory['tags'])) { ?>
-                        <?php foreach ($tags as $key => $value) { ?>
-                            <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
-                                <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
+                       
+                            <div class="notch-arrow" id="<?= $tags[$key] ?>" onclick="removeTag(<?= $tags[$key] ?>)">
+                                <p class='tag-content' id='tagContent'><?= $tags[$key] ?></p>
                             </div>
-                        <?php } ?>
+                        
                     <?php } ?>
                 </div>
             <?php }} else { ?> 
