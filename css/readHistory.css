@@ -41,7 +41,10 @@
         width: 100%;
         border-left: 1px solid var(--leather);
         border-right: 1px solid var(--leather);
-        padding: 8px;
+        /* padding: 8px; */
+    }
+    .notch-arrow {
+        margin: 4px 0;
     }
 
     .title {
