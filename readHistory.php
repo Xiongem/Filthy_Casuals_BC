@@ -58,7 +58,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
             <h1>Your Reading History</h1>
         </div>
         <div class="history-table">
-            <div class="row sub-heading-wrapper">
+            <div class="sub-heading-wrapper">
                 <h2>Ongoing Reads</h2>
             </div>
             <div class="row">
