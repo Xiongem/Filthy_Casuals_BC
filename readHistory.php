@@ -12,6 +12,7 @@ forceLogin();
 $userID = $_SESSION["user_id"];
 
 $ID = $_GET["user_id"];
+echo $ID;
 
 // $sql = "SELECT * FROM users WHERE user_id = $ID";
 //         $result = $_SESSION["conn"]->query($sql);
@@ -77,7 +78,9 @@ $ID = $_GET["user_id"];
                 </div>
                 <?php
                 
-                    $total_pages_ongoing = $_SESSION["conn"]->query("SELECT * FROM `readHistory` WHERE `user_id` = $ID AND `ongoing` = 1")->num_rows;
+                    $total_pages_ongoing = $_SESSION["conn"]->query("SELECT * 
+                                                                        FROM `readHistory` 
+                                                                        WHERE `user_id` = $ID AND `ongoing` = 1")->num_rows;
 
                     $page_ongoing = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
