@@ -53,23 +53,6 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
     <header>
         <?= makeNav() ?>
     </header>
-    <div class="ongoing-wrapper" id="ongoingWrapper">
-        <div class="ongoing-table" id="ongoingTable">
-            <div class="row">
-                <div class="table-head edit">Edit</div>
-                <div class="table-head title">Title</div>
-                <div class="table-head author">Author</div>
-                <div class="table-head pages">Pages</div>
-                <div class="table-head date">Date Started</div>
-                <div class="table-head date">Date Finished</div>
-                <div class="table-head ongoing">Ongoing?</div>
-                <div class="table-head month">Month</div>
-                <div class="table-head points">Total Points</div>
-                <div class="table-head comment">Comment</div>
-            </div>
-
-        </div>
-    </div>
     <div class="history-wrapper" id="historyWrapper">
         <div class="title-wrapper">
             <h1>Your Reading History</h1>
@@ -250,9 +233,9 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                     <?php } ?>
                 </div>
                 <?php } ?>
+        </div>
 
-
-
+        <div class="history-table">
             <div class="sub-heading-wrapper">
                 <h2>Full History</h2>
             </div>
