@@ -22,7 +22,9 @@
     }
     .table-item, .table-head {
         display: flex;
+        justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         text-align: center;
         /* border-left: 1px solid var(--leather);
         border-right: 1px solid var(--leather); */
