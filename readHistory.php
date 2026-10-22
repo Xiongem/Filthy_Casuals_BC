@@ -71,7 +71,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $title = $readHistory['title'];
                     $author = $readHistory['author'];
                     $finishedDate = $readHistory['finishedDate'];
-                    if ($readHistory['startedDate'] == 0000-00-00) {
+                    if ($readHistory['startedDate'] == "0000-00-00") {
                         $startedDate = 'none';
                     } else {
                         $startedDate = $readHistory['startedDate'];
