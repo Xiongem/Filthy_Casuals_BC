@@ -86,7 +86,7 @@
     .title, .comment {
         min-width: 12em;
     } */
-    .title, .author {
+    .title, .author, .mod {
         width: 10em;
     }
     .date {
@@ -96,7 +96,7 @@
         min-width: 12em;
     }
     .edit {
-        width: 3em;
+        width: 2em;
     }
     #edit-icon {
         cursor: pointer;

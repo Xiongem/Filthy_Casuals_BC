@@ -106,7 +106,7 @@ $ID = $_GET["user_id"];
                         $author = $readHistory['author'];
                         $finishedDate = $readHistory['finishedDate'];
                         if ($readHistory['startedDate'] == "0000-00-00") {
-                            $startedDate = 'none';
+                            $startedDate = '--';
                         } else {
                             $startedDate = $readHistory['startedDate'];
                         }
@@ -185,7 +185,7 @@ $ID = $_GET["user_id"];
                         if (isset($readHistory['comment'])) {
                             $comment = $readHistory['comment'];
                         } elseif ($readHistory['comment'] == '') {
-                            $comment = 'none';
+                            $comment = '--';
                         } else {
                             $comment = '';
                         }
@@ -352,7 +352,7 @@ $ID = $_GET["user_id"];
                         $author = $readHistory['author'];
                         $finishedDate = $readHistory['finishedDate'];
                         if ($readHistory['startedDate'] == "0000-00-00") {
-                            $startedDate = 'none';
+                            $startedDate = '--';
                         } else {
                             $startedDate = $readHistory['startedDate'];
                         }
@@ -431,7 +431,7 @@ $ID = $_GET["user_id"];
                         if (isset($readHistory['comment'])) {
                             $comment = $readHistory['comment'];
                         } elseif ($readHistory['comment'] == '') {
-                            $comment = 'none';
+                            $comment = '--';
                         } else {
                             $comment = '';
                         }
