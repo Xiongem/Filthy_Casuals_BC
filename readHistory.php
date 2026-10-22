@@ -111,7 +111,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     // print_r($tags);
                 ?>
                 <div class="row">
-                    <div class="table-item edit" id="edit"><i class="fa fa-gear" onclick="editRead()"></i></div>
+                    <div class="table-item edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
                     <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
                     <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
                     <div class="table-item date"> <?= htmlspecialchars($startedDate) ?> </div>
