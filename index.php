@@ -20,8 +20,6 @@ $userID = $_SESSION["user_id"];
                 $imageData = base64_encode($user['pfpData']);
 
 $month = date('n');
-
-echo $userID;
 ?>
 
 <!DOCTYPE html>
