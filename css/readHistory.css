@@ -23,7 +23,9 @@
         margin-bottom: 2em;
     }
     .sub-heading-wrapper {
+        width: 100%;
         background-color: var(--marine-green);
+        padding: 8px;
     }
     .table-item, .table-head {
         display: flex;
