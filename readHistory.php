@@ -109,17 +109,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     <td> <?= htmlspecialchars($month) ?> </td>
                     <td> <?= htmlspecialchars($totalPoints) ?> </td>
                 </tr>
-                <?php if (isset($readHistory['tags'])) { ?>
                 <tr>
-                    <div class="notch-wrapper" id="notchWrapper">
-                        <?php foreach ($tags as $key => $value) { ?>
-                            <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
-                                <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
-                            </div>
-                        <?php } ?>
-                    </div>
+                    <td>test</td>
                 </tr>
-            <?php } ?>
             <?php }} else { ?> 
                 <tr><td colspan='9'>No reading history found.</td></tr>
             <?php } ?>
