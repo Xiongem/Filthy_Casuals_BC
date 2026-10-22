@@ -5,7 +5,7 @@
     .history-table {
         display: grid;
         column-gap: 8px;
-        /* grid-template-columns: auto auto auto auto auto auto auto auto auto;
-        grid-template-rows: auto auto; */
+        grid-template-columns: repeat(9, 1fr);
+        /* grid-template-rows: auto auto; */
     }
 }
