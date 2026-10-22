@@ -78,7 +78,11 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $mod1 = $readHistory['mod1'];
                     $mod2 = $readHistory['mod2'];
                     $ongoing = $readHistory['ongoing'];
-                    $tags = explode(",", $readHistory['tags']);
+                    if (isset($readHistory['tags'])) {
+                        $tags = explode(",", $readHistory['tags']);
+                    } else {
+                        $tags = "";
+                    }
                     if ($ongoing == 1) {
                         $ongoingChecked = 'yes';
                     } else {
@@ -105,14 +109,17 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     <td> <?= htmlspecialchars($month) ?> </td>
                     <td> <?= htmlspecialchars($totalPoints) ?> </td>
                 </tr>
-                <div class="notch-wrapper" id="notchWrapper">
-                    <?php foreach ($tags as $key => $value) { ?>
-                        <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
-                            <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
-                        </div>
-                    <?php } ?>
-                </div>
-            <?php }} else { ?> 
+                <?php if (isset($readHistory['tags'])) { ?>
+                    <div class="notch-wrapper" id="notchWrapper">
+                        <?php foreach ($tags as $key => $value) { ?>
+                            <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
+                                <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
+                            </div>
+                        <?php } ?>
+                    </div>
+            <?php }
+                }
+            } else { ?> 
                 <tr><td colspan='9'>No reading history found.</td></tr>
             <?php } ?>
             ?>
