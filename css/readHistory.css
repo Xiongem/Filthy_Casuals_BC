@@ -53,10 +53,10 @@
         margin: 4px 0.3em;
     }
 
-    .title, .author, .date {
+    .author, .date {
         width: 8em;
     }
-    .comment {
+    .title, .comment {
         width: 12em;
     }
 }
