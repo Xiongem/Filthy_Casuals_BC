@@ -43,7 +43,7 @@ function makeNav() {
                             if ($admin == 1) {
                                 echo '<a href="OTP.php" class="nav-item">Passcode</a>';
                             }
-                        echo '<a class="nav-item" href="logout.php">Logout</a>
+                        echo '<a class="nav-item" href="php/logout.php">Logout</a>
                         </div>
                     </div>
                 </div>
