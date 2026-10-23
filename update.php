@@ -83,8 +83,7 @@ $today = date("Y-m-d");
                                 onkeypress="clickPress(event)">
                         </div>
                         <div class="enter-wrapper" onclick="createTag()">
-                            <i class="fa fa-circle-right"></i>
-                            <i class="fa-regular fa-square-plus"></i>
+                            <i class="fa fa-square-plus"></i>
                         </div>
                     </div>
 
