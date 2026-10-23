@@ -11,28 +11,19 @@ dbConnect();
 $readID = $_POST['read_ID'];
 $ID = $_POST['user_ID'];
 
-$sql = "SELECT * FROM `readHistory` WHERE `user_id` = ?  AND read_ID = ?";
-    $stmt = $_SESSION["conn"]->prepare($sql);
-        $stmt->bind_param("ii",
-                                $ID,
-                                $readID);
-
-if ($stmt -> execute()) {
-        $result = $_SESSION["conn"]->query($sql);
-        $user = $result->fetch_assoc();
-            $title = $read["username"];
-            $author = $read["author"];
-            $dateFinished = $read["finishedDate"];
-            $startedDate = $read["startedDate"];
-            $pages = $read["pages"];
-            $ongoing = $read["ongoing"];
-            $mod1 = $read["mod1"];
-            $mod2 = $read["mod2"];
-            $tags = $read["tags"];
-            $comment = $read["comment"];
-} else {
-    echo "something went wrong";
-}
+$sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID";
+    $result = $_SESSION["conn"]->query($sql);
+    $read = $result->fetch_assoc();
+        $title = $read["username"];
+        $author = $read["author"];
+        $dateFinished = $read["finishedDate"];
+        $startedDate = $read["startedDate"];
+        $pages = $read["pages"];
+        $ongoing = $read["ongoing"];
+        $mod1 = $read["mod1"];
+        $mod2 = $read["mod2"];
+        $tags = $read["tags"];
+        $comment = $read["comment"];
 ?>
 
 
