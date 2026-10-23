@@ -51,13 +51,13 @@ function showBackground() {
 
 function editRead() {
   $("#editPopup").css({"display": "flex"});
-  // var editPopup = document.getElementById("project-popup");
+  var editPopup = document.getElementById("editPopup");
   // editPopup.style.display = "flex";
-  $("#editPopup").scrollIntoView({
-    behavior: "smooth", // or "auto" or "instant"
-    block: "start" // or "end"
-});
-  // editPopup.scrollIntoView();
+//   $("#editPopup").scrollIntoView({
+//     behavior: "smooth", // or "auto" or "instant"
+//     block: "start" // or "end"
+// });
+  editPopup.scrollIntoView();
   setTimeout(hideBackground, 500);
 }
 function closeEditRead() {
