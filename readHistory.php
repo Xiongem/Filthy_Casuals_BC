@@ -106,6 +106,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                     }
                 
                     while ($readHistory = $result_ongoing->fetch_assoc()) {
+                        $readID = $readHistory["read_ID"];
                         $title = $readHistory['title'];
                         $author = $readHistory['author'];
                         $finishedDate = $readHistory['finishedDate'];
