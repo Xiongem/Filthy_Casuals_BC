@@ -17,7 +17,7 @@ $sql = "SELECT tags FROM tags WHERE tags LIKE '%$string0%' ";
 
 while ($row = $result -> fetch_assoc()) {
     $tags = $row['tags'];
-    echo '<a href="#" class="searchResult" onclick="setTag(' . $tags . ')">' . $row['tags'] . '</a>';
+    echo '<a href="#" class="searchResult" onclick="setTag("' . $tags . '")">' . $row['tags'] . '</a>';
     // $num_rows0 = mysqli_num_rows($result);
     // if ($num_rows0 !='1') {
     //     //
