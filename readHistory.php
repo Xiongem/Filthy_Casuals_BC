@@ -7,7 +7,7 @@ ini_set('error_log', '/path/to/php_errors.log');
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
-// forceLogin();
+forceLogin();
 
 if (isset($_SESSION["user_id"])) {
     $userID = $_SESSION["user_id"];
@@ -49,7 +49,7 @@ $ID = $_GET["user_id"];
         </div>
     </div>
     <header>
-        
+        <?= makeNav() ?>
     </header>
     <div class="history-wrapper" id="historyWrapper">
         <div class="title-wrapper">
