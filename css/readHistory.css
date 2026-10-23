@@ -85,7 +85,8 @@
         display: flex;
         width: 100%;
         min-height: 0.5em;
-        /* border: 1px solid var(--leather); */
+        border-top: 1px solid var(--leather);
+        border-bottom: 1px solid var(--leather);
     }
     .notch-arrow {
         margin: 4px 0.3em;
@@ -206,10 +207,9 @@
     .comment {
         min-width: 22em;
     }
-    .notch-wrapper {
-        background-color: rgba(212, 212, 212, 0.705);
+    /* .notch-wrapper {
         border: 1px solid var(--leather);
-    }
+    } */
 }
 /* #nav-menu-icon {
     color: var(--barium-yellow);
