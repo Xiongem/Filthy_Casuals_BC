@@ -84,7 +84,7 @@
     }
     .enter-wrapper {
         width: 2.5em;
-        height: 2.5em;
+        height: 2em;
 
         background-color: var(--barium-yellow);
         accent-color: var(--marine-green);
