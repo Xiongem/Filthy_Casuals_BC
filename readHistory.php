@@ -49,7 +49,7 @@ $ID = $_GET["user_id"];
         </div>
     </div>
     <header>
-        <?= makeNav() ?>
+        
     </header>
     <div class="history-wrapper" id="historyWrapper">
         <div class="title-wrapper">
