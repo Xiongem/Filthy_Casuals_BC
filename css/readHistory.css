@@ -78,12 +78,12 @@
         grid-template-columns: repeat(12, 1fr);
         /* border: 1px solid var(--leather); */
     }
-    .overflow-wrapper {
-        display: table-cell;
-        width: 100%;
-    }
+    /* .overflow-wrapper {
+        overflow-y: auto;
+    } */
     .notch-wrapper {
         display: flex;
+        overflow-y: auto;
         width: 100%;
         min-height: 0.5em;
         background-color: rgba(212, 212, 212, 0.705);
