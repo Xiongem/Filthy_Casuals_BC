@@ -9,7 +9,7 @@
     }
 @media only screen and (min-width: 200px) {
     body {
-        background-color: var(--barium-yellow);
+        background-color: var(--deep-green);
     }
     .form-group {
      display: flex;
