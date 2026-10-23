@@ -183,12 +183,12 @@
 
 @media only screen and (min-width: 1000px) {
     .title, .author {
-        width: 16em;
+        min-width: 16em;
     }
     .date {
-        min-width: 8em;
+        min-width: 9em;
     }
     .comment {
-        min-width: 20em;
+        min-width: 22em;
     }
 }
