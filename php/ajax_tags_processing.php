@@ -30,7 +30,7 @@ if (isset($_POST['query'])) {
 
         $sql = "SELECT tags FROM tags WHERE tags LIKE '%$inpText%' ";
         $result = $_SESSION["conn"]->query($sql);
-        $results = $result->fetchAll();
+        $results = $result->fetch_assoc();
 
     // $stmt = $_SESSION["conn"]->prepare("SELECT tags FROM tags WHERE tags LIKE ?");
     // $stmt->bind_param("s", 
