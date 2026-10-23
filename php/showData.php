@@ -172,16 +172,16 @@ if($row>0) {
         <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
         <div class="table-item comment"> <?= htmlspecialchars($comment) ?> </div>
     </div>
-    <div class="notch-wrapper" id="notchWrapper">
-        <?php if (isset($readHistory['tags'])) { ?>
-            <?php foreach ($tags as $key => $value) { ?>
-            <div class="overflow-wrapper">
-                <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
-                    <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
-                </div>
-            </div>
+    <div class="overflow-wrapper">
+        <div class="notch-wrapper" id="notchWrapper">
+            <?php if (isset($readHistory['tags'])) { ?>
+                <?php foreach ($tags as $key => $value) { ?>
+                    <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
+                        <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
+                    </div>
+                <?php } ?>
             <?php } ?>
-        <?php } ?>
+        </div>
     </div>
 <?php }} else { ?>
     <div class="not-found">No Reading History Found</div>       
