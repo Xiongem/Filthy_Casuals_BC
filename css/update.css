@@ -82,7 +82,7 @@
         flex-direction: column;
 
         background-color: var(--marine-green);
-        border: 2px solid var(--deep-green);
+        /* border: 2px solid var(--deep-green); */
         border-radius: 0 0 12px 12px;
     }
     .searchResult {
