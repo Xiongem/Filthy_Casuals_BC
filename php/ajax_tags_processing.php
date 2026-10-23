@@ -41,7 +41,8 @@ if (isset($_POST['query'])) {
 
     if ($results) {
       foreach ($results as $row) {
-          echo '<p class="list-group-item border-1">No Record</p>';
+          $tag = $row['tags'];
+        echo '<a href="#" class="searchResult">' . $tag . '</a>';
       }
     } else {
       echo '<p class="list-group-item border-1">No Record</p>';
