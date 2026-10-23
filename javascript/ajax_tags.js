@@ -1,22 +1,46 @@
-function autocomplet0() {
-    var min_length = 0; // min characters to display the autocomplete
-    var keyword0 = document.getElementById('tags_id0').value;
+// function autocomplet0() {
+//     var min_length = 0; // min characters to display the autocomplete
+//     var keyword0 = document.getElementById('tags_id0').value;
     
-    if (keyword0.length > min_length) {
-        $.ajax({
-            url: 'php/ajax_tags_processing.php',
-            type: 'POST',
-            data: {keyword0:keyword0},
-            success:function(data){
-                $('#search_results0').show();
-                $('#search_results0').html(data);
-            }
-        });
+//     if (keyword0.length > min_length) {
+//         $.ajax({
+//             url: 'php/ajax_tags_processing.php',
+//             type: 'POST',
+//             data: {keyword0:keyword0},
+//             success:function(data){
+//                 $('#search_results0').show();
+//                 $('#search_results0').html(data);
+//             }
+//         });
+//     } else {
+//         $('#search_results0').hide();
+//     }
+// }
+$(document).ready(function () {
+  // Send Search Text to the server
+  $("#search").keyup(function () {
+    let searchText = $(this).val();
+    if (searchText != "") {
+      $.ajax({
+        url: "php/ajax_tags_processing.php",
+        method: "post",
+        data: {
+          query: searchText,
+        },
+        success: function (response) {
+          $("#show-list").html(response);
+        },
+      });
     } else {
-        $('#search_results0').hide();
+      $("#show-list").html("");
     }
-}
-
+  });
+  // Set searched text in input field on click of search button
+  $(document).on("click", "a", function () {
+    $("#search").val($(this).text());
+    $("#show-list").html("");
+  });
+});
 
 function setTag() {
     searchResult = document.getElementById('search_results0').textContent;
