@@ -61,10 +61,11 @@
         margin-left: 0.5em;
     } */
     .tag-wrapper {
+        position: relative;
         display: flex;
         flex-direction: column;
         /* justify-content: center; */
-        height: 6em;
+        /* height: 6em; */
         /* margin-bottom: 1em; */
     }
     .tags {
