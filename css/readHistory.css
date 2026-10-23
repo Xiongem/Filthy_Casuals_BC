@@ -81,6 +81,7 @@
     .notch-wrapper {
         display: flex;
         width: 100%;
+        min-height: 0.5em;
         /* border: 1px solid var(--leather); */
     }
     .notch-arrow {
@@ -203,6 +204,7 @@
         min-width: 22em;
     }
     .notch-wrapper {
+        background-color: rgba(163, 163, 163, 0.705);
         border: 1px solid var(--leather);
     }
 }
