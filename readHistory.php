@@ -353,6 +353,7 @@ $ID = $_GET["user_id"];
                     });
 
                     function showdata() {
+                        var user_ID = <?= $ID ?>
                         $.ajax({
                             url: 'php/showData.php',
                             method: 'post',
