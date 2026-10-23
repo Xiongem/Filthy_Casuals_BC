@@ -28,7 +28,7 @@
         flex-direction: column;
         width: 100%;
         overflow-x: auto;
-        background-color: rgb(233, 232, 232);
+        background-color: #e2dfcd;
         border: 2px solid var(--deep-green);
         margin-bottom: 2em;
     }
