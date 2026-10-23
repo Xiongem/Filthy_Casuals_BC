@@ -25,6 +25,7 @@
         flex-direction: column;
         width: 100%;
         overflow-x: auto;
+        background-color: var(--barium-yellow);
         border: 2px solid var(--leather);
         margin-bottom: 2em;
     }
