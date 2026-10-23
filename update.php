@@ -33,7 +33,7 @@ $today = date("Y-m-d");
     <link rel="stylesheet" href="css/update.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script> -->
     <script type="text/javascript" src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/ajax_tags.js"> </script>
@@ -83,7 +83,7 @@ $today = date("Y-m-d");
                                 onkeypress="clickPress(event)">
                         </div>
                         <div class="enter-wrapper" onclick="createTag()">
-                            <i class="fa fa-plus"></i>
+                            <ion-icon name="add-circle-outline"></ion-icon>
                         </div>
                     </div>
 
@@ -207,5 +207,7 @@ $today = date("Y-m-d");
                 document.getElementById('dateStartedWrapper').classList.toggle("hide");
             }
         </script>
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
