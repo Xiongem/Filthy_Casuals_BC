@@ -72,6 +72,7 @@
         text-decoration: underline;
         cursor: pointer;
         margin-bottom: 0.5em;
+        padding: 4px;
     }
     .notch-wrapper {
         display: flex;
@@ -94,5 +95,9 @@
     #comment {
         height: 8em;
         resize: vertical;
+    }
+    .list-group {
+        display: flex;
+        flex-direction: column;
     }
 }
