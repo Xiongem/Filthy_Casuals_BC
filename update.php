@@ -74,23 +74,19 @@ $today = date("Y-m-d");
                 <div class="tag-wrapper">
                     <label for="keyword0" class="labels">Tags:</label>
                     <input type="text" 
-                        name="search" 
-                        id="search" 
+                        name="keyword0" 
+                        id="tags_id0" 
                         class="inputs" 
-                        placeholder="start tying a tag name"
-                        autocomplete="off"
+                        onkeyup="autocomplet0()"
                         onkeypress="clickPress(event)">
 
                         <!-- //?ADD BUTTON TO ALLOW PEEPS TO ADD NEW TAGS WITHOUT NEEDING ENTER KEY -->
 
-                    <!-- <div class="list-group" id="show-list"> -->
-                    <!-- Here autocomplete list will be display -->
-                    <!-- </div> -->
                     <a id="search_results0" class="searchResult" onclick="setTag()"></a>
                 </div>
 
                 <div class="notch-wrapper" id="notchWrapper"></div>
-                
+                <input type="hidden" name="test" id="test" value="67">
 
                 <div class="box-wrapper">
                     <label for="diffDate" class="labels">Click if your finish date is not today:</label>
