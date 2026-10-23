@@ -82,15 +82,12 @@
         overflow-y: auto;
     }
     .notch-wrapper {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        display: flex;
         width: 100%;
         min-height: 0.5em;
-        background-color: rgba(212, 212, 212, 0.705);
         /* border: 1px solid var(--leather); */
     }
     .notch-arrow {
-        column-span: 12;
         margin: 4px 0.3em;
         min-width: 30px;
         height: 15px;
