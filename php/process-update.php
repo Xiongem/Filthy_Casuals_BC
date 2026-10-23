@@ -19,11 +19,10 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 $month = date("n",strtotime($_POST["dateFinished"]));
 $totalPoints = calculateTotalPoints($_POST["pages"], $_POST["mod-1"], $_POST["mod-2"]);
 
-$tags = $_POST["tag"];
-
 // print_r($tags);
 
 if (isset($_POST["tag"])) {
+    $tags = $_POST["tag"];
     $insert_tags = implode(",", $tags);
 } else {
     $insert_tags = NULL;
