@@ -357,7 +357,7 @@ $ID = $_GET["user_id"];
                         $.ajax({
                             url: 'php/showData.php',
                             method: 'post',
-                            data: {user_id:$ID},
+                            data: {user_id:user_ID},
                             success: function(result) {
                                 $("#result").html(result);
                             }
