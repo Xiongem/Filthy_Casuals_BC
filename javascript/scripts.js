@@ -49,16 +49,22 @@ function showBackground() {
   // body.style.overflow = "unset";
 }
 
-function editRead() {
+function editRead(readID) {
   $("#editPopup").css({"display": "flex"});
   var editPopup = document.getElementById("editPopup");
-  // editPopup.style.display = "flex";
-//   $("#editPopup").scrollIntoView({
-//     behavior: "smooth", // or "auto" or "instant"
-//     block: "start" // or "end"
-// });
   editPopup.scrollIntoView();
   setTimeout(hideBackground, 500);
+
+  var read_ID = readID;
+  $.ajax({
+      url: 'php/ajax_history_edit.php',
+      method: 'post',
+      data: {read_ID:read_ID,
+            userID:userID},
+      success: function(result) {
+          $("#editResults").html(result);
+      }
+  });
 }
 function closeEditRead() {
   $("#editPopup").hide();
