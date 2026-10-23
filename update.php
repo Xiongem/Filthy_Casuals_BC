@@ -33,7 +33,7 @@ $today = date("Y-m-d");
     <link rel="stylesheet" href="css/update.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/ajax_tags.js"> </script>
@@ -72,13 +72,20 @@ $today = date("Y-m-d");
                     required>
 
                 <div class="tag-wrapper">
-                    <label for="keyword0" class="labels">Tags:</label>
-                    <input type="text" 
-                        name="keyword0" 
-                        id="tags_id0" 
-                        class="tags" 
-                        onkeyup="autocomplet0()"
-                        onkeypress="clickPress(event)">
+                    <div class="search-wrapper">
+                        <div class="tag">
+                            <label for="keyword0" class="labels">Tags:</label>
+                            <input type="text" 
+                                name="keyword0" 
+                                id="tags_id0" 
+                                class="tags" 
+                                onkeyup="autocomplet0()"
+                                onkeypress="clickPress(event)">
+                        </div>
+                        <div class="enter-wrapper" onclick="createTag()">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                        </div>
+                    </div>
 
                         <!-- //?ADD BUTTON TO ALLOW PEEPS TO ADD NEW TAGS WITHOUT NEEDING ENTER KEY -->
 

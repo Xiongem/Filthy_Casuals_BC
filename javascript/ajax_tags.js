@@ -19,7 +19,6 @@ function autocomplet0() {
 
 
 function setTag(tag) {
-    // searchResult = document.getElementById('search_results0').textContent;
     var tagID = tag;
     $.ajax({
             url: 'php/ajax_tags_creation.php',
@@ -37,10 +36,6 @@ function setTag(tag) {
 
 function removeTag(tagName) {    
     tagName.remove();
-
-    // $('#tag').val(function() {
-    //     return this.value - " " - tagName;
-    // });
 }
 
 function clickPress(event) {
@@ -49,12 +44,9 @@ function clickPress(event) {
         $.ajax({
             url: 'php/ajax_tags_creation.php',
             type: 'POST',
-            data: {tag:tagID},
+            data: {tag:createTag},
             success:function(data){
                 $('#notchWrapper').append(data);
-                // $('#tag').val(function() {
-                //     return this.value + " " + data;
-                // });
 
                 $('#search_results0').html("");
                 $('#search_results0').hide();
@@ -65,45 +57,19 @@ function clickPress(event) {
     }
 }
 
-// function setTag(result) {
-//     var searchResult = result;
-//     console.log(searchResult);
-    
-//     //where to put everything
-//         var container = document.getElementById("notchWrapper"); 
-//     //creates an element
-//         var newTag = document.createElement("div"); 
-//     //  assigns attributes to the input
-//         newTag.setAttribute("class", "notch-arrow");
-//         newTag.setAttribute("id", searchResult);
-//     // appends the input to the container
-//         container.appendChild(newTag);
-        
+function createTag() {
+    var createTag = document.getElementById('tags_id0').value;
+    $.ajax({
+        url: 'php/ajax_tags_creation.php',
+        type: 'POST',
+        data: {tag:createTag},
+        success:function(data){
+            $('#notchWrapper').append(data);
 
-
-//     $('#search_results0').html("");
-//     $('#search_results0').hide();
-    
-//     searchResult.value = '';
-// }
-
-// searchResult = document.getElementById('search_results0').textContent;
-//     console.log(searchResult);
-    
-//     //where to put everything
-//         var container = document.getElementById("notchWrapper"); 
-//     //creates an element
-//         var newTag = document.createElement("div"); 
-//     //  assigns attributes to the input
-//         newTag.setAttribute("class", "notch-arrow");
-//         newTag.setAttribute("id", searchResult);
-//     // appends the input to the container
-//         container.appendChild(newTag);
-        
-//         // var tagValue = $('#searchResult');
-//         $('#test').innerHTML = "<p class='tag-content' id='tagContent'>searchResult</p>";
-
-//     $('#search_results0').html("");
-//     $('#search_results0').hide();
-//     var keyword0 = document.getElementById('tags_id0').value;
-//     keyword0.value = '';
+            $('#search_results0').html("");
+            $('#search_results0').hide();
+            var keyword0 = document.getElementById('tags_id0');
+            keyword0.value = '';
+        }
+    });
+}

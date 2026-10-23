@@ -56,17 +56,18 @@
     .dates {
         width: fit-content;
     }
-    /* #diffDate {
-        width: fit-content;
-        margin-left: 0.5em;
-    } */
     .tag-wrapper {
         position: relative;
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
-        /* height: 6em; */
-        /* margin-bottom: 1em; */
+    }
+    .search-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .tag {
+        display: flex;
+        flex-direction: column;
     }
     .tags {
         position: relative;
@@ -77,6 +78,16 @@
         border-radius: 4px;
         height: 2.5em;
         padding-left: 0.5em;
+    }
+    .enter-wrapper {
+        width: 2.5em;
+        height: 2.5em;
+
+        background-color: var(--barium-yellow);
+        accent-color: var(--marine-green);
+        border: 2px solid var(--marine-green);
+        border-radius: 4px;
+        margin-left: 0.5em;
     }
     .search-wrapper {
         position: absolute;
