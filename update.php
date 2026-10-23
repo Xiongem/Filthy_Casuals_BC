@@ -72,7 +72,7 @@ $today = date("Y-m-d");
                     required>
 
                 <div class="tag-wrapper">
-                    <div class="search-wrapper">
+                    <div class="search-tag-wrapper">
                         <div class="tag">
                             <label for="keyword0" class="labels">Tags:</label>
                             <input type="text" 
