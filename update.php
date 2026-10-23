@@ -71,7 +71,7 @@ $today = date("Y-m-d");
                     class="inputs"
                     required>
 
-                <div class="tag-wrapper">
+                <!-- <div class="tag-wrapper"> -->
                     <label for="keyword0" class="labels">Tags:</label>
                     <input type="text" 
                         name="keyword0" 
@@ -85,7 +85,7 @@ $today = date("Y-m-d");
                         <div id="search_results0" class="search-wrapper">
 
                         </div>
-                </div>
+                <!-- </div> -->
 
                 <div class="notch-wrapper" id="notchWrapper"></div>
                 <input type="hidden" name="test" id="test" value="67">
