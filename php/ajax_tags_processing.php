@@ -8,45 +8,45 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
-// $string0 = $_POST['keyword0'];
+$string0 = $_POST['keyword0'];
 
-// // echo "result: " . $string0;
+// echo "result: " . $string0;
 
-// $sql = "SELECT tags FROM tags WHERE tags LIKE '%$string0%' ";
-//     $result = $_SESSION["conn"]->query($sql);
+$sql = "SELECT tags FROM tags WHERE tags LIKE '%$string0%' ";
+    $result = $_SESSION["conn"]->query($sql);
 
-// while ($row = $result -> fetch_assoc()) {
-//     $tags0 = $row['tags'];
-//     $num_rows0 = mysqli_num_rows($result);
-//     if ($num_rows0 !='1') {
-//         //
-//     } else {
-//         echo "$tags0";
-//     }
-// } 
-
-if (isset($_POST['query'])) {
-    $inpText = $_POST['query'];
-
-        $sql = "SELECT tags FROM tags WHERE tags LIKE '$inpText%' ";
-        $result = $_SESSION["conn"]->query($sql);
-        $results = $result->fetch_assoc();
-
-    // $stmt = $_SESSION["conn"]->prepare("SELECT tags FROM tags WHERE tags LIKE ?");
-    // $stmt->bind_param("s", 
-    //                     '%$inpText%');
-    // $stmt->execute(); 
-    // $result = $stmt->get_result();
-    // $results = $result->fetch_assoc();
-
-    if ($results) {
-      while ($row = $result -> fetch_assoc()) {
-        echo '<a href="#" class="searchResult">' . $row['tags'] . '</a>';
-      }
+while ($row = $result -> fetch_assoc()) {
+    // $tags0 = $row['tags'];
+    $num_rows0 = mysqli_num_rows($result);
+    if ($num_rows0 !='1') {
+        //
     } else {
-      echo '<p class="list-group-item border-1">No Record</p>';
+        echo '<a href="#" class="searchResult">' . $row['tags'] . '</a>';
     }
-  }
+} 
+
+// if (isset($_POST['query'])) {
+//     $inpText = $_POST['query'];
+
+//         $sql = "SELECT tags FROM tags WHERE tags LIKE '$inpText%' ";
+//         $result = $_SESSION["conn"]->query($sql);
+//         $results = $result->fetch_assoc();
+
+//     // $stmt = $_SESSION["conn"]->prepare("SELECT tags FROM tags WHERE tags LIKE ?");
+//     // $stmt->bind_param("s", 
+//     //                     '%$inpText%');
+//     // $stmt->execute(); 
+//     // $result = $stmt->get_result();
+//     // $results = $result->fetch_assoc();
+
+//     if ($results) {
+//       while ($row = $result -> fetch_assoc()) {
+//         echo '<a href="#" class="searchResult">' . $row['tags'] . '</a>';
+//       }
+//     } else {
+//       echo '<p class="list-group-item border-1">No Record</p>';
+//     }
+//   }
 //   ['tags' => '%' . $inpText . '%']
 
 

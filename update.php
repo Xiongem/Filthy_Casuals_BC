@@ -83,10 +83,10 @@ $today = date("Y-m-d");
 
                         <!-- //?ADD BUTTON TO ALLOW PEEPS TO ADD NEW TAGS WITHOUT NEEDING ENTER KEY -->
 
-                    <div class="list-group" id="show-list">
+                    <!-- <div class="list-group" id="show-list"> -->
                     <!-- Here autocomplete list will be display -->
-                    </div>
-                    <!-- <a id="search_results0" class="searchResult" onclick="setTag()"></a> -->
+                    <!-- </div> -->
+                    <a id="search_results0" class="searchResult" onclick="setTag()"></a>
                 </div>
 
                 <div class="notch-wrapper" id="notchWrapper"></div>
