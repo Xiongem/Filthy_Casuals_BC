@@ -34,9 +34,7 @@ function makeNav() {
                             <a class="nav-item" href="rules.php">Rules</a>
                             <a id="update" class="nav-item" href="update.php">
                                 update
-                                <div class="update-icon">
                                     <ion-icon name="add" id="icon"></ion-icon>
-                                </div>
                             </a>
                             <a class="nav-item" href="readHistory.php?user_id=' . $userID .'">History</a>';
                             if ($admin == 1) {
