@@ -76,7 +76,7 @@ $today = date("Y-m-d");
                     <input type="text" 
                         name="keyword0" 
                         id="tags_id0" 
-                        class="inputs" 
+                        class="tags" 
                         onkeyup="autocomplet0()"
                         onkeypress="clickPress(event)">
 
