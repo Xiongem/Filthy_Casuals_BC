@@ -175,9 +175,11 @@ if($row>0) {
     <div class="notch-wrapper" id="notchWrapper">
         <?php if (isset($readHistory['tags'])) { ?>
             <?php foreach ($tags as $key => $value) { ?>
+            <div class="overflow-wrapper">
                 <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
                     <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
                 </div>
+            </div>
             <?php } ?>
         <?php } ?>
     </div>
