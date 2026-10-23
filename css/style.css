@@ -75,6 +75,7 @@ a {
         position: absolute;
         display: none;
         top: 0;
+        left: -3em;
         width: 13em;
         background-color: var(--marine-green);
         z-index: 9;
