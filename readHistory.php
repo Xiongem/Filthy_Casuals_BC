@@ -16,6 +16,11 @@ if (isset($_SESSION["user_id"])) {
 }
 
 $ID = $_GET["user_id"];
+
+$sql = "SELECT * FROM users WHERE user_id = $ID";
+        $result = $_SESSION["conn"]->query($sql);
+        $user = $result->fetch_assoc();
+            $username = $user["username"];
 ?>
 
 <!DOCTYPE html>
@@ -205,7 +210,7 @@ $ID = $_GET["user_id"];
     </header>
     <div class="history-wrapper" id="historyWrapper">
         <div class="title-wrapper">
-            <h1>Your Reading History</h1>
+            <h1><?= $username ?>'s Reading History</h1>
         </div>
 
 
