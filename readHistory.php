@@ -242,7 +242,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 ?>
                     <div class="row">
                         <?php if ($userID === $ID) { ?>
-                            <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
+                            <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead(<?=$readID?>, <?=$ID?>)"></i></div>
                         <?php } else { ?>
                             <div class="edit" id="edit"><i class="fa fa-lock" id="close-icon""></i></div>
                         <?php }?>
