@@ -235,7 +235,11 @@ $ID = $_GET["user_id"];
                         }
                 ?>
                     <div class="row">
-                        <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
+                        <?php if ($userID === $ID) { ?>
+                            <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
+                        <?php } else { ?>
+                            <div class="edit" id="edit"><i class="fa fa-lock" id="close-icon""></i></div>
+                        <?php }?>
                         <div class="table-item month"> <?= htmlspecialchars($tableMonth) ?> </div>
                         <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
                         <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
