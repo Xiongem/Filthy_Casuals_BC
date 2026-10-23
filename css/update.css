@@ -83,6 +83,9 @@
         padding-left: 0.5em;
     }
     .enter-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 2em;
         height: 2em;
 
