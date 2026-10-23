@@ -110,7 +110,7 @@
         flex-direction: row;
         width: 100%;
         height: 30px;
-        margin-bottom: 1em;
+        margin: 1em 0;
     }
     .notch-arrow {
         cursor: pointer;
