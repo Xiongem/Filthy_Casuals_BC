@@ -13,7 +13,7 @@ $userID = $_SESSION["user_id"];
 
 $ID = $_POST["user_id"];
 
-$fetch_query = $_SESSION["conn"]->query("SELECT * FROM readHistory WHERE user_id = $ID");
+$fetch_query = $_SESSION["conn"]->query("SELECT * FROM readHistory WHERE user_id = $ID ORDER BY `finishedDate` DESC");
 $row = mysqli_num_rows($fetch_query);
 if($row>0) {
     while($readHistory = mysqli_fetch_array($fetch_query)) {
