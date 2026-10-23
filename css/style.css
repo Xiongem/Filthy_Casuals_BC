@@ -66,7 +66,7 @@ a {
     }
     #nav-menu-icon {
         position: relative;
-        font-size: 44px;
+        font-size: 64px;
         padding: 0.4em;
         z-index: 10;
         color: var(--deep-green);
