@@ -49,18 +49,19 @@ function showBackground() {
   // body.style.overflow = "unset";
 }
 
-function editRead(readID) {
+function editRead(readID, userID) {
   $("#editPopup").css({"display": "flex"});
   var editPopup = document.getElementById("editPopup");
   editPopup.scrollIntoView();
   setTimeout(hideBackground, 500);
 
   var read_ID = readID;
+  var user_ID = userID;
   $.ajax({
       url: 'php/ajax_history_edit.php',
       method: 'post',
       data: {read_ID:read_ID,
-            userID:userID},
+            user_ID:user_ID},
       success: function(result) {
           $("#editResults").html(result);
       }

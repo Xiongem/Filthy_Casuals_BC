@@ -9,7 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
 $readID = $_POST['read_ID'];
-$ID = $_POST['userID'];
+$ID = $_POST['user_ID'];
 
 $sql = "SELECT * FROM `readHistory` WHERE `user_id` = ?  AND read_ID = ?";
     $stmt = $_SESSION["conn"]->prepare($sql);
