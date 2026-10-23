@@ -8,7 +8,7 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
-$newTag = $_POST['searchResult'];
+$newTag = $_POST['tag'];
 
 
     $htmlContent = <<<HTML

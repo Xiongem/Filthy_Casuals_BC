@@ -18,18 +18,15 @@ function autocomplet0() {
 }
 
 
-function setTag() {
-    searchResult = document.getElementById('search_results0').textContent;
+function setTag(tag) {
+    // searchResult = document.getElementById('search_results0').textContent;
+    var tagID = tag;
     $.ajax({
             url: 'php/ajax_tags_creation.php',
             type: 'POST',
-            data: {searchResult:searchResult},
+            data: {tag:tagID},
             success:function(data){
                 $('#notchWrapper').append(data);
-                // $('#tag').val(function() {
-                //     return this.value + " " + data;
-                // });
-
                 $('#search_results0').html("");
                 $('#search_results0').hide();
                 var keyword0 = document.getElementById('tags_id0');
