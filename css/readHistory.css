@@ -203,3 +203,6 @@
         min-width: 22em;
     }
 }
+#nav-menu-icon {
+    color: var(--barium-yellow);
+}
