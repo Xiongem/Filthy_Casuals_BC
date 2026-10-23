@@ -12,7 +12,7 @@ dbConnect();
 if (isset($_SESSION["user_id"])) {
     $userID = $_SESSION["user_id"];
 } else {
-    $userID = NULL;
+    $userID = "none";
 }
 
 $ID = $_GET["user_id"];
