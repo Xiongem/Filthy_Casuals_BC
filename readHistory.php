@@ -369,7 +369,7 @@ $ID = $_GET["user_id"];
                 $.ajax({
                     url: 'php/selectData.php',
                     method: 'post',
-                    data: {'cat_name='+cat,
+                    data: {cat_name:cat,
                             user_id:$ID},
                     success: function(result)
                     {
