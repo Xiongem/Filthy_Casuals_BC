@@ -105,8 +105,8 @@
         flex-wrap: wrap;
         text-align: center;
         
-        background-color: var(--marine-green);
-        color: var(--barium-yellow);
+        /* background-color: var(--marine-green);
+        color: var(--barium-yellow); */
         border: 1px solid var(--leather);
         width: 3em;
         padding: 4px;
