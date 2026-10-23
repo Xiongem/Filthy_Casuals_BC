@@ -300,7 +300,7 @@ $ID = $_GET["user_id"];
     //** ####################### *//** ####################### *//** ####################### */ -->
 
             <div class="form-group">
-                <select class="form-control" onchange="selectdata(this.options[this.selectedIndex].value)">
+                <select class="form-control inputs" onchange="selectdata(this.options[this.selectedIndex].value)">
                     <option value="All">All</option>
                     <option value="1">January</option>
                     <option value="2">February</option>
