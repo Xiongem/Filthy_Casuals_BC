@@ -348,35 +348,33 @@ $ID = $_GET["user_id"];
                 </div>
         
                 <script type="text/javascript">
-                $(document).ready(function(){
-                showdata();
-                });
-                function showdata()
-                {
-                $.ajax({
-                    url: 'php/showData.php',
-                    method: 'post',
-                    data: {user_id:$ID},
-                    success: function(result)
-                    {
-                        $("#result").html(result);
-                    }
+                    $(document).ready(function() {
+                        showdata();
                     });
-                }
 
-                function selectdata(cat)
-                {
-                $.ajax({
-                    url: 'php/selectData.php',
-                    method: 'post',
-                    data: {cat_name:cat,
-                            user_id:$ID},
-                    success: function(result)
-                    {
-                    $("#result").html(result);
+                    function showdata() {
+                        $.ajax({
+                            url: 'php/showData.php',
+                            method: 'post',
+                            data: {user_id:$ID},
+                            success: function(result) {
+                                $("#result").html(result);
+                            }
+                        });
                     }
-                });
-                }
+
+                    function selectdata(cat) {
+                        var user_ID = <?= $ID ?>
+                        $.ajax({
+                            url: 'php/selectData.php',
+                            method: 'post',
+                            data: {cat_name:cat,
+                                    user_id:user_ID},
+                            success: function(result) {
+                                $("#result").html(result);
+                            }
+                        });
+                    }
                 </script>
 
     </div>
