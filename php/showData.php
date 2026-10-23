@@ -172,7 +172,7 @@ if($row>0) {
         <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
         <div class="table-item comment"> <?= htmlspecialchars($comment) ?> </div>
     </div>
-    <div class="overflow-wrapper">
+    <!-- <div class="overflow-wrapper"> -->
         <div class="notch-wrapper" id="notchWrapper">
             <?php if (isset($readHistory['tags'])) { ?>
                 <?php foreach ($tags as $key => $value) { ?>
@@ -182,7 +182,7 @@ if($row>0) {
                 <?php } ?>
             <?php } ?>
         </div>
-    </div>
+    <!-- </div> -->
 <?php }} else { ?>
     <div class="not-found">No Reading History Found</div>       
 <?php } ?>
