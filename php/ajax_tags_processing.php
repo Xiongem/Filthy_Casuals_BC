@@ -28,12 +28,16 @@ dbConnect();
 if (isset($_POST['query'])) {
     $inpText = $_POST['query'];
 
-    $stmt = $_SESSION["conn"]->prepare("SELECT tags FROM tags WHERE tags LIKE ?");
-    $stmt->bind_param("s", 
-                        '%$inpText%');
-    $stmt->execute(); 
-    $result = $stmt->get_result();
-    $results = $result->fetch_assoc();
+        $sql = "SELECT tags FROM tags WHERE tags LIKE '%$inpText%' ";
+        $result = $_SESSION["conn"]->query($sql);
+        $results = $result->fetchAll();
+
+    // $stmt = $_SESSION["conn"]->prepare("SELECT tags FROM tags WHERE tags LIKE ?");
+    // $stmt->bind_param("s", 
+    //                     '%$inpText%');
+    // $stmt->execute(); 
+    // $result = $stmt->get_result();
+    // $results = $result->fetch_assoc();
 
     if ($results) {
       foreach ($results as $row) {
