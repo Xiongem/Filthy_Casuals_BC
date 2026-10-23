@@ -23,7 +23,11 @@ $tags = $_POST["tag"];
 
 // print_r($tags);
 
-$insert_tags = implode(",", $tags);
+if (isset($_POST["tag"])) {
+    $insert_tags = implode(",", $tags);
+} else {
+    $insert_tags = NULL;
+}
 // print_r($insert_tags);
 
 if (isset($_POST["diffDate"])) {
