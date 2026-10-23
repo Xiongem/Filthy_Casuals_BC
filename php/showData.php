@@ -7,9 +7,12 @@ ini_set('error_log', '/path/to/php_errors.log');
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
-forceLogin();
 
-$userID = $_SESSION["user_id"];
+if (isset($_SESSION["user_id"])) {
+    $userID = $_SESSION["user_id"];
+} else {
+    $userID = "none";
+}
 
 $ID = $_POST["user_id"];
 
