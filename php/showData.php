@@ -20,6 +20,7 @@ $fetch_query = $_SESSION["conn"]->query("SELECT * FROM readHistory WHERE user_id
 $row = mysqli_num_rows($fetch_query);
 if($row>0) {
     while($readHistory = mysqli_fetch_array($fetch_query)) {
+        $readID = $readHistory["read_ID"];
         $title = $readHistory['title'];
         $author = $readHistory['author'];
         $finishedDate = $readHistory['finishedDate'];
@@ -154,7 +155,7 @@ if($row>0) {
         }
         $totalPoints = $readHistory['totalPoints']; 
     ?>
-    <div class="row">
+    <div class="row" id="<?= $readID ?>">
         <?php if ($userID === $ID) { ?>
             <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
         <?php } else { ?>
