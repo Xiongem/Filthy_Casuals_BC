@@ -49,7 +49,7 @@ function clickPress(event) {
         $.ajax({
             url: 'php/ajax_tags_creation.php',
             type: 'POST',
-            data: {searchResult:createTag},
+            data: {tag:tagID},
             success:function(data){
                 $('#notchWrapper').append(data);
                 // $('#tag').val(function() {
