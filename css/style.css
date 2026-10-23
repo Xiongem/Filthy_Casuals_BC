@@ -62,12 +62,12 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* padding: 1em; */
+        padding: 1em;
     }
     #nav-menu-icon {
         position: relative;
         font-size: 64px;
-        padding: 0.4em 0.1em 0.1em 0.4em;
+        /* padding: 0.4em 0.1em 0.1em 0.4em; */
         z-index: 10;
         color: var(--deep-green);
     }
