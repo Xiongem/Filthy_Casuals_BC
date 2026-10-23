@@ -121,7 +121,7 @@
         flex-wrap: wrap;
         text-align: center;
         
-        border: 1px solid var(--deep-green);
+        border: 1px solid var(--leather);
         width: 3em;
         padding: 4px;
 
@@ -201,6 +201,9 @@
     }
     .comment {
         min-width: 22em;
+    }
+    .notch-wrapper {
+        border: 1px solid var(--leather);
     }
 }
 /* #nav-menu-icon {
