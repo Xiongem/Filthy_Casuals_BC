@@ -160,7 +160,7 @@ if ($row > 0) {
         $totalPoints = $readHistory['totalPoints']; 
     ?>
     <div class="row">
-        <?php if ($userID === $user_id) { ?>
+        <?php if ($userID === $ID) { ?>
             <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
         <?php } else { ?>
             <div class="edit" id="edit"><i class="fa close" id="close-icon""></i></div>
