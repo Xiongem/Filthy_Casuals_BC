@@ -88,8 +88,8 @@
         display: flex;
         width: 100%;
         min-height: 0.5em;
-        border-top: 1px solid var(--leather);
-        border-bottom: 1px solid var(--leather);
+        /* border-top: 1px solid var(--leather);
+        border-bottom: 1px solid var(--leather); */
     }
     .notch-arrow {
         margin: 4px 0.3em;
@@ -129,6 +129,7 @@
         flex-wrap: wrap;
         text-align: center;
         
+        background-color: var(--barium-yellow);
         border: 1px solid var(--leather);
         width: 3em;
         padding: 4px;
