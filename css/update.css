@@ -63,7 +63,7 @@
     }
     .search-tag-wrapper {
         display: flex;
-        align-items: center;
+        align-items: end;
     }
     .tag {
         display: flex;
@@ -72,11 +72,14 @@
     .tags {
         position: relative;
         z-index: 2;
+        min-width: 20em;
+        height: 2.5em;
+
         background-color: var(--barium-yellow);
         accent-color: var(--marine-green);
         border: 2px solid var(--marine-green);
         border-radius: 4px;
-        height: 2.5em;
+        
         padding-left: 0.5em;
     }
     .enter-wrapper {
