@@ -29,8 +29,7 @@ if (isset($_POST['query'])) {
     $inpText = $_POST['query'];
 
     $sql = "SELECT tags FROM tags WHERE tags LIKE '%$inpText%'";
-    $stmt = $_SESSION["conn"]->prepare($sql);
-    $stmt->execute();
+    $stmt = $_SESSION["conn"]->query($sql);
     $result = $stmt->fetch_assoc();
 
     if ($result) {
