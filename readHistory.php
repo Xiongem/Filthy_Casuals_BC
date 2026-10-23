@@ -174,6 +174,7 @@ $ID = $_GET["user_id"];
                                 $mod2 = "educational: manga/comic";
                                 break;
                         }
+
                         $ongoing = $readHistory['ongoing'];
                         if ($readHistory['tags'] !== NULL) {
                             $tags = explode(",", $readHistory['tags']);
@@ -192,9 +193,10 @@ $ID = $_GET["user_id"];
                         } else {
                             $comment = '';
                         }
-                        $month = $readHistory['month'];
+
                         $totalPoints = $readHistory['totalPoints'];  
 
+                        $month = $readHistory['month'];
                         switch ($month) {
                             case 1:
                                 $tableMonth = "Jan";
@@ -357,6 +359,7 @@ $ID = $_GET["user_id"];
                             $startedDate = $readHistory['startedDate'];
                         }
                         $pages = $readHistory['pages'];
+                        
                         $mod1 = $readHistory['mod1'];
                         switch ($mod1) {
                             case 1:
@@ -417,6 +420,7 @@ $ID = $_GET["user_id"];
                                 $mod2 = "educational: manga/comic";
                                 break;
                         }
+
                         $ongoing = $readHistory['ongoing'];
                         if ($readHistory['tags'] !== NULL) {
                             $tags = explode(",", $readHistory['tags']);
@@ -435,7 +439,49 @@ $ID = $_GET["user_id"];
                         } else {
                             $comment = '';
                         }
-                        $tableMonth = $readHistory['month'];
+
+                        $month = $readHistory['month'];
+                        switch ($month) {
+                            case 1:
+                                $tableMonth = "Jan";
+                                break;
+                            case 2:
+                                $tableMonth = "Feb";
+                                break;
+                            case 3:
+                                $tableMonth = "March";
+                                break;
+                            case 4:
+                                $tableMonth = "April";
+                                break;
+                            case 5:
+                                $tableMonth = "May";
+                                break;
+                            case 6:
+                                $tableMonth = "June";
+                                break;
+                            case 7:
+                                $tableMonth = "July";
+                                break;
+                            case 8:
+                                $tableMonth = "Aug";
+                                break;
+                            case 9:
+                                $tableMonth = "Sept";
+                                break;
+                            case 10:
+                                $tableMonth = "Oct";
+                                break;
+                            case 11:
+                                $tableMonth = "Nov";
+                                break;
+                            case 12:
+                                $tableMonth = "Dec";
+                                break;
+                            default:
+                                $tableMonth = $month;
+                                break;
+                        }
                         $totalPoints = $readHistory['totalPoints']; 
                     ?>
                     <div class="row">
