@@ -83,7 +83,7 @@
     } */
     .notch-wrapper {
         display: flex;
-        overflow-y: auto;
+        overflow-y: 100%;
         width: 100%;
         min-height: 0.5em;
         background-color: rgba(212, 212, 212, 0.705);
