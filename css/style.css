@@ -91,7 +91,8 @@ a {
     .nav-item {
         display: flex;
         justify-content: end;
-        flex-wrap: wrap;
+        align-items: center;
+        /* flex-wrap: wrap; */
         text-align: center;
         width: fit-content;
         margin: 0.5em 0;
