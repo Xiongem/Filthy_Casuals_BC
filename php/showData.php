@@ -157,9 +157,13 @@ if($row>0) {
     ?>
     <div class="row" id="<?= $readID ?>">
         <?php if ($userID === $ID) { ?>
-            <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead(<?=$readID?>, <?=$ID?>)"></i></div>
+            <div class="edit" id="edit">
+                <ion-icon name="settings" id="edit-icon" onclick="editRead(<?=$readID?>, <?=$ID?>)"></ion-icon>
+            </div>
         <?php } else { ?>
-            <div class="edit" id="edit"><i class="fa fa-lock" id="close-icon""></i></div>
+            <div class="edit" id="edit">
+                <ion-icon name="lock-closed" id="close-icon"></ion-icon>
+            </div>
         <?php }?>
         <div class="table-item month"> <?= htmlspecialchars($tableMonth) ?> </div>
         <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>

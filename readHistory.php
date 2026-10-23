@@ -37,8 +37,6 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/readHistory.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script> -->
     <script src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -46,7 +44,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
     <div class="popup-wrapper hide" id="editPopup">
         <div class="popup-container">
             <div class="close-wrapper">
-                <i class="fa fa-close" onclick="closeEditRead()"></i>
+                <ion-icon name="close" onclick="closeEditRead()"></ion-icon>
             </div>
             <div class="popup-content" id="editResults">
                 
@@ -243,9 +241,13 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 ?>
                     <div class="row" id="<?= $readID ?>">
                         <?php if ($userID === $ID) { ?>
-                            <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead(<?=$readID?>, <?=$ID?>)"></i></div>
+                            <div class="edit" id="edit">
+                                <ion-icon name="settings" id="edit-icon" onclick="editRead(<?=$readID?>, <?=$ID?>)"></ion-icon>
+                            </div>
                         <?php } else { ?>
-                            <div class="edit" id="edit"><i class="fa fa-lock" id="close-icon""></i></div>
+                            <div class="edit" id="edit">
+                                <ion-icon name="lock-closed" id="close-icon"></ion-icon>
+                            </div>
                         <?php }?>
                         <div class="table-item month"> <?= htmlspecialchars($tableMonth) ?> </div>
                         <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
@@ -387,5 +389,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 </script>
 
     </div>
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

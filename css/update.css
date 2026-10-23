@@ -82,7 +82,7 @@
         
         padding-left: 0.5em;
     }
-    .enter-wrapper {
+    /* .enter-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -94,9 +94,11 @@
         border: 2px solid var(--marine-green);
         border-radius: 4px;
         margin-left: 0.5em;
-    }
+    } */
     #enter-circle {
         color: var(--deep-green);
+        cursor: pointer;
+        margin-left: 0.5em;
     }
     .search-wrapper {
         position: absolute;

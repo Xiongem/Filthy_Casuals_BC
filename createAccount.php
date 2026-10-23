@@ -266,7 +266,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <label class="labels">Upload Profile Picture:</label>
                     <div class="profile-picture">
                         <h1 class="upload-icon">
-                            <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+                            <ion-icon name="add" aria-hidden="true"></ion-icon>
                         </h1>
                         <input
                             name="profilePicture"

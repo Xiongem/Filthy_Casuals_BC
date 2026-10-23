@@ -26,7 +26,7 @@ function makeNav() {
 
         echo '<div class="nav-wrapper" id="nav-wrapper">
                 <div class="icon-wrapper" id="icon-wrapper"">
-                    <i class="fa fa-bars" id="nav-menu-icon"></i>
+                    <ion-icon name="menu" id="nav-menu-icon"></ion-icon>
                     <div class="nav-menu-wrapper" id="nav-menu-wrapper">
                         <div class="nav-menu-content" id="nav-menu-content">
                             <a class="nav-item" href="index.php">Home</a>
@@ -35,7 +35,7 @@ function makeNav() {
                             <a id="update" class="nav-item" href="update.php">
                                 update
                                 <div class="update-icon">
-                                    <i class="fa fa-plus" id="icon"></i>
+                                    <ion-icon name="add" id="icon"></ion-icon>
                                 </div>
                             </a>
                             <a class="nav-item" href="readHistory.php?user_id=' . $userID .'">History</a>';

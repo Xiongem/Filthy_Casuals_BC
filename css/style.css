@@ -55,7 +55,7 @@ a {
         top: 0;
         padding: 0.7em;
     }
-    .fa-close {
+    #close-icon {
         cursor: pointer;
     }
     .nav-wrapper {
