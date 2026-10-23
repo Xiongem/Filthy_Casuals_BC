@@ -40,7 +40,7 @@ function makeNav() {
                             </a>
                             <a class="nav-item" href="readHistory.php?user_id=' . $userID .'">History</a>';
                             if ($admin == 1) {
-                                echo '<a href="OTP.php" class="nav-item">Passcode</a>';
+                                echo '<a href="admin.php" class="nav-item">Admin</a>';
                             }
                         echo '<a class="nav-item" href="settings.php">Settings</a>
                             <a class="nav-item" href="php/logout.php">Logout</a>

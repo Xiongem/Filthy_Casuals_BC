@@ -11,15 +11,13 @@ forceLogin();
 
 $userID = $_SESSION["user_id"];
 
- $sql = "SELECT * FROM users WHERE user_id = $userID";
-        $result = $_SESSION["conn"]->query($sql);
-        $user = $result->fetch_assoc();
-            $admin = $user['admin'];
-            $imageName = htmlspecialchars($user['pfpName']);
-                $imageType = $user['pfpType'];
-                $imageData = base64_encode($user['pfpData']);
-
-$month = date('n');
+//  $sql = "SELECT * FROM users WHERE user_id = $userID";
+//         $result = $_SESSION["conn"]->query($sql);
+//         $user = $result->fetch_assoc();
+//             $admin = $user['admin'];
+//             $imageName = htmlspecialchars($user['pfpName']);
+//                 $imageType = $user['pfpType'];
+//                 $imageData = base64_encode($user['pfpData']);
 ?>
 
 <!DOCTYPE html>

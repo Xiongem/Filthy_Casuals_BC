@@ -57,6 +57,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
         <?= makeNav() ?>
     </header>
     <div class="history-wrapper" id="historyWrapper">
+        <!--//? ADD MONTHLY AND YEARLY PAGE COUNT TOTALS-->
         <div class="title-wrapper">
             <h1><?= $username ?>'s Reading History</h1>
         </div>
