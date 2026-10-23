@@ -27,7 +27,7 @@ $ID = $_GET["user_id"];
     <meta property="og:description" content="A readHistory for filthy casuals."> 
     <meta property="og:image" content=""> 
     <meta property="og:url" content="">
-    <title>Home</title>
+    <title>Reading History</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/readHistory.css">
