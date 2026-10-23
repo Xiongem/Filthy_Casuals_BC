@@ -67,6 +67,11 @@
         height: 6em;
         /* margin-bottom: 1em; */
     }
+    .search-wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--marine-green);
+    }
     .searchResult {
         color: var(--barium-yellow);
         text-decoration: underline;

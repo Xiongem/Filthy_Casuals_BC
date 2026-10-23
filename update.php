@@ -71,7 +71,7 @@ $today = date("Y-m-d");
                     class="inputs"
                     required>
 
-                <div class="tag-wrapper">
+                < class="tag-wrapper">
                     <label for="keyword0" class="labels">Tags:</label>
                     <input type="text" 
                         name="keyword0" 
@@ -82,7 +82,9 @@ $today = date("Y-m-d");
 
                         <!-- //?ADD BUTTON TO ALLOW PEEPS TO ADD NEW TAGS WITHOUT NEEDING ENTER KEY -->
 
-                    <a id="search_results0" class="searchResult" onclick="setTag()"></a>
+                        <div id="search_results0" class="search-wrapper">
+
+                        </div>
                 </div>
 
                 <div class="notch-wrapper" id="notchWrapper"></div>
