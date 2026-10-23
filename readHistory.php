@@ -68,10 +68,10 @@ $ID = $_GET["user_id"];
                 </div>
                 <div class="row">
                     <div class="head-edit">Edit</div>
+                    <div class="table-head month">Month</div>
                     <div class="table-head title">Title</div>
                     <div class="table-head author">Author</div>
                     <div class="table-head pages">Pages</div>
-                    <div class="table-head month">Month</div>
                     <div class="table-head date">Date Started</div>
                     <div class="table-head date">Date Finished</div>
                     <div class="table-head ongoing">Ongoing</div>
@@ -197,10 +197,10 @@ $ID = $_GET["user_id"];
 
                         switch ($month) {
                             case 1:
-                                $tableMonth = "January";
+                                $tableMonth = "Jan";
                                 break;
                             case 2:
-                                $tableMonth = "February";
+                                $tableMonth = "Feb";
                                 break;
                             case 3:
                                 $tableMonth = "March";
@@ -218,19 +218,19 @@ $ID = $_GET["user_id"];
                                 $tableMonth = "July";
                                 break;
                             case 8:
-                                $tableMonth = "August";
+                                $tableMonth = "Aug";
                                 break;
                             case 9:
-                                $tableMonth = "September";
+                                $tableMonth = "Sept";
                                 break;
                             case 10:
-                                $tableMonth = "October";
+                                $tableMonth = "Oct";
                                 break;
                             case 11:
-                                $tableMonth = "November";
+                                $tableMonth = "Nov";
                                 break;
                             case 12:
-                                $tableMonth = "December";
+                                $tableMonth = "Dec";
                                 break;
                             default:
                                 $tableMonth = $month;
@@ -239,10 +239,10 @@ $ID = $_GET["user_id"];
                 ?>
                     <div class="row">
                         <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
+                        <div class="table-item month"> <?= htmlspecialchars($tableMonth) ?> </div>
                         <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
                         <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
                         <div class="table-item pages"> <?= htmlspecialchars($pages) ?> </div>
-                        <div class="table-item month"> <?= htmlspecialchars($month) ?> </div>
                         <div class="table-item date"> <?= htmlspecialchars($startedDate) ?> </div>
                         <div class="table-item date"> <?= htmlspecialchars($finishedDate) ?></div>
                         <div class="table-item ongoing"> <?= $ongoingChecked ?> </div>
@@ -312,13 +312,13 @@ $ID = $_GET["user_id"];
                 </div>
                 <div class="row">
                     <div class="head-edit">Edit</div>
+                    <div class="table-head month">Month</div>
                     <div class="table-head title">Title</div>
                     <div class="table-head author">Author</div>
                     <div class="table-head pages">Pages</div>
                     <div class="table-head date">Date Started</div>
                     <div class="table-head date">Date Finished</div>
                     <div class="table-head ongoing">Ongoing</div>
-                    <div class="table-head month">Month</div>
                     <div class="table-head mod">mod1</div>
                     <div class="table-head mod">mod2</div>
                     <div class="table-head points">Points</div>
@@ -435,18 +435,18 @@ $ID = $_GET["user_id"];
                         } else {
                             $comment = '';
                         }
-                        $month = $readHistory['month'];
+                        $tableMonth = $readHistory['month'];
                         $totalPoints = $readHistory['totalPoints']; 
                     ?>
                     <div class="row">
                         <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
+                        <div class="table-item month"> <?= htmlspecialchars($tableMonth) ?> </div>
                         <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
                         <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
                         <div class="table-item pages"> <?= htmlspecialchars($pages) ?> </div>
                         <div class="table-item date"> <?= htmlspecialchars($startedDate) ?> </div>
                         <div class="table-item date"> <?= htmlspecialchars($finishedDate) ?></div>
                         <div class="table-item ongoing"> <?= $ongoingChecked ?> </div>
-                        <div class="table-item month"> <?= htmlspecialchars($month) ?> </div>
                         <div class="table-item mod"> <?= $mod1 ?> </div>
                         <div class="table-item mod"> <?= $mod2 ?> </div>
                         <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
