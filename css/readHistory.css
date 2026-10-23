@@ -79,7 +79,8 @@
         /* border: 1px solid var(--leather); */
     }
     .notch-wrapper {
-        display: flex;
+        /* display: flex; */
+        display: table-cell;
         width: 100%;
         min-height: 0.5em;
         background-color: rgba(212, 212, 212, 0.705);
