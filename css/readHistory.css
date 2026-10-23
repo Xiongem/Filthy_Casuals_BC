@@ -26,7 +26,8 @@
     }
     .sub-heading-wrapper {
         width: 100%;
-        background-color: var(--marine-green);
+        /* background-color: var(--marine-green); */
+        text-decoration: underline;
         padding: 8px;
     }
     .table-item, .table-head {
