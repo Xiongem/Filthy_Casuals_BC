@@ -306,6 +306,23 @@ $ID = $_GET["user_id"];
         
 
 
+            <div class="form-group">
+                <select class="form-control" onchange="selectdata(this.options[this.selectedIndex].value)">
+                    <option value="All">All</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
 
         
             <div class="history-table" id="fullHistory">
@@ -326,230 +343,41 @@ $ID = $_GET["user_id"];
                     <div class="table-head points">Points</div>
                     <div class="table-head comment">Comment</div>
                 </div>
-                <?php
-                    $total_pages = $_SESSION["conn"]->query("SELECT * 
-                                                            FROM readHistory 
-                                                            WHERE user_id = $ID")->num_rows;
+                <div id="result">
 
-                    $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
-
-                    $num_results_on_page = 15;
-                if ($total_pages > 0) {
-                    if ($stmt = $_SESSION["conn"]->prepare("SELECT * 
-                                                            FROM readHistory 
-                                                            WHERE user_id = $ID 
-                                                            ORDER BY `finishedDate` 
-                                                            DESC LIMIT ?,?")) {
-                        // Calculate the page to get the results we need from our table.
-                        $calc_page = ($page - 1) * $num_results_on_page;
-                        $stmt->bind_param('ii', $calc_page, $num_results_on_page);
-                        $stmt->execute(); 
-                        // Get the results...
-                        $result = $stmt->get_result();
-                        $stmt->close();
-                    }
-
-                    while ($readHistory = $result->fetch_assoc()) {
-                        $title = $readHistory['title'];
-                        $author = $readHistory['author'];
-                        $finishedDate = $readHistory['finishedDate'];
-                        if ($readHistory['startedDate'] == "0000-00-00") {
-                            $startedDate = '--';
-                        } else {
-                            $startedDate = $readHistory['startedDate'];
-                        }
-                        $pages = $readHistory['pages'];
-                        
-                        $mod1 = $readHistory['mod1'];
-                        switch ($mod1) {
-                            case 1:
-                                $mod1 = "normal";
-                                break;
-                            case 2:
-                                $mod1 = "manga/comic";
-                                break;
-                            case 3:
-                                $mod1 = "challenge";
-                                break;
-                            case 4:
-                                $mod1 = "challenge: manga/comic";
-                                break;
-                            case 5:
-                                $mod1 = "buddy read";
-                                break;
-                            case 6:
-                                $mod1 = "friend rec";
-                                break;
-                            case 7:
-                                $mod1 = "seasonal";
-                                break;
-                            case 8:
-                                $mod1 = "read-a-thon";
-                                break;
-                            case 9:
-                                $mod1 = "educational";
-                                break;
-                            case 10:
-                                $mod1 = "educational: manga/comic";
-                                break;
-                        }
-                        $mod2 = $readHistory['mod2'];
-                        switch ($mod2) {
-                            case 1:
-                                $mod2 = "normal";
-                                break;
-                            case 2:
-                                $mod2 = "challenge";
-                                break;
-                            case 3:
-                                $mod2 = "buddy read";
-                                break;
-                            case 4:
-                                $mod2 = "friend rec";
-                                break;
-                            case 5:
-                                $mod2 = "seasonal";
-                                break;
-                            case 6:
-                                $mod2 = "read-a-thon";
-                                break;
-                            case 7:
-                                $mod2 = "educational";
-                                break;
-                            case 8:
-                                $mod2 = "educational: manga/comic";
-                                break;
-                        }
-
-                        $ongoing = $readHistory['ongoing'];
-                        if ($readHistory['tags'] !== NULL) {
-                            $tags = explode(",", $readHistory['tags']);
-                        } else {
-                            $tags = "";
-                        }
-                        if ($ongoing == 1) {
-                            $ongoingChecked = 'yes';
-                        } else {
-                            $ongoingChecked = 'no';
-                        }
-                        if (isset($readHistory['comment'])) {
-                            $comment = $readHistory['comment'];
-                        } elseif ($readHistory['comment'] == '') {
-                            $comment = '--';
-                        } else {
-                            $comment = '';
-                        }
-
-                        $month = $readHistory['month'];
-                        switch ($month) {
-                            case 1:
-                                $tableMonth = "Jan";
-                                break;
-                            case 2:
-                                $tableMonth = "Feb";
-                                break;
-                            case 3:
-                                $tableMonth = "March";
-                                break;
-                            case 4:
-                                $tableMonth = "April";
-                                break;
-                            case 5:
-                                $tableMonth = "May";
-                                break;
-                            case 6:
-                                $tableMonth = "June";
-                                break;
-                            case 7:
-                                $tableMonth = "July";
-                                break;
-                            case 8:
-                                $tableMonth = "Aug";
-                                break;
-                            case 9:
-                                $tableMonth = "Sept";
-                                break;
-                            case 10:
-                                $tableMonth = "Oct";
-                                break;
-                            case 11:
-                                $tableMonth = "Nov";
-                                break;
-                            case 12:
-                                $tableMonth = "Dec";
-                                break;
-                            default:
-                                $tableMonth = $month;
-                                break;
-                        }
-                        $totalPoints = $readHistory['totalPoints']; 
-                    ?>
-                    <div class="row">
-                        <div class="edit" id="edit"><i class="fa fa-gear" id="edit-icon" onclick="editRead()"></i></div>
-                        <div class="table-item month"> <?= htmlspecialchars($tableMonth) ?> </div>
-                        <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
-                        <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
-                        <div class="table-item pages"> <?= htmlspecialchars($pages) ?> </div>
-                        <div class="table-item date"> <?= htmlspecialchars($startedDate) ?> </div>
-                        <div class="table-item date"> <?= htmlspecialchars($finishedDate) ?></div>
-                        <div class="table-item ongoing"> <?= $ongoingChecked ?> </div>
-                        <div class="table-item mod"> <?= $mod1 ?> </div>
-                        <div class="table-item mod"> <?= $mod2 ?> </div>
-                        <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
-                        <div class="table-item comment"> <?= htmlspecialchars($comment) ?> </div>
-                    </div>
-                    <div class="notch-wrapper" id="notchWrapper">
-                        <?php if (isset($readHistory['tags'])) { ?>
-                            <?php foreach ($tags as $key => $value) { ?>
-                                <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
-                                    <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
-                                </div>
-                            <?php } ?>
-                        <?php } ?>
-                    </div>
-                <?php }} else { ?>
-                    <div class="not-found">No Reading History Found</div>
-                <?php } ?>
-            </div>
-            <?php if (ceil($total_pages / $num_results_on_page) > 1) { ?>
-                <div class="pages-wrapper">
-                <?php if ($page > 1) { ?>
-                    <a class="prev" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page-1 ?>">Prev</a>
-                <?php } ?>
-                
-                <?php if ($page > 3) { ?>
-                    <a class="start" href="readHistory.php?user_id=<?=$ID?>&page=1">1</a>
-                    <span class="dots">...</span>
-                <?php } ?>
-
-                <?php if ($page-2 > 0) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page-2 ?>"><?php echo $page-2 ?></a>
-                <?php } ?>
-                <?php if ($page-1 > 0) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page-1 ?>"><?php echo $page-1 ?></a>
-                <?php } ?>
-
-                <a class="currentpage" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page ?>"><?php echo $page ?></a>
-
-                <?php if ($page+1 < ceil($total_pages / $num_results_on_page)+1) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page+1 ?>"><?php echo $page+1 ?></a>
-                <?php } ?>
-                <?php if ($page+2 < ceil($total_pages / $num_results_on_page)+1) {?>
-                    <a class="page" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page+2 ?>"><?php echo $page+2 ?></a>
-                <?php } ?>
-
-                <?php if ($page < ceil($total_pages / $num_results_on_page)-2) {?>
-                    <span class="dots">...</span>
-                    <a class="end" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo ceil($total_pages / $num_results_on_page) ?>"><?php echo ceil($total_pages / $num_results_on_page) ?></a>
-                <?php } ?>
-
-                <?php if ($page < ceil($total_pages / $num_results_on_page)) {?>
-                    <a class="next" href="readHistory.php?user_id=<?=$ID?>&page=<?php echo $page+1 ?>">Next</a>
-                <?php } ?>
                 </div>
-            <?php } ?> 
         
+                <script type="text/javascript">
+                $(document).ready(function(){
+                showdata();
+                });
+                function showdata()
+                {
+                $.ajax({
+                    url: 'php/showData.php',
+                    method: 'post',
+                    data: user_id:$ID,
+                    success: function(result)
+                    {
+                        $("#result").html(result);
+                    }
+                    });
+                }
 
+                function selectdata(cat)
+                {
+                $.ajax({
+                    url: 'php/selectData.php',
+                    method: 'post',
+                    data: 'cat_name='+cat,
+                            user_id:$ID,
+                    success: function(result)
+                    {
+                    $("#result").html(result);
+                    }
+                });
+                }
+                </script>
 
     </div>
 </body>
