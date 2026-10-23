@@ -29,7 +29,7 @@ if (isset($_POST['query'])) {
     $inpText = $_POST['query'];
     $sql = 'SELECT tags FROM tags WHERE tags LIKE :tags';
     $stmt = $_SESSION["conn"]->prepare($sql);
-    $stmt->execute(['tags' => '%' . $inpText . '%']);
+    $stmt->execute();
     $result = $stmt->fetchAll();
 
     if ($result) {
@@ -40,3 +40,4 @@ if (isset($_POST['query'])) {
       echo '<p class="list-group-item border-1">No Record</p>';
     }
   }
+//   ['tags' => '%' . $inpText . '%']
