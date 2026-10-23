@@ -353,7 +353,7 @@ $ID = $_GET["user_id"];
                     });
 
                     function showdata() {
-                        var user_ID = <?= $ID ?>
+                        var user_ID = <?= $ID ?>;
                         $.ajax({
                             url: 'php/showData.php',
                             method: 'post',
@@ -365,7 +365,7 @@ $ID = $_GET["user_id"];
                     }
 
                     function selectdata(cat) {
-                        var user_ID = <?= $ID ?>
+                        var user_ID = <?= $ID ?>;
                         $.ajax({
                             url: 'php/selectData.php',
                             method: 'post',
