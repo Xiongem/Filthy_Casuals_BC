@@ -70,6 +70,7 @@
     }
     .tags {
         position: relative;
+        z-index: 2;
         background-color: var(--barium-yellow);
         accent-color: var(--marine-green);
         border: 2px solid var(--marine-green);
@@ -80,7 +81,7 @@
     .search-wrapper {
         position: absolute;
         top: 3em;
-        z-index: 2;
+        z-index: 1;
         display: flex;
         flex-direction: column;
         min-width: 20em;
