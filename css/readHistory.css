@@ -104,8 +104,9 @@
         align-items: center;
         flex-wrap: wrap;
         text-align: center;
-        /* border-left: 1px solid var(--leather);
-        border-right: 1px solid var(--leather); */
+        
+        background-color: var(--deep-green);
+        color: var(--barium-yellow);
         border: 1px solid var(--leather);
         width: 3em;
         padding: 4px;
