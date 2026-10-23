@@ -101,7 +101,7 @@ $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID
         name="ongoing"
         id="ongoing"
         class="checkbox"
-        value="<?=$ongoing?>">
+        <?php if($read['ongoing']==1){ ?>checked="checked"<?php } ?>>
 </div>
 
 <div class="mod-wrapper">
