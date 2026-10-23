@@ -334,7 +334,7 @@ $ID = $_GET["user_id"];
 
                     $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 
-                    $num_results_on_page = 15;
+                    $num_results_on_page = 10;
                 if ($total_pages > 0) {
                     if ($stmt = $_SESSION["conn"]->prepare("SELECT * 
                                                             FROM readHistory 
