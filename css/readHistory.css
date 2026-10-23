@@ -28,7 +28,7 @@
         flex-direction: column;
         width: 100%;
         overflow-x: auto;
-        background-color: var(--barium-yellow);
+        background-color: rgb(209, 209, 209);
         border: 2px solid var(--deep-green);
         margin-bottom: 2em;
     }
@@ -62,6 +62,9 @@
     .table-head {
         background-color: var(--deep-green);
         color: var(--barium-yellow);
+    }
+    .table-item {
+        background-color: var(--barium-yellow);
     }
     .month-title {
         display: flex;
