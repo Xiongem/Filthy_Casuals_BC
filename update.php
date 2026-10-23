@@ -71,7 +71,7 @@ $today = date("Y-m-d");
                     class="inputs"
                     required>
 
-                < class="tag-wrapper">
+                <div class="tag-wrapper">
                     <label for="keyword0" class="labels">Tags:</label>
                     <input type="text" 
                         name="keyword0" 
