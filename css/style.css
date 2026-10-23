@@ -48,6 +48,15 @@ a {
         border: 3px solid var(--marine-green);
         padding: 1em;
     }
+    .close-wrapper {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0.7em;
+    }
+    .fa-close {
+        cursor: pointer;
+    }
     .nav-wrapper {
         display: flex;
         justify-content: space-between;

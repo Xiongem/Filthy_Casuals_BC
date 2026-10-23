@@ -45,6 +45,9 @@ $ID = $_GET["user_id"];
 <body id="body">
     <div class="popup-wrapper hide" id="editPopup">
         <div class="popup-container">
+            <div class="close-wrapper">
+                <i class="fa fa-close" onclick="closeEditRead()"></i>
+            </div>
             <div class="popup-content">
                 <h1>Edit The Thing</h1>
             </div>
