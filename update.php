@@ -82,9 +82,9 @@ $today = date("Y-m-d");
                                 onkeyup="autocomplet0()"
                                 onkeypress="clickPress(event)">
                         </div>
-                        <div class="enter-wrapper" onclick="createTag()">
-                            <ion-icon name="add-circle" size="large"></ion-icon>
-                        </div>
+                        <!-- <div class="enter-wrapper" onclick="createTag()"> -->
+                            <ion-icon name="add-circle" size="large" id="enter-circle" aria-label="add" onclick="createTag()"></ion-icon>
+                        <!-- </div> -->
                     </div>
 
                         <!-- //?ADD BUTTON TO ALLOW PEEPS TO ADD NEW TAGS WITHOUT NEEDING ENTER KEY -->
