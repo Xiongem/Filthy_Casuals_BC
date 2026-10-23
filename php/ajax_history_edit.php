@@ -107,10 +107,7 @@ $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID
 <div class="mod-wrapper">
     <div id="mod1-wrapper" class="mod-content">
         <label for="mod-1" class="labels">Modifier 1:</label>
-
-        <option value="seo"<?php if($result['interest'] == 'seo'): ?> selected="selected"<?php endif; ?>>SEO и Блоговодство</option>
-
-        <select name="mod-1" id="mod-1" class="inputs" value="<?=$mod1?>">
+        <select name="mod-1" id="mod-1" class="inputs">
             <option value="1" <?php if($read['mod1']==1){ ?>selected="selected"<?php } ?>>Normal</option>
             <option value="2" <?php if($read['mod1']==2){ ?>selected="selected"<?php } ?>>Manga/Comic</option>
             <option value="3" <?php if($read['mod1']==3){ ?>selected="selected"<?php } ?>>Challenge</option>
@@ -126,7 +123,7 @@ $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID
 
     <div id="mod2-wrapper" class="mod-content">
         <label for="mod-2" class="labels">Modifier 2:</label>
-        <select name="mod-2" id="mod-2" class="inputs" value="<?=$mod2?>">
+        <select name="mod-2" id="mod-2" class="inputs">
             <option value="1" <?php if($read['mod2']==1){ ?>selected="selected"<?php } ?>>Normal</option>
             <option value="2" <?php if($read['mod2']==2){ ?>selected="selected"<?php } ?>>Challenge</option>
             <option value="3" <?php if($read['mod2']==3){ ?>selected="selected"<?php } ?>>Buddy Read</option>
