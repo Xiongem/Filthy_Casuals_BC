@@ -107,31 +107,34 @@ $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID
 <div class="mod-wrapper">
     <div id="mod1-wrapper" class="mod-content">
         <label for="mod-1" class="labels">Modifier 1:</label>
+
+        <option value="seo"<?php if($result['interest'] == 'seo'): ?> selected="selected"<?php endif; ?>>SEO и Блоговодство</option>
+
         <select name="mod-1" id="mod-1" class="inputs" value="<?=$mod1?>">
-            <option value="1">Normal</option>
-            <option value="2">Manga/Comic</option>
-            <option value="3">Challenge</option>
-            <option value="4">Challenge: Manga/Comics</option>
-            <option value="5">Buddy Read</option>
-            <option value="6">Friend Recommendation</option>
-            <option value="7">Seasonal</option>
-            <option value="8">Read-a-thon</option>
-            <option value="9">Educational</option>
-            <option value="10">Educational: Manga/Comics</option>
+            <option value="1" <?php if($read['mod1']==1){ ?>selected="selected"<?php } ?>>Normal</option>
+            <option value="2" <?php if($read['mod1']==2){ ?>selected="selected"<?php } ?>>Manga/Comic</option>
+            <option value="3" <?php if($read['mod1']==3){ ?>selected="selected"<?php } ?>>Challenge</option>
+            <option value="4" <?php if($read['mod1']==4){ ?>selected="selected"<?php } ?>>Challenge: Manga/Comics</option>
+            <option value="5" <?php if($read['mod1']==5){ ?>selected="selected"<?php } ?>>Buddy Read</option>
+            <option value="6" <?php if($read['mod1']==6){ ?>selected="selected"<?php } ?>>Friend Recommendation</option>
+            <option value="7" <?php if($read['mod1']==7){ ?>selected="selected"<?php } ?>>Seasonal</option>
+            <option value="8" <?php if($read['mod1']==8){ ?>selected="selected"<?php } ?>>Read-a-thon</option>
+            <option value="9" <?php if($read['mod1']==9){ ?>selected="selected"<?php } ?>>Educational</option>
+            <option value="10" <?php if($read['mod1']==10){ ?>selected="selected"<?php } ?>>Educational: Manga/Comics</option>
         </select>
     </div>
 
     <div id="mod2-wrapper" class="mod-content">
         <label for="mod-2" class="labels">Modifier 2:</label>
         <select name="mod-2" id="mod-2" class="inputs" value="<?=$mod2?>">
-            <option value="1">Normal</option>
-            <option value="2">Challenge</option>
-            <option value="3">Buddy Read</option>
-            <option value="4">Friend Recommendation</option>
-            <option value="5">Seasonal</option>
-            <option value="6">Read-a-thon</option>
-            <option value="7">Educational</option>
-            <option value="8">Educational: Manga/Comics</option>
+            <option value="1" <?php if($read['mod2']==1){ ?>selected="selected"<?php } ?>>Normal</option>
+            <option value="2" <?php if($read['mod2']==2){ ?>selected="selected"<?php } ?>>Challenge</option>
+            <option value="3" <?php if($read['mod2']==3){ ?>selected="selected"<?php } ?>>Buddy Read</option>
+            <option value="4" <?php if($read['mod2']==4){ ?>selected="selected"<?php } ?>>Friend Recommendation</option>
+            <option value="5" <?php if($read['mod2']==5){ ?>selected="selected"<?php } ?>>Seasonal</option>
+            <option value="6" <?php if($read['mod2']==6){ ?>selected="selected"<?php } ?>>Read-a-thon</option>
+            <option value="7" <?php if($read['mod2']==7){ ?>selected="selected"<?php } ?>>Educational</option>
+            <option value="8" <?php if($read['mod2']==8){ ?>selected="selected"<?php } ?>>Educational: Manga/Comics</option>
         </select>
     </div>
 </div>
