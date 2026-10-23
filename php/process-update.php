@@ -15,7 +15,8 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             $result = $_SESSION["conn"]->query($sql);
             $user = $result->fetch_assoc();  
 
-$month = date('n');
+// $month = date('n');
+$month = date("n",strtotime($_POST["dateFinished"]));
 $totalPoints = calculateTotalPoints($_POST["pages"], $_POST["mod-1"], $_POST["mod-2"]);
 
 $tags = $_POST["tag"];
