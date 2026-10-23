@@ -32,7 +32,6 @@ function makeNav() {
                             <a class="nav-item" href="index.php">Home</a>
                             <a class="nav-item" href="challenges.php">Challenges</a>
                             <a class="nav-item" href="rules.php">Rules</a>
-                            <a class="nav-item" href="settings.php">Settings</a>
                             <a id="update" class="nav-item" href="update.php">
                                 update
                                 <div class="update-icon">
@@ -43,7 +42,8 @@ function makeNav() {
                             if ($admin == 1) {
                                 echo '<a href="OTP.php" class="nav-item">Passcode</a>';
                             }
-                        echo '<a class="nav-item" href="php/logout.php">Logout</a>
+                        echo '<a class="nav-item" href="settings.php">Settings</a>
+                            <a class="nav-item" href="php/logout.php">Logout</a>
                         </div>
                     </div>
                 </div>
