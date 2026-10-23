@@ -40,9 +40,8 @@ if (isset($_POST['query'])) {
     // $results = $result->fetch_assoc();
 
     if ($results) {
-      foreach ($results as $row) {
-          // $tag = $row['tags'];
-        echo $row['tags'];
+      while ($row = $result -> fetch_assoc()) {
+        echo '<a href="#" class="searchResult">' . $row['tags'] . '</a>';
       }
     } else {
       echo '<p class="list-group-item border-1">No Record</p>';
