@@ -12,15 +12,6 @@ forceLogin();
 $userID = $_SESSION["user_id"];
 
 $ID = $_GET["user_id"];
-
-// $sql = "SELECT * FROM users WHERE user_id = $ID";
-//         $result = $_SESSION["conn"]->query($sql);
-//         $user = $result->fetch_assoc();
-//             $admin = $user['admin'];
-
-//  $sql = "SELECT * FROM readHistory WHERE user_id = $ID";
-//         $result = $_SESSION["conn"]->query($sql);
-//         // $readHistory = $result->fetch_assoc();         
 ?>
 
 <!DOCTYPE html>
@@ -303,8 +294,10 @@ $ID = $_GET["user_id"];
                 <?php } ?>
                 </div>
             <?php } ?>
-        
 
+//** ####################### *//** ####################### *//** ####################### */
+//** ####################### *//** ####################### *//** ####################### */
+//** ####################### *//** ####################### *//** ####################### */
 
             <div class="form-group">
                 <select class="form-control" onchange="selectdata(this.options[this.selectedIndex].value)">
