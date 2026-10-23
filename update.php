@@ -83,7 +83,7 @@ $today = date("Y-m-d");
                                 onkeypress="clickPress(event)">
                         </div>
                         <div class="enter-wrapper" onclick="createTag()">
-                            <ion-icon name="add-circle-outline"></ion-icon>
+                            <ion-icon name="add-circle" size="large"></ion-icon>
                         </div>
                     </div>
 
