@@ -64,7 +64,7 @@ $ID = $_GET["user_id"];
                     <h2>Ongoing Reads</h2>
                 </div>
                 <div class="row">
-                    <div class="edit">Edit</div>
+                    <div class="head-edit">Edit</div>
                     <div class="table-head title">Title</div>
                     <div class="table-head author">Author</div>
                     <div class="table-head pages">Pages</div>
@@ -311,7 +311,7 @@ $ID = $_GET["user_id"];
                     <h2>Full History</h2>
                 </div>
                 <div class="row">
-                    <div class="edit">Edit</div>
+                    <div class="head-edit">Edit</div>
                     <div class="table-head title">Title</div>
                     <div class="table-head author">Author</div>
                     <div class="table-head pages">Pages</div>

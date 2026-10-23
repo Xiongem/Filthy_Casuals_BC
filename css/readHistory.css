@@ -98,6 +98,10 @@
     .comment {
         min-width: 14em;
     }
+    .head-edit {
+        background-color: var(--deep-green);
+        color: var(--barium-yellow);
+    }
     .edit {
         display: flex;
         justify-content: center;
@@ -105,8 +109,6 @@
         flex-wrap: wrap;
         text-align: center;
         
-        /* background-color: var(--marine-green);
-        color: var(--barium-yellow); */
         border: 1px solid var(--leather);
         width: 3em;
         padding: 4px;
