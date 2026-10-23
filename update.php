@@ -84,6 +84,7 @@ $today = date("Y-m-d");
                         </div>
                         <div class="enter-wrapper" onclick="createTag()">
                             <i class="fa fa-circle-right"></i>
+                            <i class="fa-regular fa-square-plus"></i>
                         </div>
                     </div>
 
