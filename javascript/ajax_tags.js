@@ -19,6 +19,8 @@
 $(document).ready(function () {
   // Send Search Text to the server
   $("#search").keyup(function () {
+    console.log("hello");
+    
     let searchText = $(this).val();
     if (searchText != "") {
       $.ajax({
