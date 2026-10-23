@@ -10,6 +10,7 @@
 @media only screen and (min-width: 200px) {
     .form-group {
      display: flex;
+     justify-content: end;
      width: 100%;  
      margin-bottom: 0.5em; 
     }
