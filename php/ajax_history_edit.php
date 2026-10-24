@@ -48,137 +48,143 @@ if (isset($read["comment"])) {
 
 <h1>Edit an Entry</h1>
 <form action="php/process-editEntry.php" method="post">
-<div class="label-wrapper">
-    <label for="title" class="labels">Title:</label>
-    <span class="required">*</span>
-</div>
-<input type="text"
-    name="title"
-    id="title"
-    class="inputs"
-    value="<?=$title?>"
-    required>
+    <!-- assigns entry id to input field -->
+    <input type="hidden" name="<?=$readID?>" id="<?=$readID?>">
 
-<div class="label-wrapper">
-    <label for="author" class="labels">Author:</label>
-    <span class="required">*</span>
-</div>
-<input type="text"
-    name="author"
-    id="author"
-    class="inputs"
-    value="<?=$author?>"
-    required>
-
-<div class="tag-wrapper">
-    <div class="search-tag-wrapper">
-        <div class="tag">
-            <label for="keyword0" class="labels">Tags:</label>
-            <input type="text" 
-                name="keyword0" 
-                id="tags_id0" 
-                class="tags" 
-                onkeyup="autocomplet0()"
-                onkeypress="clickPress(event)">
-        </div>
-            <ion-icon name="add-circle" size="large" id="enter-circle" aria-label="add" onclick="createTag()"></ion-icon>
-    </div>
-    <div id="search_results0" class="search-wrapper"></div>
-</div>
-
-<div class="notch-wrapper" id="notchWrapper">
-    <?php if (isset($tags_array)) { 
-        foreach ($tags_array as $key => $tag_name) {?>
-            <div class="notch-arrow" id="<?=$tag_name?>" onclick="removeTag(<?=$tag_name?>)">
-                <p class='tag-content' id='tagContent'><?=$tag_name?></p>
-                <input type="hidden" name="tag[<?=$tag_name?>]" id="tag_<?=$tag_name?>" value="<?=$tag_name?>">
-            </div>
-    <?php }} ?>
-</div>
-
-        <label for="dateFinished" class="labels">Date Finished:</label>
-        <input type="date"
-            name="dateFinished"
-            id="dateFinished"
-            class="inputs dates"
-            value="<?=$dateFinished?>"
-            required>
-
-<label for="dateStarted" class="labels">Date Started:</label>
-<input type="date"
-    name="dateStarted"
-    id="dateStarted"
-    class="inputs dates"
-    value="<?=$startedDate?>">
-
-<div class="page-wrapper">
+    <!--//? TITLE -->
     <div class="label-wrapper">
-        <label for="pages" class="labels">Number of Pages:</label>
+        <label for="title" class="labels">Title:</label>
         <span class="required">*</span>
     </div>
-    <input type="number"
-        name="pages"
-        id="pages"
+    <input type="text"
+        name="title"
+        id="title"
         class="inputs"
-        value="<?=$pages?>"
+        value="<?=$title?>"
         required>
-</div>
 
-<div class="box-wrapper" id="ongoingWrapper">
-    <label for="ongoing" class="labels">Ongoing:</label>
-    <input type="checkbox"
-        name="ongoing"
-        id="ongoing"
-        class="checkbox"
-        <?php if($read['ongoing']==1){ ?>checked="checked"<?php } ?>>
-</div>
+    <!--//? AUTHOR -->
+    <div class="label-wrapper">
+        <label for="author" class="labels">Author:</label>
+        <span class="required">*</span>
+    </div>
+    <input type="text"
+        name="author"
+        id="author"
+        class="inputs"
+        value="<?=$author?>"
+        required>
 
-<div class="mod-wrapper">
-    <div id="mod1-wrapper" class="mod-content">
-        <label for="mod-1" class="labels">Modifier 1:</label>
-        <select name="mod-1" id="mod-1" class="inputs">
-            <option value="1" <?php if($read['mod1']==1){ ?>selected="selected"<?php } ?>>Normal</option>
-            <option value="2" <?php if($read['mod1']==2){ ?>selected="selected"<?php } ?>>Manga/Comic</option>
-            <option value="3" <?php if($read['mod1']==3){ ?>selected="selected"<?php } ?>>Challenge</option>
-            <option value="4" <?php if($read['mod1']==4){ ?>selected="selected"<?php } ?>>Challenge: Manga/Comics</option>
-            <option value="5" <?php if($read['mod1']==5){ ?>selected="selected"<?php } ?>>Buddy Read</option>
-            <option value="6" <?php if($read['mod1']==6){ ?>selected="selected"<?php } ?>>Friend Recommendation</option>
-            <option value="7" <?php if($read['mod1']==7){ ?>selected="selected"<?php } ?>>Seasonal</option>
-            <option value="8" <?php if($read['mod1']==8){ ?>selected="selected"<?php } ?>>Read-a-thon</option>
-            <option value="9" <?php if($read['mod1']==9){ ?>selected="selected"<?php } ?>>Educational</option>
-            <option value="10" <?php if($read['mod1']==10){ ?>selected="selected"<?php } ?>>Educational: Manga/Comics</option>
-        </select>
+    <!--//? TAGS -->
+    <div class="tag-wrapper">
+        <div class="search-tag-wrapper">
+            <div class="tag">
+                <label for="keyword0" class="labels">Tags:</label>
+                <input type="text" 
+                    name="keyword0" 
+                    id="tags_id0" 
+                    class="tags" 
+                    onkeyup="autocomplet0()"
+                    onkeypress="clickPress(event)">
+            </div>
+                <ion-icon name="add-circle" size="large" id="enter-circle" aria-label="add" onclick="createTag()"></ion-icon>
+        </div>
+        <div id="search_results0" class="search-wrapper"></div>
     </div>
 
-    <div id="mod2-wrapper" class="mod-content">
-        <label for="mod-2" class="labels">Modifier 2:</label>
-        <select name="mod-2" id="mod-2" class="inputs">
-            <option value="1" <?php if($read['mod2']==1){ ?>selected="selected"<?php } ?>>Normal</option>
-            <option value="2" <?php if($read['mod2']==2){ ?>selected="selected"<?php } ?>>Challenge</option>
-            <option value="3" <?php if($read['mod2']==3){ ?>selected="selected"<?php } ?>>Buddy Read</option>
-            <option value="4" <?php if($read['mod2']==4){ ?>selected="selected"<?php } ?>>Friend Recommendation</option>
-            <option value="5" <?php if($read['mod2']==5){ ?>selected="selected"<?php } ?>>Seasonal</option>
-            <option value="6" <?php if($read['mod2']==6){ ?>selected="selected"<?php } ?>>Read-a-thon</option>
-            <option value="7" <?php if($read['mod2']==7){ ?>selected="selected"<?php } ?>>Educational</option>
-            <option value="8" <?php if($read['mod2']==8){ ?>selected="selected"<?php } ?>>Educational: Manga/Comics</option>
-        </select>
+    <!--//? SHOWS ASSIGNED TAGS AND ASSIGNS EACH TO AN INPUT FIELD -->
+    <div class="notch-wrapper" id="notchWrapper">
+        <?php if (isset($tags_array)) { 
+            foreach ($tags_array as $key => $tag_name) {?>
+                <div class="notch-arrow" id="<?=$tag_name?>" onclick="removeTag(<?=$tag_name?>)">
+                    <p class='tag-content' id='tagContent'><?=$tag_name?></p>
+                    <input type="hidden" name="tag[<?=$tag_name?>]" id="tag_<?=$tag_name?>" value="<?=$tag_name?>">
+                </div>
+        <?php }} ?>
     </div>
-</div>
 
-<label for="comment" class="labels">Comment:</label>
-<textarea name="comment" id="comment" class="inputs" placeholder="(Optional)"><?=$comment?></textarea>
+    <!--//? FINISHED DATE -->
+    <label for="dateFinished" class="labels">Date Finished:</label>
+    <input type="date"
+        name="dateFinished"
+        id="dateFinished"
+        class="inputs dates"
+        value="<?=$dateFinished?>"
+        required>
 
-<div class="button-wrapper">
-    <button type="submit" id="updateButton" class="inputs buttons">Update</button>
-</div>
+    <!--//? DATE STARTED -->
+    <label for="dateStarted" class="labels">Date Started:</label>
+    <input type="date"
+        name="dateStarted"
+        id="dateStarted"
+        class="inputs dates"
+        value="<?=$startedDate?>">
+
+    <!--//? NUMBER OF PAGES READ -->
+    <div class="page-wrapper">
+        <div class="label-wrapper">
+            <label for="pages" class="labels">Number of Pages:</label>
+            <span class="required">*</span>
+        </div>
+        <input type="number"
+            name="pages"
+            id="pages"
+            class="inputs"
+            value="<?=$pages?>"
+            required>
+    </div>
+
+    <!--//? ONGOING CHECKBOX -->
+    <div class="box-wrapper" id="ongoingWrapper">
+        <label for="ongoing" class="labels">Ongoing:</label>
+        <input type="checkbox"
+            name="ongoing"
+            id="ongoing"
+            class="checkbox"
+            <?php if($read['ongoing']==1){ ?>checked="checked"<?php } ?>>
+    </div>
+
+    <!--//? 1ST MODIFIER SELECTOR -->
+    <div class="mod-wrapper">
+        <div id="mod1-wrapper" class="mod-content">
+            <label for="mod-1" class="labels">Modifier 1:</label>
+            <select name="mod-1" id="mod-1" class="inputs">
+                <option value="1" <?php if($read['mod1']==1){ ?>selected="selected"<?php } ?>>Normal</option>
+                <option value="2" <?php if($read['mod1']==2){ ?>selected="selected"<?php } ?>>Manga/Comic</option>
+                <option value="3" <?php if($read['mod1']==3){ ?>selected="selected"<?php } ?>>Challenge</option>
+                <option value="4" <?php if($read['mod1']==4){ ?>selected="selected"<?php } ?>>Challenge: Manga/Comics</option>
+                <option value="5" <?php if($read['mod1']==5){ ?>selected="selected"<?php } ?>>Buddy Read</option>
+                <option value="6" <?php if($read['mod1']==6){ ?>selected="selected"<?php } ?>>Friend Recommendation</option>
+                <option value="7" <?php if($read['mod1']==7){ ?>selected="selected"<?php } ?>>Seasonal</option>
+                <option value="8" <?php if($read['mod1']==8){ ?>selected="selected"<?php } ?>>Read-a-thon</option>
+                <option value="9" <?php if($read['mod1']==9){ ?>selected="selected"<?php } ?>>Educational</option>
+                <option value="10" <?php if($read['mod1']==10){ ?>selected="selected"<?php } ?>>Educational: Manga/Comics</option>
+            </select>
+        </div>
+
+        <!--//? 2ND MODIFIER SELECTOR -->
+        <div id="mod2-wrapper" class="mod-content">
+            <label for="mod-2" class="labels">Modifier 2:</label>
+            <select name="mod-2" id="mod-2" class="inputs">
+                <option value="1" <?php if($read['mod2']==1){ ?>selected="selected"<?php } ?>>Normal</option>
+                <option value="2" <?php if($read['mod2']==2){ ?>selected="selected"<?php } ?>>Challenge</option>
+                <option value="3" <?php if($read['mod2']==3){ ?>selected="selected"<?php } ?>>Buddy Read</option>
+                <option value="4" <?php if($read['mod2']==4){ ?>selected="selected"<?php } ?>>Friend Recommendation</option>
+                <option value="5" <?php if($read['mod2']==5){ ?>selected="selected"<?php } ?>>Seasonal</option>
+                <option value="6" <?php if($read['mod2']==6){ ?>selected="selected"<?php } ?>>Read-a-thon</option>
+                <option value="7" <?php if($read['mod2']==7){ ?>selected="selected"<?php } ?>>Educational</option>
+                <option value="8" <?php if($read['mod2']==8){ ?>selected="selected"<?php } ?>>Educational: Manga/Comics</option>
+            </select>
+        </div>
+    </div>
+
+    <!--//? COMMENTS -->
+    <label for="comment" class="labels">Comment:</label>
+    <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)"><?=$comment?></textarea>
+
+    <!--//? SUMBIT BUTTON -->
+    <div class="button-wrapper">
+        <button type="submit" id="updateButton" class="inputs buttons">Update</button>
+    </div>
 
 </form>
-
-<script>
-function showDateFinished() {
-    document.getElementById('dateFinishedWrapper').classList.toggle("hide");
-}
-function showDateStarted() {
-    document.getElementById('dateStartedWrapper').classList.toggle("hide");
-}
-</script>
