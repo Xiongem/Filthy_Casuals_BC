@@ -66,7 +66,7 @@ $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `readHistory`
                                             `comment` = ?, 
                                             `month` = ?, 
                                             `totalPoints` = ?
-                                        WHERE `read_ID` = ? AND `user_id = ?");
+                                        WHERE `read_ID` = ? AND `user_id` = ?");
 //binds values to columns
 $stmt1->bind_param("ssssiiiissii",
                         $_POST["title"],
