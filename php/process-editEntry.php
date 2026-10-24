@@ -55,7 +55,7 @@ if (isset($_POST["ongoing"])) {
 //first query
 $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `readHistory` 
                                         SET  `title` = ?, 
-                                            `author` = ?
+                                            `author` = ?,
                                             `finishedDate` = ?, 
                                             `startedDate` = ?, 
                                             `pages` = ?, 
