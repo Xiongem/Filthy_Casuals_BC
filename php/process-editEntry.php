@@ -71,7 +71,7 @@ $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `readHistory`
 $stmt1->bind_param("ssssiiiissiiii",
                         $_POST["title"],
                         $_POST["author"],
-                        $dateFinished,
+                        $_POST["dateFinished"],
                         $_POST["dateStarted"],
                         $_POST["pages"],
                         $ongoing,
