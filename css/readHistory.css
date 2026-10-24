@@ -242,6 +242,7 @@
     .search-tag-wrapper {
         display: flex;
         align-items: end;
+        width: 100%;
     }
     .tag {
         display: flex;
