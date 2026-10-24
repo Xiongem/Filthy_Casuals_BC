@@ -68,7 +68,7 @@ $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `readHistory`
                                             `totalPoints` = ?
                                         WHERE `read_ID` = ? AND `user_id` = ?");
 //binds values to columns
-$stmt1->bind_param("ssssiiiissii",
+$stmt1->bind_param("ssssiiiissiiii",
                         $_POST["title"],
                         $_POST["author"],
                         $dateFinished,
@@ -80,7 +80,9 @@ $stmt1->bind_param("ssssiiiissii",
                         $insert_tags,
                         $_POST["comment"],
                         $month,
-                        $totalPoints);            
+                        $totalPoints,
+                        $readID,
+                        $userID);            
 //executes first statement
 if ($stmt1 -> execute()) {
     //if the total points for this entry in the database is the same as total points calculated from function (aka, points didn't change)
