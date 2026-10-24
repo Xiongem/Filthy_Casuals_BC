@@ -199,7 +199,7 @@
     .edit-form, .mod-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
 
     }
     .search-tag-wrapper {
