@@ -25,7 +25,6 @@ if($catname!='All') {
 	$fetch_query = $_SESSION["conn"]->query("SELECT * FROM readHistory WHERE user_id = $ID ORDER BY `finishedDate` DESC");
 }
 
-// $fetch_query = $_SESSION["conn"]->query("SELECT * FROM readHistory WHERE user_id = $ID AND `month`= $cond ORDER BY `finishedDate` DESC");
 $row = mysqli_num_rows($fetch_query);
 if ($row > 0) {
     while($readHistory = mysqli_fetch_array($fetch_query)) {
