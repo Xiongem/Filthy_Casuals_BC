@@ -11,7 +11,7 @@ dbConnect();
 
 //assign data for user ID and entry ID to variables
 $userID = $_SESSION["user_id"];
-$readID = $_POST["$readID"];
+$readID = $_POST["read_ID"];
 
 //pulls all user data from db
 $sql = "SELECT * FROM users WHERE user_id = $userID";
