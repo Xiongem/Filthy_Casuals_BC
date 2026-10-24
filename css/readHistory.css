@@ -230,6 +230,7 @@
         display: grid;
         grid-template-columns: 40% 40%;
         justify-content: space-around;
+        margin-bottom: 0.5em;
     }
     .date-content {
         display: flex;
