@@ -36,6 +36,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/readHistory.css">
+    <link rel="stylesheet" href="css/update.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <script src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
