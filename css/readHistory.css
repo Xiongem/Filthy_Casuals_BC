@@ -226,6 +226,11 @@
         display: flex;
         flex-direction: column;
     }
+    .dates-wrapper {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        justify-content: space-around;
+    }
     .dates {
         width: fit-content;
     }

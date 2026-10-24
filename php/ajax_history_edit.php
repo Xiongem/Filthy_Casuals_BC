@@ -103,22 +103,24 @@ if (isset($read["comment"])) {
         <?php }} ?>
     </div>
 
-    <!--//? FINISHED DATE -->
-    <label for="dateFinished" class="labels">Date Finished:</label>
-    <input type="date"
-        name="dateFinished"
-        id="dateFinished"
-        class="inputs dates"
-        value="<?=$dateFinished?>"
-        required>
+    <div class="dates-wrapper">
+        <!--//? FINISHED DATE -->
+        <label for="dateFinished" class="labels">Date Finished:</label>
+        <input type="date"
+            name="dateFinished"
+            id="dateFinished"
+            class="inputs dates"
+            value="<?=$dateFinished?>"
+            required>
 
-    <!--//? DATE STARTED -->
-    <label for="dateStarted" class="labels">Date Started:</label>
-    <input type="date"
-        name="dateStarted"
-        id="dateStarted"
-        class="inputs dates"
-        value="<?=$startedDate?>">
+        <!--//? DATE STARTED -->
+        <label for="dateStarted" class="labels">Date Started:</label>
+        <input type="date"
+            name="dateStarted"
+            id="dateStarted"
+            class="inputs dates"
+            value="<?=$startedDate?>">
+    </div>
 
     <!--//? NUMBER OF PAGES READ -->
     <div class="page-wrapper">
