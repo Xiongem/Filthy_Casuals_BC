@@ -39,6 +39,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <script src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/ajax_tags.js"> </script>
 </head>
 <body id="body">
     <div class="popup-wrapper hide" id="editPopup">
