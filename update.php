@@ -15,6 +15,13 @@ $userID = $_SESSION["user_id"];
         $result = $_SESSION["conn"]->query($sql);
         $user = $result->fetch_assoc();
             $admin = $user['admin'];
+            $timezone = $user["timezone"];
+
+    //* Set the user's timezone
+    if ($timezone) {
+        $_SESSION["timezone"] = $timezone;
+        date_default_timezone_set("$timezone");
+    }
 
 $today = date("Y-m-d");
 ?>
