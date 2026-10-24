@@ -93,7 +93,7 @@ if (isset($read["comment"])) {
     </div>
 
     <!--//? SHOWS ASSIGNED TAGS AND ASSIGNS EACH TO AN INPUT FIELD -->
-    <div class="notch-wrapper" id="notchWrapper">
+    <div class="edit-notch-wrapper" id="notchWrapper">
         <?php if (isset($tags_array)) { 
             foreach ($tags_array as $key => $tag_name) {?>
                 <div class="notch-arrow" id="<?=$tag_name?>" onclick="removeTag(<?=$tag_name?>)">

@@ -308,7 +308,7 @@
     .searchResult:last-child {
         margin-bottom: 1em;
     }
-    .notch-wrapper {
+    .edit-notch-wrapper {
         display: flex;
         flex-direction: row;
         width: 100%;
