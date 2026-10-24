@@ -104,22 +104,26 @@ if (isset($read["comment"])) {
     </div>
 
     <div class="dates-wrapper">
-        <!--//? FINISHED DATE -->
-        <label for="dateFinished" class="labels">Date Finished:</label>
-        <input type="date"
-            name="dateFinished"
-            id="dateFinished"
-            class="inputs dates"
-            value="<?=$dateFinished?>"
-            required>
+        <div class="date-content">
+            <!--//? FINISHED DATE -->
+            <label for="dateFinished" class="labels">Date Finished:</label>
+            <input type="date"
+                name="dateFinished"
+                id="dateFinished"
+                class="inputs dates"
+                value="<?=$dateFinished?>"
+                required>
+        </div>
 
-        <!--//? DATE STARTED -->
-        <label for="dateStarted" class="labels">Date Started:</label>
-        <input type="date"
-            name="dateStarted"
-            id="dateStarted"
-            class="inputs dates"
-            value="<?=$startedDate?>">
+        <div class="date-content">
+            <!--//? DATE STARTED -->
+            <label for="dateStarted" class="labels">Date Started:</label>
+            <input type="date"
+                name="dateStarted"
+                id="dateStarted"
+                class="inputs dates"
+                value="<?=$startedDate?>">
+        </div>
     </div>
 
     <!--//? NUMBER OF PAGES READ -->

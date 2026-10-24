@@ -231,6 +231,10 @@
         grid-template-columns: 40% 40%;
         justify-content: space-around;
     }
+    .date-content {
+        display: flex;
+        flex-direction: column;
+    }
     .dates {
         width: fit-content;
     }
