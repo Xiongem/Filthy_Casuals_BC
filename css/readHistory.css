@@ -256,7 +256,7 @@
     .tags {
         position: relative;
         z-index: 2;
-        min-width: 30em;
+        min-width: 20em;
         height: 2.5em;
 
         background-color: var(--barium-yellow);
