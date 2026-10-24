@@ -47,7 +47,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
             <div class="close-wrapper">
                 <ion-icon name="close" onclick="closeEditRead()"></ion-icon>
             </div>
-            <--!//* AJAX DISPLAYED CONTENT -->
+            <!--//* AJAX DISPLAYED CONTENT -->
             <div class="popup-content" id="editResults"></div>
         </div>
     </div>
