@@ -49,7 +49,7 @@ if (isset($read["comment"])) {
 <h1>Edit an Entry</h1>
 <form action="php/process-editEntry.php" method="post">
     <!-- assigns entry id to input field -->
-    <input type="hidden" name="<?=$readID?>" id="<?=$readID?>">
+    <input type="hidden" name="read_ID" id="<?=$readID?>" value="<?=$readID?>">
 
     <!--//? TITLE -->
     <div class="label-wrapper">
@@ -186,5 +186,4 @@ if (isset($read["comment"])) {
     <div class="button-wrapper">
         <button type="submit" id="updateButton" class="inputs buttons">Update</button>
     </div>
-
 </form>
