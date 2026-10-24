@@ -8,22 +8,41 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
+//assign POST data from ajax to variables
 $readID = $_POST['read_ID'];
 $ID = $_POST['user_ID'];
 
+//pull data from database for the chosen entry and assign required variables
 $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID";
     $result = $_SESSION["conn"]->query($sql);
     $read = $result->fetch_assoc();
         $title = $read["username"];
         $author = $read["author"];
         $dateFinished = $read["finishedDate"];
-        $startedDate = $read["startedDate"];
         $pages = $read["pages"];
         $ongoing = $read["ongoing"];
         $mod1 = $read["mod1"];
         $mod2 = $read["mod2"];
-        $tags = $read["tags"];
-        $comment = $read["comment"];
+
+//set variables for columns that can be NULL in the db
+if (isset($read["startedDate"])) {
+    $startedDate = $read["startedDate"];
+} else {
+    $startedDate = "";
+}
+
+if (isset($read["tags"])) {
+    $tags = $read["tags"];
+    $tags_array = explode(",", $tags);
+} else {
+    $tags_array = NULL;
+}
+
+if (isset($read["comment"])) {
+    $comment = $read["comment"];
+} else {
+    $comment = "";
+}
 ?>
 
 
@@ -52,20 +71,30 @@ $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID
     required>
 
 <div class="tag-wrapper">
-    <label for="keyword0" class="labels">Tags:</label>
-    <input type="text" 
-        name="keyword0" 
-        id="tags_id0" 
-        class="inputs" 
-        onkeyup="autocomplet0()"
-        onkeypress="clickPress(event)">
-
-        <!-- //?ADD BUTTON TO ALLOW PEEPS TO ADD NEW TAGS WITHOUT NEEDING ENTER KEY -->
-
-    <a id="search_results0" class="searchResult" onclick="setTag()"></a>
+    <div class="search-tag-wrapper">
+        <div class="tag">
+            <label for="keyword0" class="labels">Tags:</label>
+            <input type="text" 
+                name="keyword0" 
+                id="tags_id0" 
+                class="tags" 
+                onkeyup="autocomplet0()"
+                onkeypress="clickPress(event)">
+        </div>
+            <ion-icon name="add-circle" size="large" id="enter-circle" aria-label="add" onclick="createTag()"></ion-icon>
+    </div>
+    <div id="search_results0" class="search-wrapper"></div>
 </div>
 
-<div class="notch-wrapper" id="notchWrapper"></div>
+<div class="notch-wrapper" id="notchWrapper">
+    <?php if (isset($tags_array)) { 
+        foreach ($tags_array as $key => $tag_name) {?>
+            <div class="notch-arrow" id="<?=$tag_name?>" onclick="removeTag(<?=$tag_name?>)">
+                <p class='tag-content' id='tagContent'><?=$tag_name?></p>
+                <input type="hidden" name="tag[<?=$tag_name?>]" id="tag_<?=$tag_name?>" value="<?=$tag_name?>">
+            </div>
+    <?php }} ?>
+</div>
 
         <label for="dateFinished" class="labels">Date Finished:</label>
         <input type="date"
