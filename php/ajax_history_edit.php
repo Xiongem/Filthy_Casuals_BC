@@ -16,7 +16,7 @@ $ID = $_POST['user_ID'];
 $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID";
     $result = $_SESSION["conn"]->query($sql);
     $read = $result->fetch_assoc();
-        $title = $read["username"];
+        $title = $read["title"];
         $author = $read["author"];
         $dateFinished = $read["finishedDate"];
         $pages = $read["pages"];
