@@ -13,42 +13,44 @@ $readID = $_POST['read_ID'];
 $userID = $_POST['user_ID'];
 
 //gets total points for the entry being deleted
-// $sql = "SELECT `totalPoints` FROM `readHistory` WHERE `user_id` = $userID  AND read_ID = $readID";
-//     $result = $_SESSION["conn"]->query($sql);
-//     $read = $result->fetch_assoc();
-//         $totalPoints = $read["totalPoints"];
+$sql = "SELECT `totalPoints` 
+        FROM `readHistory` 
+        WHERE `user_id` = $userID  AND read_ID = $readID";
+    $result = $_SESSION["conn"]->query($sql);
+    $read = $result->fetch_assoc();
+        $totalPoints = $read["totalPoints"];
 
-// //gets total points user has earned
-// $sql = "SELECT `PointsMonth` FROM `users` WHERE `user_id` = $userID";
-//     $result = $_SESSION["conn"]->query($sql);
-//     $user = $result->fetch_assoc();
-//         $monthlyPoints = $user["PointsMonth"];
+//gets total points user has earned
+$sql = "SELECT `PointsMonth` FROM `users` WHERE `user_id` = $userID";
+    $result = $_SESSION["conn"]->query($sql);
+    $user = $result->fetch_assoc();
+        $monthlyPoints = $user["PointsMonth"];
 
-// //removes entry points from user points and assigns the new total to a variable
-// $newTotal = $monthlyPoints - $totalPoints;
+//removes entry points from user points and assigns the new total to a variable
+$newTotal = $PointsMonth - $totalPoints;
 
-// //statement 1: sends new point total to database
-// $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `users` 
-//                                         SET `PointsMonth` = ? 
-//                                         WHERE `user_id` = ?");
-// $stmt1->bind_param("ii", 
-//                     $newTotal,
-//                     $userID);
+//statement 1: sends new point total to database
+$stmt1 = $_SESSION["conn"] -> prepare("UPDATE `users` 
+                                        SET `PointsMonth` = ? 
+                                        WHERE `user_id` = ?");
+$stmt1->bindParam("ii", 
+                    $newTotal,
+                    $userID);
 
 
-// if($stmt1->execute()) {
+if($stmt1->execute()) {
     //statement 2: deletes entry
-
-
-    $stmt2 = $_SESSION["conn"] -> prepare("DELETE FROM `readHistory` WHERE `user_id` = ?  AND `read_ID` = ?");
+    $stmt2 = $_SESSION["conn"] -> prepare("DELETE FROM `readHistory` 
+                                            WHERE `user_id` = ?  AND read_ID = ?");
     $stmt2->bind_param("ii",
-                            $readID,
-                            $userID);
-    $stmt2 -> execute();
-    $result = $stmt2->fetch_assoc();
-    // $deleted = $stmt2->rowCount();
+                            $userID,
+                            $readID);
+
+    $stmt2->execute();
+    $deleted = $stmt->rowCount();
+    
     //sends new html to edit popup telling the user if the deletion was a success or not
-    if ($row = $result->rowCount() > 0 ) { ?>
+    if ($deleted >= 0) { ?>
         <div class="deleteNotif">
             <h1>Entry successfully deleted</h1>
         </div>
@@ -58,3 +60,4 @@ $userID = $_POST['user_ID'];
             <h2>Please try again</h2>
         </div>
 <?php } 
+} ?>
