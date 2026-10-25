@@ -327,6 +327,8 @@
     #deleteButton {
         color: rgb(170, 35, 35);
         cursor: pointer;
+        text-align: center;
+        margin-top: 1em;
     }
 }
 /** ####################### *//** ####################### *//** ####################### */
