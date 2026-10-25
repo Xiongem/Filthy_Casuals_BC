@@ -49,7 +49,7 @@ if($stmt1->execute()) {
                             $readID);
 
     $stmt2->execute();
-    $deleted = $stmt->rowCount();
+    $deleted = $stmt2->rowCount();
     
     //sends new html to edit popup telling the user if the deletion was a success or not
     if ($deleted >= 0) { ?>
