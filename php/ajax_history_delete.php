@@ -45,7 +45,7 @@ $userID = $_POST['user_ID'];
                             $readID,
                             $userID);
     $stmt2 -> execute();
-    $result = $stmt2->fetch(PDO::FETCH_ASSOC);
+    $result = $stmt2->fetch_assoc();
     // $deleted = $stmt2->rowCount();
     //sends new html to edit popup telling the user if the deletion was a success or not
     if ($row = $result->rowCount() > 0 ) { ?>
