@@ -322,9 +322,11 @@
     .edit-button-wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     #deleteButton {
         color: rgb(170, 35, 35);
+        cursor: pointer;
     }
 }
 /** ####################### *//** ####################### *//** ####################### */
