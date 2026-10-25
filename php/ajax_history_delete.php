@@ -11,10 +11,9 @@ dbConnect();
 //assign POST data from ajax to variables
 $readID = $_POST['read_ID'];
 $ID = $_POST['user_ID'];
-
-$stmt = $_SESSION["conn"] -> prepare("DELETE FROM `readHistory` WHERE `user_id` = ?  AND read_ID = ?");
-$stmt->bind_param("ii",
-                        $readID,
-                        $ID);
-
-$stmt->execute();
+echo "readID = " . $readID . ", userID = " . $ID;
+?>
+<div class="deleteNotif">
+    <h1>Failed to delete entry.</h1>
+    <h2>Please try again</h2>
+</div>
