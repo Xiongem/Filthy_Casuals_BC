@@ -24,7 +24,7 @@ $sql = "SELECT `totalPoints`
 $sql = "SELECT `PointsMonth` FROM `users` WHERE `user_id` = $userID";
     $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
-        $monthlyPoints = $user["PointsMonth"];
+        $PointsMonth = $user["PointsMonth"];
 
 //removes entry points from user points and assigns the new total to a variable
 $newTotal = $PointsMonth - $totalPoints;
