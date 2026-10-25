@@ -54,6 +54,7 @@ a {
         right: 0;
         top: 0;
         padding: 0.7em;
+        cursor: pointer;
     }
     #close-icon {
         cursor: pointer;
