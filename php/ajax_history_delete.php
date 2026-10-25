@@ -13,8 +13,9 @@ dbConnect();
 // $ID = $_POST['user_ID'];
 
 $readID = $_GET['read_ID'];
-$ID = $_GET['user_ID'];
-echo "readID = " . $readID . ", userID = " . $ID;
+// $ID = $_GET['user_ID'];
+$userID = $_SESSION["user_id"];
+echo "readID = " . $readID . ", userID = " . $userID;
 ?>
 <div class="deleteNotif">
     <h1>Failed to delete entry.</h1>
