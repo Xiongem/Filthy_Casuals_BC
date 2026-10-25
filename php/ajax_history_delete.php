@@ -38,14 +38,17 @@ $userID = $_POST['user_ID'];
 
 // if($stmt1->execute()) {
     //statement 2: deletes entry
+
+
     $stmt2 = $_SESSION["conn"] -> prepare("DELETE FROM `readHistory` WHERE `user_id` = ?  AND `read_ID` = ?");
     $stmt2->bind_param("ii",
                             $readID,
                             $userID);
     $stmt2 -> execute();
+    $result = $stmt2->fetch(PDO::FETCH_ASSOC);
     // $deleted = $stmt2->rowCount();
     //sends new html to edit popup telling the user if the deletion was a success or not
-    if ($row = $stmt2->rowCount() > 0 ) { ?>
+    if ($row = $result->rowCount() > 0 ) { ?>
         <div class="deleteNotif">
             <h1>Entry successfully deleted</h1>
         </div>
