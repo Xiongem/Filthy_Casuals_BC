@@ -324,8 +324,7 @@
         justify-content: space-between;
     }
     #deleteButton {
-        background-color: rgb(170, 35, 35);
-        color: var(--barium-yellow);
+        color: rgb(170, 35, 35);
     }
 }
 /** ####################### *//** ####################### *//** ####################### */
