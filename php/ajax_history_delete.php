@@ -47,9 +47,10 @@ if($stmt1->execute()) {
     $stmt2->bind_param("ii",
                             $userID,
                             $readID);
-    
+    $stmt2->execute();
     //sends new html to edit popup telling the user if the deletion was a success or not
-    if ($stmt2->execute()) { ?>
+    $result = $stmt2->get_result();
+    if ($result->num_rows > 0) { ?>
         <div class="deleteNotif">
             <h1>Entry successfully deleted</h1>
         </div>
