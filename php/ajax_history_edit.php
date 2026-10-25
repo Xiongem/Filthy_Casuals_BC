@@ -190,7 +190,7 @@ if (isset($read["comment"])) {
 
     <!--//? SUMBIT BUTTON -->
     <div class="edit-button-wrapper">
-        <button class="inputs buttons" id="deleteButton" onclick="deleteEntry(<?=$readID?>, <?=$ID?>)">Delete</button>
+        <div class="inputs buttons" id="deleteButton" onclick="deleteEntry(<?=$readID?>, <?=$ID?>)">Delete</div>
         <button type="submit" id="updateButton" class="inputs buttons">Update</button>
     </div>
 </form>
