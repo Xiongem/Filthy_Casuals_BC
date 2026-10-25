@@ -17,13 +17,4 @@ $stmt->bind_param("ii",
                         $readID,
                         $ID);
 
-if ($stmt -> execute()) { ?>
-    <div class="deleteNotif">
-        <h1>Entry successfully deleted</h1>
-    </div>
-<?php } else { ?>
-    <div class="deleteNotif">
-        <h1>Failed to delete entry.</h1>
-        <h2>Please try again</h2>
-    </div>
-<?php } ?>
+$stmt->execute();
