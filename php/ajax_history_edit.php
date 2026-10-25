@@ -190,9 +190,7 @@ if (isset($read["comment"])) {
 
     <!--//? SUMBIT BUTTON -->
     <div class="edit-button-wrapper">
-        <a href="php/ajax_history_delete.php?read_ID=<?=$readID?>">Delete
-            <!-- <button class="inputs buttons" id="deleteButton">Delete</button> -->
-        </a>
+        <button class="inputs buttons" id="deleteButton" onclick="deleteEntry(<?=$readID?>, <?=$ID?>)">Delete</button>
         <button type="submit" id="updateButton" class="inputs buttons">Update</button>
     </div>
 </form>
