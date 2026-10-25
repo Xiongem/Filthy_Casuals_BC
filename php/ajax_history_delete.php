@@ -13,9 +13,7 @@ $readID = $_POST['read_ID'];
 $userID = $_POST['user_ID'];
 
 //gets total points for the entry being deleted
-$sql = "SELECT `totalPoints` 
-        FROM `readHistory` 
-        WHERE `user_id` = $userID  AND read_ID = $readID";
+$sql = "SELECT `totalPoints` FROM `readHistory` WHERE `user_id` = $userID  AND read_ID = $readID";
     $result = $_SESSION["conn"]->query($sql);
     $read = $result->fetch_assoc();
         $totalPoints = $read["totalPoints"];
@@ -27,13 +25,13 @@ $sql = "SELECT `PointsMonth` FROM `users` WHERE `user_id` = $userID";
         $monthlyPoints = $user["PointsMonth"];
 
 //removes entry points from user points and assigns the new total to a variable
-$newTotal = $PointsMonth - $totalPoints;
+$newTotal = $monthlyPoints - $totalPoints;
 
 //statement 1: sends new point total to database
 $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `users` 
                                         SET `PointsMonth` = ? 
                                         WHERE `user_id` = ?");
-$stmt1->bindParam("ii", 
+$stmt1->bind_param("ii", 
                     $newTotal,
                     $userID);
 
