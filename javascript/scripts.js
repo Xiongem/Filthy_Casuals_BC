@@ -70,10 +70,7 @@ function editRead(readID, userID) {
 function closeEditRead() {
   $("#editPopup").hide();
   $("#body").css({"height": "unset", "overflow": "unset"});
-  // var body = document.getElementById("body");
-  // document.getElementById("project-popup").style.display = "none";
-  // body.style.height = "unset";
-  // body.style.overflow = "unset";
+  location.reload(true);
 }
 
 function deleteEntry(readID, userID) {
