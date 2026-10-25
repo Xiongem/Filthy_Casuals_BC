@@ -75,3 +75,18 @@ function closeEditRead() {
   // body.style.height = "unset";
   // body.style.overflow = "unset";
 }
+
+function deleteEntry(readID, userID) {
+  var read_ID = readID;
+  var user_ID = userID;
+  $.ajax ({
+      url: 'php/ajax_history_delete.php',
+      method: 'post',
+      data: {read_ID:read_ID,
+            user_ID:user_ID},
+      success: function(result) {
+        $("#editResults").html(result);
+      }
+  })
+
+}
