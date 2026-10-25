@@ -189,7 +189,7 @@ if (isset($read["comment"])) {
     <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)"><?=$comment?></textarea>
 
     <!--//? SUMBIT BUTTON -->
-    <div class="button-wrapper">
+    <div class="edit-button-wrapper">
         <button class="inputs buttons" id="deleteButton" onclick="deleteEntry(<?=$readID?>, <?=$ID?>)">Delete</button>
         <button type="submit" id="updateButton" class="inputs buttons">Update</button>
     </div>
