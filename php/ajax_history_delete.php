@@ -38,7 +38,7 @@ $userID = $_POST['user_ID'];
 
 // if($stmt1->execute()) {
     //statement 2: deletes entry
-    $stmt2 = $_SESSION["conn"] -> prepare("DELETE FROM `readHistory` WHERE `user_id` = ?  AND read_ID = ?");
+    $stmt2 = $_SESSION["conn"] -> prepare("DELETE FROM `readHistory` WHERE `user_id` = ?  AND `read_ID` = ?");
     $stmt2->bind_param("ii",
                             $readID,
                             $userID);
