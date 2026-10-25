@@ -9,8 +9,11 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
 //assign POST data from ajax to variables
-$readID = $_POST['read_ID'];
-$ID = $_POST['user_ID'];
+// $readID = $_POST['read_ID'];
+// $ID = $_POST['user_ID'];
+
+$readID = $_GET['read_ID'];
+$ID = $_GET['user_ID'];
 echo "readID = " . $readID . ", userID = " . $ID;
 ?>
 <div class="deleteNotif">
