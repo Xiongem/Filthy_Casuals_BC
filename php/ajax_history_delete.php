@@ -21,19 +21,17 @@ $sql = "SELECT `totalPoints`
         $totalPoints = $read["totalPoints"];
 
 //gets total points user has earned
-$sql = "SELECT `pointsMonth` 
-        FROM `users` 
-        WHERE `user_id` = $userID";
+$sql = "SELECT `PointsMonth` FROM `users` WHERE `user_id` = $userID";
     $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
-        $monthlyPoints = $user["pointsMonth"];
+        $monthlyPoints = $user["PointsMonth"];
 
 //removes entry points from user points and assigns the new total to a variable
-$newTotal = $pointsMonth - $totalPoints;
+$newTotal = $PointsMonth - $totalPoints;
 
 //statement 1: sends new point total to database
 $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `users` 
-                                        SET `pointsMonth` = ? 
+                                        SET `PointsMonth` = ? 
                                         WHERE `user_id` = ?");
 $stmt1->bindParam("ii", 
                     $newTotal,
