@@ -43,9 +43,9 @@ $userID = $_POST['user_ID'];
                             $readID,
                             $userID);
     $stmt2 -> execute();
-    $deleted = $stmt2->rowCount();
+    // $deleted = $stmt2->rowCount();
     //sends new html to edit popup telling the user if the deletion was a success or not
-    if ($deleted === 1) { ?>
+    if ($row = $stmt2->rowCount() > 0 ) { ?>
         <div class="deleteNotif">
             <h1>Entry successfully deleted</h1>
         </div>
