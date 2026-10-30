@@ -317,7 +317,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
     //** ####################### *//** ####################### *//** ####################### */ -->
 
             <div class="form-group">
-                <select class="form-control inputs" onchange="selectdata(this.options[this.selectedIndex].value)">
+                <select class="form-control inputs" onchange="selectHistoryData(this.options[this.selectedIndex].value)">
                     <option value="All">All</option>
                     <option value="1">January</option>
                     <option value="2">February</option>
@@ -359,13 +359,13 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
         
                 <script type="text/javascript">
                     $(document).ready(function() {
-                        showdata();
+                        showHistoryData();
                     });
 
-                    function showdata() {
+                    function showHistoryData() {
                         var user_ID = <?= $ID ?>;
                         $.ajax({
-                            url: 'php/showData.php',
+                            url: 'php/showHistoryData.php',
                             method: 'post',
                             data: {user_id:user_ID},
                             success: function(result) {
@@ -374,10 +374,10 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                         });
                     }
 
-                    function selectdata(cat) {
+                    function selectHistoryData(cat) {
                         var user_ID = <?= $ID ?>;
                         $.ajax({
-                            url: 'php/selectData.php',
+                            url: 'php/selectHistoryData.php',
                             method: 'post',
                             data: {cat_name:cat,
                                     user_id:user_ID},
