@@ -45,6 +45,10 @@
     .settings-account-content {
         width: 90%;
     }
+    .account-title-wrapper {
+        text-align: center;
+        margin: 1em 0;
+    }
     .form-select {
         width: 100%;
     }
