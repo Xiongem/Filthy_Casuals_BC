@@ -42,7 +42,7 @@ function upload() {
 }
 function resetPFP() {
   const fileUploadInput = document.querySelector('.file-uploader');
-  fileUploadInput.value() = "";
+  fileUploadInput.value = "";
   $('#pfpupload').css({"display": "none"});
   $('#profilePicture').css({"display": "block"});
 }
