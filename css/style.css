@@ -234,6 +234,8 @@ a {
 @media only screen and (min-width: 1200px) {
     .nav-wrapper {
         display: none;
+        background-color: var(--marine-green);
+        border-bottom: 2px solid var(--deep-green);
     }
     .desktop-nav-wrapper {
         display: flex;
@@ -243,6 +245,10 @@ a {
     .logo {
         width: 3.5em;
         height: 3.5em;
+    }
+    .desktop-menu-wrapper {
+        display: flex;
+        justify-content: space-evenly;
     }
 }
 
