@@ -130,6 +130,9 @@
     .settings-danger-content {
         width: 90%;
     }
+    .warning-content {
+        text-align: center;
+    }
     .danger-title-wrapper {
         text-align: center;
         margin: 1em 0;
