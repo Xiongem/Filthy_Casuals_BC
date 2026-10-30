@@ -132,9 +132,9 @@
     }
     .warning-content {
         text-align: center;
-        margin: 1em 0;
+        margin-bottom: 1em;
     }
-    .danger-title-wrapper {
+    .danger-title-wrapper, .warning-label-wrapper {
         text-align: center;
         margin: 1em 0;
     }

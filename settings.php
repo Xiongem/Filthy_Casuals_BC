@@ -81,7 +81,9 @@ $userID = $_SESSION["user_id"];
             <div class="close-wrapper">
                 <ion-icon name="close" onclick="closeDangerZone()"></ion-icon>
             </div>
+            <div class="warning-label-wrapper">
                 <h1 class="warning-label warning"><strong>Delete Your Account?</strong></h1>
+            </div>
             <div class="warning-content">
                 <p class="warning-text">This is <strong><em>permanent</em></strong> and cannot be reversed.
                 <br><br>
