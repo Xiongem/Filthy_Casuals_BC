@@ -34,7 +34,7 @@ function upload() {
     const profilePicture = document.querySelector('.profile-picture');
     profilePicture.style.backgroundImage = `url(${fileReaderEvent.target.result})`;
 
-    $('profilePic').css({"display": "none"});
+    $('#profilePic').css({"display": "none"});
     // var img = document.getElementById("profilePic");
     // img.style.display = "none";
   }
