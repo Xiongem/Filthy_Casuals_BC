@@ -196,4 +196,7 @@
     .settings-account-content, .settings-danger-content {
         width: 50%;
     }
+    #timezone {
+        width: 50%;
+    }
 }
