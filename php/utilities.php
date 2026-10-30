@@ -69,7 +69,9 @@ function makeNav() {
                         <p id="explain">update</p>
                     </a>
                 </div>
-                <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
+                <div id="profile">
+                    <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
+                </div>
             </div>
         HTML;
         echo $htmlContent;
