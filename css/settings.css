@@ -132,6 +132,7 @@
     }
     .warning-content {
         text-align: center;
+        margin: 1em 0;
     }
     .danger-title-wrapper {
         text-align: center;
