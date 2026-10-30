@@ -22,7 +22,6 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 ?>
 <div class="settings-account-wrapper">
     <div class="settings-account-content">
-        
         <div class="account-title-wrapper">
             <h1>Account</h1>
         </div>
