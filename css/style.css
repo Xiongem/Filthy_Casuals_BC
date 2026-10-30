@@ -267,6 +267,9 @@ a {
         position: absolute;
         display: none;
     }
+    #update:hover #explain {
+        display: block;
+    }
 }
 
 
