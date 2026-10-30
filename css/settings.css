@@ -60,6 +60,8 @@
     .upload-wrapper {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        width: fit-content;
         margin-bottom: 2em;
     }
     .upload-label {
