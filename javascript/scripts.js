@@ -31,7 +31,8 @@ function upload() {
   fileReader.readAsDataURL(image);
 
   fileReader.onload = (fileReaderEvent) => {
-    const profilePicture = document.querySelector('.profile-picture');
+    // const profilePicture = document.querySelector('.profile-picture');
+    const profilePicture = $('#profilePicture');
     profilePicture.style.backgroundImage = `url(${fileReaderEvent.target.result})`;
   }
 }
