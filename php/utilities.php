@@ -66,7 +66,7 @@ function makeNav() {
                     <a class="nav-item" href="php/logout.php">Logout</a>
                 </div>
                 <a id="update" class="desktop-nav-item" href="update.php">
-                    <ion-icon size="large" name="add-circle-outline" id="icon"></ion-icon>
+                    <ion-icon size="large" name="add-circle-outline"></ion-icon>
                 </a>
                 <a href="profile.php" id="profile">
                     <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">

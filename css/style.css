@@ -253,9 +253,13 @@ a {
         align-items: center;
         width: 100%;
     }
+    .nav-item {
+        margin: 0.5em;
+    }
     #update {
         justify-content: center;
         align-items: center;
+        margin: 0 0.5em;
     }
 }
 
