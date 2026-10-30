@@ -183,7 +183,7 @@
     .settings-account-content, .settings-danger-content {
         width: 70%;
     }
-    .button-wrapper {
+    .delete-button-wrapper {
         justify-content: center;
     }
 }

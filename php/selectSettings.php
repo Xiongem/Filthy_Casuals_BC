@@ -369,7 +369,7 @@ if ($tabName === 'account') { ?>
                 <h3>Account Deletion:</h3>
                 <p>Proceed with caution</p>
             </div>
-            <div class="button-wrapper">
+            <div class="button-wrapper delete-button-wrapper">
                 <button onclick="showDangerZone()" class="delete">Delete My Account</button>
             </div>
         </div>
