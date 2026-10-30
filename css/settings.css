@@ -73,7 +73,6 @@
         color: var(--deep-green);
     }
     .profile-picture {
-        opacity: 0.75;
         height: 150px;
         width: 150px;
         position: relative;
@@ -87,6 +86,9 @@
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 0 8px 6px -6px var(--deep-green);
+    }
+    .profile-picture:hover {
+        opacity: 0.75;
     }
     #profilePicture {
         opacity: 0.75;
