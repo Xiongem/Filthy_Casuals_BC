@@ -37,9 +37,9 @@ function makeNav() {
                                     <ion-icon name="add" id="icon"></ion-icon>
                             </a>
                             <a class="nav-item" href="readHistory.php?user_id=' . $userID .'">History</a>
-                            if ($admin == 1) {
+                            <?php if ($admin == 1) { ?>
                                 <a href="admin.php" class="nav-item">Admin</a>
-                            }
+                            <?php } ?>
                             <a class="nav-item" href="settings.php">Settings</a>
                             <a class="nav-item" href="php/logout.php">Logout</a>
                         </div>
