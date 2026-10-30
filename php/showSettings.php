@@ -27,19 +27,24 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         </div>
         <form method="post" action="php/" enctype="multipart/form-data">
             <div class="upload-wrapper">
-                <label class="upload-label">Upload Profile Picture:</label>
-                <div class="profile-picture">
-                    <?= '<img  id="profilePicture" src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';?>
-                    <h1 class="upload-icon">
-                        <ion-icon name="add" aria-hidden="true"></ion-icon>
-                    </h1>
-                    <input
-                        name="profilePicture"
-                        class="file-uploader"
-                        type="file"
-                        onchange="upload()"
-                        
-                        value="">
+                <div class="upload-content">
+                    <label class="upload-label">Upload Profile Picture:</label>
+                    <div class="profile-picture">
+                        <?= '<img  id="profilePicture" src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';?>
+                        <h1 class="upload-icon">
+                            <ion-icon name="add" aria-hidden="true"></ion-icon>
+                        </h1>
+                        <input
+                            name="profilePicture"
+                            class="file-uploader"
+                            type="file"
+                            onchange="upload()"
+                            
+                            value="">
+                    </div>
+                </div>
+                <div class="upload-content">
+                    <ion-icon name="refresh-circle-outline"></ion-icon>
                 </div>
             </div>
 
