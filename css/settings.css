@@ -39,7 +39,11 @@
     .settings-account-wrapper {
         display: flex;
         flex-direction: column;
-        width: 90%;
+        align-items: center;
+        width: 100%;
+    }
+    .settings-account-content {
+        
     }
     .form-select {
         width: 100%;
