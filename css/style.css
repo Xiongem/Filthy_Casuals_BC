@@ -239,6 +239,7 @@ a {
         display: flex;
         justify-content: space-between;
         padding: 1em;
+        margin-bottom: 1em;
 
         background-color: var(--marine-green);
         border-bottom: 2px solid var(--deep-green);
