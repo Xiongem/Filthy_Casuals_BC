@@ -17,6 +17,7 @@
     .tab {
         display: flex;
         border-bottom: 2px solid var(--deep-green);
+        padding-left: 0.5em;
     }
     .tab-link {
         display: flex;
@@ -24,7 +25,7 @@
         align-items: center;
         padding: 8px;
         min-width: 5em;
-        margin: 0 0.5em;
+        margin-right: 8px;
 
         background-color: var(--leather);
         border: 2px solid var(--deep-green);
