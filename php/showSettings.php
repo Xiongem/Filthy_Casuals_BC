@@ -28,7 +28,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         </div>
         <form method="post" action="php/" enctype="multipart/form-data">
             <div class="upload-wrapper">
-                <label class="labels">Upload Profile Picture:</label>
+                <label class="upload-label">Upload Profile Picture:</label>
                 <div class="profile-picture">
                     <?= '<img  id="profilePicture" src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';?>
                     <h1 class="upload-icon">

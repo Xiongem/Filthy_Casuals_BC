@@ -57,6 +57,9 @@
         flex-direction: column;
         margin-bottom: 2em;
     }
+    .upload-label {
+        color: var(--deep-green);
+    }
     .profile-picture {
         opacity: 0.75;
         height: 150px;
