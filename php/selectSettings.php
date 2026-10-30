@@ -357,7 +357,10 @@ if ($tabName === 'account') { ?>
 <?php } else if ($tabName === 'dangerZone') { ?>
     <div class="settings-danger-wrapper">
         <div class="settings-danger-content">
-
+            <div class="delete-title-wrapper">
+                <h1>Warning!</h1>
+                <h3>Account Deletion: Proceed with caution</h3>
+            </div>
         </div>
     </div>
 <?php } ?>
