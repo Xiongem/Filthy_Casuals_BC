@@ -266,10 +266,13 @@ a {
     #explain {
         position: absolute;
         display: none;
-        translate: 0 2em;
+        translate: 0 1.5em;
     }
     #update:hover #explain {
         display: block;
+    }
+    .nav-item:hover, #update:hover {
+        color: var(--leather);
     }
 }
 
