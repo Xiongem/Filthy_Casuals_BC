@@ -14,6 +14,21 @@
         align-items: center;
         width: 100%;
     }
+    .tab {
+        display: flex;
+        border-bottom: 2px solid var(--deep-green);
+    }
+    .tab-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        min-width: 5em;
+
+        background-color: var(--leather);
+        border: 2px solid var(--deep-green);
+        border-radius: 12px 12px 0 0;
+    }
     .settings-account-wrapper {
         display: flex;
         flex-direction: column;
