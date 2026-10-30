@@ -57,7 +57,7 @@
         overflow: hidden;
 
         /* default image */
-        background: url('https://qph.cf2.quoracdn.net/main-qimg-f32f85d21d59a5540948c3bfbce52e68');
+        /* background: url('https://qph.cf2.quoracdn.net/main-qimg-f32f85d21d59a5540948c3bfbce52e68'); */
 
         background-position: center;
         background-repeat: no-repeat;
@@ -92,6 +92,7 @@
     .profile-picture:hover .upload-icon {
     opacity: 1;
     }
+}
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
