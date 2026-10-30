@@ -73,8 +73,11 @@
         box-shadow: 0 8px 6px -6px var(--deep-green);
     }
     #profilePicture {
-        width: 100%;
-        height: 100%;
+        opacity: 0.75;
+        height: 150px;
+        width: 150px;
+        position: relative;
+        overflow: hidden;
     }
     .file-uploader {
         /* make it invisible */
