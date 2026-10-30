@@ -40,5 +40,6 @@ $userID = $_SESSION["user_id"];
         <?= makeNav() ?>
     </header>
     <a href="OTP.php">One-Time Passcode</a>
+    <a>Set RAT date</a>
 </body>
 </html>

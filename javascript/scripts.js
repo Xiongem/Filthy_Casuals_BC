@@ -42,6 +42,7 @@ function upload() {
 function resetPFP() {
   const fileUploadInput = document.querySelector('.file-uploader');
   fileUploadInput.value() = "";
+  
 }
 
 function hideBackground() {
