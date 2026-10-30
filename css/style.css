@@ -234,13 +234,14 @@ a {
 @media only screen and (min-width: 1200px) {
     .nav-wrapper {
         display: none;
-        background-color: var(--marine-green);
-        border-bottom: 2px solid var(--deep-green);
     }
     .desktop-nav-wrapper {
         display: flex;
         justify-content: space-between;
         padding: 1em;
+
+        background-color: var(--marine-green);
+        border-bottom: 2px solid var(--deep-green);
     }
     .logo {
         width: 3.5em;
@@ -249,6 +250,8 @@ a {
     .desktop-menu-wrapper {
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
     }
 }
 
