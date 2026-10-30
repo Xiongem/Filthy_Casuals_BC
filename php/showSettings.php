@@ -29,7 +29,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             <div class="upload-wrapper">
                 <div class="upload-content">
                     <label class="upload-label">Upload Profile Picture:</label>
-                    <div class="profile-picture" id="pfpupload" style="background-image:url("data:<?=$imageType?>;base64,<?=base64_encode($user['pfpData'])?>' alt='<?=$imageName?>")">
+                    <div class="profile-picture" id="pfpupload" style="background-image:url("data:<?=$imageType?>;base64,<?=base64_encode($user['pfpData'])?>" alt="<?=$imageName?>")">
                         <!-- <img class='profile-picture' id='profilePicture' src=> -->
                         <h1 class="upload-icon">
                             <ion-icon name="add" aria-hidden="true"></ion-icon>
