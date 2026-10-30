@@ -134,6 +134,14 @@
         text-align: center;
         margin: 1em 0;
     }
+    .delete {
+        background-color: red;
+        border: none;
+        border-radius: 12px;
+        width: 5em;
+        height: 2.5em;
+        cursor: pointer;
+    }
 }
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
