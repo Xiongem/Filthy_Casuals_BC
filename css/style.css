@@ -266,7 +266,7 @@ a {
     #explain {
         position: absolute;
         display: none;
-        translate: 0 1.5em;
+        translate: 0 1.7em;
         color: var(--barium-yellow);
     }
     #update:hover #explain {
