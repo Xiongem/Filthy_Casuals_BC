@@ -32,7 +32,7 @@ function upload() {
 
   fileReader.onload = (fileReaderEvent) => {
     var profilePicture = document.getElementById("profilePicture");
-    profilePicture.style.backgroundImage = `url(${fileReaderEvent.target.result})`;
+    profilePicture.src = `${fileReaderEvent.target.result}`;
   }
 }
 
