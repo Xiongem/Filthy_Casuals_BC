@@ -81,6 +81,7 @@
 
         /* default image */
         /* background: url('https://qph.cf2.quoracdn.net/main-qimg-f32f85d21d59a5540948c3bfbce52e68'); */
+        transition: opacity 0.3s ease;
         background-color: var(--barium-yellow);
         background-position: center;
         background-repeat: no-repeat;
