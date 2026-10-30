@@ -49,6 +49,26 @@ function makeNav() {
                     <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
                 </a>
             </div>
+            <div class="desktop-nav-wrapper">
+                <div class="desktop-logo-wrapper">
+                    <a class="nav-item" href="index.php">
+                        <img class="logo" id="logo" src="./images/FCBClogo.svg" alt="cat laying on books logo">
+                    </a>
+                </div>
+                <div class="desktop-menu-wrapper">
+                    <a class="desktop-nav-item" href="challenges.php">Challenges</a>
+                    <a class="desktop-nav-item" href="rules.php">Rules</a>
+                    <a class="nav-item" href="readHistory.php?user_id=' . $userID .'">History</a>
+                    <?php if ($admin == 1) { ?>
+                        <a href="admin.php" class="nav-item">Admin</a>
+                    <?php } ?>
+                    <a class="nav-item" href="settings.php">Settings</a>
+                    <a class="nav-item" href="php/logout.php">Logout</a>
+                </div>
+                <a href="profile.php" id="profile">
+                    <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
+                </a>
+            </div>
         HTML;
         echo $htmlContent;
 }

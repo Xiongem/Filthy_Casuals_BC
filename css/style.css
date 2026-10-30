@@ -214,6 +214,10 @@ a {
         color: var(--barium-yellow);
         margin: 0 12px 0 6px;
     }
+
+    .desktop-nav-wrapper {
+        display: none;
+    }
 }
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
@@ -228,7 +232,14 @@ a {
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1200px) {
-
+    .nav-wrapper {
+        display: none;
+    }
+    .desktop-nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+    }
 }
 
 
