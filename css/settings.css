@@ -39,6 +39,8 @@
     .tab-link:hover {
         background-color: var(--barium-yellow);
     }
+
+
     .settings-account-wrapper {
         display: flex;
         flex-direction: column;
@@ -113,6 +115,22 @@
     /* toggle icon state */
     .profile-picture:hover .upload-icon {
     opacity: 1;
+    }
+
+
+
+    .settings-danger-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .settings-danger-content {
+        width: 90%;
+    }
+    .danger-title-wrapper {
+        text-align: center;
+        margin: 1em 0;
     }
 }
 /** ####################### *//** ####################### *//** ####################### */
