@@ -267,6 +267,7 @@ a {
         position: absolute;
         display: none;
         translate: 0 1.5em;
+        color: var(--barium-yellow);
     }
     #update:hover #explain {
         display: block;
