@@ -358,8 +358,12 @@ if ($tabName === 'account') { ?>
     <div class="settings-danger-wrapper">
         <div class="settings-danger-content">
             <div class="danger-title-wrapper">
-                <h1>Warning!</h1>
-                <h3>Account Deletion: Proceed with caution</h3>
+                <h1 class="warning">Warning!</h1>
+                <h3>Account Deletion:</h3>
+                <p>Proceed with caution</p>
+            </div>
+            <div class="button-wrapper">
+                <button onclick="showDangerZone()" class="delete">Delete My Account</button>
             </div>
         </div>
     </div>

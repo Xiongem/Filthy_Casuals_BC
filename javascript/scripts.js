@@ -52,6 +52,17 @@ function showBackground() {
   // body.style.height = "unset";
   // body.style.overflow = "unset";
 }
+function showDangerZone(){
+  $("#dangerPopup").css({"display": "flex"});
+  var dangerPopup = document.getElementById("dangerPopup");
+  dangerPopup.scrollIntoView();
+  setTimeout(hideBackground, 500);
+}
+function closeDangerZone(){
+  $("#dangerPopup").hide();
+  $("#body").css({"height": "unset", "overflow": "unset"});
+  location.reload(true);
+}
 
 function editRead(readID, userID) {
   $("#editPopup").css({"display": "flex"});

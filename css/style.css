@@ -235,7 +235,7 @@ a {
 .success {
     color: green;
 }
-.error {
+.error, .required, .warning {
     color: red;
 }
 .hide {
@@ -246,7 +246,4 @@ a {
 }
 .leather {
     color: #b17036;
-}
-.required {
-    color: red;
 }
