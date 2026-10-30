@@ -253,6 +253,10 @@ a {
         align-items: center;
         width: 100%;
     }
+    #update {
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
