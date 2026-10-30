@@ -138,8 +138,9 @@
         background-color: red;
         border: none;
         border-radius: 12px;
-        width: 8em;
+        width: 7em;
         height: 2.5em;
+        padding: 4px;
         cursor: pointer;
     }
 }
