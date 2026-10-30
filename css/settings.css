@@ -123,14 +123,15 @@
     .profile-picture:hover .upload-icon {
         opacity: 1;
     }
-    #resetIcon {
+    .icon-wrapper {
         position: relative;
+        cursor: pointer;
     }
     #explain {
         position: absolute;
         display: none;
     }
-    #resetIcon:hover #explain {
+    .icon-wrapper:hover #explain {
         display: block;
     }
 
