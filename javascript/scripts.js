@@ -33,18 +33,12 @@ function upload() {
   fileReader.onload = (fileReaderEvent) => {
     const profilePicture = document.querySelector('.profile-picture');
     profilePicture.style.backgroundImage = `url(${fileReaderEvent.target.result})`;
-
-    $('#pfpupload').css({"display": "block"});
-    $('#profilePicture').css({"display": "none"});
-    // var img = document.getElementById("profilePic");
-    // img.style.display = "none";
   }
 }
-function resetPFP() {
+function resetPFP(image) {
   const fileUploadInput = document.querySelector('.file-uploader');
   fileUploadInput.value = "";
-  $('#pfpupload').css({"display": "none"});
-  $('#profilePicture').css({"display": "block"});
+  $('#pfpupload').css({"background-image": `url(${image})`});
 }
 
 function hideBackground() {

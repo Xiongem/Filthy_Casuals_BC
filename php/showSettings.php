@@ -30,7 +30,6 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <div class="upload-content">
                     <label class="upload-label">Upload Profile Picture:</label>
                     <div class="profile-picture" id="pfpupload" style="background-image:url('data:<?=$imageType?>;base64,<?=base64_encode($user['pfpData'])?>')" alt="<?=$imageName?>">
-                        <!-- <img class='profile-picture' id='profilePicture' src=> -->
                         <h1 class="upload-icon">
                             <ion-icon name="add" aria-hidden="true"></ion-icon>
                         </h1>
@@ -45,7 +44,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 </div>
                 <div class="upload-content">
                     <div class="icon-wrapper">
-                        <ion-icon id="resetIcon" size="large" name="refresh-circle-outline" onclick="resetPFP()"></ion-icon>
+                        <ion-icon id="resetIcon" size="large" name="refresh-circle-outline" onclick="resetPFP(data:<?=$imageType?>;base64,<?=base64_encode($user['pfpData'])?>)"></ion-icon>
                         <p id="explain">reset</p>
                     </div>
                 </div>
