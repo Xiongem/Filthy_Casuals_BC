@@ -63,6 +63,7 @@
         width: 150px;
         position: relative;
         overflow: hidden;
+        margin-top: 0.5em;
 
         /* default image */
         /* background: url('https://qph.cf2.quoracdn.net/main-qimg-f32f85d21d59a5540948c3bfbce52e68'); */
