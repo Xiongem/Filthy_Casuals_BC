@@ -31,6 +31,7 @@
         border: 2px solid var(--deep-green);
         border-bottom: none;
         border-radius: 8px 8px 0 0;
+        cursor: pointer;
     }
     .tab-link:hover {
         background-color: var(--barium-yellow);
@@ -42,6 +43,11 @@
     }
     .form-select {
         width: 100%;
+    }
+    .upload-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2em;
     }
     .profile-picture {
         opacity: 0.75;
@@ -58,7 +64,34 @@
         background-size: cover;
         box-shadow: 0 8px 6px -6px var(--deep-green);
     }
-}
+    .file-uploader {
+        /* make it invisible */
+        opacity: 0;
+        /* make it take the full height and width of the parent container */
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        /* make it absolute */
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+    .upload-icon {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* initial icon state */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        color: #ccc;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #bbb;
+    }
+    /* toggle icon state */
+    .profile-picture:hover .upload-icon {
+    opacity: 1;
+    }
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
