@@ -23,8 +23,8 @@ function makeNav() {
                 $imageName = htmlspecialchars($user['pfpName']);
                 $imageType = $user['pfpType'];
                 $imageData = base64_encode($user['pfpData']);
-
-        echo '<div class="nav-wrapper" id="nav-wrapper">
+    $htmlContent = <<<HTML
+        <div class="nav-wrapper" id="nav-wrapper">
                 <div class="icon-wrapper" id="icon-wrapper"">
                     <ion-icon name="menu" id="nav-menu-icon"></ion-icon>
                     <div class="nav-menu-wrapper" id="nav-menu-wrapper">
@@ -36,19 +36,21 @@ function makeNav() {
                                 update
                                     <ion-icon name="add" id="icon"></ion-icon>
                             </a>
-                            <a class="nav-item" href="readHistory.php?user_id=' . $userID .'">History</a>';
+                            <a class="nav-item" href="readHistory.php?user_id=' . $userID .'">History</a>
                             if ($admin == 1) {
-                                echo '<a href="admin.php" class="nav-item">Admin</a>';
+                                <a href="admin.php" class="nav-item">Admin</a>
                             }
-                        echo '<a class="nav-item" href="settings.php">Settings</a>
+                            <a class="nav-item" href="settings.php">Settings</a>
                             <a class="nav-item" href="php/logout.php">Logout</a>
                         </div>
                     </div>
                 </div>
                 <a href="profile.php" id="profile">
-                    <img id="profilePic" src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';
-            echo '</a>
-            </div>';   
+                    <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
+                </a>
+            </div>
+        HTML;
+        echo $htmlContent;
 }
 
 function forceLogin() {
