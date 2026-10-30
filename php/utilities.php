@@ -51,7 +51,7 @@ function makeNav() {
             </div>
             <div class="desktop-nav-wrapper">
                 <div class="desktop-logo-wrapper">
-                    <a class="nav-item" href="index.php">
+                    <a class="desktop-nav-item" href="index.php">
                         <img class="logo" id="logo" src="./images/FCBClogo.svg" alt="cat laying on books logo">
                     </a>
                 </div>
