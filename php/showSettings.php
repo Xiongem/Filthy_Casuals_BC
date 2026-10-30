@@ -33,7 +33,8 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 
             <div class="upload-wrapper">
                 <label class="labels">Upload Profile Picture:</label>
-                <?= '<div class="profile-picture" id="profilePicture" style="background-image: url("data:$imageType;base64, . base64_encode($user["pfpData"])")">';?>
+               
+                     <?= '<img class="profile-picture id="profilePic" src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';?>
                     <h1 class="upload-icon">
                         <ion-icon name="add" aria-hidden="true"></ion-icon>
                     </h1>
