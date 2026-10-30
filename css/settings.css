@@ -72,6 +72,10 @@
         background-size: cover;
         box-shadow: 0 8px 6px -6px var(--deep-green);
     }
+    #profilePicture {
+        width: 100%;
+        height: 100%;
+    }
     .file-uploader {
         /* make it invisible */
         opacity: 0;
