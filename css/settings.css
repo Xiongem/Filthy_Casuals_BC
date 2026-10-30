@@ -59,12 +59,13 @@
     }
     .upload-wrapper {
         display: flex;
-        align-items: end;
+        /* align-items: end; */
     }
     .upload-content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: end;
         width: fit-content;
         margin-bottom: 2em;
     }
@@ -120,7 +121,7 @@
     }
     /* toggle icon state */
     .profile-picture:hover .upload-icon {
-    opacity: 1;
+        opacity: 1;
     }
     #resetIcon {
         position: relative;
