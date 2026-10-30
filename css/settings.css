@@ -24,10 +24,15 @@
         align-items: center;
         padding: 8px;
         min-width: 5em;
+        margin: 0 0.5em;
 
         background-color: var(--leather);
         border: 2px solid var(--deep-green);
-        border-radius: 12px 12px 0 0;
+        border-bottom: none;
+        border-radius: 8px 8px 0 0;
+    }
+    .tab-link:hover {
+        background-color: var(--barium-yellow);
     }
     .settings-account-wrapper {
         display: flex;
