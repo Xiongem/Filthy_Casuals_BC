@@ -266,7 +266,7 @@ a {
     #explain {
         position: absolute;
         display: none;
-        translate: 1em;
+        translate: 0 2em;
     }
     #update:hover #explain {
         display: block;
