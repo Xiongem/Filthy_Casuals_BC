@@ -39,6 +39,10 @@ function upload() {
     // img.style.display = "none";
   }
 }
+function resetPFP() {
+  const fileUploadInput = document.querySelector('.file-uploader');
+  fileUploadInput.value() = "";
+}
 
 function hideBackground() {
   $("#body").css({"height": "100%", "overflow": "hidden"});

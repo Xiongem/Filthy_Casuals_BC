@@ -59,6 +59,7 @@
     }
     .upload-wrapper {
         display: flex;
+        align-items: end;
     }
     .upload-content {
         display: flex;
@@ -120,6 +121,16 @@
     /* toggle icon state */
     .profile-picture:hover .upload-icon {
     opacity: 1;
+    }
+    #resetIcon {
+        position: relative;
+    }
+    #explain {
+        position: absolute;
+        display: none;
+    }
+    #resetIcon:hover #explain {
+        display: block;
     }
 
 
