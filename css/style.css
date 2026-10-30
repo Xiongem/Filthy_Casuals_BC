@@ -257,9 +257,15 @@ a {
         margin: 0.5em;
     }
     #update {
+        position: relative;
         justify-content: center;
         align-items: center;
         margin: 0 0.5em;
+        cursor: pointer;
+    }
+    #explain {
+        position: absolute;
+        display: none;
     }
 }
 
