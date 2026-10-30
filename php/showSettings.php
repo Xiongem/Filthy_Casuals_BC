@@ -22,14 +22,15 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 ?>
 <div class="settings-account-wrapper">
     <div class="settings-account-content">
+        
         <div class="account-title-wrapper">
             <h1>Account</h1>
         </div>
         <form method="post" action="php/" enctype="multipart/form-data">
             <div class="upload-wrapper">
                 <label class="labels">Upload Profile Picture:</label>
-                <div class="profile-picture">
-                    <?= '<img class="profile-picture id="profilePicture" src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';?>
+                <div class="profile-picture" id="profilePicture">
+                    <?= '<img class="profile-picture id="profilePic" src="data:$imageType;base64,' . base64_encode($user['pfpData']) . '" alt="$imageName">';?>
                     <h1 class="upload-icon">
                         <ion-icon name="add" aria-hidden="true"></ion-icon>
                     </h1>
