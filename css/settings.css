@@ -199,4 +199,10 @@
     #timezone {
         width: 50%;
     }
+    .tab {
+        padding-left: 1em;
+    }
+    .tab-link {
+        margin-right: 0.5em;
+    }
 }

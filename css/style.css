@@ -258,6 +258,7 @@ a {
     }
     .nav-item {
         margin: 0.5em;
+        text-decoration: none;
     }
     #update {
         position: relative;
@@ -277,6 +278,9 @@ a {
     }
     .nav-item:hover, #update:hover {
         color: var(--leather);
+    }
+    .nav-item:hover {
+        text-decoration: underline;
     }
 
 
