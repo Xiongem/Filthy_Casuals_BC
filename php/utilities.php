@@ -31,12 +31,13 @@ function makeNav() {
                         <div class="nav-menu-content" id="nav-menu-content">
                             <a class="nav-item" href="index.php">Home</a>
                             <a class="nav-item" href="challenges.php">Challenges</a>
-                            <a class="nav-item" href="rules.php">Rules</a>
+                            <a class="nav-item" href="rules.html">Rules</a>
                             <a id="update" class="nav-item" href="update.php">
                                 update
                                     <ion-icon name="add" id="icon"></ion-icon>
                             </a>
                             <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>
+                            <a class="nav-item" href="friendRec.php">Friend Recs</a>
                             <?php if ($admin == 1) { ?>
                                 <a href="admin.php" class="nav-item">Admin</a>
                             <?php } ?>
@@ -59,6 +60,7 @@ function makeNav() {
                     <a class="nav-item" href="challenges.php">Challenges</a>
                     <a class="nav-item" href="rules.php">Rules</a>
                     <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>
+                    <a class="nav-item" href="friendRec.php">Friend Recs</a>
                     <?php if ($admin == 1) { ?>
                         <a href="admin.php" class="nav-item">Admin</a>
                     <?php } ?>
