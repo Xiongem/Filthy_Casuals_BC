@@ -19,7 +19,7 @@
         display: none;
     }
 
-    .full-wrapper, .overall-wrapper, .content-wrapper {
+    .full-wrapper, .overall-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -31,7 +31,7 @@
         border: 2px solid var(--deep-green);
         border-radius: 8px;
     }
-    .title, .thead-wrapper, .overall-rows {
+    .title, .thead-wrapper, .content-wrapper, .overall-rows {
         display: flex;
         align-items: center;
         width: 100%;
