@@ -80,7 +80,8 @@
         border-radius: 0 0 8px 8px;
     }
     .thead, .tr {
-        width: 100%
+        width: 100%;
+        height: 100%;
     }
     /* .overall-rows {
         border-right: 2px solid var(--deep-green);
