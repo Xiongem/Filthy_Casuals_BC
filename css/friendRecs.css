@@ -46,6 +46,9 @@
     }
     .info-wrapper {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1em;
     }
 }
 /** ####################### *//** ####################### *//** ####################### */
