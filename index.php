@@ -128,6 +128,7 @@ $ratEnd = "11/28/2026";
 
                     $rankLeague = 0;
                     while ($rowLeague = $result2->fetch_assoc()) {
+                        $idLeague = $rowLeague['user_id'];
                         $usernameLeague = $rowLeague["username"];
                         $pointsLeague = $rowLeague["pointsYear"];
                         $imageName = htmlspecialchars($rowLeague['pfpName']);
@@ -137,7 +138,7 @@ $ratEnd = "11/28/2026";
                 ?>
                     <div class="table-rows">
                         <div class="tr"><?=$rankLeague?></div>
-                        <div class="tr">
+                        <div class="tr" onclick="goUser('<?=$idLeague?>')">
                             <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                             <?=$usernameLeague?>
                         </div>
@@ -166,6 +167,7 @@ $ratEnd = "11/28/2026";
                     if($rowGoro>0) {
                         $rankGoro = 0;
                         while ($rowGoro = mysqli_fetch_array($stmt3)) {
+                            $idGoro = $rowGoro["user_id"];
                             $usernameGoro = $rowGoro["username"];
                             $pointsGoro = $rowGoro["pointsYear"];
                             $imageName = htmlspecialchars($rowGoro['pfpName']);
@@ -175,7 +177,7 @@ $ratEnd = "11/28/2026";
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankGoro?></div>
-                            <div class="tr">
+                            <div class="tr" onclick="goUser('<?=$idGoro?>')">
                                 <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameGoro?>
                             </div>
@@ -207,6 +209,7 @@ $ratEnd = "11/28/2026";
                     if($rowFutsuu>0) {
                         $rankFutsuu = 0;
                         while ($rowFutsuu = mysqli_fetch_array($stmt4)) {
+                            $idFutsuu = $rowFutsuu["user_id"];
                             $usernameFutsuu = $rowFutsuu["username"];
                             $pointsFutsuu = $rowFutsuu["pointsYear"];
                             $imageName = htmlspecialchars($rowFutsuu['pfpName']);
@@ -216,7 +219,7 @@ $ratEnd = "11/28/2026";
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankFutsuu?></div>
-                            <div class="tr">
+                            <div class="tr" onclick="goUser('<?=$idFutsuu?>')">
                                 <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameFutsuu?>
                             </div>
@@ -248,6 +251,7 @@ $ratEnd = "11/28/2026";
                     if($rowHayai>0) {
                         $rankHayai = 0;
                         while ($rowHayai = mysqli_fetch_array($stmt5)) {
+                            $idHayai = $rowHayai["user_id"];
                             $usernameHayai = $rowHayai["username"];
                             $pointsHayai = $rowHayai["pointsYear"];
                             $imageName = htmlspecialchars($rowHayai['pfpName']);
@@ -257,7 +261,7 @@ $ratEnd = "11/28/2026";
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankHayai?></div>
-                            <div class="tr">
+                            <div class="tr" onclick="goUser('<?=$idHayai?>')">
                                 <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameHayai?>
                             </div>
@@ -289,6 +293,7 @@ $ratEnd = "11/28/2026";
                     if($rowYabai>0) {
                         $rankYabai = 0;
                         while ($rowYabai = mysqli_fetch_array($stmt6)) {
+                            $idYabai = $rowYabai["user_id"];
                             $usernameYabai = $rowYabai["username"];
                             $pointsYabai = $rowYabai["pointsYear"];
                             $imageName = htmlspecialchars($rowYabai["pfpName"]);
@@ -298,7 +303,7 @@ $ratEnd = "11/28/2026";
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankYabai?></div>
-                            <div class="tr">
+                            <div class="tr" onclick="goUser('<?=$idYabai?>')">
                                 <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameYabai?>
                             </div>
