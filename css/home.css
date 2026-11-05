@@ -132,6 +132,10 @@
         border: 2px solid var(--marine-green);
         margin-right: 0.5em;
     }
+    .userLink {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 
 /** ####################### *//** ####################### *//** ####################### */

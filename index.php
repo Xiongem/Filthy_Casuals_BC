@@ -96,7 +96,7 @@ $ratEnd = "11/28/2026";
 
                     <div class="table-rows">
                         <div class="tr"><?=$rankOverall?></div>
-                        <div class="tr" onclick="goUser('<?=$idOverall?>')">
+                        <div class="tr userLink" onclick="goUser('<?=$idOverall?>')">
                             <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                             <?=$usernameOverall?>
                         </div>
@@ -138,7 +138,7 @@ $ratEnd = "11/28/2026";
                 ?>
                     <div class="table-rows">
                         <div class="tr"><?=$rankLeague?></div>
-                        <div class="tr" onclick="goUser('<?=$idLeague?>')">
+                        <div class="tr userLink" onclick="goUser('<?=$idLeague?>')">
                             <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                             <?=$usernameLeague?>
                         </div>
@@ -177,7 +177,7 @@ $ratEnd = "11/28/2026";
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankGoro?></div>
-                            <div class="tr" onclick="goUser('<?=$idGoro?>')">
+                            <div class="tr userLink" onclick="goUser('<?=$idGoro?>')">
                                 <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameGoro?>
                             </div>
@@ -219,7 +219,7 @@ $ratEnd = "11/28/2026";
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankFutsuu?></div>
-                            <div class="tr" onclick="goUser('<?=$idFutsuu?>')">
+                            <div class="tr userLink" onclick="goUser('<?=$idFutsuu?>')">
                                 <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameFutsuu?>
                             </div>
@@ -261,7 +261,7 @@ $ratEnd = "11/28/2026";
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankHayai?></div>
-                            <div class="tr" onclick="goUser('<?=$idHayai?>')">
+                            <div class="tr userLink" onclick="goUser('<?=$idHayai?>')">
                                 <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameHayai?>
                             </div>
@@ -303,7 +303,7 @@ $ratEnd = "11/28/2026";
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankYabai?></div>
-                            <div class="tr" onclick="goUser('<?=$idYabai?>')">
+                            <div class="tr userLink" onclick="goUser('<?=$idYabai?>')">
                                 <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameYabai?>
                             </div>
