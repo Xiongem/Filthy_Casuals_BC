@@ -36,6 +36,7 @@
         width: 100%;
         text-align: center;
         color: var(--leather);
+        margin: 0.5em 0;
     }
     .read-wrapper {
         display: grid;
