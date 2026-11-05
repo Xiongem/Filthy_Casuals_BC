@@ -15,7 +15,6 @@ $league = $_POST['leagueName'];
 <div class="title-edit">
     <h2>Change Users' Leagues</h2>
 </div>
-<div class="userList-container">
     <?php $sql = $_SESSION["conn"]->query("SELECT * FROM `users` WHERE `league` = '$league'");
     $row = mysqli_num_rows($sql);
     if($row>0) {
@@ -41,7 +40,6 @@ $league = $_POST['leagueName'];
             </div>
         </div>
     <?php }} ?>
-</div>
 
 <script>
     function changeLeague(userID, newLeague) {
