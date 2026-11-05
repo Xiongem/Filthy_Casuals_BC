@@ -49,33 +49,33 @@ $userID = $_SESSION["user_id"];
                 <ion-icon class="caret" name="caret-down-outline" id="listOpen"></ion-icon>
                 <ion-icon class="caret" name="caret-up-outline" id="listClose"></ion-icon>
             </div>
-        </div>
-        <div class="content-wrapper" id="overall">
-            <div class="thead-wrapper">
-                <div class="thead">Rank</div>
-                <div class="thead">User</div>
-                <div class="thead">Points</div>
-            </div>
-            <!--//? DISPLAY RANKINGS HERE -->
-            <?php if ($stmt = $_SESSION["conn"]->prepare("SELECT * FROM users ORDER BY pointsYear DESC")) {
-                $stmt->execute(); 
-                // Get the results...
-                $result = $stmt->get_result();
-                $stmt->close();
-                
-                $rank = 0;
-                while ($row = $result->fetch_assoc()) {
-                    $username = $row["username"];
-                    $points = $row["pointsYear"];
-                    $rank++;  
-                ?>
-
-                <div class="overall-rows">
-                    <div class="tr"><?=$rank?></div>
-                    <div class="tr"><?=$username?></div>
-                    <div class="tr"><?=$points?></div>
+            <div class="content-wrapper" id="overall">
+                <div class="thead-wrapper">
+                    <div class="thead">Rank</div>
+                    <div class="thead">User</div>
+                    <div class="thead">Points</div>
                 </div>
-            <?php }} ?>
+                <!--//? DISPLAY RANKINGS HERE -->
+                <?php if ($stmt = $_SESSION["conn"]->prepare("SELECT * FROM users ORDER BY pointsYear DESC")) {
+                    $stmt->execute(); 
+                    // Get the results...
+                    $result = $stmt->get_result();
+                    $stmt->close();
+                    
+                    $rank = 0;
+                    while ($row = $result->fetch_assoc()) {
+                        $username = $row["username"];
+                        $points = $row["pointsYear"];
+                        $rank++;  
+                    ?>
+
+                    <div class="overall-rows">
+                        <div class="tr"><?=$rank?></div>
+                        <div class="tr"><?=$username?></div>
+                        <div class="tr"><?=$points?></div>
+                    </div>
+                <?php }} ?>
+            </div>
         </div>
     </div>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
