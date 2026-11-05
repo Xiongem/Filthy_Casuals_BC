@@ -147,9 +147,9 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1200px) {
-    .rat-wrapper {
+    /* .rat-wrapper {
         flex-direction: row;
-    }
+    } */
     .rat-title {
         background-color: var(--barium-yellow);
         color: var(--deep-green);
