@@ -57,12 +57,25 @@ $userID = $_SESSION["user_id"];
                 <div class="thead">Points</div>
             </div>
             <!--//? DISPLAY RANKINGS HERE -->
-            <?php if ($stmt = $_SESSION["conn"]->prepare("SELECT * FROM users ORDER BY points DESC")) {?>
+            <?php if ($stmt = $_SESSION["conn"]->prepare("SELECT * FROM users ORDER BY pointsYear DESC")) {
+                $stmt->execute(); 
+                // Get the results...
+                $result = $stmt->get_result();
+                $stmt->close();
+                
+                $rank = 0;
+                while ($row = $result->fetch_assoc()) {
+                    $username = $row["username"];
+                    $points = $row["pointsYear"];
+                    $rank++;  
+                ?>
+
                 <div class="overall-rows">
+                    <div class="tr"><?=$rank?></div>
                     <div class="tr"><?=$username?></div>
                     <div class="tr"><?=$points?></div>
                 </div>
-            <?php } ?>
+            <?php }} ?>
         </div>
     </div>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
