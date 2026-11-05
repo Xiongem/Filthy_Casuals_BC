@@ -27,9 +27,9 @@ $league = $_POST['leagueName'];
             $imageData = base64_encode($leagueName['pfpData']);
     ?>
         <div class="userList">
-            <img class="userList-pfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
-            <div class="userList-username">
-                <?=$username?>
+            <div class="userInfo">
+                <img class="userList-pfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
+                <div class="userList-username"><?=$username?></div>
             </div>
             <div class="userList-league">
                 <select name="league" id="league" onchange="changeLeague(<?=$userID?>, this.value)">
