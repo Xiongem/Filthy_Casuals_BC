@@ -44,10 +44,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
+        min-height: 3em;
         justify-items: center;
         align-items: center;
         text-align: center;
-        padding: 4px;
     }
     .thead-wrapper {
         border-top: 2px solid var(--deep-green);
