@@ -151,6 +151,9 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1200px) {
+    .popup-content {
+        width: 100%;
+    }
     .userList-container {
         display: flex;
         flex-direction: row;
