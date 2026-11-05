@@ -90,7 +90,7 @@ $userID = $_SESSION["user_id"];
                     <div class="thead">Points</div>
                 </div>
                 <!--//? DISPLAY RANKINGS HERE -->
-                <?php if ($stmt2 = $_SESSION["conn"]->prepare("SELECT * FROM users WHERE league = ? ORDER BY points DESC")) {
+                <?php if ($stmt2 = $_SESSION["conn"]->prepare("SELECT * FROM users WHERE league = ? ORDER BY pointsYear DESC")) {
                     $stmt2->bind_param('s', $league);
                     $stmt2->execute();
                     $result2 = $stmt2->get_result();
