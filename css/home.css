@@ -42,7 +42,7 @@
     }
     .thead-wrapper, .overall-rows {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 20% 40% 40%;
         width: 100%;
         min-height: 2em;
         justify-items: center;
