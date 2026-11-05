@@ -46,8 +46,8 @@ $userID = $_SESSION["user_id"];
                 <h1>
                     Overall Ranking
                 </h1>
-                <ion-icon size="large" class="caret" name="caret-down-outline" id="listOpen"></ion-icon>
-                <ion-icon size="large" class="caret" name="caret-up-outline" id="listClose"></ion-icon>
+                <ion-icon size="large" class="caret" name="caret-down-outline" id="listOpen" onclick="hideOverall()"></ion-icon>
+                <ion-icon size="large" class="caret" name="caret-up-outline" id="listClose" onclick="showOverall()"></ion-icon>
             </div>
             <div class="content-wrapper" id="overall">
                 <div class="thead-wrapper">
@@ -78,6 +78,18 @@ $userID = $_SESSION["user_id"];
             </div>
         </div>
     </div>
+    <script>
+        function hideOverall() {
+            $("#overall").hide();
+            $("#listOpen").show();
+            $("#listClose").hide();
+        }
+        function showOverall() {
+            $("#overall").show();
+            $("#listOpen").hide();
+            $("#listClose").show();
+        }
+    </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>

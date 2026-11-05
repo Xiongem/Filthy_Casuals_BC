@@ -43,6 +43,7 @@
     }
     .caret {
         margin-left: 0.5em;
+        cursor: pointer;
     }
     .thead-wrapper, .overall-rows {
         display: grid;
