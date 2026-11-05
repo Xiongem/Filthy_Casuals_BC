@@ -163,6 +163,13 @@
         justify-content: space-evenly;
         align-items: center;
     }
+    .userInfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
     .userList-pfp {
         width: 2em;
         height: 2em;
