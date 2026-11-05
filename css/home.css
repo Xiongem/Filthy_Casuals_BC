@@ -53,10 +53,11 @@
         display: grid;
         grid-template-columns: 16% 53% 31%;
         width: 100%;
-        min-height: 2em;
+        min-height: 3em;
         justify-items: center;
         align-items: center;
         text-align: center;
+        font-size: 18px;
     }
     .thead-wrapper {
         /* border-top: 2px solid var(--deep-green); */
@@ -99,6 +100,12 @@
     }
     .desktop-table-wrapper {
         display: none;
+    }
+    .tablePfp {
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 50%;
+        object-fit: cover;
     }
 }
 

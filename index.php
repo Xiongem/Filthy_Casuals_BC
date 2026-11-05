@@ -64,11 +64,15 @@ $userID = $_SESSION["user_id"];
                     while ($rowOverall = $result1->fetch_assoc()) {
                         $usernameOverall = $rowOverall["username"];
                         $pointsOverall = $rowOverall["pointsYear"];
-                        $rankOverall++;  
+                        $imageName = htmlspecialchars($rowOverall['pfpName']);
+                        $imageType = $rowOverall['pfpType'];
+                        $imageData = base64_encode($rowOverall['pfpData']);
+                            $rankOverall++;  
                     ?>
 
                     <div class="table-rows">
                         <div class="tr"><?=$rankOverall?></div>
+                        <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                         <div class="tr"><?=$usernameOverall?></div>
                         <div class="tr"><?=$pointsOverall?></div>
                     </div>
@@ -100,10 +104,14 @@ $userID = $_SESSION["user_id"];
                     while ($rowLeague = $result2->fetch_assoc()) {
                         $usernameLeague = $rowLeague["username"];
                         $pointsLeague = $rowLeague["pointsYear"];
-                        $rankLeague++;
+                        $imageName = htmlspecialchars($rowLeague['pfpName']);
+                        $imageType = $rowLeague['pfpType'];
+                        $imageData = base64_encode($rowLeague['pfpData']);
+                            $rankLeague++;
                 ?>
                     <div class="table-rows">
                         <div class="tr"><?=$rankLeague?></div>
+                        <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                         <div class="tr"><?=$usernameLeague?></div>
                         <div class="tr"><?=$pointsLeague?></div>
                     </div>
@@ -132,10 +140,14 @@ $userID = $_SESSION["user_id"];
                         while ($rowGoro = mysqli_fetch_array($stmt3)) {
                             $usernameGoro = $rowGoro["username"];
                             $pointsGoro = $rowGoro["pointsYear"];
-                            $rankGoro++;
+                            $imageName = htmlspecialchars($rowGoro['pfpName']);
+                            $imageType = $rowGoro['pfpType'];
+                            $imageData = base64_encode($rowGoro['pfpData']);
+                                $rankGoro++;
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankGoro?></div>
+                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                             <div class="tr"><?=$usernameGoro?></div>
                             <div class="tr"><?=$pointsGoro?></div>
                         </div>
@@ -167,10 +179,14 @@ $userID = $_SESSION["user_id"];
                         while ($rowFutsuu = mysqli_fetch_array($stmt4)) {
                             $usernameFutsuu = $rowFutsuu["username"];
                             $pointsFutsuu = $rowFutsuu["pointsYear"];
-                            $rankFutsuu++;
+                            $imageName = htmlspecialchars($rowFutsuu['pfpName']);
+                            $imageType = $rowFutsuu['pfpType'];
+                            $imageData = base64_encode($rowFutsuu['pfpData']);
+                                $rankFutsuu++;
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankFutsuu?></div>
+                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                             <div class="tr"><?=$usernameFutsuu?></div>
                             <div class="tr"><?=$pointsFutsuu?></div>
                         </div>
@@ -202,10 +218,14 @@ $userID = $_SESSION["user_id"];
                         while ($rowHayai = mysqli_fetch_array($stmt5)) {
                             $usernameHayai = $rowHayai["username"];
                             $pointsHayai = $rowHayai["pointsYear"];
-                            $rankHayai++;
+                            $imageName = htmlspecialchars($rowHayai['pfpName']);
+                            $imageType = $rowHayai['pfpType'];
+                            $imageData = base64_encode($rowHayai['pfpData']);
+                                $rankHayai++;
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankHayai?></div>
+                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                             <div class="tr"><?=$usernameHayai?></div>
                             <div class="tr"><?=$pointsHayai?></div>
                         </div>
@@ -237,10 +257,14 @@ $userID = $_SESSION["user_id"];
                         while ($rowYabai = mysqli_fetch_array($stmt6)) {
                             $usernameYabai = $rowYabai["username"];
                             $pointsYabai = $rowYabai["pointsYear"];
-                            $rankYabai++;
+                            $imageName = htmlspecialchars($rowYabai["pfpName"]);
+                            $imageType = $rowYabai["pfpType"];
+                            $imageData = base64_encode($rowYabai["pfpData"]);
+                                $rankYabai++;
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankYabai?></div>
+                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                             <div class="tr"><?=$usernameYabai?></div>
                             <div class="tr"><?=$pointsYabai?></div>
                         </div>
