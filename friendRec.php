@@ -66,7 +66,7 @@ $userID = $_SESSION["user_id"];
                     $rec5Series = $row["rec5_series"];
         ?>
             <div class="name" id="<?=$username?>">
-                <h3><?=$username?></h3>
+                <h2><?=$username?></h2>
             </div>
             <div class="read-wrapper">
                 <div class="rank">1.</div>
