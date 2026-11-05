@@ -82,16 +82,16 @@ $userID = $_SESSION["user_id"];
                 <h1>
                     Overall Ranking
                 </h1>
-                <ion-icon size="large" class="caret" name="caret-down-outline" id="leagueClose" onclick="hideTable(league, leagueClose)"></ion-icon>
-                <ion-icon size="large" class="caret" name="caret-up-outline" id="leagueOpen" onclick="showTable(league, leagueOpen)"></ion-icon>
+                <ion-icon size="large" class="caret" name="caret-down-outline" id="leagueClose" onclick="hideTable('#league', '#leagueClose')"></ion-icon>
+                <ion-icon size="large" class="caret" name="caret-up-outline" id="leagueOpen" onclick="showTable('#league', '#leagueOpen')"></ion-icon>
             </div>
         </div>
     </div>
     <script>
         function hideTable(tableId, closeIconId) {
-            $("#" . tableId).css("display", "none");
-            $("#" . closeIconId).css("display", "none");
-            $("#" . openIconId).css("display", "block");
+            $(tableId).css("display", "none");
+            $(closeIconId).css("display", "none");
+            $(openIconId).css("display", "block");
         }
         function showTable(tableId, openIconId) {
             $("#" + tableId).css("display", "flex");
