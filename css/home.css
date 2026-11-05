@@ -40,6 +40,8 @@
         justify-content: center;
         width: 100%;
         padding: 0.5em;
+
+        background-color: var(--leather);
     }
     .caret {
         margin-left: 0.5em;
