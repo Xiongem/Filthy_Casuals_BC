@@ -34,7 +34,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
     <meta property="og:url" content="">
     <title>Reading History</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
+    <!-- <link rel="stylesheet" href="css/home.css"> -->
     <link rel="stylesheet" href="css/readHistory.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <script src="javascript/scripts.js"></script>
