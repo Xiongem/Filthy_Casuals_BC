@@ -11,13 +11,11 @@ forceLogin();
 
 $userID = $_SESSION["user_id"];
 
-//  $sql = "SELECT * FROM users WHERE user_id = $userID";
-//         $result = $_SESSION["conn"]->query($sql);
-//         $user = $result->fetch_assoc();
-//             $admin = $user['admin'];
-//             $imageName = htmlspecialchars($user['pfpName']);
-//                 $imageType = $user['pfpType'];
-//                 $imageData = base64_encode($user['pfpData']);
+ $sql = "SELECT * FROM users WHERE user_id = $userID";
+        $result = $_SESSION["conn"]->query($sql);
+        $user = $result->fetch_assoc();
+            $league = $user["league"];
+            $admin = $user["admin"];
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +39,7 @@ $userID = $_SESSION["user_id"];
         <?= makeNav() ?>
     </header>
     <div class="full-wrapper">
-        <div class="overall-wrapper">
+        <div class="table-wrapper">
             <div class="title">
                 <h1>
                     Overall Ranking
@@ -56,35 +54,60 @@ $userID = $_SESSION["user_id"];
                     <div class="thead">Points</div>
                 </div>
                 <!--//? DISPLAY RANKINGS HERE -->
-                <?php if ($stmt = $_SESSION["conn"]->prepare("SELECT * FROM users ORDER BY pointsYear DESC")) {
-                    $stmt->execute(); 
+                <?php if ($stmt1 = $_SESSION["conn"]->prepare("SELECT * FROM users ORDER BY pointsYear DESC")) {
+                    $stmt1->execute(); 
                     // Get the results...
-                    $result = $stmt->get_result();
-                    $stmt->close();
+                    $result1 = $stmt1->get_result();
+                    $stmt1->close();
                     
-                    $rank = 0;
-                    while ($row = $result->fetch_assoc()) {
-                        $username = $row["username"];
-                        $points = $row["pointsYear"];
-                        $rank++;  
+                    $rankOverall = 0;
+                    while ($rowOverall = $result1->fetch_assoc()) {
+                        $usernameOverall = $rowOverall["username"];
+                        $pointsOverall = $rowOverall["pointsYear"];
+                        $rankOverall++;  
                     ?>
 
-                    <div class="overall-rows">
-                        <div class="tr"><?=$rank?></div>
-                        <div class="tr"><?=$username?></div>
-                        <div class="tr"><?=$points?></div>
+                    <div class="table-rows">
+                        <div class="tr"><?=$rankOverall?></div>
+                        <div class="tr"><?=$usernameOverall?></div>
+                        <div class="tr"><?=$pointsOverall?></div>
                     </div>
                 <?php }} ?>
             </div>
         </div>
-        <div class="league-wrapper">
+        <div class="table-wrapper">
             <div class="title">
                 <h1>
-                    Overall Ranking
+                    <?=$league?> Ranking
                 </h1>
                 <ion-icon size="large" class="caret" name="caret-down-outline" id="leagueClose" onclick="hideTable('#league', '#leagueClose', '#leagueOpen')"></ion-icon>
                 <ion-icon size="large" class="caret" name="caret-up-outline" id="leagueOpen" onclick="showTable('#league', '#leagueOpen', '#leagueClose')"></ion-icon>
             </div>
+            <div class="content-wrapper" id="overall">
+                <div class="thead-wrapper">
+                    <div class="thead">Rank</div>
+                    <div class="thead">User</div>
+                    <div class="thead">Points</div>
+                </div>
+                <!--//? DISPLAY RANKINGS HERE -->
+                <?php if ($stmt2 = $_SESSION["conn"]->prepare("SELECT * FROM users WHERE league = ? ORDER BY points DESC")) {
+                    $stmt2->bind_param('s', $league);
+                    $stmt2->execute();
+                    $result2 = $stmt2->get_result();
+                    $stmt2->close();
+
+                    $rankLeague = 0;
+                    while ($rowLeague = $result2->fetch_assoc()) {
+                        $usernameLeague = $rowLeague["username"];
+                        $pointsLeague = $rowLeague["points"];
+                        $rankLeague++;
+                ?>
+                    <div class="table-rows">
+                        <div class="tr"><?=$rankLeague?></div>
+                        <div class="tr"><?=$usernameLeague?></div>
+                        <div class="tr"><?=$pointsLeague?></div>
+                    </div>
+                <?php }} ?>
         </div>
     </div>
     <script>
