@@ -81,13 +81,13 @@ $userID = $_SESSION["user_id"];
     <script>
         function hideOverall() {
             $("#overall").css("display", "none");
-            $("#listOpen").css("display", "block");
-            $("#listClose").css("display", "none");
+            $("#listOpen").css("display", "none");
+            $("#listClose").css("display", "block");
         }
         function showOverall() {
             $("#overall").css("display", "flex");
-            $("#listOpen").css("display", "none");
-            $("#listClose").css("display", "block");
+            $("#listOpen").css("display", "block");
+            $("#listClose").css("display", "none");
         }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
