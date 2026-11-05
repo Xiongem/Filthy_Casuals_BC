@@ -46,8 +46,8 @@ $userID = $_SESSION["user_id"];
                 <h1>
                     Overall Ranking
                 </h1>
-                <ion-icon class="caret" name="caret-down-outline" id="listOpen"></ion-icon>
-                <ion-icon class="caret" name="caret-up-outline" id="listClose"></ion-icon>
+                <ion-icon size="large" class="caret" name="caret-down-outline" id="listOpen"></ion-icon>
+                <ion-icon size="large" class="caret" name="caret-up-outline" id="listClose"></ion-icon>
             </div>
             <div class="content-wrapper" id="overall">
                 <div class="thead-wrapper">
