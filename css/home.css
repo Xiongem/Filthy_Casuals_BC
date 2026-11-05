@@ -41,14 +41,18 @@
     }
     .thead-wrapper {
         border-top: 2px solid var(--deep-green);
-    }
-    .thead {
         background-color: var(--deep-green);
         color: var(--barium-yellow);
+    }
+    .thead {
+        
     }
     .overall-rows {
         background-color: var(--barium-yellow);
         color: var(--deep-green);
+    }
+    .overall-rows:last-child {
+        border-radius: 0 0 8px 8px;
     }
 }
 
