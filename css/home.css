@@ -140,6 +140,7 @@
     }
     .table-wrapper {
        margin: 0;
+       justify-self: center;
     }
     .nothing {
         display: flex;
