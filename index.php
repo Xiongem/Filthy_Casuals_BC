@@ -46,8 +46,8 @@ $userID = $_SESSION["user_id"];
                 <h1>
                     Overall Ranking
                 </h1>
-                <ion-icon size="large" class="caret" name="caret-down-outline" id="overallClose" onclick="hideTable(overall, overallClose)"></ion-icon>
-                <ion-icon size="large" class="caret" name="caret-up-outline" id="overallOpen" onclick="showTable(overall, overallOpen)"></ion-icon>
+                <ion-icon size="large" class="caret" name="caret-down-outline" id="overallClose" onclick="hideTable('#overall', '#overallClose')"></ion-icon>
+                <ion-icon size="large" class="caret" name="caret-up-outline" id="overallOpen" onclick="showTable('#overall', '#overallOpen')"></ion-icon>
             </div>
             <div class="content-wrapper" id="overall">
                 <div class="thead-wrapper">
@@ -94,9 +94,9 @@ $userID = $_SESSION["user_id"];
             $(openIconId).css("display", "block");
         }
         function showTable(tableId, openIconId) {
-            $("#" + tableId).css("display", "flex");
-            $("#" + closeIconId).css("display", "block");
-            $("#" + openIconId).css("display", "none");
+            $(tableId).css("display", "flex");
+            $(closeIconId).css("display", "block");
+            $(openIconId).css("display", "none");
         }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
