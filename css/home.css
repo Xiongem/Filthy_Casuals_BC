@@ -28,7 +28,7 @@
         width: 90%;
         align-items: center;
 
-        border: 2px solid var(--deep-green);
+        border: 4px solid var(--deep-green);
         border-radius: 8px;
         margin-bottom: 2em;
     }
@@ -43,7 +43,7 @@
         padding: 0.5em;
 
         background-color: var(--leather);
-        border-radius: 8px 8px 0 0;
+        border-radius: 6px 6px 0 0;
     }
     .caret {
         margin-left: 0.5em;
