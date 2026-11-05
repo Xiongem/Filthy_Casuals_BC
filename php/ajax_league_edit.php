@@ -32,7 +32,7 @@ $league = $_POST['leagueName'];
                 <div class="userList-username"><?=$username?></div>
             </div>
             <div class="userList-league">
-                <select name="league" id="league" onchange="changeLeague(<?=$userID?>, this.value)">
+                <select class="inputs" name="league" id="league" onchange="changeLeague(<?=$userID?>, this.value)">
                     <option value="Gorogoro" <?php if ($league == "Gorogoro") { ?>selected="selected"<?php } ?>>Gorogoro</option>
                     <option value="Futsuu" <?php if ($league == "Futsuu") { ?>selected="selected"<?php } ?>>Futsuu</option>
                     <option value="Hayai" <?php if ($league == "Hayai") { ?>selected="selected"<?php } ?>>Hayai</option>
