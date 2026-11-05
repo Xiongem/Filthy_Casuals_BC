@@ -75,7 +75,7 @@ $userID = $_SESSION["user_id"];
                 <?php }} ?>
             </div>
         </div>
-        <div class="table-wrapper">
+        <div class="table-wrapper" id="mobile">
             <div class="title">
                 <h1>
                     <?=$league?> Ranking
