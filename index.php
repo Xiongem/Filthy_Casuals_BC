@@ -89,9 +89,9 @@ $userID = $_SESSION["user_id"];
     </div>
     <script>
         function hideTable(tableId, closeIconId) {
-            $("#" + tableId).css("display", "none");
-            $("#" + closeIconId).css("display", "none");
-            $("#" + openIconId).css("display", "block");
+            $("#" . tableId).css("display", "none");
+            $("#" . closeIconId).css("display", "none");
+            $("#" . openIconId).css("display", "block");
         }
         function showTable(tableId, openIconId) {
             $("#" + tableId).css("display", "flex");
