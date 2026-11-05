@@ -174,7 +174,7 @@ $ratEnd = "11/28/2026";
                     <?php 
                     $stmt3 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Gorogoro' ORDER BY pointsYear DESC");
                     $rowGoro = mysqli_num_rows($stmt3);
-                    if($rowGoro>0) {
+                    if($rowGoro > 0) {
                         $rankGoro = 0;
                         while ($rowGoro = mysqli_fetch_array($stmt3)) {
                             $idGoro = $rowGoro["user_id"];
@@ -217,7 +217,7 @@ $ratEnd = "11/28/2026";
                     <?php 
                     $stmt4 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Futsuu' ORDER BY pointsYear DESC");
                     $rowFutsuu = mysqli_num_rows($stmt4);
-                    if($rowFutsuu>0) {
+                    if($rowFutsuu > 0) {
                         $rankFutsuu = 0;
                         while ($rowFutsuu = mysqli_fetch_array($stmt4)) {
                             $idFutsuu = $rowFutsuu["user_id"];
@@ -260,7 +260,7 @@ $ratEnd = "11/28/2026";
                     <?php 
                     $stmt5 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Hayai' ORDER BY pointsYear DESC");
                     $rowHayai = mysqli_num_rows($stmt5);
-                    if($rowHayai>0) {
+                    if($rowHayai > 0) {
                         $rankHayai = 0;
                         while ($rowHayai = mysqli_fetch_array($stmt5)) {
                             $idHayai = $rowHayai["user_id"];
@@ -303,7 +303,7 @@ $ratEnd = "11/28/2026";
                     <?php 
                     $stmt6 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Yabai' ORDER BY pointsYear DESC");
                     $rowYabai = mysqli_num_rows($stmt6);
-                    if($rowYabai>0) {
+                    if($rowYabai > 0) {
                         $rankYabai = 0;
                         while ($rowYabai = mysqli_fetch_array($stmt6)) {
                             $idYabai = $rowYabai["user_id"];

@@ -16,16 +16,7 @@ $userID = $_SESSION["user_id"];
 //     $user = $result1->fetch_assoc();
 //         $username = $user["username"];
 
-$sql2 = "SELECT * From `friendRecs`";
-    $result2 = $_SESSION["conn"]->query($sql2);
-    $read = $result2->fetch_assoc();
-        if (isset($read)) {
-            $ID = $read["user_id"];
-            $username = $read["username"];
-            $title = $read["title"];
-            $author = $read["author"];
-            $series = $read["series"];
-        }
+
 
 ?>
 
@@ -40,7 +31,7 @@ $sql2 = "SELECT * From `friendRecs`";
     <meta property="og:url" content="">
     <title>Friend Recs</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/friendRecs.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <script src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -49,15 +40,94 @@ $sql2 = "SELECT * From `friendRecs`";
     <header>
         <?= makeNav() ?>
     </header>
-    <div class="rec-input-button" onclick="showRecPopup()">
+    <div class="rec-input-button buttons" onclick="showRecPopup()">
         <p>update</p>
     </div>
     <div class="wrapper">
         <div class="rec-wrapper">
+        <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM friendRecs");
+            $row = mysqli_num_rows($stmt);
+            if($row > 0) {
+                while($row = mysqli_fetch_assoc($stmt)) {
+                    $username = $row["username"];
+                    $rec1Title = $row["rec1_title"];
+                    $rec1Author = $row["rec1_author"];
+                    $rec1Series = $row["rec1_series"];
+                    $rec2Title = $row["rec2_title"];
+                    $rec2Author = $row["rec2_author"];
+                    $rec2Series = $row["rec2_series"];
+                    $rec3Title = $row["rec3_title"];
+                    $rec3Author = $row["rec3_author"];
+                    $rec3Series = $row["rec3_series"];
+                    $rec4Title = $row["rec4_title"];
+                    $rec4Author = $row["rec4_author"];
+                    $rec4Series = $row["rec4_series"];
+                    $rec5Title = $row["rec5_title"];
+                    $rec5Author = $row["rec5_author"];
+                    $rec5Series = $row["rec5_series"];
+        ?>
             <div class="name" id="<?=$username?>"><?=$username?></div>
-            <div class="read-wrapper"></div>
-                <div class="title" id="<?=$title?>"><?=$title?></div>
-                <div class="author" id="<?=$author?>"><?=$author?></div>
+            <div class="read-wrapper">
+                <div class="info" id="<?=$rec1Title?>">
+                    <?=$rec1Title?>
+                </div>
+                <div class="info" id="<?=$rec1Author?>">
+                    <?=$rec1Author?>
+                </div>
+                <div class="info" id="<?=$rec1Series?>">
+                    <?=$rec1Series?>
+                </div>
+            </div>
+        
+            <div class="read-wrapper">
+                <div class="info" id="<?=$rec2Title?>">
+                    <?=$rec2Title?>
+                </div>
+                <div class="info" id="<?=$rec2Author?>">
+                    <?=$rec2Author?>
+                </div>
+                <div class="info" id="<?=$rec2Series?>">
+                    <?=$rec2Series?>
+                </div>
+            </div>
+
+            <div class="read-wrapper">
+                <div class="info" id="<?=$rec3Title?>">
+                    <?=$rec3Title?>
+                </div>
+                <div class="info" id="<?=$rec3Author?>">
+                    <?=$rec3Author?>
+                </div>
+                <div class="info" id="<?=$rec3Series?>">
+                    <?=$rec3Series?>
+                </div>
+            </div>
+
+            <div class="read-wrapper">
+                <div class="info" id="<?=$rec4Title?>">
+                    <?=$rec4Title?>
+                </div>
+                <div class="info" id="<?=$rec4Author?>">
+                    <?=$rec4Author?>
+                </div>
+                <div class="info" id="<?=$rec4Series?>">
+                    <?=$rec4Series?>
+                </div>
+            </div>
+
+            <div class="read-wrapper">
+                <div class="info" id="<?=$rec5Title?>">
+                    <?=$rec5Title?>
+                </div>
+                <div class="info" id="<?=$rec5Author?>">
+                    <?=$rec5Author?>
+                </div>
+                <div class="info" id="<?=$rec5Series?>">
+                    <?=$rec5Series?>
+                </div>
+            </div>
+
+        <?php }}?>
         </div>
     </div>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
