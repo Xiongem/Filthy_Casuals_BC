@@ -16,7 +16,7 @@ $league = $_POST['leagueName'];
     <h2>Change Users' Leagues</h2>
 </div>
 <div class="userList-container">
-    <?php $sql = $_SESSION["conn"]->query("SELECT * FROM `users` WHERE `league` = $league");
+    <?php $sql = $_SESSION["conn"]->query("SELECT * FROM `users` WHERE league = $league");
     $row = mysqli_num_rows($sql);
     if($row>0) {
         while ($leagueName = mysqli_fetch_array($sql)) {
