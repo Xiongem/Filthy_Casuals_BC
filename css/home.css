@@ -79,7 +79,7 @@
     .overall-rows:last-child {
         border-radius: 0 0 8px 8px;
     }
-    .tr {
+    .thead, .tr {
         width: 100%
     }
     /* .overall-rows {
