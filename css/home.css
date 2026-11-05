@@ -30,6 +30,7 @@
 
         border: 2px solid var(--deep-green);
         border-radius: 8px;
+        margin-bottom: 2em;
     }
     .content-wrapper {
         width: 100%;
