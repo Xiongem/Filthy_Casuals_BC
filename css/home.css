@@ -49,7 +49,7 @@
         margin-left: 0.5em;
         cursor: pointer;
     }
-    .thead-wrapper, .overall-rows {
+    .thead-wrapper, .table-rows {
         display: grid;
         grid-template-columns: 16% 53% 31%;
         width: 100%;
