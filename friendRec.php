@@ -37,8 +37,10 @@ $userID = $_SESSION["user_id"];
     <header>
         <?= makeNav() ?>
     </header>
-    <div class="rec-input-button buttons" onclick="showRecPopup()">
-        <p>update</p>
+    <div class="button-wrapper">
+        <div class="rec-input-button buttons" onclick="showRecPopup()">
+            <p>update</p>
+        </div>
     </div>
     <div class="wrapper">
         <div class="rec-wrapper">
