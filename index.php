@@ -46,8 +46,8 @@ $userID = $_SESSION["user_id"];
                 <h1>
                     Overall Ranking
                 </h1>
-                <ion-icon size="large" class="caret" name="caret-down-outline" id="listOpen" onclick="hideOverall()"></ion-icon>
-                <ion-icon size="large" class="caret" name="caret-up-outline" id="listClose" onclick="showOverall()"></ion-icon>
+                <ion-icon size="large" class="caret" name="caret-down-outline" id="overallClose" onclick="hideTable(overall, overallClose)"></ion-icon>
+                <ion-icon size="large" class="caret" name="caret-up-outline" id="overallOpen" onclick="showTable(overall, overallOpen)"></ion-icon>
             </div>
             <div class="content-wrapper" id="overall">
                 <div class="thead-wrapper">
@@ -77,17 +77,26 @@ $userID = $_SESSION["user_id"];
                 <?php }} ?>
             </div>
         </div>
+        <div class="league-wrapper">
+            <div class="title">
+                <h1>
+                    Overall Ranking
+                </h1>
+                <ion-icon size="large" class="caret" name="caret-down-outline" id="leagueClose" onclick="hideTable(league, leagueClose)"></ion-icon>
+                <ion-icon size="large" class="caret" name="caret-up-outline" id="leagueOpen" onclick="showTable(league, leagueOpen)"></ion-icon>
+            </div>
+        </div>
     </div>
     <script>
-        function hideOverall() {
-            $("#overall").css("display", "none");
-            $("#listOpen").css("display", "none");
-            $("#listClose").css("display", "block");
+        function hideTable(tableId, closeIconId) {
+            $("#" + tableId).css("display", "none");
+            $("#" + closeIconId).css("display", "none");
+            $("#" + openIconId).css("display", "block");
         }
-        function showOverall() {
-            $("#overall").css("display", "flex");
-            $("#listOpen").css("display", "block");
-            $("#listClose").css("display", "none");
+        function showTable(tableId, openIconId) {
+            $("#" + tableId).css("display", "flex");
+            $("#" + closeIconId).css("display", "block");
+            $("#" + openIconId).css("display", "none");
         }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
