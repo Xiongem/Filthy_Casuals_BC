@@ -85,6 +85,7 @@ $ratEnd = "11/28/2026";
                     
                     $rankOverall = 0;
                     while ($rowOverall = $result1->fetch_assoc()) {
+                        $idOverall = $rowOverall["user_id"];
                         $usernameOverall = $rowOverall["username"];
                         $pointsOverall = $rowOverall["pointsYear"];
                         $imageName = htmlspecialchars($rowOverall['pfpName']);
@@ -95,7 +96,7 @@ $ratEnd = "11/28/2026";
 
                     <div class="table-rows">
                         <div class="tr"><?=$rankOverall?></div>
-                        <div class="tr">
+                        <div class="tr" onclick="goUser('<?=$idOverall?>')">
                             <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                             <?=$usernameOverall?>
                         </div>
@@ -313,6 +314,9 @@ $ratEnd = "11/28/2026";
         </div>
     </div>
     <script>
+        function goUser(userId) {
+            window.location.href = "readHistory.php?user_id=" + userId;
+        }
         function hideTable(tableId, closeIconId, openIconId) {
             $(tableId).css("display", "none");
             $(closeIconId).css("display", "none");
