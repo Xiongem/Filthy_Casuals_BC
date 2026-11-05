@@ -66,13 +66,13 @@
         color: var(--barium-yellow);
     }
     .thead-wrapper div {
-        border-right: 2px solid var(--barium-yellow);
+        border-right: 2px solid var(--leather);
     }
     .thead-wrapper div:last-child {
         border-right: none;
     }
     .table-rows div {
-        border-right: 2px solid var(--deep-green);
+        border-right: 2px solid var(--leather);
     }
     .table-rows div:last-child {
         border-right: none;
