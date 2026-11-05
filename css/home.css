@@ -25,11 +25,14 @@
         align-items: center;
     }
     .overall-wrapper {
+        width: 90%;
+
         border: 2px solid var(--deep-green);
         border-radius: 8px;
     }
     .title, .thead-wrapper, .overall-rows {
         display: flex;
+        width: 100%;
     }
     .thead-wrapper {
         border-top: 2px solid var(--deep-green);
@@ -37,6 +40,10 @@
     .thead {
         background-color: var(--deep-green);
         color: var(--barium-yellow);
+    }
+    .overall-rows {
+        background-color: var(--barium-yellow);
+        color: var(--deep-green);
     }
 }
 
