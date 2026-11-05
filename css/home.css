@@ -45,12 +45,25 @@
         background-color: var(--deep-green);
         color: var(--barium-yellow);
     }
+    .thead {
+        border-right: 2px solid var(--barium-yellow);
+    }
+    .thead:last-child {
+        border-right: none;
+    }
     .overall-rows {
         background-color: var(--barium-yellow);
         color: var(--deep-green);
     }
     .overall-rows:last-child {
         border-radius: 0 0 8px 8px;
+    }
+    .tr {
+        border-right: 2px solid var(--deep-green);
+    }
+    .tr:last-child {
+        border-right: none;
+
     }
 }
 
