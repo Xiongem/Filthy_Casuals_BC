@@ -155,7 +155,7 @@
         width: 100%;
     }
     .title {
-        background-color: none;
+        background-color: var(--barium-yellow);
     }
     .userList {
         /* display: flex;
@@ -167,7 +167,8 @@
         width: 100%;
         justify-items: center;
         align-items: center;
-        margin: 0.5em 0;
+        padding: 0.5em 0;
+        border: 2px solid var(--deep-green);
     }
     .inputs {
         margin: 0;
