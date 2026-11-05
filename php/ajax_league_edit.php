@@ -27,9 +27,7 @@ $league = $_POST['leagueName'];
             $imageData = base64_encode($leagueName['pfpData']);
     ?>
         <div class="userList">
-            <div class="userList-pfp">
-                <img src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
-            </div>
+            <img class="userList-pfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
             <div class="userList-username">
                 <?=$username?>
             </div>
