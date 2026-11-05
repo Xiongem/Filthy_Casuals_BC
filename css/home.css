@@ -14,7 +14,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
     }
     .rat-title {
         width: 100%;
@@ -147,6 +147,13 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1200px) {
+    .rat-wrapper {
+        flex-direction: row;
+    }
+    .rat-title {
+        background-color: var(--barium-yellow);
+        color: var(--deep-green);
+    }
     #mobile {
         display: none;
     }
