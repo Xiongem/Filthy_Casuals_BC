@@ -51,6 +51,7 @@
     }
     .thead-wrapper {
         border-top: 2px solid var(--deep-green);
+        border-bottom: 2px solid var(--leather);
         background-color: var(--deep-green);
         color: var(--barium-yellow);
     }
