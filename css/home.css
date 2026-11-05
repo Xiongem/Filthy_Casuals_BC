@@ -53,7 +53,7 @@
         display: grid;
         grid-template-columns: 16% 53% 31%;
         width: 100%;
-        min-height: 3em;
+        min-height: 2em;
         justify-items: center;
         align-items: center;
         text-align: center;
@@ -102,8 +102,8 @@
         display: none;
     }
     .tablePfp {
-        width: 2.5em;
-        height: 2.5em;
+        width: 1.5em;
+        height: 1.5em;
         border-radius: 50%;
         object-fit: cover;
         /* background-color: var(--leather); */
@@ -159,7 +159,7 @@
         background-color: var(--barium-yellow);
         color: var(--deep-green);
         width: 100%;
-        min-height: 3em;
+        min-height: 2em;
         border-radius: 0 0 8px 8px;
         font-size: 18px;
     }
