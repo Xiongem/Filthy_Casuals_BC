@@ -71,19 +71,19 @@ $userID = $_SESSION["user_id"];
             <div class="read-wrapper">
                 <div class="rank">1.</div>
                 <div class="info-wrapper">
-                    <p class="label">Title:</p>
+                    <h5 class="label">Title:</h5>
                     <div class="info" id="<?=$rec1Title?>">
                         <?=$rec1Title?>
                     </div>
                 </div>
                 <div class="info-wrapper">
-                    <p class="label">Author:</p>
+                    <h5 class="label">Author:</h5>
                     <div class="info" id="<?=$rec1Author?>">
                         <?=$rec1Author?>
                     </div>
                 </div>
                 <div class="info-wrapper">
-                    <p class="label">Series:</p>
+                    <h5 class="label">Series:</h5>
                     <div class="info" id="<?=$rec1Series?>">
                         <?=$rec1Series?>
                     </div>
@@ -93,19 +93,19 @@ $userID = $_SESSION["user_id"];
             <div class="read-wrapper">
                 <div class="rank">2.</div>
                 <div class="info-wrapper">
-                    <p class="label">Title:</p>
+                    <h5 class="label">Title:</h5>
                     <div class="info" id="<?=$rec2Title?>">
                         <?=$rec2Title?>
                     </div>
                 </div>
                 <div class="info-wrapper">
-                    <p class="label">Author:</p>
+                    <h5 class="label">Author:</h5>
                     <div class="info" id="<?=$rec2Author?>">
                         <?=$rec2Author?>
                     </div>
                 </div>
                 <div class="info-wrapper">
-                    <p class="label">Series:</p>
+                    <h5 class="label">Series:</h5>
                     <div class="info" id="<?=$rec2Series?>">
                         <?=$rec2Series?>
                     </div>
@@ -115,19 +115,19 @@ $userID = $_SESSION["user_id"];
             <div class="read-wrapper">
                 <div class="rank">3.</div>
                 <div class="info-wrapper">
-                    <p class="label">Title:</p>
+                    <h5 class="label">Title:</h5>
                     <div class="info" id="<?=$rec3Title?>">
                         <?=$rec3Title?>
                     </div>
                 </div>
                 <div class="info-wrapper">
-                    <p class="label">Author:</p>
+                    <h5 class="label">Author:</h5>
                     <div class="info" id="<?=$rec3Author?>">
                         <?=$rec3Author?>
                     </div>
                 </div>
                 <div class="info-wrapper">
-                    <p class="label">Series:</p>
+                    <h5 class="label">Series:</h5>
                     <div class="info" id="<?=$rec3Series?>">
                         <?=$rec3Series?>
                     </div>
@@ -137,19 +137,19 @@ $userID = $_SESSION["user_id"];
             <div class="read-wrapper">
                 <div class="rank">4.</div>
                 <div class="info-wrapper">
-                    <p class="label">Title:</p>
+                    <h5 class="label">Title:</h5>
                     <div class="info" id="<?=$rec4Title?>">
                         <?=$rec4Title?>
                     </div>
                 </div>
                 <div class="info-wrapper">
-                    <p class="label">Author:</p>
+                    <h5 class="label">Author:</h5>
                     <div class="info" id="<?=$rec4Author?>">
                         <?=$rec4Author?>
                     </div>
                 </div>
                 <div class="info-wrapper">
-                    <p class="label">Series:</p>
+                    <h5 class="label">Series:</h5>
                     <div class="info" id="<?=$rec4Series?>">
                         <?=$rec4Series?>
                     </div>
@@ -159,19 +159,19 @@ $userID = $_SESSION["user_id"];
             <div class="read-wrapper">
                 <div class="rank">5.</div>
                 <div class="info-wrapper">
-                    <p class="label">Title:</p>
+                    <h5 class="label">Title:</h5>
                     <div class="info" id="<?=$rec5Title?>">
                         <?=$rec5Title?>
                     </div>
                 </div>
                 <div class="info-wrapper">
-                    <p class="label">Author:</p>
+                    <h5 class="label">Author:</h5>
                     <div class="info" id="<?=$rec5Author?>">
                         <?=$rec5Author?>
                     </div>
                 </div>
                 <div class="info-wrapper">
-                    <p class="label">Series:</p>
+                    <h5 class="label">Series:</h5>
                     <div class="info" id="<?=$rec5Series?>">
                         <?=$rec5Series?>
                     </div>
