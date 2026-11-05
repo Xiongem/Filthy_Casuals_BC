@@ -99,7 +99,7 @@ $userID = $_SESSION["user_id"];
                     $rankLeague = 0;
                     while ($rowLeague = $result2->fetch_assoc()) {
                         $usernameLeague = $rowLeague["username"];
-                        $pointsLeague = $rowLeague["points"];
+                        $pointsLeague = $rowLeague["pointsYear"];
                         $rankLeague++;
                 ?>
                     <div class="table-rows">
