@@ -26,6 +26,7 @@ $sql2 = "SELECT * FROM `adminStuff`";
         }
 
 $ratDate = date("d-m-Y");
+$active = 1;
 ?>
 
 <!DOCTYPE html>
