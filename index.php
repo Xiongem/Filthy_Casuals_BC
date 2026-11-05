@@ -108,6 +108,149 @@ $userID = $_SESSION["user_id"];
                         <div class="tr"><?=$pointsLeague?></div>
                     </div>
                 <?php }} ?>
+            </div>
+        </div>
+        <div class="desktop-table-wrapper">
+            <div class="table-wrapper">
+                <div class="title">
+                    <h1>
+                        Gorogoro Ranking
+                    </h1>
+                </div>
+                <div class="content-wrapper" id="Gorogoro">
+                    <div class="thead-wrapper">
+                        <div class="thead">Rank</div>
+                        <div class="thead">User</div>
+                        <div class="thead">Points</div>
+                    </div>
+                    <!--//? DISPLAY RANKINGS HERE -->
+                    <?php 
+                    $stmt3 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Gorogoro' ORDER BY pointsYear DESC");
+                    $rowGoro = mysqli_num_rows($stmt3);
+                    if($rowGoro>0) {
+                        $rankGoro = 0;
+                        while ($rowGoro = mysqli_fetch_array($stmt3)) {
+                            $usernameGoro = $rowGoro["username"];
+                            $pointsGoro = $rowGoro["pointsYear"];
+                            $rankGoro++;
+                    ?>
+                        <div class="table-rows">
+                            <div class="tr"><?=$rankGoro?></div>
+                            <div class="tr"><?=$usernameGoro?></div>
+                            <div class="tr"><?=$pointsGoro?></div>
+                        </div>
+                    <?php }} else { ?>
+                        <div class="table-rows">
+                            <div class="tr">No users found</div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <div class="title">
+                    <h1>
+                        Futsuu Ranking
+                    </h1>
+                </div>
+                <div class="content-wrapper" id="Futsuu">
+                    <div class="thead-wrapper">
+                        <div class="thead">Rank</div>
+                        <div class="thead">User</div>
+                        <div class="thead">Points</div>
+                    </div>
+                    <!--//? DISPLAY RANKINGS HERE -->
+                    <?php 
+                    $stmt4 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Futsuu' ORDER BY pointsYear DESC");
+                    $rowFutsuu = mysqli_num_rows($stmt4);
+                    if($rowFutsuu>0) {
+                        $rankFutsuu = 0;
+                        while ($rowFutsuu = mysqli_fetch_array($stmt4)) {
+                            $usernameFutsuu = $rowFutsuu["username"];
+                            $pointsFutsuu = $rowFutsuu["pointsYear"];
+                            $rankFutsuu++;
+                    ?>
+                        <div class="table-rows">
+                            <div class="tr"><?=$rankFutsuu?></div>
+                            <div class="tr"><?=$usernameFutsuu?></div>
+                            <div class="tr"><?=$pointsFutsuu?></div>
+                        </div>
+                    <?php }} else { ?>
+                        <div class="table-rows">
+                            <div class="tr">No users found</div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <div class="title">
+                    <h1>
+                        Hayai Ranking
+                    </h1>
+                </div>
+                <div class="content-wrapper" id="Hayai">
+                    <div class="thead-wrapper">
+                        <div class="thead">Rank</div>
+                        <div class="thead">User</div>
+                        <div class="thead">Points</div>
+                    </div>
+                    <!--//? DISPLAY RANKINGS HERE -->
+                    <?php 
+                    $stmt5 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Hayai' ORDER BY pointsYear DESC");
+                    $rowHayai = mysqli_num_rows($stmt5);
+                    if($rowHayai>0) {
+                        $rankHayai = 0;
+                        while ($rowHayai = mysqli_fetch_array($stmt5)) {
+                            $usernameHayai = $rowHayai["username"];
+                            $pointsHayai = $rowHayai["pointsYear"];
+                            $rankHayai++;
+                    ?>
+                        <div class="table-rows">
+                            <div class="tr"><?=$rankHayai?></div>
+                            <div class="tr"><?=$usernameHayai?></div>
+                            <div class="tr"><?=$pointsHayai?></div>
+                        </div>
+                    <?php }} else { ?>
+                        <div class="table-rows">
+                            <div class="tr">No users found</div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <div class="title">
+                    <h1>
+                        Yabai Ranking
+                    </h1>
+                </div>
+                <div class="content-wrapper" id="Yabai">
+                    <div class="thead-wrapper">
+                        <div class="thead">Rank</div>
+                        <div class="thead">User</div>
+                        <div class="thead">Points</div>
+                    </div>
+                    <!--//? DISPLAY RANKINGS HERE -->
+                    <?php 
+                    $stmt6 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Yabai' ORDER BY pointsYear DESC");
+                    $rowYabai = mysqli_num_rows($stmt6);
+                    if($rowYabai>0) {
+                        $rankYabai = 0;
+                        while ($rowYabai = mysqli_fetch_array($stmt6)) {
+                            $usernameYabai = $rowYabai["username"];
+                            $pointsYabai = $rowYabai["pointsYear"];
+                            $rankYabai++;
+                    ?>
+                        <div class="table-rows">
+                            <div class="tr"><?=$rankYabai?></div>
+                            <div class="tr"><?=$usernameYabai?></div>
+                            <div class="tr"><?=$pointsYabai?></div>
+                        </div>
+                    <?php }} else { ?>
+                        <div class="table-rows">
+                            <div class="tr">No users found</div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
     </div>
     <script>
