@@ -47,7 +47,16 @@ $ratEnd = "11/28/2026";
     <script src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body>
+<body id="body">
+    <div class="popup-wrapper hide" id="editPopup">
+        <div class="popup-container">
+            <div class="close-wrapper">
+                <ion-icon name="close" onclick="closeLeagueEdit()"></ion-icon>
+            </div>
+            <!--//* AJAX DISPLAYED CONTENT -->
+            <div class="popup-content" id="editResults"></div>
+        </div>
+    </div>
     <header>
         <?= makeNav() ?>
     </header>
@@ -149,6 +158,7 @@ $ratEnd = "11/28/2026";
         </div>
         <div class="desktop-table-wrapper">
             <div class="table-wrapper">
+                <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Gorogoro')"></ion-icon>
                 <div class="title">
                     <h1>
                         Gorogoro Ranking
@@ -191,6 +201,7 @@ $ratEnd = "11/28/2026";
                 </div>
             </div>
             <div class="table-wrapper">
+                <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Futsuu')"></ion-icon>
                 <div class="title">
                     <h1>
                         Futsuu Ranking
@@ -233,6 +244,7 @@ $ratEnd = "11/28/2026";
                 </div>
             </div>
             <div class="table-wrapper">
+                <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Hayai')"></ion-icon>
                 <div class="title">
                     <h1>
                         Hayai Ranking
@@ -275,6 +287,7 @@ $ratEnd = "11/28/2026";
                 </div>
             </div>
             <div class="table-wrapper">
+                <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Yabai')"></ion-icon>
                 <div class="title">
                     <h1>
                         Yabai Ranking
@@ -331,6 +344,26 @@ $ratEnd = "11/28/2026";
             $(tableId).css("display", "flex");
             $(closeIconId).css("display", "block");
             $(openIconId).css("display", "none");
+        }
+        function showLeagueEdit(league) {
+            $("#editPopup").css({"display": "flex"});
+            var editPopup = document.getElementById("editPopup");
+            editPopup.scrollIntoView();
+            setTimeout(hideBackground, 500);
+
+            $.ajax({
+                url: 'php/ajax_league_edit.php',
+                method: 'post',
+                data: {leagueName:league},
+                success: function(result) {
+                    $("#editResults").html(result);
+                }
+            });
+        }
+        function closeLeagueEdit() {
+            $("#editPopup").hide();
+            $("#body").css({"height": "unset", "overflow": "unset"});
+            location.reload(true);
         }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
