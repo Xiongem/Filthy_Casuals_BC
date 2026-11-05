@@ -72,8 +72,10 @@ $userID = $_SESSION["user_id"];
 
                     <div class="table-rows">
                         <div class="tr"><?=$rankOverall?></div>
-                        <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
-                        <div class="tr"><?=$usernameOverall?></div>
+                        <div class="tr">
+                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
+                            <?=$usernameOverall?>
+                        </div>
                         <div class="tr"><?=$pointsOverall?></div>
                     </div>
                 <?php }} ?>
@@ -111,8 +113,10 @@ $userID = $_SESSION["user_id"];
                 ?>
                     <div class="table-rows">
                         <div class="tr"><?=$rankLeague?></div>
-                        <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
-                        <div class="tr"><?=$usernameLeague?></div>
+                        <div class="tr">
+                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
+                            <?=$usernameLeague?>
+                        </div>
                         <div class="tr"><?=$pointsLeague?></div>
                     </div>
                 <?php }} ?>
@@ -147,8 +151,10 @@ $userID = $_SESSION["user_id"];
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankGoro?></div>
-                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
-                            <div class="tr"><?=$usernameGoro?></div>
+                            <div class="tr">
+                                <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
+                                <?=$usernameGoro?>
+                            </div>
                             <div class="tr"><?=$pointsGoro?></div>
                         </div>
                     <?php }} else { ?>
@@ -186,8 +192,10 @@ $userID = $_SESSION["user_id"];
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankFutsuu?></div>
-                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
-                            <div class="tr"><?=$usernameFutsuu?></div>
+                            <div class="tr">
+                                <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
+                                <?=$usernameFutsuu?>
+                            </div>
                             <div class="tr"><?=$pointsFutsuu?></div>
                         </div>
                     <?php }} else { ?>
@@ -225,8 +233,10 @@ $userID = $_SESSION["user_id"];
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankHayai?></div>
-                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
-                            <div class="tr"><?=$usernameHayai?></div>
+                            <div class="tr">
+                                <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
+                                <?=$usernameHayai?>
+                            </div>
                             <div class="tr"><?=$pointsHayai?></div>
                         </div>
                     <?php }} else { ?>
@@ -264,8 +274,10 @@ $userID = $_SESSION["user_id"];
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankYabai?></div>
-                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
-                            <div class="tr"><?=$usernameYabai?></div>
+                            <div class="tr">
+                                <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
+                                <?=$usernameYabai?>
+                            </div>
                             <div class="tr"><?=$pointsYabai?></div>
                         </div>
                     <?php }} else { ?>
