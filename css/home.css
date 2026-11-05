@@ -154,7 +154,7 @@
     .popup-content {
         width: 100%;
     }
-    .userList-container {
+    .userList {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
