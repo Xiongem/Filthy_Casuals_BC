@@ -26,12 +26,14 @@
     }
     .overall-wrapper {
         width: 90%;
+        align-items: center;
 
         border: 2px solid var(--deep-green);
         border-radius: 8px;
     }
     .title, .thead-wrapper, .overall-rows {
         display: flex;
+        align-items: center;
         width: 100%;
     }
     .thead-wrapper {
