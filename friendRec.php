@@ -33,12 +33,21 @@ $userID = $_SESSION["user_id"];
     <script src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body>
+<body id="body">
+    <div class="popup-wrapper hide" id="editPopup">
+        <div class="popup-container">
+            <div class="close-wrapper">
+                <ion-icon name="close" onclick="closeRecPopup()"></ion-icon>
+            </div>
+            <!--//* AJAX DISPLAYED CONTENT -->
+            <div class="popup-content" id="editResults"></div>
+        </div>
+    </div>
     <header>
         <?= makeNav() ?>
     </header>
     <div class="button-wrapper">
-        <div class="rec-input-button buttons" onclick="showRecPopup()">
+        <div class="rec-input-button buttons" onclick="showRecPopup(<?=$userID?>)">
             <p>update</p>
         </div>
     </div>
@@ -145,6 +154,28 @@ $userID = $_SESSION["user_id"];
         <?php }}?>
         </div>
     </div>
+    <script>
+        function showRecPopup(userID) {
+            $("#editPopup").css({"display": "flex"});
+            var editPopup = document.getElementById("editPopup");
+            editPopup.scrollIntoView();
+            setTimeout(hideBackground, 500);
+
+            $.ajax({
+                url: 'php/ajax_friendrec_edit.php',
+                method: 'post',
+                data: {userID: userID},
+                success: function(result) {
+                    $("#editResults").html(result);
+                }
+            });
+        }
+        function closeRecPopup() {
+            $("#editPopup").hide();
+            $("#body").css({"height": "unset", "overflow": "unset"});
+            location.reload(true);
+        }
+    </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>
