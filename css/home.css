@@ -61,7 +61,7 @@
     }
     .thead-wrapper {
         /* border-top: 2px solid var(--deep-green); */
-        border-bottom: 4px solid var(--leather);
+        /* border-bottom: 4px solid var(--leather); */
         background-color: var(--deep-green);
         color: var(--barium-yellow);
     }
