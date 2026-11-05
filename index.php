@@ -21,12 +21,14 @@ $sql2 = "SELECT * FROM `adminStuff`";
     $result2 = $_SESSION["conn"]->query($sql2);
     $adminStuff = $result2->fetch_assoc();
         if (isset($adminStuff)) {
-            $ratDate = $adminStuff["ratDate"];
+            $ratStart = $adminStuff["ratStart"];
+            $ratEnd = $adminStuff["ratEnd"];
             $active = $adminStuff["active"];
         }
 
-$ratDate = date("d-m-Y");
 $active = 1;
+$ratStart = "11/21/2026";
+$ratEnd = "11/28/2026";
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +57,7 @@ $active = 1;
              <h2>Next Read-a-thon Date:</h2>
         </div>
         <div class="rat-date">
-            <h3><?=$ratDate?></h3>
+            <h3><?=$ratStart?> - <?=$ratEnd?></h3>
         </div>
     </div>
     <?php } ?>
