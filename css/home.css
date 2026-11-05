@@ -43,6 +43,7 @@
     .thead-wrapper, .overall-rows {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        width: 100%;
         justify-items: center;
         align-items: center;
         text-align: center;
