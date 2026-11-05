@@ -119,8 +119,11 @@
         display: none;
     }
     .full-wrapper {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: auto;
+        justify-content: space-around;
+        align-items: flex-start;
         /* justify-content: center;
         align-items: flex-start; */
         width: 100%;
