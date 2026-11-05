@@ -122,6 +122,7 @@
         display: grid;
         grid-template-columns: 30% 70%;
         grid-template-rows: auto;
+        column-gap: 2em;
         justify-content: center;
         align-items: flex-start;
         width: 100%;
