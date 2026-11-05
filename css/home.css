@@ -54,8 +54,17 @@
         background-color: var(--deep-green);
         color: var(--barium-yellow);
     }
-    .thead-wrapper, .overall-rows div {
+    .thead-wrapper div {
+        border-right: 2px solid var(--barium-yellow);
+    }
+    .thead-wrapper div:last-child {
+        border-right: none;
+    }
+    .overall-rows div {
         border-right: 2px solid var(--deep-green);
+    }
+    .overall-rows div:last-child {
+        border-right: none;
     }
     /* .thead-wrapper {
         border-right: 2px solid var(--barium-yellow);
