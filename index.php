@@ -52,10 +52,10 @@ $active = 1;
     <?php if ($active == 1) { ?>
     <div class="rat-wrapper">
         <div class="rat-title">
-             <h1>Next Read-a-thon Date:</h1>
+             <h2>Next Read-a-thon Date:</h2>
         </div>
         <div class="rat-date">
-            <h1><?=$ratDate?></h1>
+            <h3><?=$ratDate?></h3>
         </div>
     </div>
     <?php } ?>
