@@ -102,10 +102,12 @@
         display: none;
     }
     .tablePfp {
-        width: 2.5em;
-        height: 2.5em;
+        width: 2em;
+        height: 2em;
         border-radius: 50%;
         object-fit: cover;
+        /* background-color: var(--leather); */
+        border: 2px solid var(--marine-green);
     }
 }
 
