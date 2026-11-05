@@ -157,6 +157,14 @@
         justify-content: space-evenly;
         align-items: center;
     }
+    .userList-pfp {
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--marine-green);
+        margin-right: 0.5em;
+    }
     .rat-title {
         background-color: var(--barium-yellow);
         color: var(--deep-green);
