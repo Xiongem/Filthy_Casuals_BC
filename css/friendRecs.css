@@ -40,7 +40,7 @@
     }
     .read-wrapper {
         display: grid;
-        grid-template-columns: 5% 35% 30% 30%;
+        grid-template-columns: 10% 45% 45%;
         width: 100%;
         padding: 0.5em 1em;
         border-top: 1px solid var(--marine-green);

@@ -51,19 +51,14 @@ $userID = $_SESSION["user_id"];
                     $username = $row["username"];
                     $rec1Title = $row["rec1_title"];
                     $rec1Author = $row["rec1_author"];
-                    $rec1Series = $row["rec1_series"];
                     $rec2Title = $row["rec2_title"];
                     $rec2Author = $row["rec2_author"];
-                    $rec2Series = $row["rec2_series"];
                     $rec3Title = $row["rec3_title"];
                     $rec3Author = $row["rec3_author"];
-                    $rec3Series = $row["rec3_series"];
                     $rec4Title = $row["rec4_title"];
                     $rec4Author = $row["rec4_author"];
-                    $rec4Series = $row["rec4_series"];
                     $rec5Title = $row["rec5_title"];
                     $rec5Author = $row["rec5_author"];
-                    $rec5Series = $row["rec5_series"];
         ?>
             <div class="name" id="<?=$username?>">
                 <h2><?=$username?></h2>
@@ -82,12 +77,6 @@ $userID = $_SESSION["user_id"];
                         <?=$rec1Author?>
                     </div>
                 </div>
-                <div class="info-wrapper">
-                    <h5 class="label">Series:</h5>
-                    <div class="info" id="<?=$rec1Series?>">
-                        <?=$rec1Series?>
-                    </div>
-                </div>
             </div>
         
             <div class="read-wrapper">
@@ -102,12 +91,6 @@ $userID = $_SESSION["user_id"];
                     <h5 class="label">Author:</h5>
                     <div class="info" id="<?=$rec2Author?>">
                         <?=$rec2Author?>
-                    </div>
-                </div>
-                <div class="info-wrapper">
-                    <h5 class="label">Series:</h5>
-                    <div class="info" id="<?=$rec2Series?>">
-                        <?=$rec2Series?>
                     </div>
                 </div>
             </div>
@@ -126,12 +109,6 @@ $userID = $_SESSION["user_id"];
                         <?=$rec3Author?>
                     </div>
                 </div>
-                <div class="info-wrapper">
-                    <h5 class="label">Series:</h5>
-                    <div class="info" id="<?=$rec3Series?>">
-                        <?=$rec3Series?>
-                    </div>
-                </div>
             </div>
 
             <div class="read-wrapper">
@@ -148,12 +125,6 @@ $userID = $_SESSION["user_id"];
                         <?=$rec4Author?>
                     </div>
                 </div>
-                <div class="info-wrapper">
-                    <h5 class="label">Series:</h5>
-                    <div class="info" id="<?=$rec4Series?>">
-                        <?=$rec4Series?>
-                    </div>
-                </div>
             </div>
 
             <div class="read-wrapper">
@@ -168,12 +139,6 @@ $userID = $_SESSION["user_id"];
                     <h5 class="label">Author:</h5>
                     <div class="info" id="<?=$rec5Author?>">
                         <?=$rec5Author?>
-                    </div>
-                </div>
-                <div class="info-wrapper">
-                    <h5 class="label">Series:</h5>
-                    <div class="info" id="<?=$rec5Series?>">
-                        <?=$rec5Series?>
                     </div>
                 </div>
             </div>
