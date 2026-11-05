@@ -122,10 +122,8 @@
         display: grid;
         grid-template-columns: 30% 70%;
         grid-template-rows: auto;
-        justify-content: space-around;
-        align-items: center;
-        /* justify-content: center;
-        align-items: flex-start; */
+        justify-content: center;
+        align-items: flex-start;
         width: 100%;
         padding: 0 1em;
     }
@@ -149,6 +147,7 @@
         background-color: var(--barium-yellow);
         color: var(--deep-green);
         width: 100%;
+        min-height: 2em;
         border-radius: 0 0 8px 8px;
     }
 }
