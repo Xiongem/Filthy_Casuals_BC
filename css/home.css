@@ -43,7 +43,7 @@
         padding: 0.5em;
 
         background-color: var(--leather);
-        border-radius: 4px 4px 0 0;
+        border-radius: 6px 6px 0 0;
     }
     .caret {
         margin-left: 0.5em;
