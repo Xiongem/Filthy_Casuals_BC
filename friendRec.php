@@ -54,8 +54,10 @@ $sql2 = "SELECT * From `friendRecs`";
     </div>
     <div class="wrapper">
         <div class="rec-wrapper">
-            <div class="name" id="<?=$username?>"></div>
-            <div class="title" id="<?=$title?>"></div>
+            <div class="name" id="<?=$username?>"><?=$username?></div>
+            <div class="read-wrapper"></div>
+                <div class="title" id="<?=$title?>"><?=$title?></div>
+                <div class="author" id="<?=$author?>"><?=$author?></div>
         </div>
     </div>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>

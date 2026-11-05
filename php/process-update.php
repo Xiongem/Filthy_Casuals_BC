@@ -76,10 +76,10 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                         $totalPoints);
 
 if ($stmt1 -> execute()) {
-    $newPointsMonth = $user["PointsMonth"] + $totalPoints;
-    $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` SET `PointsMonth` = ? WHERE `user_id` = ?");
+    $newPointsYear = $user["pointsYear"] + $totalPoints;
+    $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
         $stmt2->bind_param("ii", 
-                            $newPointsMonth, 
+                            $newPointsYear, 
                             $userID);
     if ($stmt2->execute()) {
 

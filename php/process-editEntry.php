@@ -87,18 +87,18 @@ $stmt1->bind_param("ssssiiiissiiii",
 if ($stmt1 -> execute()) {
     //if the total points for this entry in the database is the same as total points calculated from function (aka, points didn't change)
     if ($read["totalPoints"] == $totalPoints) {
-        $newPointsMonth = $totalPoints;
+        $newPointsYear = $totalPoints;
     } else {
-        $newPointsMonth = $user["PointsMonth"] + $totalPoints;
+        $newPointsYear = $user["pointsYear"] + $totalPoints;
     }
     
     //second query
     $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` 
-                                            SET `PointsMonth` = ? 
+                                            SET `pointsYear` = ? 
                                             WHERE `user_id` = ?");
     //bind values to columns
     $stmt2->bind_param("ii", 
-                        $newPointsMonth, 
+                        $newPointsYear, 
                         $userID);
     //executes second statement
     if ($stmt2->execute()) {
