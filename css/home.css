@@ -8,6 +8,27 @@
         --leather: #b17036;
     }
 @media only screen and (min-width: 200px) {
+    .rat-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .rat-title {
+        width: 100%;
+        background-color: var(--marine-green);
+        color: var(--barium-yellow);
+        text-align: center;
+        padding: 0.5em;
+    }
+    .rat-date {
+        width: 100%;
+        background-color: var(--barium-yellow);
+        color: var(--deep-green);
+        text-align: center;
+        padding: 0.5em;
+    }
     #login {
         text-decoration: none;
         font-size: 30px;

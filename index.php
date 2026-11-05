@@ -16,6 +16,16 @@ $userID = $_SESSION["user_id"];
         $user = $result->fetch_assoc();
             $league = $user["league"];
             $admin = $user["admin"];
+
+$sql2 = "SELECT * FROM `adminStuff`";
+    $result2 = $_SESSION["conn"]->query($sql2);
+    $adminStuff = $result2->fetch_assoc();
+        if (isset($adminStuff)) {
+            $ratDate = $adminStuff["ratDate"];
+            $active = $adminStuff["active"];
+        }
+
+$ratDate = date("d-m-Y");
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +48,16 @@ $userID = $_SESSION["user_id"];
     <header>
         <?= makeNav() ?>
     </header>
+    <?php if ($active == 1) { ?>
+    <div class="rat-wrapper">
+        <div class="rat-title">
+             <h1>Next Read-a-thon Date:</h1>
+        </div>
+        <div class="rat-date">
+            <h1><?=$ratDate?></h1>
+        </div>
+    </div>
+    <?php } ?>
     <div class="full-wrapper">
         <div class="table-wrapper">
             <div class="title">
