@@ -83,7 +83,7 @@ $userID = $_SESSION["user_id"];
                 <ion-icon size="large" class="caret" name="caret-down-outline" id="leagueClose" onclick="hideTable('#league', '#leagueClose', '#leagueOpen')"></ion-icon>
                 <ion-icon size="large" class="caret" name="caret-up-outline" id="leagueOpen" onclick="showTable('#league', '#leagueOpen', '#leagueClose')"></ion-icon>
             </div>
-            <div class="content-wrapper" id="overall">
+            <div class="content-wrapper" id="league">
                 <div class="thead-wrapper">
                     <div class="thead">Rank</div>
                     <div class="thead">User</div>
