@@ -127,6 +127,7 @@
         /* justify-content: center;
         align-items: flex-start; */
         width: 100%;
+        padding: 0 1em;
     }
     .desktop-table-wrapper {
         display: grid;
@@ -138,9 +139,11 @@
         justify-items: center;
         align-items: center;
     }
-    .table-rows {
+    .nothing {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: var(--barium-yellow);
+        color: var(--deep-green);
     }
 }

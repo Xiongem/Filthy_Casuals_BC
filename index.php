@@ -140,7 +140,7 @@ $userID = $_SESSION["user_id"];
                             <div class="tr"><?=$pointsGoro?></div>
                         </div>
                     <?php }} else { ?>
-                        <div class="table-rows">
+                        <div class="nothing">
                             <div class="tr">No users found</div>
                         </div>
                     <?php } ?>
@@ -175,7 +175,7 @@ $userID = $_SESSION["user_id"];
                             <div class="tr"><?=$pointsFutsuu?></div>
                         </div>
                     <?php }} else { ?>
-                        <div class="table-rows">
+                        <div class="nothing">
                             <div class="tr">No users found</div>
                         </div>
                     <?php } ?>
@@ -210,7 +210,7 @@ $userID = $_SESSION["user_id"];
                             <div class="tr"><?=$pointsHayai?></div>
                         </div>
                     <?php }} else { ?>
-                        <div class="table-rows">
+                        <div class="nothing">
                             <div class="tr">No users found</div>
                         </div>
                     <?php } ?>
@@ -245,7 +245,7 @@ $userID = $_SESSION["user_id"];
                             <div class="tr"><?=$pointsYabai?></div>
                         </div>
                     <?php }} else { ?>
-                        <div class="table-rows">
+                        <div class="nothing">
                             <div class="tr">No users found</div>
                         </div>
                     <?php } ?>
