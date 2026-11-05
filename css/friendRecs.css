@@ -15,11 +15,16 @@
         align-items: center;
         width: 100%;
     }
+    .rec-input-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .rec-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 80%;
+        width: 90%;
 
         background-color: var(--barium-yellow);
         border-radius: 12px;
@@ -33,7 +38,7 @@
     }
     .read-wrapper {
         display: grid;
-        grid-template-columns: 1fr 3fr 2fr;
+        grid-template-columns: 1fr 2fr 2fr 2fr;
         width: 100%;
         padding: 0.5em 1em;
         border-bottom: 1px solid var(--marine-green);
