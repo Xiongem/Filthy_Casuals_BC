@@ -47,18 +47,22 @@
         justify-items: center;
         align-items: center;
         text-align: center;
+        padding: 4px;
     }
     .thead-wrapper {
         border-top: 2px solid var(--deep-green);
         background-color: var(--deep-green);
         color: var(--barium-yellow);
     }
-    .thead-wrapper {
+    .thead-wrapper, .overall-rows div {
+        border-right: 2px solid var(--deep-green);
+    }
+    /* .thead-wrapper {
         border-right: 2px solid var(--barium-yellow);
     }
     .thead:last-child {
         border-right: none;
-    }
+    } */
     .overall-rows {
         background-color: var(--barium-yellow);
         color: var(--deep-green);
@@ -66,13 +70,13 @@
     .overall-rows:last-child {
         border-radius: 0 0 8px 8px;
     }
-    .overall-rows {
+    /* .overall-rows {
         border-right: 2px solid var(--deep-green);
     }
     .overall-rows:last-child {
         border-right: none;
 
-    }
+    } */
 }
 
 /** ####################### *//** ####################### *//** ####################### */
