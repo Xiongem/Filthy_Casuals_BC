@@ -37,15 +37,13 @@
     .title, .thead-wrapper, .overall-rows {
         display: flex;
         align-items: center;
+        justify-content: space-around;
         width: 100%;
     }
     .thead-wrapper {
         border-top: 2px solid var(--deep-green);
         background-color: var(--deep-green);
         color: var(--barium-yellow);
-    }
-    .thead {
-        
     }
     .overall-rows {
         background-color: var(--barium-yellow);
