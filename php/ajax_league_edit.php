@@ -12,7 +12,7 @@ $league = $_POST['leagueName'];
 
 ?>
 
-<div class="title">
+<div class="title-edit">
     <h2>Change Users' Leagues</h2>
 </div>
 <div class="userList-container">
