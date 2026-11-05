@@ -135,4 +135,9 @@
         justify-items: center;
         align-items: center;
     }
+    .table-rows {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
