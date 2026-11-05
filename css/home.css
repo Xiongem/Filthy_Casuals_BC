@@ -123,7 +123,7 @@
         grid-template-columns: 30% 70%;
         grid-template-rows: auto;
         justify-content: space-around;
-        align-items: flex-start;
+        align-items: center;
         /* justify-content: center;
         align-items: flex-start; */
         width: 100%;
@@ -139,11 +139,16 @@
         justify-items: center;
         align-items: center;
     }
+    .table-wrapper {
+       margin: 0;
+    }
     .nothing {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: var(--barium-yellow);
         color: var(--deep-green);
+        width: 100%;
+        border-radius: 0 0 8px 8px;
     }
 }
