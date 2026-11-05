@@ -158,9 +158,14 @@
         background-color: none;
     }
     .userList {
-        display: flex;
+        /* display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        align-items: center; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        justify-items: center;
         align-items: center;
     }
     .userInfo {
