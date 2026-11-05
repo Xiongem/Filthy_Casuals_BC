@@ -53,7 +53,7 @@
         background-color: var(--deep-green);
         color: var(--barium-yellow);
     }
-    .thead {
+    .thead-wrapper {
         border-right: 2px solid var(--barium-yellow);
     }
     .thead:last-child {
@@ -66,10 +66,10 @@
     .overall-rows:last-child {
         border-radius: 0 0 8px 8px;
     }
-    .tr {
+    .overall-rows {
         border-right: 2px solid var(--deep-green);
     }
-    .tr:last-child {
+    .overall-rows:last-child {
         border-right: none;
 
     }
