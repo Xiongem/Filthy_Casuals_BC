@@ -67,7 +67,7 @@ $userID = $_SESSION["user_id"];
         ?>
             <div class="name" id="<?=$username?>">
                 <h2><?=$username?></h2>
-            </div>
+            </div> 
             <div class="read-wrapper">
                 <div class="rank">1.</div>
                 <div class="info-wrapper">
