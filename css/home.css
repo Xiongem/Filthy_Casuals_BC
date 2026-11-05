@@ -97,13 +97,9 @@
         height: 100%;
         padding: 0 0.5em;
     }
-    /* .overall-rows {
-        border-right: 2px solid var(--deep-green);
+    .desktop-table-wrapper {
+        display: none;
     }
-    .overall-rows:last-child {
-        border-right: none;
-
-    } */
 }
 
 /** ####################### *//** ####################### *//** ####################### */
