@@ -34,11 +34,18 @@
     .content-wrapper {
         width: 100%;
     }
-    .title, .thead-wrapper, .overall-rows {
+    .title {
         display: flex;
         align-items: center;
         justify-content: space-around;
         width: 100%;
+    }
+    .thead-wrapper, .overall-rows {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        text-align: center;
     }
     .thead-wrapper {
         border-top: 2px solid var(--deep-green);
