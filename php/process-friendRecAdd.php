@@ -9,8 +9,9 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
 $userID = $_POST['userID'];
+
 $sql = "SELECT username FROM `users` WHERE `user_id` = $userID";
-    $result = $_SESSION["conn"]->query($sql1);
+    $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
         $username = $user["username"];
 
