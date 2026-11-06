@@ -31,7 +31,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                 </div>
                 <div class="rec-form-inputs">
                     <div class="rec-row">
-                        <h3>1.</h3>
+                        <h3 class="rank number">1.</h3>
                         <div class="rec-item">
                             <label for="rec1Title">Title:</label>
                             <input type="text" class="inputs" name="rec1Title" id="rec1Title" value="<?=$rec1Title?>">
@@ -42,7 +42,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                         </div>
                     </div>
                     <div class="rec-row">
-                        <h3>2.</h3>
+                        <h3 class="rank number">2.</h3>
                         <div class="rec-item">
                             <label for="rec2Title">Title:</label>
                             <input type="text" class="inputs" name="rec2Title" id="rec2Title" value="<?=$rec2Title?>">
@@ -53,7 +53,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                         </div>
                     </div>
                     <div class="rec-row">
-                        <h3>3.</h3>
+                        <h3 class="rank number">3.</h3>
                         <div class="rec-item">
                             <label for="rec3Title">Title:</label>
                             <input type="text" class="inputs" name="rec3Title" id="rec3Title" value="<?=$rec3Title?>">
@@ -64,7 +64,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                         </div>
                     </div>
                     <div class="rec-row">
-                        <h3>4.</h3>
+                        <h3 class="rank number">4.</h3>
                         <div class="rec-item">
                             <label for="rec4Title">Title:</label>
                             <input type="text" class="inputs" name="rec4Title" id="rec4Title" value="<?=$rec4Title?>">
@@ -75,7 +75,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                         </div>
                     </div>
                     <div class="rec-row">
-                        <h3>5.</h3>
+                        <h3 class="rank number">5.</h3>
                         <div class="rec-item">
                             <label for="rec5Title">Title:</label>
                             <input type="text" class="inputs" name="rec5Title" id="rec5Title" value="<?=$rec5Title?>">
@@ -98,7 +98,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                 </div>
                 <div class="rec-form-inputs">
                     <div class="rec-row">
-                        <h3>1.</h3>
+                        <h3 class="rank number">1.</h3>
                         <div class="rec-item">
                             <label for="rec1Title">Title:</label>
                             <input type="text" class="inputs" name="rec1Title" id="rec1Title">
@@ -109,7 +109,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                         </div>
                     </div>
                     <div class="rec-row">
-                        <h3>2.</h3>
+                        <h3 class="rank number">2.</h3>
                         <div class="rec-item">
                             <label for="rec2Title">Title:</label>
                             <input type="text" class="inputs" name="rec2Title" id="rec2Title">
@@ -120,7 +120,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                         </div>
                     </div>
                     <div class="rec-row">
-                        <h3>3.</h3>
+                        <h3 class="rank number">3.</h3>
                         <div class="rec-item">
                             <label for="rec3Title">Title:</label>
                             <input type="text" class="inputs" name="rec3Title" id="rec3Title">
@@ -131,7 +131,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                         </div>
                     </div>
                     <div class="rec-row">
-                        <h3>4.</h3>
+                        <h3 class="rank number">4.</h3>
                         <div class="rec-item">
                             <label for="rec4Title">Title:</label>
                             <input type="text" class="inputs" name="rec4Title" id="rec4Title">
@@ -142,7 +142,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                         </div>
                     </div>
                     <div class="rec-row">
-                        <h3>5.</h3>
+                        <h3 class="rank number">5.</h3>
                         <div class="rec-item">
                             <label for="rec5Title">Title:</label>
                             <input type="text" class="inputs" name="rec5Title" id="rec5Title">
