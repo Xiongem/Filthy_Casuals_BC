@@ -45,7 +45,7 @@ $userID = $_SESSION["user_id"];
                 <h1>One-time Passcode Creation</h1>
             </div>
             <div class="button-wrapper">
-                <button id="createOTPButton" class="inputs buttons" onclick="createOTP()">Create One-time Passcode</button>
+                <button id="createOTPButton" class="inputs buttons" onclick="createOTP()">Create OTP</button>
             </div>
             <div class="OTP-wrapper" id="OTPWrapper">
                 <label class="labels">One-time Passcode:</label>
