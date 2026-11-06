@@ -26,7 +26,7 @@
     .history-table {
         display: flex;
         flex-direction: column;
-        /* width: 100%; */
+        width: 100%;
         overflow-x: auto;
         background-color: #e2dfcd;
         border: 2px solid var(--deep-green);
@@ -49,9 +49,8 @@
         text-align: center;
         /* border-left: 1px solid var(--leather);
         border-right: 1px solid var(--leather); */
-        border-left: 1px solid var(--leather);
+        border: 1px solid var(--leather);
         min-width: 5em;
-        /* width: fit-content; */
         padding: 4px;
 
         white-space: pre-wrap;      /* Webkit */    
@@ -78,10 +77,9 @@
     .row {
         display: grid;
         width: 100%;
-        overflow-x: auto;
         /* column-gap: 8px; */
         /* grid-template-columns: repeat(12, 1fr); */
-        grid-template-columns: 3% 5% 15% 15% 5% 10% 10% 5% 9% 9% 5% 10%;
+        grid-template-columns: 3% 15% 15% 5% 10% 10% 5% 9% 9% 5% 15%;
         /* border: 1px solid var(--leather); */
     }
     .overflow-wrapper {
@@ -91,8 +89,8 @@
         display: flex;
         width: 100%;
         min-height: 0.5em;
-        /* border-left: 1px solid var(--leather);
-        border-right: 1px solid var(--leather); */
+        border-left: 1px solid var(--leather);
+        border-right: 1px solid var(--leather);
     }
     .notch-arrow {
         margin: 4px 0.3em;
@@ -110,13 +108,13 @@
         min-width: 12em;
     } */
     .title, .author {
-        min-width: 12em;
+        width: 12em;
     }
     .date {
         min-width: 8em;
     }
     .mod {
-        min-width: 10em;
+        width: 10em;
     }
     .comment {
         min-width: 14em;
@@ -135,8 +133,8 @@
         flex-wrap: wrap;
         text-align: center;
         
-        /* border: 1px solid var(--leather); */
-        min-width: 3em;
+        border: 1px solid var(--leather);
+        width: 3em;
         padding: 4px;
 
         white-space: pre-wrap;      /* Webkit */    
@@ -351,6 +349,9 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1000px) {
+    .row {
+        grid-template-columns: 3% 5% 15% 15% 5% 10% 10% 5% 9% 9% 5% 10%;
+    }
     .title, .author {
         min-width: 16em;
     }
