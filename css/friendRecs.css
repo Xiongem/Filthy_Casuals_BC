@@ -126,7 +126,8 @@
         gap: 2em;
         padding: 1em;
     }
-    /* .rec-wrapper {
-        
-    } */
+    .rec-wrapper {
+        justify-self: center;
+        align-self: center;
+    }
 }
