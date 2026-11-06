@@ -75,8 +75,8 @@
     .rec-row {
         display: grid;
         grid-template-areas: 
-        "number item"
-        "number item";
+        "number title"
+        "number author";
         grid-template-columns: 10% 90%;
         grid-template-rows: 50% 50%;
         width: 100%;
@@ -85,7 +85,6 @@
         border-top: 1px solid var(--marine-green);
     }
     .rec-item {
-        grid-area: item;
         display: flex;
         flex-direction: column;
         align-items: center;
