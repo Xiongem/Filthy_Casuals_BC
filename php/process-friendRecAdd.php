@@ -35,6 +35,7 @@ $stmt = $_SESSION['conn'] -> prepare("UPDATE `friendRecs` SET `rec1_title` = ?,
                         $userID);
 
 if ($stmt -> execute()) {
+    header("Location: /friendRec.php");
     exit;
 } else {
     die("failed to update friend recommendations");

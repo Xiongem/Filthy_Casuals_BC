@@ -35,6 +35,7 @@ $stmt = $_SESSION['conn'] -> prepare("INSERT INTO `friendRecs` (`rec1_title`,
                         $userID);
 
 if ($stmt -> execute()) {
+    header("Location: /friendRec.php");
     exit;
 } else {
     die("failed to add friend recommendations");
