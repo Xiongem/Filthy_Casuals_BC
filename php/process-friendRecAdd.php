@@ -21,7 +21,7 @@ $stmt = $_SESSION['conn'] -> prepare("INSERT INTO `friendRecs` (`rec1_title`,
                                                                 `rec5_title`,
                                                                 `rec5_author`)
                                                             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt -> bind_param("ssssssssssi", 
+    $stmt -> bind_param("ssssssssss", 
                         $_POST["rec1Title"],
                         $_POST["rec1Author"],
                         $_POST["rec2Title"],
@@ -31,8 +31,7 @@ $stmt = $_SESSION['conn'] -> prepare("INSERT INTO `friendRecs` (`rec1_title`,
                         $_POST["rec4Title"],
                         $_POST["rec4Author"],
                         $_POST["rec5Title"],
-                        $_POST["rec5Author"], 
-                        $userID);
+                        $_POST["rec5Author"]);
 
 if ($stmt -> execute()) {
     header("Location: /friendRec.php");
