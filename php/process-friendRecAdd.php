@@ -10,17 +10,17 @@ dbConnect();
 
 $userID = $_POST['userID'];
 
-$stmt = $_SESSION['conn'] -> prepare("UPDATE `friendRecs` SET `rec1_title` = ?, 
-                                                                `rec1_author` = ?, 
-                                                                `rec2_title` = ?, 
-                                                                `rec2_author` = ?, 
-                                                                `rec3_title` = ?,
-                                                                `rec3_author` = ?,
-                                                                `rec4_title` = ?,
-                                                                `rec4_author` = ?,
-                                                                `rec5_title` = ?,
-                                                                `rec5_author` = ? 
-                                                            WHERE `user_id` = ?");
+$stmt = $_SESSION['conn'] -> prepare("INSERT INTO `friendRecs` (`rec1_title`, 
+                                                                `rec1_author`, 
+                                                                `rec2_title`, 
+                                                                `rec2_author`, 
+                                                                `rec3_title`,
+                                                                `rec3_author`,
+                                                                `rec4_title`,
+                                                                `rec4_author`,
+                                                                `rec5_title`,
+                                                                `rec5_author`)
+                                                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt -> bind_param("ssssssssssi", 
                         $_POST["rec1Title"],
                         $_POST["rec1Author"],
@@ -38,5 +38,5 @@ if ($stmt -> execute()) {
     header("Location: /friendRec.php");
     exit;
 } else {
-    die("failed to update friend recommendations");
+    die("failed to add friend recommendations");
 }
