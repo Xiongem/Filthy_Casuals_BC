@@ -9,7 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
 $userID = $_POST['userID'];
-$sql = "SELECT * FROM `friendRecs` WHERE `userID` = '$userID'";
+$sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
     $result = $_SESSION["conn"]->query($sql);
     $rec = $result->fetch_assoc();
         if (isset($rec)) {
