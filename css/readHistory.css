@@ -26,7 +26,7 @@
     .history-table {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: fit-content;
         overflow-x: auto;
         background-color: #e2dfcd;
         border: 2px solid var(--deep-green);
@@ -51,7 +51,7 @@
         border-right: 1px solid var(--leather); */
         border-left: 1px solid var(--leather);
         /* min-width: 5em; */
-        width: fit-content;
+        /* width: fit-content; */
         padding: 4px;
 
         white-space: pre-wrap;      /* Webkit */    
