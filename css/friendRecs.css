@@ -67,6 +67,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin: 1em 0;
     }
     .rec-form-title {
         text-align: center;
