@@ -351,14 +351,20 @@
     .row {
         grid-template-columns: 3% 5% 15% 15% 5% 10% 10% 5% 9% 9% 5% 10%;
     }
+    .edit, .head-edit {
+        min-width: none;
+    }
+    .table-item, .table-head {
+        min-width: none;
+    }
     .title, .author {
-        min-width: 16em;
+        min-width: none;
     }
     .date {
-        min-width: 9em;
+        min-width: none;
     }
     .comment {
-        min-width: 22em;
+        min-width: none;
     }
     /* .notch-wrapper {
         border: 1px solid var(--leather);
