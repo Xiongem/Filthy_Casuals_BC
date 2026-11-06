@@ -87,7 +87,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                     </div>
                 </div>
                 <div class="rec-form-submit button-wrapper">
-                    <button class="button" type="submit" value="Submit">Submit</button>
+                    <button class="buttons" type="submit" value="Submit">Submit</button>
                 </div>
             </form>
         <?php } else { ?>
@@ -154,7 +154,7 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                     </div>
                 </div>
                 <div class="rec-form-submit button-wrapper">
-                    <button class="button" type="submit" value="Submit">Submit</button>
+                    <button class="buttons" type="submit" value="Submit">Submit</button>
                 </div>
             </form>
         <?php } ?>

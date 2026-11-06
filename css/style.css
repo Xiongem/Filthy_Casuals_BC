@@ -49,6 +49,9 @@ a {
         border: 3px solid var(--marine-green);
         padding: 1em;
     }
+    .popup-content {
+        width: 100%;
+    }
     .close-wrapper {
         position: absolute;
         right: 0;
