@@ -107,7 +107,7 @@
     .title, .comment {
         min-width: 12em;
     } */
-    .title, .author {
+    /* .title, .author {
         width: 12em;
     }
     .date {
@@ -118,7 +118,7 @@
     }
     .comment {
         min-width: 14em;
-    }
+    } */
     .head-edit {
         background-color: var(--deep-green);
         color: var(--barium-yellow);
@@ -134,7 +134,7 @@
         text-align: center;
         
         border: 1px solid var(--leather);
-        width: 3em;
+        /* width: 3em; */
         padding: 4px;
 
         white-space: pre-wrap;      /* Webkit */    
@@ -349,7 +349,7 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1000px) {
-    .title, .author {
+    /* .title, .author {
         min-width: 16em;
     }
     .date {
@@ -357,7 +357,7 @@
     }
     .comment {
         min-width: 22em;
-    }
+    } */
     /* .notch-wrapper {
         border: 1px solid var(--leather);
     } */
