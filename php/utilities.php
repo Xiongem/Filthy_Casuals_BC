@@ -58,7 +58,7 @@ function makeNav() {
                 </div>
                 <div class="desktop-menu-wrapper">
                     <a class="nav-item" href="challenges.php">Challenges</a>
-                    <a class="nav-item" href="rules.php">Rules</a>
+                    <a class="nav-item" href="rules.html">Rules</a>
                     <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>
                     <a class="nav-item" href="friendRec.php">Friend Recs</a>
                     <?php if ($admin == 1) { ?>
