@@ -353,18 +353,23 @@
     }
     .edit, .head-edit {
         min-width: none;
+        width: 100%;
     }
     .table-item, .table-head {
         min-width: none;
+        width: 100%;
     }
     .title, .author {
         min-width: none;
+        width: 100%;
     }
     .date {
         min-width: none;
+        width: 100%;
     }
     .comment {
         min-width: none;
+        width: 100%;
     }
     /* .notch-wrapper {
         border: 1px solid var(--leather);
