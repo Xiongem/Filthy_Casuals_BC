@@ -34,55 +34,55 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                         <h3>1.</h3>
                         <div class="rec-item">
                             <label for="rec1Title">Title:</label>
-                            <input type="text" name="rec1Title" id="rec1Title" value="<?=$rec1Title?>">
+                            <input type="text" class="inputs" name="rec1Title" id="rec1Title" value="<?=$rec1Title?>">
                         </div>
                         <div class="rec-item">
                             <label for="rec1Author">Author:</label>
-                            <input type="text" name="rec1Author" id="rec1Author" value="<?=$rec1Author?>">
+                            <input type="text" class="inputs" name="rec1Author" id="rec1Author" value="<?=$rec1Author?>">
                         </div>
                     </div>
                     <div class="rec-row">
                         <h3>2.</h3>
                         <div class="rec-item">
                             <label for="rec2Title">Title:</label>
-                            <input type="text" name="rec2Title" id="rec2Title" value="<?=$rec2Title?>">
+                            <input type="text" class="inputs" name="rec2Title" id="rec2Title" value="<?=$rec2Title?>">
                         </div>
                         <div class="rec-item">
                             <label for="rec2Author">Author:</label>
-                            <input type="text" name="rec2Author" id="rec2Author" value="<?=$rec2Author?>">
+                            <input type="text" class="inputs" name="rec2Author" id="rec2Author" value="<?=$rec2Author?>">
                         </div>
                     </div>
                     <div class="rec-row">
                         <h3>3.</h3>
                         <div class="rec-item">
                             <label for="rec3Title">Title:</label>
-                            <input type="text" name="rec3Title" id="rec3Title" value="<?=$rec3Title?>">
+                            <input type="text" class="inputs" name="rec3Title" id="rec3Title" value="<?=$rec3Title?>">
                         </div>
                         <div class="rec-item">
                             <label for="rec3Author">Author:</label>
-                            <input type="text" name="rec3Author" id="rec3Author" value="<?=$rec3Author?>">
+                            <input type="text" class="inputs" name="rec3Author" id="rec3Author" value="<?=$rec3Author?>">
                         </div>
                     </div>
                     <div class="rec-row">
                         <h3>4.</h3>
                         <div class="rec-item">
                             <label for="rec4Title">Title:</label>
-                            <input type="text" name="rec4Title" id="rec4Title" value="<?=$rec4Title?>">
+                            <input type="text" class="inputs" name="rec4Title" id="rec4Title" value="<?=$rec4Title?>">
                         </div>
                         <div class="rec-item">
                             <label for="rec4Author">Author:</label>
-                            <input type="text" name="rec4Author" id="rec4Author" value="<?=$rec4Author?>">
+                            <input type="text" class="inputs" name="rec4Author" id="rec4Author" value="<?=$rec4Author?>">
                         </div>
                     </div>
                     <div class="rec-row">
                         <h3>5.</h3>
                         <div class="rec-item">
                             <label for="rec5Title">Title:</label>
-                            <input type="text" name="rec5Title" id="rec5Title" value="<?=$rec5Title?>">
+                            <input type="text" class="inputs" name="rec5Title" id="rec5Title" value="<?=$rec5Title?>">
                         </div>
                         <div class="rec-item">
                             <label for="rec5Author">Author:</label>
-                            <input type="text" name="rec5Author" id="rec5Author" value="<?=$rec5Author?>">
+                            <input type="text" class="inputs" name="rec5Author" id="rec5Author" value="<?=$rec5Author?>">
                         </div>
                     </div>
                 </div>
@@ -101,55 +101,55 @@ $sql = "SELECT * FROM `friendRecs` WHERE `user_id` = '$userID'";
                         <h3>1.</h3>
                         <div class="rec-item">
                             <label for="rec1Title">Title:</label>
-                            <input type="text" name="rec1Title" id="rec1Title">
+                            <input type="text" class="inputs" name="rec1Title" id="rec1Title">
                         </div>
                         <div class="rec-item">
                             <label for="rec1Author">Author:</label>
-                            <input type="text" name="rec1Author" id="rec1Author">
+                            <input type="text" class="inputs" name="rec1Author" id="rec1Author">
                         </div>
                     </div>
                     <div class="rec-row">
                         <h3>2.</h3>
                         <div class="rec-item">
                             <label for="rec2Title">Title:</label>
-                            <input type="text" name="rec2Title" id="rec2Title">
+                            <input type="text" class="inputs" name="rec2Title" id="rec2Title">
                         </div>
                         <div class="rec-item">
                             <label for="rec2Author">Author:</label>
-                            <input type="text" name="rec2Author" id="rec2Author">
+                            <input type="text" class="inputs" name="rec2Author" id="rec2Author">
                         </div>
                     </div>
                     <div class="rec-row">
                         <h3>3.</h3>
                         <div class="rec-item">
                             <label for="rec3Title">Title:</label>
-                            <input type="text" name="rec3Title" id="rec3Title">
+                            <input type="text" class="inputs" name="rec3Title" id="rec3Title">
                         </div>
                         <div class="rec-item">
                             <label for="rec3Author">Author:</label>
-                            <input type="text" name="rec3Author" id="rec3Author">
+                            <input type="text" class="inputs" name="rec3Author" id="rec3Author">
                         </div>
                     </div>
                     <div class="rec-row">
                         <h3>4.</h3>
                         <div class="rec-item">
                             <label for="rec4Title">Title:</label>
-                            <input type="text" name="rec4Title" id="rec4Title">
+                            <input type="text" class="inputs" name="rec4Title" id="rec4Title">
                         </div>
                         <div class="rec-item">
                             <label for="rec4Author">Author:</label>
-                            <input type="text" name="rec4Author" id="rec4Author">
+                            <input type="text" class="inputs" name="rec4Author" id="rec4Author">
                         </div>
                     </div>
                     <div class="rec-row">
                         <h3>5.</h3>
                         <div class="rec-item">
                             <label for="rec5Title">Title:</label>
-                            <input type="text" name="rec5Title" id="rec5Title">
+                            <input type="text" class="inputs" name="rec5Title" id="rec5Title">
                         </div>
                         <div class="rec-item">
                             <label for="rec5Author">Author:</label>
-                            <input type="text" name="rec5Author" id="rec5Author">
+                            <input type="text" class="inputs" name="rec5Author" id="rec5Author">
                         </div>
                     </div>
                 </div>

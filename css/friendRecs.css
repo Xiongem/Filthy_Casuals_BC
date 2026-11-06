@@ -60,6 +60,29 @@
     .label {
         text-decoration: underline;
     }
+
+
+    .rec-form, .rec-form-inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .rec-form-title {
+        text-align: center;
+    }
+    .rec-row {
+        display: grid;
+        grid-template-columns: 10% 45% 45%;
+        width: 100%;
+        padding: 0.5em 1em;
+        border-top: 1px solid var(--marine-green);
+    }
+    .rec-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0.3em;
+    }
 }
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
