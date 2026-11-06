@@ -1,5 +1,4 @@
 :root,
-    /*Dark Purple*/
     :root.option1 { 
         --marine-green: #636b3f;
         --deep-green: #2b361c;
@@ -180,7 +179,7 @@
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 601px) {
     .settings-account-content, .settings-danger-content {
         width: 70%;
     }
@@ -193,7 +192,7 @@
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1024px) {
     .settings-account-content, .settings-danger-content {
         width: 50%;
     }

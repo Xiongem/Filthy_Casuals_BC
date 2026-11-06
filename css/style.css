@@ -1,5 +1,4 @@
 :root,
-    /*Dark Purple*/
     :root.option1 { 
         --marine-green: #636b3f;
         --deep-green: #2b361c;
@@ -227,7 +226,7 @@ a {
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 601px) {
     .popup-container {
         width: 70%;
     }
@@ -237,7 +236,7 @@ a {
 /** ####################### *//** ####################### *//** ####################### */
 /** ####################### *//** ####################### *//** ####################### */
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
     .nav-wrapper {
         display: none;
     }
