@@ -50,7 +50,8 @@
         /* border-left: 1px solid var(--leather);
         border-right: 1px solid var(--leather); */
         border-left: 1px solid var(--leather);
-        min-width: 5em;
+        /* min-width: 5em; */
+        width: fit-content;
         padding: 4px;
 
         white-space: pre-wrap;      /* Webkit */    
