@@ -95,6 +95,9 @@
         grid-area: number;
         /* grid-row: span 2; */
     }
+    .author, .title {
+        width: 100%;
+    }
     .title {
         grid-area: title;
     }
