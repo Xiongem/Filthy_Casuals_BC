@@ -8,7 +8,7 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
-$userID = $_POST['user_ID'];
+$userID = $_POST['userID'];
 
 $stmt = $_SESSION['conn'] -> prepare("UPDATE `friendRecs` SET `rec1_title` = ?, 
                                                                 `rec1_author` = ?, 
