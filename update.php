@@ -36,7 +36,6 @@ $today = date("Y-m-d");
     <meta property="og:url" content="">
     <title>Update Reading History</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/update.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <script type="text/javascript" src="javascript/scripts.js"></script>
