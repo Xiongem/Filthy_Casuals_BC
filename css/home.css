@@ -64,7 +64,7 @@
         width: 100%;
         padding: 0.5em;
 
-        background-color: var(--leather);
+        background-color: var(--grey);
         border-radius: 6px 6px 0 0;
     }
     .caret {
@@ -105,8 +105,12 @@
     .thead:last-child {
         border-right: none;
     } */
-    .table-rows {
+    .table-rows:nth-child(even) {
         background-color: var(--barium-yellow);
+        color: var(--deep-green);
+    }
+    .table-rows:nth-child(odd) {
+        background-color: var(--grey);
         color: var(--deep-green);
     }
     .table-rows:last-child {

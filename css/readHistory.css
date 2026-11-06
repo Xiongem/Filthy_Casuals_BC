@@ -6,6 +6,7 @@
         --barium-yellow: #fefae3;
         --sepia-e37: #d4a369;
         --leather: #b17036;
+        --grey: #e2dfcd;
     }
 @media only screen and (min-width: 200px) {
     /* body {
@@ -28,7 +29,7 @@
         flex-direction: column;
         width: 100%;
         overflow-x: auto;
-        background-color: #e2dfcd;
+        background-color: var(--grey);
         border: 2px solid var(--deep-green);
         margin-bottom: 2em;
     }
