@@ -51,7 +51,7 @@
         /* border-left: 1px solid var(--leather);
         border-right: 1px solid var(--leather); */
         border-left: 1px solid var(--leather);
-        /* min-width: 5em; */
+        min-width: 5em;
         /* width: fit-content; */
         padding: 4px;
 
@@ -109,18 +109,18 @@
     .title, .comment {
         min-width: 12em;
     } */
-    /* .title, .author {
-        width: 12em;
+    .title, .author {
+        min-width: 12em;
     }
     .date {
         min-width: 8em;
     }
     .mod {
-        width: 10em;
+        min-width: 10em;
     }
     .comment {
         min-width: 14em;
-    } */
+    }
     .head-edit {
         background-color: var(--deep-green);
         color: var(--barium-yellow);
@@ -136,7 +136,7 @@
         text-align: center;
         
         /* border: 1px solid var(--leather); */
-        /* width: 3em; */
+        min-width: 3em;
         padding: 4px;
 
         white-space: pre-wrap;      /* Webkit */    
@@ -351,7 +351,7 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1000px) {
-    /* .title, .author {
+    .title, .author {
         min-width: 16em;
     }
     .date {
@@ -359,7 +359,7 @@
     }
     .comment {
         min-width: 22em;
-    } */
+    }
     /* .notch-wrapper {
         border: 1px solid var(--leather);
     } */
