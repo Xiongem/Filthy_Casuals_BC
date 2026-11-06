@@ -9,8 +9,14 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
 $userID = $_POST['userID'];
+$sql = "SELECT username FROM `users` WHERE `user_id` = $userID";
+    $result = $_SESSION["conn"]->query($sql1);
+    $user = $result->fetch_assoc();
+        $username = $user["username"];
 
-$stmt = $_SESSION['conn'] -> prepare("INSERT INTO `friendRecs` (`rec1_title`, 
+$stmt = $_SESSION['conn'] -> prepare("INSERT INTO `friendRecs` (`user_id`,
+                                                                `username`,
+                                                                `rec1_title`, 
                                                                 `rec1_author`, 
                                                                 `rec2_title`, 
                                                                 `rec2_author`, 
@@ -20,8 +26,10 @@ $stmt = $_SESSION['conn'] -> prepare("INSERT INTO `friendRecs` (`rec1_title`,
                                                                 `rec4_author`,
                                                                 `rec5_title`,
                                                                 `rec5_author`)
-                                                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt -> bind_param("ssssssssss", 
+                                                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt -> bind_param("isssssssssss", 
+                        $userID,
+                        $username,
                         $_POST["rec1Title"],
                         $_POST["rec1Author"],
                         $_POST["rec2Title"],
