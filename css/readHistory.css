@@ -26,7 +26,7 @@
     .history-table {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        /* width: 100%; */
         overflow-x: auto;
         background-color: #e2dfcd;
         border: 2px solid var(--deep-green);
