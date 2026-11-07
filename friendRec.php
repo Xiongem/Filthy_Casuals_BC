@@ -121,7 +121,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 </div>
             </div>
         
-            <div class="read-wrapper" onclick="showPoints(<?=$username?>, <?=$rec2Title?>)">
+            <div class="read-wrapper" onclick="showPoints('<?=$username?>', '<?=$rec2Title?>')">
                 <div class="rank">2.</div>
                 <div class="info-wrapper">
                     <h5 class="label">Title:</h5>
@@ -137,7 +137,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 </div>
             </div>
 
-            <div class="read-wrapper" onclick="showPoints(<?=$username?>, <?=$rec3Title?>)">
+            <div class="read-wrapper" onclick="showPoints('<?=$username?>', '<?=$rec3Title?>')">
                 <div class="rank">3.</div>
                 <div class="info-wrapper">
                     <h5 class="label">Title:</h5>
@@ -153,7 +153,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 </div>
             </div>
 
-            <div class="read-wrapper" onclick="showPoints(<?=$username?>, <?=$rec4Title?>)">
+            <div class="read-wrapper" onclick="showPoints('<?=$username?>', '<?=$rec4Title?>')">
                 <div class="rank">4.</div>
                 <div class="info-wrapper">
                     <h5 class="label">Title:</h5>
@@ -169,7 +169,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 </div>
             </div>
 
-            <div class="read-wrapper" onclick="showPoints(<?=$username?>, <?=$rec5Title?>)">
+            <div class="read-wrapper" onclick="showPoints('<?=$username?>', '<?=$rec5Title?>')">
                 <div class="rank">5.</div>
                 <div class="info-wrapper">
                     <h5 class="label">Title:</h5>
