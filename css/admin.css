@@ -38,6 +38,7 @@
         justify-content: center;
     }
 
+
     .divider {
         width: 50%;
         border-bottom: 2px solid var(--leather);
@@ -107,6 +108,9 @@
 
 @media only screen and (min-width: 1024px) {
     .wrapper-content {
+        width: 30%;
+    }
+    .divider {
         width: 30%;
     }
 }
