@@ -54,25 +54,28 @@ $userID = $_SESSION["user_id"];
                 </div>
                 <div class="setResult" id="setResult"></div>
             </div>
-        <div class="wrapper-content">
-            <div class="title-wrapper">
-                <h2>Generate One-time Passcode</h2>
-            </div>
-            <div class="button-wrapper">
-                <button id="createOTPButton" class="inputs buttons" onclick="createOTP()">Create OTP</button>
-            </div>
-            <div class="OTP-wrapper" id="OTPWrapper">
-                <label class="labels">One-time Passcode:</label>
-                <div class="span-wrapper">
-                    <span id="OTP" class="labels">171439b1ba92011f8a37f71f8f8d6290</span>
-                    <div class="copy-wrapper">
-                        <p id="copy">copy</p>
-                        <ion-icon class="copy" name="copy-outline"></ion-icon>
+
+            <div class="divider"></div>
+            
+            <div class="wrapper-content">
+                <div class="title-wrapper">
+                    <h2>Generate One-time Passcode</h2>
+                </div>
+                <div class="button-wrapper">
+                    <button id="createOTPButton" class="inputs buttons" onclick="createOTP()">Create OTP</button>
+                </div>
+                <div class="OTP-wrapper" id="OTPWrapper">
+                    <label class="labels">One-time Passcode:</label>
+                    <div class="span-wrapper">
+                        <span id="OTP" class="labels">171439b1ba92011f8a37f71f8f8d6290</span>
+                        <div class="copy-wrapper">
+                            <p id="copy">copy</p>
+                            <ion-icon class="copy" name="copy-outline"></ion-icon>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     <script>
         //sends the start and end dates for RAT to the database
         function setRatDate() {
