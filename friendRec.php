@@ -53,7 +53,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <div class="label">
                     Give <span id="username"></span> 20 points for recommending <span id="rec"></span>, which you read?
                 </div>
-                <div class="award buttons" onclick="givePoints($('#username').val())">Award!</div>
+                <div class="award buttons" onclick="givePoints()">Award!</div>
                 <div id="pointsResults"></div>
             </div>
             <script>
@@ -104,7 +104,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             <div class="name" id="<?=$username?>">
                 <h2><?=$username?></h2>
             </div> 
-            <div class="read-wrapper" onclick="showPoints('<?=$username?>', <?=$rec1Title?>)">
+            <div class="read-wrapper" onclick="showPoints('<?=$username?>', '<?=$rec1Title?>')">
                 <div class="rank">1.</div>
                 <div class="info-wrapper">
                     <h5 class="label">Title:</h5>
