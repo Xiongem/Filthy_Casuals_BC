@@ -12,10 +12,11 @@
         padding: 0 0.5em;
     }
     .span-wrapper {
-        position: relative;
+        /* position: relative; */
         display: flex;
         justify-content: center;
-        width: 55%;
+        align-items: center;
+        width: 100%;
         margin: 0.5em 0;
         cursor: pointer;
     }
@@ -23,7 +24,7 @@
         margin: 0 0.5em;
     }
     .copy-wrapper {
-        position: absolute;
+        /* position: absolute; */
         top: 0;
         right: 0;
         display: none;
