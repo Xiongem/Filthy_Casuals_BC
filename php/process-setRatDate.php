@@ -15,13 +15,11 @@ $sql = "SELECT username FROM `users` WHERE `user_id` = $userID";
     $user = $result->fetch_assoc();
         $username = $user["username"];
 
-$stmt = $_SESSION['conn'] -> prepare("INSERT INTO `adminStuff` (`user_id`,
-                                                                `setBy`,
+$stmt = $_SESSION['conn'] -> prepare("INSERT INTO `adminStuff` (`setBy`,
                                                                 `ratStart`, 
                                                                 `ratEnd`)
-                                                                VALUES (?, ?, ?, ?)");
-    $stmt -> bind_param("isss", 
-                        $userID,
+                                                                VALUES (?, ?, ?)");
+    $stmt -> bind_param("sss", 
                         $username,
                         $_POST["startDate"],
                         $_POST["endDate"]);
