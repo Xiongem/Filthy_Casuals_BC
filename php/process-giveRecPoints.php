@@ -23,7 +23,7 @@ if ($_POST['username']) {
     $stmt = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ?, `recPoints` = ? WHERE `username` = ?");
     $stmt -> bind_param("iis", 
                             $newTotal,
-                            $oldRecNum,
+                            $newRecNum,
                             $username);
 
     if ($stmt->execute()) {
