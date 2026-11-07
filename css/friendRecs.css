@@ -64,6 +64,7 @@
     }
     .read-wrapper:hover {
         color: var(--marine-green);
+        cursor: pointer;
     }
     .read-wrapper:nth-child(odd) {
         background-color: var(--grey);
