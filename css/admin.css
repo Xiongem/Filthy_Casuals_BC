@@ -19,12 +19,13 @@
     }
     .date-wrapper {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
     }
     .hyphen {
         font-size: 18px;
         font-weight: bold;
-        margin: 0 1em;
+        margin: 0 2em;
     }
     .buttons {
         display: flex;
