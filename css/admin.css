@@ -21,6 +21,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 1em;
     }
     .hyphen {
         font-size: 18px;
@@ -108,4 +109,7 @@
     .wrapper-content {
         width: 30%;
     }
+}
+.inputs {
+    margin: 0;
 }
