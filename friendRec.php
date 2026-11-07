@@ -51,14 +51,14 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             <div class="popup-content">
                 <h2>Award Points?</h2>
                 <div class="">
-                    Give <span id="username"></span> 20 points for recommending <span id="rec"></span>, which you read?
+                    Give <span id="username"></span> 20 points for recommending <span id="rec"></span>?
                 </div>
                 <div class="award buttons" onclick="givePoints()">Award!</div>
                 <div id="pointsResults"></div>
             </div>
             <script>
                 function givePoints() {
-                    var username = $("#username").val();
+                    var username = $("#username").text();
                     $.ajax({
                         url: "php/process-giveRecPoints.php",
                         method: "post",
