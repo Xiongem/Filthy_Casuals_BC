@@ -22,6 +22,7 @@
     }
     #OTP {
         margin: 0 0.5em;
+        font-weight: bold;
     }
     .copy-wrapper {
         /* position: absolute; */
