@@ -38,6 +38,8 @@
     }
     .button-wrapper {
         justify-content: center;
+        align-items: center;
+        margin-bottom: 1em;
     }
     #createOTPButton {
         width: 20em;
