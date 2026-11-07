@@ -9,6 +9,23 @@
     }
 
 @media only screen and (min-width: 200px) {
+    .button-wrapper {
+        position: relative;
+    }
+    .earned-points-wrapper {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0.5em 0;
+    }
+    .labels {
+        margin: 0 1em;
+    }
+    .labels, .points {
+        font-size: 24px;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;

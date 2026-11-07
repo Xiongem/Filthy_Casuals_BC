@@ -46,6 +46,10 @@ $userID = $_SESSION["user_id"];
     <header>
         <?= makeNav() ?>
     </header>
+    <div class="earned-points-wrapper">
+        <div class="labels">Points Earned:</div>
+        <div class="points" id="points"></div>
+    </div>
     <div class="button-wrapper">
         <div class="rec-input-button buttons" onclick="showRecPopup(<?=$userID?>)">
             <p>update</p>
