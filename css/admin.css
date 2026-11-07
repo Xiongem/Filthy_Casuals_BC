@@ -8,11 +8,14 @@
         --grey: #e2dfcd;
     }
 @media only screen and (min-width: 200px) {
+    .wrapper-content {
+        padding: 0 0.5em;
+    }
     .span-wrapper {
         position: relative;
         display: flex;
         justify-content: center;
-        width: 100%;
+        width: 50%;
         cursor: pointer;
     }
     .copy-wrapper {
