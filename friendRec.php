@@ -50,11 +50,11 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             </div>
             <div class="popup-content">
                 <h2>Award Points?</h2>
-                <div class="">
+                <div class="spacing">
                     Give <span id="username"></span> 20 points for recommending <span id="rec"></span>?
                 </div>
-                <div class="award buttons" onclick="givePoints()">Award!</div>
-                <div id="pointsResults"></div>
+                <div class="award buttons spacing" onclick="givePoints()">Award!</div>
+                <div id="pointsResults" class="spacing"></div>
             </div>
             <script>
                 function givePoints() {
