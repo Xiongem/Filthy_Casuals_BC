@@ -11,11 +11,11 @@ dbConnect();
 if ($_POST['username']) {
     $username = $_POST['username'];
 
-    $sql = "SELECT * FROM `users` WHERE `username` = $username";
-        $result = $_SESSION["conn"]->query($sql);
-        $user = $result->fetch_assoc();
-            $oldTotal = $user["pointsYear"];
-            $oldRecNum = $user["recPoints"];
+    // $sql = "SELECT * FROM `users` WHERE `username` = $username";
+    //     $result = $_SESSION["conn"]->query($sql);
+    //     $user = $result->fetch_assoc();
+    //         $oldTotal = $user["pointsYear"];
+    //         $oldRecNum = $user["recPoints"];
 
     // $newTotal = $oldTotal + 20;
     // $newRecNum = $newTotal + 20;
@@ -31,7 +31,7 @@ if ($_POST['username']) {
     // } else {
     //     die("Failed to award points.");
     // }
-    echo "hello";
+    echo $username;
 } else {
     die("username empty");
 }
