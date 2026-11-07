@@ -56,7 +56,7 @@ $userID = $_SESSION["user_id"];
             </div>
 
             <div class="divider"></div>
-            
+
             <div class="wrapper-content">
                 <div class="title-wrapper">
                     <h2>Generate One-time Passcode</h2>
@@ -79,7 +79,7 @@ $userID = $_SESSION["user_id"];
     <script>
         //sends the start and end dates for RAT to the database
         function setRatDate() {
-            var userID = <?=$userID?>
+            var userID = <?=$userID?>;
             var startDate = $("#startDate").val();
             var endDate = $("#endDate").val();
             $.ajax({
