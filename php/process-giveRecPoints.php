@@ -24,7 +24,7 @@ if ($_POST['username']) {
     $stmt -> bind_param("iis", 
                             $newTotal,
                             $oldRecNum,
-                            $username);
+                            '$username');
 
     if ($stmt->execute()) {
         exit("Points awarded!");
