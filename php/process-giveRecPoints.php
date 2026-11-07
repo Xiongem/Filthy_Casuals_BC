@@ -14,17 +14,18 @@ if ($_POST['username']) {
     $sql = "SELECT * FROM `users` WHERE `username` = '$username'";
         $result = $_SESSION["conn"]->query($sql);
         $user = $result->fetch_assoc();
+            $userID = $user["user_id"];
             $oldTotal = $user["pointsYear"];
             $oldRecNum = $user["recPoints"];
 
     $newTotal = $oldTotal + 20;
     $newRecNum = $newTotal + 20;
 
-    $stmt = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ?, `recPoints` WHERE `username` = ?");
-    $stmt -> bind_param("iis", 
+    $stmt = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ?, `recPoints` WHERE `user_id` = ?");
+    $stmt -> bind_param("iii", 
                             $newTotal,
                             $oldRecNum,
-                            "$username");
+                            $userID);
 
     if ($stmt->execute()) {
         exit("Points awarded!");
