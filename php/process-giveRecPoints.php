@@ -11,7 +11,7 @@ dbConnect();
 if ($_POST['username']) {
     $username = $_POST['username'];
 
-    $sql = "SELECT * FROM `users` WHERE `username` = `$username`";
+    $sql = "SELECT * FROM `users` WHERE `username` = '$username'";
         $result = $_SESSION["conn"]->query($sql);
         $user = $result->fetch_assoc();
             $oldTotal = $user["pointsYear"];
