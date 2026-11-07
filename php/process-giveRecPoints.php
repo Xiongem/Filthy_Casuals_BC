@@ -17,20 +17,21 @@ if ($_POST['username']) {
             $oldTotal = $user["pointsYear"];
             $oldRecNum = $user["recPoints"];
 
-    $newTotal = $oldTotal + 20;
-    $newRecNum = $newTotal + 20;
+    // $newTotal = $oldTotal + 20;
+    // $newRecNum = $newTotal + 20;
 
-    $stmt = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ?, `recPoints` WHERE `username` = ?");
-    $stmt -> bind_param("iis", 
-                            $newTotal,
-                            $oldRecNum,
-                            $username);
+    // $stmt = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ?, `recPoints` WHERE `username` = ?");
+    // $stmt -> bind_param("iis", 
+    //                         $newTotal,
+    //                         $oldRecNum,
+    //                         $username);
 
-    if ($stmt->execute()) {
-        exit("Points awarded!");
-    } else {
-        die("Failed to award points.");
-    }
+    // if ($stmt->execute()) {
+    //     exit("Points awarded!");
+    // } else {
+    //     die("Failed to award points.");
+    // }
+    echo "hello";
 } else {
     die("username empty");
 }
