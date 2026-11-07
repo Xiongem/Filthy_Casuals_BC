@@ -50,7 +50,7 @@ $userID = $_SESSION["user_id"];
             <div class="OTP-wrapper" id="OTPWrapper">
                 <label class="labels">One-time Passcode:</label>
                 <div class="span-wrapper">
-                    <span id="OTP" class="labels" style="font-size: 1.5rem;">test text</span>
+                    <span id="OTP" class="labels" style="font-size: 1.5rem;">1234567891011121311415</span>
                     <div class="copy-wrapper">
                         <p id="copy">copy</p>
                         <ion-icon class="copy" name="copy-outline"></ion-icon>
