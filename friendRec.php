@@ -57,7 +57,8 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <div id="pointsResults"></div>
             </div>
             <script>
-                function givePoints(username) {
+                function givePoints() {
+                    var username = $("#username").val();
                     $.ajax({
                         url: "php/process-giveRecPoints.php",
                         method: "post",
