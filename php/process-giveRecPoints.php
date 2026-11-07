@@ -8,25 +8,29 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
-$username = $_POST['username'];
+if ($_POST['username']) {
+    $username = $_POST['username'];
 
-$sql = "SELECT `pointsYear`, `recPoints` FROM `users` WHERE `username` = $username";
-    $result = $_SESSION["conn"] -> query($sql);
-    $user = $result -> fetch_assoc();
-        $oldTotal = $user["pointsYear"];
-        $oldRecNum = $user["recPoints"];
+    $sql = "SELECT * FROM `users` WHERE `username` = $username";
+        $result = $_SESSION["conn"]->query($sql);
+        $user = $result->fetch_assoc();
+            $oldTotal = $user["pointsYear"];
+            $oldRecNum = $user["recPoints"];
 
-$newTotal = $oldTotal + 20;
-$newRecNum = $newTotal + 20;
+    $newTotal = $oldTotal + 20;
+    $newRecNum = $newTotal + 20;
 
-$stmt = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ?, `recPoints` WHERE `username` = ?");
-$stmt -> bind_param("iis", 
-                        $newTotal,
-                        $oldRecNum,
-                        $username);
+    $stmt = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ?, `recPoints` WHERE `username` = ?");
+    $stmt -> bind_param("iis", 
+                            $newTotal,
+                            $oldRecNum,
+                            $username);
 
-if ($stmt->execute()) {
-    exit("Points awarded!");
+    if ($stmt->execute()) {
+        exit("Points awarded!");
+    } else {
+        die("Failed to award points.");
+    }
 } else {
-    die("Failed to award points.");
+    die("username empty");
 }
