@@ -8,9 +8,25 @@
         --grey: #e2dfcd;
     }
 @media only screen and (min-width: 200px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .wrapper-content {
         padding: 0 0.5em;
     }
+    .date-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .hyphen {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 1em;
+    }
+
+
     .span-wrapper {
         position: relative;
         display: flex;

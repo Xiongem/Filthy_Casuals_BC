@@ -40,6 +40,20 @@ $userID = $_SESSION["user_id"];
         <?= makeNav() ?>
     </header>
         <div class="wrapper">
+            <div class="wrapper-content">
+                <div class="title-wrapper">
+                    <h2>Set RAT Date:</h2>
+                </div>
+                <div class="date-wrapper">
+                    <input class="inputs" type="date" name="startDate" id="startDate">
+                    <p class="hyphen">-</p>
+                    <input class="inputs" type="date" name="endDate" id="endDate">
+                </div>
+                <div class="button-wrapper">
+                    <div class="buttons" onclick="setRatDate()">Set</div>
+                </div>
+                <div class="setResult" id="setResult"></div>
+            </div>
         <div class="wrapper-content">
             <div class="title-wrapper">
                 <h2>Generate One-time Passcode</h2>
@@ -60,12 +74,28 @@ $userID = $_SESSION["user_id"];
         </div>
     </div>
     <script>
-        const span = document.querySelector("span");
+        //sends the start and end dates for RAT to the database
+        function setRatDate() {
+            var userID = <?=$userID?>
+            var startDate = $("#startDate").val();
+            var endDate = $("#endDate").val();
+            $.ajax({
+                url: "php/process-setRatDate.php",
+                method: "post",
+                data: {startDate:startDate,
+                        endDate:endDate,
+                        userID:userID},
+                success:function(result) {
+                    $("#setResult").html(result)
+                }
+            })
+        }
 
+        //copies otp when user clicks the otp span
+        const span = document.querySelector("span");
         span.onclick = function() {
             document.execCommand("copy");
         }
-
         span.addEventListener("copy", function(event) {
         event.preventDefault();
             if (event.clipboardData) {
@@ -75,10 +105,13 @@ $userID = $_SESSION["user_id"];
             }
         });
 
+        //displays otp after generate button is clicked
         function showOTP(otp) {
             document.getElementById("OTP").innerHTML = otp;
             document.getElementById("OTPWrapper").style.display = "flex";
         }
+
+        //randomly generates a otp, posts it to the database, and then passes the otp to the show otp function
         function createOTP() {
             <?php
                 $oneTimePass = bin2hex(random_bytes(16));
