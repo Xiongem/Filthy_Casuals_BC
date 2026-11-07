@@ -18,7 +18,7 @@ if ($_POST['username']) {
             $oldRecNum = $user["recPoints"];
 
     $newTotal = $oldTotal + 20;
-    $newRecNum = $newTotal + 20;
+    $newRecNum = $oldRecNum + 20;
 
     $stmt = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ?, `recPoints` = ? WHERE `username` = ?");
     $stmt -> bind_param("iis", 
