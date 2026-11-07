@@ -52,7 +52,7 @@ $userID = $_SESSION["user_id"];
                 <div class="span-wrapper">
                     <span id="OTP" class="labels" style="font-size: 1.5rem;">test text</span>
                     <div class="copy-wrapper">
-                        <p>copy</p>
+                        <p id="copy">copy</p>
                         <ion-icon class="copy" name="copy-outline"></ion-icon>
                     </div>
                 </div>
@@ -70,6 +70,7 @@ $userID = $_SESSION["user_id"];
         event.preventDefault();
             if (event.clipboardData) {
                 event.clipboardData.setData("text/plain", span.textContent);
+                $("#copy").text("copied")
                 console.log(event.clipboardData.getData("text"))
             }
         });
