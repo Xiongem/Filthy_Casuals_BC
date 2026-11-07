@@ -104,7 +104,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             <div class="name" id="<?=$username?>">
                 <h2><?=$username?></h2>
             </div> 
-            <div class="read-wrapper" onclick="showPoints("<?=$username?>", <?=$rec1Title?>)">
+            <div class="read-wrapper" onclick="showPoints('<?=$username?>', <?=$rec1Title?>)">
                 <div class="rank">1.</div>
                 <div class="info-wrapper">
                     <h5 class="label">Title:</h5>
