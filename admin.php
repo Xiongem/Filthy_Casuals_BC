@@ -82,16 +82,21 @@ $userID = $_SESSION["user_id"];
             var userID = <?=$userID?>;
             var startDate = $("#startDate").val();
             var endDate = $("#endDate").val();
-            $.ajax({
-                url: "php/process-setRatDate.php",
-                method: "post",
-                data: {startDate:startDate,
-                        endDate:endDate,
-                        userID:userID},
-                success:function(result) {
-                    $("#setResult").html(result)
-                }
-            })
+
+            if (startDate && endDate) {
+                $.ajax({
+                    url: "php/process-setRatDate.php",
+                    method: "post",
+                    data: {startDate:startDate,
+                            endDate:endDate,
+                            userID:userID},
+                    success:function(result) {
+                        $("#setResult").html(result)
+                    }
+                })
+            }else{
+                $("#setResult").html("Please set dates before submitting.")
+            }
         }
 
         //copies otp when user clicks the otp span
