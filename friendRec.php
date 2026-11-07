@@ -48,7 +48,7 @@ $userID = $_SESSION["user_id"];
     </header>
     <div class="earned-points-wrapper">
         <div class="labels">Points Earned:</div>
-        <div class="points" id="points"></div>
+        <div class="points" id="points">0</div>
     </div>
     <div class="button-wrapper">
         <div class="rec-input-button buttons" onclick="showRecPopup(<?=$userID?>)">
