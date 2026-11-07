@@ -158,3 +158,8 @@
         align-self: center;
     }
 }
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
