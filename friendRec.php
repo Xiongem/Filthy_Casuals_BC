@@ -11,10 +11,10 @@ forceLogin();
 
 $userID = $_SESSION["user_id"];
 
-// $sql1 = "SELECT * FROM users WHERE user_id = $userID";
-//     $result1 = $_SESSION["conn"]->query($sql1);
-//     $user = $result1->fetch_assoc();
-//         $username = $user["username"];
+$sql = "SELECT * FROM users WHERE user_id = $userID";
+    $result = $_SESSION["conn"]->query($sql);
+    $user = $result->fetch_assoc();
+        $recPoints = $user["recPoints"];
 ?>
 
 <!DOCTYPE html>
@@ -43,12 +43,40 @@ $userID = $_SESSION["user_id"];
             <div class="popup-content" id="editResults"></div>
         </div>
     </div>
+    <div class="popup-wrapper hide" id="pointsPopup">
+        <div class="popup-container">
+            <div class="close-wrapper">
+                <ion-icon name="close" onclick="closePointsPopup()"></ion-icon>
+            </div>
+            <div class="popup-content">
+                <h2>Award Points?</h2>
+                <div class="label">
+                    Give <span id="username"></span> 20 points for recommending <span id="rec"></span>, which you read?
+                </div>
+                <div class="award buttons" onclick="givePoints($('#username').val())">Award!</div>
+                <div id="pointsResults"></div>
+            </div>
+            <script>
+                function givePoints(username) {
+                    $.ajax({
+                        url: "php/process-giveRecPoints.php",
+                        method: "post",
+                        data: {
+                            username:username
+                        }, success: function(result) {
+                            $("#pointsResults").html(result)
+                        }
+                    })
+                }
+            </script>
+        </div>
+    </div>
     <header>
         <?= makeNav() ?>
     </header>
     <div class="earned-points-wrapper">
         <div class="labels">Points Earned:</div>
-        <div class="points" id="points">0</div>
+        <div class="points" id="points"><?=$recPoints?></div>
     </div>
     <div class="button-wrapper">
         <div class="rec-input-button buttons" onclick="showRecPopup(<?=$userID?>)">
@@ -76,7 +104,7 @@ $userID = $_SESSION["user_id"];
             <div class="name" id="<?=$username?>">
                 <h2><?=$username?></h2>
             </div> 
-            <div class="read-wrapper">
+            <div class="read-wrapper" onclick="showPoints(<?=$username?>, <?=$rec1Title?>)">
                 <div class="rank">1.</div>
                 <div class="info-wrapper">
                     <h5 class="label">Title:</h5>
@@ -92,7 +120,7 @@ $userID = $_SESSION["user_id"];
                 </div>
             </div>
         
-            <div class="read-wrapper">
+            <div class="read-wrapper" onclick="showPoints(<?=$username?>, <?=$rec2Title?>)">
                 <div class="rank">2.</div>
                 <div class="info-wrapper">
                     <h5 class="label">Title:</h5>
@@ -108,7 +136,7 @@ $userID = $_SESSION["user_id"];
                 </div>
             </div>
 
-            <div class="read-wrapper">
+            <div class="read-wrapper" onclick="showPoints(<?=$username?>, <?=$rec3Title?>)">
                 <div class="rank">3.</div>
                 <div class="info-wrapper">
                     <h5 class="label">Title:</h5>
@@ -124,7 +152,7 @@ $userID = $_SESSION["user_id"];
                 </div>
             </div>
 
-            <div class="read-wrapper">
+            <div class="read-wrapper" onclick="showPoints(<?=$username?>, <?=$rec4Title?>)">
                 <div class="rank">4.</div>
                 <div class="info-wrapper">
                     <h5 class="label">Title:</h5>
@@ -140,7 +168,7 @@ $userID = $_SESSION["user_id"];
                 </div>
             </div>
 
-            <div class="read-wrapper">
+            <div class="read-wrapper" onclick="showPoints(<?=$username?>, <?=$rec5Title?>)">
                 <div class="rank">5.</div>
                 <div class="info-wrapper">
                     <h5 class="label">Title:</h5>
@@ -159,6 +187,21 @@ $userID = $_SESSION["user_id"];
         </div>
     </div>
     <script>
+        function showPoints(username, rec) {
+            $("#pointsPopup").css({"display": "flex"});
+            var pointsPopup = document.getElementById("pointsPopup");
+            pointsPopup.scrollIntoView();
+            setTimeout(hideBackground, 500);
+
+            $("#username").html(username);
+            $("#rec").html(rec);
+        }
+        function closePointsPopup() {
+            $("#pointsPopup").hide();
+            $("#body").css({"height": "unset", "overflow": "unset"});
+            location.reload(true);
+        }
+
         function showRecPopup(userID) {
             $("#editPopup").css({"display": "flex"});
             var editPopup = document.getElementById("editPopup");
