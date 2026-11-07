@@ -16,7 +16,6 @@
     .wrapper-content {
         width: 100%;
         padding: 0 0.5em;
-        margin-bottom: 1.5em;
     }
     .date-wrapper {
         display: flex;
@@ -36,6 +35,7 @@
     .divider {
         width: 50%;
         border-bottom: 2px solid var(--leather);
+        margin: 0.5em 0;
     }
 
 
