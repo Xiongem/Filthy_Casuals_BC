@@ -37,6 +37,12 @@
         display: flex;
         justify-content: center;
     }
+    .bingo-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1em;
+    }
 
 
     .divider {
@@ -75,7 +81,7 @@
     .span-wrapper:hover .copy-wrapper {
         display: flex;
     }
-    .button-wrapper, .bingo-wrapper {
+    .button-wrapper {
         justify-content: center;
         align-items: center;
         margin-bottom: 1em;

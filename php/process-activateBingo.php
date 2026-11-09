@@ -8,7 +8,8 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
-$stmt = $_SESSION['conn'] -> prepare("UPDATE `bingoNames` SET `active` = ? WHERE `bingo_name` = ?");
+if ($_POST["bingoName"]) {
+    $stmt = $_SESSION['conn'] -> prepare("UPDATE `bingoNames` SET `active` = ? WHERE `bingo_name` = ?");
     $stmt -> bind_param("is", 
                         1, 
                         $_POST["bingoName"]);
@@ -18,3 +19,6 @@ $stmt = $_SESSION['conn'] -> prepare("UPDATE `bingoNames` SET `active` = ? WHERE
     } else {
         echo "Error activating bingo: " . $stmt -> error;
     }
+} else {
+    echo "Please choose a bingo before submitting";
+}
