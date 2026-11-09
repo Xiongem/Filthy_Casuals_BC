@@ -95,6 +95,9 @@ if ($now <= $ratEnd) {
             </div>
             <div class="divider"></div>
             <div class="popup-content" id="bingoResults"></div>
+            <div class="button-wrapper">
+                <div class="buttons" onclick="bingoMath()">Submit</div>
+            </div>
         </div>
     </div>
     <header>
@@ -429,7 +432,7 @@ if ($now <= $ratEnd) {
             var bingoSize = $("#bingoSize").val();
 
             var bingoSelect = [ 
-            <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `user_id` = $userID AND `bingo_name` = '$bingoName'"); 
+            <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `user_id` = $userID AND `bingo_name` = '$bingoName' AND `used` = 0"); 
                     $bingorow = mysqli_num_rows($stmt7);
                 if ($bingorow > 0) {
                     while ($bingorow = mysqli_fetch_array($stmt7)) {
@@ -456,6 +459,9 @@ if ($now <= $ratEnd) {
             }
         }
 
+        function bingoMath() {
+
+        }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
