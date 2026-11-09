@@ -156,7 +156,6 @@
         flex-direction: column;
     }
     .bingo-wrapper {
-        display: flex;
         justify-content: space-evenly;
         margin-bottom: 1em;
     }
