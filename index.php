@@ -31,7 +31,9 @@ if ($now > $ratStart && $now < $ratEnd) {
     $active = true;
     $ratStart = date("m-d-Y", $ratStart);
     $ratEnd = date("m-d-Y", $ratEnd);
-};
+} else {
+    $active = false;
+}
 ?>
 
 <!DOCTYPE html>
