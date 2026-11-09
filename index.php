@@ -11,11 +11,11 @@ forceLogin();
 
 $userID = $_SESSION["user_id"];
 
- $sql = "SELECT * FROM users WHERE user_id = $userID";
-        $result = $_SESSION["conn"]->query($sql);
-        $user = $result->fetch_assoc();
-            $league = $user["league"];
-            $admin = $user["admin"];
+$sql = "SELECT * FROM users WHERE user_id = $userID";
+    $result = $_SESSION["conn"]->query($sql);
+    $user = $result->fetch_assoc();
+        $league = $user["league"];
+        $admin = $user["admin"];
 
 $sql2 = "SELECT * FROM `adminStuff` WHERE `adminID` = 1";
     $result2 = $_SESSION["conn"]->query($sql2);
@@ -60,6 +60,7 @@ if ($now <= $ratEnd) {
     <link rel="stylesheet" href="css/home.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <script src="javascript/scripts.js"></script>
+    <script src="javascript/bingoMath.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body id="body">
@@ -96,7 +97,7 @@ if ($now <= $ratEnd) {
             <div class="divider"></div>
             <div class="popup-content" id="bingoResults"></div>
             <div class="button-wrapper">
-                <div class="buttons" onclick="bingoMath()">Submit</div>
+                <div class="buttons" onclick="sendBingoMath()">Submit</div>
             </div>
         </div>
     </div>
@@ -451,7 +452,8 @@ if ($now <= $ratEnd) {
 
                 var sel = $('<select>').appendTo('#bingoResults');
                 sel.attr('class', 'inputs');
-                sel.attr('name', "square"+ (i+1));
+                sel.attr('name', "square" + (i+1));
+                sel.attr('id', "square" + (i+1))
 
                 for (var a in bingoSelect) {
                     sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
@@ -459,8 +461,20 @@ if ($now <= $ratEnd) {
             }
         }
 
-        function bingoMath() {
+        function sendBingoMath() {
+            var bingoSize = $("#bingoSize").val();
+            var total = bingoMath(bingosize);
+            console.log(total);
+            
+            // $.ajax({
+            //     url: "php/process-bingoMath.php",
+            //     method: "post",
+            //     data: {
+            //         total:total
+            //     },success:function(result) {
 
+            //     }
+            // }) 
         }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
