@@ -74,7 +74,7 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                     <?php if ($activeBingo) { ?>
                     <div class="label-wrapper">
                         <label>Deactivate <?=$activeBingo?> Bingo</label>
-                        <div class="buttons" onclick="deactivateBingo(<?=$activeBingo?>)">deactivate</div>
+                        <div class="buttons" onclick="deactivateBingo('<?=$activeBingo?>')">deactivate</div>
                     </div>
                     <?php } else { ?>
                         <select name="bingo" id="bingo" class="inputs">
@@ -142,7 +142,7 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
         }
 
         function deactivateBingo(bingoName) {
-            var bingo = bingoName;
+            // var bingo = bingoName;
             $.ajax({
                 url: "php/process-deactivateBingo.php",
                 method: "post",
