@@ -425,6 +425,8 @@ if ($now <= $ratEnd) {
 
         function createInputs() {
             var bingoSize = $("#bingoSize").val();
+            console.log(bingoSize);
+            
             for (let i = 0; i < bingoSize.length; i++) {
                 var bingoSelect = [ 
                     <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `user_id` = $userID AND `bingo_name` = '$bingoName'"); 
