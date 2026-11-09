@@ -157,7 +157,7 @@ $today = date("Y-m-d");
                 <div class="mod-wrapper">
                     <div id="mod1-wrapper" class="mod-content">
                         <label for="mod-1" class="labels">Modifier 1:</label>
-                        <select name="mod-1" id="mod-1" class="inputs">
+                        <select name="mod-1" id="mod-1" class="inputs" onchange="check()">
                             <option value="1">Normal</option>
                             <option value="2">Manga/Comic</option>
                             <option value="3">Challenge</option>
@@ -223,17 +223,18 @@ $today = date("Y-m-d");
         </div>
 
         <script>
-            var mod1 = $("#mod-1").val();
-            var mod2 = $("#mod-2").val();
-            if (mod1 == "3" || mod1 == "4" || mod2 == "2") {
-                $("#bingo").css("display", "flex")
-                console.log("hello");
+            function check() {
+                var mod1 = $("#mod-1").val();
+                var mod2 = $("#mod-2").val();
                 console.log(mod1);
-                                
-            }else {
-                $("#bingo").hide()
-                console.log("goodbye");
-                
+                if (mod1 == "3" || mod1 == "4" || mod2 == "2") {
+                    $("#bingo").css("display", "flex")
+                    console.log("hello");                                    
+                }else {
+                    $("#bingo").hide()
+                    console.log("goodbye");
+                    
+                }
             }
 
             function showDateFinished() {
