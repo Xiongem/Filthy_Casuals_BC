@@ -489,7 +489,7 @@ if ($now <= $ratEnd) {
                     var subTotal3 = $("#square3").val() * 1.10;
                     var subTotal4 = $("#square4").val() * 1.10;
                     
-                    var total = round (subTotal1 + subTotal2 + subTotal3 + subTotal4);
+                    var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4);
                     return total;
                     break;
         }}
