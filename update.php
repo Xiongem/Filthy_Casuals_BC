@@ -23,6 +23,15 @@ $userID = $_SESSION["user_id"];
         date_default_timezone_set("$timezone");
     }
 
+$sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
+$result2 = $_SESSION["conn"]->query($sql2);
+    $bingo2 = $result2->fetch_assoc();
+    if ($bingo2) {
+        $active = $bingo2["active"];
+    } else {
+        $active = 0;
+    }
+
 $today = date("Y-m-d");
 ?>
 <!DOCTYPE html>
@@ -203,7 +212,6 @@ $today = date("Y-m-d");
                                     while ($bingo = mysqli_fetch_assoc($stmt)) {
                                         $bingoID = $bingo["bingo_name_id"];
                                         $bingoName = $bingo["bingo_name"];
-                                        $active = $bingo["active"];
                                 ?>
                             <option id="<?=$bingoID?>" value="<?=$bingoName?>"><?=$bingoName?></option>
                             <?php }} else { ?>
@@ -225,13 +233,16 @@ $today = date("Y-m-d");
 
         <script>
             function check() {
-                var mod1 = $("#mod-1").val();
-                var mod2 = $("#mod-2").val();
+                var active = <?=$active?>
+                if (active == 1) {
+                    var mod1 = $("#mod-1").val();
+                    var mod2 = $("#mod-2").val();
 
-                if (mod1 == "3" || mod1 == "4" || mod2 == "2") {
-                    $("#bingo").css("display", "flex");                                  
-                }else {
-                    $("#bingo").hide();                    
+                    if (mod1 == "3" || mod1 == "4" || mod2 == "2") {
+                        $("#bingo").css("display", "flex");                                  
+                    }else {
+                        $("#bingo").hide();                    
+                    }
                 }
             }
 
