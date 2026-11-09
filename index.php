@@ -442,9 +442,9 @@ if ($now <= $ratEnd) {
                 ];
 
                 var sel = $('<select>').appendTo('#bingoResults');
-                $(bingoSelect).each(function() {
+                for (let a = 0; a < bingoSelect.length; a++) {
                     sel.append($("<option>").attr('value',this.val).text(this.text));
-                });
+                }
             }
         }
     </script>
