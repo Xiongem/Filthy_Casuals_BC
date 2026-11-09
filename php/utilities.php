@@ -25,7 +25,7 @@ function makeNav() {
                 $imageData = base64_encode($user['pfpData']);
     $htmlContent = <<<HTML
         <div class="nav-wrapper" id="nav-wrapper">
-                <div class="icon-wrapper" id="icon-wrapper"">
+                <div class="icon-wrapper" id="icon-wrapper">
                     <ion-icon name="menu" id="nav-menu-icon"></ion-icon>
                     <div class="nav-menu-wrapper" id="nav-menu-wrapper">
                         <div class="nav-menu-content" id="nav-menu-content">

@@ -380,10 +380,7 @@ if ($now <= $ratEnd) {
             var bingoSize = $("#bingoSize").val();
             for (let i = 0; i < bingoSize.length; i++) {
                 var bingoSelect = [
-                    <?php $stmt7 = $_SESSION["conn"]->query("SELECT * 
-                                                                FROM `bingo` 
-                                                                WHERE `bingo_name` = $bingoName 
-                                                                AND `user_id` = $userID"); 
+                    <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `bingo_name` = $bingoName AND `user_id` = $userID"); 
                             $bingorow = mysqli_num_rows($stmt7);
                         if ($bingorow > 0) {
                             while ($bingorow = mysqli_fetch_array($stmt7)) {
