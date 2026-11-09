@@ -111,8 +111,8 @@ if ($now <= $ratEnd) {
     <?php if($bingoActive == 1) {?>
         <div class="bingo-wrapper">
             <h2><?=$bingoName?> is happening now!</h2>
+            <div class="buttons" onclick="showBingoPopup()">BINGO!</div>
         </div>
-        <div class="buttons" onclick="showBingoPopup()">BINGO!</div>
     <?php } ?>
     <div class="full-wrapper">
         <div class="table-wrapper">
