@@ -463,7 +463,7 @@ if ($now <= $ratEnd) {
 
         function sendBingoMath() {
             var bingoSize = $("#bingoSize").val();
-            var total = bingoMath(bingosize);
+            var total = bingoMath(bingoSize);
             console.log(total);
             
             // $.ajax({
