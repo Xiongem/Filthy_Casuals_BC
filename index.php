@@ -78,7 +78,7 @@ if ($now <= $ratEnd) {
                 <ion-icon name="close" onclick="closeBingoPopup()"></ion-icon>
             </div>
             <div class="bingo-title spacing">
-                <h3>Assign Bingo Squares</h3>
+                <h2>Assign Bingo Squares</h2>
             </div>
             <div class="label-wrapper">
                 <label>Bingo Dimensions:</label>

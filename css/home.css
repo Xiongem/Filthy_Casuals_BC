@@ -272,3 +272,6 @@
         font-size: 18px;
     }
 }
+.divider {
+    margin: 1em 2.5em;
+}
