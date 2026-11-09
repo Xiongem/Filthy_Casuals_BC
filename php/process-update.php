@@ -82,39 +82,35 @@ if ($stmt1 -> execute()) {
                             $newPointsYear, 
                             $userID);
     if ($stmt2->execute()) {
-
-        // $sql = "SELECT tags FROM tags";
-        //         $result = $_SESSION["conn"]->query($sql);
-
-        foreach ($tags as $key => $value) {
-            $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
-                ON DUPLICATE KEY UPDATE `tags` = ?;");
-            $stmt3->bind_param("ss", 
-                                $value,
-                                $value);
+        if ($insert_tags !== NULL) {
+            foreach ($tags as $key => $value) {
+                $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
+                    ON DUPLICATE KEY UPDATE `tags` = ?;");
+                $stmt3->bind_param("ss", 
+                                    $value,
+                                    $value);
+            }
+            $stmt3->execute();
         }
         
-        if ($stmt3->execute()) {
-            if ($_POST["bingoName"] !== 0) {
-                $stmt4 = $_SESSION["conn"] -> prepare("INSERT INTO `bingo` (`user_id`,
-                                                                        `bingo_name`,
-                                                                        `title`,
-                                                                        `author`,
-                                                                        `total_points`)
-                                                        VALUES (?, ?, ?, ?, ?");
-                $stmt4->bind_param("isssi",
-                                    $userID,
-                                    $_POST["bingoName"],
-                                    $_POST["title"],
-                                    $_POST["author"],
-                                    $totalPoints);
-            }
+        if ($_POST["bingoName"] !== 0) {
+            $stmt4 = $_SESSION["conn"] -> prepare("INSERT INTO `bingo` (`user_id`,
+                                                                    `bingo_name`,
+                                                                    `title`,
+                                                                    `author`,
+                                                                    `total_points`)
+                                                    VALUES (?, ?, ?, ?, ?");
+            $stmt4->bind_param("isssi",
+                                $userID,
+                                $_POST["bingoName"],
+                                $_POST["title"],
+                                $_POST["author"],
+                                $totalPoints);
+            $stmt4->execute();
+        }
         header("Location: /readHistory.php?user_id=$userID");
     
         exit;
-        } else {
-            die("an unexpected error occured");
-        }
     } else {
         die("an unexpected error occured");
     }
