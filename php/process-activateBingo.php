@@ -9,16 +9,17 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
 if ($_POST["bingoName"]) {
-    $stmt = $_SESSION['conn'] -> prepare("UPDATE `bingoNames` SET `active` = ? WHERE `bingo_name` = ?");
-    $stmt -> bind_param("is", 
-                        1, 
-                        $_POST["bingoName"]);
+    echo $_POST["bingoName"];
+    // $stmt = $_SESSION['conn'] -> prepare("UPDATE `bingoNames` SET `active` = ? WHERE `bingo_name` = ?");
+    // $stmt -> bind_param("is", 
+    //                     1, 
+    //                     $_POST["bingoName"]);
 
-    if ($stmt -> execute()) {
-        echo $_POST["bingoName"] . " bingo has been activated!";
-    } else {
-        echo "Error activating bingo: " . $stmt -> error;
-    }
+    // if ($stmt -> execute()) {
+    //     echo $_POST["bingoName"] . " bingo has been activated!";
+    // } else {
+    //     echo "Error activating bingo: " . $stmt -> error;
+    // }
 } else {
     echo "Please choose a bingo before submitting";
 }
