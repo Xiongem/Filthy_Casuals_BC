@@ -139,6 +139,21 @@
         text-decoration: underline;
         cursor: pointer;
     }
+    .bingo-wrapper {
+        display: flex;
+        align-items: center;
+        padding: 0 1em;
+        margin-bottom: 1em;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5em;
+    }
+    .bingo-wrapper .buttons {
+        margin-left: 1em;
+    }
 }
 
 /** ####################### *//** ####################### *//** ####################### */
