@@ -220,6 +220,8 @@ echo $active;
         <script>
             function check() {
                 var active = <?=$active?>;
+                console.log(active);
+                
                 if (active == 1) {
                     var mod1 = $("#mod-1").val();
                     var mod2 = $("#mod-2").val();
