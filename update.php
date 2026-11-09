@@ -223,7 +223,9 @@ $today = date("Y-m-d");
         </div>
 
         <script>
-            if ($("#mod-1").val() = 3 || $("#mod-2").val() = 2) {
+            var mod1 = $("#mod-1").val();
+            var mod2 = $("#mod-2").val();
+            if (mod1 === 3 || mod1 === 4 mod2 === 2) {
                 $("#bingo").css("display", "flex")
             }else {
                 $("#bingo").hide()
