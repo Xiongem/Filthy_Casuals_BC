@@ -466,7 +466,7 @@ if ($now <= $ratEnd) {
             var total = bingoMath(bingoSize);
             console.log(bingoSize);
 
-            var square1 = $("#square1").val();
+            var square1 = $("#square1").val() * 1.10;
                     var subTotal1 = square1 * 1.10;
                     console.log(square1, subTotal1);
             
