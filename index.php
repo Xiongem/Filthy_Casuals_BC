@@ -443,8 +443,9 @@ if ($now <= $ratEnd) {
             
             for (let i = 0; i < 5; i++) {
                 var sel = $('<select>').appendTo('#bingoResults');
-                console.log("hello");
-                
+                for (var a in bingoSelect) {
+                    sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
+                };
             }
         }
 
