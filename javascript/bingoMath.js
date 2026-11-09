@@ -6,6 +6,8 @@ function bingoMath(bingoSize) {
             var subTotal3 = $("#square3").val() * 1.10;
             var subTotal4 = $("#square4").val() * 1.10;
 
+            console.log(subTotal1);
+            
             var total = subTotal1 + subTotal2 + subTotal3 + subTotal4;
             return total;
             break;
