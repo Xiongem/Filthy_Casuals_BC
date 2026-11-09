@@ -37,12 +37,13 @@
         display: flex;
         justify-content: center;
     }
-    /* .bingo-wrapper {
+    .bingo-wrapper {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-bottom: 1em;
-    } */
+    }
 
 
     .divider {
