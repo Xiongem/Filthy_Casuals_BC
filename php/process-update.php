@@ -99,7 +99,7 @@ if ($stmt1 -> execute()) {
                                                                     `title`,
                                                                     `author`,
                                                                     `total_points`)
-                                                    VALUES (?, ?, ?, ?, ?");
+                                                    VALUES (?, ?, ?, ?, ?)");
             $stmt4->bind_param("isssi",
                                 $userID,
                                 $_POST["bingoName"],
