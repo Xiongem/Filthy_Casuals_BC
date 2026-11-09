@@ -61,7 +61,7 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                 <div class="button-wrapper">
                     <div class="buttons" onclick="setRatDate()">Set</div>
                 </div>
-                <div class="setResult" id="setResult"></div>
+                <div class="setResult results" id="setResult"></div>
             </div>
 
             <div class="divider"></div>
@@ -76,7 +76,7 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                         <label>Deactivate <?=$activeBingo?> Bingo</label>
                         <div class="buttons" onclick="deactivateBingo('<?=$activeBingo?>')">deactivate</div>
                     </div>
-                    <div id="deactivateResult"></div>
+                    <div id="deactivateResult" class="results"></div>
                     <?php } else { ?>
                         <select name="bingo" id="bingo" class="inputs">
                             <option value="0">Select Active Bingo</option>
@@ -93,7 +93,7 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                         <div class="button-wrapper">
                             <div class="buttons" onclick="activateBingo()">Activate</div>
                         </div>
-                        <div id="bingoResult"></div>
+                        <div id="bingoResult" class="results"></div></div>
                     <?php } ?>  
                 </div>
             </div>
