@@ -21,13 +21,13 @@ $sql2 = "SELECT * FROM `adminStuff` WHERE `adminID` = 1";
     $result2 = $_SESSION["conn"]->query($sql2);
     $adminStuff = $result2->fetch_assoc();
         if (isset($adminStuff)) {
-            $ratStart = $adminStuff["ratStart"];
-            $ratEnd = $adminStuff["ratEnd"];
+            $ratStart = strtotime($adminStuff["ratStart"]);
+            $ratEnd = strtotime($adminStuff["ratEnd"]);
         }
 
-$now = date("Y-m-d");
+$now = strtotime(date("Y-m-d"));
 
-if ($now < $ratStart && $now > $ratEnd) {
+if ($now >= $ratStart && $now <= $ratEnd) {
     $active = true;
     $ratStart = date("m-d-Y", $ratStart);
     $ratEnd = date("m-d-Y", $ratEnd);
