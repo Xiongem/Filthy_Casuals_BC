@@ -437,14 +437,16 @@ if ($now <= $ratEnd) {
                         $bingoAuthor = $bingorow["author"];
                         $bingoPoints = $bingorow["total_points"];?>
 
-            {   val : '<?=$bingoTitle?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'},
+            {   val : '<?=$bingoPoints?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'},
             <?php }} ?>
             ];
             
             for (let i = 0; i < bingoSize; i++) {
                 var sel = $('<select>').appendTo('#bingoResults');
                 sel.attr('class', 'inputs');
-                sel.attr('name', "square"+ i);
+                sel.attr('name', "square"+ (i+1));
+                var lab = $('<label>').appendTo('#bingoResults');
+                lab.text("Square" + (i+1))
                 for (var a in bingoSelect) {
                     sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
                 };
