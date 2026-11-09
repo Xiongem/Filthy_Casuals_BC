@@ -426,24 +426,22 @@ if ($now <= $ratEnd) {
         function createInputs() {
             var bingoSize = $("#bingoSize").val();
             console.log(bingoSize);
+
+            var bingoSelect = [ 
+            <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `user_id` = $userID AND `bingo_name` = '$bingoName'"); 
+                    $bingorow = mysqli_num_rows($stmt7);
+                if ($bingorow > 0) {
+                    while ($bingorow = mysqli_fetch_array($stmt7)) {
+                        $bingoID = $bingorow["bingo_id"];
+                        $bingoTitle = $bingorow["title"];
+                        $bingoAuthor = $bingorow["author"];
+                        $bingoPoints = $bingorow["total_points"];?>\
+
+            {   val : '<?=$bingoTitle?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'},
+            <?php }} ?>
+            ];
             
             for (let i = 0; i < bingoSize.length; i++) {
-                var bingoSelect = [ 
-                    <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `user_id` = $userID AND `bingo_name` = '$bingoName'"); 
-                            $bingorow = mysqli_num_rows($stmt7);
-                        if ($bingorow > 0) {
-                            while ($bingorow = mysqli_fetch_array($stmt7)) {
-                                $bingoID = $bingorow["bingo_id"];
-                                $bingoTitle = $bingorow["title"];
-                                $bingoAuthor = $bingorow["author"];
-                                $bingoPoints = $bingorow["total_points"];?>
-                                {val : '<?=$bingoTitle?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'},
-                        <?php }} ?>
-                ];
-                console.log(bingoSelect.length);
-                
-                var sel = $('<select>').appendTo('#bingoResults');
-                
                 for (var a in bingoSelect) {
                     sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
                 };
