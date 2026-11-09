@@ -44,6 +44,7 @@ if ($now <= $ratEnd) {
 } else {
     $ratActive = false;
 }
+echo $bingoActive;
 ?>
 
 <!DOCTYPE html>
