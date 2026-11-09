@@ -34,6 +34,7 @@ $result2 = $_SESSION["conn"]->query($sql2);
     }
 
 $today = date("Y-m-d");
+echo $active;
 ?>
 <!DOCTYPE html>
 <html lang="en">
