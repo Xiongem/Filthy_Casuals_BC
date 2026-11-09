@@ -82,7 +82,7 @@ if ($now <= $ratEnd) {
             </div>
             <div class="label-wrapper">
                 <label>Bingo Dimensions:</label>
-                <select name="bingoSize" id="bingoSize" class="inputs">
+                <select name="bingoSize" id="bingoSize">
                     <opion value="4">4x4</opion>
                     <opion value="5">5x5</opion>
                     <opion value="6">6x6</opion>
