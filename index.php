@@ -441,7 +441,7 @@ if ($now <= $ratEnd) {
             <?php }} ?>
             ];
             
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < bingoSize; i++) {
                 var sel = $('<select>').appendTo('#bingoResults');
                 for (var a in bingoSelect) {
                     sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
