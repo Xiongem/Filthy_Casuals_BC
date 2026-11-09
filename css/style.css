@@ -161,7 +161,7 @@ a {
         color: var(--barium-yellow);
         border: none;
         border-radius: 12px;
-        width: 5em;
+        min-width: 5em;
         height: 2.5em;
         cursor: pointer;
     }
