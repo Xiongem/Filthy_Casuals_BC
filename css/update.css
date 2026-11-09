@@ -159,7 +159,6 @@
         margin-bottom: 1em;
     }
     .bingo-select-wrapper {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
