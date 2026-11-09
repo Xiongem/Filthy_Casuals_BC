@@ -10,9 +10,10 @@ dbConnect();
 
 if ($_POST["bingoName"]) {
     $bingoName =  $_POST["bingoName"];
+    $active = 1;
     $stmt = $_SESSION['conn'] -> prepare("UPDATE `bingoNames` SET `active` = ? WHERE `bingo_name` = ?");
     $stmt -> bind_param("is", 
-                        1, 
+                        $active, 
                         $bingoName);
 
     if ($stmt -> execute()) {
