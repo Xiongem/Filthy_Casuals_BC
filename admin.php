@@ -15,6 +15,15 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
     $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
         $admin = $user['admin'];
+
+$sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
+    $result2 = $_SESSION["conn"]->query($sql2);
+    $bingoActive = $result2->fetch_assoc();
+    if ($bingoActive) {
+        $activeBingo = $bingoActive["bingo_name"];
+    } else {
+        $activeBingo = false;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -59,26 +68,33 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 
             <div class="wrapper-content">
                 <div class="title-wrapper">
-                    <h2>Activate Bingo</h2>
+                    <h2>Bingo Controls</h2>
                 </div>
-                <div class="bingo-wrapper">
-                    <select name="bingo" id="bingo" class="inputs">
-                        <option value="0">Select Active Bingo</option>
-                        <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `bingoNames`"); 
-                                $bingo = mysqli_num_rows($stmt);
-                                if ($bingo > 0) {
-                                    while ($bingo = mysqli_fetch_assoc($stmt)) {
-                                        $bingoID = $bingo["bingo_name_id"];
-                                        $bingoName = $bingo["bingo_name"];
-                                ?>
-                        <option id="<?=$bingoID?>" value="<?=$bingoName?>"><?=$bingoName?></option>
-                        <?php }} ?>
-                    </select>
+                <div class="bingo-wrapper" id="bingoWrapper">
+                    <?php if ($activeBingo) { ?>
+                    <div class="label-wrapper">
+                        <label>Deactivate <?=$activeBingo?> Bingo</label>
+                        <div class="buttons" onclick="deactivateBingo(<?=$activeBingo?>)">deactivate</div>
+                    </div>
+                    <?php } else { ?>
+                        <select name="bingo" id="bingo" class="inputs">
+                            <option value="0">Select Active Bingo</option>
+                            <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `bingoNames`"); 
+                                    $bingo = mysqli_num_rows($stmt);
+                                    if ($bingo > 0) {
+                                        while ($bingo = mysqli_fetch_assoc($stmt)) {
+                                            $bingoID = $bingo["bingo_name_id"];
+                                            $bingoName = $bingo["bingo_name"];
+                                    ?>
+                            <option id="<?=$bingoID?>" value="<?=$bingoName?>"><?=$bingoName?></option>
+                            <?php }} ?>
+                        </select>
+                        <div class="button-wrapper">
+                            <div class="buttons" onclick="activateBingo()">Activate</div>
+                        </div>
+                        <div id="bingoResult"></div>
+                    <?php } ?>  
                 </div>
-                <div class="button-wrapper">
-                    <div class="buttons" onclick="activateBingo()">Activate</div>
-                </div>
-                <div id="bingoResult"></div>
             </div>
 
             <div class="divider"></div>
@@ -123,6 +139,18 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             }else{
                 $("#setResult").html("Please set dates before submitting.")
             }
+        }
+
+        function deactivateBingo(bingoName) {
+            $.ajax({
+                url: "php/process-deactivateBingo.php",
+                method: "post",
+                data: {
+                    bingoName:bingoName
+                },success:function(result) {
+                    $("#bingoWrapper").html();
+                }
+            })
         }
 
         function activateBingo() {
