@@ -84,6 +84,7 @@ echo $bingoName;
             <div class="label-wrapper">
                 <label>Bingo Dimensions:</label>
                 <select name="bingoSize" id="bingoSize" class="inputs"  onchange="createInputs()">
+                    <option value="0">none</option>
                     <option value="4">4x4</option>
                     <option value="5">5x5</option>
                     <option value="6">6x6</option>
@@ -435,7 +436,7 @@ echo $bingoName;
                                 $bingoTitle = $bingorow["title"];
                                 $bingoAuthor = $bingorow["author"];
                                 $bingoPoints = $bingorow["total_points"];?>
-                                {val : <?=$bingoTitle?>, text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'}
+                                {val : '<?=$bingoTitle?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'}
                         <?php }} ?>
                 ];
 
