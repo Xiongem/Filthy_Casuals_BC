@@ -162,8 +162,11 @@
     }
     .bingo-select-wrapper {
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
+    }
+    #bingoCheckbox {
+        margin-right: 2em;
     }
     .inputs {
         display: flex;

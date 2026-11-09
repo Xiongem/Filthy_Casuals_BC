@@ -187,7 +187,7 @@ $today = date("Y-m-d");
                 </div>
 
                 <div class="bingo-wrapper hide" id="bingo">
-                    <div class="label-wrapper">
+                    <div class="label-wrapper" id="bingoCheckbox">
                         <label class="labels">Counts towards bingo?</label>
                         <input type="checkbox"
                                 name="bingo"
