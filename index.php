@@ -77,7 +77,7 @@ if ($now <= $ratEnd) {
             <div class="close-wrapper">
                 <ion-icon name="close" onclick="closeBingoPopup()"></ion-icon>
             </div>
-            <div class="bingo-title">
+            <div class="bingo-title spacing">
                 <h3>Assign Bingo Squares</h3>
             </div>
             <div class="label-wrapper">
@@ -93,6 +93,7 @@ if ($now <= $ratEnd) {
                     <option value="10">10x10</option>
                 </select>
             </div>
+            <div class="divider"></div>
             <div class="popup-content" id="bingoResults"></div>
         </div>
     </div>
@@ -448,7 +449,7 @@ if ($now <= $ratEnd) {
                 var sel = $('<select>').appendTo('#bingoResults');
                 sel.attr('class', 'inputs');
                 sel.attr('name', "square"+ (i+1));
-                
+
                 for (var a in bingoSelect) {
                     sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
                 };
