@@ -427,13 +427,13 @@ echo $bingoName;
             var bingoSize = $("#bingoSize").val();
             for (let i = 0; i < bingoSize.length; i++) {
                 var bingoSelect = [ 
-                    <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `user_id` = $userID"); 
+                    <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `user_id` = $userID AND `bingo_name` = $bingoName"); 
                             $bingorow = mysqli_num_rows($stmt7);
                         if ($bingorow > 0) {
                             while ($bingorow = mysqli_fetch_array($stmt7)) {
                                 $bingoID = $bingorow["bingo_id"];
                                 $bingoTitle = $bingorow["title"];
-                                $bingoAuthor = $bingorow["Author"];
+                                $bingoAuthor = $bingorow["author"];
                                 $bingoPoints = $bingorow["total_points"];?>
                                 {val : <?=$bingoTitle?>, text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'}
                         <?php }} ?>
