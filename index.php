@@ -24,15 +24,25 @@ $sql2 = "SELECT * FROM `adminStuff` WHERE `adminID` = 1";
             $ratStart = strtotime($adminStuff["ratStart"]);
             $ratEnd = strtotime($adminStuff["ratEnd"]);
         }
+    
+$sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
+    $result3 = $_SESSION["conn"]->query($sql3);
+    $bingo = $result3->fetch_assoc();
+    if (isset($bingo)) {
+        $bingoActive = $bingo["active"];
+        $bingoName = $bingo["bingo_name"];   
+    } else {
+        $bingoActive = 0;
+    }
 
 $now = strtotime(date("Y-m-d"));
 
 if ($now <= $ratEnd) {
-    $active = true;
+    $ratActive = true;
     $ratStart = date("m/d/Y", $ratStart);
     $ratEnd = date("m/d/Y", $ratEnd);
 } else {
-    $active = false;
+    $ratActive = false;
 }
 ?>
 
@@ -62,18 +72,47 @@ if ($now <= $ratEnd) {
             <div class="popup-content" id="editResults"></div>
         </div>
     </div>
+    <div class="popup-wrapper hide" id="bingoPopup">
+        <div class="popup-container">
+            <div class="close-wrapper">
+                <ion-icon name="close" onclick="closeBingoPopup()"></ion-icon>
+            </div>
+            <div class="bingo-title">
+                <h3>Assign Bingo Squares</h3>
+            </div>
+            <div class="label-wrapper">
+                <label>Bingo Dimensions:</label>
+                <select name="bingoSize" id="bingoSize" class="inputs" onchange="createInputs()">
+                    <opion value="4">4x4</opion>
+                    <opion value="5">5x5</opion>
+                    <opion value="6">6x6</opion>
+                    <opion value="7">7x7</opion>
+                    <opion value="8">8x8</opion>
+                    <opion value="9">9x9</opion>
+                    <opion value="10">10x10</opion>
+                </select>
+            </div>
+            <div class="popup-content" id="bingoResults"></div>
+        </div>
+    </div>
     <header>
         <?= makeNav() ?>
     </header>
-    <?php if ($active === true) { ?>
-    <div class="rat-wrapper">
-        <div class="rat-title">
-             <h2>Next Read-a-thon Date:</h2>
+    <?php if ($ratActive === true) { ?>
+        <div class="rat-wrapper">
+            <div class="rat-title">
+                <h2>Next Read-a-thon Date:</h2>
+            </div>
+            <div class="rat-date">
+                <h3><?=$ratStart?>  -  <?=$ratEnd?></h3>
+            </div>
         </div>
-        <div class="rat-date">
-            <h3><?=$ratStart?>  -  <?=$ratEnd?></h3>
+    <?php } ?>
+    <?php if($bingoActive === 1) {?>
+        <div class="bingo-wrapper">
+            <h2><?=$bingoName?> is happening now!</h2>
         </div>
-    </div>
+        <div class="buttons" onclick="showBingoPopup()">BINGO!</div>
     <?php } ?>
     <div class="full-wrapper">
         <div class="table-wrapper">
@@ -337,6 +376,32 @@ if ($now <= $ratEnd) {
         </div>
     </div>
     <script>
+        function createInputs() {
+            var bingoSize = $("#bingoSize").val();
+            for (let i = 0; i < bingoSize.length; i++) {
+                var bingoSelect = [
+                    <?php $stmt7 = $_SESSION["conn"]->query("SELECT * 
+                                                                FROM `bingo` 
+                                                                WHERE `bingo_name` = $bingoName 
+                                                                AND `user_id` = $userID"); 
+                            $bingorow = mysqli_num_rows($stmt7);
+                        if ($bingorow > 0) {
+                            while ($bingorow = mysqli_fetch_array($stmt7)) {
+                                $bingoID = $bingorow["bingo_id"];
+                                $bingoTitle = $bingorow["title"];
+                                $bingoAuthor = $bingorow["Author"];
+                                $bingoPoints = $bingorow["total_points"];
+                            ?>
+                                {val : <?=$bingoTitle?>, text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'}
+                        <?php }} ?>
+                ];
+
+                var sel = $('<select>').appendTo('#bingoResults');
+                $(bingoSelect).each(function() {
+                    sel.append($("<option>").attr('value',this.val).text(this.text));
+                });
+            }
+        }
         function goUser(userId) {
             window.location.href = "readHistory.php?user_id=" + userId;
         }
@@ -367,6 +432,18 @@ if ($now <= $ratEnd) {
         }
         function closeLeagueEdit() {
             $("#editPopup").hide();
+            $("#body").css({"height": "unset", "overflow": "unset"});
+            location.reload(true);
+        }
+
+        function showBingoPopup() {
+            $("#bingoPopup").css("display", "flex");
+            var editPopup = document.getElementById("bingoPopup");
+            editPopup.scrollIntoView();
+            setTimeout(hideBackground, 500);
+        }
+        function closeBingoPopup() {
+            $("#bingoPopup").hide();
             $("#body").css({"height": "unset", "overflow": "unset"});
             location.reload(true);
         }
