@@ -70,12 +70,13 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                 <div class="title-wrapper">
                     <h2>Bingo Controls</h2>
                 </div>
-                <div class="bingo-wrapper" id="bingoWrapper">
+                <div class="bingo-wrapper">
                     <?php if ($activeBingo) { ?>
                     <div class="label-wrapper">
                         <label>Deactivate <?=$activeBingo?> Bingo</label>
                         <div class="buttons" onclick="deactivateBingo('<?=$activeBingo?>')">deactivate</div>
                     </div>
+                    <div id="deactivateResult"></div>
                     <?php } else { ?>
                         <select name="bingo" id="bingo" class="inputs">
                             <option value="0">Select Active Bingo</option>
@@ -141,6 +142,10 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
             }
         }
 
+        function refresh(){
+            location.reload();
+        }
+
         function deactivateBingo(bingoName) {
             // var bingo = bingoName;
             $.ajax({
@@ -149,7 +154,8 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                 data: {
                     bingoName:bingoName
                 },success:function(result) {
-                    $("#bingoWrapper").html();
+                    $("#deactivateResult").html(result);
+                    setTimeout(refresh, 3000);
                 }
             })
         }

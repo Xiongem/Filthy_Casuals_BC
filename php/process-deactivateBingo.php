@@ -14,23 +14,8 @@ $stmt1 -> bind_param("is",
                         $resetActive,
                         $_POST["bingoName"]); 
 
-if ($stmt1 -> execute() && $stmt1 -> affected_rows > 0) {?>
-    <select name="bingo" id="bingo" class="inputs">
-        <option value="0">Select Active Bingo</option>
-        <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `bingoNames`"); 
-                $bingo = mysqli_num_rows($stmt);
-                if ($bingo > 0) {
-                    while ($bingo = mysqli_fetch_assoc($stmt)) {
-                        $bingoID = $bingo["bingo_name_id"];
-                        $bingoName = $bingo["bingo_name"];
-                ?>
-        <option id="<?=$bingoID?>" value="<?=$bingoName?>"><?=$bingoName?></option>
-        <?php }} ?>
-    </select>
-    <div class="button-wrapper">
-        <div class="buttons" onclick="activateBingo()">Activate</div>
-    </div>
-    <div id="bingoResult"></div>
-<?php } else {
+if ($stmt1 -> execute() && $stmt1 -> affected_rows > 0) {
+    exit("Bingo deactivated");
+} else {
     die("Failed to deactivate bingo" . $stmt1 -> error);
 }
