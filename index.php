@@ -27,7 +27,7 @@ $sql2 = "SELECT * FROM `adminStuff` WHERE `adminID` = 1";
 
 $now = strtotime(date("Y-m-d"));
 
-if ($now >= $ratStart && $now <= $ratEnd) {
+if ($now <= $ratEnd) {
     $active = true;
     $ratStart = date("m-d-Y", $ratStart);
     $ratEnd = date("m-d-Y", $ratEnd);
