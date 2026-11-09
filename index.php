@@ -82,14 +82,17 @@ if ($now <= $ratEnd) {
             </div>
             <div class="label-wrapper">
                 <label>Bingo Dimensions:</label>
-                <select name="bingoSize" id="bingoSize">
-                    <opion value="4">4x4</opion>
-                    <opion value="5">5x5</opion>
-                    <opion value="6">6x6</opion>
-                    <opion value="7">7x7</opion>
-                    <opion value="8">8x8</opion>
-                    <opion value="9">9x9</opion>
-                    <opion value="10">10x10</opion>
+                <select name="mod-1" id="mod-1" class="inputs" onchange="check()">
+                    <option value="1">Normal</option>
+                    <option value="2">Manga/Comic</option>
+                    <option value="3">Challenge</option>
+                    <option value="4">Challenge: Manga/Comics</option>
+                    <option value="5">Buddy Read</option>
+                    <option value="6">Friend Recommendation</option>
+                    <option value="7">Seasonal</option>
+                    <option value="8">Read-a-thon</option>
+                    <option value="9">Educational</option>
+                    <option value="10">Educational: Manga/Comics</option>
                 </select>
             </div>
             <div class="popup-content" id="bingoResults"></div>
