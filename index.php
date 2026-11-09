@@ -110,7 +110,7 @@ if ($now <= $ratEnd) {
     <?php } ?>
     <?php if($bingoActive == 1) {?>
         <div class="bingo-wrapper">
-            <h2><?=$bingoName?> is happening now!</h2>
+            <h2><?=$bingoName?> bingo is happening now!</h2>
             <div class="buttons" onclick="showBingoPopup()">BINGO!</div>
         </div>
     <?php } ?>
