@@ -440,11 +440,12 @@ if ($now <= $ratEnd) {
                                 {val : '<?=$bingoTitle?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'},
                         <?php }} ?>
                 ];
-
+                console.log(bingoSelect);
+                
                 var sel = $('<select>').appendTo('#bingoResults');
-                for (let a = 0; a < <?=$bingorow?>.length; a++) {
+                $(bingoSelect).each(function() {
                     sel.append($("<option>").attr('value',this.val).text(this.text));
-                }
+                });
             }
         }
     </script>
