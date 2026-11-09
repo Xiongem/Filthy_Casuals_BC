@@ -236,7 +236,7 @@ $today = date("Y-m-d");
             }
 
             function showBingoSelect() {
-                $("#bingoSelect").css("display", "flex")
+                $("#bingoSelect").toggleClass("show");
             }
 
             function showDateFinished() {
