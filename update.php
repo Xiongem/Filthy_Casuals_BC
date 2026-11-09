@@ -194,8 +194,9 @@ $today = date("Y-m-d");
                                 id="bingo"
                                 class="checkbox" onclick="showBingoSelect()"> 
                     </div>
-                    <div class="label-wrapper">
-                        <select name="bingoName" class="inputs mod-content">
+                    <div class="label-wrapper hide">
+                        <label for="bingoName">Select bingo:</label>
+                        <select name="bingoName" class="inputs mod-content" id="bingoSelect">
                             <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `bingoNames`"); 
                                 $bingo = mysqli_num_rows($stmt);
                                 if ($bingo > 0) {
@@ -226,15 +227,16 @@ $today = date("Y-m-d");
             function check() {
                 var mod1 = $("#mod-1").val();
                 var mod2 = $("#mod-2").val();
-                console.log(mod1);
+
                 if (mod1 == "3" || mod1 == "4" || mod2 == "2") {
-                    $("#bingo").css("display", "flex")
-                    console.log("hello");                                    
+                    $("#bingo").css("display", "flex");                                  
                 }else {
-                    $("#bingo").hide()
-                    console.log("goodbye");
-                    
+                    $("#bingo").hide();                    
                 }
+            }
+
+            function showBingoSelect() {
+                $("#bingoSelect").css("display", "flex")
             }
 
             function showDateFinished() {
