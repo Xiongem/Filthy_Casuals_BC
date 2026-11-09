@@ -475,10 +475,7 @@ if ($now <= $ratEnd) {
 
             //     }
             // }) 
-        }
-        var square1 = $("#square1").val();
-        var subTotal1 = square1 * 1.10;
-        console.log(square1, subTotal1);
+        }        
 
         function bingoMath(bingoSize) {
             switch (bingoSize) {
@@ -489,7 +486,7 @@ if ($now <= $ratEnd) {
                     var subTotal3 = $("#square3").val() * 1.10;
                     var subTotal4 = $("#square4").val() * 1.10;
 
-                    
+                    console.log(square1, subTotal1);
                     
                     var total = subTotal1 + subTotal2 + subTotal3 + subTotal4;
                     return total;
