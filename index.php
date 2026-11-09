@@ -443,11 +443,13 @@ if ($now <= $ratEnd) {
                 console.log(bingoSelect.length);
                 
                 var sel = $('<select>').appendTo('#bingoResults');
+                
                 $(bingoSelect).each(function() {
-                    sel.append($("<option>").attr('value',this.val).text(this.text));
+                    sel.append($("<option>").attr('value',this[a].val).text(this[a].text));
                 });
             }
         }
+
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
