@@ -15,14 +15,18 @@ $sql = "SELECT username FROM `users` WHERE `user_id` = $userID";
     $user = $result->fetch_assoc();
         $username = $user["username"];
 
-$stmt = $_SESSION['conn'] -> prepare("INSERT INTO `adminStuff` (`setBy`,
-                                                                `ratStart`, 
-                                                                `ratEnd`)
-                                                                VALUES (?, ?, ?)");
-    $stmt -> bind_param("sss", 
+$now = date("Y-m-d H:i:s");
+
+$stmt = $_SESSION['conn'] -> prepare("UPDATE `adminStuff` SET `setBy` = ?,
+                                                                `ratStart` = ?, 
+                                                                `ratEnd` = ?,
+                                                                `setAt` = ?
+                                                            WHERE `adminID` = 1");
+    $stmt -> bind_param("ssss", 
                         $username,
                         $_POST["startDate"],
-                        $_POST["endDate"]);
+                        $_POST["endDate"],
+                        $now);
 
 if ($stmt -> execute()) {
     echo "Successfully set RAT date!";

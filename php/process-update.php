@@ -92,13 +92,29 @@ if ($stmt1 -> execute()) {
             $stmt3->bind_param("ss", 
                                 $value,
                                 $value);
-
-            $stmt3->execute();
         }
-                
-        header("Location: /readHistory.php?user_id=$userID");
         
+        if ($stmt3->execute()) {
+            if ($_POST["bingoName"] !== 0) {
+                $stmt4 = $_SESSION["conn"] -> prepare("INSERT INTO `bingo` (`user_id`,
+                                                                        `bingo_name`,
+                                                                        `title`,
+                                                                        `author`,
+                                                                        `total_points`)
+                                                        VALUES (?, ?, ?, ?, ?");
+                $stmt4->bind_param("isssi",
+                                    $userID,
+                                    $_POST["bingoName"],
+                                    $_POST["title"],
+                                    $_POST["author"],
+                                    $totalPoints);
+            }
+        header("Location: /readHistory.php?user_id=$userID");
+    
         exit;
+        } else {
+            die("an unexpected error occured");
+        }
     } else {
         die("an unexpected error occured");
     }

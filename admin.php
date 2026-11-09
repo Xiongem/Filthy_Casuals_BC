@@ -11,10 +11,10 @@ forceLogin();
 
 $userID = $_SESSION["user_id"];
 
- $sql = "SELECT * FROM users WHERE user_id = $userID";
-        $result = $_SESSION["conn"]->query($sql);
-        $user = $result->fetch_assoc();
-            $admin = $user['admin'];
+$sql = "SELECT * FROM users WHERE user_id = $userID";
+    $result = $_SESSION["conn"]->query($sql);
+    $user = $result->fetch_assoc();
+        $admin = $user['admin'];
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +59,32 @@ $userID = $_SESSION["user_id"];
 
             <div class="wrapper-content">
                 <div class="title-wrapper">
+                    <h2>Activate Bingo</h2>
+                </div>
+                <div class="bingo-wrapper">
+                    <select name="bingo" id="bingo" class="inputs">
+                        <option value="0">Select Active Bingo</option>
+                        <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `bingoNames`"); 
+                                $bingo = mysqli_num_rows($stmt);
+                                if ($bingo > 0) {
+                                    while ($bingo = mysqli_fetch_assoc($stmt)) {
+                                        $bingoID = $bingo["bingo_name_id"];
+                                        $bingoName = $bingo["bingo_name"];
+                                ?>
+                        <option id="<?=$bingoID?>" value="<?=$bingoName?>"><?=$bingoName?></option>
+                        <?php }} ?>
+                    </select>
+                </div>
+                <div class="button-wrapper">
+                    <div class="buttons" onclick="activateBingo()">Activate</div>
+                </div>
+                <div id="bingoResult"></div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="wrapper-content">
+                <div class="title-wrapper">
                     <h2>Generate One-time Passcode</h2>
                 </div>
                 <div class="button-wrapper">
@@ -96,6 +122,21 @@ $userID = $_SESSION["user_id"];
                 })
             }else{
                 $("#setResult").html("Please set dates before submitting.")
+            }
+        }
+
+        function activateBingo() {
+            var bingo = $("#bingo").val();
+            if (bingo !== 0) {
+                $.ajax({
+                    url: "php/process-activateBingo.php",
+                    method: "post",
+                    data: {
+                        bingoName:bingo
+                    },success:function(result) {
+                        $("#bingoResult").html(result)
+                    }
+                })
             }
         }
 

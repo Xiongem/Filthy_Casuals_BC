@@ -186,6 +186,32 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
+                <div class="bingo-wrapper hide" id="bingo">
+                    <div class="label-wrapper">
+                        <label class="labels">Counts towards bingo?</label>
+                        <input type="checkbox"
+                                name="bingo"
+                                id="bingo"
+                                class="checkbox" onclick="showBingoSelect()"> 
+                    </div>
+                    <div class="label-wrapper">
+                        <select name="bingoName" class="inputs mod-content">
+                            <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `bingoNames`"); 
+                                $bingo = mysqli_num_rows($stmt);
+                                if ($bingo > 0) {
+                                    while ($bingo = mysqli_fetch_assoc($stmt)) {
+                                        $bingoID = $bingo["bingo_name_id"];
+                                        $bingoName = $bingo["bingo_name"];
+                                        $active = $bingo["active"];
+                                ?>
+                            <option id="<?=$bingoID?>" value="<?=$bingoName?>"><?=$bingoName?></option>
+                            <?php }} else { ?>
+                            <option value="0">no active bingos</option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+
                 <label for="comment" class="labels">Comment:</label>
                 <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)"></textarea>
 
@@ -197,6 +223,12 @@ $today = date("Y-m-d");
         </div>
 
         <script>
+            if ($("#mod-1").val() = 3 || $("#mod-2").val() = 2) {
+                $("#bingo").css("display", "flex")
+            }else {
+                $("#bingo").hide()
+            }
+
             function showDateFinished() {
                 document.getElementById('dateFinishedWrapper').classList.toggle("hide");
             }

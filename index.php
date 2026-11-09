@@ -17,18 +17,21 @@ $userID = $_SESSION["user_id"];
             $league = $user["league"];
             $admin = $user["admin"];
 
-$sql2 = "SELECT * FROM `adminStuff`";
+$sql2 = "SELECT * FROM `adminStuff` WHERE `adminID` = 1";
     $result2 = $_SESSION["conn"]->query($sql2);
     $adminStuff = $result2->fetch_assoc();
         if (isset($adminStuff)) {
             $ratStart = $adminStuff["ratStart"];
             $ratEnd = $adminStuff["ratEnd"];
-            $active = $adminStuff["active"];
         }
 
-$active = 1;
-$ratStart = "11/21/2026";
-$ratEnd = "11/28/2026";
+$now = date("Y-m-d");
+
+if ($now > $ratStart && $now < $ratEnd) {
+    $active = true;
+    $ratStart = date("m-d-Y", $ratStart);
+    $ratEnd = date("m-d-Y", $ratEnd);
+};
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +63,7 @@ $ratEnd = "11/28/2026";
     <header>
         <?= makeNav() ?>
     </header>
-    <?php if ($active == 1) { ?>
+    <?php if ($active === true) { ?>
     <div class="rat-wrapper">
         <div class="rat-title">
              <h2>Next Read-a-thon Date:</h2>
