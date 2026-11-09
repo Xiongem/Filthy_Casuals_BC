@@ -227,8 +227,12 @@ $today = date("Y-m-d");
             var mod2 = $("#mod-2").val();
             if (mod1 === 3 || mod1 === 4|| mod2 === 2) {
                 $("#bingo").css("display", "flex")
+                console.log("hello");
+                
             }else {
                 $("#bingo").hide()
+                console.log("goodbye");
+                
             }
 
             function showDateFinished() {
