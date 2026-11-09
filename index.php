@@ -442,7 +442,7 @@ if ($now <= $ratEnd) {
                         $bingoAuthor = $bingorow["author"];
                         $bingoPoints = $bingorow["total_points"];?>
 
-            {   val : '<?=$bingoPoints?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'},
+            {   val : '<?=$bingoPoints?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?> (<?=$bingoPoints?>)'},
             <?php }} ?>
             ];
             
