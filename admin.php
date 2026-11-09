@@ -78,7 +78,7 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                     </div>
                     <div id="deactivateResult" class="results"></div>
                     <?php } else { ?>
-                        <select name="bingo" id="bingo" class="inputs">
+                        <select name="bingo" id="bingo" class="inputs spacing">
                             <option value="0">Select Active Bingo</option>
                             <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `bingoNames`"); 
                                     $bingo = mysqli_num_rows($stmt);
@@ -170,6 +170,7 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                         bingoName:bingo
                     },success:function(result) {
                         $("#bingoResult").html(result)
+                        setTimeout(refresh, 3000);
                     }
                 })
             }
