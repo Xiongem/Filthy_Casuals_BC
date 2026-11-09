@@ -28,6 +28,7 @@ $result2 = $_SESSION["conn"]->query($sql2);
     $bingo2 = $result2->fetch_assoc();
     if ($bingo2) {
         $active = $bingo2["active"];
+        $activeName = $bingo2["bingo_name"];
     } else {
         $active = 0;
     }
@@ -199,25 +200,9 @@ $today = date("Y-m-d");
                     <div class="label-wrapper" id="bingoCheckbox">
                         <label class="labels">Counts towards bingo?</label>
                         <input type="checkbox"
-                                name="bingo"
+                                name="bingoName"
                                 id="bingo"
-                                class="checkbox" onclick="showBingoSelect()"> 
-                    </div>
-                    <div class="bingo-select-wrapper hide" id="bingoSelect">
-                        <label for="bingoName">Select bingo:</label>
-                        <select name="bingoName" class="inputs mod-content">
-                            <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `bingoNames`"); 
-                                $bingo = mysqli_num_rows($stmt);
-                                if ($bingo > 0) {
-                                    while ($bingo = mysqli_fetch_assoc($stmt)) {
-                                        $bingoID = $bingo["bingo_name_id"];
-                                        $bingoName = $bingo["bingo_name"];
-                                ?>
-                            <option id="<?=$bingoID?>" value="<?=$bingoName?>"><?=$bingoName?></option>
-                            <?php }} else { ?>
-                            <option value="0">no active bingos</option>
-                            <?php } ?>
-                        </select>
+                                class="checkbox" value="<?=$activeName?>"> 
                     </div>
                 </div>
 
@@ -244,10 +229,6 @@ $today = date("Y-m-d");
                         $("#bingo").hide();                    
                     }
                 }
-            }
-
-            function showBingoSelect() {
-                $("#bingoSelect").toggleClass("show");
             }
 
             function showDateFinished() {
