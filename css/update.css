@@ -156,13 +156,13 @@
         flex-direction: column;
     }
     .bingo-wrapper { 
-        justify-content: space-between;
+        /* justify-content: space-between; */
         height: 3em;
         margin-bottom: 1em;
     }
     .bingo-select-wrapper {
         flex-direction: column;
-        /* justify-content: center; */
+        justify-content: center;
         align-items: center;
     }
     #bingoCheckbox {
