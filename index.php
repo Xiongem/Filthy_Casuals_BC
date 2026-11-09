@@ -44,7 +44,6 @@ if ($now <= $ratEnd) {
 } else {
     $ratActive = false;
 }
-echo $bingoActive;
 ?>
 
 <!DOCTYPE html>
@@ -109,7 +108,7 @@ echo $bingoActive;
             </div>
         </div>
     <?php } ?>
-    <?php if($bingoActive === 1) {?>
+    <?php if($bingoActive == 1) {?>
         <div class="bingo-wrapper">
             <h2><?=$bingoName?> is happening now!</h2>
         </div>
