@@ -44,6 +44,7 @@ if ($now <= $ratEnd) {
 } else {
     $ratActive = false;
 }
+echo $bingoName;
 ?>
 
 <!DOCTYPE html>
@@ -422,7 +423,29 @@ if ($now <= $ratEnd) {
             location.reload(true);
         }
 
-        
+        function createInputs() {
+            var bingoSize = $("#bingoSize").val();
+            for (let i = 0; i < bingoSize.length; i++) {
+                var bingoSelect = [
+                    <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `bingo_name` = $bingoName AND `user_id` = $userID"); 
+                            $bingorow = mysqli_num_rows($stmt7);
+                        if ($bingorow > 0) {
+                            while ($bingorow = mysqli_fetch_array($stmt7)) {
+                                $bingoID = $bingorow["bingo_id"];
+                                $bingoTitle = $bingorow["title"];
+                                $bingoAuthor = $bingorow["Author"];
+                                $bingoPoints = $bingorow["total_points"];
+                            ?>
+                                {val : <?=$bingoTitle?>, text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'}
+                        <?php }} ?>
+                ];
+
+                var sel = $('<select>').appendTo('#bingoResults');
+                $(bingoSelect).each(function() {
+                    sel.append($("<option>").attr('value',this.val).text(this.text));
+                });
+            }
+        }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
