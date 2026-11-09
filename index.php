@@ -29,8 +29,8 @@ $now = strtotime(date("Y-m-d"));
 
 if ($now <= $ratEnd) {
     $active = true;
-    $ratStart = date("m-d-Y", $ratStart);
-    $ratEnd = date("m-d-Y", $ratEnd);
+    $ratStart = date("m/d/Y", $ratStart);
+    $ratEnd = date("m/d/Y", $ratEnd);
 } else {
     $active = false;
 }
@@ -71,7 +71,7 @@ if ($now <= $ratEnd) {
              <h2>Next Read-a-thon Date:</h2>
         </div>
         <div class="rat-date">
-            <h3><?=$ratStart?> - <?=$ratEnd?></h3>
+            <h3><?=$ratStart?>  -  <?=$ratEnd?></h3>
         </div>
     </div>
     <?php } ?>
