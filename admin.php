@@ -74,9 +74,9 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                     <?php if ($activeBingo) { ?>
                     <div class="label-wrapper">
                         <label>Deactivate <?=$activeBingo?> Bingo</label>
-                        <div class="buttons" onclick="deactivateBingo('<?=$activeBingo?>')">deactivate</div>
+                        <div class="buttons spacing" onclick="deactivateBingo('<?=$activeBingo?>')">deactivate</div>
                     </div>
-                    <div id="deactivateResult" class="results spacing"></div>
+                    <div id="deactivateResult" class="results"></div>
                     <?php } else { ?>
                         <select name="bingo" id="bingo" class="inputs spacing">
                             <option value="0">Select Active Bingo</option>
