@@ -426,7 +426,7 @@ echo $bingoName;
         function createInputs() {
             var bingoSize = $("#bingoSize").val();
             for (let i = 0; i < bingoSize.length; i++) {
-                var bingoSelect = [
+                var bingoSelect = [ 
                     <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `user_id` = $userID"); 
                             $bingorow = mysqli_num_rows($stmt7);
                         if ($bingorow > 0) {
