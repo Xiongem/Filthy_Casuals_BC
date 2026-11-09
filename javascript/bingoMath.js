@@ -1,6 +1,6 @@
 function bingoMath(bingoSize) {
     switch (bingoSize) {
-        case 4:
+        case "4":
             var subTotal1 = $("#square1").val() * 1.10;
             var subTotal2 = $("#square2").val() * 1.10;
             var subTotal3 = $("#square3").val() * 1.10;
@@ -8,22 +8,22 @@ function bingoMath(bingoSize) {
 
             console.log(subTotal1);
             
-            var total = subTotal1 + subTotal2 + subTotal3 + subTotal4;
+            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4);
             return total;
             break;
 
-        case 5:
+        case "5":
             var subTotal1 = $("#square1").val() * 1.10;
             var subTotal2 = $("#square2").val() * 1.10;
             var subTotal3 = $("#square3").val() * 1.10;
             var subTotal4 = $("#square4").val() * 1.10;
             var subTotal5 = $("#square5").val() * 1.10;
 
-            var total = subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5;
+            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5);
             return total;
             break;
 
-        case 6:
+        case "6":
             var subTotal1 = $("#square1").val() * 1.10;
             var subTotal2 = $("#square2").val() * 1.10;
             var subTotal3 = $("#square3").val() * 1.10;
@@ -31,11 +31,11 @@ function bingoMath(bingoSize) {
             var subTotal5 = $("#square5").val() * 1.10;
             var subTotal6 = $("#square6").val() * 1.10;
 
-            var total = subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6;
+            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6);
             return total;
             break;
 
-        case 7:
+        case "7":
             var subTotal1 = $("#square1").val() * 1.10;
             var subTotal2 = $("#square2").val() * 1.10;
             var subTotal3 = $("#square3").val() * 1.10;
@@ -44,11 +44,11 @@ function bingoMath(bingoSize) {
             var subTotal6 = $("#square6").val() * 1.10;
             var subTotal7 = $("#square7").val() * 1.10;
 
-            var total = subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7;
+            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7);
             return total;
             break;
 
-        case 8:
+        case "8":
             var subTotal1 = $("#square1").val() * 1.10;
             var subTotal2 = $("#square2").val() * 1.10;
             var subTotal3 = $("#square3").val() * 1.10;
@@ -58,11 +58,11 @@ function bingoMath(bingoSize) {
             var subTotal7 = $("#square7").val() * 1.10;
             var subTotal8 = $("#square8").val() * 1.10;
 
-            var total = subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8;
+            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8);
             return total;
             break;
 
-        case 9:
+        case "9":
             var subTotal1 = $("#square1").val() * 1.10;
             var subTotal2 = $("#square2").val() * 1.10;
             var subTotal3 = $("#square3").val() * 1.10;
@@ -73,11 +73,11 @@ function bingoMath(bingoSize) {
             var subTotal8 = $("#square8").val() * 1.10;
             var subTotal9 = $("#square9").val() * 1.10;
 
-            var total = subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8 + subTotal9;
+            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8 + subTotal9);
             return total;
             break;
 
-        case 10:
+        case "10":
             var subTotal1 = $("#square1").val() * 1.10;
             var subTotal2 = $("#square2").val() * 1.10;
             var subTotal3 = $("#square3").val() * 1.10;
@@ -89,7 +89,7 @@ function bingoMath(bingoSize) {
             var subTotal9 = $("#square9").val() * 1.10;
             var subTotal10 = $("#square10").val() * 1.10;
 
-            var total = subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8 + subTotal9 + subTotal10;
+            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8 + subTotal9 + subTotal10);
             return total;
             break;
     

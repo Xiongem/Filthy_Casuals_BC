@@ -476,23 +476,7 @@ if ($now <= $ratEnd) {
 
             //     }
             // }) 
-        }        
-
-        function bingoMath(bingoSize) {
-            var bingoSize = bingoSize;
-            console.log(bingoSize);
-            
-            switch (bingoSize) {
-                case "4":
-                    var subTotal1 = $("#square1").val() * 1.10;
-                    var subTotal2 = $("#square2").val() * 1.10;
-                    var subTotal3 = $("#square3").val() * 1.10;
-                    var subTotal4 = $("#square4").val() * 1.10;
-                    
-                    var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4);
-                    return total;
-                    break;
-        }}
+        }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
