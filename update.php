@@ -228,7 +228,8 @@ $today = date("Y-m-d");
             if (mod1 == "3" || mod1 == "4" || mod2 == "2") {
                 $("#bingo").css("display", "flex")
                 console.log("hello");
-                
+                console.log(mod1);
+                                
             }else {
                 $("#bingo").hide()
                 console.log("goodbye");
