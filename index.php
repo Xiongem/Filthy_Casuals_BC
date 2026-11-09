@@ -376,29 +376,7 @@ if ($now <= $ratEnd) {
         </div>
     </div>
     <script>
-        function createInputs() {
-            var bingoSize = $("#bingoSize").val();
-            for (let i = 0; i < bingoSize.length; i++) {
-                var bingoSelect = [
-                    <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `bingo_name` = $bingoName AND `user_id` = $userID"); 
-                            $bingorow = mysqli_num_rows($stmt7);
-                        if ($bingorow > 0) {
-                            while ($bingorow = mysqli_fetch_array($stmt7)) {
-                                $bingoID = $bingorow["bingo_id"];
-                                $bingoTitle = $bingorow["title"];
-                                $bingoAuthor = $bingorow["Author"];
-                                $bingoPoints = $bingorow["total_points"];
-                            ?>
-                                {val : <?=$bingoTitle?>, text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'}
-                        <?php }} ?>
-                ];
-
-                var sel = $('<select>').appendTo('#bingoResults');
-                $(bingoSelect).each(function() {
-                    sel.append($("<option>").attr('value',this.val).text(this.text));
-                });
-            }
-        }
+        
         function goUser(userId) {
             window.location.href = "readHistory.php?user_id=" + userId;
         }
