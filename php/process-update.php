@@ -93,7 +93,7 @@ if ($stmt1 -> execute()) {
             $stmt3->execute();
         }
         
-        if ($_POST["bingoName"] !== 0) {
+        if ($_POST["bingoName"]) {
             $stmt4 = $_SESSION["conn"] -> prepare("INSERT INTO `bingo` (`user_id`,
                                                                     `bingo_name`,
                                                                     `title`,
