@@ -194,7 +194,7 @@ $today = date("Y-m-d");
                                 id="bingo"
                                 class="checkbox" onclick="showBingoSelect()"> 
                     </div>
-                    <div class="label-wrapper hide">
+                    <div class="bingo-wrapper hide">
                         <label for="bingoName">Select bingo:</label>
                         <select name="bingoName" class="inputs mod-content" id="bingoSelect">
                             <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `bingoNames`"); 
