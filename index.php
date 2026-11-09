@@ -464,11 +464,6 @@ if ($now <= $ratEnd) {
         function sendBingoMath() {
             var bingoSize = $("#bingoSize").val();
             var total = bingoMath(bingoSize);
-            console.log(bingoSize);
-
-            var square1 = $("#square1").val() * 1.10;
-                    var subTotal1 = square1 * 1.10;
-                    console.log(square1, subTotal1);
             
             // $.ajax({
             //     url: "php/process-bingoMath.php",
@@ -482,6 +477,9 @@ if ($now <= $ratEnd) {
         }        
 
         function bingoMath(bingoSize) {
+            var bingoSize = bingoSize;
+            console.log(bingoSize);
+            
             switch (bingoSize) {
                 case 4:
                     var square1 = $("#square1").val();
