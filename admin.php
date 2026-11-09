@@ -147,7 +147,7 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                 url: "php/process-deactivateBingo.php",
                 method: "post",
                 data: {
-                    bingoName:bingo
+                    bingoName:bingoName
                 },success:function(result) {
                     $("#bingoWrapper").html();
                 }
