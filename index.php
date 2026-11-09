@@ -440,7 +440,7 @@ if ($now <= $ratEnd) {
                                 {val : '<?=$bingoTitle?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?>'},
                         <?php }} ?>
                 ];
-                console.log(bingoSelect);
+                console.log(bingoSelect.length);
                 
                 var sel = $('<select>').appendTo('#bingoResults');
                 $(bingoSelect).each(function() {
