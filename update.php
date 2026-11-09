@@ -173,7 +173,7 @@ $today = date("Y-m-d");
 
                     <div id="mod2-wrapper" class="mod-content">
                         <label for="mod-2" class="labels">Modifier 2:</label>
-                        <select name="mod-2" id="mod-2" class="inputs">
+                        <select name="mod-2" id="mod-2" class="inputs" onchange="check()">
                             <option value="1">Normal</option>
                             <option value="2">Challenge</option>
                             <option value="3">Buddy Read</option>
