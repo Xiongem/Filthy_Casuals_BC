@@ -194,9 +194,9 @@ $today = date("Y-m-d");
                                 id="bingo"
                                 class="checkbox" onclick="showBingoSelect()"> 
                     </div>
-                    <div class="bingo-wrapper hide">
+                    <div class="bingo-wrapper hide" id="bingoSelect">
                         <label for="bingoName">Select bingo:</label>
-                        <select name="bingoName" class="inputs mod-content" id="bingoSelect">
+                        <select name="bingoName" class="inputs mod-content">
                             <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `bingoNames`"); 
                                 $bingo = mysqli_num_rows($stmt);
                                 if ($bingo > 0) {
