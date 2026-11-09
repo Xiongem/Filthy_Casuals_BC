@@ -443,6 +443,7 @@ if ($now <= $ratEnd) {
             
             for (let i = 0; i < 5; i++) {
                 var sel = $('<select>').appendTo('#bingoResults');
+                console.log("hello");
                 
             }
         }
