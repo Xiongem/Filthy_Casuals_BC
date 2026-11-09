@@ -476,6 +476,9 @@ if ($now <= $ratEnd) {
             //     }
             // }) 
         }
+        var subTotal1 = $("#square1").val() * 1.10;
+        console.log(subTotal1);
+        
         function bingoMath(bingoSize) {
             switch (bingoSize) {
                 case 4:
