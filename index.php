@@ -82,7 +82,7 @@ if ($now <= $ratEnd) {
             </div>
             <div class="label-wrapper">
                 <label>Bingo Dimensions:</label>
-                <select name="bingoSize" id="bingoSize" class="inputs" onchange="createInputs()">
+                <select name="bingoSize" id="bingoSize" class="inputs">
                     <opion value="4">4x4</opion>
                     <opion value="5">5x5</opion>
                     <opion value="6">6x6</opion>
@@ -376,7 +376,6 @@ if ($now <= $ratEnd) {
         </div>
     </div>
     <script>
-        
         function goUser(userId) {
             window.location.href = "readHistory.php?user_id=" + userId;
         }
@@ -422,6 +421,8 @@ if ($now <= $ratEnd) {
             $("#body").css({"height": "unset", "overflow": "unset"});
             location.reload(true);
         }
+
+        
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
