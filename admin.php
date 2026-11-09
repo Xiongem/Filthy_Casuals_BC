@@ -93,7 +93,7 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                         <div class="button-wrapper">
                             <div class="buttons" onclick="activateBingo()">Activate</div>
                         </div>
-                        <div id="bingoResult" class="results"></div></div>
+                        <div id="bingoResult" class="results"></div>
                     <?php } ?>  
                 </div>
             </div>
