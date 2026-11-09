@@ -142,11 +142,12 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
         }
 
         function deactivateBingo(bingoName) {
+            var bingo = bingoName;
             $.ajax({
                 url: "php/process-deactivateBingo.php",
                 method: "post",
                 data: {
-                    bingoName:bingoName
+                    bingoName:bingo
                 },success:function(result) {
                     $("#bingoWrapper").html();
                 }
