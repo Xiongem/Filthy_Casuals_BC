@@ -96,7 +96,7 @@ if ($now <= $ratEnd) {
             <div class="divider"></div>
             <div class="popup-content" id="bingoResults"></div>
             <div class="button-wrapper">
-                <div class="buttons" onclick="sendBingoMath()">Submit</div>
+                <div class="buttons" id="mathSubmit" onclick="sendBingoMath()">Submit</div>
             </div>
             <div class="popup-content" id="mathResults"></div>
         </div>
@@ -443,7 +443,11 @@ if ($now <= $ratEnd) {
                         $bingoPoints = $bingorow["total_points"];?>
 
             {   val : '<?=$bingoID?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?> (<?=$bingoPoints?>)'},
-            <?php }} ?>
+            <?php }
+            } else { ?>
+                {   val : '0', text: 'No available options found'}
+                $("#mathSubmit").hide();
+            <?php } ?>
             ];
             
             for (let i = 0; i < bingoSize; i++) {
