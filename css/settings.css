@@ -137,6 +137,12 @@
     .icon-wrapper:hover #explain {
         display: block;
     }
+    #result {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 
 
 
