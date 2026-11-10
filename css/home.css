@@ -167,7 +167,11 @@
         align-items: center;
     }
     #bingo-label {
+        margin-right: 0.5em;
         font-size: 20px;
+    }
+    .square-label {
+        margin: 1em 0 0.5em 0;
     }
     .buttons {
         display: flex;

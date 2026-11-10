@@ -94,7 +94,8 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
             
             for (let i = 0; i < bingoSize; i++) {
                 var lab = $('<label>').appendTo('#bingoResults');
-                lab.text("Square" + (i+1))
+                lab.attr("class", "square-label");
+                lab.text("Square" + (i+1));
 
                 var sel = $('<select>').appendTo('#bingoResults');
                 sel.attr('class', 'inputs');
