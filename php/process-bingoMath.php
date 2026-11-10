@@ -61,10 +61,10 @@ $bingoSize = $_POST["bingoSize"];
                     $stmt2->bind_param('i',
                                         $value);
                                         echo 'bingoID: '. $value .'<br>';
-                    $stmt2->execute();
+                    
                 }
             
-                if ($stmt2->affected_rows == 4) {
+                if ($stmt2->execute() && $stmt2->affected_rows == 4) {
                     exit('successfully awarded ' . $bingo_total . ' bingo points!');
                 } else {
                     die('failed to update bingos' . $stmt2 -> error);
