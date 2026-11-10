@@ -8,6 +8,10 @@
         --grey: #e2dfcd;
     }
 
+a {
+    text-decoration: underline;
+}
+
 @media only screen and (min-width: 200px) {
     .full-wrapper, .activity-content {
         display: flex;
@@ -23,13 +27,11 @@
         padding: 0 1em;
     }
     .rules-content {
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-        /* text-align: center; */
-        width: 100%;
+        display: grid;
+        grid-template-columns: 20% 80%;
     }
     .rules {
+        text-align: center;
         margin: 0.5em;
     }
     .activity {
@@ -39,6 +41,8 @@
         justify-content: center;
         justify-items: center;
         text-align: center;
+
+        background-color: var(--leather);
     }
 }
 
