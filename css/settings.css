@@ -143,6 +143,9 @@
         align-items: center;
         width: 100%;
     }
+    .loader {
+        margin-top: 2em;
+    }
 
 
 
