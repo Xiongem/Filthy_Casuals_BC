@@ -95,8 +95,8 @@ if ($now <= $ratEnd) {
             </div>
             <div class="divider"></div>
             <div class="popup-content" id="bingoResults"></div>
+            <div id="sneakPeak" class="popup-content"></div>
             <div class="button-wrapper">
-                <div id="sneakPeak" class="popup-content"></div>
                 <div class="buttons" id="bingoSubmit" onclick="sendBingoMath()">Submit</div>
             </div>
             <div class="popup-content" id="mathResults"></div>
