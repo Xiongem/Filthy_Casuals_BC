@@ -434,6 +434,8 @@ if ($now <= $ratEnd) {
             var bingoSize = $("#bingoSize").val();
 
             var bingoSelect = [ 
+                {   val : '0', text: 'Choose an option'},
+
             <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `user_id` = $userID AND `bingo_name` = '$bingoName' AND `used` = 0"); 
                     $bingorow = mysqli_num_rows($stmt7);
                 if ($bingorow > 0) {
@@ -465,7 +467,16 @@ if ($now <= $ratEnd) {
                 };
             }
 
-            if ($("#square1").val() == 0) {
+            if ($("#square1").val() == 0 ||
+                    $("#square2").val() == 0 ||
+                    $("#square3").val() == 0 ||
+                    $("#square4").val() == 0 ||
+                    $("#square5").val() == 0 ||
+                    $("#square6").val() == 0 ||
+                    $("#square7").val() == 0 ||
+                    $("#square8").val() == 0 ||
+                    $("#square9").val() == 0 ||
+                    $("#square10").val() == 0) {
                 $("#bingoSubmit").css("display", "none");
             }
         }
