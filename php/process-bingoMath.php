@@ -32,13 +32,13 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
     //? SWITCH - SET AS USED
     switch ($bingoSize) {
         case '4':
-            $inputs = array($_POST['input1'], 
-                            $_POST['input2'], 
-                            $_POST['input3'], 
-                            $_POST['input4']);
+            $squares = array($_POST['square1'], 
+                            $_POST['square2'], 
+                            $_POST['square3'], 
+                            $_POST['square4']);
             
-           for ($i = 0; $i < count($inputs); $i++) {
-                echo $inputs[ $i ];
+           for ($i = 0; $i < count($squares); $i++) {
+                echo $squares[ $i ];
                 // $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 // $stmt2->bind_param('i',
                 //                     $value);

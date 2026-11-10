@@ -442,7 +442,7 @@ if ($now <= $ratEnd) {
                         $bingoAuthor = $bingorow["author"];
                         $bingoPoints = $bingorow["total_points"];?>
 
-            {   val : '<?=$bingoPoints?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?> (<?=$bingoPoints?>)'},
+            {   val : '<?=$bingoID?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?> (<?=$bingoPoints?>)'},
             <?php }} ?>
             ];
             
@@ -455,10 +455,10 @@ if ($now <= $ratEnd) {
                 sel.attr('name', "square" + (i+1));
                 sel.attr('id', "square" + (i+1))
 
-                var input = $('<input>').appendTo('#bingoResults');
-                input.attr('type', 'hidden');
-                input.attr('value', <?=$bingoID?>);
-                input.attr('id', 'input' + (i+1));
+                // var input = $('<input>').appendTo('#bingoResults');
+                // input.attr('type', 'hidden');
+                // input.attr('value', );
+                // input.attr('id', 'input' + (i+1));
 
                 for (var a in bingoSelect) {
                     sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
@@ -473,11 +473,11 @@ if ($now <= $ratEnd) {
             
             switch (bingoSize) {
                 case "4":
-                    input1 = $("#input1").val();
-                    input2 = $("#input2").val();
-                    input3 = $("#input3").val();
-                    input4 = $("#input4").val();
-                    console.log(input1, input2, input3, input4);
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    console.log(square1, square2, square3, square4);
                     
 
                     $.ajax({
@@ -486,10 +486,10 @@ if ($now <= $ratEnd) {
                         data: {
                             total:total,
                             bingoSize:bingoSize,
-                            input1:input1,
-                            input2:input2,
-                            input3:input3,
-                            input4:input4
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4
                         },success:function(result) {
                             $("#mathResults").html(result);
                         }
@@ -497,11 +497,11 @@ if ($now <= $ratEnd) {
                     break;
 
                 case "5":
-                    input1 = $("#input1").val();
-                    input2 = $("#input2").val();
-                    input3 = $("#input3").val();
-                    input4 = $("#input4").val();
-                    input5 = $("#input5").val();
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
 
                     $.ajax({
                         url: "php/process-bingoMath.php",
@@ -509,11 +509,11 @@ if ($now <= $ratEnd) {
                         data: {
                             total:total,
                             bingoSize:bingoSize,
-                            input1:input1,
-                            input2:input2,
-                            input3:input3,
-                            input4:input4,
-                            input5:input5
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5
                         },success:function(result) {
                             $("#mathResults").html(result);
                         }
@@ -521,12 +521,12 @@ if ($now <= $ratEnd) {
                     break;
 
                 case "6":
-                    input1 = $("#input1").val();
-                    input2 = $("#input2").val();
-                    input3 = $("#input3").val();
-                    input4 = $("#input4").val();
-                    input5 = $("#input5").val();
-                    input6 = $("#input6").val();
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
+                    square6 = $("#square6").val();
 
                     $.ajax({
                         url: "php/process-bingoMath.php",
@@ -534,12 +534,12 @@ if ($now <= $ratEnd) {
                         data: {
                             total:total,
                             bingoSize:bingoSize,
-                            input1:input1,
-                            input2:input2,
-                            input3:input3,
-                            input4:input4,
-                            input5:input5,
-                            input6:input6
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5,
+                            square6:square6
                         },success:function(result) {
                             $("#mathResults").html(result);
                         }
@@ -547,13 +547,13 @@ if ($now <= $ratEnd) {
                     break;
 
                 case "7":
-                    input1 = $("#input1").val();
-                    input2 = $("#input2").val();
-                    input3 = $("#input3").val();
-                    input4 = $("#input4").val();
-                    input5 = $("#input5").val();
-                    input6 = $("#input6").val();
-                    input7 = $("#input7").val();
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
+                    square6 = $("#square6").val();
+                    square7 = $("#square7").val();
 
                     $.ajax({
                         url: "php/process-bingoMath.php",
@@ -561,13 +561,13 @@ if ($now <= $ratEnd) {
                         data: {
                             total:total,
                             bingoSize:bingoSize,
-                            input1:input1,
-                            input2:input2,
-                            input3:input3,
-                            input4:input4,
-                            input5:input5,
-                            input6:input6,
-                            input7:input7
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5,
+                            square6:square6,
+                            square7:square7
                         },success:function(result) {
                             $("#mathResults").html(result);
                         }
@@ -575,28 +575,28 @@ if ($now <= $ratEnd) {
                     break;
 
                 case "8":
-                    input1 = $("#input1").val();
-                    input2 = $("#input2").val();
-                    input3 = $("#input3").val();
-                    input4 = $("#input4").val();
-                    input5 = $("#input5").val();
-                    input6 = $("#input6").val();
-                    input7 = $("#input7").val();
-                    input8 = $("#input8").val();
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
+                    square6 = $("#square6").val();
+                    square7 = $("#square7").val();
+                    square8 = $("#square8").val();
                     $.ajax({
                         url: "php/process-bingoMath.php",
                         method: "post",
                         data: {
                             total:total,
                             bingoSize:bingoSize,
-                            input1:input1,
-                            input2:input2,
-                            input3:input3,
-                            input4:input4,
-                            input5:input5,
-                            input6:input6,
-                            input7:input7,
-                            input8:input8
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5,
+                            square6:square6,
+                            square7:square7,
+                            square8:square8
                         },success:function(result) {
                             $("#mathResults").html(result);
                         }
@@ -604,15 +604,15 @@ if ($now <= $ratEnd) {
                     break;
 
                 case "9":
-                    input1 = $("#input1").val();
-                    input2 = $("#input2").val();
-                    input3 = $("#input3").val();
-                    input4 = $("#input4").val();
-                    input5 = $("#input5").val();
-                    input6 = $("#input6").val();
-                    input7 = $("#input7").val();
-                    input8 = $("#input8").val();
-                    input9 = $("#input9").val();
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
+                    square6 = $("#square6").val();
+                    square7 = $("#square7").val();
+                    square8 = $("#square8").val();
+                    square9 = $("#square9").val();
 
                     $.ajax({
                         url: "php/process-bingoMath.php",
@@ -620,15 +620,15 @@ if ($now <= $ratEnd) {
                         data: {
                             total:total,
                             bingoSize:bingoSize,
-                            input1:input1,
-                            input2:input2,
-                            input3:input3,
-                            input4:input4,
-                            input5:input5,
-                            input6:input6,
-                            input7:input7,
-                            input8:input8,
-                            inpuy9:input9
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5,
+                            square6:square6,
+                            square7:square7,
+                            square8:square8,
+                            square9:square9
                         },success:function(result) {
                             $("#mathResults").html(result);
                         }
@@ -636,16 +636,16 @@ if ($now <= $ratEnd) {
                     break;
 
                 case "10":
-                    input1 = $("#input1").val();
-                    input2 = $("#input2").val();
-                    input3 = $("#input3").val();
-                    input4 = $("#input4").val();
-                    input5 = $("#input5").val();
-                    input6 = $("#input6").val();
-                    input7 = $("#input7").val();
-                    input8 = $("#input8").val();
-                    input9 = $("#input9").val();
-                    input10 = $("#input10").val();
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
+                    square6 = $("#square6").val();
+                    square7 = $("#square7").val();
+                    square8 = $("#square8").val();
+                    square9 = $("#square9").val();
+                    square10 = $("#square10").val();
 
                     $.ajax({
                         url: "php/process-bingoMath.php",
@@ -653,16 +653,16 @@ if ($now <= $ratEnd) {
                         data: {
                             total:total,
                             bingoSize:bingoSize,
-                            input1:input1,
-                            input2:input2,
-                            input3:input3,
-                            input4:input4,
-                            input5:input5,
-                            input6:input6,
-                            input7:input7,
-                            input8:input8,
-                            inpuy9:input9,
-                            input10:input10
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5,
+                            square6:square6,
+                            square7:square7,
+                            square8:square8,
+                            square9:square9,
+                            square10:square10
                         },success:function(result) {
                             $("#mathResults").html(result);
                         }
