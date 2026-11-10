@@ -461,6 +461,7 @@ if ($now <= $ratEnd) {
 
                 for (var a in bingoSelect) {
                     sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
+                    sel.attr('onclick', 'bingoMath()')
                 };
             }
 
@@ -470,11 +471,11 @@ if ($now <= $ratEnd) {
         }
 
         
-        $('select').addEventListener("click", function(e) {
-            // bingoMath();
-            console.log("hello");
+        // $('select').addEventListener("click", function(e) {
+        //     // bingoMath();
+        //     console.log("hello");
             
-        }, false);
+        // }, false);
 
         function bingoMath() {
             var bingoSize = $("#bingoSize").val();
