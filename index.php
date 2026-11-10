@@ -497,9 +497,7 @@ if ($now <= $ratEnd) {
                     square2 = $("#square2").val();
                     square3 = $("#square3").val();
                     square4 = $("#square4").val();
-                    console.log(square1, square2, square3, square4);
                     
-
                     $.ajax({
                         url: "php/bingoMath.php",
                         method: "post",
@@ -696,7 +694,6 @@ if ($now <= $ratEnd) {
                     square2 = $("#square2").val();
                     square3 = $("#square3").val();
                     square4 = $("#square4").val();
-                    console.log(square1, square2, square3, square4);
                     
 
                     $.ajax({
