@@ -35,7 +35,7 @@ $bingoSize = $_POST["bingoSize"];
                             $_POST['square4']);
             
            for ($i = 0; $i < count($squares); $i++) {
-                echo $squares[$i];
+                echo $squares[$i] . "<br>";
                 $bingoID = $squares[$i];
 
                 $sql2 = "SELECT `total_points` FROM `bingo` WHERE `bingo_id` = $bingoID";
@@ -43,7 +43,7 @@ $bingoSize = $_POST["bingoSize"];
                     $bingo = $result2->fetch_assoc();
                     $sub_total[$i] = $bingo['total_points'];
 
-                echo $sub_total[$i];
+                echo $sub_total[$i] . "<br>";
 
             
                 // $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
