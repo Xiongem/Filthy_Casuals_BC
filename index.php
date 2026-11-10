@@ -465,8 +465,12 @@ if ($now <= $ratEnd) {
                     sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
                     sel.attr('onclick', 'bingoMath()')
                 };
-            }
+            }      
+        }
 
+
+        function bingoMath() {
+            var bingoSize = $("#bingoSize").val();
             switch (bingoSize) {
                 case '4':
                     if ($("#square1").val() > 0 && $("#square2").val() > 0 && $("#square3").val() > 0 && $("#square4").val() > 0) {
@@ -476,12 +480,7 @@ if ($now <= $ratEnd) {
             
                 default:
                     break;
-            }         
-        }
-
-
-        function bingoMath() {
-            var bingoSize = $("#bingoSize").val();
+            }   
             
             switch (bingoSize) {
                 case "4":
