@@ -469,6 +469,13 @@ if ($now <= $ratEnd) {
             }
         }
 
+        
+        $(select).addEventListener("click", function(e) {
+            // bingoMath();
+            console.log("hello");
+            
+        }, false);
+
         function bingoMath() {
             var bingoSize = $("#bingoSize").val();
             
