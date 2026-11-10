@@ -44,10 +44,10 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
     </header>
     <div class="wrapper">
         <div class="bingo-title spacing">
-            <h2>Assign Bingo Squares</h2>
+            <h1>Assign Bingo Squares</h1>
         </div>
         <div class="label-wrapper">
-            <label>Bingo Dimensions:</label>
+            <label id="bingo-label">Bingo Dimensions:</label>
             <select name="bingoSize" id="bingoSize" class="inputs"  onchange="createInputs()">
                 <option value="0">none</option>
                 <option value="4">4x4</option>
