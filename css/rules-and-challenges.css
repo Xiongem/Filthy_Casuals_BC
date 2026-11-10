@@ -24,16 +24,20 @@ a {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 0 1em;
+        padding: 0 2em;
     }
     .rules-content {
         display: grid;
         grid-template-columns: 5% 95%;
+        row-gap: 0.5em;
+        column-gap: 0.5em;
+        justify-items: center;
+        align-content: center;
     }
-    .rules {
-        /* text-align: center; */
+    /* .rules {
+        text-align: center;
         margin: 0.5em;
-    }
+    } */
     .activity {
         display: grid;
         grid-template-columns: 30% 70%;
