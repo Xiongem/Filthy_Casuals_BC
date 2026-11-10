@@ -94,6 +94,7 @@ if ($now <= $ratEnd) {
                 </select>
             </div>
             <div class="divider"></div>
+            <div id="warn"></div>
             <div class="popup-content" id="bingoResults"></div>
             <div id="sneakPeak" class="popup-content"></div>
             <div class="button-wrapper">
@@ -479,7 +480,12 @@ if ($now <= $ratEnd) {
                     square4 = $("#square4").val();
 
                     if (square1 > 0 && square2 > 0 && square3 > 0 && square4 > 0) {
-                        $("#bingoSubmit").css("display", "flex");
+                        if (square1.has(square2, square3, square4)) {
+                            $("#warn").html("Squares cannot match");
+                        } else {
+                            $("#bingoSubmit").css("display", "flex");
+                        }
+                        
                     }  
                     break;
             
