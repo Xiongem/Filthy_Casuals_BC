@@ -487,7 +487,6 @@ if ($now <= $ratEnd) {
                         $("#bingoSubmit").css("display", "flex");
                     }
                         
-                    }  
                     break;
             
                 default:
