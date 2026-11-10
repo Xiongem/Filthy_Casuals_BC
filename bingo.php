@@ -10,6 +10,16 @@ dbConnect();
 forceLogin();
 
 $userID = $_SESSION["user_id"];
+
+$sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
+    $result3 = $_SESSION["conn"]->query($sql3);
+    $bingo = $result3->fetch_assoc();
+    if (isset($bingo)) {
+        $bingoActive = $bingo["active"];
+        $bingoName = $bingo["bingo_name"];   
+    } else {
+        $bingoActive = 0;
+    }
 ?>
 
 <!DOCTYPE html>
