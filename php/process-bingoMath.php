@@ -60,6 +60,7 @@ $bingoSize = $_POST["bingoSize"];
                     $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                     $stmt2->bind_param('i',
                                         $value);
+                                        echo 'bingoID: '. $value .'<br>';
                     $stmt2->execute();
                 }
             
