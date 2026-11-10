@@ -448,10 +448,6 @@ if ($now <= $ratEnd) {
                 {   val : '0', text: 'No available options found'}
             <?php } ?>
             ];
-
-            if ($("#square1").val() == 0) {
-                $("#bingoSubmit").css("display", "none");
-            }
             
             for (let i = 0; i < bingoSize; i++) {
                 var lab = $('<label>').appendTo('#bingoResults');
@@ -465,6 +461,10 @@ if ($now <= $ratEnd) {
                 for (var a in bingoSelect) {
                     sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
                 };
+            }
+
+            if ($("#square1").val() == 0) {
+                $("#bingoSubmit").css("display", "none");
             }
         }
 
