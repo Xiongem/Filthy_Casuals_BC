@@ -126,10 +126,10 @@
     .profile-picture:hover .upload-icon {
         opacity: 1;
     }
-    .icon-wrapper {
+    /* .icon-wrapper {
         position: relative;
         cursor: pointer;
-    }
+    } */
     #explain {
         position: absolute;
         display: none;
