@@ -1,0 +1,53 @@
+:root,
+    :root.option1 { 
+        --marine-green: #636b3f;
+        --deep-green: #2b361c;
+        --barium-yellow: #fefae3;
+        --sepia-e37: #d4a369;
+        --leather: #b17036;
+        --grey: #e2dfcd;
+    }
+
+@media only screen and (min-width: 200px) {
+    .full-wrapper, .activity-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .content-wrapper {
+        width: 100%;
+        margin: 0 1em;
+    }
+    .rules-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .activity {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        width: 100%;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+    }
+}
+
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+
+@media only screen and (min-width: 601px) {
+
+}
+
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+/** ####################### *//** ####################### *//** ####################### */
+
+@media only screen and (min-width: 1024px) {
+
+}
