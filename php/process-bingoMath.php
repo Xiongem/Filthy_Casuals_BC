@@ -155,7 +155,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                 $stmt2->execute();
             }
 
-            exit('successfully awarded' . $bingo_total . 'bingo points!');
+            exit('successfully awarded ' . $bingo_total . ' bingo points!');
             break;
         
         default:
