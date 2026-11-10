@@ -41,7 +41,7 @@ $bingoSize = $_POST["bingoSize"];
                 $sql2 = "SELECT `total_points` FROM `bingo` WHERE `bingo_id` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
-                    $sub_total[$i] = $bingo['total_points'];
+                    $sub_total[$i + 1] = $bingo['total_points'];
 
                 echo $sub_total[1] . "<br>";
 
