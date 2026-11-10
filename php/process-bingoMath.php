@@ -15,7 +15,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             $user = $result->fetch_assoc();  
                 $total__points = $user["pointsYear"];
 
-$new_total = $bingo_total + $total__points;
+// $new_total = $bingo_total + $total__points;
 //? MATH
 $bingoSize = $_POST["bingoSize"];
 
@@ -36,8 +36,9 @@ $bingoSize = $_POST["bingoSize"];
             
            for ($i = 0; $i < count($squares); $i++) {
                 echo $squares[$i];
+                $bingoID = $squares[$i];
 
-                $sql2 = 'SELECT `total_points` FROM `bingo` WHERE `bingo_id` = $squares[$i]';
+                $sql2 = 'SELECT `total_points` FROM `bingo` WHERE `bingo_id` = $bingoID';
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
                     $sub_total[$i] = $bingo['total_points'];
