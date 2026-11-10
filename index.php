@@ -477,6 +477,8 @@ if ($now <= $ratEnd) {
                     input2 = $("#input2").val();
                     input3 = $("#input3").val();
                     input4 = $("#input4").val();
+                    console.log(input1, input2, input3, input4);
+                    
 
                     $.ajax({
                         url: "php/process-bingoMath.php",
