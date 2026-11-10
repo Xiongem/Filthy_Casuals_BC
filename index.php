@@ -467,9 +467,16 @@ if ($now <= $ratEnd) {
                 };
             }
 
-            if ($("#square1").val() !== 0) {
-                $("#bingoSubmit").css("display", "flex");
-            }           
+            switch (bingoSize) {
+                case '4':
+                    if ($("#square1").val() > 0 && $("#square2").val() > 0 && $("#square3").val() > 0 && $("#square4").val() > 0) {
+                        $("#bingoSubmit").css("display", "flex");
+                    }  
+                    break;
+            
+                default:
+                    break;
+            }         
         }
 
 
