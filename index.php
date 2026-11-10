@@ -96,7 +96,7 @@ if ($now <= $ratEnd) {
             <div class="divider"></div>
             <div class="popup-content" id="bingoResults"></div>
             <div class="button-wrapper">
-                <div class="buttons" onclick="sendBingoMath()">Submit</div>
+                <div class="buttons" id="bingoSubmit" onclick="sendBingoMath()">Submit</div>
             </div>
             <div class="popup-content" id="mathResults"></div>
         </div>
@@ -448,6 +448,10 @@ if ($now <= $ratEnd) {
                 {   val : '0', text: 'No available options found'}
             <?php } ?>
             ];
+
+            if ($("#square1").val() == 0) {
+                $("#bingoSubmit").hide();
+            }
             
             for (let i = 0; i < bingoSize; i++) {
                 var lab = $('<label>').appendTo('#bingoResults');
