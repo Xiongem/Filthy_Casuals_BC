@@ -484,8 +484,10 @@ if ($now <= $ratEnd) {
                         square3 == square4
                     ) {
                         $("#warn").html("Squares cannot match");
+                        $("#bingoSubmit").css("display", "none");
                     }else {
                         $("#warn").html("");
+                        $("#bingoSubmit").css("display", "flex");
                     }
 
                     if (square1 > 0 && square2 > 0 && square3 > 0 && square4 > 0) {
