@@ -477,7 +477,6 @@ if ($now <= $ratEnd) {
                         url: "php/process-bingoMath.php",
                         method: "post",
                         data: {
-                            total:total,
                             bingoSize:bingoSize,
                             square1:square1,
                             square2:square2,
@@ -500,7 +499,6 @@ if ($now <= $ratEnd) {
                         url: "php/process-bingoMath.php",
                         method: "post",
                         data: {
-                            total:total,
                             bingoSize:bingoSize,
                             square1:square1,
                             square2:square2,
@@ -525,7 +523,6 @@ if ($now <= $ratEnd) {
                         url: "php/process-bingoMath.php",
                         method: "post",
                         data: {
-                            total:total,
                             bingoSize:bingoSize,
                             square1:square1,
                             square2:square2,
@@ -552,7 +549,6 @@ if ($now <= $ratEnd) {
                         url: "php/process-bingoMath.php",
                         method: "post",
                         data: {
-                            total:total,
                             bingoSize:bingoSize,
                             square1:square1,
                             square2:square2,
@@ -580,7 +576,6 @@ if ($now <= $ratEnd) {
                         url: "php/process-bingoMath.php",
                         method: "post",
                         data: {
-                            total:total,
                             bingoSize:bingoSize,
                             square1:square1,
                             square2:square2,
@@ -611,7 +606,6 @@ if ($now <= $ratEnd) {
                         url: "php/process-bingoMath.php",
                         method: "post",
                         data: {
-                            total:total,
                             bingoSize:bingoSize,
                             square1:square1,
                             square2:square2,
@@ -644,7 +638,6 @@ if ($now <= $ratEnd) {
                         url: "php/process-bingoMath.php",
                         method: "post",
                         data: {
-                            total:total,
                             bingoSize:bingoSize,
                             square1:square1,
                             square2:square2,
