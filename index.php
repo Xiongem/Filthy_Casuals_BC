@@ -467,19 +467,11 @@ if ($now <= $ratEnd) {
                 };
             }
 
-            if ($("#square1").val() !== "0" || $("#square2").val() !== 0 || $("#square3").val() !== 0 || $("#square4").val() !== 0 || $("#square5").val() !== 0 || $("#square6").val() !== 0 || $("#square7").val() !== 0 || $("#square8").val() !== 0 || $("#square9").val() !== 0 || $("#square10").val() !== 0) {
+            if ($("#square1").val() !== 0) {
                 $("#bingoSubmit").css("display", "flex");
-            }
-            console.log($("#square1").val());
-            
+            }           
         }
 
-        
-        // $('select').addEventListener("click", function(e) {
-        //     // bingoMath();
-        //     console.log("hello");
-            
-        // }, false);
 
         function bingoMath() {
             var bingoSize = $("#bingoSize").val();
