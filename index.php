@@ -458,7 +458,7 @@ if ($now <= $ratEnd) {
                 var input = $('<input>').appendTo('#bingoResults');
                 input.attr('type', 'hidden');
                 input.attr('value', <?=$bingoID?>);
-                input.attr('id', 'input' (i+1));
+                input.attr('id', 'input' + (i+1));
 
                 for (var a in bingoSelect) {
                     sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
