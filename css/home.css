@@ -161,6 +161,11 @@
         height: 2.5em;
         margin: 1em;
     }
+    .bingo-label-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #bingo-label {
         font-size: 20px;
     }
