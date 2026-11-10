@@ -46,9 +46,9 @@ function makeNav() {
                         </div>
                     </div>
                 </div>
-                <a href="profile.php" id="profile">
+                <div id="profile">
                     <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
-                </a>
+                </div>
             </div>
             <div class="desktop-nav-wrapper">
                 <div class="desktop-logo-wrapper">
