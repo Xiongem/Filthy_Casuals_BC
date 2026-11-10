@@ -112,13 +112,17 @@ $userID = $_SESSION["user_id"];
 
             <!--//? AJAX DISPLAY TABS-->
             <div id="result">
-
+                <div class="loader" id="loader"></div>
             </div>
             
             <script type="text/javascript">
-                $(document).ready(function() {
+                window.onload = function () {
+                    $("loader").hide();
                     showSettings();
-                });
+                };
+                // $(document).ready(function() {
+                //     showSettings();
+                // });
 
                 function showSettings() {
                     var user_ID = <?= $userID ?>;
