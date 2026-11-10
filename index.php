@@ -470,7 +470,7 @@ if ($now <= $ratEnd) {
         }
 
         
-        $(select).addEventListener("click", function(e) {
+        $('select').addEventListener("click", function(e) {
             // bingoMath();
             console.log("hello");
             
