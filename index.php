@@ -94,7 +94,7 @@ if ($now <= $ratEnd) {
                 </select>
             </div>
             <div class="divider"></div>
-            <div id="warn"></div>
+            <div id="warn" class="spacing"></div>
             <div class="popup-content" id="bingoResults"></div>
             <div id="sneakPeak" class="popup-content"></div>
             <div class="button-wrapper">
@@ -479,7 +479,10 @@ if ($now <= $ratEnd) {
                     square3 = $("#square3").val();
                     square4 = $("#square4").val();
 
-                    if (square1 == square2 || square1 == square3 || square1 == square4) {
+                    if (square1 == square2 || square1 == square3 || square1 == square4 ||
+                        square2 == square3 || square2 == square4 ||
+                        square3 == square4
+                    ) {
                         $("#warn").html("Squares cannot match");
                     }else {
                         $("#warn").html("");
