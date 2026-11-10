@@ -56,7 +56,7 @@ $bingoSize = $_POST["bingoSize"];
 
             if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                 //? LOOP THROUGH SQUARES ARRAY AND SET THEM TO USED IN THE DB
-                $num = 1;
+                $num = 0;
                 foreach ($squares as $value) {
                     $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                     $stmt2->bind_param('i',
