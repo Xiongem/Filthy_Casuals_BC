@@ -39,6 +39,9 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body id="body">
+    <header>
+        <?= makeNav() ?>
+    </header>
     <div class="wrapper">
         <div class="bingo-title spacing">
             <h2>Assign Bingo Squares</h2>
