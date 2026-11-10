@@ -473,7 +473,12 @@ if ($now <= $ratEnd) {
             var bingoSize = $("#bingoSize").val();
             switch (bingoSize) {
                 case '4':
-                    if ($("#square1").val() > 0 && $("#square2").val() > 0 && $("#square3").val() > 0 && $("#square4").val() > 0) {
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+
+                    if (square1 > 0 && square2 > 0 && square3 > 0 && square4 > 0) {
                         $("#bingoSubmit").css("display", "flex");
                     }  
                     break;
