@@ -149,12 +149,12 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                             $_POST['input10']);
             
             foreach ($inputs as $key => $value) {
-                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
+                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
                 $stmt2->execute();
             }
-            
+
             exit('successfully awarded bingo points!');
             break;
         
