@@ -38,7 +38,7 @@ $bingoSize = $_POST["bingoSize"];
                             $_POST['square4']);
             
            foreach ($squares as $key => $value) {
-                echo $squares[ $i ];
+                echo $value;
 
                 // $sql = 'SELECT ';
                 // $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
