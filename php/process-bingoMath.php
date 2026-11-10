@@ -45,7 +45,7 @@ $bingoSize = $_POST["bingoSize"];
             $bingo_total = round($sub_total1 + $sub_total2 + $sub_total3 + $sub_total4);
             $new_total = $bingo_total + $total__points;
 
-            echo "new total: " . $new_total . "<br>" . "bingo total: " . $bingo_total;
+            echo "new total: " . $new_total . "<br>" . "bingo total: " . $bingo_total . "<br>";
 
 
             //?SEND NEW POINT TOTAL TO DB
@@ -61,10 +61,12 @@ $bingoSize = $_POST["bingoSize"];
                     $stmt2->bind_param('i',
                                         $value);
                                         echo 'bingoID: '. $value .'<br>';
-                    
+                    $stmt2->execute();
+                    $num = $i +1;
+                    echo $num . '<br>';
                 }
             
-                if ($stmt2->execute() && $stmt2->affected_rows == 4) {
+                if ($num == 4) {
                     exit('successfully awarded ' . $bingo_total . ' bingo points!');
                 } else {
                     die('failed to update bingos' . $stmt2 -> error);
