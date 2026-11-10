@@ -146,6 +146,9 @@
         padding: 0 1em;
         margin-bottom: 1em;
     }
+    .button-wrapper {
+        margin-bottom: 1em;
+    }
     .buttons {
         display: flex;
         justify-content: center;
