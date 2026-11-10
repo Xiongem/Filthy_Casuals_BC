@@ -143,8 +143,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 1em;
+        padding: 0 1.5em;
         margin-bottom: 1em;
+    }
+    .bingo-wrapper h2 {
+        text-align: center;
     }
     .button-wrapper {
         height: 2.5em;
