@@ -43,7 +43,7 @@ $bingoSize = $_POST["bingoSize"];
                     $bingo = $result2->fetch_assoc();
                     $sub_total[$i] = $bingo['total_points'];
 
-                echo $sub_total[$i] . "<br>";
+                echo $sub_total[1] . "<br>";
 
             
                 // $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
