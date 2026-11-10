@@ -37,8 +37,8 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                             $_POST['input3'], 
                             $_POST['input4']);
             
-            foreach ($inputs as $value) {
-                echo $value;
+           for ($i = 0; $i < count($inputs); $i++) {
+                echo $inputs[ $i ];
                 // $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 // $stmt2->bind_param('i',
                 //                     $value);
