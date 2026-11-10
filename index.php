@@ -450,7 +450,7 @@ if ($now <= $ratEnd) {
             ];
 
             if ($("#square1").val() == 0) {
-                $("#bingoSubmit").hide();
+                $("#bingoSubmit").css("display", "none");
             }
             
             for (let i = 0; i < bingoSize; i++) {
