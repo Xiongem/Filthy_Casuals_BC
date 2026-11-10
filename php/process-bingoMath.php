@@ -46,6 +46,8 @@ $bingoSize = $_POST["bingoSize"];
             $bingo_total = round($sub_total1 + $sub_total2 + $sub_total3 + $sub_total4);
             $new_total = $bingo_total + $total__points;
 
+            echo $new_total . "<br>" . $bingo_total;
+
 
             //?SEND NEW POINT TOTAL TO DB
             $stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
@@ -55,13 +57,14 @@ $bingoSize = $_POST["bingoSize"];
 
             if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                 //? LOOP THROUGH SQUARES ARRAY AND SET THEM TO USED IN THE DB
-                foreach ($squares as $key => $value) {
+                foreach ($squares as $value) {
                     $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                     $stmt2->bind_param('i',
                                         $value);
+                    $stmt2->execute();
                 }
             
-                if ($stmt2->execute() && $stmt2->affected_rows > 0) {
+                if ($stmt2->affected_rows == 4) {
                     exit('successfully awarded ' . $bingo_total . ' bingo points!');
                 } else {
                     die('failed to update bingos' . $stmt2 -> error);
