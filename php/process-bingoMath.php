@@ -18,17 +18,17 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 
 //? MATH
 $bingoSize = $_POST["bingoSize"];
-$bingo_total = $_POST["total"];
 
-$new_total = $bingo_total + $total__points;
+
+// $new_total = $bingo_total + $total__points;
 
 //? SEND NEW POINT TOTAL TO DB
-$stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
-$stmt1->bind_param("ii", 
-                    $new_total,
-                    $userID);
+// $stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
+// $stmt1->bind_param("ii", 
+//                     $new_total,
+//                     $userID);
 
-if ($stmt1->execute() && $stmt1->affected_rows > 0) {
+// if ($stmt1->execute() && $stmt1->affected_rows > 0) {
     //? SWITCH - SET AS USED
     switch ($bingoSize) {
         case '4':
@@ -185,6 +185,6 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
         //     # code...
         //     break;
     }
-} else {
-    die('failed to update points' . $stmt1 -> error);
-}
+// } else {
+//     die('failed to update points' . $stmt1 -> error);
+// }
