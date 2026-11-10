@@ -60,7 +60,6 @@ if ($now <= $ratEnd) {
     <link rel="stylesheet" href="css/home.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <script src="javascript/scripts.js"></script>
-    <script src="javascript/bingoMath.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body id="body">
@@ -99,6 +98,7 @@ if ($now <= $ratEnd) {
             <div class="button-wrapper">
                 <div class="buttons" onclick="sendBingoMath()">Submit</div>
             </div>
+            <div class="popup-content" id="mathResults"></div>
         </div>
     </div>
     <header>
@@ -455,6 +455,11 @@ if ($now <= $ratEnd) {
                 sel.attr('name', "square" + (i+1));
                 sel.attr('id', "square" + (i+1))
 
+                var input = $('<input>').appendTo('#bingoResults');
+                input.attr('type', 'hidden');
+                input.attr('value', <?=$bingoID?>);
+                input.attr('id', 'input' (i+1));
+
                 for (var a in bingoSelect) {
                     sel.append($("<option>").attr('value',bingoSelect[a].val).text(bingoSelect[a].text));
                 };
@@ -466,117 +471,306 @@ if ($now <= $ratEnd) {
             var total = bingoMath(bingoSize);
             console.log(total);
             
-            
-            // $.ajax({
-            //     url: "php/process-bingoMath.php",
-            //     method: "post",
-            //     data: {
-            //         total:total
-            //     },success:function(result) {
+            switch (bingoSize) {
+                case "4":
+                    input1 = $("#input1").val();
+                    input2 = $("#input2").val();
+                    input3 = $("#input3").val();
+                    input4 = $("#input4").val();
 
-            //     }
-            // }) 
+                    $.ajax({
+                        url: "php/process-bingoMath.php",
+                        method: "post",
+                        data: {
+                            total:total,
+                            bingoSize:bingoSize,
+                            input1:input1,
+                            input2:input2,
+                            input3:input3,
+                            input4:input4
+                        },success:function(result) {
+                            $("#mathResults").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "5":
+                    input1 = $("#input1").val();
+                    input2 = $("#input2").val();
+                    input3 = $("#input3").val();
+                    input4 = $("#input4").val();
+                    input5 = $("#input5").val();
+
+                    $.ajax({
+                        url: "php/process-bingoMath.php",
+                        method: "post",
+                        data: {
+                            total:total,
+                            bingoSize:bingoSize,
+                            input1:input1,
+                            input2:input2,
+                            input3:input3,
+                            input4:input4,
+                            input5:input5
+                        },success:function(result) {
+                            $("#mathResults").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "6":
+                    input1 = $("#input1").val();
+                    input2 = $("#input2").val();
+                    input3 = $("#input3").val();
+                    input4 = $("#input4").val();
+                    input5 = $("#input5").val();
+                    input6 = $("#input6").val();
+
+                    $.ajax({
+                        url: "php/process-bingoMath.php",
+                        method: "post",
+                        data: {
+                            total:total,
+                            bingoSize:bingoSize,
+                            input1:input1,
+                            input2:input2,
+                            input3:input3,
+                            input4:input4,
+                            input5:input5,
+                            input6:input6
+                        },success:function(result) {
+                            $("#mathResults").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "7":
+                    input1 = $("#input1").val();
+                    input2 = $("#input2").val();
+                    input3 = $("#input3").val();
+                    input4 = $("#input4").val();
+                    input5 = $("#input5").val();
+                    input6 = $("#input6").val();
+                    input7 = $("#input7").val();
+
+                    $.ajax({
+                        url: "php/process-bingoMath.php",
+                        method: "post",
+                        data: {
+                            total:total,
+                            bingoSize:bingoSize,
+                            input1:input1,
+                            input2:input2,
+                            input3:input3,
+                            input4:input4,
+                            input5:input5,
+                            input6:input6,
+                            input7:input7
+                        },success:function(result) {
+                            $("#mathResults").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "8":
+                    input1 = $("#input1").val();
+                    input2 = $("#input2").val();
+                    input3 = $("#input3").val();
+                    input4 = $("#input4").val();
+                    input5 = $("#input5").val();
+                    input6 = $("#input6").val();
+                    input7 = $("#input7").val();
+                    input8 = $("#input8").val();
+                    $.ajax({
+                        url: "php/process-bingoMath.php",
+                        method: "post",
+                        data: {
+                            total:total,
+                            bingoSize:bingoSize,
+                            input1:input1,
+                            input2:input2,
+                            input3:input3,
+                            input4:input4,
+                            input5:input5,
+                            input6:input6,
+                            input7:input7,
+                            input8:input8
+                        },success:function(result) {
+                            $("#mathResults").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "9":
+                    input1 = $("#input1").val();
+                    input2 = $("#input2").val();
+                    input3 = $("#input3").val();
+                    input4 = $("#input4").val();
+                    input5 = $("#input5").val();
+                    input6 = $("#input6").val();
+                    input7 = $("#input7").val();
+                    input8 = $("#input8").val();
+                    input9 = $("#input9").val();
+
+                    $.ajax({
+                        url: "php/process-bingoMath.php",
+                        method: "post",
+                        data: {
+                            total:total,
+                            bingoSize:bingoSize,
+                            input1:input1,
+                            input2:input2,
+                            input3:input3,
+                            input4:input4,
+                            input5:input5,
+                            input6:input6,
+                            input7:input7,
+                            input8:input8,
+                            inpuy9:input9
+                        },success:function(result) {
+                            $("#mathResults").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "10":
+                    input1 = $("#input1").val();
+                    input2 = $("#input2").val();
+                    input3 = $("#input3").val();
+                    input4 = $("#input4").val();
+                    input5 = $("#input5").val();
+                    input6 = $("#input6").val();
+                    input7 = $("#input7").val();
+                    input8 = $("#input8").val();
+                    input9 = $("#input9").val();
+                    input10 = $("#input10").val();
+
+                    $.ajax({
+                        url: "php/process-bingoMath.php",
+                        method: "post",
+                        data: {
+                            total:total,
+                            bingoSize:bingoSize,
+                            input1:input1,
+                            input2:input2,
+                            input3:input3,
+                            input4:input4,
+                            input5:input5,
+                            input6:input6,
+                            input7:input7,
+                            input8:input8,
+                            inpuy9:input9,
+                            input10:input10
+                        },success:function(result) {
+                            $("#mathResults").html(result);
+                        }
+                    }) 
+                    break;
+            
+                default:
+                    break;
+            }
         }
 
         function bingoMath(bingoSize) {
-    switch (bingoSize) {
-        case "4":
-            var subTotal1 = $("#square1").val() * 1.10;
-            var subTotal2 = $("#square2").val() * 1.10;
-            var subTotal3 = $("#square3").val() * 1.10;
-            var subTotal4 = $("#square4").val() * 1.10;
+            switch (bingoSize) {
+                case "4":
+                    var subTotal1 = $("#square1").val() * 1.10;
+                    var subTotal2 = $("#square2").val() * 1.10;
+                    var subTotal3 = $("#square3").val() * 1.10;
+                    var subTotal4 = $("#square4").val() * 1.10;
 
-            console.log(subTotal1);
+                    console.log(subTotal1);
+                    
+                    var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4);
+                    return total;
+                    break;
+
+                case "5":
+                    var subTotal1 = $("#square1").val() * 1.10;
+                    var subTotal2 = $("#square2").val() * 1.10;
+                    var subTotal3 = $("#square3").val() * 1.10;
+                    var subTotal4 = $("#square4").val() * 1.10;
+                    var subTotal5 = $("#square5").val() * 1.10;
+
+                    var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5);
+                    return total;
+                    break;
+
+                case "6":
+                    var subTotal1 = $("#square1").val() * 1.10;
+                    var subTotal2 = $("#square2").val() * 1.10;
+                    var subTotal3 = $("#square3").val() * 1.10;
+                    var subTotal4 = $("#square4").val() * 1.10;
+                    var subTotal5 = $("#square5").val() * 1.10;
+                    var subTotal6 = $("#square6").val() * 1.10;
+
+                    var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6);
+                    return total;
+                    break;
+
+                case "7":
+                    var subTotal1 = $("#square1").val() * 1.10;
+                    var subTotal2 = $("#square2").val() * 1.10;
+                    var subTotal3 = $("#square3").val() * 1.10;
+                    var subTotal4 = $("#square4").val() * 1.10;
+                    var subTotal5 = $("#square5").val() * 1.10;
+                    var subTotal6 = $("#square6").val() * 1.10;
+                    var subTotal7 = $("#square7").val() * 1.10;
+
+                    var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7);
+                    return total;
+                    break;
+
+                case "8":
+                    var subTotal1 = $("#square1").val() * 1.10;
+                    var subTotal2 = $("#square2").val() * 1.10;
+                    var subTotal3 = $("#square3").val() * 1.10;
+                    var subTotal4 = $("#square4").val() * 1.10;
+                    var subTotal5 = $("#square5").val() * 1.10;
+                    var subTotal6 = $("#square6").val() * 1.10;
+                    var subTotal7 = $("#square7").val() * 1.10;
+                    var subTotal8 = $("#square8").val() * 1.10;
+
+                    var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8);
+                    return total;
+                    break;
+
+                case "9":
+                    var subTotal1 = $("#square1").val() * 1.10;
+                    var subTotal2 = $("#square2").val() * 1.10;
+                    var subTotal3 = $("#square3").val() * 1.10;
+                    var subTotal4 = $("#square4").val() * 1.10;
+                    var subTotal5 = $("#square5").val() * 1.10;
+                    var subTotal6 = $("#square6").val() * 1.10;
+                    var subTotal7 = $("#square7").val() * 1.10;
+                    var subTotal8 = $("#square8").val() * 1.10;
+                    var subTotal9 = $("#square9").val() * 1.10;
+
+                    var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8 + subTotal9);
+                    return total;
+                    break;
+
+                case "10":
+                    var subTotal1 = $("#square1").val() * 1.10;
+                    var subTotal2 = $("#square2").val() * 1.10;
+                    var subTotal3 = $("#square3").val() * 1.10;
+                    var subTotal4 = $("#square4").val() * 1.10;
+                    var subTotal5 = $("#square5").val() * 1.10;
+                    var subTotal6 = $("#square6").val() * 1.10;
+                    var subTotal7 = $("#square7").val() * 1.10;
+                    var subTotal8 = $("#square8").val() * 1.10;
+                    var subTotal9 = $("#square9").val() * 1.10;
+                    var subTotal10 = $("#square10").val() * 1.10;
+
+                    var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8 + subTotal9 + subTotal10);
+                    return total;
+                    break;
             
-            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4);
-            return total;
-            break;
-
-        case "5":
-            var subTotal1 = $("#square1").val() * 1.10;
-            var subTotal2 = $("#square2").val() * 1.10;
-            var subTotal3 = $("#square3").val() * 1.10;
-            var subTotal4 = $("#square4").val() * 1.10;
-            var subTotal5 = $("#square5").val() * 1.10;
-
-            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5);
-            return total;
-            break;
-
-        case "6":
-            var subTotal1 = $("#square1").val() * 1.10;
-            var subTotal2 = $("#square2").val() * 1.10;
-            var subTotal3 = $("#square3").val() * 1.10;
-            var subTotal4 = $("#square4").val() * 1.10;
-            var subTotal5 = $("#square5").val() * 1.10;
-            var subTotal6 = $("#square6").val() * 1.10;
-
-            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6);
-            return total;
-            break;
-
-        case "7":
-            var subTotal1 = $("#square1").val() * 1.10;
-            var subTotal2 = $("#square2").val() * 1.10;
-            var subTotal3 = $("#square3").val() * 1.10;
-            var subTotal4 = $("#square4").val() * 1.10;
-            var subTotal5 = $("#square5").val() * 1.10;
-            var subTotal6 = $("#square6").val() * 1.10;
-            var subTotal7 = $("#square7").val() * 1.10;
-
-            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7);
-            return total;
-            break;
-
-        case "8":
-            var subTotal1 = $("#square1").val() * 1.10;
-            var subTotal2 = $("#square2").val() * 1.10;
-            var subTotal3 = $("#square3").val() * 1.10;
-            var subTotal4 = $("#square4").val() * 1.10;
-            var subTotal5 = $("#square5").val() * 1.10;
-            var subTotal6 = $("#square6").val() * 1.10;
-            var subTotal7 = $("#square7").val() * 1.10;
-            var subTotal8 = $("#square8").val() * 1.10;
-
-            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8);
-            return total;
-            break;
-
-        case "9":
-            var subTotal1 = $("#square1").val() * 1.10;
-            var subTotal2 = $("#square2").val() * 1.10;
-            var subTotal3 = $("#square3").val() * 1.10;
-            var subTotal4 = $("#square4").val() * 1.10;
-            var subTotal5 = $("#square5").val() * 1.10;
-            var subTotal6 = $("#square6").val() * 1.10;
-            var subTotal7 = $("#square7").val() * 1.10;
-            var subTotal8 = $("#square8").val() * 1.10;
-            var subTotal9 = $("#square9").val() * 1.10;
-
-            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8 + subTotal9);
-            return total;
-            break;
-
-        case "10":
-            var subTotal1 = $("#square1").val() * 1.10;
-            var subTotal2 = $("#square2").val() * 1.10;
-            var subTotal3 = $("#square3").val() * 1.10;
-            var subTotal4 = $("#square4").val() * 1.10;
-            var subTotal5 = $("#square5").val() * 1.10;
-            var subTotal6 = $("#square6").val() * 1.10;
-            var subTotal7 = $("#square7").val() * 1.10;
-            var subTotal8 = $("#square8").val() * 1.10;
-            var subTotal9 = $("#square9").val() * 1.10;
-            var subTotal10 = $("#square10").val() * 1.10;
-
-            var total = Math.round (subTotal1 + subTotal2 + subTotal3 + subTotal4 + subTotal5 + subTotal6 + subTotal7 + subTotal8 + subTotal9 + subTotal10);
-            return total;
-            break;
-    
-        default:
-            break;
-    }
-}
+                default:
+                    break;
+            }
+        }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
