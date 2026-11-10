@@ -15,12 +15,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             $user = $result->fetch_assoc();  
                 $total__points = $user["pointsYear"];
 
-
+$new_total = $bingo_total + $total__points;
 //? MATH
 $bingoSize = $_POST["bingoSize"];
-
-
-// $new_total = $bingo_total + $total__points;
 
 //? SEND NEW POINT TOTAL TO DB
 // $stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
@@ -37,10 +34,17 @@ $bingoSize = $_POST["bingoSize"];
                             $_POST['square3'], 
                             $_POST['square4']);
             
-           foreach ($squares as $key => $value) {
-                echo $value;
+           for ($i = 0; $i < count($squares); $i++) {
+                echo $squares[$i];
 
-                // $sql = 'SELECT ';
+                $sql2 = 'SELECT `total_points` FROM `bingo` WHERE `bingo_id` = $squares[$i]';
+                    $result2 = $_SESSION['conn']->query($sql2);
+                    $bingo = $result2->fetch_assoc();
+                    $sub_total[$i] = $bingo['total_points'];
+
+                echo $sub_total[$i];
+
+            
                 // $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 // $stmt2->bind_param('i',
                 //                     $value);
