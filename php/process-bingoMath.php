@@ -38,7 +38,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                             $_POST['input4']);
             
             foreach ($inputs as $key => $value) {
-                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
+                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
             }
@@ -57,7 +57,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                             $_POST['input5']);
             
             foreach ($inputs as $key => $value) {
-                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
+                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
             }
@@ -77,7 +77,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                             $_POST['input6']);
             
             foreach ($inputs as $key => $value) {
-                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
+                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
             }
@@ -98,7 +98,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                             $_POST['input7']);
             
             foreach ($inputs as $key => $value) {
-                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
+                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
             }
@@ -120,7 +120,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                             $_POST['input8']);
             
             foreach ($inputs as $key => $value) {
-                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
+                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
             }
@@ -143,7 +143,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                             $_POST['input9']);
             
             foreach ($inputs as $key => $value) {
-                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
+                $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
             }
