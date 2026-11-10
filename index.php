@@ -97,7 +97,7 @@ if ($now <= $ratEnd) {
             <div class="popup-content" id="bingoResults"></div>
             <div id="sneakPeak" class="popup-content"></div>
             <div class="button-wrapper">
-                <div class="buttons" id="bingoSubmit" onclick="sendBingoMath()">Submit</div>
+                <div class="buttons hide" id="bingoSubmit" onclick="sendBingoMath()">Submit</div>
             </div>
             <div class="popup-content" id="mathResults"></div>
         </div>
@@ -467,17 +467,8 @@ if ($now <= $ratEnd) {
                 };
             }
 
-            if ($("#square1").val() == 0 ||
-                    $("#square2").val() == 0 ||
-                    $("#square3").val() == 0 ||
-                    $("#square4").val() == 0 ||
-                    $("#square5").val() == 0 ||
-                    $("#square6").val() == 0 ||
-                    $("#square7").val() == 0 ||
-                    $("#square8").val() == 0 ||
-                    $("#square9").val() == 0 ||
-                    $("#square10").val() == 0) {
-                $("#bingoSubmit").css("display", "none");
+            if ($("#square1").val() !== 0 || $("#square2").val() !== 0 || $("#square3").val() !== 0 || $("#square4").val() !== 0 || $("#square5").val() !== 0 || $("#square6").val() !== 0 || $("#square7").val() !== 0 || $("#square8").val() !== 0 || $("#square9").val() !== 0 || $("#square10").val() !== 0) {
+                $("#bingoSubmit").css("display", "flex");
             }
         }
 
