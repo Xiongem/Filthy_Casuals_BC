@@ -37,13 +37,12 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                             $_POST['input3'], 
                             $_POST['input4']);
             
-            foreach ($inputs as $key => $value) {
+            foreach ($inputs as $value) {
                 $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
-                    $stmt2->execute();
             }
-                if ($stmt2->affected_rows > 0) {
+                if ($stmt2->execute() && $stmt2->affected_rows > 0) {
                     exit('successfully awarded ' . $bingo_total . ' bingo points!');
                 } else {
                     die('failed to update bingos' . $stmt2 -> error);
