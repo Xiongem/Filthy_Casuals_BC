@@ -479,7 +479,7 @@ if ($now <= $ratEnd) {
                     square3 = $("#square3").val();
                     square4 = $("#square4").val();
 
-                    if (square1 == square2 || square3 || square4) {
+                    if (square1 == square2 || square1 == square3 || square1 == square4) {
                         $("#warn").html("Squares cannot match");
                     }else {
                         $("#warn").html("");
