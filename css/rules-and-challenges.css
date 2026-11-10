@@ -31,7 +31,7 @@ a {
         grid-template-columns: 5% 95%;
     }
     .rules {
-        text-align: center;
+        /* text-align: center; */
         margin: 0.5em;
     }
     .activity {
