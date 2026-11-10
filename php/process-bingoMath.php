@@ -41,9 +41,10 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                 $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
+                    $stmt2->execute();
             }
-                if ($stmt2->execute() && $stmt2->affected_rows > 0) {
-                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                if ($stmt2->affected_rows > 0) {
+                    exit('successfully awarded ' . $bingo_total . ' bingo points!');
                 } else {
                     die('failed to update bingos' . $stmt2 -> error);
                 }
@@ -62,7 +63,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                                     $value);
             }
                 if ($stmt2->execute() && $stmt2->affected_rows > 0) {
-                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                    exit('successfully awarded ' . $bingo_total . ' bingo points!');
                 } else {
                     die('failed to update bingos' . $stmt2 -> error);
                 }
@@ -82,7 +83,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                                     $value);
             }
                 if ($stmt2->execute() && $stmt2->affected_rows > 0) {
-                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                    exit('successfully awarded ' . $bingo_total . ' bingo points!');
                 } else {
                     die('failed to update bingos' . $stmt2 -> error);
                 }
@@ -103,7 +104,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                                     $value);
             }
                 if ($stmt2->execute() && $stmt2->affected_rows > 0) {
-                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                    exit('successfully awarded ' . $bingo_total . ' bingo points!');
                 } else {
                     die('failed to update bingos' . $stmt2 -> error);
                 }
@@ -125,7 +126,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                                     $value);
             }
                 if ($stmt2->execute() && $stmt2->affected_rows > 0) {
-                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                    exit('successfully awarded ' . $bingo_total . ' bingo points!');
                 } else {
                     die('failed to update bingos' . $stmt2 -> error);
                 }
@@ -148,7 +149,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                                     $value);
             }
                 if ($stmt2->execute() && $stmt2->affected_rows > 0) {
-                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                    exit('successfully awarded ' . $bingo_total . ' bingo points!');
                 } else {
                     die('failed to update bingos' . $stmt2 -> error);
                 }
@@ -172,7 +173,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                                     $value);
             }
                 if ($stmt2->execute() && $stmt2->affected_rows > 0) {
-                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                    exit('successfully awarded ' . $bingo_total . ' bingo points!');
                 } else {
                     die('failed to update bingos' . $stmt2 -> error);
                 }
