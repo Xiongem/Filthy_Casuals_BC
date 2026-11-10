@@ -25,6 +25,15 @@ $sql2 = "SELECT * FROM `adminStuff` WHERE `adminID` = 1";
             $ratEnd = strtotime($adminStuff["ratEnd"]);
         }
     
+$sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
+    $result3 = $_SESSION["conn"]->query($sql3);
+    $bingo = $result3->fetch_assoc();
+    if (isset($bingo)) {
+        $bingoActive = $bingo["active"];
+        $bingoName = $bingo["bingo_name"];   
+    } else {
+        $bingoActive = 0;
+    }
 
 $now = strtotime(date("Y-m-d"));
 
