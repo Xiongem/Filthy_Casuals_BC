@@ -96,7 +96,7 @@ if ($now <= $ratEnd) {
             <div class="divider"></div>
             <div class="popup-content" id="bingoResults"></div>
             <div class="button-wrapper">
-                <div class="buttons" id="mathSubmit" onclick="sendBingoMath()">Submit</div>
+                <div class="buttons" onclick="sendBingoMath()">Submit</div>
             </div>
             <div class="popup-content" id="mathResults"></div>
         </div>
@@ -446,7 +446,6 @@ if ($now <= $ratEnd) {
             <?php }
             } else { ?>
                 {   val : '0', text: 'No available options found'}
-                $("#mathSubmit").hide();
             <?php } ?>
             ];
             
