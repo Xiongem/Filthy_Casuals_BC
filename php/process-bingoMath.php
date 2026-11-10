@@ -41,9 +41,12 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                 $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
-                $stmt2->execute();
             }
-            exit('successfully awarded bingo points!');
+                if ($stmt2->execute() && $stmt2->affected_rows > 0) {
+                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                } else {
+                    die('failed to update bingos' . $stmt2 -> error);
+                }
             break;
 
         case '5':
@@ -57,9 +60,12 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                 $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
-                $stmt2->execute();
             }
-            exit('successfully awarded bingo points!');
+                if ($stmt2->execute() && $stmt2->affected_rows > 0) {
+                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                } else {
+                    die('failed to update bingos' . $stmt2 -> error);
+                }
             break;
 
         case '6':
@@ -74,9 +80,12 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                 $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
-                $stmt2->execute();
             }
-            exit('successfully awarded bingo points!');
+                if ($stmt2->execute() && $stmt2->affected_rows > 0) {
+                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                } else {
+                    die('failed to update bingos' . $stmt2 -> error);
+                }
             break;
 
         case '7':
@@ -92,9 +101,12 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                 $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
-                $stmt2->execute();
             }
-            exit('successfully awarded bingo points!');
+                if ($stmt2->execute() && $stmt2->affected_rows > 0) {
+                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                } else {
+                    die('failed to update bingos' . $stmt2 -> error);
+                }
             break;
 
         case '8':
@@ -111,9 +123,12 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                 $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
-                $stmt2->execute();
             }
-            exit('successfully awarded bingo points!');
+                if ($stmt2->execute() && $stmt2->affected_rows > 0) {
+                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                } else {
+                    die('failed to update bingos' . $stmt2 -> error);
+                }
             break;
 
         case '9':
@@ -131,9 +146,12 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                 $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 0 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
-                $stmt2->execute();
             }
-            exit('successfully awarded bingo points!');
+                if ($stmt2->execute() && $stmt2->affected_rows > 0) {
+                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                } else {
+                    die('failed to update bingos' . $stmt2 -> error);
+                }
             break;
 
         case '10':
@@ -152,10 +170,12 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                 $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 $stmt2->bind_param('i',
                                     $value);
-                $stmt2->execute();
             }
-
-            exit('successfully awarded ' . $bingo_total . ' bingo points!');
+                if ($stmt2->execute() && $stmt2->affected_rows > 0) {
+                    exit('successfully awarded' . $bingo_total . 'bingo points!');
+                } else {
+                    die('failed to update bingos' . $stmt2 -> error);
+                }
             break;
         
         default:
@@ -163,5 +183,5 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
             break;
     }
 } else {
-    die('failed to update points');
+    die('failed to update points' . $stmt1 -> error);
 }
