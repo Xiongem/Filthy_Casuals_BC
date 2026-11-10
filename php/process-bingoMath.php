@@ -27,7 +27,6 @@ $bingoSize = $_POST["bingoSize"];
                             $_POST['square4']);
             
            for ($i = 0; $i < count($squares); $i++) {
-                echo $squares[$i] . "<br>";
                 $bingoID = $squares[$i];
 
                 //? GET POINTS FOR EACH SQUARE FROM DB AND LOOP THROUGH TO ASSIGN THEM TO VARIABLES
@@ -46,7 +45,7 @@ $bingoSize = $_POST["bingoSize"];
             $bingo_total = round($sub_total1 + $sub_total2 + $sub_total3 + $sub_total4);
             $new_total = $bingo_total + $total__points;
 
-            echo $new_total . "<br>" . $bingo_total;
+            echo "new total: " . $new_total . "<br>" . "bingo total: " . $bingo_total;
 
 
             //?SEND NEW POINT TOTAL TO DB
