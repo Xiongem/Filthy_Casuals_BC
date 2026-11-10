@@ -37,8 +37,10 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                             $_POST['square3'], 
                             $_POST['square4']);
             
-           for ($i = 0; $i < count($squares); $i++) {
+           foreach ($squares as $key => $value) {
                 echo $squares[ $i ];
+
+                // $sql = 'SELECT ';
                 // $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
                 // $stmt2->bind_param('i',
                 //                     $value);
@@ -51,13 +53,13 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
             // break;
 
         // case '5':
-        //     $inputs = array($_POST['input1'], 
-        //                     $_POST['input2'], 
-        //                     $_POST['input3'], 
-        //                     $_POST['input4'], 
-        //                     $_POST['input5']);
+        //     $squares = array($_POST['square1'], 
+        //                     $_POST['square2'], 
+        //                     $_POST['square3'], 
+        //                     $_POST['square4'], 
+        //                     $_POST['square5']);
             
-        //     foreach ($inputs as $key => $value) {
+        //     foreach ($squares as $key => $value) {
         //         $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
         //         $stmt2->bind_param('i',
         //                             $value);
@@ -70,14 +72,14 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
         //     break;
 
         // case '6':
-        //     $inputs = array($_POST['input1'], 
-        //                     $_POST['input2'], 
-        //                     $_POST['input3'], 
-        //                     $_POST['input4'], 
-        //                     $_POST['input5'], 
-        //                     $_POST['input6']);
+        //     $squares = array($_POST['square1'], 
+        //                     $_POST['square2'], 
+        //                     $_POST['square3'], 
+        //                     $_POST['square4'], 
+        //                     $_POST['square5'], 
+        //                     $_POST['square6']);
             
-        //     foreach ($inputs as $key => $value) {
+        //     foreach ($squares as $key => $value) {
         //         $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
         //         $stmt2->bind_param('i',
         //                             $value);
@@ -90,15 +92,15 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
         //     break;
 
         // case '7':
-        //     $inputs = array($_POST['input1'], 
-        //                     $_POST['input2'], 
-        //                     $_POST['input3'], 
-        //                     $_POST['input4'], 
-        //                     $_POST['input5'], 
-        //                     $_POST['input6'], 
-        //                     $_POST['input7']);
+        //     $squares = array($_POST['square1'], 
+        //                     $_POST['square2'], 
+        //                     $_POST['square3'], 
+        //                     $_POST['square4'], 
+        //                     $_POST['square5'], 
+        //                     $_POST['square6'], 
+        //                     $_POST['square7']);
             
-        //     foreach ($inputs as $key => $value) {
+        //     foreach ($squares as $key => $value) {
         //         $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
         //         $stmt2->bind_param('i',
         //                             $value);
@@ -111,16 +113,16 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
         //     break;
 
         // case '8':
-        //     $inputs = array($_POST['input1'], 
-        //                     $_POST['input2'], 
-        //                     $_POST['input3'], 
-        //                     $_POST['input4'], 
-        //                     $_POST['input5'], 
-        //                     $_POST['input6'], 
-        //                     $_POST['input7'],
-        //                     $_POST['input8']);
+        //     $squares = array($_POST['square1'], 
+        //                     $_POST['square2'], 
+        //                     $_POST['square3'], 
+        //                     $_POST['square4'], 
+        //                     $_POST['square5'], 
+        //                     $_POST['square6'], 
+        //                     $_POST['square7'],
+        //                     $_POST['square8']);
             
-        //     foreach ($inputs as $key => $value) {
+        //     foreach ($squares as $key => $value) {
         //         $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
         //         $stmt2->bind_param('i',
         //                             $value);
@@ -133,17 +135,17 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
         //     break;
 
         // case '9':
-        //     $inputs = array($_POST['input1'], 
-        //                     $_POST['input2'], 
-        //                     $_POST['input3'], 
-        //                     $_POST['input4'], 
-        //                     $_POST['input5'], 
-        //                     $_POST['input6'], 
-        //                     $_POST['input7'],
-        //                     $_POST['input8'],
-        //                     $_POST['input9']);
+        //     $squares = array($_POST['square1'], 
+        //                     $_POST['square2'], 
+        //                     $_POST['square3'], 
+        //                     $_POST['square4'], 
+        //                     $_POST['square5'], 
+        //                     $_POST['square6'], 
+        //                     $_POST['square7'],
+        //                     $_POST['square8'],
+        //                     $_POST['square9']);
             
-        //     foreach ($inputs as $key => $value) {
+        //     foreach ($squares as $key => $value) {
         //         $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
         //         $stmt2->bind_param('i',
         //                             $value);
@@ -156,18 +158,18 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
         //     break;
 
         // case '10':
-        //     $inputs = array($_POST['input1'], 
-        //                     $_POST['input2'], 
-        //                     $_POST['input3'], 
-        //                     $_POST['input4'], 
-        //                     $_POST['input5'], 
-        //                     $_POST['input6'], 
-        //                     $_POST['input7'],
-        //                     $_POST['input8'],
-        //                     $_POST['input9'],
-        //                     $_POST['input10']);
+        //     $squares = array($_POST['square1'], 
+        //                     $_POST['square2'], 
+        //                     $_POST['square3'], 
+        //                     $_POST['square4'], 
+        //                     $_POST['square5'], 
+        //                     $_POST['square6'], 
+        //                     $_POST['square7'],
+        //                     $_POST['square8'],
+        //                     $_POST['square9'],
+        //                     $_POST['square10']);
             
-        //     foreach ($inputs as $key => $value) {
+        //     foreach ($squares as $key => $value) {
         //         $stmt2 = $_SESSION['conn']->prepare('UPDATE `bingo` SET `used` = 1 WHERE `bingo_id` = ?');
         //         $stmt2->bind_param('i',
         //                             $value);
