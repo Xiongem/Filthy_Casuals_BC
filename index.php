@@ -96,6 +96,7 @@ if ($now <= $ratEnd) {
             <div class="divider"></div>
             <div class="popup-content" id="bingoResults"></div>
             <div class="button-wrapper">
+                <div id="sneakPeak" class="popup-content"></div>
                 <div class="buttons" id="bingoSubmit" onclick="sendBingoMath()">Submit</div>
             </div>
             <div class="popup-content" id="mathResults"></div>
@@ -442,7 +443,7 @@ if ($now <= $ratEnd) {
                         $bingoAuthor = $bingorow["author"];
                         $bingoPoints = $bingorow["total_points"];?>
 
-            {   val : '<?=$bingoID?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?> (<?=$bingoPoints?>)'},
+            {   val : '<?=$bingoID?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?> (<?=$bingoPoints?>)' onclick: 'bingoMath()'},
             <?php }
             } else { ?>
                 {   val : '0', text: 'No available options found'}
@@ -465,6 +466,205 @@ if ($now <= $ratEnd) {
 
             if ($("#square1").val() == 0) {
                 $("#bingoSubmit").css("display", "none");
+            }
+        }
+
+        function bingoMath() {
+            var bingoSize = $("#bingoSize").val();
+            
+            switch (bingoSize) {
+                case "4":
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    console.log(square1, square2, square3, square4);
+                    
+
+                    $.ajax({
+                        url: "php/bingoMath.php",
+                        method: "post",
+                        data: {
+                            bingoSize:bingoSize,
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4
+                        },success:function(result) {
+                            $("#sneakPeak").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "5":
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
+
+                    $.ajax({
+                        url: "php/bingoMath.php",
+                        method: "post",
+                        data: {
+                            bingoSize:bingoSize,
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5
+                        },success:function(result) {
+                            $("#sneakPeak").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "6":
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
+                    square6 = $("#square6").val();
+
+                    $.ajax({
+                        url: "php/bingoMath.php",
+                        method: "post",
+                        data: {
+                            bingoSize:bingoSize,
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5,
+                            square6:square6
+                        },success:function(result) {
+                            $("#sneakPeak").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "7":
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
+                    square6 = $("#square6").val();
+                    square7 = $("#square7").val();
+
+                    $.ajax({
+                        url: "php/bingoMath.php",
+                        method: "post",
+                        data: {
+                            bingoSize:bingoSize,
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5,
+                            square6:square6,
+                            square7:square7
+                        },success:function(result) {
+                            $("#sneakPeak").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "8":
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
+                    square6 = $("#square6").val();
+                    square7 = $("#square7").val();
+                    square8 = $("#square8").val();
+                    $.ajax({
+                        url: "php/bingoMath.php",
+                        method: "post",
+                        data: {
+                            bingoSize:bingoSize,
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5,
+                            square6:square6,
+                            square7:square7,
+                            square8:square8
+                        },success:function(result) {
+                            $("#sneakPeak").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "9":
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
+                    square6 = $("#square6").val();
+                    square7 = $("#square7").val();
+                    square8 = $("#square8").val();
+                    square9 = $("#square9").val();
+
+                    $.ajax({
+                        url: "php/bingoMath.php",
+                        method: "post",
+                        data: {
+                            bingoSize:bingoSize,
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5,
+                            square6:square6,
+                            square7:square7,
+                            square8:square8,
+                            square9:square9
+                        },success:function(result) {
+                            $("#sneakPeak").html(result);
+                        }
+                    }) 
+                    break;
+
+                case "10":
+                    square1 = $("#square1").val();
+                    square2 = $("#square2").val();
+                    square3 = $("#square3").val();
+                    square4 = $("#square4").val();
+                    square5 = $("#square5").val();
+                    square6 = $("#square6").val();
+                    square7 = $("#square7").val();
+                    square8 = $("#square8").val();
+                    square9 = $("#square9").val();
+                    square10 = $("#square10").val();
+
+                    $.ajax({
+                        url: "php/bingoMath.php",
+                        method: "post",
+                        data: {
+                            bingoSize:bingoSize,
+                            square1:square1,
+                            square2:square2,
+                            square3:square3,
+                            square4:square4,
+                            square5:square5,
+                            square6:square6,
+                            square7:square7,
+                            square8:square8,
+                            square9:square9,
+                            square10:square10
+                        },success:function(result) {
+                            $("#sneakPeak").html(result);
+                        }
+                    }) 
+                    break;
+            
+                default:
+                    break;
             }
         }
 
