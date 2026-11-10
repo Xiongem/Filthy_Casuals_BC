@@ -443,7 +443,7 @@ if ($now <= $ratEnd) {
                         $bingoAuthor = $bingorow["author"];
                         $bingoPoints = $bingorow["total_points"];?>
 
-            {   val : '<?=$bingoID?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?> (<?=$bingoPoints?>)' onclick: 'bingoMath()'},
+            {   val : '<?=$bingoID?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?> (<?=$bingoPoints?>)' onclick: 'bingoMath'},
             <?php }
             } else { ?>
                 {   val : '0', text: 'No available options found'}
