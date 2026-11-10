@@ -179,6 +179,9 @@
         align-items: center;
         width: 5em;
     }
+    #bingoResults {
+        margin-bottom: 1em;
+    }
     #bingoSubmit {
         display: none;
         justify-content: center;
