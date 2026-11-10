@@ -1,8 +1,8 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('log_errors', 'On');
-ini_set('error_log', '/path/to/php_errors.log');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('log_errors', 'On');
+// ini_set('error_log', '/path/to/php_errors.log');
 
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
@@ -292,7 +292,7 @@ $bingoSize = $_POST["bingoSize"];
                                     + $sub_total10);
 
             echo "Possible points: +" . $bingo_total;
-            
+
             break;
         
         default:
