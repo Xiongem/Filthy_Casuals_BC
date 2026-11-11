@@ -54,9 +54,15 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                     <h2>Set RAT Date:</h2>
                 </div>
                 <div class="date-wrapper">
-                    <input class="inputs" type="date" name="startDate" id="startDate">
+                    <div class="date-input-wrapper">
+                        <label for="startDate">Start:</label>
+                        <input class="inputs" type="date" name="startDate" id="startDate">
+                    </div>
                     <p class="hyphen">-</p>
-                    <input class="inputs" type="date" name="endDate" id="endDate">
+                    <div class="date-input-wrapper">
+                        <label for="endDate">End:</label>
+                        <input class="inputs" type="date" name="endDate" id="endDate">
+                    </div>
                 </div>
                 <div class="button-wrapper">
                     <div class="buttons" onclick="setRatDate()">Set</div>
