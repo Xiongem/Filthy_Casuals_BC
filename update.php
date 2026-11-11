@@ -150,7 +150,7 @@ $today = date("Y-m-d");
                             name="fanfic"
                             id="fanfic"
                             class="checkbox" 
-                            onclick="showDateStarted();">
+                            onclick="fanfic();">
                 </div>
 
                 <div id="showFanficWarn"></div>
