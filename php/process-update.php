@@ -20,6 +20,11 @@ date_default_timezone_set("$timezone");
 
 $pages = $_POST["pages"];
 
+$newGoal = str_replace( ',', '', $pages );
+if( is_numeric( $newGoal ) ) {
+    $pages = $newGoal;
+}
+
 if ($_POST["fanfic"]) {
     $pages = round($pages / 280);
     if ($pages < 1) {
