@@ -161,10 +161,11 @@ $today = date("Y-m-d");
                     </div>
                     <div id="pageWrapper">
                         <div id="showFanficWarn"></div>
-                        <input type="number"
+                        <input type="text"
                             name="pages"
                             id="pages"
                             class="inputs"
+                            pattern="^\d+(,\d+)?$"
                             required>
                         <div id="fanficMathResult"></div>
                     </div>
