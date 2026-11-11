@@ -312,7 +312,7 @@ a {
         color: var(--leather);
     }
     .nav-item:hover {
-        text-decoration: underline;
+        border-bottom: 2px solid var(--leather);
     }
 
 
