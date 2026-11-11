@@ -294,15 +294,14 @@ $today = date("Y-m-d");
                     //user is "finished typing," do something
                     function doneTyping () {
                         var total = fanficMath();
-                        $('#fanficMathResult').css("display", "flex");
+                        // $('#fanficMathResult').css("display", "flex");
                         $('#fanficMathResult').text("Pages: " + total);
                     }
                 } else {
-                    console.log("goodbye");
-                    
                     $("#showFanficWarn").html("");
                     $("#fanficResult").text("Number of Pages:");
-                    $('#fanficMathResult').hide();
+                    $('#fanficMathResult').text("")
+                    // $('#fanficMathResult').hide();
                 }
             }
         </script>
