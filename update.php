@@ -250,7 +250,7 @@ $today = date("Y-m-d");
             }
 
             function showFanfic() {
-                var fanfic = $("#fanfic");
+                var fanfic = $("#fanfic").val();
                 console.log(fanfic);
                 
                 // if (fanfic == 1) {
