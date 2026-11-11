@@ -110,7 +110,7 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                 <div class="OTP-wrapper" id="OTPWrapper">
                     <label class="labels">One-time Passcode:</label>
                     <div class="span-wrapper">
-                        <span id="OTP" class="labels">171439b1ba92011f8a37f71f8f8d6290</span>
+                        <span id="OTP" class="labels"></span>
                         <div class="copy-wrapper">
                             <p id="copy">copy</p>
                             <ion-icon class="copy" name="copy-outline"></ion-icon>
