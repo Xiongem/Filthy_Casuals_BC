@@ -260,33 +260,33 @@ $today = date("Y-m-d");
                     console.log(newPages);
                 }
             }
-
-            var typingTimer;                //timer identifier
-            var doneTypingInterval = 1000;  //time in ms, 1 seconds for example
-            var $input = $('#pages');
-
-            //on keyup, start the countdown
-            $input.on('keyup', function () {
-                clearTimeout(typingTimer);
-                typingTimer = setTimeout(doneTyping, doneTypingInterval);
-            });
-
-            //on keydown, clear the countdown 
-            $input.on('keydown', function () {
-                clearTimeout(typingTimer);
-            });
-
-            //user is "finished typing," do something
-            function doneTyping () {
-                var total = fanficMath();
-                $('#fanficMathResult').text(total);
-            }
             
 
             function showFanfic() {
                 if ($('#fanfic').is(':checked')) {
                     $("#showFanficWarn").html("Input WORD COUNT");
                     $("#fanficResult").text("Number of WORDS:");
+
+                    var typingTimer;                //timer identifier
+                    var doneTypingInterval = 1000;  //time in ms, 1 seconds for example
+                    var $input = $('#pages');
+
+                    //on keyup, start the countdown
+                    $input.on('keyup', function () {
+                        clearTimeout(typingTimer);
+                        typingTimer = setTimeout(doneTyping, doneTypingInterval);
+                    });
+
+                    //on keydown, clear the countdown 
+                    $input.on('keydown', function () {
+                        clearTimeout(typingTimer);
+                    });
+
+                    //user is "finished typing," do something
+                    function doneTyping () {
+                        var total = fanficMath();
+                        $('#fanficMathResult').text(total);
+                    }
                 } else {
                     $("#showFanficWarn").html("");
                     $("#fanficResult").text("Number of Pages:");
