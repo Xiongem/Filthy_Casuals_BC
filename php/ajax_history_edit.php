@@ -23,6 +23,7 @@ $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID
         $ongoing = $read["ongoing"];
         $mod1 = $read["mod1"];
         $mod2 = $read["mod2"];
+        $fanfic = $read["fanfic"];
 
 //set variables for columns that can be NULL in the db
 if (isset($read["startedDate"])) {
@@ -126,12 +127,14 @@ if (isset($read["comment"])) {
         </div>
     </div>
 
+    <!-- //? FANFIC -->
     <div class="box-wrapper" id="fanficWrapper">
         <label for="fanfic" class="labels">Fanfiction?</label>
         <input type="checkbox"
                 name="fanfic"
                 id="fanfic"
                 class="checkbox" 
+                <?php if($fanfic==1){?>checked="checked"<?php } ?>
                 onclick="showFanfic();">
     </div>
 
@@ -148,6 +151,7 @@ if (isset($read["comment"])) {
                 id="pages"
                 class="inputs"
                 pattern="^\d+(,\d+)?$"
+                value="<?=$pages?>"
                 required>
             <div id="fanficMathResult"></div>
         </div>

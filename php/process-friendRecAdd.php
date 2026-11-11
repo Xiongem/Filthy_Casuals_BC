@@ -15,8 +15,14 @@ $sql = "SELECT username FROM `users` WHERE `user_id` = $userID";
     $user = $result->fetch_assoc();
         $username = $user["username"];
 
+$timezone = $_SESSION["timezone"];
+date_default_timezone_set("$timezone");
+
+$year = date('y');
+
 $stmt = $_SESSION['conn'] -> prepare("INSERT INTO `friendRecs` (`user_id`,
                                                                 `username`,
+                                                                `year`,
                                                                 `rec1_title`, 
                                                                 `rec1_author`, 
                                                                 `rec2_title`, 
@@ -27,10 +33,12 @@ $stmt = $_SESSION['conn'] -> prepare("INSERT INTO `friendRecs` (`user_id`,
                                                                 `rec4_author`,
                                                                 `rec5_title`,
                                                                 `rec5_author`)
-                                                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt -> bind_param("isssssssssss", 
+                                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                                        
+    $stmt -> bind_param("issssssssssss", 
                         $userID,
                         $username,
+                        $year,
                         $_POST["rec1Title"],
                         $_POST["rec1Author"],
                         $_POST["rec2Title"],
