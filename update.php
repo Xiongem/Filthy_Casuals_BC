@@ -167,6 +167,7 @@ $today = date("Y-m-d");
                             class="inputs"
                             required>
                     </div>
+                    <div id="fanficMathResult"></div>
                 </div>
 
                 <div class="box-wrapper" id="ongoingWrapper">
@@ -251,13 +252,41 @@ $today = date("Y-m-d");
                 document.getElementById('dateStartedWrapper').classList.toggle("hide");
             }
 
+            function fanficMath() {
+                var pages = $("#pages").val();
+                if (pages > 0) {
+                    var newPages = pages / 280;
+                    return newPages;
+                    console.log(newPages);
+                }
+            }
+
+            var typingTimer;                //timer identifier
+            var doneTypingInterval = 1000;  //time in ms, 1 seconds for example
+            var $input = $('#pages');
+
+            //on keyup, start the countdown
+            $input.on('keyup', function () {
+                clearTimeout(typingTimer);
+                typingTimer = setTimeout(doneTyping, doneTypingInterval);
+            });
+
+            //on keydown, clear the countdown 
+            $input.on('keydown', function () {
+                clearTimeout(typingTimer);
+            });
+
+            //user is "finished typing," do something
+            function doneTyping () {
+                var total = fanficMath();
+                $('#fanficMathResult').text(total);
+            }
+            
+
             function showFanfic() {
                 if ($('#fanfic').is(':checked')) {
                     $("#showFanficWarn").html("Input WORD COUNT");
                     $("#fanficResult").text("Number of WORDS:");
-                    var pages = $("#pages").val();
-                    console.log(pages);
-                    
                 } else {
                     $("#showFanficWarn").html("");
                     $("#fanficResult").text("Number of Pages:");
