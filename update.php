@@ -255,6 +255,9 @@ $today = date("Y-m-d");
                 if ($('#fanfic').is(':checked')) {
                     $("#showFanficWarn").html("Input WORD COUNT");
                     $("#fanficResult").text("Number of WORDS:");
+                    var pages = $("#pages").val();
+                    console.log(pages);
+                    
                 } else {
                     $("#showFanficWarn").html("");
                     $("#fanficResult").text("Number of Pages:");
