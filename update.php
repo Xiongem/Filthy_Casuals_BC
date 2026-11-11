@@ -249,17 +249,12 @@ $today = date("Y-m-d");
                 document.getElementById('dateStartedWrapper').classList.toggle("hide");
             }
 
-            function showFanfic() {
-                var fanfic = $("#fanfic").val();
-                console.log(fanfic);
-                
-                // if (fanfic == 1) {
-                //     $("#showFanficWarn").html("Input WORD COUNT");
-                //     $("#fanficResult").text("Number of WORDS");
-                // } else {
-                //     $("#showFanficWarn").html("");
-                //     $("#fanficResult").text("Number of Pages");
-                // }
+            if ($('#fanfic').is(':checked')) {
+                $("#showFanficWarn").html("Input WORD COUNT");
+                $("#fanficResult").text("Number of WORDS:");
+            } else {
+                $("#showFanficWarn").html("");
+                $("#fanficResult").text("Number of Pages:");
             }
         </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
