@@ -250,8 +250,8 @@ $today = date("Y-m-d");
             }
 
             function showFanfic() {
-                // var fanfic = $("#fanfic");
-                console.log("hello");
+                var fanfic = $("#fanfic");
+                console.log(fanfic);
                 
                 // if (fanfic == 1) {
                 //     $("#showFanficWarn").html("Input WORD COUNT");
