@@ -153,9 +153,9 @@ $today = date("Y-m-d");
                             onclick="showFanfic();">
                 </div>
 
-                <div id="showFanficWarn"></div>
 
                 <div class="page-wrapper">
+                    <div id="showFanficWarn"></div>
                     <div class="label-wrapper">
                         <label for="pages" class="labels" id="fanficResult">Number of Pages:</label>
                         <span class="required">*</span>

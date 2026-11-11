@@ -173,7 +173,7 @@
         justify-content: center;
         align-items: center;
     }
-    #pages {
+    .page-wrapper {
         position: relative;
     }
     #showFanficWarn {
