@@ -166,8 +166,8 @@ $today = date("Y-m-d");
                             id="pages"
                             class="inputs"
                             required>
+                        <div id="fanficMathResult"></div>
                     </div>
-                    <div id="fanficMathResult"></div>
                 </div>
 
                 <div class="box-wrapper" id="ongoingWrapper">
