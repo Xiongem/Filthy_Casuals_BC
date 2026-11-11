@@ -249,9 +249,10 @@ $today = date("Y-m-d");
             }
 
             function fanfic() {
-                console.log($("#fanfic"));
+                var fanfic = $("#fanfic");
+                console.log(fanfic);
                 
-                if ($("#fanfic") == 1) {
+                if (fanfic == 1) {
                     $("#showFanficWarn").html("Input WORD COUNT");
                     $("#fanficResult").text("Number of WORDS");
                 } else {
