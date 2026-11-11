@@ -155,16 +155,18 @@ $today = date("Y-m-d");
 
 
                 <div class="page-wrapper">
-                    <div id="showFanficWarn"></div>
                     <div class="label-wrapper">
                         <label for="pages" class="labels" id="fanficResult">Number of Pages:</label>
                         <span class="required">*</span>
                     </div>
-                    <input type="number"
-                        name="pages"
-                        id="pages"
-                        class="inputs"
-                        required>
+                    <div id="pageWrapper">
+                        <div id="showFanficWarn"></div>
+                        <input type="number"
+                            name="pages"
+                            id="pages"
+                            class="inputs"
+                            required>
+                    </div>
                 </div>
 
                 <div class="box-wrapper" id="ongoingWrapper">
