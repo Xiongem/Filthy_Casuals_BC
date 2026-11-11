@@ -258,8 +258,8 @@ $today = date("Y-m-d");
                     $("#fanficResult").text("Number of WORDS:");
 
                     function fanficMath() {
-                        var page = $("#pages").val();
-                        var pages = page.replace(/,/g , '');
+                        var pages = $("#pages").val();
+                        pages = pages.replace(/,/g, "");
                         if (pages > 0) {
                             var newPages = Math.round(pages / 280);
                             if (newPages < 1) {
