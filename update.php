@@ -256,10 +256,10 @@ $today = date("Y-m-d");
                 var pages = $("#pages").val();
                 if (pages > 0) {
                     var newPages = Math.round(pages / 280);
-                    if newPages < 1 {
+                    if (newPages < 1) {
                         newPages = 1;
                         return newPages;
-                    }else {
+                    } else {
                         return newPages;
                     }
                 }
