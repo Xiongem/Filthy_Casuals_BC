@@ -277,17 +277,19 @@ $today = date("Y-m-d");
                     var $input = $('#pages');
 
                     //on keyup, start the countdown
-                    $input.on('keyup', if ($('#fanfic').is(':checked')) {
-                        function () {
+                    $input.on('keyup', function () {
+                        if ($('#fanfic').is(':checked')) {
                             clearTimeout(typingTimer);
                             typingTimer = setTimeout(doneTyping, doneTypingInterval);
-                    }});
+                        }
+                    });
 
                     //on keydown, clear the countdown 
-                    $input.on('keydown', if ($('#fanfic').is(':checked')) {
-                        function () {
+                    $input.on('keydown', function () {
+                        if ($('#fanfic').is(':checked')) {
                             clearTimeout(typingTimer);
-                    }})}
+                        }
+                    });
 
                     //user is "finished typing," do something
                     function doneTyping () {
