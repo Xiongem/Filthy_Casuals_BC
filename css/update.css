@@ -173,11 +173,16 @@
         justify-content: center;
         align-items: center;
     }
+    #pages {
+        position: relative;
+    }
     #showFanficWarn {
+        position: absolute;
+        top: -1em;
         display: flex;
         justify-content: end;
         height: 1em;
-        padding-right: 2em;
+        /* padding-right: 2em; */
 
         color: red;
     }
