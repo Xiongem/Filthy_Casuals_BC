@@ -18,20 +18,22 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 $timezone = $_SESSION["timezone"];
 date_default_timezone_set("$timezone");
 
-$pages = $_POST["pages"];
-
-$newGoal = str_replace( ',', '', $pages );
-if( is_numeric( $newGoal ) ) {
-    $pages = $newGoal;
-}
-
 if ($_POST["fanfic"]) {
-    $pages = round($pages / 280);
-    if ($pages < 1) {
-        $pages = 1;
+    $pages = $_POST["pages"];
+
+    $newGoal = str_replace( ',', '', $pages );
+
+    if( is_numeric( $newGoal ) ) {
+        $pages = $newGoal;
+
+        $pages = round($pages / 280);
+            if ($pages < 1) {
+                $pages = 1;
+            }
+        echo $pages;
     }
-    echo $pages;
 }
+
 
 // // $month = date('n');
 // $month = date("n",strtotime($_POST["dateFinished"]));
