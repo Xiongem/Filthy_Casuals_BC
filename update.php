@@ -149,8 +149,7 @@ $today = date("Y-m-d");
                     <input type="checkbox"
                             name="fanfic"
                             id="fanfic"
-                            class="checkbox" 
-                            onclick="showFanfic();">
+                            class="checkbox">
                 </div>
 
 
@@ -253,7 +252,7 @@ $today = date("Y-m-d");
                 document.getElementById('dateStartedWrapper').classList.toggle("hide");
             }            
 
-            function showFanfic() {
+            // function showFanfic() {
                 if ($('#fanfic').is(':checked')) {
                     $("#showFanficWarn").html("Input WORD COUNT");
                     $("#fanficResult").text("Number of WORDS:");
@@ -294,16 +293,14 @@ $today = date("Y-m-d");
                     //user is "finished typing," do something
                     function doneTyping () {
                         var total = fanficMath();
-                        // $('#fanficMathResult').css("display", "flex");
                         $('#fanficMathResult').text("Pages: " + total);
                     }
                 } else {
                     $("#showFanficWarn").html("");
                     $("#fanficResult").text("Number of Pages:");
                     $('#fanficMathResult').text("")
-                    // $('#fanficMathResult').hide();
                 }
-            }
+            // }
         </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>

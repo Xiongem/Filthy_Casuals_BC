@@ -385,6 +385,56 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                             }
                         });
                     }
+
+                    function showFanfic() {
+                        if ($('#fanfic').is(':checked')) {
+                            $("#showFanficWarn").html("Input WORD COUNT");
+                            $("#fanficResult").text("Number of WORDS:");
+
+                            function fanficMath() {
+                                var pages = $("#pages").val();
+                                pages = pages.replace(/,/g, "");
+                                if (pages > 0) {
+                                    var newPages = Math.round(pages / 280);
+                                    if (newPages < 1) {
+                                        newPages = 1;
+                                        return newPages;
+                                    } else {
+                                        return newPages;
+                                    }
+                                }
+                            }
+
+                            var typingTimer;                //timer identifier
+                            var doneTypingInterval = 500;  //time in ms, 1 seconds for example
+                            var $input = $('#pages');
+
+                            //on keyup, start the countdown
+                            $input.on('keyup', function () {
+                                if ($('#fanfic').is(':checked')) {
+                                    clearTimeout(typingTimer);
+                                    typingTimer = setTimeout(doneTyping, doneTypingInterval);
+                                }
+                            });
+
+                            //on keydown, clear the countdown 
+                            $input.on('keydown', function () {
+                                if ($('#fanfic').is(':checked')) {
+                                    clearTimeout(typingTimer);
+                                }
+                            });
+
+                            //user is "finished typing," do something
+                            function doneTyping () {
+                                var total = fanficMath();
+                                $('#fanficMathResult').text("Pages: " + total);
+                            }
+                        } else {
+                            $("#showFanficWarn").html("");
+                            $("#fanficResult").text("Number of Pages:");
+                            $('#fanficMathResult').text("")
+                        }
+                    }
                 </script>
 
     </div>

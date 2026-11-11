@@ -126,18 +126,31 @@ if (isset($read["comment"])) {
         </div>
     </div>
 
+    <div class="box-wrapper" id="fanficWrapper">
+        <label for="fanfic" class="labels">Fanfiction?</label>
+        <input type="checkbox"
+                name="fanfic"
+                id="fanfic"
+                class="checkbox" 
+                onclick="showFanfic();">
+    </div>
+
     <!--//? NUMBER OF PAGES READ -->
     <div class="page-wrapper">
         <div class="label-wrapper">
-            <label for="pages" class="labels">Number of Pages:</label>
+            <label for="pages" class="labels" id="fanficResult">Number of Pages:</label>
             <span class="required">*</span>
         </div>
-        <input type="number"
-            name="pages"
-            id="pages"
-            class="inputs"
-            value="<?=$pages?>"
-            required>
+        <div id="pageWrapper">
+            <div id="showFanficWarn"></div>
+            <input type="text"
+                name="pages"
+                id="pages"
+                class="inputs"
+                pattern="^\d+(,\d+)?$"
+                required>
+            <div id="fanficMathResult"></div>
+        </div>
     </div>
 
     <!--//? ONGOING CHECKBOX -->
