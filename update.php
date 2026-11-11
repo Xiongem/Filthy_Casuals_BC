@@ -252,13 +252,13 @@ $today = date("Y-m-d");
                 var fanfic = $("#fanfic");
                 console.log(fanfic);
                 
-                if (fanfic == 1) {
-                    $("#showFanficWarn").html("Input WORD COUNT");
-                    $("#fanficResult").text("Number of WORDS");
-                } else {
-                    $("#showFanficWarn").html("");
-                    $("#fanficResult").text("Number of Pages");
-                }
+                // if (fanfic == 1) {
+                //     $("#showFanficWarn").html("Input WORD COUNT");
+                //     $("#fanficResult").text("Number of WORDS");
+                // } else {
+                //     $("#showFanficWarn").html("");
+                //     $("#fanficResult").text("Number of Pages");
+                // }
             }
         </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
