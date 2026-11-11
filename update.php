@@ -253,7 +253,7 @@ $today = date("Y-m-d");
             }            
 
             function showFanfic() {
-                if ($('#fanfic').is(':checked')) {
+                if ($('#fanfic').checked) {
                     $("#showFanficWarn").html("Input WORD COUNT");
                     $("#fanficResult").text("Number of WORDS:");
 
