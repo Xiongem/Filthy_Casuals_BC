@@ -294,6 +294,8 @@ $today = date("Y-m-d");
                         $('#fanficMathResult').text("Pages: " + total);
                     }
                 } else {
+                    console.log("goodbye");
+                    
                     $("#showFanficWarn").html("");
                     $("#fanficResult").text("Number of Pages:");
                     $('#fanficMathResult').css("display", "none");
