@@ -298,7 +298,7 @@ $today = date("Y-m-d");
                     
                     $("#showFanficWarn").html("");
                     $("#fanficResult").text("Number of Pages:");
-                    $('#fanficMathResult').css("display", "none");
+                    $('#fanficMathResult').hide();
                 }
             }
         </script>
