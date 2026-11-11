@@ -150,7 +150,7 @@ $today = date("Y-m-d");
                             name="fanfic"
                             id="fanfic"
                             class="checkbox" 
-                            onclick="fanfic();">
+                            onclick="showFanfic();">
                 </div>
 
                 <div id="showFanficWarn"></div>
@@ -249,7 +249,7 @@ $today = date("Y-m-d");
                 document.getElementById('dateStartedWrapper').classList.toggle("hide");
             }
 
-            function fanfic() {
+            function showFanfic() {
                 // var fanfic = $("#fanfic");
                 console.log("hello");
                 
