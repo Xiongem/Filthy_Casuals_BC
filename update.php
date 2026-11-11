@@ -259,6 +259,7 @@ $today = date("Y-m-d");
 
                     function fanficMath() {
                         var pages = $("#pages").val();
+                        pages.replace(/,/g , '');
                         if (pages > 0) {
                             var newPages = Math.round(pages / 280);
                             if (newPages < 1) {
