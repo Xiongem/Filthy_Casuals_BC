@@ -268,7 +268,7 @@ $today = date("Y-m-d");
                     $("#fanficResult").text("Number of WORDS:");
 
                     var typingTimer;                //timer identifier
-                    var doneTypingInterval = 1000;  //time in ms, 1 seconds for example
+                    var doneTypingInterval = 500;  //time in ms, 1 seconds for example
                     var $input = $('#pages');
 
                     //on keyup, start the countdown
