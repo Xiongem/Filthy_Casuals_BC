@@ -144,9 +144,19 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
+                <div class="box-wrapper" id="fanficWrapper">
+                    <label for="fanfic" class="labels">Fanfiction?</label>
+                    <input type="checkbox"
+                            name="fanfic"
+                            id="fanfic"
+                            class="checkbox" onclick="fanfic()">
+                </div>
+
+                <div id="showFanficWarn"></div>
+
                 <div class="page-wrapper">
                     <div class="label-wrapper">
-                        <label for="pages" class="labels">Number of Pages:</label>
+                        <label for="pages" class="labels" id="fanficResult">Number of Pages:</label>
                         <span class="required">*</span>
                     </div>
                     <input type="number"
@@ -236,6 +246,18 @@ $today = date("Y-m-d");
             }
             function showDateStarted() {
                 document.getElementById('dateStartedWrapper').classList.toggle("hide");
+            }
+
+            function fanfic() {
+                console.log($("#fanfic"));
+                
+                if ($("#fanfic") == 1) {
+                    $("#showFanficWarn").html("Input WORD COUNT");
+                    $("#fanficResult").text("Number of WORDS");
+                } else {
+                    $("#showFanficWarn").html("");
+                    $("#fanficResult").text("Number of Pages");
+                }
             }
         </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>

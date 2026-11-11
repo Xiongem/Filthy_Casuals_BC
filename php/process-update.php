@@ -18,9 +18,15 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 $timezone = $_SESSION["timezone"];
 date_default_timezone_set("$timezone");
 
+$pages = $_POST["pages"];
+
+if ($_POST["fanfic"]) {
+    $pages = $pages / 280;
+}
+
 // $month = date('n');
 $month = date("n",strtotime($_POST["dateFinished"]));
-$totalPoints = calculateTotalPoints($_POST["pages"], $_POST["mod-1"], $_POST["mod-2"]);
+$totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
 
 // print_r($tags);
 
