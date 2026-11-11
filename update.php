@@ -293,7 +293,7 @@ $today = date("Y-m-d");
                 } else {
                     $("#showFanficWarn").html("");
                     $("#fanficResult").text("Number of Pages:");
-                    $('#fanficMathResult').css("displpay", "none");
+                    $('#fanficMathResult').hide();
                 }
             }
         </script>
