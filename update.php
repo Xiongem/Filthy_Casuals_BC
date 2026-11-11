@@ -250,26 +250,25 @@ $today = date("Y-m-d");
             }
             function showDateStarted() {
                 document.getElementById('dateStartedWrapper').classList.toggle("hide");
-            }
-
-            function fanficMath() {
-                var pages = $("#pages").val();
-                if (pages > 0) {
-                    var newPages = Math.round(pages / 280);
-                    if (newPages < 1) {
-                        newPages = 1;
-                        return newPages;
-                    } else {
-                        return newPages;
-                    }
-                }
-            }
-            
+            }            
 
             function showFanfic() {
                 if ($('#fanfic').is(':checked')) {
                     $("#showFanficWarn").html("Input WORD COUNT");
                     $("#fanficResult").text("Number of WORDS:");
+
+                    function fanficMath() {
+                        var pages = $("#pages").val();
+                        if (pages > 0) {
+                            var newPages = Math.round(pages / 280);
+                            if (newPages < 1) {
+                                newPages = 1;
+                                return newPages;
+                            } else {
+                                return newPages;
+                            }
+                        }
+                    }
 
                     var typingTimer;                //timer identifier
                     var doneTypingInterval = 500;  //time in ms, 1 seconds for example
