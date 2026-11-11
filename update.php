@@ -294,7 +294,7 @@ $today = date("Y-m-d");
                 } else {
                     $("#showFanficWarn").html("");
                     $("#fanficResult").text("Number of Pages:");
-                    $('#fanficMathResult').text("");
+                    $('#fanficMathResult').css("displpay", "none");
                 }
             }
         </script>
