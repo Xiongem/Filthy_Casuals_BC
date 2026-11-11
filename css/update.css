@@ -189,8 +189,8 @@
     }
     #fanficMathResult {
         position: absolute;
-        bottom: 0;
-        right: 1em;
+        bottom: -1em;
+        
 
     }
 }

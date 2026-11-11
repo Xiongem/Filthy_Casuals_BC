@@ -285,7 +285,7 @@ $today = date("Y-m-d");
                     //user is "finished typing," do something
                     function doneTyping () {
                         var total = fanficMath();
-                        $('#fanficMathResult').text(total);
+                        $('#fanficMathResult').text("Pages: " + total);
                     }
                 } else {
                     $("#showFanficWarn").html("");
