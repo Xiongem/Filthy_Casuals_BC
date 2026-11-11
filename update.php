@@ -290,12 +290,13 @@ $today = date("Y-m-d");
                     //user is "finished typing," do something
                     function doneTyping () {
                         var total = fanficMath();
+                        $('#fanficMathResult').css("display", "flex");
                         $('#fanficMathResult').text("Pages: " + total);
                     }
                 } else {
                     $("#showFanficWarn").html("");
                     $("#fanficResult").text("Number of Pages:");
-                    $('#fanficMathResult').text("");
+                    $('#fanficMathResult').css("display", "none");
                 }
             }
         </script>
