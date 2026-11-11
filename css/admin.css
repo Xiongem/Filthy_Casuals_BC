@@ -63,6 +63,8 @@
         height: 2.5em;
         margin: 0.5em 0;
         cursor: pointer;
+
+        border-bottom: 2px solid var(--deep-green);
     }
     #OTP {
         margin: 0 0.5em;
