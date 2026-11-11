@@ -179,6 +179,7 @@
     #showFanficWarn {
         position: absolute;
         top: -1em;
+        right: 1em;
         display: flex;
         justify-content: end;
         height: 1em;
