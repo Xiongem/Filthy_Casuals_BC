@@ -256,7 +256,7 @@ $today = date("Y-m-d");
                 var pages = $("#pages").val();
                 if (pages > 0) {
                     var newPages = pages / 280;
-                    return newPages;
+                    return Math.round(newPages);
                     console.log(newPages);
                 }
             }
