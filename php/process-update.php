@@ -21,7 +21,10 @@ date_default_timezone_set("$timezone");
 $pages = $_POST["pages"];
 
 if ($_POST["fanfic"]) {
-    $pages = $pages / 280;
+    $pages = round($pages / 280);
+    if ($pages < 1) {
+        $pages = 1;
+    }
     echo $pages;
 }
 
