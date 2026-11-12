@@ -143,6 +143,6 @@ a {
         width: 50%;
     }
     .challenges {
-        grid-template-columns: 10% 90%;
+        grid-template-columns: 15% 85%;
     }
 }
