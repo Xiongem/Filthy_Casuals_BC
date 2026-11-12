@@ -67,6 +67,10 @@
         padding: 0 0.5em;
         margin-bottom: 1em;
     }
+    .form-wrapper textarea{
+        resize: vertical;
+        max-height: 8em;
+    }
     .month {
         align-self: center;
         justify-self: end;
