@@ -233,7 +233,7 @@ a {
 
     .divider {
         width: 50%;
-        border-bottom: 2px solid var(--leather);
+        border-bottom: 5px solid var(--leather);
         margin: 2em 0 2.5em 0;
     }
 
