@@ -12,12 +12,13 @@ $userID = $_SESSION["user_id"];
 
 echo $userID;
 
-$sql = "SELECT `username` FROM users WHERE user_id = $userID";
+$sql = "SELECT * FROM users WHERE user_id = $userID";
     $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
         $username = $user["username"];
+        $timezone = $suer["timezone"];
 
-$timezone = $_SESSION["timezone"];
+// $timezone = $_SESSION["timezone"];
 date_default_timezone_set("$timezone");
 
 $now = date("Y-m-d H:i:s");
