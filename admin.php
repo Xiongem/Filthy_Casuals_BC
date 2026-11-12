@@ -268,7 +268,7 @@ $sql3 = "SELECT * FROM `challenges`";
                     month_dec:dec
                 },success:function(result) {
                     $("#challengeResult").html(result);
-                    setTimeout(refresh, 3000);
+                    // setTimeout(refresh, 3000);
                 }
             })
         }
