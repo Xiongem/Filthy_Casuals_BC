@@ -150,7 +150,7 @@ $sql3 = "SELECT * FROM `challenges`";
                         <div class="month">Feb:</div>
                         <input class="inputs" name="feb" id="feb" value="<?=$feb?>">
                         <textarea class="inputs" name="febDescr" id="febDescr" maxlength="300">
-                            <?php if(isset($febDescr)){echo $febDescr;} ?>
+                            <?=$febDescr?>
                         </textarea>
                     </div>
                     <div class="row">
