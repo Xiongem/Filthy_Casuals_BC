@@ -128,29 +128,29 @@ $sql3 = "SELECT * FROM `challenges`";
                 </div>
                 <div class="form-wrapper">
                     <div class="month">Jan:</div>
-                    <textarea name="jan" id="jan"><?php if(isset($jan)){$jan;} ?></textarea>
+                    <textarea name="jan" id="jan"><?php if(isset($jan)){echo $jan;} ?></textarea>
                     <div class="month">Feb:</div>
-                    <textarea name="feb" id="feb"><?php if(isset($feb)){$feb;} ?></textarea>
+                    <textarea name="feb" id="feb"><?php if(isset($feb)){echo $feb;} ?></textarea>
                     <div class="month">March:</div>
-                    <textarea name="march" id="march"><?php if(isset($march)){$march;} ?></textarea>
+                    <textarea name="march" id="march"><?php if(isset($march)){echo $march;} ?></textarea>
                     <div class="month">April:</div>
-                    <textarea name="april" id="april"><?php if(isset($april)){$april;} ?></textarea>
+                    <textarea name="april" id="april"><?php if(isset($april)){echo $april;} ?></textarea>
                     <div class="month">May:</div>
-                    <textarea name="may" id="may"><?php if(isset($may)){$may;} ?></textarea>
+                    <textarea name="may" id="may"><?php if(isset($may)){echo $may;} ?></textarea>
                     <div class="month">June:</div>
-                    <textarea name="june" id="june"><?php if(isset($june)){$june;} ?></textarea>
+                    <textarea name="june" id="june"><?php if(isset($june)){echo $june;} ?></textarea>
                     <div class="month">July:</div>
-                    <textarea name="july" id="july"><?php if(isset($july)){$july;} ?></textarea>
+                    <textarea name="july" id="july"><?php if(isset($july)){echo $july;} ?></textarea>
                     <div class="month">Aug:</div>
-                    <textarea name="aug" id="aug"><?php if(isset($aug)){$aug;} ?></textarea>
+                    <textarea name="aug" id="aug"><?php if(isset($aug)){echo $aug;} ?></textarea>
                     <div class="month">Sept:</div>
-                    <textarea name="sept" id="sept"><?php if(isset($sept)){$sept;} ?></textarea>
+                    <textarea name="sept" id="sept"><?php if(isset($sept)){echo $sept;} ?></textarea>
                     <div class="month">Oct:</div>
-                    <textarea name="oct" id="oct"><?php if(isset($oct)){$oct;} ?></textarea>
+                    <textarea name="oct" id="oct"><?php if(isset($oct)){echo $oct;} ?></textarea>
                     <div class="month">Nov:</div>
-                    <textarea name="nov" id="nov"><?php if(isset($nov)){$nov;} ?></textarea>
+                    <textarea name="nov" id="nov"><?php if(isset($nov)){echo $nov;} ?></textarea>
                     <div class="month">Dec:</div>
-                    <textarea name="dec" id="dec"><?php if(isset($dec)){$dec;} ?></textarea>
+                    <textarea name="dec" id="dec"><?php if(isset($dec)){echo $dec;} ?></textarea>
                 </div>
                 <div class="button-wrapper">
                     <div class="buttons" onclick="setChallenges()">set</div>
