@@ -78,6 +78,11 @@
         justify-self: end;
         height: 2.5em;
     }
+    #challengeResult {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
 
     .span-wrapper {
         position: relative;
