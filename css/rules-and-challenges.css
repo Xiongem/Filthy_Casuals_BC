@@ -13,6 +13,9 @@ a {
 }
 
 @media only screen and (min-width: 200px) {
+/*? ####################### */
+    /*? RULES */
+/*? ####################### */
     .full-wrapper, .activity-content {
         display: flex;
         flex-direction: column;
@@ -47,6 +50,31 @@ a {
         text-align: center;
 
         background-color: var(--leather);
+    }
+
+/*? ####################### */
+    /*? CHALLENGES */
+/*? ####################### */
+    .challenge-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 1em;
+    }
+    .title {
+        text-align: center;
+    }
+    .challenges {
+        display: grid;
+        grid-template-columns: 15% 80%;
+        gap: 0.5em;
+        width: 100%;
+    }
+    .month {
+        align-self: center;
+        justify-self: end;
+        height: 2.5em;
     }
 }
 

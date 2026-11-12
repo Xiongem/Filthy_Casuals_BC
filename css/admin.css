@@ -74,7 +74,7 @@
         height: fit-content;
         max-height: 8em;
     }
-    .month, .rank {
+    .month {
         align-self: center;
         justify-self: end;
         height: 2.5em;

@@ -43,7 +43,7 @@ $sql2 = "SELECT * FROM `challenges`";
     <meta property="og:url" content="">
     <title>Challenges</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/rules.css">
+    <link rel="stylesheet" href="css/rules-and-challenges.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="javascript/scripts.js"></script>
@@ -53,7 +53,39 @@ $sql2 = "SELECT * FROM `challenges`";
     <header>
         <?= makeNav() ?>
     </header>
-    
+    <div class="challenge-wrapper">
+        <div class="challenge-content">
+            <div class="title">
+                <h1>Challenges</h1>
+            </div>
+            <div class="challenges">
+                <div class="month">Jan:</div>
+                <div class="info"><?=$jan?></div>
+                <div class="month">Feb:</div>
+                <div class="info"><?=$feb?></div>
+                <div class="month">March:</div>
+                <div class="info"><?=$march?></div>
+                <div class="month">April:</div>
+                <div class="info"><?=$april?></div>
+                <div class="month">May:</div>
+                <div class="info"><?=$may?></div>
+                <div class="month">June:</div>
+                <div class="info"><?=$june?></div>
+                <div class="month">July:</div>
+                <div class="info"><?=$july?></div>
+                <div class="month">Aug:</div>
+                <div class="info"><?=$aug?></div>
+                <div class="month">Sept:</div>
+                <div class="info"><?=$sept?></div>
+                <div class="month">Oct:</div>
+                <div class="info"><?=$oct?></div>
+                <div class="month">Nov:</div>
+                <div class="info"><?=$nov?></div>
+                <div class="month">Dec:</div>
+                <div class="info"><?=$dec?></div>
+            </div>
+        </div>
+    </div>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>
