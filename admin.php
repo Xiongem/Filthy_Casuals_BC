@@ -142,9 +142,7 @@ $sql3 = "SELECT * FROM `challenges`";
                     <div class="row">
                         <div class="month">Jan:</div>
                         <input class="inputs" name="jan" id="jan" value="<?=$jan?>">
-                        <textarea class="inputs" name="janDescr" id="janDescr" maxlength="200">
-                            <?= $janDescr ?>
-                        </textarea>
+                        <textarea class="inputs" name="janDescr" id="janDescr" maxlength="200"><?=$janDescr?></textarea>
                     </div>
                     <div class="row">
                         <div class="month">Feb:</div>
