@@ -14,7 +14,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
     $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
         $username = $user["username"];
-        $timezone = $suer["timezone"];
+        $timezone = $user["timezone"];
 
 // $timezone = $_SESSION["timezone"];
 date_default_timezone_set("$timezone");
