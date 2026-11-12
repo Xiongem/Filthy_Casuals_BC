@@ -115,7 +115,7 @@ $sql3 = "SELECT * FROM `challenges`";
                         <div class="button-wrapper">
                             <div class="buttons" onclick="activateBingo()">Activate</div>
                         </div>
-                        <div id="bingoResult" class="results"></div>
+                        <div class="results" id="bingoResult"></div>
                     <?php } ?>  
                 </div>
             </div>
@@ -155,7 +155,7 @@ $sql3 = "SELECT * FROM `challenges`";
                 <div class="button-wrapper">
                     <div class="buttons" onclick="setChallenges()">set</div>
                 </div>
-                <div id="challengeResult"></div>
+                <div class="results" id="challengeResult"></div>
             </div>
 
             <div class="divider"></div>
@@ -268,6 +268,7 @@ $sql3 = "SELECT * FROM `challenges`";
                     month_dec:dec
                 },success:function(result) {
                     $("#challengeResult").html(result);
+                    setTimeout(refresh, 3000);
                 }
             })
         }

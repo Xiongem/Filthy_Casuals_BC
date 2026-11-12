@@ -51,7 +51,7 @@ $stmt = $_SESSION['conn'] -> prepare("UPDATE `challenges` SET `updated_by` = ?,
                         $_POST["month_nov"],
                         $_POST["month_dec"],);
 
-    if ($stmt -> execute()) {
+    if ($stmt -> execute() && $stmt -> affected_rows > 0) {
         echo "Challenges updated successfully";
     } else {
         echo "Error updating challenges: " . $stmt -> error;
