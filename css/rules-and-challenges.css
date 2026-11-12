@@ -71,15 +71,15 @@ a {
         grid-template-columns: 15% 80%;
         align-items: center;
         justify-content: center;
-        gap: 0.5em;
+        column-gap: 0.5em;
         width: 100%;
+        max-height: fit-content;
 
         background-color: var(--leather);
     }
     .month, .info {
         background-color: var(--barium-yellow);
-        min-height: 2.5em;
-        max-height: fit-content;
+        height: 100%;
         width: 100%;
     }
     .month {

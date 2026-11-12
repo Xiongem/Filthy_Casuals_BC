@@ -61,26 +61,48 @@ $sql2 = "SELECT * FROM `challenges`";
             <div class="challenges">
                 <div class="month">Jan:</div>
                 <div class="info"><?=$jan?></div>
+            </div>
+            <div class="challenges">
                 <div class="month">Feb:</div>
                 <div class="info"><?=$feb?></div>
+            </div>
+            <div class="challenges">
                 <div class="month">March:</div>
                 <div class="info"><?=$march?></div>
+            </div>
+            <div class="challenges">
                 <div class="month">April:</div>
                 <div class="info"><?=$april?></div>
+            </div>
+            <div class="challenges">
                 <div class="month">May:</div>
                 <div class="info"><?=$may?></div>
+            </div>
+            <div class="challenges">
                 <div class="month">June:</div>
                 <div class="info"><?=$june?></div>
+            </div>
+            <div class="challenges">
                 <div class="month">July:</div>
                 <div class="info"><?=$july?></div>
+            </div>
+            <div class="challenges">
                 <div class="month">Aug:</div>
                 <div class="info"><?=$aug?></div>
+                </div>
+            <div class="challenges">
                 <div class="month">Sept:</div>
                 <div class="info"><?=$sept?></div>
+            </div>
+            <div class="challenges">
                 <div class="month">Oct:</div>
                 <div class="info"><?=$oct?></div>
+            </div>
+            <div class="challenges">
                 <div class="month">Nov:</div>
                 <div class="info"><?=$nov?></div>
+            </div>
+            <div class="challenges">
                 <div class="month">Dec:</div>
                 <div class="info"><?=$dec?></div>
             </div>
