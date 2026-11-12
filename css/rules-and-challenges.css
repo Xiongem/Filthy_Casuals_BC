@@ -61,6 +61,7 @@ a {
         align-items: center;
         width: 100%;
         padding: 0 1em;
+        margin-bottom: 2em;
 
         /* background-color: var(--leather); */
     }
