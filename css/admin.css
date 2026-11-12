@@ -60,24 +60,29 @@
         align-items: center;
     }
 
-    .form-wrapper {
+    .row {
         display: grid;
         grid-template-columns: 15% 80%;
+        grid-template-rows: repeat(2, 1fr);
         gap: 0.5em;
         width: 100%;
         padding: 0 0.5em;
         margin-bottom: 1em;
     }
-    .form-wrapper textarea{
+    .row textarea{
         resize: vertical;
         min-height: 3.5em;
         height: fit-content;
         max-height: 8em;
     }
     .month {
+        grid-row: span 2 / span 2;
         align-self: center;
         justify-self: end;
         height: 2.5em;
+    }
+    .inputs {
+        grid-column-start: 2;
     }
     /* #challengeResult {
         display: flex;

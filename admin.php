@@ -40,6 +40,18 @@ $sql3 = "SELECT * FROM `challenges`";
         $oct = $challenge["month_oct"];
         $nov = $challenge["month_nov"];
         $dec = $challenge["month_dec"];
+            $janDescr = $challenge["jan_descr"];
+            $febDescr = $challenge["feb_descr"];
+            $marchDescr = $challenge["march_descr"];
+            $aprilDescr = $challenge["april_descr"];
+            $mayDescr = $challenge["may_descr"];
+            $juneDescr = $challenge["june_descr"];
+            $julyDescr = $challenge["july_descr"];
+            $augDescr = $challenge["aug_descr"];
+            $septDescr = $challenge["sept_descr"];
+            $octDescr = $challenge["oct_descr"];
+            $novDescr = $challenge["nov_descr"];
+            $decDescr = $challenge["dec_descr"];
 ?>
 
 <!DOCTYPE html>
@@ -127,30 +139,66 @@ $sql3 = "SELECT * FROM `challenges`";
                     <h2>Monthly Challenges</h2>
                 </div>
                 <div class="form-wrapper">
-                    <div class="month">Jan:</div>
-                    <textarea class="inputs" name="jan" id="jan"><?php if(isset($jan)){echo $jan;} ?></textarea>
-                    <div class="month">Feb:</div>
-                    <textarea class="inputs" name="feb" id="feb"><?php if(isset($feb)){echo $feb;} ?></textarea>
-                    <div class="month">March:</div>
-                    <textarea class="inputs" name="march" id="march"><?php if(isset($march)){echo $march;} ?></textarea>
-                    <div class="month">April:</div>
-                    <textarea class="inputs" name="april" id="april"><?php if(isset($april)){echo $april;} ?></textarea>
-                    <div class="month">May:</div>
-                    <textarea class="inputs" name="may" id="may"><?php if(isset($may)){echo $may;} ?></textarea>
-                    <div class="month">June:</div>
-                    <textarea class="inputs" name="june" id="june"><?php if(isset($june)){echo $june;} ?></textarea>
-                    <div class="month">July:</div>
-                    <textarea class="inputs" name="july" id="july"><?php if(isset($july)){echo $july;} ?></textarea>
-                    <div class="month">Aug:</div>
-                    <textarea class="inputs" name="aug" id="aug"><?php if(isset($aug)){echo $aug;} ?></textarea>
-                    <div class="month">Sept:</div>
-                    <textarea class="inputs" name="sept" id="sept"><?php if(isset($sept)){echo $sept;} ?></textarea>
-                    <div class="month">Oct:</div>
-                    <textarea class="inputs" name="oct" id="oct"><?php if(isset($oct)){echo $oct;} ?></textarea>
-                    <div class="month">Nov:</div>
-                    <textarea class="inputs" name="nov" id="nov"><?php if(isset($nov)){echo $nov;} ?></textarea>
-                    <div class="month">Dec:</div>
-                    <textarea class="inputs" name="dec" id="dec"><?php if(isset($dec)){echo $dec;} ?></textarea>
+                    <div class="row">
+                        <div class="month">Jan:</div>
+                        <input class="inputs" name="jan" id="jan" value="<?=$jan?>">
+                        <textarea class="inputs" name="janDescr" id="janDescr"><?php if(isset($janDescr)){echo $janDescr;} ?></textarea>
+                    
+                    <div class="row">
+                        <div class="month">Feb:</div>
+                        <input class="inputs" name="feb" id="feb" value="<?=$feb?>">
+                        <textarea class="inputs" name="febDescr" id="febDescr"><?php if(isset($febDescr)){echo $febDescr;} ?></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="month">March:</div>
+                        <input class="inputs" name="march" id="march" value="<?=$march?>">
+                        <textarea class="inputs" name="marchDescr" id="marchDescr"><?php if(isset($marchDescr)){echo $marchDescr;} ?></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="month">April:</div>
+                        <input class="inputs" name="april" id="april" value="<?=$april?>">
+                        <textarea class="inputs" name="aprilDescr" id="aprilDescr"><?php if(isset($aprilDescr)){echo $aprilDescr;} ?></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="month">May:</div>
+                        <input class="inputs" name="may" id="may" value="<?=$may?>">
+                        <textarea class="inputs" name="mayDescr" id="mayDescr"><?php if(isset($mayDescr)){echo $mayDescr;} ?></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="month">June:</div>
+                        <input class="inputs" name="june" id="june" value="<?=$june?>">
+                        <textarea class="inputs" name="juneDescr" id="juneDescr"><?php if(isset($juneDescr)){echo $juneDescr;} ?></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="month">July:</div>
+                        <input class="inputs" name="july" id="july" value="<?=$july?>">
+                        <textarea class="inputs" name="julyDescr" id="julyDescr"><?php if(isset($julyDescr)){echo $julyDescr;} ?></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="month">Aug:</div>
+                        <input class="inputs" name="aug" id="aug" value="<?=$aug?>">
+                        <textarea class="inputs" name="augDescr" id="augDescr"><?php if(isset($augDescr)){echo $augDescr;} ?></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="month">Sept:</div>
+                        <input class="inputs" name="sept" id="sept" value="<?=$sept?>">
+                        <textarea class="inputs" name="septDescr" id="septDescr"><?php if(isset($septDescr)){echo $septDescr;} ?></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="month">Oct:</div>
+                        <input class="inputs" name="oct" id="oct" value="<?=$oct?>">
+                        <textarea class="inputs" name="octDescr" id="octDescr"><?php if(isset($octDescr)){echo $octDescr;} ?></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="month">Nov:</div>
+                        <input class="inputs" name="nov" id="nov" value="<?=$nov?>">
+                        <textarea class="inputs" name="novDescr" id="novDescr"><?php if(isset($novDescr)){echo $novDescr;} ?></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="month">Dec:</div>
+                        <input class="inputs" name="dec" id="dec" value="<?=$dec?>">
+                        <textarea class="inputs" name="decDescr" id="decDescr"><?php if(isset($decDescr)){echo $decDescr;} ?></textarea>
+                    </div>
                 </div>
                 <div class="button-wrapper">
                     <div class="buttons" onclick="setChallenges()">set</div>
@@ -249,6 +297,18 @@ $sql3 = "SELECT * FROM `challenges`";
             var oct = $("#oct").val();
             var nov = $("#nov").val();
             var dec = $("#dec").val();
+                var janDescr = $("#janDescr").val();
+                var febDescr = $("#febDescr").val();
+                var marchDescr = $("#marchDescr").val();
+                var aprilDescr = $("#aprilDescr").val();
+                var mayDescr = $("#mayDescr").val();
+                var juneDescr = $("#juneDescr").val();
+                var julyDescr = $("#julyDescr").val();
+                var augDescr = $("#augDescr").val();
+                var septDescr = $("#septDescr").val();
+                var octDescr = $("#octDescr").val();
+                var novDescr = $("#novDescr").val();
+                var decDescr = $("#decDescr").val();
 
             $.ajax({
                 url: "php/process-updateChallenges.php",
@@ -265,7 +325,19 @@ $sql3 = "SELECT * FROM `challenges`";
                     month_sept:sept,
                     month_oct:oct,
                     month_nov:nov,
-                    month_dec:dec
+                    month_dec:dec,
+                        jan_Descr:janDescr,
+                        feb_Descr:febDescr,
+                        march_Descr:marchDescr,
+                        april_Descr:aprilDescr,
+                        may_Descr:mayDescr,
+                        june_Descr:juneDescr,
+                        july_Descr:juneDescr,
+                        aug_Descr:augDescr,
+                        sept_Descr:septDescr,
+                        oct_Descr:octDescr,
+                        nov_Descr:novDescr,
+                        dec_Descr:decDescr
                 },success:function(result) {
                     $("#challengeResult").html(result);
                     // setTimeout(refresh, 3000);
