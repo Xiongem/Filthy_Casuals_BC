@@ -152,11 +152,11 @@ $sql3 = "SELECT * FROM `challenges`";
                     <div class="month">Dec:</div>
                     <textarea name="dec" id="dec"><?php if(isset($dec)){$dec;} ?></textarea>
                 </div>
+                <div class="button-wrapper">
+                    <div class="buttons" onclick="setChallenges()">set</div>
+                </div>
+                <div id="challengeResult"></div>
             </div>
-            <div class="button-wrapper">
-                <div class="buttons" onclick="setChallenges()">set</div>
-            </div>
-            <div id="challengeResult"></div>
 
             <div class="divider"></div>
 
