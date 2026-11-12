@@ -164,39 +164,42 @@
     .wrapper {
         display: grid;
         grid-template-columns: 40% 60%;
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: repeat(11, 1fr);
         justify-content: center;
         align-items: center;
     }
+    .wrapper-content {
+        justify-self: center;
+    }
     .div1 {
-        grid-row: span 2 / span 2;
+        grid-row: span 3 / span 3;
     }
 
     .div2 {
         grid-column-start: 1;
-        grid-row-start: 3;
+        grid-row-start: 4;
     }
 
     .div3 {
-        grid-row: span 2 / span 2;
+        grid-row: span 3 / span 3;
         grid-column-start: 1;
-        grid-row-start: 4;
+        grid-row-start: 5;
     }
 
     .div4 {
         grid-column-start: 1;
-        grid-row-start: 6;
+        grid-row-start: 8;
     }
 
     .div5 {
-        grid-row: span 8 / span 8;
+        grid-row: span 11 / span 11;
         grid-column-start: 2;
         grid-row-start: 1;
     }
 
     .div6 {
-        grid-row: span 2 / span 2;
-        grid-row-start: 7;
+        grid-row: span 3 / span 3;
+        grid-row-start: 9;
     }
 
     #challenge-divider {
