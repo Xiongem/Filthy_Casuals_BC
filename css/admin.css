@@ -62,12 +62,15 @@
     .form-wrapper {
         display: grid;
         grid-template-columns: 15% 85%;
+        /* align-content: center; */
         row-gap: 0.5em;
         width: 100%;
+        padding: 0 0.5em;
         margin-bottom: 1em;
-        align-content: center;
     }
-
+    .month {
+        align-self: center;
+    }
 
     .span-wrapper {
         position: relative;
