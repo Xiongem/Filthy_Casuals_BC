@@ -91,7 +91,7 @@ a {
         height: 100%;
         width: 100%;
         padding: 0.5em;
-        border: 1px solid var(--leather);
+        /* border: 1px solid var(--leather); */
     }
     .month {
         grid-row: span 2 / span 2;
