@@ -74,6 +74,7 @@ a {
         column-gap: 0.5em;
         width: 100%;
         max-height: fit-content;
+        margin: 0.5em;
 
         background-color: var(--leather);
     }
