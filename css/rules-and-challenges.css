@@ -83,8 +83,9 @@ a {
         width: 100%;
     }
     .month {
-        align-self: center;
-        justify-self: end;
+        display: flex;
+        justify-content: end;
+        align-items: center;
     }
 }
 
