@@ -24,6 +24,22 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
     } else {
         $activeBingo = false;
     }
+
+$sql3 = "SELECT * FROM `challenges`";
+    $result3 = $_SESSION["conn"]->query($sql3);
+    $challenge = $result3->fetch_assoc();
+        $jan = $challenge["month_jan"];
+        $feb = $challenge["month_feb"];
+        $march = $challenge["month_march"];
+        $april = $challenge["month_april"];
+        $may = $challenge["month_may"];
+        $june = $challenge["month_june"];
+        $july = $challenge["month_july"];
+        $aug = $challenge["month_aug"];
+        $sept = $challenge["month_sept"];
+        $oct = $challenge["month_oct"];
+        $nov = $challenge["month_nov"];
+        $dec = $challenge["month_dec"];
 ?>
 
 <!DOCTYPE html>
@@ -108,6 +124,44 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
 
             <div class="wrapper-content">
                 <div class="title-wrapper">
+                    <h2>Monthly Challenges</h2>
+                </div>
+                <div class="form-wrapper">
+                    <div class="month">Jan:</div>
+                    <textarea name="jan" id="jan"><?php if(isset($jan)){$jan;} ?></textarea>
+                    <div class="month">Feb:</div>
+                    <textarea name="feb" id="feb"><?php if(isset($feb)){$feb;} ?></textarea>
+                    <div class="month">March:</div>
+                    <textarea name="march" id="march"><?php if(isset($march)){$march;} ?></textarea>
+                    <div class="month">April:</div>
+                    <textarea name="april" id="april"><?php if(isset($april)){$april;} ?></textarea>
+                    <div class="month">May:</div>
+                    <textarea name="may" id="may"><?php if(isset($may)){$may;} ?></textarea>
+                    <div class="month">June:</div>
+                    <textarea name="june" id="june"><?php if(isset($june)){$june;} ?></textarea>
+                    <div class="month">July:</div>
+                    <textarea name="july" id="july"><?php if(isset($july)){$july;} ?></textarea>
+                    <div class="month">Aug:</div>
+                    <textarea name="aug" id="aug"><?php if(isset($aug)){$aug;} ?></textarea>
+                    <div class="month">Sept:</div>
+                    <textarea name="sept" id="sept"><?php if(isset($sept)){$sept;} ?></textarea>
+                    <div class="month">Oct:</div>
+                    <textarea name="oct" id="oct"><?php if(isset($oct)){$oct;} ?></textarea>
+                    <div class="month">Nov:</div>
+                    <textarea name="nov" id="nov"><?php if(isset($nov)){$nov;} ?></textarea>
+                    <div class="month">Dec:</div>
+                    <textarea name="dec" id="dec"><?php if(isset($dec)){$dec;} ?></textarea>
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <div class="buttons" onclick="setChallenges()">set</div>
+            </div>
+            <div id="challengeResult"></div>
+
+            <div class="divider"></div>
+
+            <div class="wrapper-content">
+                <div class="title-wrapper">
                     <h2>Generate One-time Passcode</h2>
                 </div>
                 <div class="button-wrapper">
@@ -180,6 +234,42 @@ $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                     }
                 })
             }
+        }
+
+        function setChallenges() {
+            var jan = $("#jan").val();
+            var feb = $("#feb").val();
+            var march = $("#march").val();
+            var april = $("#april").val();
+            var may = $("#may").val();
+            var june = $("#june").val();
+            var july = $("#july").val();
+            var aug = $("#aug").val();
+            var sept = $("#sept").val();
+            var oct = $("#oct").val();
+            var nov = $("#nov").val();
+            var dec = $("#dec").val();
+
+            $.ajax({
+                url: "php/process-updateChallenges.php",
+                method: "post",
+                data: {
+                    month_jan:jan,
+                    month_feb:feb,
+                    month_march:march,
+                    month_april:april,
+                    month_may:may,
+                    month_june:june,
+                    month_july:july,
+                    month_aug:aug,
+                    month_sept:sept,
+                    month_oct:oct,
+                    month_nov:nov,
+                    month_dec:dec
+                },success:function(result) {
+                    $("#challengeResult").html(result);
+                }
+            })
         }
 
         //copies otp when user clicks the otp span

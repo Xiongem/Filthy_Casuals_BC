@@ -1,3 +1,37 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 'On');
+ini_set('error_log', '/path/to/php_errors.log');
+
+ob_start();
+require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
+dbConnect();
+forceLogin();
+
+$userID = $_SESSION["user_id"];
+
+$sql = "SELECT * FROM users WHERE user_id = $userID";
+    $result = $_SESSION["conn"]->query($sql);
+    $user = $result->fetch_assoc();
+        $admin = $user['admin'];
+
+$sql2 = "SELECT * FROM `challenges`";
+    $result2 = $_SESSION["conn"]->query($sql2);
+    $challenge = $result2->fetch_assoc();
+        $jan = $challenge["month_jan"];
+        $feb = $challenge["month_feb"];
+        $march = $challenge["month_march"];
+        $april = $challenge["month_april"];
+        $may = $challenge["month_may"];
+        $june = $challenge["month_june"];
+        $july = $challenge["month_july"];
+        $aug = $challenge["month_aug"];
+        $sept = $challenge["month_sept"];
+        $oct = $challenge["month_oct"];
+        $nov = $challenge["month_nov"];
+        $dec = $challenge["month_dec"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +51,7 @@
 </head>
 <body>
     <header>
-        
+        <?= makeNav() ?>
     </header>
     
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
