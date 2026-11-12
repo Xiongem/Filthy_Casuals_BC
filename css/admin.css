@@ -63,7 +63,7 @@
     .row {
         display: grid;
         grid-template-columns: 15% 80%;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 30% 70%;
         gap: 0.5em;
         width: 100%;
         padding: 1em 0.5em;
