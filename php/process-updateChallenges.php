@@ -8,7 +8,7 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
-$userID = $_POST['user_ID'];
+$userID = $_SESSION['user_ID'];
 
 $sql = "SELECT `username` FROM users WHERE user_id = $userID";
     $result = $_SESSION["conn"]->query($sql);
