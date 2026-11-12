@@ -64,12 +64,19 @@ a {
     }
     .title {
         text-align: center;
+        margin-bottom: 0.5em;
     }
     .challenges {
         display: grid;
         grid-template-columns: 15% 80%;
+        align-items: center;
         gap: 0.5em;
         width: 100%;
+
+        background-color: var(--leather);
+    }
+    .month, .info {
+        background-color: var(--barium-yellow);
     }
     .month {
         align-self: center;
