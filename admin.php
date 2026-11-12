@@ -353,18 +353,18 @@ $sql3 = "SELECT * FROM `challenges`";
                     month_oct:oct,
                     month_nov:nov,
                     month_dec:dec,
-                        jan_Descr:janDescr,
-                        feb_Descr:febDescr,
-                        march_Descr:marchDescr,
-                        april_Descr:aprilDescr,
-                        may_Descr:mayDescr,
-                        june_Descr:juneDescr,
-                        july_Descr:juneDescr,
-                        aug_Descr:augDescr,
-                        sept_Descr:septDescr,
-                        oct_Descr:octDescr,
-                        nov_Descr:novDescr,
-                        dec_Descr:decDescr
+                    jan_Descr:janDescr,
+                    feb_Descr:febDescr,
+                    march_Descr:marchDescr,
+                    april_Descr:aprilDescr,
+                    may_Descr:mayDescr,
+                    june_Descr:juneDescr,
+                    july_Descr:juneDescr,
+                    aug_Descr:augDescr,
+                    sept_Descr:septDescr,
+                    oct_Descr:octDescr,
+                    nov_Descr:novDescr,
+                    dec_Descr:decDescr
                 },success:function(result) {
                     $("#challengeResult").html(result);
                     setTimeout(resetWords, 3000);
