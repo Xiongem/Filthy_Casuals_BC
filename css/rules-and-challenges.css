@@ -77,11 +77,12 @@ a {
     }
     .month, .info {
         background-color: var(--barium-yellow);
+        height: 2.5em;
+        width: 100%;
     }
     .month {
         align-self: center;
         justify-self: end;
-        height: 2.5em;
     }
 }
 
