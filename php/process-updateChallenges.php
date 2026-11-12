@@ -10,8 +10,6 @@ dbConnect();
 
 $userID = $_SESSION["user_id"];
 
-echo $userID;
-
 $sql = "SELECT * FROM users WHERE user_id = $userID";
     $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
