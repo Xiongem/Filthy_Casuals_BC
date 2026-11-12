@@ -77,9 +77,14 @@ a {
         width: 100%;
         max-height: fit-content;
         /* margin: 0.5em; */
+
+        background-color: var(--barium-yellow);
+        border: 2px solid var(--leather);
+    }
+    .challenges:nth-child(odd) {
+        background-color: var(--grey);
     }
     .month, .info {
-        background-color: var(--barium-yellow);
         height: 100%;
         width: 100%;
         padding: 0.5em;
