@@ -62,7 +62,7 @@ a {
         width: 100%;
         padding: 0 1em;
 
-        background-color: var(--leather);
+        /* background-color: var(--leather); */
     }
     .title {
         text-align: center;
@@ -76,12 +76,14 @@ a {
         column-gap: 0.5em;
         width: 100%;
         max-height: fit-content;
-        margin: 0.5em;
+        /* margin: 0.5em; */
     }
     .month, .info {
         background-color: var(--barium-yellow);
         height: 100%;
         width: 100%;
+        padding: 0.5em;
+        border: 2px solid var(--leather);
     }
     .month {
         display: flex;
