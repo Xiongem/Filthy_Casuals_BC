@@ -8,7 +8,7 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
-$userID = $_SESSION['user_ID'];
+$userID = $_SESSION["user_id"];
 
 echo $userID;
 
