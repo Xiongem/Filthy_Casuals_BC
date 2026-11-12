@@ -70,7 +70,8 @@
     }
     .form-wrapper textarea{
         resize: vertical;
-        min-height: 3.5em;
+        min-height: fit-content;
+        height: 3.5em;
         max-height: 8em;
     }
     .month {
