@@ -165,7 +165,7 @@
         display: grid;
         grid-template-columns: 40% 60%;
         /* grid-template-rows: repeat(11, 1fr); */
-        grid-template-rows: 25% 5% 25% 5% 25% 15%;
+        grid-template-rows: 15% 5% 15% 5% 15% 45%;
         justify-content: center;
         align-items: center;
     }
