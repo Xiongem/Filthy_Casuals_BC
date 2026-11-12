@@ -76,9 +76,9 @@
     }
     .row textarea{
         resize: vertical;
-        min-height: 4.5em;
+        min-height: 10em;
         height: fit-content;
-        max-height: 10em;
+        max-height: 20em;
     }
     .month {
         grid-row: span 2 / span 2;
