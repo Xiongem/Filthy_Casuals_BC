@@ -70,10 +70,10 @@ a {
     }
     .challenges {
         display: grid;
-        grid-template-columns: 15% 80%;
+        grid-template-columns: 20% 80%;
         align-items: center;
         justify-content: center;
-        column-gap: 0.5em;
+        /* column-gap: 0.5em; */
         width: 100%;
         max-height: fit-content;
         /* margin: 0.5em; */
