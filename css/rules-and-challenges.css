@@ -61,6 +61,8 @@ a {
         align-items: center;
         width: 100%;
         padding: 0 1em;
+
+        background-color: var(--leather);
     }
     .title {
         text-align: center;
@@ -75,8 +77,6 @@ a {
         width: 100%;
         max-height: fit-content;
         margin: 0.5em;
-
-        background-color: var(--leather);
     }
     .month, .info {
         background-color: var(--barium-yellow);
