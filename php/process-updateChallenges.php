@@ -10,7 +10,7 @@ dbConnect();
 
 $userID = $_POST['user_ID'];
 
-$sql = "SELECT `username` FROM `users` WHERE user_id = $userID";
+$sql = "SELECT `username` FROM users WHERE user_id = $userID";
     $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
         $username = $user["username"];
