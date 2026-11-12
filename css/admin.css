@@ -12,6 +12,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 2em;
     }
     .wrapper-content {
         width: 100%;
@@ -61,7 +62,7 @@
 
     .form-wrapper {
         display: grid;
-        grid-template-columns: 15% 85%;
+        grid-template-columns: 15% 80%;
         gap: 0.5em;
         width: 100%;
         padding: 0 0.5em;
