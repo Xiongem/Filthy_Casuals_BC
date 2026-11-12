@@ -77,7 +77,7 @@ $sql3 = "SELECT * FROM `challenges`";
         <?= makeNav() ?>
     </header>
         <div class="wrapper">
-            <div class="wrapper-content">
+            <div class="wrapper-content div1" id="rat-wrapper">
                 <div class="title-wrapper">
                     <h2>Set RAT Date:</h2>
                 </div>
@@ -98,9 +98,9 @@ $sql3 = "SELECT * FROM `challenges`";
                 <div class="setResult results" id="setResult"></div>
             </div>
 
-            <div class="divider"></div>
+            <div class="divider div2" id="rat-divider"></div>
 
-            <div class="wrapper-content">
+            <div class="wrapper-content div3" id="bingo-wrapper">
                 <div class="title-wrapper">
                     <h2>Bingo Controls</h2>
                 </div>
@@ -132,9 +132,9 @@ $sql3 = "SELECT * FROM `challenges`";
                 </div>
             </div>
 
-            <div class="divider"></div>
+            <div class="divider div4" id="bingo-divider"></div>
 
-            <div class="wrapper-content">
+            <div class="wrapper-content div5" id="challenge-wrapper">
                 <div class="title-wrapper">
                     <h2>Monthly Challenges</h2>
                 </div>
@@ -206,9 +206,9 @@ $sql3 = "SELECT * FROM `challenges`";
                 <div class="results" id="challengeResult"></div>
             </div>
 
-            <div class="divider"></div>
+            <div class="divider" id="challenge-divider"></div>
 
-            <div class="wrapper-content">
+            <div class="wrapper-content div6" id="otp-wrapper">
                 <div class="title-wrapper">
                     <h2>Generate One-time Passcode</h2>
                 </div>
