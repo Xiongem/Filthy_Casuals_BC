@@ -99,6 +99,9 @@ a {
         justify-content: end;
         align-items: center;
     }
+    .info {
+        grid-column-start: 2;
+    }
 }
 
 /** ####################### *//** ####################### *//** ####################### */
