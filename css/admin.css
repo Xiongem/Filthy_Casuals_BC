@@ -61,7 +61,7 @@
 
     .form-wrapper {
         display: grid;
-        grid-template-columns: 10% 90%;
+        grid-template-columns: 15% 85%;
         row-gap: 0.5em;
         width: 100%;
         margin-bottom: 1em;
