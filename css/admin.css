@@ -82,7 +82,7 @@
     }
     .month {
         grid-row: span 2 / span 2;
-        align-self: center;
+        /* align-self: center; */
         justify-self: end;
         height: 2.5em;
 
