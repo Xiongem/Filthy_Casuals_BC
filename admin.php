@@ -335,7 +335,7 @@ $sql3 = "SELECT * FROM `challenges`";
                         april_Descr:aprilDescr,
                         may_Descr:mayDescr,
                         june_Descr:juneDescr,
-                        july_Descr:juneDescr,
+                        july_Descr:julyDescr,
                         aug_Descr:augDescr,
                         sept_Descr:septDescr,
                         oct_Descr:octDescr,
