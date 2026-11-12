@@ -113,7 +113,7 @@ a {
         word-break: break-word;
     }
     .name {
-        background-color: var(--marine-green);
+        color: var(--marine-green);
     }
 }
 
