@@ -70,6 +70,7 @@
     }
     .month {
         align-self: center;
+        justify-self: end;
     }
 
     .span-wrapper {
