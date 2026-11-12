@@ -142,62 +142,86 @@ $sql3 = "SELECT * FROM `challenges`";
                     <div class="row">
                         <div class="month">Jan:</div>
                         <input class="inputs" name="jan" id="jan" value="<?=$jan?>">
-                        <textarea class="inputs" name="janDescr" id="janDescr"><?php if(isset($janDescr)){echo $janDescr;} ?></textarea>
+                        <textarea class="inputs" name="janDescr" id="janDescr" maxlength="200">
+                            <?php if(isset($janDescr)){echo $janDescr;} ?>
+                        </textarea>
                     </div>
                     <div class="row">
                         <div class="month">Feb:</div>
                         <input class="inputs" name="feb" id="feb" value="<?=$feb?>">
-                        <textarea class="inputs" name="febDescr" id="febDescr"><?php if(isset($febDescr)){echo $febDescr;} ?></textarea>
+                        <textarea class="inputs" name="febDescr" id="febDescr" maxlength="200">
+                            <?php if(isset($febDescr)){echo $febDescr;} ?>
+                        </textarea>
                     </div>
                     <div class="row">
                         <div class="month">March:</div>
                         <input class="inputs" name="march" id="march" value="<?=$march?>">
-                        <textarea class="inputs" name="marchDescr" id="marchDescr"><?php if(isset($marchDescr)){echo $marchDescr;} ?></textarea>
+                        <textarea class="inputs" name="marchDescr" id="marchDescr" maxlength="200">
+                            <?php if(isset($marchDescr)){echo $marchDescr;} ?>
+                        </textarea>
                     </div>
                     <div class="row">
                         <div class="month">April:</div>
                         <input class="inputs" name="april" id="april" value="<?=$april?>">
-                        <textarea class="inputs" name="aprilDescr" id="aprilDescr"><?php if(isset($aprilDescr)){echo $aprilDescr;} ?></textarea>
+                        <textarea class="inputs" name="aprilDescr" id="aprilDescr" maxlength="200">
+                            <?php if(isset($aprilDescr)){echo $aprilDescr;} ?>
+                        </textarea>
                     </div>
                     <div class="row">
                         <div class="month">May:</div>
                         <input class="inputs" name="may" id="may" value="<?=$may?>">
-                        <textarea class="inputs" name="mayDescr" id="mayDescr"><?php if(isset($mayDescr)){echo $mayDescr;} ?></textarea>
+                        <textarea class="inputs" name="mayDescr" id="mayDescr" maxlength="200">
+                            <?php if(isset($mayDescr)){echo $mayDescr;} ?>
+                        </textarea>
                     </div>
                     <div class="row">
                         <div class="month">June:</div>
                         <input class="inputs" name="june" id="june" value="<?=$june?>">
-                        <textarea class="inputs" name="juneDescr" id="juneDescr"><?php if(isset($juneDescr)){echo $juneDescr;} ?></textarea>
+                        <textarea class="inputs" name="juneDescr" id="juneDescr" maxlength="200">
+                            <?php if(isset($juneDescr)){echo $juneDescr;} ?>
+                        </textarea>
                     </div>
                     <div class="row">
                         <div class="month">July:</div>
                         <input class="inputs" name="july" id="july" value="<?=$july?>">
-                        <textarea class="inputs" name="julyDescr" id="julyDescr"><?php if(isset($julyDescr)){echo $julyDescr;} ?></textarea>
+                        <textarea class="inputs" name="julyDescr" id="julyDescr" maxlength="200">
+                            <?php if(isset($julyDescr)){echo $julyDescr;} ?>
+                        </textarea>
                     </div>
                     <div class="row">
                         <div class="month">Aug:</div>
                         <input class="inputs" name="aug" id="aug" value="<?=$aug?>">
-                        <textarea class="inputs" name="augDescr" id="augDescr"><?php if(isset($augDescr)){echo $augDescr;} ?></textarea>
+                        <textarea class="inputs" name="augDescr" id="augDescr" maxlength="200">
+                            <?php if(isset($augDescr)){echo $augDescr;} ?>
+                        </textarea>
                     </div>
                     <div class="row">
                         <div class="month">Sept:</div>
                         <input class="inputs" name="sept" id="sept" value="<?=$sept?>">
-                        <textarea class="inputs" name="septDescr" id="septDescr"><?php if(isset($septDescr)){echo $septDescr;} ?></textarea>
+                        <textarea class="inputs" name="septDescr" id="septDescr" maxlength="200">
+                            <?php if(isset($septDescr)){echo $septDescr;} ?>
+                        </textarea>
                     </div>
                     <div class="row">
                         <div class="month">Oct:</div>
                         <input class="inputs" name="oct" id="oct" value="<?=$oct?>">
-                        <textarea class="inputs" name="octDescr" id="octDescr"><?php if(isset($octDescr)){echo $octDescr;} ?></textarea>
+                        <textarea class="inputs" name="octDescr" id="octDescr" maxlength="200">
+                            <?php if(isset($octDescr)){echo $octDescr;} ?>
+                        </textarea>
                     </div>
                     <div class="row">
                         <div class="month">Nov:</div>
                         <input class="inputs" name="nov" id="nov" value="<?=$nov?>">
-                        <textarea class="inputs" name="novDescr" id="novDescr"><?php if(isset($novDescr)){echo $novDescr;} ?></textarea>
+                        <textarea class="inputs" name="novDescr" id="novDescr" maxlength="200">
+                            <?php if(isset($novDescr)){echo $novDescr;} ?>
+                        </textarea>
                     </div>
                     <div class="row">
                         <div class="month">Dec:</div>
                         <input class="inputs" name="dec" id="dec" value="<?=$dec?>">
-                        <textarea class="inputs" name="decDescr" id="decDescr"><?php if(isset($decDescr)){echo $decDescr;} ?></textarea>
+                        <textarea class="inputs" name="decDescr" id="decDescr" maxlength="200">
+                            <?php if(isset($decDescr)){echo $decDescr;} ?>
+                        </textarea>
                     </div>
                 </div>
                 <div class="button-wrapper">
