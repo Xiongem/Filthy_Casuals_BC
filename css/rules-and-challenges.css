@@ -79,7 +79,7 @@ a {
         justify-content: center;
         /* column-gap: 0.5em; */
         width: 100%;
-        max-height: fit-content;
+        height: fit-content;
         /* margin: 0.5em; */
 
         background-color: var(--barium-yellow);
