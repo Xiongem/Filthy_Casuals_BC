@@ -307,6 +307,9 @@ $sql3 = "SELECT * FROM `challenges`";
                 })
             }
         }
+        function resetWords() {
+            $("#challengeResult").html("");
+        }
 
         function setChallenges() {
             var jan = $("#jan").val();
@@ -364,7 +367,7 @@ $sql3 = "SELECT * FROM `challenges`";
                         dec_Descr:decDescr
                 },success:function(result) {
                     $("#challengeResult").html(result);
-                    // setTimeout(refresh, 3000);
+                    setTimeout(resetWords, 3000);
                 }
             })
         }
