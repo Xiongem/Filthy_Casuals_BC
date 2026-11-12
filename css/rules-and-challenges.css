@@ -74,7 +74,7 @@ a {
     .challenges {
         display: grid;
         grid-template-columns: 20% 80%;
-        grid-template-rows: 25% 75%;
+        grid-template-rows: 20% 80%;
         align-items: center;
         justify-content: center;
         /* column-gap: 0.5em; */
