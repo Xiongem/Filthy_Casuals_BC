@@ -90,7 +90,7 @@ a {
         height: 100%;
         width: 100%;
         padding: 0.5em;
-        border: 2px solid var(--leather);
+        border: 1px solid var(--leather);
     }
     .month {
         display: flex;
