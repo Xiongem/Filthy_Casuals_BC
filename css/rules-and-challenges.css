@@ -142,4 +142,7 @@ a {
     .challenge-content {
         width: 50%;
     }
+    .challenges {
+        grid-template-columns: 10% 90%;
+    }
 }
