@@ -80,7 +80,7 @@ a {
         /* column-gap: 0.5em; */
         width: 100%;
         min-height: 10em;
-        height: fit-content;
+        height: 100%;
         /* margin: 0.5em; */
 
         background-color: var(--barium-yellow);
