@@ -52,7 +52,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                         </div>
                     </div>
                 </div>
-                <div class="add-wrapper">
+                <div class="add-wrapper spacing">
                     <p>Add Another Rule</p>
                         <ion-icon name="add-circle-outline" onclick="addNewRule()"></ion-icon>
                 </div>
