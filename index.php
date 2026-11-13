@@ -44,8 +44,6 @@ if ($now <= $ratEnd) {
 } else {
     $ratActive = false;
 }
-
-$admin = 1;
 ?>
 
 <!DOCTYPE html>
