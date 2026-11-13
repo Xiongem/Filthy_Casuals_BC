@@ -216,6 +216,10 @@ a {
         border-bottom: 1px solid var(--marine-green);
         /* background-color: var(--leather); */
     }
+    .actRow {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /** ####################### *//** ####################### *//** ####################### */
