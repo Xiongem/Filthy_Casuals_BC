@@ -72,14 +72,12 @@ $sql2 = "SELECT * FROM `challenges`";
                 <div class="title">
                     <h2>Create New Activity</h2>
                     <form method="post" action="php/process-createNewAct.php">
-                        <div class="act-wrapper spacing" id="actWrapper">
-                            <div class="actRow spacing">
-                                <label class="label" for="newActName">Activity Name:</label>
-                                <input class="inputs" type="text" name="newActName">
+                        <div class="actRow spacing">
+                            <label class="label" for="newActName">Activity Name:</label>
+                            <input class="inputs" type="text" name="newActName">
 
-                                <label for="newActDescr">Activity Description:</label>
-                                <textarea class="inputs" name="newActDescr" maxlength="200"></textarea>
-                            </div>
+                            <label for="newActDescr">Activity Description:</label>
+                            <textarea class="inputs" name="newActDescr" maxlength="200"></textarea>
                         </div>
                         <div class="button-wrapper">
                             <button class="buttons" type="submit">Create</button>
