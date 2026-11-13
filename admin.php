@@ -226,6 +226,29 @@ $sql3 = "SELECT * FROM `challenges`";
                     </div>
                 </div>
             </div>
+
+            <div class="divider div7"></div>
+
+            <div class="wrapper-content div8" id="admin-wrapper">
+                <div class="title-wrapper">
+                    <h2>Add Admin</h2>
+                </div>
+                <div class="search-wrapper">
+                    <div class="search-admin-wrapper">
+                        <div class="search">
+                            <label for="keyword" class="labels">Username:</label>
+                            <input type="text" 
+                                name="keyword" 
+                                id="username" 
+                                class="username" 
+                                onkeyup="autocomplete()"
+                                onkeypress="clickPressAdmin(event)">
+                        </div>
+                    </div>
+                    <div id="search_results" class="search-wrapper"></div>
+                    <div id="addAdminResult"></div>
+                </div>
+            </div>
         </div>
     <script>
         //sends the start and end dates for RAT to the database
@@ -382,6 +405,37 @@ $sql3 = "SELECT * FROM `challenges`";
             }, function(response) {
                 showOTP(<?= json_encode($oneTimePass) ?>);
             });
+        }
+
+        function autocomplete() {
+            var min_length = 0; // min characters to display the autocomplete
+            var keyword = document.getElementById('username').value;
+            
+            if (keyword.length > min_length) {
+                $.ajax({
+                    url: 'php/ajax_username_processing.php',
+                    type: 'POST',
+                    data: {keyword:keyword},
+                    success:function(data){
+                        $('#search_results').show();
+                        $('#search_results').html(data);
+                    }
+                });
+            } else {
+                $('#search_results').hide();
+            }
+        }
+
+        function addAdmin(userID) {
+            $.ajax ({
+                url: "php/process-addAdmin.php",
+                method: "post",
+                data {
+                    user_id:userID
+                },success:function (result) {
+                    $("#addAdminResult").html(result);
+                }
+            })
         }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>

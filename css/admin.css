@@ -199,6 +199,14 @@
         grid-row-start: 5;
     }
 
+    .div7 {
+        grid-row-start: 6;
+    }
+
+    .div8 {
+        grid-row-start: 7;
+    }
+
     #challenge-divider {
         display: none;
     }
