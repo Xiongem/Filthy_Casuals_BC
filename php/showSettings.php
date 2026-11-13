@@ -50,32 +50,36 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 </div>
             </div>
 
-            <div class="username-wrapper">
-                <label>Username:</label>
-                <input type="text" 
-                        name="username" 
-                        id="username" 
-                        class="inputs" 
-                        onchange="checkName();"
-                        value="<?=$username?>">
+            <div class="input-wrapper">
+                <div class="username-wrapper">
+                    <label class="labels">Username:</label>
+                    <input type="text" 
+                            name="username" 
+                            id="username" 
+                            class="inputs" 
+                            onchange="checkName();"
+                            value="<?=$username?>">
+                </div>
+
+                <span id="user-availability-status"></span>
             </div>
 
-            <span id="user-availability-status"></span>
+            <div class="input-wrapper">
+                <div class="email-wrapper">
+                    <label class="labels">Email:</label>
+                    <input type="email" 
+                            name="email" 
+                            id="email" 
+                            class="inputs" 
+                            onchange="checkEmail();"
+                            value="<?=$email?>">
+                </div>
 
-            <div class="email-wrapper">
-                <label>Email:</label>
-                <input type="email" 
-                        name="email" 
-                        id="email" 
-                        class="inputs" 
-                        onchange="checkEmail();"
-                        value="<?=$email?>">
+                <span id="email-availability-status"></span>
             </div>
 
-            <span id="email-availability-status"></span>
-
-            <div class="timezone-wrapper">
-                <label for="imezone">Choose Your Timezone:</label>
+            <div class="timezone-wrapper spacing">
+                <label class="labels" for="imezone">Choose Your Timezone:</label>
                 <select id="timezone" name="timezone" class="form-select inputs" required>
                     <option value="Asia/Tokyo" <?php if($timezone == "Asia/Tokyo"){ ?>selected="selected"<?php } ?>>
                         (GMT+09:00) Osaka, Sapporo, Tokyo
@@ -349,11 +353,11 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 </select>
             </div>
 
-            <div class="reset-wrapper">
+            <div class="reset-wrapper spacing">
                 <a href="#">Reset Password</a>
             </div>
 
-            <div class="button-wrapper">
+            <div class="button-wrapper spacing">
                 <button type="submit" id="accountButton" class="buttons">Submit</button>
             </div>
         </form>
