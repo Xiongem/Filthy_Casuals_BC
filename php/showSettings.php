@@ -51,29 +51,25 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             </div>
 
             <div class="input-wrapper">
-                <div class="username-wrapper">
-                    <label class="labels">Username:</label>
-                    <input type="text" 
-                            name="username" 
-                            id="username" 
-                            class="inputs" 
-                            onchange="checkName();"
-                            value="<?=$username?>">
-                </div>
+                <label class="labels">Username:</label>
+                <input type="text" 
+                        name="username" 
+                        id="username" 
+                        class="inputs" 
+                        onchange="checkName();"
+                        value="<?=$username?>">
 
                 <span id="user-availability-status"></span>
             </div>
 
             <div class="input-wrapper">
-                <div class="email-wrapper">
-                    <label class="labels">Email:</label>
-                    <input type="email" 
-                            name="email" 
-                            id="email" 
-                            class="inputs" 
-                            onchange="checkEmail();"
-                            value="<?=$email?>">
-                </div>
+                <label class="labels">Email:</label>
+                <input type="email" 
+                        name="email" 
+                        id="email" 
+                        class="inputs" 
+                        onchange="checkEmail();"
+                        value="<?=$email?>">
 
                 <span id="email-availability-status"></span>
             </div>
