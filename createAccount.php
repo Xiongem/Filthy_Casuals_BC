@@ -198,7 +198,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
             <form id="signup" action="#" method="post" enctype="multipart/form-data">
                 <div class="timezone-wrapper">
-                    <label for="imezone">Choose Your Timezone:</label>
+                    <label class="labels" for="imezone">Choose Your Timezone:</label>
                     <select id="timezone" name="timezone" class="form-select inputs" required>
                         <option value="Asia/Tokyo">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
                         <option value="America/Los_Angeles">(GMT-08:00) Pacific Time (US & Canada)</option>
