@@ -194,7 +194,7 @@ $sql2 = "SELECT * FROM `challenges`";
                         while ($act = mysqli_fetch_assoc($stmt2)) {
                             $actID = $act["act_id"];
                             $actName = $act["act_name"];
-                            $actInfo = $act["act_info"];
+                            $actInfo = $act["act_descr"];
                 ?>
                 <div class="<?php if($admin== 1){echo ("activity");}else{echo ("activity2");} ?>" id="<?=$actID?>">
                     <?php if ($admin == 1) { ?>
