@@ -240,7 +240,7 @@ $sql3 = "SELECT * FROM `challenges`";
                             <input type="text" 
                                 name="keyword" 
                                 id="username" 
-                                class="username" 
+                                class="username inputs" 
                                 onkeyup="adminAutocomplete()">
                         </div>
                     </div>
