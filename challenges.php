@@ -78,7 +78,7 @@ $sql2 = "SELECT * FROM `challenges`";
                         <input class="inputs" type="text" name="newActName">
 
                         <label for="newActDescr">Activity Description:</label>
-                        <textarea class="inputs" name="newActDescr" maxlength="200"></textarea>
+                        <textarea class="inputs" name="newActDescr" maxlength="400"></textarea>
                     </div>
                     <div class="button-wrapper">
                         <button class="buttons" type="submit">Create</button>
