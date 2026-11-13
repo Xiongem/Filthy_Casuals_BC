@@ -55,7 +55,11 @@ a {
 
         font-size: 20px;
     }
+    .add-wrapper p {
+        margin-right: 0.5em;
+    }
     .icon {
+        font-size: 16px;
         cursor: pointer;
     }
     .edit-wrapper {

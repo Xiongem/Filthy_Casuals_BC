@@ -101,12 +101,12 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 ?>
                 <div class="row">
                     <?php if ($admin == 1) { ?>
-                    <ion-icon class="icon" name="settings-outline" size="large" onclick="showRuleEdit(<?=$ruleID?>)"></ion-icon>
+                    <ion-icon class="icon" name="settings-outline" onclick="showRuleEdit(<?=$ruleID?>)"></ion-icon>
                     <?php } ?>
                     <h2 class="rank"><?=$rank?></h2>
                     <p class="rules" id="<?=$ruleID?>"><?=$rule?></p>
                     <?php if ($admin == 1) { ?>
-                    <ion-icon class="warning icon" name="remove-circle" size="large" onclick="showRemoveRule(<?=$ruleID?>, <?=$rank?>)"></ion-icon>
+                    <ion-icon class="warning icon" name="remove-circle" onclick="showRemoveRule(<?=$ruleID?>, <?=$rank?>)"></ion-icon>
                     <?php } ?>
                 </div>
             <?php }} else { ?>
