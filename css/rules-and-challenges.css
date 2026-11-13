@@ -40,6 +40,8 @@ a {
         display: grid;
         grid-template-columns: 10% 80% 10%;
         width: 100%;
+
+        border-bottom: 1px solid var(--marine-green);
     } 
     .add-wrapper {
         display: flex;
