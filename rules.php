@@ -82,7 +82,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     <p class="rules" id="<?=$ruleID?>"><?=$rule?></p>
                 </div>
             <?php }} else { ?>
-                <div>
+                <div class="row">
                     <h3>No Rules Found</h3>
                 </div>
                 <?php } ?>
