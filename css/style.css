@@ -150,7 +150,7 @@ a {
         color: var(--deep-green);
     }
     .inputs {
-        margin-bottom: 1em;
+        /* margin-bottom: 1em; */
         background-color: var(--barium-yellow);
         accent-color: var(--marine-green);
         border: 2px solid var(--marine-green);

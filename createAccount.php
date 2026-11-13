@@ -255,23 +255,27 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </select>
                 </div>
 
-                <label class="labels">Email:</label>
-                <input type="email"
-                    name="email"
-                    id="email"
-                    class="inputs"
-                    required>
+                <div class="check-wrapper">
+                    <label class="labels">Email:</label>
+                    <input type="email"
+                        name="email"
+                        id="email"
+                        class="inputs"
+                        required>
 
-                <span id="email-availability-status"></span>
+                    <span class="check" id="email-availability-status"></span>
+                </div>
 
-                <label class="labels">Name/Nickname:</label>
-                <input type="text"
-                    name="username"
-                    id="username"
-                    class="inputs"
-                    required>
+                <div class="check-wrapper">
+                    <label class="labels">Name/Nickname:</label>
+                    <input type="text"
+                        name="username"
+                        id="username"
+                        class="inputs"
+                        required>
 
-                <span id="user-availability-status"></span>
+                    <span class="check" id="user-availability-status"></span>
+                </div>
 
                 <label class="labels">Password:</label>
                 <input type="password"
@@ -326,27 +330,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
     </div>
     <script>
-            document.getElementById('signup').addEventListener('input', function () {
-                validateForm();
-            });
-    
-            function validateForm() {
-                const password = document.getElementById('password').value;
-                const confirmPassword = document.getElementById('retypePassword').value;
-                const errorElement = document.getElementById('passwordError');
-    
-                if (password !== confirmPassword) {
-                    errorElement.textContent = 'Passwords must match';
-                    errorElement.classList.remove('success');
-                    errorElement.classList.add('error');
-                } else {
-                    errorElement.textContent = 'Passwords match';
-                    errorElement.classList.remove('error');
-                    errorElement.classList.add('success');
-                }
+        document.getElementById('signup').addEventListener('input', function () {
+            validateForm();
+        });
+
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('retypePassword').value;
+            const errorElement = document.getElementById('passwordError');
+
+            if (password !== confirmPassword) {
+                errorElement.textContent = 'Passwords must match';
+                errorElement.classList.remove('success');
+                errorElement.classList.add('error');
+            } else {
+                errorElement.textContent = 'Passwords match';
+                errorElement.classList.remove('error');
+                errorElement.classList.add('success');
             }
-        </script>
-    <script>
+        }
+
         //setup before functions
         var typingTimer;                //timer identifier
         var doneTypingInterval = 1000;  //time in ms, 5 seconds for example
