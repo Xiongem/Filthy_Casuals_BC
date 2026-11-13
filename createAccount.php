@@ -298,7 +298,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     name="email"
                     id="email"
                     class="inputs"
-                    onkeyup="checkEmail();"
+                    onchange="checkEmail();"
                     required>
 
                 <span id="email-availability-status"></span>
@@ -308,7 +308,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     name="username"
                     id="username"
                     class="inputs"
-                    onkeyup="checkName();"
+                    onchange="checkName();"
                     required>
 
                 <span id="user-availability-status"></span>
