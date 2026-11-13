@@ -39,7 +39,7 @@ $totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
 
 if (isset($_POST["tag"])) {
     $insert_tags = implode(",", $_POST["tag"]);
-    $tags = $_POST["tag"][$value];
+    $tags = $_POST["tag"];
 } else {
     $insert_tags = NULL;
 }
