@@ -34,7 +34,7 @@ if (! empty($_POST["email"])) {
     if ($result->num_rows > 0) {
         echo "Email Already in Use";
     } else {
-        echo "";
+        echo "Email Available";
     }
  exit();
 }

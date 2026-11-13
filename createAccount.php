@@ -361,12 +361,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         //on keydown, clear the countdown 
         $name.on('keydown', function () {
             clearTimeout(typingTimer);
-                console.log("goodbye");
         });
         //user is "finished typing," do something
         function doneNameTyping () {
             checkName()
-                console.log("hello");
         }
 
         //on keyup, start the countdown
@@ -377,12 +375,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         //on keydown, clear the countdown 
         $email.on('keydown', function () {
             clearTimeout(typingTimer);
-                console.log("goodbye");
         });
         //user is "finished typing," do something
         function doneEmailTyping () {
             checkEmail();
-                console.log("hello");
         }
 
         function checkName(){
