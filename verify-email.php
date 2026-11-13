@@ -58,7 +58,7 @@ if ($user["verification_hash"] === $token_hash) {
    <?= makeNav() ?>
     <div class="login-wrapper">
         <div class="login-content">
-            <h1>Account Creation</h1>
+            <h1 class="title">Account Creation</h1>
             <p class="spacing">Thank you for creating an account with us! <br>
                 Your email has been verified. <br>
                 You can now log in to your account.
