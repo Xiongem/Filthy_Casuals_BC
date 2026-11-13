@@ -24,8 +24,8 @@ $sql = "SELECT *
 <div class="title">
 <h1>Delete act</h1>
 <div class="delete-wrapper">
-    <h3>Delete <?=$actName?>:</h3>
-    <p id="<?=$actID?>"><?=$actInfo?></p>
+    <h3 class="spacing">Delete <?=$actName?>:</h3>
+    <p class="spacing" id="<?=$actID?>"><?=$actInfo?></p>
 </div>
 <div class="button-wrapper">
     <div class="buttons" onclick="deleteAct(<?=$actID?>)">Delete</div>
