@@ -185,10 +185,10 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 
         function addNewRule() {
             $('#rowWrapper').append([
-                $('<div/>',{ "class": "newRow" }).append([
+                $('<div/>',{ "class": "newRow spacing" }).append([
                     $('<div/>',{ "class": "label-wrapper" }).append([
                         $('<label/>',{ "class": "label", for: "newRule", text: "New Rule:" }),
-                        $('<textarea/>',{ "class": "rule", name: "newRule[]", maxlength: "200" })
+                        $('<textarea/>',{ "class": "rule inputs", name: "newRule[]", maxlength: "200" })
                     ])
                 ])
             ]);           
