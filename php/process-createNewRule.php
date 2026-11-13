@@ -16,7 +16,6 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         $username = $user["username"];
         $timezone = $user["timezone"];
 
-// $timezone = $_SESSION["timezone"];
 date_default_timezone_set("$timezone");
 
 $now = date("Y-m-d H:i:s");
@@ -38,12 +37,13 @@ foreach ($rules as $value){
                             $value,
                             $username,
                             $now);
+
+    $stmt -> execute();
 }
-$stmt -> execute();
 
 if ($num == count($rules)) {
-    echo "Rule created successfully";
-    // header("Location: /rules.php");
+    // echo "Rule created successfully";
+    header("Location: /rules.php");
 } else {
     // echo "Error creating rule: " . $stmt -> error;
     die("Error creating rule: " . $stmt -> error);
