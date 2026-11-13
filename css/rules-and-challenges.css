@@ -94,6 +94,9 @@ a {
         width: 100%;
         padding-top: 1em;
     }
+    #actEditPopup {
+        align-items: center;
+    }
     form {
         width: 100%;
     }
@@ -216,6 +219,9 @@ a {
 
         border-bottom: 1px solid var(--marine-green);
         /* background-color: var(--leather); */
+    }
+    .activity div, .activity2 div {
+        padding: 0.5em;
     }
     .actRow {
         display: flex;
