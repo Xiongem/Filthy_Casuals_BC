@@ -208,6 +208,9 @@
     .settings-container {
         width: 70%;
     }
+    .tab {
+        border: none;
+    }
     #result {
         padding: 0.5em 1em 1em 1em;
 
