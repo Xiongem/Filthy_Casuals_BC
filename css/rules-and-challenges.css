@@ -31,7 +31,9 @@ a {
     }
     .rules-content {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
         width: 100%;
     }
     .row, .add-wrapper {
