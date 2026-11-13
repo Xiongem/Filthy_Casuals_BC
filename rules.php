@@ -132,16 +132,16 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             location.reload(true);
         }
 
-        // function addNewRule() {
-        //     $('#form').append([
-        //         $('<div/>',{ "class": "row" }).append([
-        //             $('<div/>',{ "class": "label-wrapper" }).append([
-        //                 $('<label/>',{ "class": "label", for: "newRule", text: "New Rule:" }),
-        //                 $('<textarea/>',{ "class": "rule", name: "newRule[]", maxlength: "200" })
-        //             ]);
-        //         ]);
-        //     ]);           
-        // }
+        function addNewRule() {
+            $('#form').append([
+                $('<div/>',{ "class": "row" }).append([
+                    $('<div/>',{ "class": "label-wrapper" }).append([
+                        $('<label/>',{ "class": "label", for: "newRule", text: "New Rule:" }),
+                        $('<textarea/>',{ "class": "rule", name: "newRule[]", maxlength: "200" })
+                    ]);
+                ]);
+            ]);           
+        }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
