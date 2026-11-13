@@ -38,13 +38,11 @@ $month = date("n",strtotime($_POST["dateFinished"]));
 $totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
 
 if (isset($_POST["tag"])) {
-    $insert_tags = implode(",", $_POST["tag"]);
     $tags = $_POST["tag"];
+    $insert_tags = implode(",", $tags);
 } else {
     $insert_tags = NULL;
 }
-
-print_r($tags);
 
 if (isset($_POST["diffDate"])) {
     $dateFinished = $_POST["dateFinished"];
@@ -131,7 +129,7 @@ if ($stmt1 -> execute()) {
                                 $totalPoints);
             $stmt4->execute();
         }
-        // header("Location: /readHistory.php?user_id=$userID");
+        header("Location: /readHistory.php?user_id=$userID");
     
         exit;
     } else {
