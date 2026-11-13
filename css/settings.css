@@ -202,6 +202,15 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1024px) {
+    body {
+        background-color: var(--barium-yellow);
+    }
+    .settings-container {
+        width: 70%;
+    }
+    #result {
+        border: 2px solid var(--deep-green);
+    }
     .settings-account-content, .settings-danger-content {
         width: 50%;
     }
