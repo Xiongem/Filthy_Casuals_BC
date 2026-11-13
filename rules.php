@@ -48,7 +48,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     <div class="newRow">
                         <div class="label-wrapper">
                             <label class="label" for="newRule">New Rule:</label>
-                            <textarea class="rule" name="newRule[]" maxlength="200"></textarea>
+                            <textarea class="rule inputs" name="newRule[]" maxlength="200"></textarea>
                         </div>
                     </div>
                 </div>
