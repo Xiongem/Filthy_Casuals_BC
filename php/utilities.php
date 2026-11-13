@@ -25,7 +25,59 @@ function makeNav() {
                 $imageName = htmlspecialchars($user['pfpName']);
                 $imageType = $user['pfpType'];
                 $imageData = base64_encode($user['pfpData']);
-    $htmlContent = <<<HTML
+    if ($admin == 1) {
+        $htmlContent = <<<HTML
+            <div class="nav-wrapper" id="nav-wrapper">
+                    <div class="icon-wrapper" id="icon-wrapper">
+                        <ion-icon name="menu" id="nav-menu-icon"></ion-icon>
+                        <div class="nav-menu-wrapper" id="nav-menu-wrapper">
+                            <div class="nav-menu-content" id="nav-menu-content">
+                                <a class="nav-item" href="index.php">Home</a>
+                                <a class="nav-item" href="challenges.php">Challenges</a>
+                                <a class="nav-item" href="rules.php">Rules</a>
+                                <a id="update" class="nav-item" href="update.php">
+                                    update
+                                        <ion-icon name="add" id="icon"></ion-icon>
+                                </a>
+                                <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>
+                                <a class="nav-item" href="friendRec.php">Friend Recs</a>
+                                <a href="admin.php" class="nav-item">Admin</a>
+                                <a class="nav-item" href="settings.php">Settings</a>
+                                <a class="nav-item" href="php/logout.php">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile">
+                        <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
+                    </div>
+                </div>
+                <div class="desktop-nav-wrapper">
+                    <div class="desktop-logo-wrapper">
+                        <a class="desktop-nav-item" href="index.php">
+                            <img class="logo" id="logo" src="./images/FCBClogo.svg" alt="cat laying on books logo">
+                        </a>
+                    </div>
+                    <div class="desktop-menu-wrapper">
+                        <a class="nav-item" href="challenges.php">Challenges</a>
+                        <a class="nav-item" href="rules.php">Rules</a>
+                        <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>
+                        <a class="nav-item" href="friendRec.php">Friend Recs</a>
+                        <a href="admin.php" class="nav-item">Admin</a>
+                        <a class="nav-item" href="settings.php">Settings</a>
+                        <a class="nav-item" href="php/logout.php">Logout</a>
+                        <a id="update" class="desktop-nav-item" href="update.php">
+                            <ion-icon size="large" name="add-circle-outline"></ion-icon>
+                            <p id="explain">update</p>
+                        </a>
+                    </div>
+                    <div id="profile">
+                        <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
+                    </div>
+                </div>
+            HTML;
+            echo $htmlContent;
+    } else {
+        $htmlContent = <<<HTML
         <div class="nav-wrapper" id="nav-wrapper">
                 <div class="icon-wrapper" id="icon-wrapper">
                     <ion-icon name="menu" id="nav-menu-icon"></ion-icon>
@@ -40,9 +92,6 @@ function makeNav() {
                             </a>
                             <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>
                             <a class="nav-item" href="friendRec.php">Friend Recs</a>
-                            <?php if ($admin == 1) { ?>
-                                <a href="admin.php" class="nav-item">Admin</a>
-                            <?php } ?>
                             <a class="nav-item" href="settings.php">Settings</a>
                             <a class="nav-item" href="php/logout.php">Logout</a>
                         </div>
@@ -63,9 +112,6 @@ function makeNav() {
                     <a class="nav-item" href="rules.php">Rules</a>
                     <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>
                     <a class="nav-item" href="friendRec.php">Friend Recs</a>
-                    if ($admin == 1) {
-                        <a href="admin.php" class="nav-item">Admin$admin</a>
-                    }
                     <a class="nav-item" href="settings.php">Settings</a>
                     <a class="nav-item" href="php/logout.php">Logout</a>
                     <a id="update" class="desktop-nav-item" href="update.php">
@@ -79,6 +125,7 @@ function makeNav() {
             </div>
         HTML;
         echo $htmlContent;
+    }
 }
 
 function forceLogin() {
