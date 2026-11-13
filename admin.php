@@ -241,8 +241,7 @@ $sql3 = "SELECT * FROM `challenges`";
                                 name="keyword" 
                                 id="username" 
                                 class="username" 
-                                onkeyup="autocomplete()"
-                                onkeypress="clickPressAdmin(event)">
+                                onkeyup="autocomplete()">
                         </div>
                     </div>
                     <div id="search_results" class="search-wrapper"></div>
@@ -430,9 +429,8 @@ $sql3 = "SELECT * FROM `challenges`";
             $.ajax ({
                 url: "php/process-addAdmin.php",
                 method: "post",
-                data {
-                    user_id:userID
-                },success:function (result) {
+                data {user_id:userID},
+                success:function (result) {
                     $("#addAdminResult").html(result);
                 }
             })
