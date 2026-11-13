@@ -17,7 +17,7 @@ $stmt->bind_param("i",
 
 if ($stmt->execute() && $stmt -> affected_rows > 0) {
     echo ('<div class="deleteNotif">
-            <h1>Activity successfully deleted</h1>
+            <h2>Activity successfully deleted</h2>
         </div>');
 } else {
     die("Failed to delete activity" . $stmt->error);
