@@ -255,7 +255,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </select>
                 </div>
 
-                <div class="check-wrapper">
+                <div class="check-wrapper spacing">
                     <label class="labels">Email:</label>
                     <input type="email"
                         name="email"
@@ -266,7 +266,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <span class="check" id="email-availability-status"></span>
                 </div>
 
-                <div class="check-wrapper">
+                <div class="check-wrapper spacing">
                     <label class="labels">Name/Nickname:</label>
                     <input type="text"
                         name="username"
@@ -277,12 +277,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <span class="check" id="user-availability-status"></span>
                 </div>
 
-                <label class="labels">Password:</label>
-                <input type="password"
-                    name="password"
-                    id="password"
-                    class="inputs"
-                    required>
+                <div class="check-wrapper spacing">
+                    <label class="labels">Password:</label>
+                    <input type="password"
+                        name="password"
+                        id="password"
+                        class="inputs"
+                        required>
+                </div>
 
                 <div class="span-wrapper">
                     <label class="labels">Retype Password:</label>
@@ -292,7 +294,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <input type="password"
                     name="retypePassword"
                     id="retypePassword"
-                    class="inputs"
+                    class="inputs spacing"
                     required>
 
                 <div class="checkbox-wrapper">
