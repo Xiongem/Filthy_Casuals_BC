@@ -50,7 +50,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 </div>
             </div>
 
-            <div class="input-wrapper">
+            <div class="input-wrapper spacing">
                 <label class="labels">Username:</label>
                 <input type="text" 
                         name="username" 
@@ -62,7 +62,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <span id="user-availability-status"></span>
             </div>
 
-            <div class="input-wrapper">
+            <div class="input-wrapper spacing">
                 <label class="labels">Email:</label>
                 <input type="email" 
                         name="email" 
