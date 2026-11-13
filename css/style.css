@@ -39,6 +39,7 @@ a {
         position: relative;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         width: 95%;
         min-height: 10em;
