@@ -157,7 +157,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 data: {
                     rule_id:ruleID,
                     rank:rank
-                }success:function(result) {
+                },success:function(result) {
                     $("#deleteResults").html();
                 }
             })
