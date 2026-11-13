@@ -73,6 +73,16 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             </div>
         </div>
     </div>
+    <div class="popup-wrapper hide" id="ruleEditPopup">
+        <div class="popup-container">
+            <div class="close-wrapper">
+                <ion-icon name="close" onclick="closeRuleEdit()"></ion-icon>
+            </div>
+            <!--//? AJAX INSERT HTML-->
+            <div class="popup-content" id="ruleEditResults">
+            </div>
+        </div>
+    </div>
     <header>
         <?= makeNav() ?>
     </header>
@@ -90,6 +100,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                             $rule = $rules["rule_info"];
                 ?>
                 <div class="row">
+                    <?php if ($admin == 1) { ?>
+                    <ion-icon class="icon" name="settings-outline" size="large" onclick="showRuleEdit()"></ion-icon>
+                    <?php } ?>
                     <h2 class="rank"><?=$rank?></h2>
                     <p class="rules" id="<?=$ruleID?>"><?=$rule?></p>
                     <?php if ($admin == 1) { ?>
@@ -179,6 +192,28 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     ])
                 ])
             ]);           
+        }
+
+        function showRuleEdit() {
+            $("#ruleEditPopup").css({"display": "flex"});
+            var ruleEditPopup = document.getElementById("ruleEditPopup");
+            ruleEditPopup.scrollIntoView();
+            setTimeout(hideBackground, 500);
+
+            $.ajax({
+                url: "php/ajax_edit_rule.php",
+                method: "post",
+                data: {
+                    rule_id:ruleID
+                },success:function(result) {
+                    $("#ruleEditResults").html(result);
+                }
+            })
+        }
+        function closeRuleEdit() {
+            $("#ruleEditPopup").hide();
+            $("#body").css({"height": "unset", "overflow": "unset"});
+            location.reload(true);
         }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
