@@ -88,9 +88,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <?php } ?>
                 <div class="add-wrapper">
                     <p>Add New Rule</p>
-                    <a href="newRule.php">
-                        <ion-icon name="add-circle-outline"></ion-icon>
-                    </a>
+                    <!-- <a href="newRule.php"> -->
+                        <ion-icon name="add-circle-outline" onclick="showNewRule()"></ion-icon>
+                    <!-- </a> -->
                 </div>
             </div>
         </div>
