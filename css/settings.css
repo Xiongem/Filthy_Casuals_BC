@@ -151,6 +151,11 @@
     .loader {
         margin: 5em;
     }
+    .timezone-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 
 
 
