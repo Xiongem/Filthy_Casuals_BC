@@ -39,7 +39,7 @@ $sql = "SELECT `rule_info`
             data: {
                 rule_id:ruleID
             },success:function (result) {
-                $("#deleteResults").html();
+                $("#deleteResults").html(result);
             }
         })
     }
