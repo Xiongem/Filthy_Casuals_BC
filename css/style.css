@@ -136,8 +136,8 @@ a {
         background-color: var(--barium-yellow);
     }
     #profilePic {
-        width: 2.5em;
-        height: 2.5em;
+        width: 3em;
+        height: 3em;
         border-radius: 50%;
     }
 
