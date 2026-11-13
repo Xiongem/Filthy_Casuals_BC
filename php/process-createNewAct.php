@@ -25,7 +25,7 @@ $actDescr = $_POST['newActDescr'];
 
 
     $stmt = $_SESSION['conn'] -> prepare("INSERT INTO `activities` (`act_name`,
-                                                                    `act_descr`
+                                                                    `act_descr`,
                                                                     `set_by`,
                                                                     `set_at`)
                                             VALUES (?, ?, ?, ?)");
