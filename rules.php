@@ -15,6 +15,8 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
     $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
         $admin = $user['admin'];
+
+$admin = 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
