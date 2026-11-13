@@ -212,7 +212,7 @@
         border: none;
     }
     #result {
-        padding: 0.5em 1em 1em 1em;
+        padding: 1em 2em 2em 2em;
 
         background-color: var(--sepia-e37);
         border-radius: 0 0 12px 12px;
