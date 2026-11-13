@@ -1,3 +1,21 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 'On');
+ini_set('error_log', '/path/to/php_errors.log');
+
+ob_start();
+require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
+dbConnect();
+forceLogin();
+
+$userID = $_SESSION["user_id"];
+
+$sql = "SELECT * FROM users WHERE user_id = $userID";
+    $result = $_SESSION["conn"]->query($sql);
+    $user = $result->fetch_assoc();
+        $admin = $user['admin'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,27 +35,26 @@
 </head>
 <body>
     <header>
-        
+        <?= makeNav() ?>
     </header>
     <div class="full-wrapper">
         <div class="content-wrapper">
             <h1>Rules</h1>
             <div class="rules-content">
-                <h3>1.</h3>
-                <p class="rules">Have fun, don't be an ass.</p>
-                <h3>2.</h3>
-                <p class="rules">Don't be a sore loser.</p>
-                <h3>3.</h3>
-                <p class="rules">When reading e-books/cases where font size can be edited, page count should be taken from the physical edition if it is available. (If a book is dnf, take 
-the reading percentage and multiply it by the physical page count. When rounding, use math rules.)</p>
-                <h3>4.</h3>
-                <p class="rules">Buddy reads only count if both readers are in the challenge.</p>
-                <h3>5.</h3>
-                <p class="rules">Pages read from a book you did not finish can still be counted.</p>
-                <h3>6.</h3>
-                <p class="rules">Freind Recs: both reader and recommender receive bonus points.</p>
-                <h3>7.</h3>
-                <p class="rules">Re-reading counts. Crack open all your comfort reads.</p>
+                <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `rules`");
+                    $rules = mysqli_num_rows($stmt);
+                    $rank = 0;
+                    if ($rules > 0) {
+                        while ($rules = mysqli_fetch_assoc($stmt)) {
+                            $rank++;
+                            $ruleID = $rules["rule_id"];
+                            $rule = $rules["rule_info"];
+                ?>
+                <div class="row">
+                    <h3 class="rank"><?=$rank?></h3>
+                    <p class="rules" id="<?=$ruleID?>"><?=$rule?></p>
+                </div>
+            <?php }} ?>
             </div>
         </div>
 
