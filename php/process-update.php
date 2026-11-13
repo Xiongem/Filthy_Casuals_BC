@@ -111,8 +111,9 @@ if ($stmt1 -> execute()) {
                 $stmt3->bind_param("ss", 
                                     $value,
                                     $value);
+
+                $stmt3->execute();
             }
-            $stmt3->execute();
         }
         
         if ($_POST["bingoName"]) {
