@@ -208,28 +208,7 @@ $sql3 = "SELECT * FROM `challenges`";
 
             <div class="divider" id="challenge-divider"></div>
 
-            <div class="wrapper-content div6" id="otp-wrapper">
-                <div class="title-wrapper">
-                    <h2>Generate One-time Passcode</h2>
-                </div>
-                <div class="button-wrapper">
-                    <button id="createOTPButton" class="inputs buttons" onclick="createOTP()">Create OTP</button>
-                </div>
-                <div class="OTP-wrapper" id="OTPWrapper">
-                    <label class="labels">One-time Passcode:</label>
-                    <div class="span-wrapper">
-                        <span id="OTP" class="labels"></span>
-                        <div class="copy-wrapper">
-                            <p id="copy">copy</p>
-                            <ion-icon class="copy" name="copy-outline"></ion-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="divider div7"></div>
-
-            <div class="wrapper-content div8" id="admin-wrapper">
+            <div class="wrapper-content div6" id="admin-wrapper">
                 <div class="title-wrapper">
                     <h2>Add Admin</h2>
                 </div>
@@ -248,6 +227,27 @@ $sql3 = "SELECT * FROM `challenges`";
                     <div id="addAdminResult"></div>
                 </div>
             </div>
+
+            <div class="divider div7"></div>
+
+            <div class="wrapper-content div8" id="otp-wrapper">
+                <div class="title-wrapper">
+                    <h2>Generate One-time Passcode</h2>
+                </div>
+                <div class="button-wrapper">
+                    <button id="createOTPButton" class="inputs buttons" onclick="createOTP()">Create OTP</button>
+                </div>
+                <div class="OTP-wrapper" id="OTPWrapper">
+                    <label class="labels">One-time Passcode:</label>
+                    <div class="span-wrapper">
+                        <span id="OTP" class="labels"></span>
+                        <div class="copy-wrapper">
+                            <p id="copy">copy</p>
+                            <ion-icon class="copy" name="copy-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </div>
     <script>
         //sends the start and end dates for RAT to the database
