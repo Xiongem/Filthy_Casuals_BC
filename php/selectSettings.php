@@ -52,31 +52,33 @@ if ($tabName === 'account') { ?>
                     </div>
                 </div>
 
-                <div class="username-wrapper">
-                    <label>Username:</label>
+                <div class="input-wrapper spacing">
+                    <label class="labels">Username:</label>
                     <input type="text" 
                             name="username" 
                             id="username" 
                             class="inputs" 
-                            onchange="checkName();"
                             value="<?=$username?>">
+
+                    <span id="user-availability-status"></span>
                 </div>
 
                 <span id="user-availability-status"></span>
 
-                <div class="email-wrapper">
-                    <label>Email:</label>
+                <div class="input-wrapper spacing">
+                    <label class="labels">Email:</label>
                     <input type="email" 
                             name="email" 
                             id="email" 
                             class="inputs" 
-                            onchange="checkEmail();"
                             value="<?=$email?>">
+
+                    <span id="email-availability-status"></span>
                 </div>
 
                 <span id="email-availability-status"></span>
 
-                <div class="timezone-wrapper">
+                <div class="timezone-wrapper spacing">
                     <label for="imezone">Choose Your Timezone:</label>
                     <select id="timezone" name="timezone" class="form-select inputs" required>
                         <option value="Asia/Tokyo" <?php if($timezone == "Asia/Tokyo"){ ?>selected="selected"<?php } ?>>
@@ -351,11 +353,11 @@ if ($tabName === 'account') { ?>
                     </select>
                 </div>
 
-                <div class="reset-wrapper">
+                <div class="reset-wrapper spacing">
                     <a href="#">Reset Password</a>
                 </div>
 
-                <div class="button-wrapper">
+                <div class="button-wrapper spacing">
                     <button type="submit" id="accountButton" class="buttons">Submit</button>
                 </div>
             </form>

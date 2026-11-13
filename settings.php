@@ -28,52 +28,6 @@ $userID = $_SESSION["user_id"];
     <!-- <script src="https://kit.fontawesome.com/ea9288eda1.js" crossorigin="anonymous"></script> -->
     <script src="javascript/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        function checkName(){
-            // var username=document.getElementById( "username" ).value;
-            var username = $('#username').val();
-
-            if(username){
-                $.ajax({
-                type: 'post',
-                url: 'php/checkData.php',
-                data: {
-                    username: username,
-                },
-                success: function (data) {
-                    $( '#user-availability-status' ).html(data);
-                }
-                });
-            }
-            else{
-                $( '#user-availability-status' ).html("");
-                console.log("Something went wrong")
-                return false;
-            }
-        }
-        function checkEmail(){
-            // var email=document.getElementById( "email" ).value;
-            var email = $('#email').val();
-            
-            if(email){
-                $.ajax({
-                type: 'post',
-                url: 'php/checkData.php',
-                data: {
-                    email: email,
-                },
-                success: function (data) {
-                    $( '#email-availability-status' ).html(data);
-                }
-                });
-            }
-            else{
-                $( '#email-availability-status' ).html("");
-                console.log("Something went wrong")
-                return false;
-            }
-        }
-    </script>
 </head>
 <body id="body">
     <div class="popup-wrapper hide" id="dangerPopup">
@@ -116,6 +70,77 @@ $userID = $_SESSION["user_id"];
             </div>
             
             <script type="text/javascript">
+                //setup before functions
+                var typingTimer;                //timer identifier
+                var doneTypingInterval = 1000;  //time in ms, 5 seconds for example
+                var $name = $('#username');
+                var $email = $('#email');
+
+                //on keyup, start the countdown
+                $name.on('keyup', function () {
+                    clearTimeout(typingTimer);
+                    typingTimer = setTimeout(doneNameTyping, doneTypingInterval);
+                });
+                //on keydown, clear the countdown 
+                $name.on('keydown', function () {
+                    clearTimeout(typingTimer);
+                });
+                //user is "finished typing," do something
+                function doneNameTyping () {
+                    checkName()
+                }
+
+                //on keyup, start the countdown
+                $email.on('keyup', function () {
+                    clearTimeout(typingTimer);
+                    typingTimer = setTimeout(doneEmailTyping, doneTypingInterval);
+                });
+                //on keydown, clear the countdown 
+                $email.on('keydown', function () {
+                    clearTimeout(typingTimer);
+                });
+                //user is "finished typing," do something
+                function doneEmailTyping () {
+                    checkEmail();
+                }
+
+                function checkName(){
+                    var username = $("#username").val();
+                    
+                    if(username){
+                        $.ajax({
+                            type: 'post',
+                            url: 'php/checkData.php',
+                            data: {username: username},
+                            success: function (data) {
+                                $('#user-availability-status').html(data);
+                            }
+                        });
+                    } else {
+                        $('#user-availability-status').html("");
+                        console.log("Something went wrong")
+                        return false;
+                    }
+                }
+                function checkEmail(){
+                    var email = $("#email").val();            
+                    
+                    if(email){
+                        $.ajax({
+                            type: 'post',
+                            url: 'php/checkData.php',
+                            data: {email: email},
+                            success: function (data) {
+                                $('#email-availability-status').html(data);
+                            }
+                        });
+                    } else {
+                        $('#email-availability-status').html("");
+                        console.log("Something went wrong")
+                        return false;
+                    }
+                }
+
                 window.onload = function () {
                     $("loader").hide();
                     showSettings();

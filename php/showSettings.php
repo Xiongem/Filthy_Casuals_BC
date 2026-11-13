@@ -56,7 +56,6 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                         name="username" 
                         id="username" 
                         class="inputs" 
-                        onchange="checkName();"
                         value="<?=$username?>">
 
                 <span id="user-availability-status"></span>
@@ -68,7 +67,6 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                         name="email" 
                         id="email" 
                         class="inputs" 
-                        onchange="checkEmail();"
                         value="<?=$email?>">
 
                 <span id="email-availability-status"></span>
