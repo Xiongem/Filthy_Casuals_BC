@@ -137,7 +137,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 $('<div/>',{ "class": "row" }).append([
                     $('<div/>',{ "class": "label-wrapper" }).append([
                         $('<label/>',{ "class": "label", for: "newRule", text: "New Rule:" }),
-                        $('<textarea/>',{ "class": "rule", name: "newRule[]", maxlength: "200" }),
+                        $('<textarea/>',{ "class": "rule", name: "newRule[]", maxlength: "200" })
                     ]);
                 ]);
             ]);           
