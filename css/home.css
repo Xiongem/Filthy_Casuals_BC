@@ -306,6 +306,7 @@
         position: relative;
         margin: 0;
         justify-self: center;
+        height: fit-content;
     }
     .league-edit {
         position: absolute;
