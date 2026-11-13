@@ -158,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <div class="title-wrapper">
                 <h1>Account Creation</h1>
             </div>
-            <form id="signup" action="#" method="post" enctype="multipart/form-data">
+            <form id="signup" action="#" method="post" autocomplete="off" enctype="multipart/form-data">
                 <div class="timezone-wrapper">
                     <label class="labels" for="imezone">Choose Your Timezone:</label>
                     <select id="timezone" name="timezone" class="form-select inputs" required>
