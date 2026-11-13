@@ -42,14 +42,15 @@ $userID = $_SESSION["user_id"];
                 Please check your email for a verification link. <br>
                 This link will expire in 30 minutes.
             </p>
-        </div>
-        <p class="spacing">Didn't receive the email? Check your spam folder or click the button below to resend the verification email.</p>
-        <a href="mailVerification.php" class="buttons spacing">
-                Resend Verification Email
-        </a>
+        
+            <p class="spacing">Didn't receive the email? Check your spam folder or click the button below to resend the verification email.</p>
+            <a href="mailVerification.php" class="buttons spacing">
+                    Resend Verification Email
+            </a>
 
-        <div class="login-wrapper spacing">
-            <a href="login.php">Back to Login</a>
+            <div class="login-wrapper spacing">
+                <a href="login.php">Back to Login</a>
+            </div>
         </div>
     </div>
 </body>
