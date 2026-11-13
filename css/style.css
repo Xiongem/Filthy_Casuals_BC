@@ -162,6 +162,9 @@ a {
         justify-content: end;
     }
     .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: var(--marine-green);
         color: var(--barium-yellow);
         border: none;
