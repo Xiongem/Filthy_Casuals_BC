@@ -58,7 +58,7 @@ a {
 
         border-bottom: 1px solid var(--marine-green);
     } 
-    .row h2 {
+    .row h2, .row2 h2 {
         justify-self: center;
     }
     .add-wrapper {
