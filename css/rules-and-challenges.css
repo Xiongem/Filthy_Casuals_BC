@@ -29,20 +29,25 @@ a {
         width: 100%;
         padding: 0 2em;
     }
+    .rules-content {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
     .row, .add-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
     }
-    .rules-content {
+    /* .rules-content {
         display: grid;
         grid-template-columns: 5% 95%;
         row-gap: 0.5em;
         column-gap: 0.5em;
-        /* justify-items: center; */
+        justify-items: center;
         align-content: center;
-    }
+    } */
     /* .rules {
         text-align: center;
         margin: 0.5em;
