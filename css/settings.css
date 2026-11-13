@@ -219,7 +219,7 @@
         border: 2px solid var(--deep-green);
     }
     .settings-account-content, .settings-danger-content {
-        width: 50%;
+        width: 100%;
     }
     #timezone {
         width: 50%;
