@@ -43,19 +43,21 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <div class="title">
                 <h1>Create New Rule</h1>
             </div>
-            <form method="post" action="php/process-createNewRule.php" id="form">
-                <div class="row">
-                    <div class="label-wrapper">
-                        <label class="label" for="newRule">New Rule:</label>
-                        <textarea class="rule" name="newRule[]" maxlength="200"></textarea>
+            <form method="post" action="php/process-createNewRule.php">
+                <div class="row-wrapper" id="rowWrapper">
+                    <div class="row">
+                        <div class="label-wrapper">
+                            <label class="label" for="newRule">New Rule:</label>
+                            <textarea class="rule" name="newRule[]" maxlength="200"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="add-wrapper">
-                    <p>Add New Rule</p>
-                        <ion-icon name="add-circle-outline" onclick="addNewRule()"></ion-icon>
-                </div>
-                <div class="button-wrapper">
-                    <button class="buttons" type="submit">Create</button>
+                    <div class="add-wrapper">
+                        <p>Add New Rule</p>
+                            <ion-icon name="add-circle-outline" onclick="addNewRule()"></ion-icon>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="buttons" type="submit">Create</button>
+                    </div>
                 </div>
             </form>
             </div>
@@ -133,8 +135,13 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         }
 
         function addNewRule() {
-            $('#form').append([
-                $('<div/>',{ "class": "row" })
+            $('#rowWrapper').append([
+                $('<div/>',{ "class": "row" }).append([
+                    $('<div/>',{ "class": "label-wrapper" }).append([
+                        $('<label/>',{ "class": "label", for: "newRule", text: "New Rule:" }),
+                        $('<textarea/>',{ "class": "rule", name: "newRule[]", maxlength: "200" })
+                    ])
+                ])
             ]);           
         }
     </script>
