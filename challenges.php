@@ -188,9 +188,9 @@ $sql2 = "SELECT * FROM `challenges`";
             <div class="activity-content">
                 <h1>Activities</h1>
                 <?php $stmt2 = $_SESSION["conn"]->query("SELECT * FROM `activities`");
-                    $act = mysqli_num_rows($stmt);
+                    $act = mysqli_num_rows($stmt2);
                     if ($act > 0) {
-                        while ($act = mysqli_fetch_assoc($stmt)) {
+                        while ($act = mysqli_fetch_assoc($stmt2)) {
                             $actID = $act["act_id"];
                             $actName = $act["act_name"];
                             $actInfo = $act["act_info"];
