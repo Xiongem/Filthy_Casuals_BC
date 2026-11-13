@@ -41,4 +41,7 @@ $stmt1->execute();
 
             if ($stmt4->execute() && $stmt4 -> affected_rows > 0) {
                 header("Location: /login.php");
+                exit;
+            } else {
+                die("something went wrong" . $stmt4 -> error);
             }
