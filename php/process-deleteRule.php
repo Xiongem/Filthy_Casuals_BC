@@ -17,7 +17,7 @@ $stmt->bind_param("i",
 
 if ($stmt->execute() && $stmt -> affected_rows > 0) {
     echo ('<div class="deleteNotif">
-            <h1>Entry successfully deleted</h1>
+            <h1>Rule successfully deleted</h1>
         </div>');
 } else {
     die("Failed to delete rule" . $stmt->error);

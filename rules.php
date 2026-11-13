@@ -41,25 +41,25 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             </div>
             <div class="popup-content" id="rulesResults">
                 <div class="title">
-                <h1>Create New Rule</h1>
-            </div>
-            <form method="post" action="php/process-createNewRule.php">
-                <div class="row-wrapper" id="rowWrapper">
-                    <div class="newRow">
-                        <div class="label-wrapper">
-                            <label class="label" for="newRule">New Rule:</label>
-                            <textarea class="rule inputs" name="newRule[]" maxlength="200"></textarea>
+                    <h1>Create New Rule</h1>
+                </div>
+                <form method="post" action="php/process-createNewRule.php">
+                    <div class="row-wrapper" id="rowWrapper">
+                        <div class="newRow">
+                            <div class="label-wrapper">
+                                <label class="label" for="newRule">New Rule:</label>
+                                <textarea class="rule inputs" name="newRule[]" maxlength="200"></textarea>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="add-wrapper spacing">
-                    <p>Add Another Rule</p>
-                        <ion-icon name="add-circle-outline" onclick="addNewRule()"></ion-icon>
-                </div>
-                <div class="button-wrapper">
-                    <button class="buttons" type="submit">Create</button>
-                </div>
-            </form>
+                    <div class="add-wrapper spacing">
+                        <p>Add Another Rule</p>
+                            <ion-icon name="add-circle-outline" onclick="addNewRule()"></ion-icon>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="buttons" type="submit">Create</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -121,45 +121,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 </div>
                 <?php } ?>
             </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="content-wrapper">
-            <div class="activity-content">
-                <h1>Activities</h1>
-                <?php $stmt2 = $_SESSION["conn"]->query("SELECT * FROM `rules`");
-                    $act = mysqli_num_rows($stmt);
-                    if ($act > 0) {
-                        while ($act = mysqli_fetch_assoc($stmt)) {
-                            $actID = $act["act_id"];
-                            $actName = $act["act_name"];
-                            $actInfo = $act["act_info"];
-                ?>
-                <div class="<?php if($admin== 1){echo ("activity");}else{echo ("activity2");} ?>" id="<?=$actID?>">
-                    <?php if ($admin == 1) { ?>
-                    <ion-icon class="icon" name="settings-outline" onclick="showActEdit(<?=$actID?>)"></ion-icon>
-                    <?php } ?>
-                    <div id="activity"><?=$actName?></div>
-                    <div id="instruct"><?=$actInfo?></div>
-                    <?php if ($admin == 1) { ?>
-                    <ion-icon class="warning icon" name="remove-circle" onclick="showRemoveAct(<?=$actID?>)"></ion-icon>
-                    <?php } ?>
-                </div>
-                <?php }} else { ?>
-                <div class="act-wrapper">
-                    <h3>No Activities Found</h3>
-                </div>
-                <?php } ?>
-                <?php if ($admin == 1) { ?>
-                <div class="add-wrapper">
-                    <p>Add New Activity</p>
-                        <ion-icon class="icon" name="add-circle-outline" onclick="showNewAct()"></ion-icon>
-                </div>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
+        </div>     
     <script>
         function showNewRule() {
             $("#rulesPopup").css({"display": "flex"});
@@ -228,9 +190,6 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             $("#body").css({"height": "unset", "overflow": "unset"});
             location.reload(true);
         }
-
-
-
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
