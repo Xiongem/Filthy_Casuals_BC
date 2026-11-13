@@ -101,7 +101,7 @@ $admin = 0;
                             $ruleID = $rules["rule_id"];
                             $rule = $rules["rule_info"];
                 ?>
-                <div class="row">
+                <div class="<?php if($admin== 1){echo ("row");}else{echo ("row2");} ?>">
                     <?php if ($admin == 1) { ?>
                     <ion-icon class="icon" name="settings-outline" onclick="showRuleEdit(<?=$ruleID?>)"></ion-icon>
                     <?php } ?>
