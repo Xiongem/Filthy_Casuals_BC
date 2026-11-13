@@ -8,8 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     ob_start();
     require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
     dbConnect();
-    
-    echo "hello 1";
+
     //query
     $sql = sprintf("SELECT * FROM oneTimePasscodes
                     WHERE oneTimePass = '%s'",
@@ -42,8 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Filthy Casual Book Challenge"> 
     <meta property="og:description" content="A competition for filthy casuals."> 
-    <meta property="og:image" content=""> 
-    <meta property="og:url" content="">
+    <meta property="og:image" content="https://filthycasualsbc.com/images/FCBClogo.svg"> 
+    <meta property="og:url" content="https://filthycasualsbc.com/onetimePasscode.php">
     <title>One-time Passcode</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
@@ -81,7 +80,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <button type="submit" id="OTPButton" class="inputs buttons">Submit</button>
                 </div>
             </form>
-            <!-- <a href="createAccount.php">account creation</a> -->
         </div>
     </div>
 </body>

@@ -51,8 +51,8 @@ $sql2 = "SELECT * FROM `challenges`";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Filthy Casual Book Challenge"> 
     <meta property="og:description" content="A competition for filthy casuals."> 
-    <meta property="og:image" content=""> 
-    <meta property="og:url" content="">
+    <meta property="og:image" content="https://filthycasualsbc.com/images/FCBClogo.svg"> 
+    <meta property="og:url" content="https://filthycasualsbc.com/challenges.php">
     <title>Challenges</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rules-and-challenges.css">

@@ -42,8 +42,8 @@ $today = date("Y-m-d");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Filthy Casual Book Challenge"> 
     <meta property="og:description" content="A competition for filthy casuals."> 
-    <meta property="og:image" content=""> 
-    <meta property="og:url" content="">
+    <meta property="og:image" content="https://filthycasualsbc.com/images/FCBClogo.svg"> 
+    <meta property="og:url" content="https://filthycasualsbc.com/update.php">
     <title>Update Reading History</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/update.css">
@@ -61,9 +61,6 @@ $today = date("Y-m-d");
             <div class="title-wrapper">
                 <h1>Update Your Reading History</h1>
             </div>
-            <!-- <div class="instructions">
-                <span class="required">* </span><span>= required</span>
-            </div> -->
             <form action="php/process-update.php" method="post">
                 <div class="label-wrapper">
                     <label for="title" class="labels">Title:</label>

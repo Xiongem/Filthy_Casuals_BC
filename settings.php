@@ -18,8 +18,8 @@ $userID = $_SESSION["user_id"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Filthy Casual Book Challenge"> 
     <meta property="og:description" content="A competition for filthy casuals."> 
-    <meta property="og:image" content=""> 
-    <meta property="og:url" content="">
+    <meta property="og:image" content="https://filthycasualsbc.com/images/FCBClogo.svg"> 
+    <meta property="og:url" content="https://filthycasualsbc.com/settings.php">
     <title>Settings</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/settings.css">

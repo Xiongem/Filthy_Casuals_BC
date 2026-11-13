@@ -23,8 +23,8 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Filthy Casual Book Challenge"> 
     <meta property="og:description" content="A competition for filthy casuals."> 
-    <meta property="og:image" content=""> 
-    <meta property="og:url" content="">
+    <meta property="og:image" content="https://filthycasualsbc.com/images/FCBClogo.svg"> 
+    <meta property="og:url" content="https://filthycasualsbc.com/rules.php">
     <title>Rules</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rules-and-challenges.css">

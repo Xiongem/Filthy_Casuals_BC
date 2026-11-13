@@ -13,7 +13,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 
 $mail = new PHPMailer\PHPMailer\PHPMailer;
 
-$userID = $_SESSION["user_id"];
+$userID = $_GET["user_id"];
 
  $sql = "SELECT email, username FROM users WHERE user_id = $userID";
         $result = $_SESSION["conn"]->query($sql);
