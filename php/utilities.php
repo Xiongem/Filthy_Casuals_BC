@@ -63,9 +63,9 @@ function makeNav() {
                     <a class="nav-item" href="rules.php">Rules</a>
                     <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>
                     <a class="nav-item" href="friendRec.php">Friend Recs</a>
-                    <?php if ($admin == 1) { ?>
+                    if ($admin == 1) {
                         <a href="admin.php" class="nav-item">Admin$admin</a>
-                    <?php } ?>
+                    }
                     <a class="nav-item" href="settings.php">Settings</a>
                     <a class="nav-item" href="php/logout.php">Logout</a>
                     <a id="update" class="desktop-nav-item" href="update.php">
