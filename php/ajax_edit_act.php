@@ -26,7 +26,7 @@ $sql = "SELECT *
     <input type="text" id="actNameEdit" name="actNameEdit" class="inputs" value="<?=$actName?>">
 
     <label class="label" for="actInfoEdit">Description:</label>
-    <textarea id="actInfoEdit" name="actInfoEdit" class="inputs" maxlength="200"><?=$actInfo?></textarea>
+    <textarea id="actInfoEdit" name="actInfoEdit" class="inputs" maxlength="400"><?=$actInfo?></textarea>
 </div>
 <div class="button-wrapper">
     <div class="buttons" onclick="editAct(<?=$actID?>)">Submit</div>

@@ -22,7 +22,7 @@ $sql = "SELECT `rule_info`
 
 <div class="edit-wrapper">
     <label for="ruleEdit">Rule:</label>
-    <textarea id="ruleEdit" name="ruleEdit" class="inputs" maxlength="200"><?=$ruleInfo?></textarea>
+    <textarea id="ruleEdit" name="ruleEdit" class="inputs" maxlength="400"><?=$ruleInfo?></textarea>
 </div>
 <div class="button-wrapper">
     <div class="buttons" onclick="editRule(<?=$ruleID?>)">Submit</div>
