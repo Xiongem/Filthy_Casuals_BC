@@ -23,7 +23,7 @@ $now = date("Y-m-d H:i:s");
 
 $rules = $_POST['newRule'];
 
-// print_r($rules);
+print_r($rules);
 $num = 0;
 
 foreach ($rules as $value){
@@ -42,8 +42,8 @@ foreach ($rules as $value){
 $stmt -> execute();
 
 if ($num == count($rules)) {
-    // echo "Rule created successfully";
-    header("Location: /rules.php");
+    echo "Rule created successfully";
+    // header("Location: /rules.php");
 } else {
     // echo "Error creating rule: " . $stmt -> error;
     die("Error creating rule: " . $stmt -> error);
