@@ -151,78 +151,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <script src="javascript/scripts.js"></script>
     <script src="https://use.fontawesome.com/fe459689b4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        //setup before functions
-        var typingTimer;                //timer identifier
-        var doneTypingInterval = 1000;  //time in ms, 5 seconds for example
-        var $name = $('#username');
-        var $email = $('#email');
-
-        //on keyup, start the countdown
-        $name.on('keyup', function () {
-            clearTimeout(typingTimer);
-            typingTimer = setTimeout(doneTyping, doneTypingInterval);
-        });
-        //on keydown, clear the countdown 
-        $name.on('keydown', function () {
-            clearTimeout(typingTimer);
-                console.log("goodbye");
-        });
-        //user is "finished typing," do something
-        function doneTyping () {
-            checkName();
-                console.log("hello");
-        }
-
-        //on keyup, start the countdown
-        $email.on('keyup', function () {
-            clearTimeout(typingTimer);
-            typingTimer = setTimeout(doneTyping, doneTypingInterval);
-        });
-        //on keydown, clear the countdown 
-        $email.on('keydown', function () {
-            clearTimeout(typingTimer);
-                console.log("goodbye");
-        });
-        //user is "finished typing," do something
-        function doneTyping () {
-            checkEmail();
-                console.log("hello");
-        }
-
-        function checkName(){
-            var username = $("#username").val();
-            
-            if(username){
-                $.ajax({
-                    type: 'post',
-                    url: 'php/checkData.php',
-                    data: {username: username},
-                    success: function (data) {
-                        $('#user-availability-status').html(data);
-                    }
-                });
-            } else {
-                $('#user-availability-status').html("");
-                console.log("Something went wrong")
-                return false;
-            }
-        }
-        function checkEmail(){
-            var email = $("#email").val();            
-            
-            
-                $.ajax({
-                    type: 'post',
-                    url: 'php/checkData.php',
-                    data: {email: email},
-                    success: function (data) {
-                        $('#email-availability-status').html(data);
-                    }
-                });
-            
-        }
-    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -418,5 +346,81 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 }
             }
         </script>
+    <script>
+        //setup before functions
+        var typingTimer;                //timer identifier
+        var doneTypingInterval = 1000;  //time in ms, 5 seconds for example
+        var $name = $('#username');
+        var $email = $('#email');
+
+        //on keyup, start the countdown
+        $name.on('keyup', function () {
+            clearNameTimeout(typingTimer);
+            typingTimer = setNameTimeout(doneNameTyping, doneTypingInterval);
+        });
+        //on keydown, clear the countdown 
+        $name.on('keydown', function () {
+            clearNameTimeout(typingTimer);
+                console.log("goodbye");
+        });
+        //user is "finished typing," do something
+        function doneNameTyping () {
+            checkName()
+                console.log("hello");
+        }
+
+        //on keyup, start the countdown
+        $email.on('keyup', function () {
+            clearEmailTimeout(typingTimer);
+            typingTimer = setEmailTimeout(doneEmailTyping, doneTypingInterval);
+        });
+        //on keydown, clear the countdown 
+        $email.on('keydown', function () {
+            clearEmailTimeout(typingTimer);
+                console.log("goodbye");
+        });
+        //user is "finished typing," do something
+        function doneEmailTyping () {
+            checkEmail();
+                console.log("hello");
+        }
+
+        function checkName(){
+            var username = $("#username").val();
+            
+            if(username){
+                $.ajax({
+                    type: 'post',
+                    url: 'php/checkData.php',
+                    data: {username: username},
+                    success: function (data) {
+                        $('#user-availability-status').html(data);
+                    }
+                });
+            } else {
+                $('#user-availability-status').html("");
+                console.log("Something went wrong")
+                return false;
+            }
+        }
+        function checkEmail(){
+            var email = $("#email").val();            
+            
+            if(email){
+                $.ajax({
+                    type: 'post',
+                    url: 'php/checkData.php',
+                    data: {email: email},
+                    success: function (data) {
+                        $('#email-availability-status').html(data);
+                    }
+                });
+            } else {
+                $('#email-availability-status').html("");
+                console.log("Something went wrong")
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
