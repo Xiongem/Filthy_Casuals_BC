@@ -37,7 +37,9 @@ foreach ($rules as $key => $value){
 }
 
 if ($stmt -> execute()) {
-    echo "Rule created successfully";
+    // echo "Rule created successfully";
+    header("Location: /rules.php");
 } else {
-    echo "Error creating rule: " . $stmt -> error;
+    // echo "Error creating rule: " . $stmt -> error;
+    die("Error creating rule: " . $stmt -> error);
 }
