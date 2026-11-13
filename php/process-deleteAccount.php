@@ -26,12 +26,12 @@ $stmt1->execute();
     $stmt2->execute();
 
 
-        $stmt3 = $_SESSION["conn"]->prepare("DELETE FROM `readHistory` WHERE `user_id` = ?");
+        // $stmt3 = $_SESSION["conn"]->prepare("DELETE FROM `readHistory` WHERE `user_id` = ?");
 
-        $stmt3->bind_param("i",
-                            $userID);
+        // $stmt3->bind_param("i",
+        //                     $userID);
 
-        $stmt3->execute();
+        // $stmt3->execute();
 
 
             $stmt4 = $_SESSION["conn"]->prepare("DELETE FROM `users` WHERE `user_id` = ?");
