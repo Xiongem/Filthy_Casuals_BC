@@ -223,6 +223,9 @@ a {
     .activity div, .activity2 div {
         padding: 0.5em;
     }
+    #activity {
+        font-weight: bold;
+    }
     .actRow {
         display: flex;
         flex-direction: column;
