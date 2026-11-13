@@ -59,14 +59,14 @@ if ($user["verification_hash"] === $token_hash) {
     <div class="login-wrapper">
         <div class="login-content">
             <h1>Account Creation</h1>
-            <p>Thank you for creating an account with us! <br>
+            <p class="spacing">Thank you for creating an account with us! <br>
                 Your email has been verified. <br>
                 You can now log in to your account.
             </p>
         </div>
     </div>
 
-    <div class="login-wrapper">
+    <div class="login-wrapper spacing">
         <a href="login.php">Back to Login</a>
     </div>
 </body>
