@@ -153,28 +153,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         function checkName(){
-            var username = document.getElementById("username").value;
+            var username = $("#username").val();
             
             if(username){
                 $.ajax({
-                type: 'post',
-                url: 'php/checkData.php',
-                data: {
-                    username: username,
-                },
-                success: function (data) {
-                    $('#user-availability-status').html(data);
-                }
+                    type: 'post',
+                    url: 'php/checkData.php',
+                    data: {username: username},
+                    success: function (data) {
+                        $('#user-availability-status').html(data);
+                    }
                 });
-            }
-            else{
+            } else {
                 $('#user-availability-status').html("");
                 console.log("Something went wrong")
                 return false;
             }
         }
         function checkEmail(){
-            var email = document.getElementById("email").value;
+            var email = $("#email").val();
             
             if(email){
                 $.ajax({
@@ -304,7 +301,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     name="email"
                     id="email"
                     class="inputs"
-                    onchange="checkEmail();"
+                    onkeyup="checkEmail();"
                     required>
 
                 <span id="email-availability-status"></span>
@@ -314,7 +311,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     name="username"
                     id="username"
                     class="inputs"
-                    onchange="checkName();"
+                    onkeyup="checkName();"
                     required>
 
                 <span id="user-availability-status"></span>
