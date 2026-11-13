@@ -92,6 +92,7 @@ a {
         /* justify-content: center;
         align-items: center; */
         width: 100%;
+        padding-top: 1em;
     }
     form {
         width: 100%;
