@@ -210,6 +210,34 @@
     #challenge-divider {
         display: none;
     }
+
+
+    .admin-wrapper{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .search-admin-wrapper{
+        display: flex;
+        align-items: end;
+    }
+    .search {
+        display: flex;
+        flex-direction: column;
+    }
+    .username {
+        position: relative;
+        z-index: 2;
+        min-width: 30em;
+        height: 2.5em;
+
+        background-color: var(--barium-yellow);
+        accent-color: var(--marine-green);
+        border: 2px solid var(--marine-green);
+        border-radius: 4px;
+        
+        padding-left: 0.5em;
+    }
 }
 .inputs {
     margin: 0;

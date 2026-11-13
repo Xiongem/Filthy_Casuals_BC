@@ -233,7 +233,7 @@ $sql3 = "SELECT * FROM `challenges`";
                 <div class="title-wrapper">
                     <h2>Add Admin</h2>
                 </div>
-                <div class="search-wrapper">
+                <div class="admin-wrapper">
                     <div class="search-admin-wrapper">
                         <div class="search">
                             <label for="keyword" class="labels">Username:</label>
