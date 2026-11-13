@@ -39,6 +39,7 @@ a {
     .row {
         display: grid;
         grid-template-columns: 10% 80% 10%;
+        align-items: center;
         width: 100%;
 
         border-bottom: 1px solid var(--marine-green);
