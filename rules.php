@@ -121,13 +121,13 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
     </div>
     <script>
         function showNewRule() {
-            $("#rulePopup").css({"display": "flex"});
-            var rulePopup = document.getElementById("rulePopup");
-            rulePopup.scrollIntoView();
+            $("#rulesPopup").css({"display": "flex"});
+            var rulesPopup = document.getElementById("rulesPopup");
+            rulesPopup.scrollIntoView();
             setTimeout(hideBackground, 500);
         }
         function closeNewRule() {
-            $("#rulePopup").hide();
+            $("#rulesPopup").hide();
             $("#body").css({"height": "unset", "overflow": "unset"});
             location.reload(true);
         }
