@@ -22,7 +22,7 @@ $sql = "SELECT *
 ?>
 
 <div class="title">
-<h1>Delete act</h1>
+<h1>Delete Activity</h1>
 <div class="delete-wrapper">
     <h3 class="spacing">Delete <?=$actName?>:</h3>
     <p class="spacing" id="<?=$actID?>"><?=$actInfo?></p>
