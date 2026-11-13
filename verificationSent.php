@@ -48,8 +48,10 @@ $userID = $_SESSION["user_id"];
                     Resend Verification Email
             </a>
 
-            <div class="login-wrapper spacing">
-                <a href="login.php">Back to Login</a>
+            <div class="button-wrapper">
+                <div class="login-wrapper spacing">
+                    <a href="login.php">Back to Login</a>
+                </div>
             </div>
         </div>
     </div>
