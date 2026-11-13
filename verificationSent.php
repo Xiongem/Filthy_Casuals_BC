@@ -46,7 +46,7 @@ $userID = $_SESSION["user_id"];
     </div>
     <div>
         <p>Didn't receive the email? Check your spam folder or click the button below to resend the verification email.</p>
-        <a href="mailVerification.php" class="btn">
+        <a href="mailVerification.php" class="buttons">
             <div>
                 Resend Verification Email
             </div>
