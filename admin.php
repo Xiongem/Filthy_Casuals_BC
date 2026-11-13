@@ -241,7 +241,7 @@ $sql3 = "SELECT * FROM `challenges`";
                                 name="keyword" 
                                 id="username" 
                                 class="username" 
-                                onkeyup="autocomplete()">
+                                onkeyup="adminAutocomplete()">
                         </div>
                     </div>
                     <div id="search_results" class="search-wrapper"></div>
@@ -403,7 +403,7 @@ $sql3 = "SELECT * FROM `challenges`";
             });
         }
 
-        function autocomplete() {
+        function adminAutocomplete() {
             var min_length = 0; // min characters to display the autocomplete
             var keyword = $("#username").val();
             console.log(keyword);
