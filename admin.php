@@ -281,9 +281,8 @@ $sql3 = "SELECT * FROM `challenges`";
             $.ajax({
                 url: "php/process-deactivateBingo.php",
                 method: "post",
-                data: {
-                    bingoName:bingoName
-                },success:function(result) {
+                data: {bingoName:bingoName},
+                success:function(result) {
                     $("#deactivateResult").html(result);
                     setTimeout(refresh, 3000);
                 }
@@ -296,9 +295,8 @@ $sql3 = "SELECT * FROM `challenges`";
                 $.ajax({
                     url: "php/process-activateBingo.php",
                     method: "post",
-                    data: {
-                        bingoName:bingo
-                    },success:function(result) {
+                    data: {bingoName:bingo},
+                    success:function(result) {
                         $("#bingoResult").html(result)
                         setTimeout(refresh, 3000);
                     }
@@ -338,8 +336,7 @@ $sql3 = "SELECT * FROM `challenges`";
             $.ajax({
                 url: "php/process-updateChallenges.php",
                 method: "post",
-                data: {
-                    month_jan:jan,
+                data: {month_jan:jan,
                     month_feb:feb,
                     month_march:march,
                     month_april:april,
@@ -362,8 +359,8 @@ $sql3 = "SELECT * FROM `challenges`";
                         sept_Descr:septDescr,
                         oct_Descr:octDescr,
                         nov_Descr:novDescr,
-                        dec_Descr:decDescr
-                },success:function(result) {
+                        dec_Descr:decDescr},
+                success:function(result) {
                     $("#challengeResult").html(result);
                     setTimeout(resetWords, 3000);
                 }
@@ -429,7 +426,7 @@ $sql3 = "SELECT * FROM `challenges`";
             $.ajax ({
                 url: "php/process-addAdmin.php",
                 method: "post",
-                data {user_id:userID},
+                data: {user_id:userID},
                 success:function (result) {
                     $("#addAdminResult").html(result);
                 }
