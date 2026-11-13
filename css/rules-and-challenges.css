@@ -73,6 +73,7 @@ a {
         margin-right: 0.5em;
     }
     .icon {
+        justify-self: center;
         font-size: 28px;
         cursor: pointer;
     }
@@ -225,6 +226,9 @@ a {
 @media only screen and (min-width: 1024px) {
     .content-wrapper {
         width: 50%;
+    }
+    .row {
+        grid-template-columns: 5% 5% 85% 5%;
     }
     .challenge-content {
         width: 50%;
