@@ -75,10 +75,10 @@ $sql2 = "SELECT * FROM `challenges`";
                         <div class="act-wrapper spacing" id="actWrapper">
                             <div class="actRow spacing">
                                 <label class="label" for="newActName">Activity Name:</label>
-                                <input class="inputs" type="text" name="newActName[]">
+                                <input class="inputs" type="text" name="newActName">
 
                                 <label for="newActDescr">Activity Description:</label>
-                                <textarea class="inputs" name="newActDescr[]" maxlength="200"></textarea>
+                                <textarea class="inputs" name="newActDescr" maxlength="200"></textarea>
                             </div>
                         </div>
                         <div class="button-wrapper">
