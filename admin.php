@@ -405,7 +405,7 @@ $sql3 = "SELECT * FROM `challenges`";
 
         function autocomplete() {
             var min_length = 0; // min characters to display the autocomplete
-            var keyword = document.getElementById('username').value;
+            var keyword = $("#username").val();
             
             if (keyword.length > min_length) {
                 $.ajax({
