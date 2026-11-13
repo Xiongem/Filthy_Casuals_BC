@@ -21,18 +21,23 @@ date_default_timezone_set("$timezone");
 
 $now = date("Y-m-d H:i:s");
 
-$stmt = $_SESSION['conn'] -> prepare("INSERT INTO `rules` (`rule_info`,
-                                                            `set_by`,
-                                                            `set_at`)
-                                        VALUES (?, ?, ?)");
-                                        
-    $stmt -> bind_param("sss", 
-                        $_POST["newRule"],
-                        $username,
-                        $now);
+$rules = $_POST['newRule'];
 
-if ($stmt -> execute() && $stmt -> affected_rows > 0) {
-    echo "Rule added successfully";
+foreach ($rules as $key => $value){
+
+    $stmt = $_SESSION['conn'] -> prepare("INSERT INTO `rules` (`rule_info`,
+                                                                `set_by`,
+                                                                `set_at`)
+                                            VALUES (?, ?, ?)");
+                                            
+        $stmt -> bind_param("sss", 
+                            $value,
+                            $username,
+                            $now);
+}
+
+if ($stmt -> execute()) {
+    echo "Rule created successfully";
 } else {
-    echo "Error adding rule: " . $stmt -> error;
+    echo "Error creating rule: " . $stmt -> error;
 }
