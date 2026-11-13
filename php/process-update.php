@@ -38,7 +38,7 @@ $month = date("n",strtotime($_POST["dateFinished"]));
 $totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
 
 if (isset($_POST["tag"])) {
-    $tags = $_POST["tag"];
+    $tags = $_POST["tag"][$value];
     $insert_tags = implode(",", $tags);
 } else {
     $insert_tags = NULL;
@@ -103,7 +103,7 @@ if ($stmt1 -> execute()) {
                             $userID);
     if ($stmt2->execute()) {
         if ($insert_tags !== NULL) {
-            foreach ($tags as $key => $value) {
+            foreach ($tags as $value) {
                 $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
                     ON DUPLICATE KEY UPDATE `tags` = ?;");
                 $stmt3->bind_param("ss", 
