@@ -101,7 +101,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 ?>
                 <div class="row">
                     <?php if ($admin == 1) { ?>
-                    <ion-icon class="icon" name="settings-outline" size="large" onclick="showRuleEdit()"></ion-icon>
+                    <ion-icon class="icon" name="settings-outline" size="large" onclick="showRuleEdit(<?=$ruleID?>)"></ion-icon>
                     <?php } ?>
                     <h2 class="rank"><?=$rank?></h2>
                     <p class="rules" id="<?=$ruleID?>"><?=$rule?></p>
@@ -194,7 +194,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             ]);           
         }
 
-        function showRuleEdit() {
+        function showRuleEdit(ruleID) {
             $("#ruleEditPopup").css({"display": "flex"});
             var ruleEditPopup = document.getElementById("ruleEditPopup");
             ruleEditPopup.scrollIntoView();
