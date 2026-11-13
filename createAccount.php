@@ -171,23 +171,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             }
         }
         function checkEmail(){
-            var email = $("#email").val();
-            console.log(email);
-            
+            var email = $("#email").val();            
             
             if(email){
                 $.ajax({
-                type: 'post',
-                url: 'php/checkData.php',
-                data: {
-                    email: email,
-                },
-                success: function (data) {
-                    $('#email-availability-status').html(data);
-                }
+                    type: 'post',
+                    url: 'php/checkData.php',
+                    data: {email: email},
+                    success: function (data) {
+                        $('#email-availability-status').html(data);
+                    }
                 });
-            }
-            else{
+            } else {
                 $('#email-availability-status').html("");
                 console.log("Something went wrong")
                 return false;
