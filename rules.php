@@ -51,13 +51,13 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                             <textarea class="rule" name="newRule[]" maxlength="200"></textarea>
                         </div>
                     </div>
-                    <div class="add-wrapper">
-                        <p>Add New Rule</p>
-                            <ion-icon name="add-circle-outline" onclick="addNewRule()"></ion-icon>
-                    </div>
-                    <div class="button-wrapper">
-                        <button class="buttons" type="submit">Create</button>
-                    </div>
+                </div>
+                <div class="add-wrapper">
+                    <p>Add New Rule</p>
+                        <ion-icon name="add-circle-outline" onclick="addNewRule()"></ion-icon>
+                </div>
+                <div class="button-wrapper">
+                    <button class="buttons" type="submit">Create</button>
                 </div>
             </form>
             </div>
