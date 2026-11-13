@@ -65,23 +65,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <h1>Login</h1>
             </div>
             <form method="post" action="#">
-                <label for="email" class="labels">Email:</label>
-                <input type="email"
-                    name="email"
-                    id="email"
-                    class="inputs"
-                    required>
-                <label for="password" class="labels">Password:</label>
-                <input type="password"
-                    name="password"
-                    id="password"
-                    class="inputs"
-                    required>
+                <div class="wrapper spacing">
+                    <label for="email" class="labels">Email:</label>
+                    <input type="email"
+                        name="email"
+                        id="email"
+                        class="inputs"
+                        required>
+                </div>
+
+                <div class="wrapper spacing">
+                    <label for="password" class="labels">Password:</label>
+                    <input type="password"
+                        name="password"
+                        id="password"
+                        class="inputs"
+                        required>
+                </div>
                 <div class="button-wrapper">
                     <button type="submit" id="loginButton" class="inputs buttons">Login</button>
                 </div>
             </form>
-            <div class="link-wrapper">
+            <div class="link-wrapper spacing">
                 <a href="onetimePasscode.php">Account Creation</a>
                 <a href="">Forgot Password?</a>
             </div>
