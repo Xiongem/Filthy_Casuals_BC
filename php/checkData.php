@@ -17,9 +17,9 @@ if (! empty($_POST["username"])) {
         $statement->execute();
     $result = $statement->get_result();
     if ($result->num_rows > 0) {
-        echo "Username Already In Use";
+        echo '<span class="warning">Username Already In Use</span>';
     } else {
-        echo "Username Available";
+        echo '<span class="success">Username Available</span>';
     }
  exit();
 }
@@ -32,9 +32,9 @@ if (! empty($_POST["email"])) {
         $statement->execute();
     $result = $statement->get_result();
     if ($result->num_rows > 0) {
-        echo "Email Already in Use";
+        echo '<span class="warning">Email Already in Use</span>';
     } else {
-        echo "Email Available";
+        echo '<span class="success">Email Available</span>';
     }
  exit();
 }
