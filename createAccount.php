@@ -211,7 +211,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         function checkEmail(){
             var email = $("#email").val();            
             
-            if(email){
+            
                 $.ajax({
                     type: 'post',
                     url: 'php/checkData.php',
@@ -220,11 +220,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         $('#email-availability-status').html(data);
                     }
                 });
-            } else {
-                $('#email-availability-status').html("");
-                console.log("Something went wrong")
-                return false;
-            }
+            
         }
     </script>
 </head>
