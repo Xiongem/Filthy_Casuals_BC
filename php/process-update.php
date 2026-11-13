@@ -38,7 +38,7 @@ $month = date("n",strtotime($_POST["dateFinished"]));
 $totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
 
 if (isset($_POST["tag"])) {
-    $insert_tags = implode(",", $tags);
+    $insert_tags = implode(",", $_POST["tag"]);
     $tags = $_POST["tag"][$value];
 } else {
     $insert_tags = NULL;
