@@ -23,23 +23,25 @@ $now = date("Y-m-d H:i:s");
 
 $rules = $_POST['newRule'];
 
-foreach ($rules as $key => $value){
+print_r($rules);
 
-    $stmt = $_SESSION['conn'] -> prepare("INSERT INTO `rules` (`rule_info`,
-                                                                `set_by`,
-                                                                `set_at`)
-                                            VALUES (?, ?, ?)");
+// foreach ($rules as $key => $value){
+
+//     $stmt = $_SESSION['conn'] -> prepare("INSERT INTO `rules` (`rule_info`,
+//                                                                 `set_by`,
+//                                                                 `set_at`)
+//                                             VALUES (?, ?, ?)");
                                             
-        $stmt -> bind_param("sss", 
-                            $value,
-                            $username,
-                            $now);
-}
+//         $stmt -> bind_param("sss", 
+//                             $value,
+//                             $username,
+//                             $now);
+// }
 
-if ($stmt -> execute()) {
-    // echo "Rule created successfully";
-    header("Location: /rules.php");
-} else {
-    // echo "Error creating rule: " . $stmt -> error;
-    die("Error creating rule: " . $stmt -> error);
-}
+// if ($stmt -> execute()) {
+//     // echo "Rule created successfully";
+//     header("Location: /rules.php");
+// } else {
+//     // echo "Error creating rule: " . $stmt -> error;
+//     die("Error creating rule: " . $stmt -> error);
+// }
