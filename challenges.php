@@ -207,7 +207,7 @@ $sql2 = "SELECT * FROM `challenges`";
                     <?php } ?>
                 </div>
                 <?php }} else { ?>
-                <div class="act-wrapper">
+                <div class="act-wrapper spacing">
                     <h3>No Activities Found</h3>
                 </div>
                 <?php } ?>
