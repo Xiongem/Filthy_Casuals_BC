@@ -36,6 +36,17 @@ a {
         align-items: center;
         width: 100%;
     }
+    .row2 {
+        display: grid;
+        grid-template-columns: 15% 85%;
+        align-items: center;
+        width: 100%;
+        min-height: 2em;
+        padding: 0.5em 0;
+        margin-bottom: 1em;
+
+        border-bottom: 1px solid var(--marine-green);
+    }
     .row {
         display: grid;
         grid-template-columns: 10% 10% 70% 10%;
