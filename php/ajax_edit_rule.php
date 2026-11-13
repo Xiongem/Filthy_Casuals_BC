@@ -22,13 +22,14 @@ $sql = "SELECT `rule_info`
 
 <div class="edit-wrapper">
     <label for="ruleEdit">Rule:</label>
-    <textarea id="<?=$ruleID?>" name="ruleEdit" class="inputs"><?=$ruleInfo?></textarea>
+    <textarea id="ruleEdit" name="ruleEdit" class="inputs"><?=$ruleInfo?></textarea>
 </div>
 <div class="button-wrapper">
-    <div class="buttons" onclick="editRule(<?=$ruleID?>, this.value)">Submit</div>
+    <div class="buttons" onclick="editRule(<?=$ruleID?>)">Submit</div>
 </div>
 <script>
-    function editRule(ruleID, ruleInfo) {
+    function editRule(ruleID) {
+        var ruleInfo = $("#ruleEdit").val();
         $.ajax({
             url: "php/process-editRules.php",
             method: "post",
