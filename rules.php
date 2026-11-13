@@ -63,6 +63,16 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             </div>
         </div>
     </div>
+    <div class="popup-wrapper hide" id="deletePopup">
+        <div class="popup-container">
+            <div class="close-wrapper">
+                <ion-icon name="close" onclick="closeRemoveRule()"></ion-icon>
+            </div>
+            <!--//? AJAX INSERT HTML-->
+            <div class="popup-content" id="deleteResults">
+            </div>
+        </div>
+    </div>
     <header>
         <?= makeNav() ?>
     </header>
@@ -82,6 +92,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <div class="row">
                     <h3 class="rank"><?=$rank?></h3>
                     <p class="rules" id="<?=$ruleID?>"><?=$rule?></p>
+                    <ion-icon class="delete warn" name="remove-circle" onclick="showRemoveRule(<?=$ruleID?>, <?=$rank?>)"></ion-icon>
                 </div>
             <?php }} else { ?>
                 <div class="row">
@@ -91,7 +102,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <div class="add-wrapper">
                     <p>Add New Rule</p>
                     <!-- <a href="newRule.php"> -->
-                        <ion-icon name="add-circle-outline" onclick="showNewRule()"></ion-icon>
+                        <ion-icon class="icon" name="add-circle-outline" onclick="showNewRule()"></ion-icon>
                     <!-- </a> -->
                 </div>
             </div>
@@ -130,6 +141,29 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         }
         function closeNewRule() {
             $("#rulesPopup").hide();
+            $("#body").css({"height": "unset", "overflow": "unset"});
+            location.reload(true);
+        }
+
+        function showRemoveRule(ruleID, rank) {
+            $("#deletePopup").css({"display": "flex"});
+            var deletePopup = document.getElementById("deletePopup");
+            deletePopup.scrollIntoView();
+            setTimeout(hideBackground, 500);
+
+            $.ajax({
+                url: "php/ajax_delete_rule.php",
+                method: "post",
+                data: {
+                    rule_id:ruleID,
+                    rank:rank
+                }success:function(result) {
+                    $("#deleteResults").html();
+                }
+            })
+        }
+        function closeRemoveRule() {
+            $("#deletePopup").hide();
             $("#body").css({"height": "unset", "overflow": "unset"});
             location.reload(true);
         }
