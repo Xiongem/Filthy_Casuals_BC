@@ -172,6 +172,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
         function checkEmail(){
             var email = $("#email").val();
+            console.log(email);
+            
             
             if(email){
                 $.ajax({
