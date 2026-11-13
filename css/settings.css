@@ -209,6 +209,9 @@
         width: 70%;
     }
     #result {
+        padding: 0.5em 1em 1em 1em;
+
+        background-color: var(--sepia-e37);
         border-radius: 0 0 12px 12px;
         border: 2px solid var(--deep-green);
     }
