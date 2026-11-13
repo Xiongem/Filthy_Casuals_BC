@@ -406,22 +406,20 @@ $sql3 = "SELECT * FROM `challenges`";
         function adminAutocomplete() {
             var min_length = 0; // min characters to display the autocomplete
             var keyword = $("#username").val();
-            console.log(keyword);
             
-            
-            // if (keyword.length > min_length) {
-            //     $.ajax({
-            //         url: 'php/ajax_username_processing.php',
-            //         type: 'POST',
-            //         data: {keyword:keyword},
-            //         success:function(data){
-            //             $('#search_results').show();
-            //             $('#search_results').html(data);
-            //         }
-            //     });
-            // } else {
-            //     $('#search_results').hide();
-            // }
+            if (keyword.length > min_length) {
+                $.ajax({
+                    url: 'php/ajax_username_processing.php',
+                    type: 'POST',
+                    data: {keyword:keyword},
+                    success:function(data){
+                        $('#search_results').show();
+                        $('#search_results').html(data);
+                    }
+                });
+            } else {
+                $('#search_results').hide();
+            }
         }
 
         function addAdmin(userID) {
