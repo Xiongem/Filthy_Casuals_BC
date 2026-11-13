@@ -62,6 +62,7 @@
     .check-wrapper {
         display: flex;
         flex-direction: column;
+        height: 4em;
     }
     .check {
         margin-top: 0.5em;
