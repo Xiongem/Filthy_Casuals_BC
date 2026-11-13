@@ -134,9 +134,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 
         function addNewRule() {
             $('#form').append([
-                $('<div/>',{ "class": "row" }).append([
-                    $('<div/>',{ "class": "label-wrapper" })
-                ]);
+                $('<div/>',{ "class": "row" })
             ]);           
         }
     </script>
