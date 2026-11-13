@@ -90,7 +90,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                             $rule = $rules["rule_info"];
                 ?>
                 <div class="row">
-                    <h3 class="rank"><?=$rank?></h3>
+                    <h2 class="rank"><?=$rank?></h2>
                     <p class="rules" id="<?=$ruleID?>"><?=$rule?></p>
                     <ion-icon class="warning icon" name="remove-circle" size="large" onclick="showRemoveRule(<?=$ruleID?>, <?=$rank?>)"></ion-icon>
                 </div>
