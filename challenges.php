@@ -187,7 +187,7 @@ $sql2 = "SELECT * FROM `challenges`";
     <div class="content-wrapper">
             <div class="activity-content">
                 <h1>Activities</h1>
-                <?php $stmt2 = $_SESSION["conn"]->query("SELECT * FROM `rules`");
+                <?php $stmt2 = $_SESSION["conn"]->query("SELECT * FROM `activities`");
                     $act = mysqli_num_rows($stmt);
                     if ($act > 0) {
                         while ($act = mysqli_fetch_assoc($stmt)) {
