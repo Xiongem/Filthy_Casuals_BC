@@ -65,6 +65,9 @@ a {
         font-size: 28px;
         cursor: pointer;
     }
+    /* .label-wrapper {
+        width: 100%;
+    } */
     .edit-wrapper {
         display: flex;
         flex-direction: column;

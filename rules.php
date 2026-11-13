@@ -45,7 +45,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             </div>
             <form method="post" action="php/process-createNewRule.php">
                 <div class="row-wrapper" id="rowWrapper">
-                    <div class="row">
+                    <div class="newRow">
                         <div class="label-wrapper">
                             <label class="label" for="newRule">New Rule:</label>
                             <textarea class="rule" name="newRule[]" maxlength="200"></textarea>
@@ -185,7 +185,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 
         function addNewRule() {
             $('#rowWrapper').append([
-                $('<div/>',{ "class": "row" }).append([
+                $('<div/>',{ "class": "newRow" }).append([
                     $('<div/>',{ "class": "label-wrapper" }).append([
                         $('<label/>',{ "class": "label", for: "newRule", text: "New Rule:" }),
                         $('<textarea/>',{ "class": "rule", name: "newRule[]", maxlength: "200" })
