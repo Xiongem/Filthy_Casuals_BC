@@ -56,6 +56,9 @@
         display: flex;
         flex-direction: column;
     }
+    .form-select {
+        width: 100%;
+    }
     .check-wrapper {
         display: flex;
         flex-direction: column;
