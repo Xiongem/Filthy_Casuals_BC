@@ -13,7 +13,7 @@ function dbConnect() {
 
 function makeNav() {
     $userID = $_SESSION["user_id"];
-    if($_SESSION["admin"]) {
+    if(isset($_SESSION["admin"])) {
         $admin = $_SESSION["admin"];
     }
 
