@@ -200,6 +200,14 @@ a {
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 601px) {
+    .full-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .content-wrapper {
+        width: 70%;
+    }
     .challenge-wrapper {
         display: flex;
         justify-content: center;
@@ -215,6 +223,9 @@ a {
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1024px) {
+    .content-wrapper {
+        width: 50%;
+    }
     .challenge-content {
         width: 50%;
     }
