@@ -272,6 +272,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         name="username"
                         id="username"
                         class="inputs"
+                        autocomplete="none"
                         required>
 
                     <span class="check" id="user-availability-status"></span>
