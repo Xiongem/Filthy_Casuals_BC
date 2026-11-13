@@ -15,6 +15,8 @@ function makeNav() {
     $userID = $_SESSION["user_id"];
     if(isset($_SESSION["admin"])) {
         $admin = $_SESSION["admin"];
+    } else {
+        $admin = 0;
     }
 
     $sql = "SELECT * FROM users WHERE user_id = $userID";
