@@ -44,6 +44,8 @@ if (isset($_POST["tag"])) {
     $insert_tags = NULL;
 }
 
+print_r($tags);
+
 if (isset($_POST["diffDate"])) {
     $dateFinished = $_POST["dateFinished"];
 } else {
@@ -128,7 +130,7 @@ if ($stmt1 -> execute()) {
                                 $totalPoints);
             $stmt4->execute();
         }
-        header("Location: /readHistory.php?user_id=$userID");
+        // header("Location: /readHistory.php?user_id=$userID");
     
         exit;
     } else {
