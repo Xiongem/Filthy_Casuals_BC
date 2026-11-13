@@ -92,6 +92,7 @@ a {
     textarea {
         width: 100%;
         min-height: 8em;
+        resize: vertical;
     }
     /* .rules-content {
         display: grid;
