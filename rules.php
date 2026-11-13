@@ -128,22 +128,35 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         <div class="content-wrapper">
             <div class="activity-content">
                 <h1>Activities</h1>
-                <div class="activity">
-                    <div id="activity">Buddy Read:</div>
-                    <div id="instruct">Grab a buddy and choose a book. The pages you read together can be marked as "buddy read" in the update page and count for extra points!</div>
+                <?php $stmt2 = $_SESSION["conn"]->query("SELECT * FROM `rules`");
+                    $act = mysqli_num_rows($stmt);
+                    if ($act > 0) {
+                        while ($act = mysqli_fetch_assoc($stmt)) {
+                            $actID = $act["act_id"];
+                            $actName = $act["act_name"];
+                            $actInfo = $act["act_info"];
+                ?>
+                <div class="<?php if($admin== 1){echo ("activity");}else{echo ("activity2");} ?>" id="<?=$actID?>">
+                    <?php if ($admin == 1) { ?>
+                    <ion-icon class="icon" name="settings-outline" onclick="showActEdit(<?=$actID?>)"></ion-icon>
+                    <?php } ?>
+                    <div id="activity"><?=$actName?></div>
+                    <div id="instruct"><?=$actInfo?></div>
+                    <?php if ($admin == 1) { ?>
+                    <ion-icon class="warning icon" name="remove-circle" onclick="showRemoveAct(<?=$actID?>)"></ion-icon>
+                    <?php } ?>
                 </div>
-                <div class="activity">
-                    <div id="activity">Friend Recommendation:</div>
-                    <div id="instruct">Check out <a>Friend Recs</a> to find your next read. Any pages read from a friend rec earn bonus points.</div>
+                <?php }} else { ?>
+                <div class="act-wrapper">
+                    <h3>No Activities Found</h3>
                 </div>
-                <div class="activity">
-                    <div id="activity">Read-a-thon:</div>
-                    <div id="instruct">One week a month will be designated as a read-a-thon week, mark everything you read during that time as "read-a-thon" in the update page and earn bonus points.</div>
+                <?php } ?>
+                <?php if ($admin == 1) { ?>
+                <div class="add-wrapper">
+                    <p>Add New Activity</p>
+                        <ion-icon class="icon" name="add-circle-outline" onclick="showNewAct()"></ion-icon>
                 </div>
-                <div class="activity">
-                    <div id="activity">Seasonal:</div>
-                    <div id="instruct">Each quarter of the year </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -215,6 +228,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             $("#body").css({"height": "unset", "overflow": "unset"});
             location.reload(true);
         }
+
+
+
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
