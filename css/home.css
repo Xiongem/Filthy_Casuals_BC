@@ -136,7 +136,7 @@
         margin-right: 0.5em;
     }
     .userLink {
-        justify-self: left;
+        justify-content: baseline;
         text-decoration: underline;
         cursor: pointer;
     }
