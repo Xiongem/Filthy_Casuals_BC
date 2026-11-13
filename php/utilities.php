@@ -22,8 +22,6 @@ function makeNav() {
     $sql = "SELECT * FROM users WHERE user_id = $userID";
             $result = $_SESSION["conn"]->query($sql);
             $user = $result->fetch_assoc();
-                // $admin = $user['admin'];
-                // $image = imageDataUri($user['pfpType'], $user['pfpData']);
                 $imageName = htmlspecialchars($user['pfpName']);
                 $imageType = $user['pfpType'];
                 $imageData = base64_encode($user['pfpData']);
@@ -66,7 +64,7 @@ function makeNav() {
                     <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>
                     <a class="nav-item" href="friendRec.php">Friend Recs</a>
                     <?php if ($admin == 1) { ?>
-                        <a href="admin.php" class="nav-item">Admin</a>
+                        <a href="admin.php" class="nav-item">Admin$admin</a>
                     <?php } ?>
                     <a class="nav-item" href="settings.php">Settings</a>
                     <a class="nav-item" href="php/logout.php">Logout</a>
