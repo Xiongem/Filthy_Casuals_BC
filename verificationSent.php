@@ -36,10 +36,10 @@ $userID = $_SESSION["user_id"];
    <?= makeNav() ?>
     <div class="login-wrapper">
         <div class="login-content">
-            <h1>Account Creation</h1>
+            <h1 class="title">Account Creation</h1>
             <p class="spacing">Thank you for creating an account with us! <br>
-                We need to make sure you're not a bot trying to infiltrate the system. <br>
-                Please check your email for a verification link. <br>
+                We need to make sure you're not a bot trying to infiltrate the system. <br><br>
+                Please check your email for a verification link. <br><br>
                 This link will expire in 30 minutes.
             </p>
         
