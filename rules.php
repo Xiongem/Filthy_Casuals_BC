@@ -123,7 +123,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         function showNewRule() {
             $("#rulePopup").css({"display": "flex"});
             var rulePopup = document.getElementById("rulePopup");
-            editPopup.scrollIntoView();
+            rulePopup.scrollIntoView();
             setTimeout(hideBackground, 500);
         }
         function closeNewRule() {
