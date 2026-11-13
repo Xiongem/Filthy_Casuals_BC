@@ -176,7 +176,7 @@ a {
     }
     .labels {
         color: var(--deep-green);
-        text-align: center;
+        /* text-align: center; */
     }
     input[type="checkbox"] {
         display: flex;
