@@ -42,6 +42,8 @@ a {
         align-items: center;
         width: 100%;
         min-height: 2em;
+        padding: 0.5em 0;
+        margin-bottom: 1em;
 
         border-bottom: 1px solid var(--marine-green);
     } 

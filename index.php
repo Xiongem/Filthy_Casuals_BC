@@ -179,7 +179,9 @@ if ($now <= $ratEnd) {
         </div>
         <div class="desktop-table-wrapper">
             <div class="table-wrapper">
+                <?php if ($admin == 1) { ?>
                 <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Gorogoro')"></ion-icon>
+                <?php } ?>
                 <div class="title">
                     <h1>
                         Gorogoro Ranking
@@ -222,7 +224,9 @@ if ($now <= $ratEnd) {
                 </div>
             </div>
             <div class="table-wrapper">
+                <?php if ($admin == 1) { ?>
                 <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Futsuu')"></ion-icon>
+                <?php } ?>
                 <div class="title">
                     <h1>
                         Futsuu Ranking
@@ -265,7 +269,9 @@ if ($now <= $ratEnd) {
                 </div>
             </div>
             <div class="table-wrapper">
+                <?php if ($admin == 1) { ?>
                 <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Hayai')"></ion-icon>
+                <?php } ?>
                 <div class="title">
                     <h1>
                         Hayai Ranking
@@ -308,7 +314,9 @@ if ($now <= $ratEnd) {
                 </div>
             </div>
             <div class="table-wrapper">
+                <?php if ($admin == 1) { ?>
                 <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Yabai')"></ion-icon>
+                <?php } ?>
                 <div class="title">
                     <h1>
                         Yabai Ranking
