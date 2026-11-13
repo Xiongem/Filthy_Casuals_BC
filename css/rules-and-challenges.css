@@ -36,11 +36,18 @@ a {
         align-items: center;
         width: 100%;
     }
-    .row, .add-wrapper {
+    .row {
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        width: 100%;
+    } 
+    .add-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
+
+        font-size: 20px;
     }
     .icon {
         cursor: pointer;

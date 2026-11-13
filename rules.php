@@ -92,7 +92,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <div class="row">
                     <h3 class="rank"><?=$rank?></h3>
                     <p class="rules" id="<?=$ruleID?>"><?=$rule?></p>
-                    <ion-icon class="delete warning icon" name="remove-circle" onclick="showRemoveRule(<?=$ruleID?>, <?=$rank?>)"></ion-icon>
+                    <ion-icon class="warning icon" name="remove-circle" size="large" onclick="showRemoveRule(<?=$ruleID?>, <?=$rank?>)"></ion-icon>
                 </div>
             <?php }} else { ?>
                 <div class="row">
