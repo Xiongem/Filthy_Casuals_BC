@@ -152,6 +152,44 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <script src="https://use.fontawesome.com/fe459689b4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
+        //setup before functions
+        var typingTimer;                //timer identifier
+        var doneTypingInterval = 1000;  //time in ms, 5 seconds for example
+        var $name = $('#username');
+        var $email = $('#email');
+
+        //on keyup, start the countdown
+        $name.on('keyup', function () {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(doneTyping, doneTypingInterval);
+        });
+        //on keydown, clear the countdown 
+        $name.on('keydown', function () {
+            clearTimeout(typingTimer);
+                console.log("goodbye");
+        });
+        //user is "finished typing," do something
+        function doneTyping () {
+            checkName();
+                console.log("hello");
+        }
+
+        //on keyup, start the countdown
+        $email.on('keyup', function () {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(doneTyping, doneTypingInterval);
+        });
+        //on keydown, clear the countdown 
+        $email.on('keydown', function () {
+            clearTimeout(typingTimer);
+                console.log("goodbye");
+        });
+        //user is "finished typing," do something
+        function doneTyping () {
+            checkEmail();
+                console.log("hello");
+        }
+
         function checkName(){
             var username = $("#username").val();
             
@@ -298,7 +336,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     name="email"
                     id="email"
                     class="inputs"
-                    onchange="checkEmail();"
                     required>
 
                 <span id="email-availability-status"></span>
@@ -308,7 +345,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     name="username"
                     id="username"
                     class="inputs"
-                    onchange="checkName();"
                     required>
 
                 <span id="user-availability-status"></span>
