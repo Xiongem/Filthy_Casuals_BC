@@ -44,15 +44,17 @@ $userID = $_SESSION["user_id"];
             </p>
         
             <p class="spacing">Didn't receive the email? Check your spam folder or click the button below to resend the verification email.</p>
-            <a href="mailVerification.php" class="buttons spacing">
-                    Resend Verification Email
-            </a>
-
+            
             <div class="button-wrapper">
-                <div class="login-wrapper spacing">
-                    <a href="login.php">Back to Login</a>
-                </div>
+                <a href="mailVerification.php" class="buttons spacing">
+                        Resend Verification Email
+                </a>
             </div>
+
+            <div class="login-wrapper spacing">
+                <a href="login.php">Back to Login</a>
+            </div>
+
         </div>
     </div>
 </body>
