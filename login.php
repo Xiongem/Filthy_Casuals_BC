@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <h1>Login</h1>
             </div>
             <form method="post" action="#">
-                <div class="wrapper spacing">
+                <div class="input-wrapper spacing">
                     <label for="email" class="labels">Email:</label>
                     <input type="email"
                         name="email"
@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         required>
                 </div>
 
-                <div class="wrapper spacing">
+                <div class="input-wrapper spacing">
                     <label for="password" class="labels">Password:</label>
                     <input type="password"
                         name="password"
