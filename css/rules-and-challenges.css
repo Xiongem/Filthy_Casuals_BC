@@ -81,7 +81,7 @@ a {
         align-items: center;
         width: 100%;
     }
-    .edit-wrapper textarea {
+    textarea {
         width: 100%;
         min-height: 5em;
     }
