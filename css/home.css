@@ -300,7 +300,7 @@
         row-gap: 4em;
         width: 100%;
         justify-items: center;
-        align-items: center;
+        /* align-items: center; */
     }
     .table-wrapper {
         position: relative;
