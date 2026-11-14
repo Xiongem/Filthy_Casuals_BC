@@ -111,6 +111,7 @@ $sql3 = "SELECT * FROM `challenges`";
                     </div>
                     <div id="deactivateResult" class="results"></div>
                     <?php } else { ?>
+                        <label class="labels">Activate Bingo:</label>
                         <select name="bingo" id="bingo" class="inputs spacing">
                             <option value="0">Select Active Bingo</option>
                             <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM `bingoNames`"); 
@@ -265,6 +266,7 @@ $sql3 = "SELECT * FROM `challenges`";
                 data: {newBingo:newBingo},
                 success:function(result) {
                     $("#newBingoResult").html(result);
+                    setTimeout(refresh, 3000);
                 }
             })
         }
