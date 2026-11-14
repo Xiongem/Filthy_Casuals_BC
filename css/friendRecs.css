@@ -158,6 +158,11 @@
         justify-self: center;
         /* align-self: center; */
     }
+    .rec-form-inputs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 }
 .buttons {
     display: flex;
