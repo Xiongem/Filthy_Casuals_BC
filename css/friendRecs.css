@@ -158,6 +158,8 @@
         justify-self: center;
         /* align-self: center; */
     }
+}
+@media only screen and (min-height: 700px) {
     .rec-form-inputs {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
