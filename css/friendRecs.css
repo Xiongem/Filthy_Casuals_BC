@@ -159,7 +159,7 @@
         /* align-self: center; */
     }
 }
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 800px) {
     .rec-form-inputs {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
