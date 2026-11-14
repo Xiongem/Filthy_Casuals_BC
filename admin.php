@@ -106,7 +106,7 @@ $sql3 = "SELECT * FROM `challenges`";
                 <div class="bingo-wrapper">
                     <?php if ($activeBingo) { ?>
                     <div class="label-wrapper">
-                        <label>Deactivate <?=$activeBingo?> Bingo</label>
+                        <label class="labels">Deactivate <?=$activeBingo?> Bingo</label>
                         <div class="buttons spacing" onclick="deactivateBingo('<?=$activeBingo?>')">deactivate</div>
                     </div>
                     <div id="deactivateResult" class="results"></div>
@@ -127,6 +127,13 @@ $sql3 = "SELECT * FROM `challenges`";
                             <div class="buttons" onclick="activateBingo()">Activate</div>
                         </div>
                         <div class="results" id="bingoResult"></div>
+
+                        <div class="label-wrapper spacing">
+                            <label class="labels">Create New Bingo:</label>
+                            <input type="text" name="newBingo" id="newBingo" maxlength="50">
+                            <div class="buttons spacing" onclick="createNewBingo()">Create</div>
+                            <div class="results" id="newBingoResult"></div>
+                        </div>
                     <?php } ?>  
                 </div>
             </div>
@@ -249,6 +256,19 @@ $sql3 = "SELECT * FROM `challenges`";
             </div>            
         </div>
     <script>
+        function createNewBingo() {
+            var newBingo = $("#newBingo").val();
+
+            $.ajax ({
+                url: "php/process-createNewBingo.php",
+                method: "post",
+                data: {newBingo:newBingo},
+                success:function(result) {
+                    $("#newBingoResult").html(result);
+                }
+            })
+        }
+
         //sends the start and end dates for RAT to the database
         function setRatDate() {
             var userID = <?=$userID?>;
