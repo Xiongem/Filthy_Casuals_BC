@@ -448,6 +448,7 @@ $sql3 = "SELECT * FROM `challenges`";
                 method: "post",
                 data: {user_id:userID},
                 success:function (result) {
+                    $('#search_results').hide();
                     $("#addAdminResult").html(result);
                 }
             })
