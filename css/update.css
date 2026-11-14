@@ -73,6 +73,7 @@
     .tag {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
     .tags {
         position: relative;
