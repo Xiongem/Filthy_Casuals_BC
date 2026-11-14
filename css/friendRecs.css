@@ -29,7 +29,7 @@
     .wrapper {
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
+        align-items: center;
         width: 100%;
     }
     .rec-input-button {
@@ -150,7 +150,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
         gap: 2em;
         padding: 1em;
     }
