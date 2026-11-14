@@ -18,7 +18,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 $timezone = $_SESSION["timezone"];
 date_default_timezone_set("$timezone");
 
-if ($_POST["fanfic"]) {
+if (isset($_POST["fanfic"])) {
     $pages = $_POST["pages"];
 
     $newGoal = str_replace( ',', '', $pages );
