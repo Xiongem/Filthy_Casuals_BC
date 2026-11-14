@@ -18,6 +18,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
 $timezone = $_SESSION["timezone"];
 date_default_timezone_set("$timezone");
 
+if ($_POST["fanfic"]) {
     $pages = $_POST["pages"];
 
     $newGoal = str_replace( ',', '', $pages );
@@ -31,7 +32,15 @@ date_default_timezone_set("$timezone");
             $pages = 1;
         }
     }
+} else {
+        $pages = $_POST["pages"];
 
+        $newGoal = str_replace( ',', '', $pages );
+
+        if( is_numeric( $newGoal ) ) {
+            $pages = $newGoal;
+        }
+}
 
 $month = date("n",strtotime($_POST["dateFinished"]));
 $totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
