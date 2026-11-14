@@ -31,6 +31,9 @@
     .labels {
         font-size: 18px;
     }
+    .label-wrapper {
+        display: flex;
+    }
     .page-wrapper {
         display: flex;
         align-items: center;
