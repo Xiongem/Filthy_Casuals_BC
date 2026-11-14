@@ -57,7 +57,7 @@ function modMath1($pages, $mod1) {
 function modMath2($pages, $mod2) {
     if ($mod2 == 1) {
         // Normal: no extra points
-        $pagesMod2 = $pages * 0;
+        $pagesMod2 = $pages * 1;
         return $pagesMod2;
     } elseif ($mod2 == 2) {
         //Challenge: extra 10%
