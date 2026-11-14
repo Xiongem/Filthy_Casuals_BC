@@ -156,7 +156,7 @@
     }
     .rec-wrapper {
         justify-self: center;
-        align-self: center;
+        /* align-self: center; */
     }
 }
 .buttons {
