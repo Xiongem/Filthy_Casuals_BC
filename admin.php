@@ -380,13 +380,7 @@ $sql3 = "SELECT * FROM `challenges`";
             }
         });
 
-        //displays otp after generate button is clicked
-        // function showOTP(otp) {
-        //     document.getElementById("OTP").innerHTML = otp;
-        //     document.getElementById("OTPWrapper").style.display = "flex";
-        // }
-
-        //randomly generates a otp, posts it to the database, and then passes the otp to the show otp function
+        //randomly generates a otp, posts it to the database, and then passes the otp to the otp span
         function createOTP() {
                 var oneTimePass = "";
                 var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -404,14 +398,9 @@ $sql3 = "SELECT * FROM `challenges`";
                     $("#OTP").html(response);
                 }
             })
-
-            // $.post("php/createOTP.php", {
-            //     oneTimePass: oneTimePass
-            // }, function(response) {
-            //     $("#OTP").html(response);
-            // });
         }
 
+        //
         function adminAutocomplete() {
             var min_length = 0; // min characters to display the autocomplete
             var keyword = $("#username").val();
