@@ -85,7 +85,6 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         </div>
     </div>
     <div class="wrapper">
-        <div class="rec-wrapper">
         <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM friendRecs");
             $row = mysqli_num_rows($stmt);
             if($row > 0) {
@@ -102,6 +101,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     $rec5Title = $row["rec5_title"];
                     $rec5Author = $row["rec5_author"];
         ?>
+        <div class="rec-wrapper">
             <div class="name" id="<?=$username?>">
                 <h2><?=$username?></h2>
             </div> 
@@ -184,8 +184,8 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                     </div>
                 </div>
             </div>
-        <?php }}?>
         </div>
+        <?php }}?>
     </div>
     <script>
         function showPoints(username, rec) {
