@@ -15,7 +15,7 @@ $stmt = $_SESSION["conn"] -> prepare("INSERT INTO oneTimePasscodes (oneTimePass)
                         $oneTimePass);
 
 if ($stmt -> execute()) {
-    echo "New record created successfully. One-time passcode: " . $oneTimePass;
+    echo $oneTimePass;
     exit;
 } else {
     die("something went wrong");
