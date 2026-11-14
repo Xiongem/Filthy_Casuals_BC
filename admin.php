@@ -391,7 +391,7 @@ $sql3 = "SELECT * FROM `challenges`";
                 var oneTimePass = "";
                 var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
                 var charactersLength = characters.length;
-                for ( var i = 0; i < 16; i++ ) {
+                for ( var i = 0; i < 32; i++ ) {
                     oneTimePass += characters.charAt(Math.floor(Math.random() * charactersLength));
                 }
             
