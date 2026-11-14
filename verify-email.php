@@ -32,7 +32,13 @@ if ($user["verification_hash"] === $token_hash) {
         $stmt->bind_param("ii", 
                                 $verified, 
                                 $userID);
-        $stmt -> execute() ;
+        $stmt -> execute();
+
+    $stmt2 = $_SESSION["conn"]->prepare("DELETE FROM `oneTimePasscodes` WHERE `user_id` = ?");
+        $stmt2->bind_param("i",
+                            $userID);
+        
+        $stmt2 -> execute();
 }
 
 ?>
