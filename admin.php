@@ -130,7 +130,7 @@ $sql3 = "SELECT * FROM `challenges`";
 
                         <div class="label-wrapper spacing">
                             <label class="labels">Create New Bingo:</label>
-                            <input type="text" name="newBingo" id="newBingo" maxlength="50">
+                            <input class="inputs" type="text" name="newBingo" id="newBingo" maxlength="50">
                             <div class="buttons spacing" onclick="createNewBingo()">Create</div>
                             <div class="results" id="newBingoResult"></div>
                         </div>
