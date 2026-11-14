@@ -168,6 +168,11 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
+    .rec-row {
+        padding: 0.5em;
+        margin: 0.5em;
+        border: none;
+    }
 }
 .buttons {
     display: flex;
