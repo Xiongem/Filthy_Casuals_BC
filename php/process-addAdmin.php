@@ -8,7 +8,7 @@ ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
-$userID = $_POST["user)id"];
+$userID = $_POST["user_id"];
 
 $stmt = $_SESSION["conn"] -> prepare("UPDATE `users` SET `admin` = 1 WHERE `user_id` = ?");
 
