@@ -388,21 +388,23 @@ $sql3 = "SELECT * FROM `challenges`";
 
         //randomly generates a otp, posts it to the database, and then passes the otp to the show otp function
         function createOTP() {
-            <?php
-                $oneTimePass = "";
-                $oneTimePass = bin2hex(random_bytes(16));
-            ?>
+                var oneTimePass = "";
+                oneTimePass = <?php bin2hex(random_bytes(16));?>
+            
             //assign values
-            var oneTimePass = <?= json_encode($oneTimePass) ?>;
+            
             //begin post method
-            $.ajax ({
-                url: "php/createOTP.php",
-                method: "post",
-                data: {oneTimePass: oneTimePass},
-                success:function(response) {
-                    $("#OTP").html(response);
-                }
-            })
+            setTimeout(postOTP, 500);
+                postOTP() {
+                $.ajax ({
+                    url: "php/createOTP.php",
+                    method: "post",
+                    data: {oneTimePass: oneTimePass},
+                    success:function(response) {
+                        $("#OTP").html(response);
+                    }
+                })
+            }
 
             // $.post("php/createOTP.php", {
             //     oneTimePass: oneTimePass
