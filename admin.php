@@ -395,22 +395,23 @@ $sql3 = "SELECT * FROM `challenges`";
             
             //begin post method
             setTimeout(postOTP, 500);
-                postOTP() {
-                $.ajax ({
-                    url: "php/createOTP.php",
-                    method: "post",
-                    data: {oneTimePass: oneTimePass},
-                    success:function(response) {
-                        $("#OTP").html(response);
-                    }
-                })
-            }
+            
 
             // $.post("php/createOTP.php", {
             //     oneTimePass: oneTimePass
             // }, function(response) {
             //     $("#OTP").html(response);
             // });
+        }
+        postOTP() {
+            $.ajax ({
+                url: "php/createOTP.php",
+                method: "post",
+                data: {oneTimePass: oneTimePass},
+                success:function(response) {
+                    $("#OTP").html(response);
+                }
+            })
         }
 
         function adminAutocomplete() {
