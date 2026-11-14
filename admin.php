@@ -389,21 +389,13 @@ $sql3 = "SELECT * FROM `challenges`";
         //randomly generates a otp, posts it to the database, and then passes the otp to the show otp function
         function createOTP() {
                 var oneTimePass = "";
-                oneTimePass = <?php bin2hex(random_bytes(16));?>
-            
-            //assign values
+                var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                var charactersLength = characters.length;
+                for ( var i = 0; i < 16; i++ ) {
+                    oneTimePass += characters.charAt(Math.floor(Math.random() * charactersLength));
+                }
             
             //begin post method
-            setTimeout(postOTP, 500);
-            
-
-            // $.post("php/createOTP.php", {
-            //     oneTimePass: oneTimePass
-            // }, function(response) {
-            //     $("#OTP").html(response);
-            // });
-        }
-        postOTP() {
             $.ajax ({
                 url: "php/createOTP.php",
                 method: "post",
@@ -412,6 +404,12 @@ $sql3 = "SELECT * FROM `challenges`";
                     $("#OTP").html(response);
                 }
             })
+
+            // $.post("php/createOTP.php", {
+            //     oneTimePass: oneTimePass
+            // }, function(response) {
+            //     $("#OTP").html(response);
+            // });
         }
 
         function adminAutocomplete() {
