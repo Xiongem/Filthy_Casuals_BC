@@ -150,7 +150,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
-        /* align-items: center; */
+        align-items: start;
         gap: 2em;
         padding: 1em;
     }
