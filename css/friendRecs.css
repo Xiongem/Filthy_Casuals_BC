@@ -160,6 +160,9 @@
     }
 }
 @media only screen and (max-height: 800px) {
+    .popup-container {
+        width: 80%;
+    }
     .rec-form-inputs {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
