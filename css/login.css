@@ -125,7 +125,7 @@
     }
     /* toggle icon state */
     .profile-picture:hover .upload-icon {
-    opacity: 1;
+        opacity: 1;
     }
 
     .OTPWrapper {
@@ -144,6 +144,9 @@
         border: 2px solid var(--deep-green);
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #OTP {
+        margin-bottom: 1em;
     }
 
 
