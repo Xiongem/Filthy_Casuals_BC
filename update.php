@@ -82,6 +82,8 @@ $today = date("Y-m-d");
                     class="inputs"
                     required>
 
+                <!--//! ADD TAG EXPLANATION AND PREVENT SUBMISSION ON ENTER PRESS WHEN CURSOR IS IN TAG INPUT? -->
+
                 <div class="tag-wrapper">
                     <div class="search-tag-wrapper">
                         <div class="tag">
@@ -217,6 +219,8 @@ $today = date("Y-m-d");
                                 class="checkbox" value="<?=$activeName?>"> 
                     </div>
                 </div>
+
+                <!--//! ADD AJAX TO SHOW TOTAL POINTS FOR MODIFIERS BEFORE HITTING SUBMIT -->
 
                 <label for="comment" class="labels">Comment:</label>
                 <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)"></textarea>

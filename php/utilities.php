@@ -36,7 +36,7 @@ function makeNav() {
                                 <a class="nav-item" href="challenges.php">Challenges</a>
                                 <a class="nav-item" href="rules.php">Rules</a>
                                 <a id="update" class="nav-item" href="update.php">
-                                    update
+                                    Update
                                         <ion-icon name="add" id="icon"></ion-icon>
                                 </a>
                                 <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>
@@ -87,7 +87,7 @@ function makeNav() {
                             <a class="nav-item" href="challenges.php">Challenges</a>
                             <a class="nav-item" href="rules.php">Rules</a>
                             <a id="update" class="nav-item" href="update.php">
-                                update
+                                Update
                                     <ion-icon name="add" id="icon"></ion-icon>
                             </a>
                             <a class="nav-item" href="readHistory.php?user_id=$userID">History</a>

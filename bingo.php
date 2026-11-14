@@ -43,6 +43,7 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
         <?= makeNav() ?>
     </header>
     <div class="wrapper">
+        <!--//! ADD explanation for how bingo works and link to bingo board generation website -->
         <div class="bingo-title spacing">
             <h1>Assign Bingo Squares</h1>
         </div>
