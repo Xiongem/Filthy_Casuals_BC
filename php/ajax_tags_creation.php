@@ -10,9 +10,10 @@ dbConnect();
 
 $newTag = $_POST['tag'];
 
+$newTag = preg_replace('/\s+/', '_', $newTag);
 
     $htmlContent = <<<HTML
-        <div class="notch-arrow" id="$newTag" onclick="removeTag('$newTag')">
+        <div class="notch-arrow" id="$newTag" onclick="removeTag($newTag)">
             <p class='tag-content' id='tagContent'>$newTag</p>
             <input type="hidden" name="tag[$newTag]" id="tag_$newTag" value="$newTag">
         </div>
