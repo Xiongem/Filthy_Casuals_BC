@@ -85,8 +85,11 @@
         overflow-wrap: break-word;
     }
     .info {
+        max-width: 25em;
         text-align: center;
         overflow-wrap: break-word;
+        word-break: break-all;
+        hyphens: manual;
     }
     .label {
         text-decoration: underline;
