@@ -68,6 +68,13 @@
     }
     #help {
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #help-icon {
+        width: 100%;
+        height: 100%;
     }
     .help-popup {
         position: absolute;

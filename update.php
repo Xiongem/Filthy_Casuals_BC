@@ -88,7 +88,7 @@ $today = date("Y-m-d");
                 <div class="tag-wrapper">
                     <div class="search-tag-wrapper">
                         <div class="tag">
-                            <label for="keyword0" class="labels">Tags: <span id="help"><ion-icon name="help-circle"></ion-icon>
+                            <label for="keyword0" class="labels">Tags: <span id="help"><ion-icon id="help-icon" name="help-circle"></ion-icon>
                                 <div class="help-popup" id="helpPop">
                                     <div class="help-content">
                                         <p>Type into the search field to see already created tags. Type in and press the 
