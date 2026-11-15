@@ -233,17 +233,17 @@ $today = date("Y-m-d");
         </div>
 
         <script>
-             $(document).ready(function(){
-                $('#myForm').keydown(function(event){
-                    console.log("hello");
+            //  $(document).ready(function(){
+            //     $('#myForm').keydown(function(event){
+            //         console.log("hello");
                     
-                    if(event.keyCode == 13) {
-                        alert('You pressed enter! Form submission will be disabled.')
-                        event.preventDefault();
-                        return false;
-                    }
-                });
-            });
+            //         if(event.keyCode == 13) {
+            //             alert('You pressed enter! Form submission will be disabled.')
+            //             event.preventDefault();
+            //             return false;
+            //         }
+            //     });
+            // });
 
             function clickPress(event) {
                 if (event.key == "Enter") {
