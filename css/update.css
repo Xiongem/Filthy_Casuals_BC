@@ -66,6 +66,31 @@
         flex-direction: column;
         width: 90%;
     }
+    #help {
+        position: relative;
+    }
+    .help-popup {
+        position: absolute;
+        top: 0;
+        right: 1em;
+        z-index: 5;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 8em;
+        height: fit-content;
+        padding: 0.5em;
+
+        background-color: var(--grey);
+        border: 1px solid var(--leather);
+        border-radius: 8px;
+    }
+    #help:hover .help-popup{
+        display: flex;
+    }
+    .help-content {
+        text-align: center;
+    }
     .search-tag-wrapper {
         display: flex;
         align-items: end;
