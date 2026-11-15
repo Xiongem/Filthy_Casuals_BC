@@ -34,15 +34,6 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body id="body">
-    <div class="popup-wrapper hide" id="editPopup">
-        <div class="popup-container">
-            <div class="close-wrapper">
-                <ion-icon name="close" onclick="closeRecPopup()"></ion-icon>
-            </div>
-            <!--//* AJAX DISPLAYED CONTENT -->
-            <div class="popup-content" id="editResults"></div>
-        </div>
-    </div>
     <div class="popup-wrapper hide" id="pointsPopup">
         <div class="popup-container">
             <div class="close-wrapper">
@@ -80,9 +71,9 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         <div class="points" id="points"><?=$recPoints?></div>
     </div>
     <div class="button-wrapper">
-        <div class="rec-input-button buttons" onclick="showRecPopup(<?=$userID?>)">
+        <a class="rec-input-button buttons" href="friendRecEdit.php?userID=<?=$userID?>">
             <p>update</p>
-        </div>
+        </a>
     </div>
     <div class="wrapper">
         <?php $stmt = $_SESSION["conn"]->query("SELECT * FROM friendRecs");
@@ -203,26 +194,26 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             location.reload(true);
         }
 
-        function showRecPopup(userID) {
-            $("#editPopup").css({"display": "flex"});
-            var editPopup = document.getElementById("editPopup");
-            editPopup.scrollIntoView();
-            setTimeout(hideBackground, 500);
+        // function showRecPopup(userID) {
+        //     $("#editPopup").css({"display": "flex"});
+        //     var editPopup = document.getElementById("editPopup");
+        //     editPopup.scrollIntoView();
+        //     setTimeout(hideBackground, 500);
 
-            $.ajax({
-                url: 'php/ajax_friendrec_edit.php',
-                method: 'post',
-                data: {userID: userID},
-                success: function(result) {
-                    $("#editResults").html(result);
-                }
-            });
-        }
-        function closeRecPopup() {
-            $("#editPopup").hide();
-            $("#body").css({"height": "unset", "overflow": "unset"});
-            location.reload(true);
-        }
+        //     $.ajax({
+        //         url: 'php/ajax_friendrec_edit.php',
+        //         method: 'post',
+        //         data: {userID: userID},
+        //         success: function(result) {
+        //             $("#editResults").html(result);
+        //         }
+        //     });
+        // }
+        // function closeRecPopup() {
+        //     $("#editPopup").hide();
+        //     $("#body").css({"height": "unset", "overflow": "unset"});
+        //     location.reload(true);
+        // }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>

@@ -164,7 +164,7 @@
         /* align-self: center; */
     }
 }
-@media only screen and (max-height: 800px) {
+/* @media only screen and (max-height: 800px) {
     .popup-container {
         width: 80%;
     }
@@ -183,4 +183,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
