@@ -32,10 +32,34 @@ if (isset($_SESSION["timezone"])) {
 //set default timezone to user's timezone instead of server's
 date_default_timezone_set("$timezone");
 
+if (isset($_POST["fanfic"])) {
+    $pages = $_POST["pages"];
+
+    $newGoal = str_replace( ',', '', $pages );
+
+    if( is_numeric( $newGoal ) ) {
+        $pages = $newGoal;
+
+        $pages = round($pages / 280);
+        
+        if ($pages < 1) {
+            $pages = 1;
+        }
+    }
+} else {
+        $pages = $_POST["pages"];
+
+        $newGoal = str_replace( ',', '', $pages );
+
+        if( is_numeric( $newGoal ) ) {
+            $pages = $newGoal;
+        }
+}
+
 //set month variable according to month of the finish date for the entry
 $month = date("n",strtotime($_POST["dateFinished"]));
 //calls to calculate function to math total points earned from modifiers
-$totalPoints = calculateTotalPoints($_POST["pages"], $_POST["mod-1"], $_POST["mod-2"]);
+$totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
 
 //if user added tags, take tags from array and insert them into a string separated by ,
 if (isset($_POST["tag"])) {
@@ -45,11 +69,23 @@ if (isset($_POST["tag"])) {
     $insert_tags = NULL;
 }
 
+if (isset($_POST["diffDate"])) {
+    $dateFinished = $_POST["dateFinished"];
+} else {
+    $dateFinished = date('Y-m-d');
+}
+
 //assigns boolean value to ongoing variable. 0 = not checked, 1 = checked.
 if (isset($_POST["ongoing"])) {
     $ongoing = 1;
 } else {
     $ongoing = 0;
+}
+
+if (isset($_POST["fanfic"])) {
+    $fanfic = 1;
+} else {
+    $fanfic = 0;
 }
 
 //first query
@@ -73,7 +109,7 @@ $stmt1->bind_param("ssssiiiissiiii",
                         $_POST["author"],
                         $_POST["dateFinished"],
                         $_POST["dateStarted"],
-                        $_POST["pages"],
+                        $pages,
                         $ongoing,
                         $_POST["mod-1"],
                         $_POST["mod-2"],
@@ -103,17 +139,16 @@ if ($stmt1 -> execute()) {
     //executes second statement
     if ($stmt2->execute()) {
         //loops through tags array. Inserts them into tags table if it doesn't already exist. Updates if it does.
-        foreach ($tags as $key => $value) {
-            //statement 3 query
-            $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) 
-                                                    VALUES (?)
-                                                    ON DUPLICATE KEY UPDATE `tags` = ?;");
-            //bind values to columns
-            $stmt3->bind_param("ss", 
-                                $value,
-                                $value);
-            //execute statement 3
-            $stmt3->execute();
+        if ($insert_tags !== NULL) {
+            foreach ($tags as $value) {
+                $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
+                    ON DUPLICATE KEY UPDATE `tags` = ?;");
+                $stmt3->bind_param("ss", 
+                                    $value,
+                                    $value);
+
+                $stmt3->execute();
+            }
         }
         //sends user back to history page    
         header("Location: /readHistory.php?user_id=$userID");
