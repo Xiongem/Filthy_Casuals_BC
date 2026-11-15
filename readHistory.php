@@ -240,11 +240,11 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 ?>
                     <div class="row" id="<?= $readID ?>">
                         <?php if ($userID === $ID) { ?>
-                        <a href="readEdit.php?read_ID=<?=$readID?>&user_ID=<?=$ID?>">
                             <div class="edit" id="edit">
-                                <ion-icon name="settings" id="edit-icon"></ion-icon>
+                                <a href="readEdit.php?read_ID=<?=$readID?>&user_ID=<?=$ID?>">
+                                    <ion-icon name="settings" id="edit-icon"></ion-icon>
+                                </a>
                             </div>
-                        </a>
                         <?php } else { ?>
                             <div class="edit" id="edit">
                                 <ion-icon name="lock-closed" id="close-icon"></ion-icon>
