@@ -247,6 +247,10 @@ $today = date("Y-m-d");
 
             function clickPress(event) {
                 if (event.key == "Enter") {
+                    $('#myForm').preventDefault();
+                    return false;
+                    console.log("no");
+                    
                     var createTag = document.getElementById('tags_id0').value;
                     $.ajax({
                         url: 'php/ajax_tags_creation.php',
