@@ -40,6 +40,10 @@ function removeTag(tagName) {
 
 function clickPress(event) {
     if (event.key == "Enter") {
+        $("#updateForm").submit(function(e){
+            e.preventDefault();
+        });
+        
         var createTag = document.getElementById('tags_id0').value;
         $.ajax({
             url: 'php/ajax_tags_creation.php',

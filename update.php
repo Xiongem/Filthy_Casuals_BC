@@ -61,7 +61,7 @@ $today = date("Y-m-d");
             <div class="title-wrapper">
                 <h1>Update Your Reading History</h1>
             </div>
-            <form action="php/process-update.php" method="post">
+            <form action="php/process-update.php" method="post" id="updateForm">
                 <div class="label-wrapper">
                     <label for="title" class="labels">Title:</label>
                     <span class="required">*</span>
@@ -233,6 +233,16 @@ $today = date("Y-m-d");
         </div>
 
         <script>
+  
+
+            $(document).keydown( function( e ) { 
+                if( e.target.nodeName == "INPUT") return;
+                if( e.target.isContentEditable ) return;
+
+            // Do stuff 
+            })
+
+
             function check() {
                 var active = <?=$active?>;
                 if (active == 1) {
