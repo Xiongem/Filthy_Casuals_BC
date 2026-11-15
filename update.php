@@ -61,7 +61,9 @@ $today = date("Y-m-d");
             <div class="title-wrapper">
                 <h1>Update Your Reading History</h1>
             </div>
-            <form action="php/process-update.php" method="post" id="updateForm">
+            <form action="php/process-update.php" method="post" id="updateForm" onkeydown="if(event.keyCode === 13) {
+                                                        alert('You have pressed Enter key, use submit button instead');
+                                                        return false;}">
                 <div class="label-wrapper">
                     <label for="title" class="labels">Title:</label>
                     <span class="required">*</span>
@@ -233,41 +235,6 @@ $today = date("Y-m-d");
         </div>
 
         <script>
-            //  $(document).ready(function(){
-            //     $('#myForm').keydown(function(event){
-            //         console.log("hello");
-                    
-            //         if(event.keyCode == 13) {
-            //             alert('You pressed enter! Form submission will be disabled.')
-            //             event.preventDefault();
-            //             return false;
-            //         }
-            //     });
-            // });
-
-            function clickPress(event) {
-                if (event.key == "Enter") {
-                    $('#myForm').preventDefault();
-                    return false;
-                    console.log("no");
-                    
-                    var createTag = document.getElementById('tags_id0').value;
-                    $.ajax({
-                        url: 'php/ajax_tags_creation.php',
-                        type: 'POST',
-                        data: {tag:createTag},
-                        success:function(data){
-                            $('#notchWrapper').append(data);
-
-                            $('#search_results0').html("");
-                            $('#search_results0').hide();
-                            var keyword0 = document.getElementById('tags_id0');
-                            keyword0.value = '';
-                        }
-                    });
-                }
-            }
-
             function check() {
                 var active = <?=$active?>;
                 if (active == 1) {
