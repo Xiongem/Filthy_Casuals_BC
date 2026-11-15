@@ -83,7 +83,7 @@ $today = date("Y-m-d");
                     class="inputs"
                     required>
 
-                <!--//! ADD TAG EXPLANATION AND PREVENT SUBMISSION ON ENTER PRESS WHEN CURSOR IS IN TAG INPUT? -->
+                <!--//! ADD TAG EXPLANATION -->
 
                 <div class="tag-wrapper">
                     <div class="search-tag-wrapper">
