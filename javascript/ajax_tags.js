@@ -2,7 +2,7 @@ function autocomplet0() {
     var min_length = 0; // min characters to display the autocomplete
     var keyword0 = document.getElementById('tags_id0').value;
     
-    if (keyword0.length > min_length) {
+    if (keyword0.length > min_length && keyword0 != "") {
         $.ajax({
             url: 'php/ajax_tags_processing.php',
             type: 'POST',
