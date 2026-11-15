@@ -44,7 +44,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
     <div class="popup-wrapper hide" id="editPopup">
         <div class="popup-container">
             <div class="close-wrapper">
-                <ion-icon name="close" onclick="closeEditRead()"></ion-icon>
+                <ion-icon name="close" onclick="goBack()"></ion-icon>
             </div>
             <!--//* AJAX DISPLAYED CONTENT -->
             <div class="popup-content" id="editResults"></div>
@@ -240,9 +240,11 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 ?>
                     <div class="row" id="<?= $readID ?>">
                         <?php if ($userID === $ID) { ?>
+                        <a href="readEdit.php?read_ID=<?=$readID?>&user_ID=<?=$ID?>">
                             <div class="edit" id="edit">
-                                <ion-icon name="settings" id="edit-icon" onclick="editRead(<?=$readID?>, <?=$ID?>)"></ion-icon>
+                                <ion-icon name="settings" id="edit-icon"></ion-icon>
                             </div>
+                        </a>
                         <?php } else { ?>
                             <div class="edit" id="edit">
                                 <ion-icon name="lock-closed" id="close-icon"></ion-icon>
@@ -263,7 +265,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                     <div class="notch-wrapper" id="notchWrapper">
                         <?php if (isset($readHistory['tags'])) { ?>
                             <?php foreach ($tags as $key => $value) { ?>
-                                <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
+                                <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>">
                                     <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
                                 </div>
                             <?php } ?>

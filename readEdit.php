@@ -1,0 +1,302 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('log_errors', 'On');
+ini_set('error_log', '/path/to/php_errors.log');
+
+ob_start();
+require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
+dbConnect();
+
+//assign POST data from ajax to variables
+$readID = $_GET['read_ID'];
+$ID = $_GET['user_ID'];
+
+//pull data from database for the chosen entry and assign required variables
+$sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID";
+    $result = $_SESSION["conn"]->query($sql);
+    $read = $result->fetch_assoc();
+        $title = $read["title"];
+        $author = $read["author"];
+        $dateFinished = $read["finishedDate"];
+        $pages = $read["pages"];
+        $ongoing = $read["ongoing"];
+        $mod1 = $read["mod1"];
+        $mod2 = $read["mod2"];
+        $fanfic = $read["fanfic"];
+
+//set variables for columns that can be NULL in the db
+if (isset($read["startedDate"])) {
+    $startedDate = $read["startedDate"];
+} else {
+    $startedDate = "";
+}
+
+if (isset($read["tags"])) {
+    $tags = $read["tags"];
+    $tags_array = explode(",", $tags);
+} else {
+    $tags_array = NULL;
+}
+
+if (isset($read["comment"])) {
+    $comment = $read["comment"];
+} else {
+    $comment = "";
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Filthy Casual Book Challenge"> 
+    <meta property="og:description" content="A readHistory for filthy casuals."> 
+    <meta property="og:image" content="https://filthycasualsbc.com/images/FCBClogo.svg"> 
+    <meta property="og:url" content="https://filthycasualsbc.com/readHistory.php">
+    <title>Reading History Edit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/readHistory.css">
+    <link rel="website icon" type="svg" href="images/FCBClogo.svg">
+    <script src="javascript/scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/ajax_tags.js"> </script>
+</head>
+<body id="body">
+    <div class="popup-wrapper-history" id="editPopup">
+        <div class="popup-container">
+            <div class="close-wrapper">
+                <ion-icon size="large" name="close" onclick="goBack()"></ion-icon>
+            </div>
+        <h1>Edit an Entry</h1>
+        <form class="edit-form" action="php/process-editEntry.php" method="post" onkeydown="if(event.keyCode === 13) {
+                                                                return false;}">
+            <!-- assigns entry id to input field -->
+            <input type="hidden" name="read_ID" id="<?=$readID?>" value="<?=$readID?>">
+
+            <!--//? TITLE -->
+            <div class="label-wrapper">
+                <label for="title" class="labels">Title:</label>
+                <span class="required">*</span>
+            </div>
+            <input type="text"
+                name="title"
+                id="title"
+                class="inputs"
+                value="<?=$title?>"
+                required>
+
+            <!--//? AUTHOR -->
+            <div class="label-wrapper">
+                <label for="author" class="labels">Author:</label>
+                <span class="required">*</span>
+            </div>
+            <input type="text"
+                name="author"
+                id="author"
+                class="inputs"
+                value="<?=$author?>"
+                required>
+
+            <!--//? TAGS -->
+            <div class="tag-wrapper">
+                <div class="search-tag-wrapper">
+                    <div class="tag">
+                        <label for="keyword0" class="labels">Tags: <span id="help"><ion-icon name="help-circle"></ion-icon>
+                            <div class="help-popup" id="helpPop">
+                                <div class="help-content">
+                                    <p>Type into the search field to see already created tags. Type in and press the 
+                                        <ion-icon name="add-circle"></ion-icon> icon to create a new tag</p>
+                                </div>
+                            </div>
+                        </span></label>
+                        <input type="text" 
+                            name="keyword0" 
+                            id="tags_id0" 
+                            class="tags" 
+                            onkeyup="autocomplet0()"
+                            onkeypress="clickPress(event)">
+                    </div>
+                        <ion-icon name="add-circle" size="large" id="enter-circle" aria-label="add" onclick="createTag()"></ion-icon>
+                </div>
+                <div id="search_results0" class="search-wrapper"></div>
+            </div>
+
+            <!--//? SHOWS ASSIGNED TAGS AND ASSIGNS EACH TO AN INPUT FIELD -->
+            <div class="edit-notch-wrapper" id="notchWrapper">
+                <?php if (isset($tags_array)) { 
+                    foreach ($tags_array as $key => $tag_name) {?>
+                        <div class="notch-arrow" id="<?=$tag_name?>" onclick="removeTag(<?=$tag_name?>)">
+                            <p class='tag-content' id='tagContent'><?=$tag_name?></p>
+                            <input type="hidden" name="tag[<?=$tag_name?>]" id="tag_<?=$tag_name?>" value="<?=$tag_name?>">
+                        </div>
+                <?php }} ?>
+            </div>
+
+            <div class="dates-wrapper">
+                <div class="date-content">
+                    <!--//? FINISHED DATE -->
+                    <label for="dateFinished" class="labels">Date Finished:</label>
+                    <input type="date"
+                        name="dateFinished"
+                        id="dateFinished"
+                        class="inputs dates"
+                        value="<?=$dateFinished?>"
+                        required>
+                </div>
+
+                <div class="date-content">
+                    <!--//? DATE STARTED -->
+                    <label for="dateStarted" class="labels">Date Started:</label>
+                    <input type="date"
+                        name="dateStarted"
+                        id="dateStarted"
+                        class="inputs dates"
+                        value="<?=$startedDate?>">
+                </div>
+            </div>
+
+            <!-- //? FANFIC -->
+            <div class="box-wrapper" id="fanficWrapper">
+                <label for="fanfic" class="labels">Fanfiction?</label>
+                <input type="checkbox"
+                        name="fanfic"
+                        id="fanfic"
+                        class="checkbox" 
+                        <?php if($fanfic==1){?>checked="checked"<?php } ?>
+                        onclick="showFanfic();">
+            </div>
+
+            <!--//? NUMBER OF PAGES READ -->
+            <div class="page-wrapper">
+                <div class="label-wrapper">
+                    <label for="pages" class="labels" id="fanficResult">Number of Pages:</label>
+                    <span class="required">*</span>
+                </div>
+                <div id="pageWrapper">
+                    <div id="showFanficWarn"></div>
+                    <input type="text"
+                        name="pages"
+                        id="pages"
+                        class="inputs"
+                        pattern="^\d+(,\d+)?$"
+                        value="<?=$pages?>"
+                        required>
+                    <div id="fanficMathResult"></div>
+                </div>
+            </div>
+
+            <!--//? ONGOING CHECKBOX -->
+            <div class="box-wrapper" id="ongoingWrapper">
+                <label for="ongoing" class="labels">Ongoing:</label>
+                <input type="checkbox"
+                    name="ongoing"
+                    id="ongoing"
+                    class="checkbox"
+                    <?php if($read['ongoing']==1){ ?>checked="checked"<?php } ?>>
+            </div>
+
+            <!--//? 1ST MODIFIER SELECTOR -->
+            <div class="mod-wrapper">
+                <div id="mod1-wrapper" class="mod-content">
+                    <label for="mod-1" class="labels">Modifier 1:</label>
+                    <select name="mod-1" id="mod-1" class="inputs">
+                        <option value="1" <?php if($read['mod1']==1){ ?>selected="selected"<?php } ?>>Normal</option>
+                        <option value="2" <?php if($read['mod1']==2){ ?>selected="selected"<?php } ?>>Manga/Comic</option>
+                        <option value="3" <?php if($read['mod1']==3){ ?>selected="selected"<?php } ?>>Challenge</option>
+                        <option value="4" <?php if($read['mod1']==4){ ?>selected="selected"<?php } ?>>Challenge: Manga/Comics</option>
+                        <option value="5" <?php if($read['mod1']==5){ ?>selected="selected"<?php } ?>>Buddy Read</option>
+                        <option value="6" <?php if($read['mod1']==6){ ?>selected="selected"<?php } ?>>Friend Recommendation</option>
+                        <option value="7" <?php if($read['mod1']==7){ ?>selected="selected"<?php } ?>>Seasonal</option>
+                        <option value="8" <?php if($read['mod1']==8){ ?>selected="selected"<?php } ?>>Read-a-thon</option>
+                        <option value="9" <?php if($read['mod1']==9){ ?>selected="selected"<?php } ?>>Educational</option>
+                        <option value="10" <?php if($read['mod1']==10){ ?>selected="selected"<?php } ?>>Educational: Manga/Comics</option>
+                    </select>
+                </div>
+
+                <!--//? 2ND MODIFIER SELECTOR -->
+                <div id="mod2-wrapper" class="mod-content">
+                    <label for="mod-2" class="labels">Modifier 2:</label>
+                    <select name="mod-2" id="mod-2" class="inputs">
+                        <option value="1" <?php if($read['mod2']==1){ ?>selected="selected"<?php } ?>>Normal</option>
+                        <option value="2" <?php if($read['mod2']==2){ ?>selected="selected"<?php } ?>>Challenge</option>
+                        <option value="3" <?php if($read['mod2']==3){ ?>selected="selected"<?php } ?>>Buddy Read</option>
+                        <option value="4" <?php if($read['mod2']==4){ ?>selected="selected"<?php } ?>>Friend Recommendation</option>
+                        <option value="5" <?php if($read['mod2']==5){ ?>selected="selected"<?php } ?>>Seasonal</option>
+                        <option value="6" <?php if($read['mod2']==6){ ?>selected="selected"<?php } ?>>Read-a-thon</option>
+                        <option value="7" <?php if($read['mod2']==7){ ?>selected="selected"<?php } ?>>Educational</option>
+                        <option value="8" <?php if($read['mod2']==8){ ?>selected="selected"<?php } ?>>Educational: Manga/Comics</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--//? COMMENTS -->
+            <label for="comment" class="labels">Comment:</label>
+            <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)"><?=$comment?></textarea>
+
+            <!--//? SUMBIT BUTTON -->
+            <div class="edit-button-wrapper">
+                <a id="deleteButton" onclick="deleteEntry(<?=$readID?>, <?=$ID?>)">Delete</a>
+                <button type="submit" id="updateButton" class="buttons">Update</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $("#tags_id0").blur(function() {
+            $('#search_results0').hide();
+        });
+        function showFanfic() {
+            if ($('#fanfic').is(':checked')) {
+                $("#showFanficWarn").html("Input WORD COUNT");
+                $("#fanficResult").text("Number of WORDS:");
+
+                function fanficMath() {
+                    var pages = $("#pages").val();
+                    pages = pages.replace(/,/g, "");
+                    if (pages > 0) {
+                        var newPages = Math.round(pages / 280);
+                        if (newPages < 1) {
+                            newPages = 1;
+                            return newPages;
+                        } else {
+                            return newPages;
+                        }
+                    }
+                }
+
+                var typingTimer;                //timer identifier
+                var doneTypingInterval = 500;  //time in ms, 1 seconds for example
+                var $input = $('#pages');
+
+                //on keyup, start the countdown
+                $input.on('keyup', function () {
+                    if ($('#fanfic').is(':checked')) {
+                        clearTimeout(typingTimer);
+                        typingTimer = setTimeout(doneTyping, doneTypingInterval);
+                    }
+                });
+
+                //on keydown, clear the countdown 
+                $input.on('keydown', function () {
+                    if ($('#fanfic').is(':checked')) {
+                        clearTimeout(typingTimer);
+                    }
+                });
+
+                //user is "finished typing," do something
+                function doneTyping () {
+                    var total = fanficMath();
+                    $('#fanficMathResult').text("Pages: " + total);
+                }
+            } else {
+                $("#showFanficWarn").html("");
+                $("#fanficResult").text("Number of Pages:");
+                $('#fanficMathResult').text("")
+            }
+        }
+    </script>
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

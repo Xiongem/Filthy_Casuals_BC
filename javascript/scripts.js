@@ -53,6 +53,7 @@ function showBackground() {
   // body.style.height = "unset";
   // body.style.overflow = "unset";
 }
+
 function showDangerZone(){
   $("#dangerPopup").css({"display": "flex"});
   var dangerPopup = document.getElementById("dangerPopup");
@@ -104,4 +105,8 @@ function deleteEntry(readID, userID) {
       }
   })
 
+}
+
+function goBack() {
+  history.go(-1);
 }
