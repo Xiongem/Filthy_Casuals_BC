@@ -45,7 +45,7 @@ if ($now <= $ratEnd) {
     $ratActive = false;
 }
 
-//! ADD CACHE (ESPECIALLY FOR PFP) OR REMOVE PHP FROM TABLES TO IMPROVE LOAD TIMES
+//! REMOVE PHP IF LOAD TIMES ARE STILL TOO SLOW
 
 ?>
 
