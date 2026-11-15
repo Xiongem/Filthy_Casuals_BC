@@ -233,6 +233,16 @@ $today = date("Y-m-d");
         </div>
 
         <script>
+             $(document).ready(function(){
+                $('#myForm').keydown(function(event){
+                    if(event.keyCode == 13) {
+                        alert('You pressed enter! Form submission will be disabled.')
+                        event.preventDefault();
+                        return false;
+                    }
+                });
+            });
+
             function clickPress(event) {
                 if (event.key == "Enter") {
                     var createTag = document.getElementById('tags_id0').value;
@@ -251,17 +261,6 @@ $today = date("Y-m-d");
                     });
                 }
             }
-
-            $(document).ready(function(){
-                $('#myForm').keydown(function(event){
-                    if(event.keyCode == 13) {
-                        alert('You pressed enter! Form submission will be disabled.')
-                        event.preventDefault();
-                        return false;
-                    }
-                });
-            });
-
 
             function check() {
                 var active = <?=$active?>;
