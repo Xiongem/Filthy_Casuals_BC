@@ -234,9 +234,13 @@ $today = date("Y-m-d");
         </div>
 
         <script>
-            $('#tags_id0').on('blur', function(){
+            $("#tags_id0").focus(function() {
+                console.log('in');
+            }).blur(function() {
+                console.log('out');
                 $('#search_results0').hide();
             });
+
 
             function clickPress(event) {
                 if (event.key == "Enter") {
