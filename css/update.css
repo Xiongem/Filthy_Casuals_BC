@@ -68,6 +68,7 @@
     }
     #help {
         position: relative;
+        display: inline;
         /* display: flex;
         justify-content: center;
         align-items: center; */
