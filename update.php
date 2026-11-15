@@ -62,7 +62,6 @@ $today = date("Y-m-d");
                 <h1>Update Your Reading History</h1>
             </div>
             <form action="php/process-update.php" method="post" id="updateForm" onkeydown="if(event.keyCode === 13) {
-                                                        alert('You have pressed Enter key, use submit button instead');
                                                         return false;}">
                 <div class="label-wrapper">
                     <label for="title" class="labels">Title:</label>
