@@ -234,10 +234,7 @@ $today = date("Y-m-d");
         </div>
 
         <script>
-            $("#tags_id0").focus(function() {
-                console.log('in');
-            }).blur(function() {
-                console.log('out');
+            $("#tags_id0").blur(function() {
                 $('#search_results0').hide();
             });
 
