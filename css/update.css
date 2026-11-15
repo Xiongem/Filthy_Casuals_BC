@@ -87,12 +87,12 @@
         display: none;
         justify-content: center;
         align-items: center;
-        width: 8em;
+        width: 15em;
         height: fit-content;
         padding: 0.5em;
 
         background-color: var(--grey);
-        border: 1px solid var(--leather);
+        border: 2px solid var(--leather);
         border-radius: 8px;
     }
     #help:hover .help-popup{
@@ -100,6 +100,11 @@
     }
     .help-content {
         text-align: center;
+    }
+    .help-content p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .search-tag-wrapper {
         display: flex;
