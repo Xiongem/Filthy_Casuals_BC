@@ -113,6 +113,8 @@
     }
     .edit {
         background-color: var(--barium-yellow);
+        color: var(--deep-green);
+        text-decoration: none;
     }
     .edit, .head-edit {
         display: flex;
@@ -408,12 +410,6 @@
         justify-content: center;
         width: 100%;
         padding-top: 3em;
-    }
-    #edit a {
-        color: var(--deep-green);
-        text-decoration: none;
-        width: fit-content;
-        height: fit-content;
     }
 }
 /** ####################### *//** ####################### *//** ####################### */
