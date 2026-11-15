@@ -48,7 +48,8 @@ if (isset($read["comment"])) {
 
 
 <h1>Edit an Entry</h1>
-<form class="edit-form" action="php/process-editEntry.php" method="post">
+<form class="edit-form" action="php/process-editEntry.php" method="post" onkeydown="if(event.keyCode === 13) {
+                                                        return false;}">
     <!-- assigns entry id to input field -->
     <input type="hidden" name="read_ID" id="<?=$readID?>" value="<?=$readID?>">
 

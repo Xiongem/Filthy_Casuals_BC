@@ -361,6 +361,30 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                         showHistoryData();
                     });
 
+                    $("#tags_id0").blur(function() {
+                        $('#search_results0').hide();
+                    });
+
+
+                    function clickPress(event) {
+                        if (event.key == "Enter") {
+                            var createTag = document.getElementById('tags_id0').value;
+                            $.ajax({
+                                url: 'php/ajax_tags_creation.php',
+                                type: 'POST',
+                                data: {tag:createTag},
+                                success:function(data){
+                                    $('#notchWrapper').append(data);
+
+                                    $('#search_results0').html("");
+                                    $('#search_results0').hide();
+                                    var keyword0 = document.getElementById('tags_id0');
+                                    keyword0.value = '';
+                                }
+                            });
+                        }
+                    }
+
                     function showHistoryData() {
                         var user_ID = <?= $ID ?>;
                         $.ajax({
