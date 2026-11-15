@@ -233,14 +233,34 @@ $today = date("Y-m-d");
         </div>
 
         <script>
-  
+            function clickPress(event) {
+                if (event.key == "Enter") {
+                    var createTag = document.getElementById('tags_id0').value;
+                    $.ajax({
+                        url: 'php/ajax_tags_creation.php',
+                        type: 'POST',
+                        data: {tag:createTag},
+                        success:function(data){
+                            $('#notchWrapper').append(data);
 
-            $(document).keydown( function( e ) { 
-                if( e.target.nodeName == "INPUT") return;
-                if( e.target.isContentEditable ) return;
+                            $('#search_results0').html("");
+                            $('#search_results0').hide();
+                            var keyword0 = document.getElementById('tags_id0');
+                            keyword0.value = '';
+                        }
+                    });
+                }
+            }
 
-            // Do stuff 
-            })
+            $(document).ready(function(){
+                $('#myForm').keydown(function(event){
+                    if(event.keyCode == 13 && event.target == $("#tags_id0")) {
+                        alert('You pressed enter! Form submission will be disabled.')
+                        event.preventDefault();
+                        return false;
+                    }
+                });
+            });
 
 
             function check() {
