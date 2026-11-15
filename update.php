@@ -254,7 +254,7 @@ $today = date("Y-m-d");
 
             $(document).ready(function(){
                 $('#myForm').keydown(function(event){
-                    if(event.keyCode == 13 && event.target == $("#tags_id0")) {
+                    if(event.keyCode == 13) {
                         alert('You pressed enter! Form submission will be disabled.')
                         event.preventDefault();
                         return false;
