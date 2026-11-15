@@ -2,7 +2,7 @@ function autocomplet0() {
     var min_length = 0; // min characters to display the autocomplete
     var keyword0 = document.getElementById('tags_id0').value;
     
-    if (keyword0.length > min_length && keyword0 != "") {
+    if (keyword0.length > min_length) {
         $.ajax({
             url: 'php/ajax_tags_processing.php',
             type: 'POST',
@@ -12,6 +12,8 @@ function autocomplet0() {
                 $('#search_results0').html(data);
             }
         });
+    } else if (keyword0 == 0 || keyword0 == "") {
+        $('#search_results0').hide();
     } else {
         $('#search_results0').hide();
     }
