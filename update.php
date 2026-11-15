@@ -235,6 +235,8 @@ $today = date("Y-m-d");
         <script>
              $(document).ready(function(){
                 $('#myForm').keydown(function(event){
+                    console.log("hello");
+                    
                     if(event.keyCode == 13) {
                         alert('You pressed enter! Form submission will be disabled.')
                         event.preventDefault();
