@@ -12,7 +12,9 @@ function autocomplet0() {
                 $('#search_results0').html(data);
             }
         });
-    } else if (keyword0.length == 0 || keyword0 == "") {
+    } else if (keyword0 == 0 || keyword0 == "") {
+        console.log("goodbye");
+        
         $('#search_results0').hide();
     } else {
         $('#search_results0').hide();
