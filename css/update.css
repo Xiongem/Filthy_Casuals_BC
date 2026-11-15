@@ -82,7 +82,7 @@
     .help-popup {
         position: absolute;
         top: 0;
-        right: 5em;
+        right: -5em;
         z-index: 5;
         display: none;
         justify-content: center;
