@@ -181,7 +181,9 @@ $sql2 = "SELECT * FROM `challenges`";
             </div>
             <?php if ($admin == 1) {  ?>
             <div class="link-wrapper">
-                <a href="challengesEdit.php">Edit Challenges</a>
+                <div class="buttons">
+                    <a href="challengesEdit.php">Edit Challenges</a>
+                </div>
             </div>
             <?php } ?>
         </div>
