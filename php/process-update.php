@@ -109,10 +109,6 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
 if ($stmt1 -> execute()) {
     $newPointsYear = $yearTotal + $totalPoints;
 
-    echo ("Entry Total: ".$totalPoints."<br>");
-    echo ("Year Total: ".$yearTotal."<br>");
-    echo ("New Total: ".$newPointsYear."<br>");
-
     $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
         $stmt2->bind_param("ii", 
                             $newPointsYear, 
@@ -145,12 +141,12 @@ if ($stmt1 -> execute()) {
                                 $totalPoints);
             $stmt4->execute();
         }
-        echo ("Entry Total: ".$totalPoints."<br>");
-        echo ("Year Total: ".$yearTotal."<br>");
-        echo ("New Total: ".$newPointsYear."<br>");
-        // header("Location: /readHistory.php?user_id=$userID");
+        // echo ("Entry Total: ".$totalPoints."<br>");
+        // echo ("Year Total: ".$yearTotal."<br>");
+        // echo ("New Total: ".$newPointsYear."<br>");
+        header("Location: /readHistory.php?user_id=$userID");
     
-        // exit;
+        exit;
     } else {
         die("an unexpected error occured" . $stmt2 -> error);
     }
