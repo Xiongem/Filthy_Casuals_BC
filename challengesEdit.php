@@ -75,62 +75,62 @@ $sql2 = "SELECT * FROM `challenges`";
                 <div class="row">
                     <div class="month">Jan:</div>
                     <input class="inputs" name="month_jan" id="jan" value="<?=$jan?>">
-                    <textarea class="inputs" name="jan_Descr" id="janDescr" maxlength="200"><?=$janDescr?></textarea>
+                    <textarea class="inputs" name="jan_Descr" id="janDescr" maxlength="400"><?=$janDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">Feb:</div>
                     <input class="inputs" name="month_feb" id="feb" value="<?=$feb?>">
-                    <textarea class="inputs" name="feb_Descr" id="febDescr" maxlength="300"><?=$febDescr?></textarea>
+                    <textarea class="inputs" name="feb_Descr" id="febDescr" maxlength="400"><?=$febDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">March:</div>
                     <input class="inputs" name="month_march" id="march" value="<?=$march?>">
-                    <textarea class="inputs" name="march_Descr" id="marchDescr" maxlength="300"><?=$marchDescr?></textarea>
+                    <textarea class="inputs" name="march_Descr" id="marchDescr" maxlength="400"><?=$marchDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">April:</div>
                     <input class="inputs" name="month_april" id="april" value="<?=$april?>">
-                    <textarea class="inputs" name="april_Descr" id="aprilDescr" maxlength="300"><?=$aprilDescr?></textarea>
+                    <textarea class="inputs" name="april_Descr" id="aprilDescr" maxlength="400"><?=$aprilDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">May:</div>
                     <input class="inputs" name="month_may" id="may" value="<?=$may?>">
-                    <textarea class="inputs" name="may_Descr" id="mayDescr" maxlength="300"><?=$mayDescr?></textarea>
+                    <textarea class="inputs" name="may_Descr" id="mayDescr" maxlength="400"><?=$mayDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">June:</div>
                     <input class="inputs" name="month_june" id="june" value="<?=$june?>">
-                    <textarea class="inputs" name="june_Descr" id="juneDescr" maxlength="300"><?=$juneDescr?></textarea>
+                    <textarea class="inputs" name="june_Descr" id="juneDescr" maxlength="400"><?=$juneDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">July:</div>
                     <input class="inputs" name="month_july" id="july" value="<?=$july?>">
-                    <textarea class="inputs" name="july_Descr" id="julyDescr" maxlength="300"><?=$julyDescr?></textarea>
+                    <textarea class="inputs" name="july_Descr" id="julyDescr" maxlength="400"><?=$julyDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">Aug:</div>
                     <input class="inputs" name="month_aug" id="aug" value="<?=$aug?>">
-                    <textarea class="inputs" name="aug_Descr" id="augDescr" maxlength="300"><?=$augDescr?></textarea>
+                    <textarea class="inputs" name="aug_Descr" id="augDescr" maxlength="400"><?=$augDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">Sept:</div>
                     <input class="inputs" name="month_sept" id="sept" value="<?=$sept?>">
-                    <textarea class="inputs" name="sept_Descr" id="septDescr" maxlength="300"><?=$septDescr?></textarea>
+                    <textarea class="inputs" name="sept_Descr" id="septDescr" maxlength="400"><?=$septDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">Oct:</div>
                     <input class="inputs" name="month_oct" id="oct" value="<?=$oct?>">
-                    <textarea class="inputs" name="oct_Descr" id="octDescr" maxlength="300"><?=$octDescr?></textarea>
+                    <textarea class="inputs" name="oct_Descr" id="octDescr" maxlength="400"><?=$octDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">Nov:</div>
                     <input class="inputs" name="month_nov" id="nov" value="<?=$nov?>">
-                    <textarea class="inputs" name="nov_Descr" id="novDescr" maxlength="300"><?=$novDescr?></textarea>
+                    <textarea class="inputs" name="nov_Descr" id="novDescr" maxlength="400"><?=$novDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">Dec:</div>
                     <input class="inputs" name="month_dec" id="dec" value="<?=$dec?>">
-                    <textarea class="inputs" name="dec_Descr" id="decDescr" maxlength="300"><?=$decDescr?></textarea>
+                    <textarea class="inputs" name="dec_Descr" id="decDescr" maxlength="400"><?=$decDescr?></textarea>
                 </div>
             
                 <div class="button-wrapper">
