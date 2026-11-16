@@ -102,7 +102,6 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
         function closeInfoPopup() {
             $("#infoPopup").hide();
             $("#body").css({"height": "unset", "overflow": "unset"});
-            location.reload(true);
         }
 
 
