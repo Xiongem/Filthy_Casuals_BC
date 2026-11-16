@@ -121,24 +121,9 @@ if ($now <= $ratEnd) {
                         $idOverall = $rowOverall["user_id"];
                         $usernameOverall = $rowOverall["username"];
                         $pointsOverall = $rowOverall["pointsYear"];
-                        if (isset($_SESSION["imageName"])) {
-                            $imageName = $_SESSION["imageName"];
-                        } else {
-                            $_SESSION["imageName"] = htmlspecialchars($rowOverall['pfpName']);
-                            $imageName = $_SESSION["imageName"];
-                        }
-                        if (isset($_SESSION["imageType"])) {
-                            $imageType = $_SESSION["imageType"];
-                        } else {
-                            $_SESSION["imageType"] = $rowOverall['pfpType'];
-                            $imageType = $_SESSION["imageType"];
-                        }
-                        if (isset($_SESSION["imageData"])) {
-                            $imageData = $_SESSION["imageData"];
-                        } else {
-                            $_SESSION["imageData"] = base64_encode($rowOverall['pfpData']);
-                            $imageData = $_SESSION["imageData"];
-                        }
+                        $imageName = htmlspecialchars($rowOverall['pfpName']);
+                        $imageType = $rowOverall['pfpType'];
+                        $imageData = base64_encode($rowOverall['pfpData']);
                             $rankOverall++;  
                     ?>
 
