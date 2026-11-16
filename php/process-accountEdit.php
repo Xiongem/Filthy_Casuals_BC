@@ -42,10 +42,10 @@ if ($image === null) {
 
 echo "hello 6 <br>";
 
-if (($image['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_NO_FILE) {
-    return ['error', 'Please choose an image file.', null];
-    echo "Please choose an image file.2";
-}
+// if (($image['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_NO_FILE) {
+//     return ['error', 'Please choose an image file.', null];
+//     echo "Please choose an image file.2";
+// }
 
 echo "hello 7 <br>";
 
