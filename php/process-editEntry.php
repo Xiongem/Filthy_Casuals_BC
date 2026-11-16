@@ -143,6 +143,10 @@ if (isset($_POST["fanfic"])) {
         }
 
     }
+
+    echo ("old total:".$oldTotal."<br>");
+    echo ("new total:".$newTotal."<br>");
+    echo ("New yeaer points:".$newPointsYear."<br>");
     
     //second query
 //     $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` 
