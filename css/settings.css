@@ -65,6 +65,7 @@
     .upload-wrapper {
         display: flex;
         /* align-items: end; */
+        margin-bottom: 2em;
     }
     .upload-content {
         display: flex;
@@ -72,7 +73,6 @@
         align-items: center;
         justify-content: end;
         width: fit-content;
-        margin-bottom: 2em;
     }
     .upload-label {
         color: var(--deep-green);
@@ -155,6 +155,20 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+    .color-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pfp-wrapper {
+        position: relative;
+    }
+    .icon-wrapper {
+        position: absolute;
+        width: fit-content;
+        bottom: -1em;
+        right: 0;
     }
 
 
