@@ -14,6 +14,7 @@ $userID = $_SESSION["user_id"];
 $sql = "SELECT * FROM users WHERE user_id = $userID";
             $result = $_SESSION["conn"]->query($sql);
             $user = $result->fetch_assoc();  
+                $yearTotal = $user["pointsYear"];
 
 $timezone = $_SESSION["timezone"];
 date_default_timezone_set("$timezone");
@@ -105,45 +106,49 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                         $totalPoints);
 
 if ($stmt1 -> execute()) {
-    $newPointsYear = $user["pointsYear"] + $totalPoints;
-    $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
-        $stmt2->bind_param("ii", 
-                            $newPointsYear, 
-                            $userID);
-    if ($stmt2->execute()) {
-        if ($insert_tags !== NULL) {
-            foreach ($tags as $value) {
-                $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
-                    ON DUPLICATE KEY UPDATE `tags` = ?;");
-                $stmt3->bind_param("ss", 
-                                    $value,
-                                    $value);
+    $newPointsYear = $yearTotal + $totalPoints;
 
-                $stmt3->execute();
-            }
-        }
+    echo ("Entry Points: " . $totalPoints . "<br>");
+    echo ("Year Points: " . $yearTotal . "<br>");
+    echo ("Total Points: " . $newPointsYear . "<br>");
+//     $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
+//         $stmt2->bind_param("ii", 
+//                             $newPointsYear, 
+//                             $userID);
+//     if ($stmt2->execute()) {
+//         if ($insert_tags !== NULL) {
+//             foreach ($tags as $value) {
+//                 $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
+//                     ON DUPLICATE KEY UPDATE `tags` = ?;");
+//                 $stmt3->bind_param("ss", 
+//                                     $value,
+//                                     $value);
+
+//                 $stmt3->execute();
+//             }
+//         }
         
-        if ($_POST["bingoName"]) {
-            $stmt4 = $_SESSION["conn"] -> prepare("INSERT INTO `bingo` (`user_id`,
-                                                                    `bingo_name`,
-                                                                    `title`,
-                                                                    `author`,
-                                                                    `total_points`)
-                                                    VALUES (?, ?, ?, ?, ?)");
-            $stmt4->bind_param("isssi",
-                                $userID,
-                                $_POST["bingoName"],
-                                $_POST["title"],
-                                $_POST["author"],
-                                $totalPoints);
-            $stmt4->execute();
-        }
-        header("Location: /readHistory.php?user_id=$userID");
+//         if ($_POST["bingoName"]) {
+//             $stmt4 = $_SESSION["conn"] -> prepare("INSERT INTO `bingo` (`user_id`,
+//                                                                     `bingo_name`,
+//                                                                     `title`,
+//                                                                     `author`,
+//                                                                     `total_points`)
+//                                                     VALUES (?, ?, ?, ?, ?)");
+//             $stmt4->bind_param("isssi",
+//                                 $userID,
+//                                 $_POST["bingoName"],
+//                                 $_POST["title"],
+//                                 $_POST["author"],
+//                                 $totalPoints);
+//             $stmt4->execute();
+//         }
+//         header("Location: /readHistory.php?user_id=$userID");
     
-        exit;
-    } else {
-        die("an unexpected error occured");
-    }
-} else {
-    die("an unexpected error occured");
+//         exit;
+//     } else {
+//         die("an unexpected error occured");
+//     }
+// } else {
+//     die("an unexpected error occured");
 }
