@@ -181,7 +181,7 @@ $sql3 = "SELECT * FROM `challenges`";
                     <h2>Generate One-time Passcode</h2>
                 </div>
                 <div class="button-wrapper">
-                    <button id="createOTPButton" class="inputs buttons" onclick="createOTP()">Create OTP</button>
+                    <div id="createOTPButton" class="buttons" onclick="createOTP()">Create OTP</div>
                 </div>
                 <div class="OTP-wrapper" id="OTPWrapper">
                     <label class="labels">One-time Passcode:</label>
