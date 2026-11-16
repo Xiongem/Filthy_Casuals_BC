@@ -173,6 +173,7 @@ $today = date("Y-m-d");
                             id="pages"
                             class="inputs"
                             pattern="^\d+(,\d+)?$"
+                            maxlength="10"
                             required>
                         <div id="fanficMathResult"></div>
                     </div>
@@ -231,7 +232,7 @@ $today = date("Y-m-d");
                 <!--//! ADD AJAX TO SHOW TOTAL POINTS FOR MODIFIERS BEFORE HITTING SUBMIT -->
 
                 <label for="comment" class="labels">Comment:</label>
-                <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)"></textarea>
+                <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)" maxlength="200"></textarea>
 
                 <div class="button-wrapper">
                     <button type="submit" id="updateButton" class="inputs buttons">Update</button>
