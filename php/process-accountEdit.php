@@ -30,11 +30,10 @@ if (! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 }
 
 
-if (isset($_FILES['profilePicture'])) {
-    echo "hi there";
     $image = $_FILES['profilePicture'];
 
-
+if ($image === "") {
+    echo "hi there";
     if ($image === null) {
         return ['error', 'Please choose an image file.', null];
         echo "Please choose an image file.1";
