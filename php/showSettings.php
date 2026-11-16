@@ -47,17 +47,15 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                                 
                                 value="">
                         </div>
-                    </div>
-                    <div class="color-wrapper">
-                        <label class="labels">Profile Color:</label>
-                        <input type="color" name="color" id="color" value="<?=$color?>">
-                    </div>
+                        <div class="icon-wrapper">
+                            <ion-icon id="resetIcon" size="large" name="refresh-circle-outline" onclick="resetPFP('data:<?=$imageType?>;base64,<?=base64_encode($user['pfpData'])?>')"></ion-icon>
+                            <p id="explain">reset</p>
+                        </div>
+                    </div> 
                 </div>
-                <div class="upload-content">
-                    <div class="icon-wrapper">
-                        <ion-icon id="resetIcon" size="large" name="refresh-circle-outline" onclick="resetPFP('data:<?=$imageType?>;base64,<?=base64_encode($user['pfpData'])?>')"></ion-icon>
-                        <p id="explain">reset</p>
-                    </div>
+                <div class="color-wrapper">
+                    <label class="labels">Profile Color:</label>
+                    <input type="color" name="color" id="color" value="<?=$color?>">
                 </div>
             </div>
 
