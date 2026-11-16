@@ -217,6 +217,9 @@
     .popup-wrapper {
         width: 17em;
     }
+    .upload-wrapper {
+        padding: 0 2em;
+    }
     .profile-picture {
         height: 200px;
         width: 200px;
