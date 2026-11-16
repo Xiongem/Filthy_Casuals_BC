@@ -32,7 +32,7 @@ if (! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 
     $image = $_FILES['profilePicture'];
 
-if ($image === "") {
+if ($image !== "") {
     echo "hi there";
     if ($image === null) {
         return ['error', 'Please choose an image file.', null];
