@@ -262,11 +262,13 @@ a {
     .content-wrapper, .challenge-content, .link-wrapper {
         width: 70%;
     }
-    /* .challenge-wrapper {
+    .challenge-wrapper {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
         width: 100%;
-    } */
+    }
 }
 
 /** ####################### *//** ####################### *//** ####################### */
