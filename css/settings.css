@@ -218,6 +218,9 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 601px) {
+    .upload-wrapper {
+        justify-content: space-evenly;
+    }
     .settings-account-content, .settings-danger-content {
         width: 70%;
     }
