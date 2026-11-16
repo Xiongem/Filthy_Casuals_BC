@@ -30,49 +30,42 @@ if (! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 }
 
 
-    $image = $_FILES['profilePicture'];
-
-    print_r($image);
+$image = $_FILES['profilePicture'];
 
 if (($image['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_NO_FILE) {
-    echo "hi there";
     if ($image === null) {
-        return ['error', 'Please choose an image file.', null];
+        // return ['error', 'Please choose an image file.', null];
         echo "Please choose an image file.1";
     }
 
+    echo "hello 4 <br>";
 
     if (($image['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_NO_FILE) {
-        return ['error', 'Please choose an image file.', null];
+        // return ['error', 'Please choose an image file.', null];
         echo "Please choose an image file.2";
     }
 
-
     if (($image['size'] ?? 0) > 2097152) {
-        return ['error', 'Image size must be 5 MB or less.', null];
+        // return ['error', 'Image size must be 5 MB or less.', null];
         echo "Image size must be 5 MB or less.";
     }
 
-
     $tmpName = $image['tmp_name'] ?? '';
     if ($tmpName === '') {
-        return ['error', 'The uploaded file is not valid.', null];
+        // return ['error', 'The uploaded file is not valid.', null];
         echo "The uploaded file is not valid.";
     }
 
-
     $imageInfo = @getimagesize($tmpName);
     if ($imageInfo === false || empty($imageInfo['mime'])) {
-        return ['error', 'Please upload a valid image file.', null];
+        // return ['error', 'Please upload a valid image file.', null];
         echo "Please upload a valid image file.";
-    }
-
+    };
 
     $imageName = trim((string) ($image['name'] ?? ''));
     if ($imageName === '') {
         $imageName = 'image';
     }
-
 
     $allowedMimeTypes = [
         'image/jpeg',
@@ -84,14 +77,14 @@ if (($image['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_NO_FILE) {
 
     $mimeType = $imageInfo['mime'];
     if (!in_array($mimeType, $allowedMimeTypes, true)) {
-        return ['error', 'Only JPG, PNG, GIF, and WebP files are allowed.', null];
+        // return ['error', 'Only JPG, PNG, GIF, and WebP files are allowed.', null];
         echo "Only JPG, PNG, GIF, and WebP files are allowed.";
     }
 
 
     $imageData = file_get_contents($tmpName);
     if ($imageData === false) {
-        return ['error', 'Unable to read the uploaded file.', null];
+        // return ['error', 'Unable to read the uploaded file.', null];
         echo "Unable to read the uploaded file.";
     }
 
