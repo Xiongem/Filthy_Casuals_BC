@@ -78,6 +78,8 @@ if ($imageData === false) {
     echo "Unable to read the uploaded file.";
 }
 
+echo "start <br>";
+
 $stmt = $_SESSION["conn"]->prepare("UPDATE `users` SET `username` = ?, 
                                                         `email` = ?, 
                                                         `pfpName` = ?, 
@@ -86,6 +88,9 @@ $stmt = $_SESSION["conn"]->prepare("UPDATE `users` SET `username` = ?,
                                                         `color` = ?, 
                                                         `timezone` = ?
                                                     WHERE `user_id` = ?");
+
+echo "hello 1 <br>";
+
 $stmt->bind_param("sssssssi",
                         $_POST["username"],
                         $_POST["email"],
@@ -95,6 +100,8 @@ $stmt->bind_param("sssssssi",
                         $_POST["color"],
                         $_POST["timezone"],
                         $userID);
+
+echo "hello 2 <br>";
 
 if($stmt->execute()) {
      header("Location: /settings.php");
