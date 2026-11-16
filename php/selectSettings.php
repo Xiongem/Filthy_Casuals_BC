@@ -53,7 +53,7 @@ if ($tabName === 'account') { ?>
                                 <ion-icon id="resetIcon" size="large" name="refresh-circle-outline" onclick="resetPFP('data:<?=$imageType?>;base64,<?=base64_encode($user['pfpData'])?>')"></ion-icon>
                                 <p id="explain">reset</p>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                     <div class="color-wrapper">
                         <label class="labels">Profile Color:</label>
