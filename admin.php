@@ -185,9 +185,9 @@ $sql3 = "SELECT * FROM `challenges`";
                                 while ($admins = mysqli_fetch_assoc($stmt2)) {
                                     $adminsID = $admins["user_id"];
                                     $adminsName = $admins["username"];
-                                    $imageName = htmlspecialchars($rowOverall['pfpName']);
-                                    $imageType = $rowOverall['pfpType'];
-                                    $imageData = base64_encode($rowOverall['pfpData']);
+                                    $imageName = htmlspecialchars($admins['pfpName']);
+                                    $imageType = $admins['pfpType'];
+                                    $imageData = base64_encode($admins['pfpData']);
                         ?>
                     <div class="admin-row">
                         <ion-icon size="small" name="ellipse"></ion-icon>
