@@ -296,15 +296,11 @@ if ($now <= $ratEnd) {
                             $idHayai = $rowHayai["user_id"];
                             $usernameHayai = $rowHayai["username"];
                             $pointsHayai = $rowHayai["pointsYear"];
-                            $imageName = htmlspecialchars($rowHayai['pfpName']);
-                            $imageType = $rowHayai['pfpType'];
-                            $imageData = base64_encode($rowHayai['pfpData']);
                                 $rankHayai++;
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankHayai?></div>
                             <div class="tr userLink" onclick="goUser('<?=$idHayai?>')">
-                                <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameHayai?>
                             </div>
                             <div class="tr"><?=$pointsHayai?></div>
@@ -341,15 +337,14 @@ if ($now <= $ratEnd) {
                             $idYabai = $rowYabai["user_id"];
                             $usernameYabai = $rowYabai["username"];
                             $pointsYabai = $rowYabai["pointsYear"];
-                            $imageName = htmlspecialchars($rowYabai["pfpName"]);
-                            $imageType = $rowYabai["pfpType"];
-                            $imageData = base64_encode($rowYabai["pfpData"]);
+                            // $imageName = htmlspecialchars($rowYabai["pfpName"]);
+                            // $imageType = $rowYabai["pfpType"];
+                            // $imageData = base64_encode($rowYabai["pfpData"]);
                                 $rankYabai++;
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankYabai?></div>
                             <div class="tr userLink" onclick="goUser('<?=$idYabai?>')">
-                                <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameYabai?>
                             </div>
                             <div class="tr"><?=$pointsYabai?></div>
