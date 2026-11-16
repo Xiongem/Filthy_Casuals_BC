@@ -74,6 +74,7 @@ if (isset($read["comment"])) {
                                                                 return false;}">
             <!-- assigns entry id to input field -->
             <input type="hidden" name="read_ID" id="<?=$readID?>" value="<?=$readID?>">
+            <input type="hidden" name="user_ID" id="<?=$ID?>" value="<?=$ID?>">
 
             <!--//? TITLE -->
             <div class="label-wrapper">

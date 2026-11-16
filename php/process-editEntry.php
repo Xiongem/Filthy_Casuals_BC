@@ -10,7 +10,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/modMath.php');
 dbConnect();
 
 //assign data for user ID and entry ID to variables
-$userID = $_SESSION["user_id"];
+$userID = $_POST["user_ID"];
 $readID = $_POST["read_ID"];
 
 //pulls all user data from db
