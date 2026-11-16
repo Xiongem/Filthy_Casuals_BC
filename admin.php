@@ -219,7 +219,10 @@ $sql3 = "SELECT * FROM `challenges`";
                         </div>
                     </div>
                 </div>
-            </div>            
+            </div>   
+            
+            <div class="divider div12"></div>
+
         </div>
     <script>
         function createNewBingo() {
