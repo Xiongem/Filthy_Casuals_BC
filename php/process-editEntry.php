@@ -123,24 +123,20 @@ if (isset($_POST["fanfic"])) {
 //                         $userID);            
 // //executes first statement
 // if ($stmt1 -> execute()) {
-    //if the total points for this entry in the database is the same as total points calculated from function (aka, points didn't change)
-    if ($oldTotal == $newTotal) {
 
-        $newPointsYear == $newPointsYear;
+    if ($oldTotal == $newTotal) { //if total points has not changed, keep points the same as what's in the database
 
-    } elseif ($newTotal > $oldTotal) {
+        $newPointsYear == $yearTotal;
 
-        $subTotal = $newTotal - $oldTotal;
-        $newPointsYear = $yearTotal + $subTotal;
+    } else { //if new points are different from DB, remove old points and add new points
 
-    } elseif ($newTotal < $oldTotal) {
+        $subTotal = $yearTotal - $oldTotal;
 
-        $subTotal = $oldTotal - $newTotal;
-        $newPointsYear = $yearTotal - $subTotal;
-
-        if ($newPointsYear < 0) {
-            $newPointsYear = 0;
+        if ($subTotal < 0) {
+            $subTotal = 0;
         }
+
+        $newPointsYear = $subTotal + $newTotal;
 
     }
 
