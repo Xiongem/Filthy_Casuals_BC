@@ -139,7 +139,7 @@ if (isset($_POST["fanfic"])) {
         $newPointsYear = $subTotal + $newTotal;
 
     }
-
+    echo ("old year total: ".$yearTotal."<br>");
     echo ("old total: ".$oldTotal."<br>");
     echo ("new total: ".$newTotal."<br>");
     echo ("New year points: ".$newPointsYear."<br>");
