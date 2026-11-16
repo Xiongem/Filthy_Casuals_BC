@@ -124,12 +124,17 @@ if ($now <= $ratEnd) {
                         $imageName = htmlspecialchars($rowOverall['pfpName']);
                         $imageType = $rowOverall['pfpType'];
                         $imageData = base64_encode($rowOverall['pfpData']);
+                        if (isset($rowOverall['color'])) {
+                            $color = $rowOverall['color'];
+                        } else {
+                            $color = "#2b361c";
+                        }
                             $rankOverall++;  
                     ?>
 
                     <div class="table-rows">
                         <div class="tr"><?=$rankOverall?></div>
-                        <div class="tr userLink" onclick="goUser('<?=$idOverall?>')">
+                        <div class="tr userLink" onclick="goUser('<?=$idOverall?>')" style="color: <?=$color?>">
                             <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                             <?=$usernameOverall?>
                         </div>
@@ -164,6 +169,11 @@ if ($now <= $ratEnd) {
                         $idLeague = $rowLeague['user_id'];
                         $usernameLeague = $rowLeague["username"];
                         $pointsLeague = $rowLeague["pointsYear"];
+                        if (isset($rowLeague['color'])) {
+                            $color = $rowLeague['color'];
+                        } else {
+                            $color = "#2b361c";
+                        }
                             $rankLeague++;
                 ?>
                     <div class="table-rows">
