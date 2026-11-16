@@ -164,7 +164,7 @@
     .pfp-wrapper {
         position: relative;
     }
-    .icon-wrapper {
+    .pfp-icon-wrap {
         position: absolute;
         width: fit-content;
         bottom: -1em;
