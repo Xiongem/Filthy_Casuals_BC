@@ -76,7 +76,9 @@ $stmt = $_SESSION['conn'] -> prepare("UPDATE `challenges` SET `updated_by` = ?,
                             $_POST["dec_Descr"],);
 
     if ($stmt -> execute() && $stmt -> affected_rows > 0) {
-        echo "Challenges updated successfully";
+        header("Location: /challenges.php");
+    
+        exit;
     } else {
-        echo "Error updating challenges: " . $stmt -> error;
+        die("Error updating challenges: " . $stmt -> error);
     }
