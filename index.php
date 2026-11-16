@@ -164,15 +164,11 @@ if ($now <= $ratEnd) {
                         $idLeague = $rowLeague['user_id'];
                         $usernameLeague = $rowLeague["username"];
                         $pointsLeague = $rowLeague["pointsYear"];
-                        $imageName = htmlspecialchars($rowLeague['pfpName']);
-                        $imageType = $rowLeague['pfpType'];
-                        $imageData = base64_encode($rowLeague['pfpData']);
                             $rankLeague++;
                 ?>
                     <div class="table-rows">
                         <div class="tr"><?=$rankLeague?></div>
                         <div class="tr userLink" onclick="goUser('<?=$idLeague?>')">
-                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                             <?=$usernameLeague?>
                         </div>
                         <div class="tr"><?=$pointsLeague?></div>
@@ -206,15 +202,11 @@ if ($now <= $ratEnd) {
                             $idGoro = $rowGoro["user_id"];
                             $usernameGoro = $rowGoro["username"];
                             $pointsGoro = $rowGoro["pointsYear"];
-                            $imageName = htmlspecialchars($rowGoro['pfpName']);
-                            $imageType = $rowGoro['pfpType'];
-                            $imageData = base64_encode($rowGoro['pfpData']);
                                 $rankGoro++;
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankGoro?></div>
                             <div class="tr userLink" onclick="goUser('<?=$idGoro?>')">
-                                <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameGoro?>
                             </div>
                             <div class="tr"><?=$pointsGoro?></div>
@@ -251,15 +243,11 @@ if ($now <= $ratEnd) {
                             $idFutsuu = $rowFutsuu["user_id"];
                             $usernameFutsuu = $rowFutsuu["username"];
                             $pointsFutsuu = $rowFutsuu["pointsYear"];
-                            $imageName = htmlspecialchars($rowFutsuu['pfpName']);
-                            $imageType = $rowFutsuu['pfpType'];
-                            $imageData = base64_encode($rowFutsuu['pfpData']);
                                 $rankFutsuu++;
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankFutsuu?></div>
                             <div class="tr userLink" onclick="goUser('<?=$idFutsuu?>')">
-                                <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
                                 <?=$usernameFutsuu?>
                             </div>
                             <div class="tr"><?=$pointsFutsuu?></div>
