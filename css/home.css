@@ -166,6 +166,9 @@
         display: flex;
         align-items: center;
     }
+    .bingo-title h1 {
+        margin-right: 0.5em;
+    }
     .bingo-label-wrapper {
         display: flex;
         justify-content: center;
