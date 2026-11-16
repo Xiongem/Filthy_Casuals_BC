@@ -25,6 +25,7 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
             $imageName = htmlspecialchars($user['pfpName']);
             $imageType = $user['pfpType'];
             $imageData = base64_encode($user['pfpData']);
+            $pointsYear = $user["pointsYear"];
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +65,12 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                 <img class="pfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
             </div>
             <h1><?= $username ?>'s Reading History</h1>
+        </div>
+        <div class="total-wrapper">
+            <div class="total-content">
+                <h2>Total Points:</h2>
+                <?=$pointsYear?>
+            </div>
         </div>
 
 

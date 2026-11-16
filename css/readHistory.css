@@ -11,6 +11,15 @@
     /* body {
         background-color: var(--leather);
     } */
+    .total-wrapper {
+        width: 100%;
+    }
+    .total-content {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
     .form-group {
         display: flex;
         justify-content: end;
@@ -448,6 +457,13 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1024px) {
+    .total-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .total-content {
+        width: 70%;
+    }
     .row {
         grid-template-columns: 3% 5% 15% 15% 5% 10% 10% 5% 9% 9% 5% 10%;
     }
