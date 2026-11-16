@@ -137,9 +137,9 @@
         align-items: center;
         margin-bottom: 1em;
     }
-    #createOTPButton {
+    /* #createOTPButton {
         width: 20em;
-    }
+    } */
     .OTP-wrapper {
         display: flex;
         flex-direction: column;
