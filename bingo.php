@@ -42,7 +42,7 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
     <div class="popup-wrapper hide" id="infoPopup">
         <div class="popup-container">
             <div class="close-wrapper">
-                <ion-icon class="icon" name="close" onclick="closeInfoPopup()"></ion-icon>
+                <ion-icon class="icon" size="large" name="close" onclick="closeInfoPopup()"></ion-icon>
             </div>
             <h3>Bingo Challenges</h3>
             <p>

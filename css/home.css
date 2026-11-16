@@ -162,6 +162,10 @@
         height: 2.5em;
         margin: 1em;
     }
+    .bingo-title {
+        display: flex;
+        align-items: center;
+    }
     .bingo-label-wrapper {
         display: flex;
         justify-content: center;
