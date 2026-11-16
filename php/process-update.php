@@ -73,82 +73,79 @@ if (isset($_POST["fanfic"])) {
 }
 
 
-// $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`, 
-//                                                                 `username`, 
-//                                                                 `title`, 
-//                                                                 `author`, 
-//                                                                 `finishedDate`, 
-//                                                                 `startedDate`, 
-//                                                                 `pages`, 
-//                                                                 `ongoing`,
-//                                                                 `fanfic`, 
-//                                                                 `mod1`, 
-//                                                                 `mod2`,
-//                                                                 `tags`, 
-//                                                                 `comment`, 
-//                                                                 `month`, 
-//                                                                 `totalPoints`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-//     $stmt1->bind_param("isssssiiiiissii",
-//                         $userID,
-//                         $user["username"],
-//                         $_POST["title"],
-//                         $_POST["author"],
-//                         $dateFinished,
-//                         $_POST["dateStarted"],
-//                         $pages,
-//                         $ongoing,
-//                         $fanfic,
-//                         $_POST["mod-1"],
-//                         $_POST["mod-2"],
-//                         $insert_tags,
-//                         $_POST["comment"],
-//                         $month,
-//                         $totalPoints);
+$stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`, 
+                                                                `username`, 
+                                                                `title`, 
+                                                                `author`, 
+                                                                `finishedDate`, 
+                                                                `startedDate`, 
+                                                                `pages`, 
+                                                                `ongoing`,
+                                                                `fanfic`, 
+                                                                `mod1`, 
+                                                                `mod2`,
+                                                                `tags`, 
+                                                                `comment`, 
+                                                                `month`, 
+                                                                `totalPoints`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt1->bind_param("isssssiiiiissii",
+                        $userID,
+                        $user["username"],
+                        $_POST["title"],
+                        $_POST["author"],
+                        $dateFinished,
+                        $_POST["dateStarted"],
+                        $pages,
+                        $ongoing,
+                        $fanfic,
+                        $_POST["mod-1"],
+                        $_POST["mod-2"],
+                        $insert_tags,
+                        $_POST["comment"],
+                        $month,
+                        $totalPoints);
 
-// if ($stmt1 -> execute()) {
+if ($stmt1 -> execute()) {
     $newPointsYear = $yearTotal + $totalPoints;
 
-    echo ("Entry Points: " . $totalPoints . "<br>");
-    echo ("Year Points: " . $yearTotal . "<br>");
-    echo ("Total Points: " . $newPointsYear . "<br>");
-//     $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
-//         $stmt2->bind_param("ii", 
-//                             $newPointsYear, 
-//                             $userID);
-//     if ($stmt2->execute()) {
-//         if ($insert_tags !== NULL) {
-//             foreach ($tags as $value) {
-//                 $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
-//                     ON DUPLICATE KEY UPDATE `tags` = ?;");
-//                 $stmt3->bind_param("ss", 
-//                                     $value,
-//                                     $value);
+    $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
+        $stmt2->bind_param("ii", 
+                            $newPointsYear, 
+                            $userID);
+    if ($stmt2->execute()) {
+        if ($insert_tags !== NULL) {
+            foreach ($tags as $value) {
+                $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
+                    ON DUPLICATE KEY UPDATE `tags` = ?;");
+                $stmt3->bind_param("ss", 
+                                    $value,
+                                    $value);
 
-//                 $stmt3->execute();
-//             }
-//         }
+                $stmt3->execute();
+            }
+        }
         
-//         if ($_POST["bingoName"]) {
-//             $stmt4 = $_SESSION["conn"] -> prepare("INSERT INTO `bingo` (`user_id`,
-//                                                                     `bingo_name`,
-//                                                                     `title`,
-//                                                                     `author`,
-//                                                                     `total_points`)
-//                                                     VALUES (?, ?, ?, ?, ?)");
-//             $stmt4->bind_param("isssi",
-//                                 $userID,
-//                                 $_POST["bingoName"],
-//                                 $_POST["title"],
-//                                 $_POST["author"],
-//                                 $totalPoints);
-//             $stmt4->execute();
-//         }
-//         header("Location: /readHistory.php?user_id=$userID");
+        if ($_POST["bingoName"]) {
+            $stmt4 = $_SESSION["conn"] -> prepare("INSERT INTO `bingo` (`user_id`,
+                                                                    `bingo_name`,
+                                                                    `title`,
+                                                                    `author`,
+                                                                    `total_points`)
+                                                    VALUES (?, ?, ?, ?, ?)");
+            $stmt4->bind_param("isssi",
+                                $userID,
+                                $_POST["bingoName"],
+                                $_POST["title"],
+                                $_POST["author"],
+                                $totalPoints);
+            $stmt4->execute();
+        }
+        header("Location: /readHistory.php?user_id=$userID");
     
-//         exit;
-//     } else {
-//         die("an unexpected error occured");
-//     }
-// } else {
-//     die("an unexpected error occured");
-// }
+        exit;
+    } else {
+        die("an unexpected error occured" . $stmt2 -> error);
+    }
+} else {
+    die("an unexpected error occured" . $stmt1 -> error);
+}
