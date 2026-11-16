@@ -432,7 +432,7 @@
         flex-direction: row;
         align-items: center;
     }
-    .profile {
+    /* .profile {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -443,13 +443,16 @@
         border-radius: 50%;
         border: var(--deep-green) 2px solid;
         background-color: var(--barium-yellow);
-    }
+    } */
     .pfp {
         width: 3em;
         height: 3em;
         object-fit: cover;
         border-radius: 50%;
         margin: 0.5em;
+
+        border: var(--deep-green) 2px solid;
+        background-color: var(--barium-yellow);
     }
 }
 /** ####################### *//** ####################### *//** ####################### */
