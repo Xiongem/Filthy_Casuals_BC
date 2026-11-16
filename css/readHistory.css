@@ -116,6 +116,9 @@
     }
     .comment {
         min-width: 14em;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        hyphens: manual;
     }
     .head-edit {
         background-color: var(--deep-green);
@@ -320,9 +323,6 @@
     #comment {
         height: 8em;
         resize: vertical;
-        overflow-wrap: break-word;
-        word-break: break-all;
-        hyphens: manual;
     }
     .edit-button-wrapper {
         display: flex;
