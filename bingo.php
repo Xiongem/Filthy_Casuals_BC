@@ -68,7 +68,7 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
         <!--//! ADD explanation for how bingo works and link to bingo board generation website -->
         <div class="bingo-title spacing">
             <h1>Assign Bingo Squares</h1>
-            <ion-icon name="information-circle-outline" onclick="showInfoPopup()"></ion-icon>
+            <ion-icon class="icon" name="information-circle-outline" onclick="showInfoPopup()"></ion-icon>
         </div>
         <div class="bingo-label-wrapper">
             <label id="bingo-label">Bingo Dimensions:</label>
