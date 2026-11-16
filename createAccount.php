@@ -273,6 +273,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         id="username"
                         class="inputs"
                         autocomplete="off"
+                        maxlength="20"
                         required>
 
                     <span class="check" id="user-availability-status"></span>
@@ -284,6 +285,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         name="password"
                         id="password"
                         class="inputs"
+                        maxlength="20"
                         required>
                 </div>
 
@@ -296,6 +298,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     name="retypePassword"
                     id="retypePassword"
                     class="inputs spacing"
+                    maxlength="20"
                     required>
 
                 <div class="checkbox-wrapper">
