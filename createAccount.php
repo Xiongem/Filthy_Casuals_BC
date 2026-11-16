@@ -324,7 +324,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </div>
                     <div class="color-wrapper">
                         <label class="labels">Pick a color for your name:</label>
-                        <input type="color" name="color" id="color" value="#2b361c">
+                        <input class="inputs" type="color" name="color" id="color" value="#2b361c">
                     </div>
                 </div>
 
