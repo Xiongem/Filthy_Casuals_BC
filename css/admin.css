@@ -228,7 +228,7 @@
         padding: 0 1em;
         margin-bottom: 0.5em;
 
-        border-bottom: 2px solid var(--barium-yellow);
+        border-bottom: 2px solid var(--grey);
     }
     .admin-row:last-child {
         border-bottom: none;
@@ -241,9 +241,9 @@
         height: 3em;
         border-radius: 50%;
     }
-    .adminName {
+    /* .adminName {
         font-size: 28px;
-    }
+    } */
     .center {
         justify-self: center;
     }
