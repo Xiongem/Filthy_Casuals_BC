@@ -126,23 +126,14 @@ a {
     .icon-wrapper:hover #nav-menu-icon {
         color: var(--leather);
     }
-    #profile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* margin: 0 0.8em; */
-        width: 3.5em;
-        height: 3.5em;
-
-        border-radius: 50%;
-        border: var(--deep-green) 2px solid;
-        background-color: var(--barium-yellow);
-    }
     #profilePic {
         width: 3.5em;
         height: 3.5em;
         border-radius: 50%;
+
         object-fit: cover;
+        border: var(--deep-green) 2px solid;
+        background-color: var(--barium-yellow);
     }
 
 

@@ -47,9 +47,7 @@ function makeNav() {
                             </div>
                         </div>
                     </div>
-                    <div id="profile">
-                        <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
-                    </div>
+                    <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
                 </div>
                 <div class="desktop-nav-wrapper">
                     <div class="desktop-logo-wrapper">
@@ -70,9 +68,7 @@ function makeNav() {
                             <p id="explain">update</p>
                         </a>
                     </div>
-                    <div id="profile">
-                        <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
-                    </div>
+                    <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
                 </div>
             HTML;
             echo $htmlContent;
@@ -97,9 +93,7 @@ function makeNav() {
                         </div>
                     </div>
                 </div>
-                <div id="profile">
-                    <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
-                </div>
+                <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
             </div>
             <div class="desktop-nav-wrapper">
                 <div class="desktop-logo-wrapper">
@@ -119,9 +113,7 @@ function makeNav() {
                         <p id="explain">update</p>
                     </a>
                 </div>
-                <div id="profile">
-                    <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
-                </div>
+                <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
             </div>
         HTML;
         echo $htmlContent;
