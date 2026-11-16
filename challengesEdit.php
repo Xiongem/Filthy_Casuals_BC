@@ -63,6 +63,9 @@ $sql2 = "SELECT * FROM `challenges`";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body id="body">
+    <header>
+        <?= makeNav() ?>
+    </header>
     <div class="full-wrapper">
         <div class="wrapper-content" id="challenge-wrapper">
             <div class="title-wrapper">
