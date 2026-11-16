@@ -320,11 +320,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 onchange="upload()"
                                 
                                 value="">
+                        </div>
                     </div>
                     <div class="color-wrapper">
                         <label class="lables">Pick a color for your name:</label>
                         <input type="color" name="color" id="color" value="#2b361c">
-                    </div>
                     </div>
                 </div>
 
