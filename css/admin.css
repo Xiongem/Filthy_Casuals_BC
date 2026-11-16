@@ -155,10 +155,12 @@
     .search-admin-wrapper{
         display: flex;
         align-items: end;
+        width: 100%;
     }
     .search {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
     .username {
         position: relative;
