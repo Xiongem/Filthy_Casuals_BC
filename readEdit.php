@@ -182,6 +182,7 @@ if (isset($read["comment"])) {
                         class="inputs"
                         pattern="^\d+(,\d+)?$"
                         value="<?=$pages?>"
+                        maxlength="10"
                         required>
                     <div id="fanficMathResult"></div>
                 </div>
@@ -233,7 +234,7 @@ if (isset($read["comment"])) {
 
             <!--//? COMMENTS -->
             <label for="comment" class="labels">Comment:</label>
-            <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)"><?=$comment?></textarea>
+            <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)" maxlength="200"><?=$comment?></textarea>
 
             <!--//? SUMBIT BUTTON -->
             <div class="edit-button-wrapper">
