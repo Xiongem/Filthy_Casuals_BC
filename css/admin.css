@@ -7,6 +7,9 @@
         --leather: #b17036;
         --grey: #e2dfcd;
     }
+    a {
+        text-decoration: none;
+    }
 @media only screen and (min-width: 200px) {
     .wrapper {
         display: flex;
