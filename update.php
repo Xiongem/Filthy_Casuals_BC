@@ -242,9 +242,9 @@ $today = date("Y-m-d");
         </div>
 
         <script>
-            $("#tags_id0").blur(function() {
-                $('#search_results0').hide();
-            });
+            // $("#tags_id0").blur(function() {
+            //     $('#search_results0').hide();
+            // });
 
 
             function clickPress(event) {
