@@ -237,7 +237,7 @@ if (isset($read["comment"])) {
 
             <!--//? SUMBIT BUTTON -->
             <div class="edit-button-wrapper">
-                <a id="deleteButton" onclick="deleteEntry(<?=$readID?>, <?=$ID?>)">Delete</a>
+                <a id="deleteButton" href="php/process-deleteEntry.php">Delete</a>
                 <button type="submit" id="updateButton" class="buttons">Update</button>
             </div>
         </form>

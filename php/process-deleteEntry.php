@@ -53,14 +53,11 @@ if($stmt1->execute()) {
                             $readID);
     
     //sends new html to edit popup telling the user if the deletion was a success or not
-    if ($stmt2->execute()) { ?>
-        <div class="deleteNotif">
-            <h1>Entry successfully deleted</h1>
-        </div>
-<?php } else { ?>
-        <div class="deleteNotif">
-            <h1>Failed to delete entry.</h1>
-            <h2>Please try again</h2>
-        </div>
-<?php } 
-} ?>
+    if ($stmt2->execute()) {
+        header("Location: /readHistory.php?user_id=$userID");
+    
+        exit;
+    } else { 
+        die("failed to delete entry" . $stmt1 -> error . $stmt2 -> error);
+    } 
+} 
