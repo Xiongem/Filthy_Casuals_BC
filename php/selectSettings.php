@@ -49,12 +49,10 @@ if ($tabName === 'account') { ?>
                                     
                                     value="">
                             </div>
-                        </div>
-                    </div>
-                    <div class="upload-content">
-                        <div class="icon-wrapper">
-                            <ion-icon id="resetIcon" size="large" name="refresh-circle-outline" onclick="resetPFP('data:<?=$imageType?>;base64,<?=base64_encode($user['pfpData'])?>')"></ion-icon>
-                            <p id="explain">reset</p>
+                            <div class="icon-wrapper">
+                                <ion-icon id="resetIcon" size="large" name="refresh-circle-outline" onclick="resetPFP('data:<?=$imageType?>;base64,<?=base64_encode($user['pfpData'])?>')"></ion-icon>
+                                <p id="explain">reset</p>
+                            </div>
                         </div>
                     </div>
                     <div class="color-wrapper">
