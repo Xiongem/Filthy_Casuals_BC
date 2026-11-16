@@ -73,39 +73,39 @@ if (isset($_POST["fanfic"])) {
 }
 
 
-$stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`, 
-                                                                `username`, 
-                                                                `title`, 
-                                                                `author`, 
-                                                                `finishedDate`, 
-                                                                `startedDate`, 
-                                                                `pages`, 
-                                                                `ongoing`,
-                                                                `fanfic`, 
-                                                                `mod1`, 
-                                                                `mod2`,
-                                                                `tags`, 
-                                                                `comment`, 
-                                                                `month`, 
-                                                                `totalPoints`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt1->bind_param("isssssiiiiissii",
-                        $userID,
-                        $user["username"],
-                        $_POST["title"],
-                        $_POST["author"],
-                        $dateFinished,
-                        $_POST["dateStarted"],
-                        $pages,
-                        $ongoing,
-                        $fanfic,
-                        $_POST["mod-1"],
-                        $_POST["mod-2"],
-                        $insert_tags,
-                        $_POST["comment"],
-                        $month,
-                        $totalPoints);
+// $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`, 
+//                                                                 `username`, 
+//                                                                 `title`, 
+//                                                                 `author`, 
+//                                                                 `finishedDate`, 
+//                                                                 `startedDate`, 
+//                                                                 `pages`, 
+//                                                                 `ongoing`,
+//                                                                 `fanfic`, 
+//                                                                 `mod1`, 
+//                                                                 `mod2`,
+//                                                                 `tags`, 
+//                                                                 `comment`, 
+//                                                                 `month`, 
+//                                                                 `totalPoints`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+//     $stmt1->bind_param("isssssiiiiissii",
+//                         $userID,
+//                         $user["username"],
+//                         $_POST["title"],
+//                         $_POST["author"],
+//                         $dateFinished,
+//                         $_POST["dateStarted"],
+//                         $pages,
+//                         $ongoing,
+//                         $fanfic,
+//                         $_POST["mod-1"],
+//                         $_POST["mod-2"],
+//                         $insert_tags,
+//                         $_POST["comment"],
+//                         $month,
+//                         $totalPoints);
 
-if ($stmt1 -> execute()) {
+// if ($stmt1 -> execute()) {
     $newPointsYear = $yearTotal + $totalPoints;
 
     echo ("Entry Points: " . $totalPoints . "<br>");
