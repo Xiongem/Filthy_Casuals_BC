@@ -55,7 +55,7 @@ $sql2 = "SELECT * FROM `challenges`";
     <meta property="og:url" content="https://filthycasualsbc.com/challenges.php">
     <title>Challenges Edit</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/rules-and-challenges.css">
+    <!-- <link rel="stylesheet" href="css/rules-and-challenges.css"> -->
     <link rel="stylesheet" href="css/admin.css">
     <link rel="website icon" type="svg" href="images/FCBClogo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
