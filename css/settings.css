@@ -136,7 +136,7 @@
         cursor: pointer;
     } */
     
-    .icon-wrapper:hover #explain {
+    .pfp-icon-wrapper:hover #explain {
         display: block;
     }
     #result {
