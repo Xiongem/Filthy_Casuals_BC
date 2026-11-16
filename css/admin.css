@@ -200,6 +200,7 @@
     }
     .buttons {
         padding: 0.5em;
+        width: fit-content;
     }
     .full-wrapper {
         display: flex;
