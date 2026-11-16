@@ -10,8 +10,6 @@ dbConnect();
 forceLogin();
 
 $userID = $_SESSION["user_id"];
-$admin = $_SESSION["admin"];
-echo $admin;
 
 $sql = "SELECT * FROM users WHERE user_id = $userID";
     $result = $_SESSION["conn"]->query($sql);
