@@ -135,10 +135,7 @@
         position: relative;
         cursor: pointer;
     } */
-    #explain {
-        position: absolute;
-        display: none;
-    }
+    
     .icon-wrapper:hover #explain {
         display: block;
     }
@@ -161,14 +158,19 @@
         flex-direction: column;
         align-items: center;
     }
-    .pfp-wrapper {
+    .pfp-icon-wrapper {
         position: relative;
-    }
-    .pfp-icon-wrap {
-        position: absolute;
-        width: fit-content;
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        /* width: fit-content; */
         bottom: -1em;
         right: 0;
+        cursor: pointer
+    }
+    #explain {
+        position: absolute;
+        display: none;
     }
 
 
