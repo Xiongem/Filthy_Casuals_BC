@@ -138,6 +138,10 @@ if ($stmt1 -> execute()) {
         $subTotal = $oldTotal - $newTotal;
         $newPointsYear = $yearTotal - $subTotal;
 
+        if ($newPointsYear < 0) {
+            $newPointsYear = 0;
+        }
+
     }
     
     //second query
