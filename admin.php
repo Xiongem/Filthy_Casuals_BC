@@ -176,7 +176,31 @@ $sql3 = "SELECT * FROM `challenges`";
 
             <div class="divider div8"></div>
 
-            <div class="wrapper-content div9" id="otp-wrapper">
+            <div class="wrapper-content div9">
+                <div class="admin-wrapper">
+                    <?php $stmt2 = $_SESSION["conn"]->query("SELECT * FROM `users` WHERE `admin` = 1");
+                            $admins = mysqli_num_rows($stmt);
+
+                            if ($admins > 0) {
+                                while ($admins = mysqli_fetch_assoc($stmt)) {
+                                    $adminsID = $admins["user_id"];
+                                    $adminsName = $admins["username"];
+                                    $imageName = htmlspecialchars($rowOverall['pfpName']);
+                                    $imageType = $rowOverall['pfpType'];
+                                    $imageData = base64_encode($rowOverall['pfpData']);
+                        ?>
+                    <div class="admin-row">
+                        <ion-icon size="small" name="ellipse"></ion-icon>
+                        <img class="adminPfp item" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
+                        <div class="adminName item" id="<?=$adminsID?>"><?=$adminsName?></div>
+                    </div>
+                    <?php }} ?>
+                </div>
+            </div>
+
+            <div class="divider div10"></div>
+
+            <div class="wrapper-content div11" id="otp-wrapper">
                 <div class="title-wrapper">
                     <h2>Generate One-time Passcode</h2>
                 </div>
