@@ -141,13 +141,13 @@ $sql3 = "SELECT * FROM `challenges`";
 
             <div class="divider div4" id="bingo-divider"></div>
 
-            <div class="link-wrapper">
+            <div class="link-wrapper div5">
                 <a href="challengesEdit.php">Edit Challenges</a>
             </div>
 
-            <div class="divider" id="challenge-divider"></div>
+            <div class="divider div6" id="challenge-divider"></div>
 
-            <div class="wrapper-content div6" id="admin-wrapper">
+            <div class="wrapper-content div7" id="admin-wrapper">
                 <div class="title-wrapper">
                     <h2>Add Admin</h2>
                 </div>
@@ -167,9 +167,9 @@ $sql3 = "SELECT * FROM `challenges`";
                 </div>
             </div>
 
-            <div class="divider div7"></div>
+            <div class="divider div8"></div>
 
-            <div class="wrapper-content div8" id="otp-wrapper">
+            <div class="wrapper-content div9" id="otp-wrapper">
                 <div class="title-wrapper">
                     <h2>Generate One-time Passcode</h2>
                 </div>
