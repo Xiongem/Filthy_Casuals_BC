@@ -34,7 +34,7 @@ if (! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 
     print_r($image);
 
-if ($image !== "") {
+if (($image['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_NO_FILE) {
     echo "hi there";
     if ($image === null) {
         return ['error', 'Please choose an image file.', null];
