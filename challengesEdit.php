@@ -133,9 +133,9 @@ $sql2 = "SELECT * FROM `challenges`";
                     <textarea class="inputs" name="dec_Descr" id="decDescr" maxlength="300"><?=$decDescr?></textarea>
                 </div>
             
-            <div class="button-wrapper">
-                <button class="buttons" type="submit">set</button>
-            </div>
+                <div class="button-wrapper">
+                    <button class="buttons" type="submit">set</button>
+                </div>
             </form>
         </div>
     </div>
