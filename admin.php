@@ -179,10 +179,10 @@ $sql3 = "SELECT * FROM `challenges`";
             <div class="wrapper-content div9">
                 <div class="admin-wrapper">
                     <?php $stmt2 = $_SESSION["conn"]->query("SELECT * FROM `users` WHERE `admin` = 1");
-                            $admins = mysqli_num_rows($stmt);
+                            $admins = mysqli_num_rows($stmt2);
 
                             if ($admins > 0) {
-                                while ($admins = mysqli_fetch_assoc($stmt)) {
+                                while ($admins = mysqli_fetch_assoc($stmt2)) {
                                     $adminsID = $admins["user_id"];
                                     $adminsName = $admins["username"];
                                     $imageName = htmlspecialchars($rowOverall['pfpName']);
