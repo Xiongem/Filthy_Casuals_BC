@@ -142,7 +142,9 @@ $sql3 = "SELECT * FROM `challenges`";
             <div class="divider div4" id="bingo-divider"></div>
 
             <div class="link-wrapper wrapper-content div5">
-                <a href="challengesEdit.php">Edit Challenges</a>
+                <div class="buttons">
+                    <a href="challengesEdit.php">Edit Challenges</a>
+                </div>
             </div>
 
             <div class="divider div6" id="challenge-divider"></div>
