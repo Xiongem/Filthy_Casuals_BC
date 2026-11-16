@@ -141,76 +141,8 @@ $sql3 = "SELECT * FROM `challenges`";
 
             <div class="divider div4" id="bingo-divider"></div>
 
-            <div class="wrapper-content div5" id="challenge-wrapper">
-                <div class="title-wrapper">
-                    <h2>Monthly Challenges</h2>
-                </div>
-                <div class="form-wrapper">
-                    <div class="row">
-                        <div class="month">Jan:</div>
-                        <input class="inputs" name="jan" id="jan" value="<?=$jan?>">
-                        <textarea class="inputs" name="janDescr" id="janDescr" maxlength="200"><?=$janDescr?></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="month">Feb:</div>
-                        <input class="inputs" name="feb" id="feb" value="<?=$feb?>">
-                        <textarea class="inputs" name="febDescr" id="febDescr" maxlength="300"><?=$febDescr?></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="month">March:</div>
-                        <input class="inputs" name="march" id="march" value="<?=$march?>">
-                        <textarea class="inputs" name="marchDescr" id="marchDescr" maxlength="300"><?=$marchDescr?></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="month">April:</div>
-                        <input class="inputs" name="april" id="april" value="<?=$april?>">
-                        <textarea class="inputs" name="aprilDescr" id="aprilDescr" maxlength="300"><?=$aprilDescr?></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="month">May:</div>
-                        <input class="inputs" name="may" id="may" value="<?=$may?>">
-                        <textarea class="inputs" name="mayDescr" id="mayDescr" maxlength="300"><?=$mayDescr?></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="month">June:</div>
-                        <input class="inputs" name="june" id="june" value="<?=$june?>">
-                        <textarea class="inputs" name="juneDescr" id="juneDescr" maxlength="300"><?=$juneDescr?></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="month">July:</div>
-                        <input class="inputs" name="july" id="july" value="<?=$july?>">
-                        <textarea class="inputs" name="julyDescr" id="julyDescr" maxlength="300"><?=$julyDescr?></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="month">Aug:</div>
-                        <input class="inputs" name="aug" id="aug" value="<?=$aug?>">
-                        <textarea class="inputs" name="augDescr" id="augDescr" maxlength="300"><?=$augDescr?></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="month">Sept:</div>
-                        <input class="inputs" name="sept" id="sept" value="<?=$sept?>">
-                        <textarea class="inputs" name="septDescr" id="septDescr" maxlength="300"><?=$septDescr?></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="month">Oct:</div>
-                        <input class="inputs" name="oct" id="oct" value="<?=$oct?>">
-                        <textarea class="inputs" name="octDescr" id="octDescr" maxlength="300"><?=$octDescr?></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="month">Nov:</div>
-                        <input class="inputs" name="nov" id="nov" value="<?=$nov?>">
-                        <textarea class="inputs" name="novDescr" id="novDescr" maxlength="300"><?=$novDescr?></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="month">Dec:</div>
-                        <input class="inputs" name="dec" id="dec" value="<?=$dec?>">
-                        <textarea class="inputs" name="decDescr" id="decDescr" maxlength="300"><?=$decDescr?></textarea>
-                    </div>
-                </div>
-                <div class="button-wrapper">
-                    <div class="buttons" onclick="setChallenges()">set</div>
-                </div>
-                <div class="results" id="challengeResult"></div>
+            <div class="link-wrapper">
+                <a href="challengesEdit.php">Edit Challenges</a>
             </div>
 
             <div class="divider" id="challenge-divider"></div>
@@ -323,69 +255,6 @@ $sql3 = "SELECT * FROM `challenges`";
                     }
                 })
             }
-        }
-        function resetWords() {
-            $("#challengeResult").html("");
-        }
-
-        function setChallenges() {
-            var jan = $("#jan").val();
-            var feb = $("#feb").val();
-            var march = $("#march").val();
-            var april = $("#april").val();
-            var may = $("#may").val();
-            var june = $("#june").val();
-            var july = $("#july").val();
-            var aug = $("#aug").val();
-            var sept = $("#sept").val();
-            var oct = $("#oct").val();
-            var nov = $("#nov").val();
-            var dec = $("#dec").val();
-                var janDescr = $("#janDescr").val();
-                var febDescr = $("#febDescr").val();
-                var marchDescr = $("#marchDescr").val();
-                var aprilDescr = $("#aprilDescr").val();
-                var mayDescr = $("#mayDescr").val();
-                var juneDescr = $("#juneDescr").val();
-                var julyDescr = $("#julyDescr").val();
-                var augDescr = $("#augDescr").val();
-                var septDescr = $("#septDescr").val();
-                var octDescr = $("#octDescr").val();
-                var novDescr = $("#novDescr").val();
-                var decDescr = $("#decDescr").val();
-
-            $.ajax({
-                url: "php/process-updateChallenges.php",
-                method: "post",
-                data: {month_jan:jan,
-                    month_feb:feb,
-                    month_march:march,
-                    month_april:april,
-                    month_may:may,
-                    month_june:june,
-                    month_july:july,
-                    month_aug:aug,
-                    month_sept:sept,
-                    month_oct:oct,
-                    month_nov:nov,
-                    month_dec:dec,
-                        jan_Descr:janDescr,
-                        feb_Descr:febDescr,
-                        march_Descr:marchDescr,
-                        april_Descr:aprilDescr,
-                        may_Descr:mayDescr,
-                        june_Descr:juneDescr,
-                        july_Descr:julyDescr,
-                        aug_Descr:augDescr,
-                        sept_Descr:septDescr,
-                        oct_Descr:octDescr,
-                        nov_Descr:novDescr,
-                        dec_Descr:decDescr},
-                success:function(result) {
-                    $("#challengeResult").html(result);
-                    setTimeout(resetWords, 3000);
-                }
-            })
         }
 
         //copies otp when user clicks the otp span

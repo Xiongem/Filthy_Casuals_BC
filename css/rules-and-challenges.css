@@ -234,6 +234,14 @@ a {
     .deleteNotif {
         text-align: center;
     }
+
+    .link-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0 1em;
+        margin-bottom: 1em;
+    }
 }
 
 /** ####################### *//** ####################### *//** ####################### */
@@ -246,16 +254,13 @@ a {
         justify-content: center;
         width: 100%;
     }
-    .content-wrapper {
+    .content-wrapper, .challenge-content, .link-wrapper {
         width: 70%;
     }
     .challenge-wrapper {
         display: flex;
         justify-content: center;
         width: 100%;
-    }
-    .challenge-content {
-        width: 70%;
     }
 }
 
@@ -264,14 +269,11 @@ a {
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1024px) {
-    .content-wrapper {
+    .content-wrapper, .challenge-content, .link-wrapper {
         width: 50%;
     }
     .row {
         grid-template-columns: 5% 5% 85% 5%;
-    }
-    .challenge-content {
-        width: 50%;
     }
     .challenges {
         grid-template-columns: 15% 85%;
