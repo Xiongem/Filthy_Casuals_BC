@@ -100,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $image) {
-        $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfpName, pfpType, pfpData, timezone) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfpName, pfpType, pfpData, `color`, timezone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("isssssss",
                             $user_id,
                             $_POST["username"],
@@ -109,9 +109,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             $imageName,
                             $mimeType,
                             $imageData,
+                            $_POST["color"],
                             $_POST["timezone"]);
-
-                            echo "bound params";
 
 
         if ($stmt -> execute()) {
@@ -308,18 +307,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
 
                 <div class="upload-wrapper">
-                    <label class="labels">Upload Profile Picture:</label>
-                    <div class="profile-picture">
-                        <h1 class="upload-icon">
-                            <ion-icon name="add" aria-hidden="true"></ion-icon>
-                        </h1>
-                        <input
-                            name="profilePicture"
-                            class="file-uploader"
-                            type="file"
-                            onchange="upload()"
-                            
-                            value="">
+                    <div class="pfp-wrapper">
+                        <label class="labels">Upload Profile Picture:</label>
+                        <div class="profile-picture">
+                            <h1 class="upload-icon">
+                                <ion-icon name="add" aria-hidden="true"></ion-icon>
+                            </h1>
+                            <input
+                                name="profilePicture"
+                                class="file-uploader"
+                                type="file"
+                                onchange="upload()"
+                                
+                                value="">
+                    </div>
+                    <div class="color-wrapper">
+                        <label class="lables">Pick a color for your name:</label>
+                        <input type="color" name="color" id="color" value="#2b361c">
+                    </div>
                     </div>
                 </div>
 
