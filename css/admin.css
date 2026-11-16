@@ -240,8 +240,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 2.7em;
-        height: 2.7em;
+        width: 3.5em;
+        height: 3.5em;
         border-radius: 50%;
         border: 2px solid var(--deep-green);
     }
@@ -249,6 +249,9 @@
         width: 2.5em;
         height: 2.5em;
         border-radius: 50%;
+    }
+    .adminName {
+        font-size: 28px;
     }
     .center {
         justify-self: center;
