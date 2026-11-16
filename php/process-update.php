@@ -43,6 +43,8 @@ if (isset($_POST["fanfic"])) {
         }
 }
 
+$totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
+
 $month = date("n",strtotime($_POST["dateFinished"]));
 
 
@@ -105,7 +107,6 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                         $totalPoints);
 
 if ($stmt1 -> execute()) {
-    $totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
     $newPointsYear = $yearTotal + $totalPoints;
 
     echo ("Entry Total: ".$totalPoints."<br>");
