@@ -17,10 +17,12 @@ $readID = $_POST["read_ID"];
 $sql = "SELECT * FROM users WHERE user_id = $userID";
             $result = $_SESSION["conn"]->query($sql);
             $user = $result->fetch_assoc();  
+                $yearTotal = $user["pointsYear"];
 
 $sql = "SELECT `totalPoints` FROM `readHistory` WHERE `user_id` = $userID  AND read_ID = $readID";
     $result = $_SESSION["conn"]->query($sql);
     $read = $result->fetch_assoc();
+        $oldTotal = $read["totalPoints"];
 
 //assigns timezone to varible depending on if the timezone session token is set or not
 if (isset($_SESSION["timezone"])) {
@@ -59,7 +61,7 @@ if (isset($_POST["fanfic"])) {
 //set month variable according to month of the finish date for the entry
 $month = date("n",strtotime($_POST["dateFinished"]));
 //calls to calculate function to math total points earned from modifiers
-$totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
+$newTotal = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
 
 //if user added tags, take tags from array and insert them into a string separated by ,
 if (isset($_POST["tag"])) {
@@ -116,16 +118,26 @@ $stmt1->bind_param("ssssiiiissiiii",
                         $insert_tags,
                         $_POST["comment"],
                         $month,
-                        $totalPoints,
+                        $newTotal,
                         $readID,
                         $userID);            
 //executes first statement
 if ($stmt1 -> execute()) {
     //if the total points for this entry in the database is the same as total points calculated from function (aka, points didn't change)
-    if ($read["totalPoints"] == $totalPoints) {
-        $newPointsYear = $totalPoints;
-    } else {
-        $newPointsYear = $user["pointsYear"] + $totalPoints;
+    if ($oldTotal == $newTotal) {
+
+        $newPointsYear == $newPointsYear;
+
+    } elseif ($newTotal > $oldTotal) {
+
+        $subTotal = $newTotal - $oldTotal;
+        $newPointsYear = $yearTotal + $subTotal;
+
+    } elseif ($newTotal < $oldTotal) {
+
+        $subTotal = $oldTotal - $newTotal;
+        $newPointsYear = $yearTotal - $subTotal;
+
     }
     
     //second query
