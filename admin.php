@@ -142,19 +142,6 @@ $sql3 = "SELECT * FROM `challenges`";
             <div class="divider div4" id="bingo-divider"></div>
 
             <div class="link-wrapper wrapper-content div5">
-                <div class="admin-button-wrapper">
-                    <div class="title-wrapper">
-                        <h2>Challenges</h2>
-                    </div>
-                    <div class="buttons">
-                        <a href="challengesEdit.php">Edit Challenges</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="divider div6" id="challenge-divider"></div>
-
-            <div class="wrapper-content div7" id="admin-wrapper">
                 <div class="title-wrapper">
                     <h2>Add Admin</h2>
                 </div>
@@ -174,10 +161,10 @@ $sql3 = "SELECT * FROM `challenges`";
                 </div>
             </div>
 
-            <div class="divider div8"></div>
+            <div class="divider div6" id="challenge-divider"></div>
 
-            <div class="wrapper-content div9">
-                <div class="admin-wrapper">
+            <div class="wrapper-content div7" id="admin-wrapper">
+                 <div class="admin-wrapper">
                     <div class="title-wrapper">
                         <h2>Current Admins</h2>
                     </div>
@@ -197,6 +184,19 @@ $sql3 = "SELECT * FROM `challenges`";
                         <div class="adminName item" id="<?=$adminsID?>"><?=$adminsName?></div>
                     </div>
                     <?php }} ?>
+                </div>
+            </div>
+
+            <div class="divider div8"></div>
+
+            <div class="wrapper-content div9">
+                <div class="admin-button-wrapper">
+                    <div class="title-wrapper">
+                        <h2>Challenges</h2>
+                    </div>
+                    <div class="buttons">
+                        <a href="challengesEdit.php">Edit Challenges</a>
+                    </div>
                 </div>
             </div>
 
