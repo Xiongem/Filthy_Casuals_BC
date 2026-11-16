@@ -320,6 +320,9 @@
     #comment {
         height: 8em;
         resize: vertical;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        hyphens: manual;
     }
     .edit-button-wrapper {
         display: flex;
