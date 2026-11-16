@@ -130,7 +130,7 @@ if ($stmt1 -> execute()) {
             }
         }
         
-        if ($_POST["bingoName"]) {
+        if (isset($_POST["bingoName"])) {
             $stmt4 = $_SESSION["conn"] -> prepare("INSERT INTO `bingo` (`user_id`,
                                                                     `bingo_name`,
                                                                     `title`,
