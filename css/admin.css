@@ -235,8 +235,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 3em;
-        height: 3em;
+        width: 2.7em;
+        height: 2.7em;
         border-radius: 50%;
         border: 2px solid var(--deep-green);
     }
