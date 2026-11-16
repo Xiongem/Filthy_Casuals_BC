@@ -178,7 +178,7 @@ if ($now <= $ratEnd) {
                 ?>
                     <div class="table-rows">
                         <div class="tr"><?=$rankLeague?></div>
-                        <div class="tr userLink" onclick="goUser('<?=$idLeague?>')">
+                        <div class="tr userLink" onclick="goUser('<?=$idLeague?>')" style="color: <?=$color?>">
                             <?=$usernameLeague?>
                         </div>
                         <div class="tr"><?=$pointsLeague?></div>
@@ -212,11 +212,16 @@ if ($now <= $ratEnd) {
                             $idGoro = $rowGoro["user_id"];
                             $usernameGoro = $rowGoro["username"];
                             $pointsGoro = $rowGoro["pointsYear"];
+                            if (isset($rowGoro['color'])) {
+                                $color = $rowGoro['color'];
+                            } else {
+                                $color = "#2b361c";
+                            }
                                 $rankGoro++;
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankGoro?></div>
-                            <div class="tr userLink" onclick="goUser('<?=$idGoro?>')">
+                            <div class="tr userLink" onclick="goUser('<?=$idGoro?>')" style="color: <?=$color?>">
                                 <?=$usernameGoro?>
                             </div>
                             <div class="tr"><?=$pointsGoro?></div>
@@ -253,11 +258,16 @@ if ($now <= $ratEnd) {
                             $idFutsuu = $rowFutsuu["user_id"];
                             $usernameFutsuu = $rowFutsuu["username"];
                             $pointsFutsuu = $rowFutsuu["pointsYear"];
+                            if (isset($rowFutsuu['color'])) {
+                                $color = $rowFutsuu['color'];
+                            } else {
+                                $color = "#2b361c";
+                            }
                                 $rankFutsuu++;
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankFutsuu?></div>
-                            <div class="tr userLink" onclick="goUser('<?=$idFutsuu?>')">
+                            <div class="tr userLink" onclick="goUser('<?=$idFutsuu?>')" style="color: <?=$color?>">
                                 <?=$usernameFutsuu?>
                             </div>
                             <div class="tr"><?=$pointsFutsuu?></div>
@@ -294,11 +304,16 @@ if ($now <= $ratEnd) {
                             $idHayai = $rowHayai["user_id"];
                             $usernameHayai = $rowHayai["username"];
                             $pointsHayai = $rowHayai["pointsYear"];
+                            if (isset($rowHayai['color'])) {
+                                $color = $rowHayai['color'];
+                            } else {
+                                $color = "#2b361c";
+                            }
                                 $rankHayai++;
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankHayai?></div>
-                            <div class="tr userLink" onclick="goUser('<?=$idHayai?>')">
+                            <div class="tr userLink" onclick="goUser('<?=$idHayai?>')" style="color: <?=$color?>">
                                 <?=$usernameHayai?>
                             </div>
                             <div class="tr"><?=$pointsHayai?></div>
@@ -335,6 +350,11 @@ if ($now <= $ratEnd) {
                             $idYabai = $rowYabai["user_id"];
                             $usernameYabai = $rowYabai["username"];
                             $pointsYabai = $rowYabai["pointsYear"];
+                            if (isset($rowYabai['color'])) {
+                                $color = $rowYabai['color'];
+                            } else {
+                                $color = "#2b361c";
+                            }
                             // $imageName = htmlspecialchars($rowYabai["pfpName"]);
                             // $imageType = $rowYabai["pfpType"];
                             // $imageData = base64_encode($rowYabai["pfpData"]);
@@ -342,7 +362,7 @@ if ($now <= $ratEnd) {
                     ?>
                         <div class="table-rows">
                             <div class="tr"><?=$rankYabai?></div>
-                            <div class="tr userLink" onclick="goUser('<?=$idYabai?>')">
+                            <div class="tr userLink" onclick="goUser('<?=$idYabai?>')" style="color: <?=$color?>">
                                 <?=$usernameYabai?>
                             </div>
                             <div class="tr"><?=$pointsYabai?></div>
