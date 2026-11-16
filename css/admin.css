@@ -271,9 +271,9 @@
         /* grid-template-columns: 40% 60%; */
             grid-template-columns: repeat(2, 1fr);
         /* grid-template-rows: repeat(5, 1fr); */
-        grid-template-rows: repeat(10, 1fr);
+        grid-template-rows: repeat(9, 1fr);
         /* grid-template-rows: repeat(11, 1fr); */
-        /* grid-template-rows: 10% 5% 10% 5% 10% 5% 10% 45%; */
+        /* grid-template-rows: 10% 5% 10% 5% 10% 5% 10% 5%; */
         justify-content: center;
         align-items: center;
     }
