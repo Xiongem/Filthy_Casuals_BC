@@ -223,14 +223,30 @@
         grid-template-columns: 5% 20% 75%;
         align-items: center;
         width: 100%;
+        margin-bottom: 0.5em;
+    }
+    #dot {
+        font-size: 8px;
     }
     .item {
         padding: 0.5em;
     }
-    .adminPfp {
-        width: 2em;
-        height: 2em;
+    .pfp-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3em;
+        height: 3em;
         border-radius: 50%;
+        border: 2px solid var(--deep-green);
+    }
+    .adminPfp {
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 50%;
+    }
+    .center {
+        justify-self: center;
     }
 }
 /** ####################### *//** ####################### *//** ####################### */

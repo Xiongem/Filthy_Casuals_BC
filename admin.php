@@ -190,8 +190,10 @@ $sql3 = "SELECT * FROM `challenges`";
                                     $imageData = base64_encode($admins['pfpData']);
                         ?>
                     <div class="admin-row">
-                        <ion-icon size="small" name="ellipse"></ion-icon>
-                        <img class="adminPfp item" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
+                        <ion-icon class="item center" id="dot" size="small" name="ellipse"></ion-icon>
+                        <div class="pfp-wrapper">
+                            <img class="adminPfp item center" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
+                        </div>
                         <div class="adminName item" id="<?=$adminsID?>"><?=$adminsName?></div>
                     </div>
                     <?php }} ?>
