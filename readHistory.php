@@ -11,11 +11,10 @@ forceLogin();
 
 if (isset($_SESSION["user_id"])) {
     $userID = $_SESSION["user_id"];
-    $admin = $_SESSION["admin"];
 } else {
     $userID = "none";
 }
-
+$admin = $_SESSION["admin"];
 $ID = $_GET["user_id"];
 
 $sql = "SELECT * FROM users WHERE user_id = $ID";
