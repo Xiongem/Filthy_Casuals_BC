@@ -9,8 +9,8 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
 //assigns POST data from ajax to variables
-$readID = $_POST['read_ID'];
-$userID = $_POST['user_ID'];
+$readID = $_GET['read_ID'];
+$userID = $_GET['user_ID'];
 
 //gets total points for the entry being deleted
 $sql = "SELECT `totalPoints` 
