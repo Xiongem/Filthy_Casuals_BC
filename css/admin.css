@@ -222,7 +222,7 @@
         display: grid;
         grid-template-columns: 5% 20% 75%;
         align-items: center;
-        width: 100%;
+        width: 70%;
         margin-bottom: 0.5em;
 
         border-bottom: 2px solid var(--barium-yellow);
