@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($_POST["username"] && $_POST["email"] && $_POST["password"] && $image) {
         $stmt = $_SESSION["conn"] -> prepare("INSERT INTO users (user_id, username, email, password_hash, pfpName, pfpType, pfpData, `color`, timezone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("isssssss",
+        $stmt->bind_param("issssssss",
                             $user_id,
                             $_POST["username"],
                             $_POST["email"],
