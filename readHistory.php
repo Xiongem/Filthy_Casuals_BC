@@ -59,8 +59,8 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
     <div class="history-wrapper" id="historyWrapper">
         <!--//? ADD MONTHLY AND YEARLY PAGE COUNT TOTALS-->
         <div class="title-wrapper">
-            <div id="profile">
-                <img id="profilePic" src="data:$imageType;base64,$imageData" alt="$imageName">
+            <div class="profile">
+                <img class="pfp" src="data:$imageType;base64,$imageData" alt="$imageName">
             </div>
             <h1><?= $username ?>'s Reading History</h1>
         </div>
