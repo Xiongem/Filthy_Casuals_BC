@@ -57,6 +57,7 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                 When you get a BINGO!, come back to this page, select the correct size bingo board, 
                 and choose the entries that make up the squares in the bingo. 
                 You will be awarded 10% bonus points for each entry in the bingo.
+                <br><br>
             </p>
             <a href="https://myfreebingocards.com/bingo-card-generator">Bingo Board Generator</a>
         </div>
