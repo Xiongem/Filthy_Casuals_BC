@@ -72,7 +72,9 @@ if ($now <= $ratEnd) {
                 <ion-icon name="close" onclick="closeLeagueEdit()"></ion-icon>
             </div>
             <!--//* AJAX DISPLAYED CONTENT -->
-            <div class="popup-content" id="editResults"></div>
+            <div class="popup-content" id="editResults">
+                <div class="loader" id="loader"></div>
+            </div>
         </div>
     </div>
     <header>
@@ -401,6 +403,7 @@ if ($now <= $ratEnd) {
                 method: 'post',
                 data: {leagueName:league},
                 success: function(result) {
+                    $("loader").hide();
                     $("#editResults").html(result);
                 }
             });
