@@ -96,7 +96,7 @@ $stmt->bind_param("sssssssi",
                         $_POST["timezone"],
                         $userID);
 
-if($stmt->execute() && $stmt -> affected_rows > 0) {
+if($stmt->execute()) {
      header("Location: /settings.php");
     
     exit;
