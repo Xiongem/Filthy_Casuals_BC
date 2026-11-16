@@ -447,6 +447,7 @@
     .pfp {
         width: 3em;
         height: 3em;
+        object-fit: cover;
         border-radius: 50%;
         margin: 0.5em;
     }
