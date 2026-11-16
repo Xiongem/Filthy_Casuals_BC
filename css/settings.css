@@ -158,6 +158,9 @@
         flex-direction: column;
         align-items: center;
     }
+    .pfp-wrapper {
+        height: fit-content;
+    }
     .pfp-icon-wrapper {
         position: relative;
         display: flex;
