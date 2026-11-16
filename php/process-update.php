@@ -140,9 +140,9 @@ if ($stmt1 -> execute()) {
                                 $totalPoints);
             $stmt4->execute();
         }
-        header("Location: /readHistory.php?user_id=$userID");
+        // header("Location: /readHistory.php?user_id=$userID");
     
-        exit;
+        // exit;
     } else {
         die("an unexpected error occured" . $stmt2 -> error);
     }
