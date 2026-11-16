@@ -420,9 +420,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* margin: 0 0.8em; */
-        width: 3.5em;
-        height: 3.5em;
+        width: 3em;
+        height: 3em;
+        margin: 0.5em;
 
         border-radius: 50%;
         border: var(--deep-green) 2px solid;
