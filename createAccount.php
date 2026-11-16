@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             $_POST["timezone"]);
 
 
-        if ($stmt -> execute()) {
+        if ($stmt -> execute() && $stmt -> affected_rows > 0) {
             $sql = sprintf("SELECT * FROM users
                             WHERE username = '%s'",
                             $_SESSION["conn"]->real_escape_string($_POST["username"]));
