@@ -178,6 +178,9 @@ $sql3 = "SELECT * FROM `challenges`";
 
             <div class="wrapper-content div9">
                 <div class="admin-wrapper">
+                    <div class="title-wrapper">
+                        <h2>Current Admins</h2>
+                    </div>
                     <?php $stmt2 = $_SESSION["conn"]->query("SELECT * FROM `users` WHERE `admin` = 1");
                             $admins = mysqli_num_rows($stmt2);
 
