@@ -29,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $_SESSION["admin"] = $user["admin"];
                 $_SESSION['loggedin'] = true;
                 $_SESSION["user_id"] = $user["user_id"];
+                $_SESSION["admin"] = $user["admin"];
 
                     header("Location: index.php");
                 exit;

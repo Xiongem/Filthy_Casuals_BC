@@ -156,7 +156,7 @@ if($row>0) {
         $totalPoints = $readHistory['totalPoints']; 
     ?>
     <div class="row" id="<?= $readID ?>">
-        <?php if ($userID === $ID) { ?>
+        <?php if ($userID === $ID || $admin === 1) { ?>
             <a class="edit" id="edit" href="readEdit.php?read_ID=<?=$readID?>&user_ID=<?=$ID?>">
                 <ion-icon name="settings" id="edit-icon"></ion-icon>
             </a>
