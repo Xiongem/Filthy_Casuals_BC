@@ -55,7 +55,7 @@ if (($image['size'] ?? 0) > 2097152) {
 }
 
 echo "hello 8 <br>";
-
+echo $tmpName;
 $tmpName = $image['tmp_name'] ?? '';
 if ($tmpName === '') {
     return ['error', 'The uploaded file is not valid.', null];
