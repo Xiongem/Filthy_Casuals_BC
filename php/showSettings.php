@@ -65,6 +65,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                         name="username" 
                         id="username" 
                         class="inputs" 
+                        maxlength="20"
                         value="<?=$username?>">
 
                 <span id="user-availability-status"></span>

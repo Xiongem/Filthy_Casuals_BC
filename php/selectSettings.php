@@ -67,6 +67,7 @@ if ($tabName === 'account') { ?>
                             name="username" 
                             id="username" 
                             class="inputs" 
+                            maxlength="20"
                             value="<?=$username?>">
 
                     <span id="user-availability-status"></span>
