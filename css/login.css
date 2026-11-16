@@ -91,6 +91,9 @@
         flex-direction: column;
         align-items: center;
     }
+    .pfp-wrapper .labels, .color-wrapper .labels {
+        text-align: center;
+    }
     .profile-picture {
         opacity: 0.75;
         height: 150px;
