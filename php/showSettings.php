@@ -55,7 +55,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 </div>
                 <div class="color-wrapper">
                     <label class="labels">Profile Color:</label>
-                    <input type="color" name="color" id="color" value="<?=$color?>">
+                    <input class="inputs" type="color" name="color" id="color" value="<?=$color?>">
                 </div>
             </div>
 
