@@ -167,13 +167,13 @@
         justify-content: end;
         width: 100%;
         /* width: fit-content; */
-        bottom: -1em;
-        right: 0;
         cursor: pointer
     }
     #explain {
         position: absolute;
         display: none;
+        bottom: -1em;
+        right: 0;
     }
 
 
