@@ -19,27 +19,38 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
         $imageName = htmlspecialchars($user['pfpName']);
         $imageType = $user['pfpType'];
         $imageData = base64_encode($user['pfpData']); 
+        if (isset($user["color"])) {
+            $color = $user["color"];
+        } else {
+            $color = "#2b361c";
+        }
 ?>
 <div class="settings-account-wrapper">
     <div class="settings-account-content">
         <div class="account-title-wrapper">
             <h1>Account</h1>
         </div>
-        <form method="post" action="php/" enctype="multipart/form-data">
+        <form method="post" action="php/process-accountEdit.php" enctype="multipart/form-data">
             <div class="upload-wrapper">
                 <div class="upload-content">
-                    <label class="upload-label">Upload Profile Picture:</label>
-                    <div class="profile-picture" id="pfpupload" style="background-image:url('data:<?=$imageType?>;base64,<?=base64_encode($user['pfpData'])?>')" alt="<?=$imageName?>">
-                        <h1 class="upload-icon">
-                            <ion-icon name="add" aria-hidden="true"></ion-icon>
-                        </h1>
-                        <input
-                            name="profilePicture"
-                            class="file-uploader"
-                            type="file"
-                            onchange="upload()"
-                            
-                            value="">
+                    <div class="pfp-wrapper">
+                        <label class="upload-label">Upload Profile Picture:</label>
+                        <div class="profile-picture" id="pfpupload" style="background-image:url('data:<?=$imageType?>;base64,<?=base64_encode($user['pfpData'])?>')" alt="<?=$imageName?>">
+                            <h1 class="upload-icon">
+                                <ion-icon name="add" aria-hidden="true"></ion-icon>
+                            </h1>
+                            <input
+                                name="profilePicture"
+                                class="file-uploader"
+                                type="file"
+                                onchange="upload()"
+                                
+                                value="">
+                        </div>
+                    </div>
+                    <div class="color-wrapper">
+                        <label class="labels">Profile Color:</label>
+                        <input type="color" name="color" id="color" value="<?=$color?>">
                     </div>
                 </div>
                 <div class="upload-content">
