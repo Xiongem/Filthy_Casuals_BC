@@ -21,6 +21,9 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
         $result = $_SESSION["conn"]->query($sql);
         $user = $result->fetch_assoc();
             $username = $user["username"];
+            $imageName = htmlspecialchars($user['pfpName']);
+            $imageType = $user['pfpType'];
+            $imageData = base64_encode($user['pfpData']);
 ?>
 
 <!DOCTYPE html>
