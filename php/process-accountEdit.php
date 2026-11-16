@@ -101,5 +101,5 @@ if($stmt->execute()) {
     
     exit;
 } else {
-    die("failed to update profile information");
+    die("failed to update profile information" . $stmt -> error);
 }
