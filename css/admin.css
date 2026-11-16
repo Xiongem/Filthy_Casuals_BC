@@ -220,18 +220,16 @@
     }
     .admin-row {
         display: grid;
-        grid-template-columns: 5% 20% 75%;
+        grid-template-columns: 25% 75%;
         align-items: center;
         width: 100%;
+        padding: 0 1em;
         margin-bottom: 0.5em;
 
         border-bottom: 2px solid var(--barium-yellow);
     }
     .admin-row:last-child {
         border-bottom: none;
-    }
-    #dot {
-        font-size: 8px;
     }
     .item {
         padding: 0.5em;
