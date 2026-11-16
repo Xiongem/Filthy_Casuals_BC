@@ -29,41 +29,35 @@ if (! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
     die("Valid email is required");
 }
 
-echo "hello 4 <br>";
 
+if (isset($_FILES['profilePicture'])) {
 $image = $_FILES['profilePicture'];
 
-echo "hello 5 <br>";
 
 if ($image === null) {
     return ['error', 'Please choose an image file.', null];
     echo "Please choose an image file.1";
 }
 
-echo "hello 6 <br>";
 
-// if (($image['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_NO_FILE) {
-//     return ['error', 'Please choose an image file.', null];
-//     echo "Please choose an image file.2";
-// }
+if (($image['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_NO_FILE) {
+    return ['error', 'Please choose an image file.', null];
+    echo "Please choose an image file.2";
+}
 
-echo "hello 7 <br>";
 
 if (($image['size'] ?? 0) > 2097152) {
     return ['error', 'Image size must be 5 MB or less.', null];
     echo "Image size must be 5 MB or less.";
 }
 
-echo "hello 8 <br>";
 
 $tmpName = $image['tmp_name'] ?? '';
-// echo $tmpName;
-// if ($tmpName === '') {
-//     return ['error', 'The uploaded file is not valid.', null];
-//     echo "The uploaded file is not valid.";
-// }
+if ($tmpName === '') {
+    return ['error', 'The uploaded file is not valid.', null];
+    echo "The uploaded file is not valid.";
+}
 
-echo "hello 9 <br>";
 
 $imageInfo = @getimagesize($tmpName);
 if ($imageInfo === false || empty($imageInfo['mime'])) {
@@ -71,14 +65,12 @@ if ($imageInfo === false || empty($imageInfo['mime'])) {
     echo "Please upload a valid image file.";
 }
 
-echo "hello 10 <br>";
 
 $imageName = trim((string) ($image['name'] ?? ''));
 if ($imageName === '') {
     $imageName = 'image';
 }
 
-echo "hello 11 <br>";
 
 $allowedMimeTypes = [
     'image/jpeg',
@@ -87,7 +79,6 @@ $allowedMimeTypes = [
     'image/webp',
 ];
 
-echo "hello 12 <br>";
 
 $mimeType = $imageInfo['mime'];
 if (!in_array($mimeType, $allowedMimeTypes, true)) {
@@ -95,7 +86,6 @@ if (!in_array($mimeType, $allowedMimeTypes, true)) {
     echo "Only JPG, PNG, GIF, and WebP files are allowed.";
 }
 
-echo "hello 13 <br>";
 
 $imageData = file_get_contents($tmpName);
 if ($imageData === false) {
@@ -103,7 +93,6 @@ if ($imageData === false) {
     echo "Unable to read the uploaded file.";
 }
 
-echo "hello 14 <br>";
 
 $stmt = $_SESSION["conn"]->prepare("UPDATE `users` SET `username` = ?, 
                                                         `email` = ?, 
@@ -114,7 +103,6 @@ $stmt = $_SESSION["conn"]->prepare("UPDATE `users` SET `username` = ?,
                                                         `timezone` = ?
                                                     WHERE `user_id` = ?");
 
-echo "hello 15 <br>";
 
 $stmt->bind_param("sssssssi",
                         $_POST["username"],
@@ -126,7 +114,21 @@ $stmt->bind_param("sssssssi",
                         $_POST["timezone"],
                         $userID);
 
-echo "hello 16 <br>";
+} else {
+    $stmt = $_SESSION["conn"]->prepare("UPDATE `users` SET `username` = ?, 
+                                                            `email` = ?, 
+                                                            `color` = ?, 
+                                                            `timezone` = ?
+                                                        WHERE `user_id` = ?");
+
+
+    $stmt->bind_param("ssssi",
+                            $_POST["username"],
+                            $_POST["email"],
+                            $_POST["color"],
+                            $_POST["timezone"],
+                            $userID);
+}
 
 if($stmt->execute()) {
      header("Location: /settings.php");
