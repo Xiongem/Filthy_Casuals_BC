@@ -14,7 +14,7 @@ if (isset($_SESSION["user_id"])) {
     $userID = "none";
 }
 
-
+$admin = $_SESSION["admin"];
 $ID = $_POST["user_id"];
 $catname = $_POST['cat_name'];
 

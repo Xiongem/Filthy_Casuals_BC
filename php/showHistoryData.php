@@ -14,6 +14,7 @@ if (isset($_SESSION["user_id"])) {
     $userID = "none";
 }
 
+$admin = $_SESSION["admin"];
 $ID = $_POST["user_id"];
 
 $fetch_query = $_SESSION["conn"]->query("SELECT * FROM readHistory WHERE user_id = $ID ORDER BY `finishedDate` DESC");

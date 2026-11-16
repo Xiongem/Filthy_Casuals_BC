@@ -15,7 +15,6 @@ if (isset($_SESSION["user_id"])) {
     $userID = "none";
 }
 $admin = $_SESSION["admin"];
-echo $admin;
 
 $ID = $_GET["user_id"];
 
