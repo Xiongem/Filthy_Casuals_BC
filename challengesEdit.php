@@ -132,10 +132,11 @@ $sql2 = "SELECT * FROM `challenges`";
                     <input class="inputs" name="month_dec" id="dec" value="<?=$dec?>">
                     <textarea class="inputs" name="dec_Descr" id="decDescr" maxlength="300"><?=$decDescr?></textarea>
                 </div>
-            </form>
+            
             <div class="button-wrapper">
                 <button class="buttons" type="submit">set</button>
             </div>
+            </form>
         </div>
     </div>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
