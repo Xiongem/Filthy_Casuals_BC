@@ -39,6 +39,27 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body id="body">
+    <div class="popup-wrapper hide" id="infoPopup">
+        <div class="popup-container">
+            <div class="close-wrapper">
+                <ion-icon class="icon" name="close" onclick="closeInfoPopup()"></ion-icon>
+            </div>
+            <h3>Bingo Challenges</h3>
+            <p>
+                This website currently does not generator bingo boards. 
+                You will need to use the link below to generator one or make one yourself.
+                <br>
+                When you complete a square on your bingo board, make sure to give that entry into the website its challenge points,
+                AND click the checkbox that appears asking if that entry counts towards bingo. 
+                Only things makered this way will show up when you go to choose squares for your bingos.
+                <br>
+                When you get a BINGO!, come back to this page, select the correct size bingo board, 
+                and choose the entries that make up the squares in the bingo. 
+                You will be awarded 10% bonus points for each entry in the bingo.
+            </p>
+            <a href="https://myfreebingocards.com/bingo-card-generator">Bingo Board Generator</a>
+        </div>
+    </div>
     <header>
         <?= makeNav() ?>
     </header>
@@ -46,6 +67,7 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
         <!--//! ADD explanation for how bingo works and link to bingo board generation website -->
         <div class="bingo-title spacing">
             <h1>Assign Bingo Squares</h1>
+            <ion-icon name="information-circle-outline" onclick="showInfoPopup()"></ion-icon>
         </div>
         <div class="bingo-label-wrapper">
             <label id="bingo-label">Bingo Dimensions:</label>
@@ -70,6 +92,18 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
         <div class="popup-content" id="mathResults"></div>
     </div>
     <script>
+        function showInfoPopup() {
+            $("#infoPopup").css({"display": "flex"});
+            var infoPopup = document.getElementById("infoPopup");
+            infoPopup.scrollIntoView();
+        }
+        function closeInfoPopup() {
+            $("#infoPopup").hide();
+            $("#body").css({"height": "unset", "overflow": "unset"});
+            location.reload(true);
+        }
+
+
         function createInputs() {
             $("#bingoResults").html("");
             var bingoSize = $("#bingoSize").val();
