@@ -50,7 +50,7 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
                 This website currently does not generator bingo boards. 
                 You will need to use the link below to generator one or make one yourself.
                 <br><br>
-                When you complete a square on your bingo board, make sure to give that entry into the website its challenge points,
+                When you complete a square on your bingo board, make sure to give that entry its challenge points,
                 AND click the checkbox that appears asking if that entry counts towards bingo. 
                 Only things makered this way will show up when you go to choose squares for your bingos.
                 <br><br>
