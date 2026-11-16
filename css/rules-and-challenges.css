@@ -226,6 +226,11 @@ a {
     #activity {
         font-weight: bold;
     }
+    #activity, #instruct {
+        overflow-wrap: break-word;
+        word-break: break-all;
+        hyphens: manual;
+    }
     .actRow {
         display: flex;
         flex-direction: column;
