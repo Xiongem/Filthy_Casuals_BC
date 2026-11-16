@@ -280,7 +280,7 @@
     .wrapper-content, .divider {
         justify-self: center;
     }
-    .admin-row, .admin-wrapper {
+    .admin-row, .search-admin-wrapper {
         width: 70%;
     }
 
