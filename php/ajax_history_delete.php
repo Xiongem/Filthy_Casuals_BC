@@ -31,6 +31,10 @@ $sql = "SELECT `pointsYear`
 //removes entry points from user points and assigns the new total to a variable
 $newTotal = $pointsYear - $totalPoints;
 
+if ($newTotal < 0) {
+    $newTotal = 0;
+}
+
 //statement 1: sends new point total to database
 $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `users` 
                                         SET `pointsYear` = ? 
