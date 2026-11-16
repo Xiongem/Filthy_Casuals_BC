@@ -17,10 +17,13 @@
     }
     .total-content {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         width: 100%;
     }
+     .total-content h2 {
+        margin-right: 0.5em;
+     }
     .form-group {
         display: flex;
         justify-content: end;
@@ -453,9 +456,7 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 601px) {
-        .total-content {
-            width: 60%;
-        }
+
 }
 
 /** ####################### *//** ####################### *//** ####################### */
@@ -463,13 +464,6 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1024px) {
-    .total-wrapper {
-        display: flex;
-        justify-content: center;
-    }
-    .total-content {
-        width: 40%;
-    }
     .row {
         grid-template-columns: 3% 5% 15% 15% 5% 10% 10% 5% 9% 9% 5% 10%;
     }
