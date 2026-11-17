@@ -271,6 +271,7 @@ $today = date("Y-m-d");
                     });
                 }
             }
+            
             function check() {
                 var active = <?=$active?>;
                 if (active == 1) {
