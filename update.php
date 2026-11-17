@@ -85,7 +85,7 @@ $today = date("Y-m-d");
 
                 <!--//! ADD TAG EXPLANATION -->
 
-                <div class="tag-wrapper" id="tagWrapper">
+                <div class="tag-wrapper">
                     <div class="search-tag-wrapper">
                         <div class="tag">
                             <label for="keyword0" class="labels">Tags: <span id="help"><ion-icon name="help-circle"></ion-icon>
@@ -242,11 +242,12 @@ $today = date("Y-m-d");
         </div>
 
         <script>
-            $("#tagWrapper").blur(function() {
-                console.log("goodbye");
-                
-                $('#search_results0').hide();
+            $("#tags_id0").blur(function() {
+                setTimeout(hideSearch, 500)
             });
+            function hideSearch() {
+                $('#search_results0').hide();
+            }
 
 
             function clickPress(event) {
