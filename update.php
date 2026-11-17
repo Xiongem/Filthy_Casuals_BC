@@ -100,6 +100,7 @@ $today = date("Y-m-d");
                                 name="keyword0" 
                                 id="tags_id0" 
                                 class="tags" 
+                                maxlength="10"
                                 onkeyup="autocomplet0()"
                                 onkeypress="clickPress(event)">
                         </div>
