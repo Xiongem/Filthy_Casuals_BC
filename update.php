@@ -106,6 +106,7 @@ $today = date("Y-m-d");
                             <ion-icon name="add-circle" size="large" id="enter-circle" aria-label="add" onclick="createTag()"></ion-icon>
                     </div>
                     <div id="search_results0" class="search-wrapper"></div>
+                    <div id="error" class="error"></div>
                 </div>
 
                 <div class="notch-wrapper" id="notchWrapper"></div>
