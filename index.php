@@ -183,7 +183,7 @@ if ($now <= $ratEnd) {
             showGoroTable();
             showFutsuuTable();
             showHayaiTable();
-            showYabaiTable():
+            showYabaiTable();
         });
         function showOverallTable() {
             $.ajax({
