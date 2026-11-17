@@ -98,6 +98,7 @@ if ($now <= $ratEnd) {
     <?php } ?>
     <div class="full-wrapper">
         <div class="table-wrapper">
+            <ion-icon class="refresh icon" size="large" name="refresh-circle" onclick="refreshData()"></ion-icon>
             <div class="title">
                 <h1>
                     Overall Ranking
@@ -185,6 +186,14 @@ if ($now <= $ratEnd) {
             showHayaiTable();
             showYabaiTable();
         });
+        function refreshData() {
+            showOverallTable();
+            showMobileLeague();
+            showGoroTable();
+            showFutsuuTable();
+            showHayaiTable();
+            showYabaiTable();
+        }
         function showOverallTable() {
             $.ajax({
                 url: "php/showOverallTable.php",

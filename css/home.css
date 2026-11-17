@@ -218,6 +218,12 @@
     #infoPopup a {
         color: var(--leather);
     }
+    .table-wrapper {
+        position: relative;
+    }
+    .refresh {
+        position: absolute;
+    }
 }
 
 /** ####################### *//** ####################### *//** ####################### */
