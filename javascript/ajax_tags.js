@@ -14,8 +14,6 @@ function autocomplet0() {
             }
         });
     } else if (keyword0 == 0 || keyword0 == "") {
-        console.log("goodbye");
-        
         $('#search_results0').hide();
     } else {
         $('#search_results0').hide();
