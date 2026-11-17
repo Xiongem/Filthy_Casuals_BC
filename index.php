@@ -196,7 +196,7 @@ if ($now <= $ratEnd) {
             })
         }
         function showMobileLeague() {
-            var league = <?=$league?>;
+            var league = '<?=$league?>';
 
             $.ajax ({
                 url: "php/showMobileLeague.php",
