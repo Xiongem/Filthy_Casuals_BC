@@ -14,9 +14,9 @@ function autocomplet0() {
             }
         });
     } else if (keyword0 == 0 || keyword0 == "") {
-        setTimeout(hideSearch, 200);
+        setTimeout(hideSearch, 300);
     } else {
-        setTimeout(hideSearch, 200);
+        setTimeout(hideSearch, 300);
     }
 }
 
