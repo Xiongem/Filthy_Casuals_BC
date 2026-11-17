@@ -105,7 +105,7 @@ if ($now <= $ratEnd) {
                 </h1>
                 <ion-icon size="large" class="caret" name="caret-down-outline" id="overallClose" onclick="hideTable('#overall', '#overallClose', '#overallOpen')"></ion-icon>
                 <ion-icon size="large" class="caret" name="caret-up-outline" id="overallOpen" onclick="showTable('#overall', '#overallOpen', '#overallClose')"></ion-icon>
-                <ion-icon class="refresh icon" size="large" name="refresh-circle" onclick="refreshData()"></ion-icon>
+                <ion-icon id="refresh" class="refresh icon" size="large" name="refresh-circle" onclick="refreshData()"></ion-icon>
             </div>
             <div class="content-wrapper" id="overall">
                 <!--//? AJAX DISPLAY OVERALL RANKINGS HERE -->
@@ -189,6 +189,7 @@ if ($now <= $ratEnd) {
             setTimeout(refreshData, 60000)
         });
         function refreshData() {
+            $("#refresh").addClass("rotate-center");
             showOverallTable();
             showMobileLeague();
             showGoroTable();
@@ -256,6 +257,7 @@ if ($now <= $ratEnd) {
                 data: {},
                 success:function(result) {
                     $("#Yabai").html(result);
+                    $("#refresh").removeClass("rotate-center");
                 }
             })
         }
