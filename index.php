@@ -186,6 +186,7 @@ if ($now <= $ratEnd) {
             showFutsuuTable();
             showHayaiTable();
             showYabaiTable();
+            setTimeout(refreshData, 60000)
         });
         function refreshData() {
             showOverallTable();
@@ -194,6 +195,8 @@ if ($now <= $ratEnd) {
             showFutsuuTable();
             showHayaiTable();
             showYabaiTable();
+            console.log("data refreshed");
+            
         }
         function showOverallTable() {
             $.ajax({
