@@ -247,6 +247,7 @@ $today = date("Y-m-d");
                 setTimeout(hideSearch, 300)
             });
             function hideSearch() {
+                $('#search_results0').html("");
                 $('#search_results0').hide();
             }
 
