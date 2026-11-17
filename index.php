@@ -106,43 +106,7 @@ if ($now <= $ratEnd) {
                 <ion-icon size="large" class="caret" name="caret-up-outline" id="overallOpen" onclick="showTable('#overall', '#overallOpen', '#overallClose')"></ion-icon>
             </div>
             <div class="content-wrapper" id="overall">
-                <div class="thead-wrapper">
-                    <div class="thead">Rank</div>
-                    <div class="thead">User</div>
-                    <div class="thead">Points</div>
-                </div>
-                <!--//? DISPLAY RANKINGS HERE -->
-                <?php if ($stmt1 = $_SESSION["conn"]->prepare("SELECT * FROM users ORDER BY pointsYear DESC")) {
-                    $stmt1->execute(); 
-                    // Get the results...
-                    $result1 = $stmt1->get_result();
-                    $stmt1->close();
-                    
-                    $rankOverall = 0;
-                    while ($rowOverall = $result1->fetch_assoc()) {
-                        $idOverall = $rowOverall["user_id"];
-                        $usernameOverall = $rowOverall["username"];
-                        $pointsOverall = $rowOverall["pointsYear"];
-                        $imageName = htmlspecialchars($rowOverall['pfpName']);
-                        $imageType = $rowOverall['pfpType'];
-                        $imageData = base64_encode($rowOverall['pfpData']);
-                        if (isset($rowOverall['color'])) {
-                            $color = $rowOverall['color'];
-                        } else {
-                            $color = "#2b361c";
-                        }
-                            $rankOverall++;  
-                    ?>
-
-                    <div class="table-rows">
-                        <div class="tr"><?=$rankOverall?></div>
-                        <div class="tr userLink" onclick="goUser('<?=$idOverall?>')" style="color: <?=$color?>">
-                            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
-                            <?=$usernameOverall?>
-                        </div>
-                        <div class="tr"><?=$pointsOverall?></div>
-                    </div>
-                <?php }} ?>
+                <!--//? AJAX DISPLAY OVERALL RANKINGS HERE -->
             </div>
         </div>
         <div class="table-wrapper" id="mobile">
@@ -154,38 +118,7 @@ if ($now <= $ratEnd) {
                 <ion-icon size="large" class="caret" name="caret-up-outline" id="leagueOpen" onclick="showTable('#league', '#leagueOpen', '#leagueClose')"></ion-icon>
             </div>
             <div class="content-wrapper" id="league">
-                <div class="thead-wrapper">
-                    <div class="thead">Rank</div>
-                    <div class="thead">User</div>
-                    <div class="thead">Points</div>
-                </div>
-                <!--//? DISPLAY RANKINGS HERE -->
-                <?php if ($stmt2 = $_SESSION["conn"]->prepare("SELECT * FROM users WHERE league = ? ORDER BY pointsYear DESC")) {
-                    $stmt2->bind_param('s', $league);
-                    $stmt2->execute();
-                    $result2 = $stmt2->get_result();
-                    $stmt2->close();
-
-                    $rankLeague = 0;
-                    while ($rowLeague = $result2->fetch_assoc()) {
-                        $idLeague = $rowLeague['user_id'];
-                        $usernameLeague = $rowLeague["username"];
-                        $pointsLeague = $rowLeague["pointsYear"];
-                        if (isset($rowLeague['color'])) {
-                            $color = $rowLeague['color'];
-                        } else {
-                            $color = "#2b361c";
-                        }
-                            $rankLeague++;
-                ?>
-                    <div class="table-rows">
-                        <div class="tr"><?=$rankLeague?></div>
-                        <div class="tr userLink" onclick="goUser('<?=$idLeague?>')" style="color: <?=$color?>">
-                            <?=$usernameLeague?>
-                        </div>
-                        <div class="tr"><?=$pointsLeague?></div>
-                    </div>
-                <?php }} ?>
+                <!--//? AJAX DISPLAY MOBILE LEAGUE HERE  -->
             </div>
         </div>
         <div class="desktop-table-wrapper">
@@ -199,40 +132,7 @@ if ($now <= $ratEnd) {
                     </h1>
                 </div>
                 <div class="content-wrapper" id="Gorogoro">
-                    <div class="thead-wrapper">
-                        <div class="thead">Rank</div>
-                        <div class="thead">User</div>
-                        <div class="thead">Points</div>
-                    </div>
-                    <!--//? DISPLAY RANKINGS HERE -->
-                    <?php 
-                    $stmt3 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Gorogoro' ORDER BY pointsYear DESC");
-                    $rowGoro = mysqli_num_rows($stmt3);
-                    if($rowGoro > 0) {
-                        $rankGoro = 0;
-                        while ($rowGoro = mysqli_fetch_array($stmt3)) {
-                            $idGoro = $rowGoro["user_id"];
-                            $usernameGoro = $rowGoro["username"];
-                            $pointsGoro = $rowGoro["pointsYear"];
-                            if (isset($rowGoro['color'])) {
-                                $color = $rowGoro['color'];
-                            } else {
-                                $color = "#2b361c";
-                            }
-                                $rankGoro++;
-                    ?>
-                        <div class="table-rows">
-                            <div class="tr"><?=$rankGoro?></div>
-                            <div class="tr userLink" onclick="goUser('<?=$idGoro?>')" style="color: <?=$color?>">
-                                <?=$usernameGoro?>
-                            </div>
-                            <div class="tr"><?=$pointsGoro?></div>
-                        </div>
-                    <?php }} else { ?>
-                        <div class="nothing">
-                            <div class="tr">No users found</div>
-                        </div>
-                    <?php } ?>
+                    <!--//? AJAX DISPLAY GOROGORO RANKINGS HERE -->
                 </div>
             </div>
             <div class="table-wrapper">
@@ -245,40 +145,7 @@ if ($now <= $ratEnd) {
                     </h1>
                 </div>
                 <div class="content-wrapper" id="Futsuu">
-                    <div class="thead-wrapper">
-                        <div class="thead">Rank</div>
-                        <div class="thead">User</div>
-                        <div class="thead">Points</div>
-                    </div>
-                    <!--//? DISPLAY RANKINGS HERE -->
-                    <?php 
-                    $stmt4 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Futsuu' ORDER BY pointsYear DESC");
-                    $rowFutsuu = mysqli_num_rows($stmt4);
-                    if($rowFutsuu > 0) {
-                        $rankFutsuu = 0;
-                        while ($rowFutsuu = mysqli_fetch_array($stmt4)) {
-                            $idFutsuu = $rowFutsuu["user_id"];
-                            $usernameFutsuu = $rowFutsuu["username"];
-                            $pointsFutsuu = $rowFutsuu["pointsYear"];
-                            if (isset($rowFutsuu['color'])) {
-                                $color = $rowFutsuu['color'];
-                            } else {
-                                $color = "#2b361c";
-                            }
-                                $rankFutsuu++;
-                    ?>
-                        <div class="table-rows">
-                            <div class="tr"><?=$rankFutsuu?></div>
-                            <div class="tr userLink" onclick="goUser('<?=$idFutsuu?>')" style="color: <?=$color?>">
-                                <?=$usernameFutsuu?>
-                            </div>
-                            <div class="tr"><?=$pointsFutsuu?></div>
-                        </div>
-                    <?php }} else { ?>
-                        <div class="nothing">
-                            <div class="tr">No users found</div>
-                        </div>
-                    <?php } ?>
+                    <!--//? AJAX DISPLAY FUTSUU RANKINGS HERE -->
                 </div>
             </div>
             <div class="table-wrapper">
@@ -291,40 +158,7 @@ if ($now <= $ratEnd) {
                     </h1>
                 </div>
                 <div class="content-wrapper" id="Hayai">
-                    <div class="thead-wrapper">
-                        <div class="thead">Rank</div>
-                        <div class="thead">User</div>
-                        <div class="thead">Points</div>
-                    </div>
-                    <!--//? DISPLAY RANKINGS HERE -->
-                    <?php 
-                    $stmt5 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Hayai' ORDER BY pointsYear DESC");
-                    $rowHayai = mysqli_num_rows($stmt5);
-                    if($rowHayai > 0) {
-                        $rankHayai = 0;
-                        while ($rowHayai = mysqli_fetch_array($stmt5)) {
-                            $idHayai = $rowHayai["user_id"];
-                            $usernameHayai = $rowHayai["username"];
-                            $pointsHayai = $rowHayai["pointsYear"];
-                            if (isset($rowHayai['color'])) {
-                                $color = $rowHayai['color'];
-                            } else {
-                                $color = "#2b361c";
-                            }
-                                $rankHayai++;
-                    ?>
-                        <div class="table-rows">
-                            <div class="tr"><?=$rankHayai?></div>
-                            <div class="tr userLink" onclick="goUser('<?=$idHayai?>')" style="color: <?=$color?>">
-                                <?=$usernameHayai?>
-                            </div>
-                            <div class="tr"><?=$pointsHayai?></div>
-                        </div>
-                    <?php }} else { ?>
-                        <div class="nothing">
-                            <div class="tr">No users found</div>
-                        </div>
-                    <?php } ?>
+                    <!--//? AJAX DISPLAY HAYAI RANKINGS HERE -->
                 </div>
             </div>
             <div class="table-wrapper">
@@ -337,48 +171,84 @@ if ($now <= $ratEnd) {
                     </h1>
                 </div>
                 <div class="content-wrapper" id="Yabai">
-                    <div class="thead-wrapper">
-                        <div class="thead">Rank</div>
-                        <div class="thead">User</div>
-                        <div class="thead">Points</div>
-                    </div>
-                    <!--//? DISPLAY RANKINGS HERE -->
-                    <?php 
-                    $stmt6 = $_SESSION["conn"]->query("SELECT * FROM users WHERE league = 'Yabai' ORDER BY pointsYear DESC");
-                    $rowYabai = mysqli_num_rows($stmt6);
-                    if($rowYabai > 0) {
-                        $rankYabai = 0;
-                        while ($rowYabai = mysqli_fetch_array($stmt6)) {
-                            $idYabai = $rowYabai["user_id"];
-                            $usernameYabai = $rowYabai["username"];
-                            $pointsYabai = $rowYabai["pointsYear"];
-                            if (isset($rowYabai['color'])) {
-                                $color = $rowYabai['color'];
-                            } else {
-                                $color = "#2b361c";
-                            }
-                            // $imageName = htmlspecialchars($rowYabai["pfpName"]);
-                            // $imageType = $rowYabai["pfpType"];
-                            // $imageData = base64_encode($rowYabai["pfpData"]);
-                                $rankYabai++;
-                    ?>
-                        <div class="table-rows">
-                            <div class="tr"><?=$rankYabai?></div>
-                            <div class="tr userLink" onclick="goUser('<?=$idYabai?>')" style="color: <?=$color?>">
-                                <?=$usernameYabai?>
-                            </div>
-                            <div class="tr"><?=$pointsYabai?></div>
-                        </div>
-                    <?php }} else { ?>
-                        <div class="nothing">
-                            <div class="tr">No users found</div>
-                        </div>
-                    <?php } ?>
+                   <!--//? AJAX DISPLAY YABAI RANKINGS HERE -->
                 </div>
             </div>
         </div>
     </div>
     <script>
+         $(document).ready(function() {
+            showOverallTable();
+            showMobileLeague();
+            showGoroTable();
+            showFutsuuTable();
+            showHayaiTable();
+            showYabaiTable():
+        });
+        function showOverallTable() {
+            $.ajax({
+                url: "php/showOverallTable.php",
+                method: "post",
+                data: {},
+                success:function(result) {
+                    $("#overall").html(result);
+                }
+            })
+        }
+        function showMobileLeague() {
+            var league = <?=$league?>;
+
+            $.ajax({
+                url: "php/showMobileLeague.php",
+                method: "post",
+                data: {league:league},
+                success:function(result) {
+                    $("#league").html(result);
+                }
+            })
+        }
+        function showGoroTable() {
+            $.ajax ({
+                url: "php/showGoroTable.php",
+                method: "post",
+                data: {},
+                success:function(result) {
+                    $("#Gorogoro").html(result);
+                }
+            })
+        }
+        function showFutsuuTable() {
+            $.ajax ({
+                url: "php/showFutsuuTable.php",
+                method: "post",
+                data: {},
+                success:function(result) {
+                    $("#Futsuu").html(result);
+                }
+            })
+        }
+        function showHayaiTable() {
+            $.ajax({
+                url: "php/showHayaiTable.php",
+                method: "post",
+                data: {},
+                success:function(result) {
+                    $("#Hayai").html(result);
+                }
+            })
+        }
+        function showYabaiTable() {
+            $.ajax({
+                url: "php/showYabaiTable.php",
+                method: "post",
+                data: {},
+                success:function(result) {
+                    $("#Yabai").html(result);
+                }
+            })
+        }
+        
+
         function goUser(userId) {
             window.location.href = "readHistory.php?user_id=" + userId;
         }

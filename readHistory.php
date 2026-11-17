@@ -373,9 +373,9 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                         showHistoryData();
                     });
 
-                    $("#tags_id0").blur(function() {
-                        $('#search_results0').hide();
-                    });
+                    // $("#tags_id0").blur(function() {
+                    //     $('#search_results0').hide();
+                    // });
 
 
                     function clickPress(event) {
