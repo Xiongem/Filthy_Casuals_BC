@@ -288,7 +288,7 @@
         flex-direction: column;
         /* min-width: 20em; */
         width: 70%;
-        width: fit-content;
+        /* width: fit-content; */
 
         background-color: var(--marine-green);
         border-radius: 0 0 4px 4px;
