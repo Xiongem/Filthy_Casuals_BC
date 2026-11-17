@@ -1,5 +1,5 @@
 function autocomplet0() {
-    var min_length = 0; // min characters to display the autocomplete
+    var min_length = 1; // min characters to display the autocomplete
     var keyword0 = document.getElementById('tags_id0').value;
     $("#error").text("");
     
@@ -62,7 +62,7 @@ function createTag() {
         });
     } else {
         $("#error").text("Cannot add empty tags");
-        setTimeout(removeError, 2000);
+        setTimeout(removeError, 3000);
     }
 }
 
