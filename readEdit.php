@@ -116,12 +116,14 @@ if (isset($read["comment"])) {
                             name="keyword0" 
                             id="tags_id0" 
                             class="tags" 
+                            maxlength="10"
                             onkeyup="autocomplet0()"
                             onkeypress="clickPress(event)">
                     </div>
                         <ion-icon name="add-circle" size="large" id="enter-circle" aria-label="add" onclick="createTag()"></ion-icon>
                 </div>
                 <div id="search_results0" class="search-wrapper"></div>
+                <div id="error" class="error"></div>
             </div>
 
             <!--//? SHOWS ASSIGNED TAGS AND ASSIGNS EACH TO AN INPUT FIELD -->
@@ -246,9 +248,15 @@ if (isset($read["comment"])) {
         </div>
     </div>
     <script type="text/javascript">
-        $("#tags_id0").blur(function() {
-            $('#search_results0').hide();
+       $("#tags_id0").blur(function() {
+            setTimeout(hideSearch, 300)
         });
+        function hideSearch() {
+            $('#search_results0').html("");
+            $('#search_results0').hide();
+        }
+
+
         function showFanfic() {
             if ($('#fanfic').is(':checked')) {
                 $("#showFanficWarn").html("Input WORD COUNT");
