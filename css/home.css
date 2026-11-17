@@ -218,11 +218,11 @@
     #infoPopup a {
         color: var(--leather);
     }
-    .table-wrapper {
+    /* .table-wrapper {
         position: relative;
-    }
+    } */
     .refresh {
-        position: absolute;
+        /* position: absolute; */
         margin: 0.5em;
     }
 }

@@ -98,13 +98,14 @@ if ($now <= $ratEnd) {
     <?php } ?>
     <div class="full-wrapper">
         <div class="table-wrapper">
-            <ion-icon class="refresh icon" size="large" name="refresh-circle" onclick="refreshData()"></ion-icon>
+            
             <div class="title">
                 <h1>
                     Overall Ranking
                 </h1>
                 <ion-icon size="large" class="caret" name="caret-down-outline" id="overallClose" onclick="hideTable('#overall', '#overallClose', '#overallOpen')"></ion-icon>
                 <ion-icon size="large" class="caret" name="caret-up-outline" id="overallOpen" onclick="showTable('#overall', '#overallOpen', '#overallClose')"></ion-icon>
+                <ion-icon class="refresh icon" size="large" name="refresh-circle" onclick="refreshData()"></ion-icon>
             </div>
             <div class="content-wrapper" id="overall">
                 <!--//? AJAX DISPLAY OVERALL RANKINGS HERE -->
