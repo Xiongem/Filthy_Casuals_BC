@@ -1,5 +1,5 @@
 function autocomplet0() {
-    var min_length = 1; // min characters to display the autocomplete
+    var min_length = 0; // min characters to display the autocomplete
     var keyword0 = document.getElementById('tags_id0').value;
     $("#error").text("");
     
@@ -14,8 +14,12 @@ function autocomplet0() {
             }
         });
     } else if (keyword0 == 0 || keyword0 == "") {
+        $('#search_results0').html("");
+        $('#search_results0').hide();
         setTimeout(hideSearch, 300);
     } else {
+        $('#search_results0').html("");
+        $('#search_results0').hide();
         setTimeout(hideSearch, 300);
     }
 }
