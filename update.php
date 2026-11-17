@@ -243,6 +243,8 @@ $today = date("Y-m-d");
 
         <script>
             $("#tagWrapper").blur(function() {
+                console.log("goodbye");
+                
                 $('#search_results0').hide();
             });
 
