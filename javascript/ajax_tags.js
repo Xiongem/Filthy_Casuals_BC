@@ -1,6 +1,7 @@
 function autocomplet0() {
     var min_length = 0; // min characters to display the autocomplete
     var keyword0 = document.getElementById('tags_id0').value;
+    $("#error").text("");
     
     if (keyword0.length > min_length) {
         $.ajax({
@@ -61,5 +62,10 @@ function createTag() {
         });
     } else {
         $("#error").text("Cannot add empty tags");
+        setTimeout(removeError, 2000);
     }
+}
+
+function removeError() {
+    $("#error").text("");
 }
