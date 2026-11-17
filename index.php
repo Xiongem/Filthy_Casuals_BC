@@ -179,7 +179,7 @@ if ($now <= $ratEnd) {
     <script>
          $(document).ready(function() {
             showOverallTable();
-            // showMobileLeague();
+            showMobileLeague();
             showGoroTable();
             showFutsuuTable();
             showHayaiTable();
@@ -195,18 +195,18 @@ if ($now <= $ratEnd) {
                 }
             })
         }
-        // function showMobileLeague() {
-        //     var league = ;
+        function showMobileLeague() {
+            var league = ;
 
-        //     $.ajax({
-        //         url: "php/showMobileLeague.php",
-        //         method: "post",
-        //         data: {league:league},
-        //         success:function(result) {
-        //             $("#league").html(result);
-        //         }
-        //     })
-        // }
+            $.ajax ({
+                url: "php/showMobileLeague.php",
+                method: "post",
+                data: {league:league},
+                success:function(result) {
+                    $("#league").html(result);
+                }
+            })
+        }
         function showGoroTable() {
             $.ajax ({
                 url: "php/showGoroTable.php",
