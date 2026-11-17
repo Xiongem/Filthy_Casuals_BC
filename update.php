@@ -243,7 +243,7 @@ $today = date("Y-m-d");
 
         <script>
             $("#tags_id0").blur(function() {
-                setTimeout(hideSearch, 500)
+                setTimeout(hideSearch, 300)
             });
             function hideSearch() {
                 $('#search_results0').hide();
