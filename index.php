@@ -179,7 +179,7 @@ if ($now <= $ratEnd) {
     <script>
          $(document).ready(function() {
             showOverallTable();
-            showMobileLeague();
+            // showMobileLeague();
             showGoroTable();
             showFutsuuTable();
             showHayaiTable();
