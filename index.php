@@ -179,6 +179,7 @@ if ($now <= $ratEnd) {
         </div>
     </div>
     <script>
+        // display league and overall ranking data through ajax
          $(document).ready(function() {
             showOverallTable();
             showMobileLeague();
@@ -188,6 +189,7 @@ if ($now <= $ratEnd) {
             showYabaiTable();
             setTimeout(refreshData, 60000)
         });
+        // recall functions to display tables through ajax - set to refresh every 1 minute
         function refreshData() {
             $("#refresh").addClass("rotate-center");
             showOverallTable();
@@ -198,6 +200,7 @@ if ($now <= $ratEnd) {
             showYabaiTable();
             setTimeout(refreshData, 60000)
         }
+        //display overall rankings
         function showOverallTable() {
             $.ajax({
                 url: "php/showOverallTable.php",
@@ -208,7 +211,8 @@ if ($now <= $ratEnd) {
                 }
             })
         }
-        function showMobileLeague() {
+        //display user's league
+        function showMobileLeague() { 
             var league = '<?=$league?>';
 
             $.ajax ({
@@ -220,7 +224,8 @@ if ($now <= $ratEnd) {
                 }
             })
         }
-        function showGoroTable() {
+        //display gorogoro league
+        function showGoroTable() { 
             $.ajax ({
                 url: "php/showGoroTable.php",
                 method: "post",
@@ -230,7 +235,8 @@ if ($now <= $ratEnd) {
                 }
             })
         }
-        function showFutsuuTable() {
+        //display futsuu league
+        function showFutsuuTable() { 
             $.ajax ({
                 url: "php/showFutsuuTable.php",
                 method: "post",
@@ -240,7 +246,8 @@ if ($now <= $ratEnd) {
                 }
             })
         }
-        function showHayaiTable() {
+        //display hayai league
+        function showHayaiTable() { 
             $.ajax({
                 url: "php/showHayaiTable.php",
                 method: "post",
@@ -250,7 +257,8 @@ if ($now <= $ratEnd) {
                 }
             })
         }
-        function showYabaiTable() {
+        //display yabai league
+        function showYabaiTable() { 
             $.ajax({
                 url: "php/showYabaiTable.php",
                 method: "post",
@@ -262,20 +270,25 @@ if ($now <= $ratEnd) {
             })
         }
         
-
+        //sends user to the history page of whichever username they click on
         function goUser(userId) {
             window.location.href = "readHistory.php?user_id=" + userId;
         }
+
+        //hides the table when the caret is clicked
         function hideTable(tableId, closeIconId, openIconId) {
             $(tableId).css("display", "none");
             $(closeIconId).css("display", "none");
             $(openIconId).css("display", "block");
         }
+        //shows the table when the caret is clicked
         function showTable(tableId, openIconId, closeIconId) {
             $(tableId).css("display", "flex");
             $(closeIconId).css("display", "block");
             $(openIconId).css("display", "none");
         }
+
+        //displays league edit popup to allow admins to move members from league to leagyue
         function showLeagueEdit(league) {
             $("#editPopup").css({"display": "flex"});
             var editPopup = document.getElementById("editPopup");
@@ -292,6 +305,7 @@ if ($now <= $ratEnd) {
                 }
             });
         }
+        //closes the league edit popup
         function closeLeagueEdit() {
             $("#editPopup").hide();
             $("#body").css({"height": "unset", "overflow": "unset"});
