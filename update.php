@@ -100,7 +100,7 @@ $today = date("Y-m-d");
                                 name="keyword0" 
                                 id="tags_id0" 
                                 class="tags" 
-                                maxlength="10"
+                                maxlength="30"
                                 onkeyup="autocomplet0()"
                                 onkeypress="clickPress(event)">
                         </div>
@@ -271,7 +271,7 @@ $today = date("Y-m-d");
                     });
                 }
             }
-            
+
             function check() {
                 var active = <?=$active?>;
                 if (active == 1) {

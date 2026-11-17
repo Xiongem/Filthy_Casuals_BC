@@ -289,6 +289,10 @@
         /* min-width: 20em; */
         width: 70%;
         /* width: fit-content; */
+        /* overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        word-break: break-word; */
 
         background-color: var(--marine-green);
         border-radius: 0 0 4px 4px;

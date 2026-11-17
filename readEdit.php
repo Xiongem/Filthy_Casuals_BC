@@ -116,7 +116,7 @@ if (isset($read["comment"])) {
                             name="keyword0" 
                             id="tags_id0" 
                             class="tags" 
-                            maxlength="10"
+                            maxlength="30"
                             onkeyup="autocomplet0()"
                             onkeypress="clickPress(event)">
                     </div>
