@@ -36,7 +36,7 @@ $league = $_POST["league"];
 ?>
     <div class="table-rows">
         <div class="tr"><?=$rankLeague?></div>
-        <div class="tr userLink" onclick="goUser('<?=$idLeague?>')" style="color: <?=$color?>">
+        <div class="tr userLink"  style="color: <?=$color?>">
             <?=$usernameLeague?>
         </div>
         <div class="tr"><?=$pointsLeague?></div>
