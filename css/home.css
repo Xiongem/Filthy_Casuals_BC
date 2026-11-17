@@ -218,9 +218,9 @@
     #infoPopup a {
         color: var(--leather);
     }
-    /* .table-wrapper {
-        position: relative;
-    } */
+    .table-wrapper h1 {
+        text-align: center;
+    }
     .refresh {
         /* position: absolute; */
         margin-left: 0.5em;
