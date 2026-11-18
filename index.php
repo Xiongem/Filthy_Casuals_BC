@@ -109,7 +109,7 @@ if ($now <= $ratEnd) {
             </div>
             <div class="content-wrapper" id="overall">
                 <!--//? AJAX DISPLAY OVERALL RANKINGS HERE -->
-                <div class="loader" id="loaderOverall"></div>
+                <div class="loader-small" id="loaderOverall"></div>
             </div>
         </div>
         <div class="table-wrapper" id="mobile">
@@ -122,7 +122,7 @@ if ($now <= $ratEnd) {
             </div>
             <div class="content-wrapper" id="league">
                 <!--//? AJAX DISPLAY MOBILE LEAGUE HERE  -->
-                <div class="loader" id="loaderLeague"></div>
+                <div class="loader-small" id="loaderLeague"></div>
             </div>
         </div>
         <div class="desktop-table-wrapper">
@@ -137,7 +137,7 @@ if ($now <= $ratEnd) {
                 </div>
                 <div class="content-wrapper" id="Gorogoro">
                     <!--//? AJAX DISPLAY GOROGORO RANKINGS HERE -->
-                    <div class="loader" id="loaderGoro"></div>
+                    <div class="loader-small" id="loaderGoro"></div>
                 </div>
             </div>
             <div class="table-wrapper">
@@ -151,7 +151,7 @@ if ($now <= $ratEnd) {
                 </div>
                 <div class="content-wrapper" id="Futsuu">
                     <!--//? AJAX DISPLAY FUTSUU RANKINGS HERE -->
-                    <div class="loader" id="loaderFutsuu"></div>
+                    <div class="loader-small" id="loaderFutsuu"></div>
                 </div>
             </div>
             <div class="table-wrapper">
@@ -165,7 +165,7 @@ if ($now <= $ratEnd) {
                 </div>
                 <div class="content-wrapper" id="Hayai">
                     <!--//? AJAX DISPLAY HAYAI RANKINGS HERE -->
-                    <div class="loader" id="loaderHayai"></div>
+                    <div class="loader-small" id="loaderHayai"></div>
                 </div>
             </div>
             <div class="table-wrapper">
