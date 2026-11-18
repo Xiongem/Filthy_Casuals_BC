@@ -46,7 +46,7 @@ $stmt = $_SESSION["conn"] -> prepare("UPDATE users
         SET password_hash = ?,
             reset_token_hash = NULL,
             reset_token_expires_at = NULL
-        WHERE id = ?");
+        WHERE user_id = ?");
 $stmt->bind_param("si",
                         $password_hash,
                         $user["user_id"]);
