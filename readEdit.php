@@ -273,7 +273,7 @@ if (isset($read["comment"])) {
         </div>
     </div>
     <script type="text/javascript">
-        window.onload(function() {
+        window.load(function() {
             check();
             checkFanfic();
         });
