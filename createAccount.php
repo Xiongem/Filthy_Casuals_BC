@@ -285,6 +285,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         name="password"
                         id="password"
                         class="inputs"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, 
+                        and at least 8 or more characters"
                         maxlength="20"
                         required>
                 </div>
