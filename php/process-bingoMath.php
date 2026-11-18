@@ -332,7 +332,7 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
                             $newBingoName,
                             $dateFinished,
                             $month,
-                            $new_total,
+                            $bingo_total,
                             $bingo);
 
     if ($stmt2->execute() && $stmt2->affected_rows > 0) {
