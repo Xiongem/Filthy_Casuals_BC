@@ -42,7 +42,7 @@
                 data: {email:email},
                 success:function(result) {
                     if (result == 1) {
-                        header("Location: /php/sendPasswordReset.php");
+                        window.location.href = "php/sendPasswordReset.php";
                     } else {
                         $("#error").html('email not found');
                     }
