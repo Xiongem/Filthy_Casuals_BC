@@ -30,7 +30,7 @@ $bingoSize = $_POST["bingoSize"];
                 $bingoID = $squares[$i];
 
                 //? GET POINTS FOR EACH SQUARE FROM DB AND LOOP THROUGH TO ASSIGN THEM TO VARIABLES
-                $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
+                $sql2 = "SELECT `totalPoints` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
                         $bingo_points[$i + 1] = $bingo['totalPoints'];
@@ -73,7 +73,7 @@ $bingoSize = $_POST["bingoSize"];
                 $bingoID = $squares[$i];
 
                 //? GET POINTS FOR EACH SQUARE FROM DB AND LOOP THROUGH TO ASSIGN THEM TO VARIABLES
-                $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
+                $sql2 = "SELECT `totalPoints` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
                         $bingo_points[$i + 1] = $bingo['totalPoints'];
@@ -119,7 +119,7 @@ $bingoSize = $_POST["bingoSize"];
                 $bingoID = $squares[$i];
 
                 //? GET POINTS FOR EACH SQUARE FROM DB AND LOOP THROUGH TO ASSIGN THEM TO VARIABLES
-                $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
+                $sql2 = "SELECT `totalPoints` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
                         $bingo_points[$i + 1] = $bingo['totalPoints'];
@@ -168,7 +168,7 @@ $bingoSize = $_POST["bingoSize"];
                 $bingoID = $squares[$i];
 
                 //? GET POINTS FOR EACH SQUARE FROM DB AND LOOP THROUGH TO ASSIGN THEM TO VARIABLES
-                $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
+                $sql2 = "SELECT `totalPoints` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
                         $bingo_points[$i + 1] = $bingo['totalPoints'];
@@ -220,7 +220,7 @@ $bingoSize = $_POST["bingoSize"];
                 $bingoID = $squares[$i];
 
                 //? GET POINTS FOR EACH SQUARE FROM DB AND LOOP THROUGH TO ASSIGN THEM TO VARIABLES
-                $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
+                $sql2 = "SELECT `totalPoints` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
                         $bingo_points[$i + 1] = $bingo['totalPoints'];
@@ -275,7 +275,7 @@ $bingoSize = $_POST["bingoSize"];
                 $bingoID = $squares[$i];
 
                 //? GET POINTS FOR EACH SQUARE FROM DB AND LOOP THROUGH TO ASSIGN THEM TO VARIABLES
-                $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
+                $sql2 = "SELECT `totalPoints` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
                         $bingo_points[$i + 1] = $bingo['totalPoints'];
@@ -333,7 +333,7 @@ $bingoSize = $_POST["bingoSize"];
                 $bingoID = $squares[$i];
 
                 //? GET POINTS FOR EACH SQUARE FROM DB AND LOOP THROUGH TO ASSIGN THEM TO VARIABLES
-                $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
+                $sql2 = "SELECT `totalPoints` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
                         $bingo_points[$i + 1] = $bingo['totalPoints'];
