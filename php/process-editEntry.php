@@ -81,7 +81,8 @@ $newTotal = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
 //if user added tags, take tags from array and insert them into a string separated by ,
 if (isset($_POST["tag"])) {
     $tags = $_POST["tag"];
-    $insert_tags = implode(",", $tags);
+    $tags = str_replace("'", '', $tags); //replaces ' with nothing
+    $insert_tags = implode(",", $tags); //separates tags in post array and inserts , between them
 } else {
     $insert_tags = NULL;
 }
