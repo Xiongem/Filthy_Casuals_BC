@@ -320,11 +320,13 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
     $dateFinished = date('Y-m-d');
     $bingo = 1;
 
-    $stmt2 = $_SESSION["conn"]->prepare("INSERT INTO `readHistory` (`title`,
+    $stmt2 = $_SESSION["conn"]->prepare("INSERT INTO `readHistory` (`user_id`,
+                                                                    `title`,
                                                                     `finishedDate`,
                                                                     `totalPoints`,
-                                                                    `bingo`) VALUES (?, ?, ?, ?)");
-    $stmt2->bind_param("ssii",
+                                                                    `bingo`) VALUES (?, ?, ?, ?, ?)");
+    $stmt2->bind_param("issii",
+                            $userID,
                             $newBingoName,
                             $dateFinished,
                             $new_total,
