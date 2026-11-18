@@ -34,14 +34,6 @@
     <script>
         function checkEmail() {
             var email = $("#forgetEmail").val();
-            if (email == "") {
-                $("#response").html("");
-            } else {
-                setTimeout(sendCheck, 1000);
-            }
-        }
-        function sendCheck() {
-            var email = $("#forgetEmail").val();
 
             $.ajax ({
                 url: "php/checkEmail.php",
