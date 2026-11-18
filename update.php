@@ -91,8 +91,11 @@ $today = date("Y-m-d");
                             <label for="keyword0" class="labels">Tags: <span id="help"><ion-icon name="help-circle"></ion-icon>
                                 <div class="help-popup" id="helpPop">
                                     <div class="help-content">
-                                        <p>Type into the search field to see already created tags. Type in and press the 
-                                            <ion-icon name="add-circle"></ion-icon> icon to create a new tag</p>
+                                        <p>
+                                            Type into the search field to see already created tags. Type in and press the 
+                                            <ion-icon name="add-circle"></ion-icon> icon to create a new tag. Click the
+                                            tag to delete it.
+                                        </p>
                                     </div>
                                 </div>
                             </span></label>
