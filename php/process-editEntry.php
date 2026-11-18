@@ -74,7 +74,8 @@ if (isset($_POST["tag"])) {
 if (isset($_POST["diffDate"])) {
     $dateFinished = $_POST["dateFinished"];
 } else {
-    $dateFinished = date('Y-m-d');
+    $time = time();
+    $dateFinished = date("Y-m-d H:i", $time);
 }
 
 //assigns boolean value to ongoing variable. 0 = not checked, 1 = checked.
