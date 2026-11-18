@@ -318,17 +318,20 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
     //? ADD NEW ENTRY TO HISTORY DB
     $newBingoName = $bingoName . " Bingo";
     $dateFinished = date('Y-m-d');
+    $month = date("n");
     $bingo = 1;
 
     $stmt2 = $_SESSION["conn"]->prepare("INSERT INTO `readHistory` (`user_id`,
                                                                     `title`,
                                                                     `finishedDate`,
+                                                                    `month`,
                                                                     `totalPoints`,
-                                                                    `bingo`) VALUES (?, ?, ?, ?, ?)");
-    $stmt2->bind_param("issii",
+                                                                    `bingo`) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt2->bind_param("isssii",
                             $userID,
                             $newBingoName,
                             $dateFinished,
+                            $month,
                             $new_total,
                             $bingo);
 

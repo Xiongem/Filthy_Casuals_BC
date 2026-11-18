@@ -32,7 +32,7 @@ if ($row > 0) {
         $title = $readHistory['title'];
         $author = $readHistory['author'];
         $finishedDate = $readHistory['finishedDate'];
-        if ($readHistory['startedDate'] == "0000-00-00") {
+        if ($readHistory['startedDate'] == "0000-00-00" || $readHistory['startedDate'] == NULL) {
             $startedDate = '--';
         } else {
             $startedDate = $readHistory['startedDate'];
