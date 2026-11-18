@@ -59,7 +59,9 @@ if (isset($read["comment"])) {
 }
 
 if ($fanfic ==1) {
-    $pages = $words;
+    if ($words) {
+        $pages = $words;
+    }
 }
 ?>
 <!DOCTYPE html>
