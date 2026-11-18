@@ -19,17 +19,33 @@
     <div class="reset-wrapper">
         <div class="reset-content">
             <h3>Enter the email address associated with your account to receive an email to reset your password.</h3>
-            <form id="reset-password" method="post" action="php/sendPasswordReset.php">
-                <div class="input-wrapper spacing">
-                    <label for="email">Email:</label>
-                    <input class="reset-input inputs" type="email" name="email" id="forgetEmail" required>
-                </div>
-                <div class="button-wrapper">
-                    <button type="submit" id="submitButton" class="buttons">Send</button>
-                </div>
-            </form>
+            <div class="input-wrapper spacing">
+                <label for="email">Email:</label>
+                <input class="reset-input inputs" type="email" name="email" id="forgetEmail" required onkeyup="clearError()">
+            </div>
+            <div id="error" class="error"></div>
+            <div class="button-wrapper">
+                <div id="submitButton" class="buttons" onclick="checkEmail()">Send</div>
+            </div>
         </div>
     </div>
+    <script>
+        function clearError() {
+            $("#error").html("");
+        }
+        function checkEmail() {
+            var email = $("#forgetEmail").val();
+
+            $.ajax ({
+                url: "php/checkEmail.php",
+                method: "post",
+                data: {email:email},
+                success:function(result) {
+                    $("#error").html(result);
+                }
+            })
+        }
+    </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>
