@@ -274,9 +274,10 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                     </div>
                     <div class="notch-wrapper" id="notchWrapper">
                         <?php if (isset($readHistory['tags'])) { ?>
-                            <?php foreach ($tags as $key => $value) { ?>
+                            <?php foreach ($tags as $key => $value) { 
+                                $newTag = str_replace('_', ' ', $value);//removes underscore from visible part of tag?>
                                 <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>">
-                                    <p class='tag-content' id='tagContent'><?= htmlspecialchars($value) ?></p>
+                                    <p class='tag-content' id='tagContent'><?= htmlspecialchars($newTag) ?></p>
                                 </div>
                             <?php } ?>
                         <?php } ?>
