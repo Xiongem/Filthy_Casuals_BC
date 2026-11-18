@@ -22,7 +22,8 @@
             <form id="reset-password" method="post" action="php/sendPasswordReset.php">
                 <div class="input-wrapper spacing">
                     <label for="email">Email:</label>
-                    <input class="reset-input inputs" type="email" name="email" id="forgetEmail" required>
+                    <input class="reset-input inputs" type="email" name="email" id="forgetEmail" required
+                        onkeydown="if(event.keyCode === 13) {return false;}">
                 </div>
                 <div id="response" class="spacing"></div>
             </form>
