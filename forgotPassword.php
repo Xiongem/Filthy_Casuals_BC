@@ -33,7 +33,12 @@
     </div>
     <script>
         function checkEmail() {
-            setTimeout(sendCheck, 1000);
+            var email = $("#forgetEmail").val();
+            if (email == "") {
+                $("#response").html("");
+            } else {
+                setTimeout(sendCheck, 1000);
+            }
         }
         function sendCheck() {
             var email = $("#forgetEmail").val();
