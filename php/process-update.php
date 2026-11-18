@@ -70,10 +70,8 @@ if (isset($_POST["tag"])) {
 if (isset($_POST["diffDate"])) {
     $dateFinished = $_POST["dateFinished"];
 } else {
-    $timeToAddToDate = time();
-    $now = date("Y-m-d"); 
-    $resultTimestamp = strtotime($now . " ". $timeToAddToDate);
-    $dateFinished = date("Y-m-d H:i", $resultTimestamp);
+    $time = time();
+    $dateFinished = date("Y-m-d H:i", $time);
 }
 
 if (isset($_POST["ongoing"])) {
