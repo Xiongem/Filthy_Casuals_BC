@@ -17,7 +17,7 @@ $stmt = $_SESSION["conn"]->prepare("SELECT `email` FROM `users` WHERE `email` = 
     $stmt->execute();
     $result = $stmt->get_result();
     if ($result -> num_rows > 0) {
-        echo 1;
+        echo '<p class="success">Email Found</p>';
     } else {
-        echo 0;
+        echo '<p class="error">Email Not Found</p>';
     }

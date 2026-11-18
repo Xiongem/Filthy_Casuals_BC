@@ -19,21 +19,23 @@
     <div class="reset-wrapper">
         <div class="reset-content">
             <h3>Enter the email address associated with your account to receive an email to reset your password.</h3>
-            <div class="input-wrapper spacing">
-                <label for="email">Email:</label>
-                <input class="reset-input inputs" type="email" name="email" id="forgetEmail" required onkeyup="clearError()">
-            </div>
-            <div id="error" class="error spacing"></div>
-            <div class="button-wrapper">
-                <div id="submitButton" class="buttons" onclick="checkEmail()">Send</div>
-            </div>
+            <form id="reset-password" method="post" action="php/sendPasswordReset.php">
+                <div class="input-wrapper spacing">
+                    <label for="email">Email:</label>
+                    <input class="reset-input inputs" type="email" name="email" id="forgetEmail" onkeydown="checkEmail()" required>
+                </div>
+                <div id="response" class="spacing"></div>
+                <div class="button-wrapper">
+                    <button type="submit" id="submitButton" class="buttons">Send</button>
+                </div>
+            </form>
         </div>
     </div>
     <script>
-        function clearError() {
-            $("#error").html("");
-        }
         function checkEmail() {
+            setTimeout(sendCheck, 1000);
+        }
+        function sendCheck() {
             var email = $("#forgetEmail").val();
 
             $.ajax ({
@@ -41,11 +43,7 @@
                 method: "post",
                 data: {email:email},
                 success:function(result) {
-                    if (result == 1) {
-                        window.location.href = "php/sendPasswordReset.php";
-                    } else {
-                        $("#error").html('email not found');
-                    }
+                    $("#response").html(result);
                 }
             })
         }
