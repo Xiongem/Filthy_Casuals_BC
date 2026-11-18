@@ -154,7 +154,7 @@ if ($fanfic ==1) {
             <div class="edit-notch-wrapper" id="notchWrapper">
                 <?php if (isset($tags_array)) { 
                     foreach ($tags_array as $key => $tag_name) {
-                        $newTag = str_replace('_', ' ', $tag_nam);//removes underscore from visible part of tag?>
+                        $newTag = str_replace('_', ' ', $tag_name);//removes underscore from visible part of tag?>
                         <div class="notch-arrow" id="<?=$tag_name?>" onclick="removeTag(<?=$tag_name?>)">
                             <p class='tag-content' id='tagContent'><?=$newTag?></p>
                             <input type="hidden" name="tag[<?=$tag_name?>]" id="tag_<?=$tag_name?>" value="<?=$tag_name?>">
