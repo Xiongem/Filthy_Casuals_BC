@@ -26,6 +26,17 @@ $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID
         $mod2 = $read["mod2"];
         $fanfic = $read["fanfic"];
 
+$sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
+$result2 = $_SESSION["conn"]->query($sql2);
+    $bingo2 = $result2->fetch_assoc();
+    if ($bingo2) {
+        $active = $bingo2["active"];
+        $activeName = $bingo2["bingo_name"];
+    } else {
+        $active = 0;
+        $activeName = NULL;
+    }
+
 //set variables for columns that can be NULL in the db
 if (isset($read["startedDate"])) {
     $startedDate = $read["startedDate"];
@@ -208,7 +219,7 @@ if (isset($read["comment"])) {
             <div class="mod-wrapper">
                 <div id="mod1-wrapper" class="mod-content">
                     <label for="mod-1" class="labels">Modifier 1:</label>
-                    <select name="mod-1" id="mod-1" class="inputs">
+                    <select name="mod-1" id="mod-1" class="inputs" onchange="check()">
                         <option value="1" <?php if($read['mod1']==1){ ?>selected="selected"<?php } ?>>Normal</option>
                         <option value="2" <?php if($read['mod1']==2){ ?>selected="selected"<?php } ?>>Manga/Comic</option>
                         <option value="3" <?php if($read['mod1']==3){ ?>selected="selected"<?php } ?>>Challenge</option>
@@ -238,6 +249,17 @@ if (isset($read["comment"])) {
                 </div>
             </div>
 
+            <div class="bingo-wrapper hide" id="bingo">
+                <div class="label-wrapper" id="bingoCheckbox">
+                    <label class="labels">Counts towards bingo?</label>
+                    <input type="checkbox"
+                            name="bingoName"
+                            id="bingo"
+                            class="checkbox" value="<?=$activeName?>"
+                    <?php if($activeName !== NULL){?>checked="checked"<?php } ?>> 
+                </div>
+            </div>
+
             <!--//? COMMENTS -->
             <label for="comment" class="labels">Comment:</label>
             <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)" maxlength="200"><?=$comment?></textarea>
@@ -251,6 +273,25 @@ if (isset($read["comment"])) {
         </div>
     </div>
     <script type="text/javascript">
+        window.onload(function() {
+            check();
+            checkFanfic();
+        });
+
+        function check() {
+            var active = <?=$active?>;
+            if (active == 1) {
+                var mod1 = $("#mod-1").val();
+                var mod2 = $("#mod-2").val();
+
+                if (mod1 == "3" || mod1 == "4" || mod2 == "2") {
+                    $("#bingo").css("display", "flex");                                  
+                }else {
+                    $("#bingo").hide();                    
+                }
+            }
+        }
+
        $("#tags_id0").blur(function() {
             setTimeout(hideSearch, 300)
         });
@@ -278,6 +319,16 @@ if (isset($read["comment"])) {
             }
         }
 
+        function checkFanfic() {
+            if ($('#fanfic').is(':checked')) {
+                $("#showFanficWarn").html("Input WORD COUNT");
+                $("#fanficResult").text("Number of WORDS:");
+            } else {
+                $("#showFanficWarn").html("");
+                $("#fanficResult").text("Number of Pages:");
+                $('#fanficMathResult').text("")
+            }
+        }
         function showFanfic() {
             if ($('#fanfic').is(':checked')) {
                 $("#showFanficWarn").html("Input WORD COUNT");
