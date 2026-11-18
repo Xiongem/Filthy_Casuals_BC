@@ -42,6 +42,7 @@
 
         //on keydown, clear the countdown 
         $input.on('keydown', function () {
+            $("#response").html("");
             clearTimeout(typingTimer);
         });
 
