@@ -16,6 +16,16 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             $user = $result->fetch_assoc();  
                 $yearTotal = $user["pointsYear"];
 
+$sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
+    $result3 = $_SESSION["conn"]->query($sql3);
+    $bingo = $result3->fetch_assoc();
+    if (isset($bingo)) {
+        $bingoActive = $bingo["active"];
+        $bingoName = $bingo["bingo_name"];   
+    } else {
+        $bingoActive = 0;
+    }
+
 $timezone = $_SESSION["timezone"];
 date_default_timezone_set("$timezone");
 
@@ -46,6 +56,7 @@ if (isset($_POST["fanfic"])) {
 $totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
 
 $month = date("n",strtotime($_POST["dateFinished"]));
+$year = date('y');
 
 
 if (isset($_POST["tag"])) {
@@ -73,6 +84,10 @@ if (isset($_POST["fanfic"])) {
     $fanfic = 0;
 }
 
+if ($bingoActive !== 1) {
+    $bingoName = NULL;
+}
+
 
 $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`, 
                                                                 `username`, 
@@ -88,8 +103,10 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                                                                 `tags`, 
                                                                 `comment`, 
                                                                 `month`, 
-                                                                `totalPoints`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt1->bind_param("isssssiiiiissii",
+                                                                `bingo_name`,
+                                                                `totalPoints`,
+                                                                `year`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt1->bind_param("isssssiiiiissisis",
                         $userID,
                         $user["username"],
                         $_POST["title"],
@@ -104,16 +121,18 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                         $insert_tags,
                         $_POST["comment"],
                         $month,
-                        $totalPoints);
+                        $bingoName,
+                        $totalPoints,
+                        $year);
 
-if ($stmt1 -> execute()) {
+if ($stmt1 -> execute() && $stmt1 -> affected_rows > 0) {
     $newPointsYear = $yearTotal + $totalPoints;
 
     $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
         $stmt2->bind_param("ii", 
                             $newPointsYear, 
                             $userID);
-    if ($stmt2->execute()) {
+    if ($stmt2->execute() && $stmt2 -> affected_rows > 0) {
         if ($insert_tags !== NULL) {
             foreach ($tags as $value) {
                 $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
@@ -124,22 +143,6 @@ if ($stmt1 -> execute()) {
 
                 $stmt3->execute();
             }
-        }
-        
-        if (isset($_POST["bingoName"])) {
-            $stmt4 = $_SESSION["conn"] -> prepare("INSERT INTO `bingo` (`user_id`,
-                                                                    `bingo_name`,
-                                                                    `title`,
-                                                                    `author`,
-                                                                    `total_points`)
-                                                    VALUES (?, ?, ?, ?, ?)");
-            $stmt4->bind_param("isssi",
-                                $userID,
-                                $_POST["bingoName"],
-                                $_POST["title"],
-                                $_POST["author"],
-                                $totalPoints);
-            $stmt4->execute();
         }
         // echo ("Entry Total: ".$totalPoints."<br>");
         // echo ("Year Total: ".$yearTotal."<br>");

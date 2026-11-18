@@ -20,6 +20,8 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
     } else {
         $bingoActive = 0;
     }
+
+$year = date('y');
 ?>
 
 <!DOCTYPE html>
@@ -111,11 +113,11 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
             var bingoSelect = [ 
                 {   val : '0', text: 'Choose an option'},
 
-            <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `bingo` WHERE `user_id` = $userID AND `bingo_name` = '$bingoName' AND `used` = 0"); 
+            <?php $stmt7 = $_SESSION["conn"]->query("SELECT * FROM `readHistory` WHERE `user_id` = $userID AND `bingo_name` = '$bingoName' && `year` = $year"); 
                     $bingorow = mysqli_num_rows($stmt7);
                 if ($bingorow > 0) {
                     while ($bingorow = mysqli_fetch_array($stmt7)) {
-                        $bingoID = $bingorow["bingo_id"];
+                        $bingoID = $bingorow["read_ID"];
                         $bingoTitle = $bingorow["title"];
                         $bingoAuthor = $bingorow["author"];
                         $bingoPoints = $bingorow["total_points"];?>
