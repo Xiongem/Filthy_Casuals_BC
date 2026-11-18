@@ -365,11 +365,13 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                     <div class="table-head comment">Comment</div>
                 </div>
                 <div id="result">
-
+                    <!--//? AJAX DISPLAY HISTORY -->
+                    <div class="loader-small" id="loader"></div>
                 </div>
         
                 <script type="text/javascript">
                     $(document).ready(function() {
+                        $("#loader").hide();
                         showHistoryData();
                     });
 
