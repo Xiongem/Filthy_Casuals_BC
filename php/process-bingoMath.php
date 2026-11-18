@@ -318,14 +318,17 @@ if ($stmt1->execute() && $stmt1->affected_rows > 0) {
     //? ADD NEW ENTRY TO HISTORY DB
     $newBingoName = $bingoName . " Bingo";
     $dateFinished = date('Y-m-d');
+    $bingo = 1;
 
     $stmt2 = $_SESSION["conn"]->prepare("INSERT INTO `readHistory` (`title`,
                                                                     `finishedDate`,
-                                                                    `totalPoints`) VALUES (?, ?, ?)");
-    $stmt2->bind_param("ssi",
+                                                                    `totalPoints`,
+                                                                    `bingo`) VALUES (?, ?, ?, ?)");
+    $stmt2->bind_param("ssii",
                             $newBingoName,
                             $dateFinished,
-                            $new_total);
+                            $new_total,
+                            $bingo);
 
     if ($stmt2->execute() && $stmt2->affected_rows > 0) {
         exit('successfully awarded ' . $bingo_total . ' bingo points!');
