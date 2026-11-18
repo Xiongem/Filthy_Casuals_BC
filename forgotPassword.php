@@ -30,16 +30,33 @@
     </div>
     <script>
         function checkEmail() {
+            var typingTimer;                //timer identifier
+            var doneTypingInterval = 500;  //time in ms, 1 seconds for example
+            var $input = $('#forgetEmail');
             var email = $("#forgetEmail").val();
 
-            $.ajax ({
-                url: "php/checkEmail.php",
-                method: "post",
-                data: {email:email},
-                success:function(result) {
-                    $("#response").html(result);
-                }
-            })
+            //on keyup, start the countdown
+            $input.on('keyup', function () {
+                clearTimeout(typingTimer);
+                typingTimer = setTimeout(doneTyping, doneTypingInterval);
+            });
+
+            //on keydown, clear the countdown 
+            $input.on('keydown', function () {
+                clearTimeout(typingTimer);
+            });
+
+            //user is "finished typing," do something
+            function doneTyping () {
+                $.ajax ({
+                    url: "php/checkEmail.php",
+                    method: "post",
+                    data: {email:email},
+                    success:function(result) {
+                        $("#response").html(result);
+                    }
+                })
+            }
         }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
