@@ -47,7 +47,7 @@ if (isset($read["startedDate"])) {
     $startedDate = "";
 }
 
-$dateFinished = date("Y-m-d", $dateFinished);
+$dateFinished = date("Y-m-d", strtotime($dateFinished));
 
 if (isset($read["tags"])) {
     $tags = $read["tags"];
