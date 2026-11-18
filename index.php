@@ -109,6 +109,7 @@ if ($now <= $ratEnd) {
             </div>
             <div class="content-wrapper" id="overall">
                 <!--//? AJAX DISPLAY OVERALL RANKINGS HERE -->
+                <div class="loader" id="loaderOverall"></div>
             </div>
         </div>
         <div class="table-wrapper" id="mobile">
@@ -121,6 +122,7 @@ if ($now <= $ratEnd) {
             </div>
             <div class="content-wrapper" id="league">
                 <!--//? AJAX DISPLAY MOBILE LEAGUE HERE  -->
+                <div class="loader" id="loaderLeague"></div>
             </div>
         </div>
         <div class="desktop-table-wrapper">
@@ -135,6 +137,7 @@ if ($now <= $ratEnd) {
                 </div>
                 <div class="content-wrapper" id="Gorogoro">
                     <!--//? AJAX DISPLAY GOROGORO RANKINGS HERE -->
+                    <div class="loader" id="loaderGoro"></div>
                 </div>
             </div>
             <div class="table-wrapper">
@@ -148,6 +151,7 @@ if ($now <= $ratEnd) {
                 </div>
                 <div class="content-wrapper" id="Futsuu">
                     <!--//? AJAX DISPLAY FUTSUU RANKINGS HERE -->
+                    <div class="loader" id="loaderFutsuu"></div>
                 </div>
             </div>
             <div class="table-wrapper">
@@ -161,6 +165,7 @@ if ($now <= $ratEnd) {
                 </div>
                 <div class="content-wrapper" id="Hayai">
                     <!--//? AJAX DISPLAY HAYAI RANKINGS HERE -->
+                    <div class="loader" id="loaderHayai"></div>
                 </div>
             </div>
             <div class="table-wrapper">
@@ -174,6 +179,7 @@ if ($now <= $ratEnd) {
                 </div>
                 <div class="content-wrapper" id="Yabai">
                    <!--//? AJAX DISPLAY YABAI RANKINGS HERE -->
+                   <div class="loader" id="loaderYabai"></div>
                 </div>
             </div>
         </div>
@@ -193,6 +199,7 @@ if ($now <= $ratEnd) {
         // recall functions to display tables through ajax - set to refresh every 1 minute
         function refreshData() {
             $("#refresh").addClass("rotate-center");
+            $("#loaderOverall").css("display", "block");
             showOverallTable();
             showMobileLeague();
             showGoroTable();
@@ -209,6 +216,7 @@ if ($now <= $ratEnd) {
                 data: {},
                 success:function(result) {
                     $("#overall").html(result);
+                    $("#loaderOverall").hide();
                 }
             })
         }
@@ -222,6 +230,7 @@ if ($now <= $ratEnd) {
                 data: {league:league},
                 success:function(result) {
                     $("#league").html(result);
+                    $("#loaderleague").hide();
                 }
             })
         }
@@ -233,6 +242,7 @@ if ($now <= $ratEnd) {
                 data: {},
                 success:function(result) {
                     $("#Gorogoro").html(result);
+                    $("#loaderGoro").hide();
                 }
             })
         }
@@ -244,6 +254,7 @@ if ($now <= $ratEnd) {
                 data: {},
                 success:function(result) {
                     $("#Futsuu").html(result);
+                    $("#loaderFutsuu").hide();
                 }
             })
         }
@@ -255,6 +266,7 @@ if ($now <= $ratEnd) {
                 data: {},
                 success:function(result) {
                     $("#Hayai").html(result);
+                    $("#loaderHayai").hide();
                 }
             })
         }
@@ -266,6 +278,7 @@ if ($now <= $ratEnd) {
                 data: {},
                 success:function(result) {
                     $("#Yabai").html(result);
+                    $("#loaderYabai").hide();
                     $("#refresh").removeClass("rotate-center");
                 }
             })
