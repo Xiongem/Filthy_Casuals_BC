@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </form>
             <div class="link-wrapper spacing">
                 <a href="onetimePasscode.php">Account Creation</a>
-                <a href="">Forgot Password?</a>
+                <a href="forgotPassword.php">Forgot Password?</a>
             </div>
         </div>
     </div>
