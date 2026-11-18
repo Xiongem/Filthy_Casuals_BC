@@ -120,7 +120,7 @@ $year = date('y');
                         $bingoID = $bingorow["read_ID"];
                         $bingoTitle = $bingorow["title"];
                         $bingoAuthor = $bingorow["author"];
-                        $bingoPoints = $bingorow["total_points"];?>
+                        $bingoPoints = $bingorow["totalPoints"];?>
 
             {   val : '<?=$bingoID?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?> (<?=$bingoPoints?>)'},
             <?php }

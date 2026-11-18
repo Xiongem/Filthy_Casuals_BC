@@ -33,7 +33,7 @@ $bingoSize = $_POST["bingoSize"];
                 $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
-                    $bingo_points[$i + 1] = $bingo['total_points'];
+                        $bingo_points[$i + 1] = $bingo['totalPoints'];
             }
 
             //? MATH
@@ -76,7 +76,7 @@ $bingoSize = $_POST["bingoSize"];
                 $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
-                    $bingo_points[$i + 1] = $bingo['total_points'];
+                        $bingo_points[$i + 1] = $bingo['totalPoints'];
             }
 
             //? MATH
@@ -122,7 +122,7 @@ $bingoSize = $_POST["bingoSize"];
                 $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
-                    $bingo_points[$i + 1] = $bingo['total_points'];
+                        $bingo_points[$i + 1] = $bingo['totalPoints'];
             }
 
             //? MATH
@@ -171,7 +171,7 @@ $bingoSize = $_POST["bingoSize"];
                 $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
-                    $bingo_points[$i + 1] = $bingo['total_points'];
+                        $bingo_points[$i + 1] = $bingo['totalPoints'];
             }
 
             //? MATH
@@ -223,7 +223,7 @@ $bingoSize = $_POST["bingoSize"];
                 $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
-                    $bingo_points[$i + 1] = $bingo['total_points'];
+                        $bingo_points[$i + 1] = $bingo['totalPoints'];
             }
 
             //? MATH
@@ -278,7 +278,7 @@ $bingoSize = $_POST["bingoSize"];
                 $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
-                    $bingo_points[$i + 1] = $bingo['total_points'];
+                        $bingo_points[$i + 1] = $bingo['totalPoints'];
             }
 
             //? MATH
@@ -336,7 +336,7 @@ $bingoSize = $_POST["bingoSize"];
                 $sql2 = "SELECT `total_points` FROM `readHistory` WHERE `read_ID` = $bingoID";
                     $result2 = $_SESSION['conn']->query($sql2);
                     $bingo = $result2->fetch_assoc();
-                    $bingo_points[$i + 1] = $bingo['total_points'];
+                        $bingo_points[$i + 1] = $bingo['totalPoints'];
             }
 
             //? MATH
