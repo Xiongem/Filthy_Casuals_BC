@@ -25,6 +25,7 @@ $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID
         $mod1 = $read["mod1"];
         $mod2 = $read["mod2"];
         $fanfic = $read["fanfic"];
+        $words = $read["words"];
 
 $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
 $result2 = $_SESSION["conn"]->query($sql2);
@@ -55,6 +56,10 @@ if (isset($read["comment"])) {
     $comment = $read["comment"];
 } else {
     $comment = "";
+}
+
+if ($fanfic ==1) {
+    $pages = $words;
 }
 ?>
 <!DOCTYPE html>

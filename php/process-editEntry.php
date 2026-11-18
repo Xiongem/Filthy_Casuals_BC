@@ -24,6 +24,17 @@ $sql = "SELECT `totalPoints` FROM `readHistory` WHERE `user_id` = $userID  AND r
     $read = $result->fetch_assoc();
         $oldTotal = $read["totalPoints"];
 
+$sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
+$result2 = $_SESSION["conn"]->query($sql2);
+    $bingo2 = $result2->fetch_assoc();
+    if ($bingo2) {
+        $active = $bingo2["active"];
+        $activeName = $bingo2["bingo_name"];
+    } else {
+        $active = 0;
+        $activeName = NULL;
+    }
+
 //assigns timezone to varible depending on if the timezone session token is set or not
 if (isset($_SESSION["timezone"])) {
     $timezone = $_SESSION["timezone"];
@@ -36,6 +47,8 @@ date_default_timezone_set("$timezone");
 
 if (isset($_POST["fanfic"])) {
     $pages = $_POST["pages"];
+    $words = $_POST["pages"];
+    $fanfic = 1;
 
     $newGoal = str_replace( ',', '', $pages );
 
@@ -49,13 +62,15 @@ if (isset($_POST["fanfic"])) {
         }
     }
 } else {
-        $pages = $_POST["pages"];
+    $pages = $_POST["pages"];
+    $words = NULL;
+    $fanfic = 0;
 
-        $newGoal = str_replace( ',', '', $pages );
+    $newGoal = str_replace( ',', '', $pages );
 
-        if( is_numeric( $newGoal ) ) {
-            $pages = $newGoal;
-        }
+    if( is_numeric( $newGoal ) ) {
+        $pages = $newGoal;
+    }
 }
 
 //set month variable according to month of the finish date for the entry
@@ -85,10 +100,10 @@ if (isset($_POST["ongoing"])) {
     $ongoing = 0;
 }
 
-if (isset($_POST["fanfic"])) {
-    $fanfic = 1;
+if (isset($_POST["bingoName"])) {
+    $bingoName = $activeName;
 } else {
-    $fanfic = 0;
+    $bingoName = NULL;
 }
 
 //first query
@@ -98,16 +113,19 @@ $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `readHistory`
                                             `finishedDate` = ?, 
                                             `startedDate` = ?, 
                                             `pages` = ?, 
-                                            `ongoing` = ?, 
+                                            `ongoing` = ?,
+                                            `fanfic` = ?,
+                                            `words` = ?, 
                                             `mod1` = ?, 
                                             `mod2` = ?,
                                             `tags` = ?, 
                                             `comment` = ?, 
-                                            `month` = ?, 
+                                            `month` = ?,
+                                            `bingo_name` = ?, 
                                             `totalPoints` = ?
                                         WHERE `read_ID` = ? AND `user_id` = ?");
 //binds values to columns
-$stmt1->bind_param("ssssiiiissiiii",
+$stmt1->bind_param("ssssiiiissisiii",
                         $_POST["title"],
                         $_POST["author"],
                         $_POST["dateFinished"],
@@ -119,6 +137,7 @@ $stmt1->bind_param("ssssiiiissiiii",
                         $insert_tags,
                         $_POST["comment"],
                         $month,
+                        $bingoName,
                         $newTotal,
                         $readID,
                         $userID);            

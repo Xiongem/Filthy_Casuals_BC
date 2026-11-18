@@ -32,6 +32,8 @@ date_default_timezone_set("$timezone");
 
 if (isset($_POST["fanfic"])) {
     $pages = $_POST["pages"];
+    $words = $_POST["pages"];
+    $fanfic = 1;
 
     $newGoal = str_replace( ',', '', $pages );
 
@@ -45,13 +47,15 @@ if (isset($_POST["fanfic"])) {
         }
     }
 } else {
-        $pages = $_POST["pages"];
+    $pages = $_POST["pages"];
+    $words = NULL;
+    $fanfic = 0;
 
-        $newGoal = str_replace( ',', '', $pages );
+    $newGoal = str_replace( ',', '', $pages );
 
-        if( is_numeric( $newGoal ) ) {
-            $pages = $newGoal;
-        }
+    if( is_numeric( $newGoal ) ) {
+        $pages = $newGoal;
+    }
 }
 
 $totalPoints = calculateTotalPoints($pages, $_POST["mod-1"], $_POST["mod-2"]);
@@ -80,12 +84,11 @@ if (isset($_POST["ongoing"])) {
     $ongoing = 0;
 }
 
-if (isset($_POST["fanfic"])) {
-    $fanfic = 1;
+if (isset($_POST["bingoName"])) {
+    $bingoName = $activeName;
 } else {
-    $fanfic = 0;
+    $bingoName = NULL;
 }
-
 
 $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`, 
                                                                 `username`, 
@@ -96,6 +99,7 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                                                                 `pages`, 
                                                                 `ongoing`,
                                                                 `fanfic`, 
+                                                                `words`,
                                                                 `mod1`, 
                                                                 `mod2`,
                                                                 `tags`, 
@@ -103,8 +107,8 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                                                                 `month`, 
                                                                 `bingo_name`,
                                                                 `totalPoints`,
-                                                                `year`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt1->bind_param("isssssiiiiissisis",
+                                                                `year`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt1->bind_param("isssssiiiiiissisis",
                         $userID,
                         $user["username"],
                         $_POST["title"],
@@ -114,6 +118,7 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                         $pages,
                         $ongoing,
                         $fanfic,
+                        $words,
                         $_POST["mod-1"],
                         $_POST["mod-2"],
                         $insert_tags,
