@@ -183,8 +183,8 @@ if($row>0) {
         <div class="notch-wrapper" id="notchWrapper">
             <?php if (isset($readHistory['tags'])) { ?>
                 <?php foreach ($tags as $key => $value) { 
-                    $newTag = str_replace('_', ' ', $value);?>
-                    <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>" onclick="removeTag(<?= htmlspecialchars($value) ?>)">
+                    $newTag = str_replace('_', ' ', $value);//removes underscore from visible part of tag?>
+                    <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>">
                         <p class='tag-content' id='tagContent'><?= htmlspecialchars($newTag) ?></p>
                     </div>
                 <?php } ?>
