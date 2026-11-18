@@ -26,7 +26,7 @@ if($row>0) {
         $author = $readHistory['author'];
         $finishedDate = $readHistory['finishedDate'];
         if ($readHistory['startedDate'] == "0000-00-00" || $readHistory['startedDate'] == NULL) {
-            $startedDate = '--';
+            $startedDate = '- -';
         } else {
             $startedDate = $readHistory['startedDate'];
         }
