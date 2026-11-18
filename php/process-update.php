@@ -66,7 +66,7 @@ $year = date('y');
 
 if (isset($_POST["tag"])) {
     $tags = $_POST["tag"];
-    $tags = str_replace("'", '', $tags); //replace ' with nothing
+    $tags = str_replace("'", '', $tags); //replaces ' with nothing
     $insert_tags = implode(",", $tags); //separates tags in post array and inserts , between them
 } else {
     $insert_tags = NULL;
