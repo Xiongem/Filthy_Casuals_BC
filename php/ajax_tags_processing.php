@@ -9,6 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
 $string0 = $_POST['keyword0'];
+$string0 = str_replace("'", '', $string0);
 
 // echo "result: " . $string0;
 
