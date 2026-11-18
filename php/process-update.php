@@ -24,6 +24,7 @@ $sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
         $bingoName = $bingo["bingo_name"];   
     } else {
         $bingoActive = 0;
+        $bingoName = NULL;
     }
 
 $timezone = $_SESSION["timezone"];
@@ -82,10 +83,6 @@ if (isset($_POST["fanfic"])) {
     $fanfic = 1;
 } else {
     $fanfic = 0;
-}
-
-if ($bingoActive !== 1) {
-    $bingoName = NULL;
 }
 
 
