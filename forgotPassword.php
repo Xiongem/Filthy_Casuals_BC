@@ -22,7 +22,7 @@
             <form id="reset-password" method="post" action="php/sendPasswordReset.php">
                 <div class="input-wrapper spacing">
                     <label for="email">Email:</label>
-                    <input class="reset-input inputs" type="email" name="email" id="forgetEmail" onkeydown="checkEmail()" required>
+                    <input class="reset-input inputs" type="email" name="email" id="forgetEmail" onkeyup="checkEmail()" required>
                 </div>
                 <div id="response" class="spacing"></div>
                 <div class="button-wrapper">
