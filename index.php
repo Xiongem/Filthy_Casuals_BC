@@ -179,7 +179,7 @@ if ($now <= $ratEnd) {
                 </div>
                 <div class="content-wrapper" id="Yabai">
                    <!--//? AJAX DISPLAY YABAI RANKINGS HERE -->
-                   <div class="loader" id="loaderYabai"></div>
+                   <div class="loader-small" id="loaderYabai"></div>
                 </div>
             </div>
         </div>
