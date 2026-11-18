@@ -35,7 +35,7 @@ if (isset($_POST["fanfic"])) {
     $words = $_POST["pages"];
     $fanfic = 1;
 
-    $newGoal = str_replace( ',', '', $pages );
+    $newGoal = str_replace( ',', '', $pages );//removes , from numbers
 
     if( is_numeric( $newGoal ) ) {
         $pages = $newGoal;
@@ -66,7 +66,8 @@ $year = date('y');
 
 if (isset($_POST["tag"])) {
     $tags = $_POST["tag"];
-    $insert_tags = implode(",", $tags);
+    $tags = str_replace("'", '', $tags); //replace ' with nothing
+    $insert_tags = implode(",", $tags); //separates tags in post array and inserts , between them
 } else {
     $insert_tags = NULL;
 }
