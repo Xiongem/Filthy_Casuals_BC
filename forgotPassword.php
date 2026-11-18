@@ -23,7 +23,7 @@
                 <label for="email">Email:</label>
                 <input class="reset-input inputs" type="email" name="email" id="forgetEmail" required onkeyup="clearError()">
             </div>
-            <div id="error" class="error"></div>
+            <div id="error" class="error spacing"></div>
             <div class="button-wrapper">
                 <div id="submitButton" class="buttons" onclick="checkEmail()">Send</div>
             </div>
