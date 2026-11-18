@@ -47,10 +47,10 @@ $bingoSize = $_POST["bingoSize"];
             }
 
             //? MATH
-            $sub_total1 = $bingo_points[1] * 1.10;
-            $sub_total2 = $bingo_points[2] * 1.10;
-            $sub_total3 = $bingo_points[3] * 1.10;
-            $sub_total4 = $bingo_points[4] * 1.10;
+            $sub_total1 = $bingo_points[1] * 0.10;
+            $sub_total2 = $bingo_points[2] * 0.10;
+            $sub_total3 = $bingo_points[3] * 0.10;
+            $sub_total4 = $bingo_points[4] * 0.10;
 
             $bingo_total = round($sub_total1 
                                 + $sub_total2 
@@ -78,11 +78,11 @@ $bingoSize = $_POST["bingoSize"];
             }
 
             //? MATH
-            $sub_total1 = $bingo_points[1] * 1.10;
-            $sub_total2 = $bingo_points[2] * 1.10;
-            $sub_total3 = $bingo_points[3] * 1.10;
-            $sub_total4 = $bingo_points[4] * 1.10;
-            $sub_total5 = $bingo_points[5] * 1.10;
+            $sub_total1 = $bingo_points[1] * 0.10;
+            $sub_total2 = $bingo_points[2] * 0.10;
+            $sub_total3 = $bingo_points[3] * 0.10;
+            $sub_total4 = $bingo_points[4] * 0.10;
+            $sub_total5 = $bingo_points[5] * 0.10;
 
             $bingo_total = round($sub_total1 
                                     + $sub_total2 
@@ -112,12 +112,12 @@ $bingoSize = $_POST["bingoSize"];
             }
 
             //? MATH
-            $sub_total1 = $bingo_points[1] * 1.10;
-            $sub_total2 = $bingo_points[2] * 1.10;
-            $sub_total3 = $bingo_points[3] * 1.10;
-            $sub_total4 = $bingo_points[4] * 1.10;
-            $sub_total5 = $bingo_points[5] * 1.10;
-            $sub_total6 = $bingo_points[6] * 1.10;
+            $sub_total1 = $bingo_points[1] * 0.10;
+            $sub_total2 = $bingo_points[2] * 0.10;
+            $sub_total3 = $bingo_points[3] * 0.10;
+            $sub_total4 = $bingo_points[4] * 0.10;
+            $sub_total5 = $bingo_points[5] * 0.10;
+            $sub_total6 = $bingo_points[6] * 0.10;
 
             $bingo_total = round($sub_total1 
                                     + $sub_total2 
@@ -149,13 +149,13 @@ $bingoSize = $_POST["bingoSize"];
             }
 
             //? MATH
-            $sub_total1 = $bingo_points[1] * 1.10;
-            $sub_total2 = $bingo_points[2] * 1.10;
-            $sub_total3 = $bingo_points[3] * 1.10;
-            $sub_total4 = $bingo_points[4] * 1.10;
-            $sub_total5 = $bingo_points[5] * 1.10;
-            $sub_total6 = $bingo_points[6] * 1.10;
-            $sub_total7 = $bingo_points[7] * 1.10;
+            $sub_total1 = $bingo_points[1] * 0.10;
+            $sub_total2 = $bingo_points[2] * 0.10;
+            $sub_total3 = $bingo_points[3] * 0.10;
+            $sub_total4 = $bingo_points[4] * 0.10;
+            $sub_total5 = $bingo_points[5] * 0.10;
+            $sub_total6 = $bingo_points[6] * 0.10;
+            $sub_total7 = $bingo_points[7] * 0.10;
 
             $bingo_total = round($sub_total1 
                                     + $sub_total2 
@@ -189,14 +189,14 @@ $bingoSize = $_POST["bingoSize"];
             }
 
             //? MATH
-            $sub_total1 = $bingo_points[1] * 1.10;
-            $sub_total2 = $bingo_points[2] * 1.10;
-            $sub_total3 = $bingo_points[3] * 1.10;
-            $sub_total4 = $bingo_points[4] * 1.10;
-            $sub_total5 = $bingo_points[5] * 1.10;
-            $sub_total6 = $bingo_points[6] * 1.10;
-            $sub_total7 = $bingo_points[7] * 1.10;
-            $sub_total8 = $bingo_points[8] * 1.10;
+            $sub_total1 = $bingo_points[1] * 0.10;
+            $sub_total2 = $bingo_points[2] * 0.10;
+            $sub_total3 = $bingo_points[3] * 0.10;
+            $sub_total4 = $bingo_points[4] * 0.10;
+            $sub_total5 = $bingo_points[5] * 0.10;
+            $sub_total6 = $bingo_points[6] * 0.10;
+            $sub_total7 = $bingo_points[7] * 0.10;
+            $sub_total8 = $bingo_points[8] * 0.10;
 
             $bingo_total = round($sub_total1 
                                     + $sub_total2 
@@ -232,15 +232,15 @@ $bingoSize = $_POST["bingoSize"];
             }
 
             //? MATH
-            $sub_total1 = $bingo_points[1] * 1.10;
-            $sub_total2 = $bingo_points[2] * 1.10;
-            $sub_total3 = $bingo_points[3] * 1.10;
-            $sub_total4 = $bingo_points[4] * 1.10;
-            $sub_total5 = $bingo_points[5] * 1.10;
-            $sub_total6 = $bingo_points[6] * 1.10;
-            $sub_total7 = $bingo_points[7] * 1.10;
-            $sub_total8 = $bingo_points[8] * 1.10;
-            $sub_total9 = $bingo_points[9] * 1.10;
+            $sub_total1 = $bingo_points[1] * 0.10;
+            $sub_total2 = $bingo_points[2] * 0.10;
+            $sub_total3 = $bingo_points[3] * 0.10;
+            $sub_total4 = $bingo_points[4] * 0.10;
+            $sub_total5 = $bingo_points[5] * 0.10;
+            $sub_total6 = $bingo_points[6] * 0.10;
+            $sub_total7 = $bingo_points[7] * 0.10;
+            $sub_total8 = $bingo_points[8] * 0.10;
+            $sub_total9 = $bingo_points[9] * 0.10;
 
             $bingo_total = round($sub_total1 
                                     + $sub_total2 
@@ -278,16 +278,16 @@ $bingoSize = $_POST["bingoSize"];
             }
 
             //? MATH
-            $sub_total1 = $bingo_points[1] * 1.10;
-            $sub_total2 = $bingo_points[2] * 1.10;
-            $sub_total3 = $bingo_points[3] * 1.10;
-            $sub_total4 = $bingo_points[4] * 1.10;
-            $sub_total5 = $bingo_points[5] * 1.10;
-            $sub_total6 = $bingo_points[6] * 1.10;
-            $sub_total7 = $bingo_points[7] * 1.10;
-            $sub_total8 = $bingo_points[8] * 1.10;
-            $sub_total9 = $bingo_points[9] * 1.10;
-            $sub_total10 = $bingo_points[10] * 1.10;
+            $sub_total1 = $bingo_points[1] * 0.10;
+            $sub_total2 = $bingo_points[2] * 0.10;
+            $sub_total3 = $bingo_points[3] * 0.10;
+            $sub_total4 = $bingo_points[4] * 0.10;
+            $sub_total5 = $bingo_points[5] * 0.10;
+            $sub_total6 = $bingo_points[6] * 0.10;
+            $sub_total7 = $bingo_points[7] * 0.10;
+            $sub_total8 = $bingo_points[8] * 0.10;
+            $sub_total9 = $bingo_points[9] * 0.10;
+            $sub_total10 = $bingo_points[10] * 0.10;
 
             $bingo_total = round($sub_total1 
                                     + $sub_total2 
