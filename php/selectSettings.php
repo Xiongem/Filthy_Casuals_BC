@@ -364,7 +364,7 @@ if ($tabName === 'account') { ?>
                 </div>
 
                 <div class="reset-wrapper spacing">
-                    <a href="#">Reset Password</a>
+                    <a href="forgotPassword.php">Reset Password</a>
                 </div>
 
                 <div class="button-wrapper spacing">
