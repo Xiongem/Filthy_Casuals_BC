@@ -125,13 +125,15 @@ $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `readHistory`
                                             `totalPoints` = ?
                                         WHERE `read_ID` = ? AND `user_id` = ?");
 //binds values to columns
-$stmt1->bind_param("ssssiiiissisiii",
+$stmt1->bind_param("ssssiiiiiissisiii",
                         $_POST["title"],
                         $_POST["author"],
                         $_POST["dateFinished"],
                         $_POST["dateStarted"],
                         $pages,
                         $ongoing,
+                        $fanfic,
+                        $words,
                         $_POST["mod-1"],
                         $_POST["mod-2"],
                         $insert_tags,
