@@ -11,6 +11,7 @@ dbConnect();
 $newTag = $_POST['tag'];
 $tagName = $_POST['tag'];
 
+$newTag = str_replace("'", '', $newTag);
 $newTag = preg_replace('/\s+/', '_', $newTag);
 
     $htmlContent = <<<HTML
