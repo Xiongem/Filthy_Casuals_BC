@@ -273,10 +273,10 @@ if (isset($read["comment"])) {
         </div>
     </div>
     <script type="text/javascript">
-        document.load(function() {
+        $(document).ready(function() {
             check();
             checkFanfic();
-        });
+        })
 
         function check() {
             var active = <?=$active?>;
