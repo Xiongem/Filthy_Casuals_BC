@@ -39,9 +39,9 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="reset-pass-wrapper">
-        <div class="reset-pass-content">
-            <form method="post" action="php/process-resetPassword.php">
+    <div class="reset-wrapper">
+        <div class="reset-content">
+            <form id="signup" method="post" action="php/process-resetPassword.php">
                 <input type="hidden" name="token" value="<?=htmlspecialchars($token)?>">
                 <div class="check-wrapper spacing">
                     <label class="labels">Password:</label>

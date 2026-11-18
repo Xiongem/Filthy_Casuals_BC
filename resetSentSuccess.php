@@ -16,11 +16,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="success-wrapper">
-        <div class="success-container">
-            <h1>Hazzah!</h1>
+    <div class="reset-wrapper">
+        <div class="reset-content">
+            <h1 class="spacing">Hazzah!</h1>
             <h2>Your request went through successfully! Check your inbox for further instructions</h2>
-            <a href="login.php">Return to the login page</a>
+            <a href="login.php" class="spacing">
+                <div class="buttons">Return to Login</div>
+            </a>
         </div>
     </div>
 </body>

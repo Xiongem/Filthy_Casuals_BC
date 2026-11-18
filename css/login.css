@@ -178,6 +178,19 @@
         padding: 0.5em;
         text-decoration: none;
     }
+
+
+    .reset-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .reset-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
 }
 
 /** ####################### *//** ####################### *//** ####################### */
@@ -185,7 +198,7 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 601px) {
-    .wrapper-content, .login-content {
+    .wrapper-content, .login-content, .reset-content {
         width: 60%;
     }
     .inputs {
@@ -205,7 +218,7 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1024px) {
-    .wrapper-content, .login-content {
+    .wrapper-content, .login-content, .reset-content {
         width: 40%;
     }
     .title-wrapper {
