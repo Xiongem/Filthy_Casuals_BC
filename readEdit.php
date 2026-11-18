@@ -27,8 +27,6 @@ $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID
         $fanfic = $read["fanfic"];
         $words = $read["words"];
 
-        echo $dateFinished;
-
 $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
 $result2 = $_SESSION["conn"]->query($sql2);
     $bingo2 = $result2->fetch_assoc();
