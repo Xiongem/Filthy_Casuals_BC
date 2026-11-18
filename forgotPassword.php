@@ -34,7 +34,6 @@
             var typingTimer;                //timer identifier
             var doneTypingInterval = 500;  //time in ms, 1 seconds for example
             var $input = $('#forgetEmail');
-            var email = $("#forgetEmail").val();
 
             //on keyup, start the countdown
             $input.on('keyup', function () {
@@ -49,6 +48,8 @@
 
             //user is "finished typing," do something
             function doneTyping () {
+                var email = $("#forgetEmail").val();
+                
                 $.ajax ({
                     url: "php/checkEmail.php",
                     method: "post",
