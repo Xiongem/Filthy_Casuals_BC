@@ -41,7 +41,11 @@
                 method: "post",
                 data: {email:email},
                 success:function(result) {
-                    $("#error").html(result);
+                    if (result == 1) {
+                        header("Location: /php/sendPasswordReset.php");
+                    } else {
+                        $("#error").html('email not found');
+                    }
                 }
             })
         }

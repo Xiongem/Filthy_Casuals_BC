@@ -17,7 +17,7 @@ $stmt = $_SESSION["conn"]->prepare("SELECT `email` FROM `users` WHERE `email` = 
     $stmt->execute();
     $result = $stmt->get_result();
     if ($result -> num_rows > 0) {
-        header("Location: /php/sendPasswordReset.php");
+        echo 1;
     } else {
-        echo "email not found";
+        echo 0;
     }
