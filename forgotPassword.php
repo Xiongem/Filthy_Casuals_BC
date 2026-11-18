@@ -24,9 +24,7 @@
                     <label for="email">Email:</label>
                     <input class="reset-input inputs" type="email" name="email" id="forgetEmail" onkeyup="checkEmail()" required>
                 </div>
-                <div id="response" class="spacing"></div>
-                <div class="button-wrapper">
-                    <button type="submit" id="submitButton" class="buttons">Send</button>
+                <div id="response" class="spacing">
                 </div>
             </form>
         </div>

@@ -17,7 +17,10 @@ $stmt = $_SESSION["conn"]->prepare("SELECT `email` FROM `users` WHERE `email` = 
     $stmt->execute();
     $result = $stmt->get_result();
     if ($result -> num_rows > 0) {
-        echo '<p class="success">Email Found</p>';
+        echo '<p class="success">Email Found</p>
+                <div class="button-wrapper">
+                    <button type="submit" id="submitButton" class="buttons">Send</button>
+                </div>';
     } else {
         echo '<p class="error">Email Not Found</p>';
     }
