@@ -15,6 +15,16 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             $user = $result->fetch_assoc();  
                 $total__points = $user["pointsYear"];
 
+$sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
+    $result3 = $_SESSION["conn"]->query($sql3);
+    $bingo = $result3->fetch_assoc();
+    if (isset($bingo)) {
+        $bingoActive = $bingo["active"];
+        $bingoName = $bingo["bingo_name"];   
+    } else {
+        $bingoActive = 0;
+    }
+
 $bingoSize = $_POST["bingoSize"];
 
     //? SWITCH - SET AS USED
@@ -48,18 +58,6 @@ $bingoSize = $_POST["bingoSize"];
                                 + $sub_total4);
 
             $new_total = $bingo_total + $total__points;
-
-            //?SEND NEW POINT TOTAL TO DB
-            $stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
-            $stmt1->bind_param("ii", 
-                                $new_total,
-                                $userID);
-
-            if ($stmt1->execute() && $stmt1->affected_rows > 0) {
-                exit('successfully awarded ' . $bingo_total . ' bingo points!');
-            } else {
-                die('failed to update bingos' . $stmt2 -> error);
-            }
             break;
 
         case '5':
@@ -93,18 +91,6 @@ $bingoSize = $_POST["bingoSize"];
                                     + $sub_total5);
 
             $new_total = $bingo_total + $total__points;
-
-            //?SEND NEW POINT TOTAL TO DB
-            $stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
-            $stmt1->bind_param("ii", 
-                                $new_total,
-                                $userID);
-
-            if ($stmt1->execute() && $stmt1->affected_rows > 0) {
-                exit('successfully awarded ' . $bingo_total . ' bingo points!');
-            } else {
-                die('failed to update bingos' . $stmt2 -> error);
-            }
             break;
 
         case '6':
@@ -141,18 +127,6 @@ $bingoSize = $_POST["bingoSize"];
                                     + $sub_total6);
 
             $new_total = $bingo_total + $total__points;
-
-            //?SEND NEW POINT TOTAL TO DB
-            $stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
-            $stmt1->bind_param("ii", 
-                                $new_total,
-                                $userID);
-
-            if ($stmt1->execute() && $stmt1->affected_rows > 0) {
-                exit('successfully awarded ' . $bingo_total . ' bingo points!');
-            } else {
-                die('failed to update bingos' . $stmt2 -> error);
-            }
             break;
 
         case '7':
@@ -192,18 +166,6 @@ $bingoSize = $_POST["bingoSize"];
                                     + $sub_total7);
 
             $new_total = $bingo_total + $total__points;
-
-            //?SEND NEW POINT TOTAL TO DB
-            $stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
-            $stmt1->bind_param("ii", 
-                                $new_total,
-                                $userID);
-
-            if ($stmt1->execute() && $stmt1->affected_rows > 0) {
-                exit('successfully awarded ' . $bingo_total . ' bingo points!');
-            } else {
-                die('failed to update bingos' . $stmt2 -> error);
-            }
             break;
 
         case '8':
@@ -246,18 +208,6 @@ $bingoSize = $_POST["bingoSize"];
                                     + $sub_total8);
 
             $new_total = $bingo_total + $total__points;
-
-            //?SEND NEW POINT TOTAL TO DB
-            $stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
-            $stmt1->bind_param("ii", 
-                                $new_total,
-                                $userID);
-
-            if ($stmt1->execute() && $stmt1->affected_rows > 0) {
-                exit('successfully awarded ' . $bingo_total . ' bingo points!');
-            } else {
-                die('failed to update bingos' . $stmt2 -> error);
-            }
             break;
 
         case '9':
@@ -303,18 +253,6 @@ $bingoSize = $_POST["bingoSize"];
                                     + $sub_total9);
 
             $new_total = $bingo_total + $total__points;
-
-            //?SEND NEW POINT TOTAL TO DB
-            $stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
-            $stmt1->bind_param("ii", 
-                                $new_total,
-                                $userID);
-
-            if ($stmt1->execute() && $stmt1->affected_rows > 0) {
-                exit('successfully awarded ' . $bingo_total . ' bingo points!');
-            } else {
-                die('failed to update bingos' . $stmt2 -> error);
-            }
             break;
 
         case '10':
@@ -363,21 +301,39 @@ $bingoSize = $_POST["bingoSize"];
                                     + $sub_total10);
 
             $new_total = $bingo_total + $total__points;
-
-            //?SEND NEW POINT TOTAL TO DB
-            $stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
-            $stmt1->bind_param("ii", 
-                                $new_total,
-                                $userID);
-
-            if ($stmt1->execute() && $stmt1->affected_rows > 0) {
-                exit('successfully awarded ' . $bingo_total . ' bingo points!');
-            } else {
-                die('failed to update bingos' . $stmt2 -> error);
-            }
             break;
         
         default:
             # code...
             break;
     }
+
+//? SEND NEW POINT TOTAL TO DB
+$stmt1 = $_SESSION["conn"]->prepare("UPDATE `users` SET `pointsYear` = ? WHERE `user_id` = ?");
+$stmt1->bind_param("ii", 
+                    $new_total,
+                    $userID);
+
+if ($stmt1->execute() && $stmt1->affected_rows > 0) {
+    //? ADD NEW ENTRY TO HISTORY DB
+    $newBingoName = $bingoName . " Bingo";
+    $dateFinished = date('Y-m-d');
+
+    $stmt2 = $_SESSION["conn"]->prepare("INSERT INTO `readHistory` (`title`,
+                                                                    `finishedDate`,
+                                                                    `totalPoints`) VALUES (?, ?, ?)");
+    $stmt2->bind_param("ssi",
+                            $newBingoName,
+                            $dateFinished,
+                            $new_total);
+
+    if ($stmt2->execute() && $stmt2->affected_rows > 0) {
+        exit('successfully awarded ' . $bingo_total . ' bingo points!');
+    } else {
+        die('failed to update bingos' . $stmt2 -> error);
+    }
+} else {
+    die('failed to update bingos' . $stmt1 -> error);
+}
+    
+ 
