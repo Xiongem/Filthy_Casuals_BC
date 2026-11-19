@@ -9,7 +9,7 @@
     }
 /** UNIVERSAL*/
 body {
-    background-color: var(--sepia-e37);
+    background-color: var(--grey);
 }
 h1, h2, h3, h4, h5, h6, p, body {
     margin: 0;
