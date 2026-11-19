@@ -181,7 +181,7 @@ $sql3 = "SELECT * FROM `challenges`";
                         ?>
                     <div class="admin-row">
                         <img class="adminPfp center" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
-                        <div class="adminName item" id="<?=$adminsID?>"><?=$adminsName?></div>
+                        <div class="adminName" id="<?=$adminsID?>"><?=$adminsName?></div>
                     </div>
                     <?php }} ?>
                 </div>
