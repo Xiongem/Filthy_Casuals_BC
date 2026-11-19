@@ -382,7 +382,12 @@ if ($tabName === 'account') { ?>
                 <p class="spacing">Proceed with caution</p>
             </div>
             <div class="button-wrapper delete-button-wrapper">
-                <button onclick="showDangerZone()" class="delete">Delete My Account</button>
+                <button onclick="showDangerZone()" class="delete">
+                    <span class="shadow"></span>
+                    <span class="edge"></span>
+                    <span class="front text"> Delete My Account
+                    </span>
+                </button>
             </div>
         </div>
     </div>
