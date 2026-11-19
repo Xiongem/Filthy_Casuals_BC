@@ -229,6 +229,7 @@ a {
         color: var(--barium-yellow);
         box-shadow: 0 0.4rem var(--deep-green);
         text-decoration: none;
+        text-align: center;
         cursor: pointer;
     }
 
