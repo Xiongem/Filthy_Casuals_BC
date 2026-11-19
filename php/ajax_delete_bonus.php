@@ -30,7 +30,7 @@ $sql = "SELECT *
 <div class="delete-wrapper">
     <h3 class="spacing">Delete <?=$title?></h3>
     <?php if ($user["author"]) { ?>
-        <h3 class="spacing">From <?=$author?></h3>
+        <h3 class="spacing"><?=$author?></h3>
     <?php } ?>
     <p class="spacing" id="<?=$readID?>"> Worth <?=$totalPoints?>?</p>
 </div>
