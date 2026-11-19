@@ -21,7 +21,7 @@ $sql = "SELECT *
         $actInfo = $act["act_descr"];
 ?>
 
-<div class="title">
+<div class="delete-title">
     <h1>Delete Activity</h1>
 </div>
 <div class="delete-wrapper">
