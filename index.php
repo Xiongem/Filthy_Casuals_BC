@@ -93,7 +93,12 @@ if ($now <= $ratEnd) {
     <?php if($bingoActive == 1) {?>
         <div class="bingo-wrapper">
             <h2><?=$bingoName?> bingo is happening now!</h2>
-            <a class="buttons" href="bingo.php">BINGO!</a>
+            <a class="buttons" href="bingo.php">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"> BINGO!
+                </span>
+            </a>
         </div>
     <?php } ?>
     <div class="full-wrapper">
