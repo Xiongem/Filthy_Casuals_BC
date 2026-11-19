@@ -107,54 +107,54 @@ if (isset($_POST["bingoName"])) {
     $bingoName = NULL;
 }
 
-//first query
-// $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `readHistory` 
-//                                         SET  `title` = ?, 
-//                                             `author` = ?,
-//                                             `finishedDate` = ?, 
-//                                             `startedDate` = ?, 
-//                                             `pages` = ?, 
-//                                             `ongoing` = ?,
-//                                             `fanfic` = ?,
-//                                             `words` = ?, 
-//                                             `mod1` = ?, 
-//                                             `mod2` = ?,
-//                                             `tags` = ?, 
-//                                             `comment` = ?, 
-//                                             `month` = ?,
-//                                             `bingo_name` = ?, 
-//                                             `totalPoints` = ?
-//                                         WHERE `read_ID` = ? AND `user_id` = ?");
-// //binds values to columns
-// $stmt1->bind_param("ssssiiiiiissisiii",
-//                         $_POST["title"],
-//                         $_POST["author"],
-//                         $_POST["dateFinished"],
-//                         $_POST["dateStarted"],
-//                         $pages,
-//                         $ongoing,
-//                         $fanfic,
-//                         $words,
-//                         $_POST["mod-1"],
-//                         $_POST["mod-2"],
-//                         $insert_tags,
-//                         $_POST["comment"],
-//                         $month,
-//                         $bingoName,
-//                         $newTotal,
-//                         $readID,
-//                         $userID);            
-// //executes first statement
-// if ($stmt1 -> execute()) {
+//Updates the entry information in the read history table in DB
+$stmt1 = $_SESSION["conn"] -> prepare("UPDATE `readHistory` 
+                                        SET  `title` = ?, 
+                                            `author` = ?,
+                                            `finishedDate` = ?, 
+                                            `startedDate` = ?, 
+                                            `pages` = ?, 
+                                            `ongoing` = ?,
+                                            `fanfic` = ?,
+                                            `words` = ?, 
+                                            `mod1` = ?, 
+                                            `mod2` = ?,
+                                            `tags` = ?, 
+                                            `comment` = ?, 
+                                            `month` = ?,
+                                            `bingo_name` = ?, 
+                                            `totalPoints` = ?
+                                        WHERE `read_ID` = ? AND `user_id` = ?");
+//binds values to columns
+$stmt1->bind_param("ssssiiiiiissisiii",
+                        $_POST["title"],
+                        $_POST["author"],
+                        $_POST["dateFinished"],
+                        $_POST["dateStarted"],
+                        $pages,
+                        $ongoing,
+                        $fanfic,
+                        $words,
+                        $_POST["mod-1"],
+                        $_POST["mod-2"],
+                        $insert_tags,
+                        $_POST["comment"],
+                        $month,
+                        $bingoName,
+                        $newTotal,
+                        $readID,
+                        $userID);            
+//determines whether the the new points are different from that in the DB and handles accordingly
+if ($stmt1 -> execute()) {
 
     if ($oldTotal == $newTotal) { //if total points has not changed, keep points the same as what's in the database
 
-        $newPointsYear == $yearTotal;
+        $newPointsYear = $yearTotal;
 
-            echo ("old year total: ".$yearTotal."<br>");
-            echo ("old total: ".$oldTotal."<br>");
-            echo ("new total: ".$newTotal."<br>");
-            echo ("New year points: ".$newPointsYear."<br>");
+            // echo ("old year total: ".$yearTotal."<br>");
+            // echo ("old total: ".$oldTotal."<br>");
+            // echo ("new total: ".$newTotal."<br>");
+            // echo ("New year points: ".$newPointsYear."<br>");
 
     } else { //if new points are different from DB, remove old points and add new points
 
@@ -166,44 +166,44 @@ if (isset($_POST["bingoName"])) {
 
         $newPointsYear = $subTotal + $newTotal;
 
-            echo ("old year total: ".$yearTotal."<br>");
-            echo ("old total: ".$oldTotal."<br>");
-            echo ("subtotal: ".$subTotal."<br>");
-            echo ("new total: ".$newTotal."<br>");
-            echo ("New year points: ".$newPointsYear."<br>");
+            // echo ("old year total: ".$yearTotal."<br>");
+            // echo ("old total: ".$oldTotal."<br>");
+            // echo ("subtotal: ".$subTotal."<br>");
+            // echo ("new total: ".$newTotal."<br>");
+            // echo ("New year points: ".$newPointsYear."<br>");
 
     }
 
     
-    //second query
-//     $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` 
-//                                             SET `pointsYear` = ? 
-//                                             WHERE `user_id` = ?");
-//     //bind values to columns
-//     $stmt2->bind_param("ii", 
-//                         $newPointsYear, 
-//                         $userID);
-//     //executes second statement
-//     if ($stmt2->execute()) {
-//         //loops through tags array. Inserts them into tags table if it doesn't already exist. Updates if it does.
-//         if ($insert_tags !== NULL) {
-//             foreach ($tags as $value) {
-//                 $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
-//                     ON DUPLICATE KEY UPDATE `tags` = ?;");
-//                 $stmt3->bind_param("ss", 
-//                                     $value,
-//                                     $value);
+    //updates yearly points in the DB
+    $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` 
+                                            SET `pointsYear` = ? 
+                                            WHERE `user_id` = ?");
+    //bind values to columns
+    $stmt2->bind_param("ii", 
+                        $newPointsYear, 
+                        $userID);
+    //executes second statement
+    if ($stmt2->execute()) {
+        //loops through tags array. Inserts them into tags table if it doesn't already exist. Updates if it does.
+        if ($insert_tags !== NULL) {
+            foreach ($tags as $value) {
+                $stmt3 = $_SESSION["conn"] -> prepare("INSERT INTO `tags` (`tags`) VALUES (?)
+                    ON DUPLICATE KEY UPDATE `tags` = ?;");
+                $stmt3->bind_param("ss", 
+                                    $value,
+                                    $value);
 
-//                 $stmt3->execute();
-//             }
-//         }
-//         //sends user back to history page    
-//         header("Location: /readHistory.php?user_id=$userID");
+                $stmt3->execute();
+            }
+        }
+        //sends user back to history page    
+        header("Location: /readHistory.php?user_id=$userID");
         
-//         exit;
-//     } else {
-//         die("an unexpected error occured");
-//     }
-// } else {
-//     die("an unexpected error occured");
-// }
+        exit;
+    } else {
+        die("an unexpected error occured");
+    }
+} else {
+    die("an unexpected error occured");
+}
