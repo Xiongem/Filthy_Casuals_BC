@@ -1,6 +1,6 @@
 :root,
     :root.option1 { 
-        --marine-green: rgb(99, 107, 63);
+        --marine-green: #636b3f;
         --deep-green: #2b361c;
         --barium-yellow: #fefae3;
         --sepia-e37: #d4a369;
@@ -402,7 +402,8 @@ a {
         padding: 1em;
         margin-bottom: 2em;
 
-        background-color: var(--marine-green);
+        background: var(--marine-green);
+        background: linear-gradient(90deg,rgba(43, 54, 28, 1) 0%, rgba(99, 107, 63, 1) 45%, rgba(99, 107, 63, 1) 100%);
         border-bottom: 2px solid var(--deep-green);
     }
     .logo {
