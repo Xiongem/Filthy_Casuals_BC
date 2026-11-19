@@ -16,15 +16,15 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             $user = $result->fetch_assoc();  
                 $yearTotal = $user["pointsYear"];
 
-$sql3 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
-    $result3 = $_SESSION["conn"]->query($sql3);
-    $bingo = $result3->fetch_assoc();
-    if (isset($bingo)) {
-        $bingoActive = $bingo["active"];
-        $bingoName = $bingo["bingo_name"];   
+$sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
+$result2 = $_SESSION["conn"]->query($sql2);
+    $bingo2 = $result2->fetch_assoc();
+    if ($bingo2) {
+        $active = $bingo2["active"];
+        $activeName = $bingo2["bingo_name"];
     } else {
-        $bingoActive = 0;
-        $bingoName = NULL;
+        $active = 0;
+        $activeName = NULL;
     }
 
 $timezone = $_SESSION["timezone"];
