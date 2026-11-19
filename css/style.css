@@ -271,6 +271,8 @@ a {
   box-shadow: 0 0.5em 1.5em -0.5em var(--deep-green);
   letter-spacing: 0.05em;
   border-radius: 20em;
+  text-decoration: none;
+  text-align: center;
 }
 
 /* .buttons svg {
