@@ -326,9 +326,9 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 1024px) {
-    body {
+    /* body {
         background-color: var(--barium-yellow);
-    }
+    } */
     .settings-container {
         width: 50%;
     }
