@@ -228,7 +228,7 @@
         padding: 1em;
         margin-bottom: 0.5em;
 
-        border-bottom: 2px solid var(--grey);
+        border-bottom: 2px solid var(--deep-green);
     }
     .admin-row:last-child {
         border-bottom: none;
