@@ -32,7 +32,7 @@ $sql = "SELECT *
     <?php if ($user["author"]) { ?>
         <h3 class="spacing"><?=$author?></h3>
     <?php } ?>
-    <p class="spacing" id="<?=$readID?>"> Worth <?=$totalPoints?>?</p>
+    <p class="spacing" id="<?=$readID?>"> Worth <?=$totalPoints?> points?</p>
 </div>
 <div class="button-wrapper">
     <div class="buttons" onclick="deleteBonus(<?=$readID?>, <?=$userID?>)">Delete</div>
