@@ -46,13 +46,13 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
     <script type="text/javascript" src="javascript/ajax_tags.js"> </script>
 </head>
 <body id="body">
-    <div class="popup-wrapper hide" id="editPopup">
+    <div class="popup-wrapper hide" id="deletePopup">
         <div class="popup-container">
             <div class="close-wrapper">
-                <ion-icon name="close" onclick="goBack()"></ion-icon>
+                <ion-icon name="close" onclick="closeDeletePopup()"></ion-icon>
             </div>
             <!--//* AJAX DISPLAYED CONTENT -->
-            <div class="popup-content" id="editResults"></div>
+            <div class="popup-content" id="deleteResults"></div>
         </div>
     </div>
     <header>
@@ -423,6 +423,28 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                                 $("#result").html(result);
                             }
                         });
+                    }
+
+                    function showDeletePopup(readID, userID) {
+                        $("#deletePopup").css("display", "flex");
+                        var deletePopup = document.getElementById("deletePopup");
+                        deletePopup.scrollIntoView();
+                        setTimeout(hideBackground, 500);
+
+                        $.ajax ({
+                            url: "php/ajax_delete_bonus.php",
+                            method: "post",
+                            data: {readID:readID,
+                                userID:userID},
+                            success:function(result) {
+                                $("#deleteResults").html(result)
+                            }
+                        })
+                    }
+                    function closeDeletePopup() {
+                        $("#deletePopup").hide();
+                        $("#body").css({"height": "unset", "overflow": "unset"});
+                        location.reload(true);
                     }
 
                     function showFanfic() {

@@ -9,11 +9,11 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
 $string0 = $_POST['keyword0'];
-$string0 = str_replace("'", '-', $string0);
+// $string0 = str_replace("'", '-', $string0);
 
 // echo "result: " . $string0;
 
-$sql = "SELECT tags FROM tags WHERE tags LIKE '%$string0%' ";
+$sql = "SELECT tags FROM tags WHERE tags LIKE '%'$string0'%' ";
     $result = $_SESSION["conn"]->query($sql);
 
 while ($row = $result -> fetch_assoc()) {
