@@ -99,7 +99,7 @@ if ($now <= $ratEnd) {
     <div class="full-wrapper">
         <div class="table-wrapper">
             
-            <div class="title">
+            <div class="title Overall">
                 <h1>
                     Overall Ranking
                 </h1>
@@ -113,7 +113,7 @@ if ($now <= $ratEnd) {
             </div>
         </div>
         <div class="table-wrapper" id="mobile">
-            <div class="title">
+            <div class="title  <?=$league?>">
                 <h1>
                     <?=$league?> Ranking
                 </h1>
@@ -130,12 +130,12 @@ if ($now <= $ratEnd) {
                 <?php if ($admin == 1) { ?>
                 <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Gorogoro')"></ion-icon>
                 <?php } ?>
-                <div class="title">
+                <div class="title Gorogoro">
                     <h1>
                         Gorogoro Ranking
                     </h1>
                 </div>
-                <div class="content-wrapper" id="Gorogoro">
+                <div class="content-wrapper" id="gorogoro">
                     <!--//? AJAX DISPLAY GOROGORO RANKINGS HERE -->
                     <div class="loader-small" id="loaderGoro"></div>
                 </div>
@@ -144,7 +144,7 @@ if ($now <= $ratEnd) {
                 <?php if ($admin == 1) { ?>
                 <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Futsuu')"></ion-icon>
                 <?php } ?>
-                <div class="title">
+                <div class="title Futsuu">
                     <h1>
                         Futsuu Ranking
                     </h1>
@@ -158,7 +158,7 @@ if ($now <= $ratEnd) {
                 <?php if ($admin == 1) { ?>
                 <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Hayai')"></ion-icon>
                 <?php } ?>
-                <div class="title">
+                <div class="title Hayai">
                     <h1>
                         Hayai Ranking
                     </h1>
@@ -172,7 +172,7 @@ if ($now <= $ratEnd) {
                 <?php if ($admin == 1) { ?>
                 <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Yabai')"></ion-icon>
                 <?php } ?>
-                <div class="title">
+                <div class="title Yabai">
                     <h1>
                         Yabai Ranking
                     </h1>

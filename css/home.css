@@ -5,6 +5,10 @@
         --barium-yellow: #fefae3;
         --sepia-e37: #d4a369;
         --leather: #b17036;
+        --goro: #d9ead3;
+        --futsuu: #9fc5e8;
+        --hayai: #d9d2e9;
+        --yabai: #f4cccc;
     }
 @media only screen and (min-width: 200px) {
     .rat-wrapper{
@@ -63,8 +67,22 @@
         width: 100%;
         padding: 0.5em;
 
-        background-color: var(--grey);
         border-radius: 6px 6px 0 0;
+    }
+    .Overall {
+        background-color: var(--grey);
+    }
+    .Gorogoro {
+        background-color: var(--goro);
+    }
+    .Futsuu {
+        background-color: var(--futsuu);
+    }
+    .Hayai {
+        background-color: var(--hayai);
+    }
+    .Yabai {
+        background-color: var(--yabai);
     }
     .caret {
         margin-left: 0.5em;
