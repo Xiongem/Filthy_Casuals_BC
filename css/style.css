@@ -278,11 +278,11 @@ a {
 } */
 
 .buttons:hover {
-  box-shadow: 0 0.5em 1.5em -0.5em var(--deep-green);
+  box-shadow: 0 0.5em 1em -0.5em var(--deep-green);
 }
 
 .buttons:active {
-  box-shadow: 0 0.3em 1em -0.5em var(--deep-green);
+  box-shadow: 0 0.3em 0.5em -0.5em var(--deep-green);
 }
 
 
