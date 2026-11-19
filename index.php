@@ -135,7 +135,7 @@ if ($now <= $ratEnd) {
                         Gorogoro Ranking
                     </h1>
                 </div>
-                <div class="content-wrapper" id="gorogoro">
+                <div class="content-wrapper" id="Gorogoro">
                     <!--//? AJAX DISPLAY GOROGORO RANKINGS HERE -->
                     <div class="loader-small" id="loaderGoro"></div>
                 </div>
