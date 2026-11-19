@@ -240,6 +240,8 @@
         width: 3em;
         height: 3em;
         border-radius: 50%;
+        border: var(--deep-green) 2px solid;
+        background-color: var(--barium-yellow);
     }
     /* .adminName {
         font-size: 28px;
