@@ -10,6 +10,7 @@ dbConnect();
 
 $newTag = $_POST['tag'];
 $tagName = $_POST['tag'];
+$tagName = str_replace('_', ' ', $tagName);//removes underscore from visible part of tag
 
 $newTag = str_replace("'", '', $newTag);
 $newTag = preg_replace('/\s+/', '_', $newTag);
