@@ -213,7 +213,7 @@ $sql3 = "SELECT * FROM `challenges`";
                     <label class="labels">One-time Passcode:</label>
                     <div class="span-wrapper">
                         <span id="OTP" class="labels"></span>
-                        <div class="copy-wrapper">
+                        <div class="copy-wrapper" id="copyWrapper">
                             <p id="copy">copy</p>
                             <ion-icon class="copy" name="copy-outline"></ion-icon>
                         </div>
@@ -302,8 +302,8 @@ $sql3 = "SELECT * FROM `challenges`";
         event.preventDefault();
             if (event.clipboardData) {
                 event.clipboardData.setData("text/plain", span.textContent);
-                $("#copy").text("copied")
-                console.log(event.clipboardData.getData("text"))
+                $("#copy").text("copied");
+                console.log(event.clipboardData.getData("text"));
             }
         });
 
@@ -323,6 +323,7 @@ $sql3 = "SELECT * FROM `challenges`";
                 data: {oneTimePass: oneTimePass},
                 success:function(response) {
                     $("#OTP").html(response);
+                    $("#copyWrapper").css("display", "flex");
                 }
             })
         }
