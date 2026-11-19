@@ -10,15 +10,15 @@ dbConnect();
 
 $newTag = $_POST['tag'];
 $tagName = $_POST['tag'];
-// $tagName = str_replace('_', ' ', $tagName);//removes underscore from visible part of tag
+$tagName = str_replace('_', ' ', $tagName);//removes underscore from visible part of tag
 
-// $newTag = str_replace("'", '', $newTag);//replaces ' with nothing
-// $newTag = preg_replace('/\s+/', '_', $newTag);//replaces whitespaces with underscores
+$newTag = str_replace("'", '', $newTag);//replaces ' with nothing
+$newTag = preg_replace('/\s+/', '_', $newTag);//replaces whitespaces with underscores
 
     $htmlContent = <<<HTML
-        <div class="notch-arrow" id="$newTag" onclick="removeTag('$tagName')">
+        <div class="notch-arrow" id="$newTag" onclick="removeTag($newTag)">
             <p class='tag-content' id='tagContent'>$tagName</p>
-            <input type="hidden" name="tag['$newTag']" id="'tag_$newTag'" value="'$newTag'">
+            <input type="hidden" name="tag[$newTag]" id="tag_$newTag" value="$newTag">
         </div>
     HTML;
         echo $htmlContent;
