@@ -21,8 +21,9 @@ $sql = "SELECT `rule_info`
         $ruleInfo = $rule["rule_info"];
 ?>
 
-<div class="title">
-<h1>Delete Rule</h1>
+<div class="title spacing">
+    <h1>Delete Rule</h1>
+</div>
 <div class="delete-wrapper">
     <h3>Delete rule number <?=$rank?>:</h3>
     <p id="<?=$ruleID?>"><?=$ruleInfo?></p>
