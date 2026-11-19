@@ -1,6 +1,6 @@
 :root,
     :root.option1 { 
-        --marine-green: #636b3f;
+        --marine-green: rgb(99, 107, 63);
         --deep-green: #2b361c;
         --barium-yellow: #fefae3;
         --sepia-e37: #d4a369;
@@ -220,7 +220,7 @@ a {
   transform: translate(0, 4px);
 } */
 
-    .buttons {
+    /* .buttons {
         background-color: var(--marine-green);
         border: none;
         padding: 1rem;
@@ -249,7 +249,42 @@ a {
     .buttons:disabled {
         cursor: auto;
         color: grey;
-    }
+    } */
+
+    /* From Uiverse.io by adamgiebl */ 
+.buttons {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.5em 0.8em 1.2em;
+  color: var(--barium-yellow);
+  background: var(--leather);
+  background: linear-gradient(
+    0deg,
+    rgba(43, 54, 28, 1) 0%,
+    rgba(99, 107, 63, 1) 100%
+  );
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em var(--deep-green);
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+/* .buttons svg {
+  margin-right: 8px;
+} */
+
+.buttons:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em var(--deep-green);
+}
+
+.buttons:active {
+  box-shadow: 0 0.3em 1em -0.5em var(--deep-green);
+}
+
 
 
     .labels {
