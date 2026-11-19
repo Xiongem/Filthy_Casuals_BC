@@ -259,6 +259,7 @@ a {
   cursor: pointer;
   font-weight: 500;
   font-size: 17px;
+  min-width: 5em;
   padding: 0.8em 1.5em 0.8em 1.2em;
   color: var(--barium-yellow);
   background: var(--leather);
