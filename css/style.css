@@ -202,7 +202,7 @@ a {
     } */
 
 /* From Uiverse.io by PriyanshuGupta28 */ 
-.buttons {
+/* .buttons {
   align-items: center;
   color: #ffffff;
   font-size: 18px;
@@ -217,6 +217,35 @@ a {
 .buttons:active {
   box-shadow: none;
   transform: translate(0, 4px);
+} */
+
+.buttons {
+ background-color: var(--deep-green);
+ border: none;
+ padding: 1rem;
+ font-size: 1rem;
+ width: 10em;
+ border-radius: 1rem;
+ color: var(--barium-yellow);
+ box-shadow: 0 0.4rem #dfd9d9;
+ cursor: pointer;
+}
+
+.buttons:active {
+ color: var(--barium-yellow);
+ box-shadow: 0 0.2rem #dfd9d9;
+ transform: translateY(0.2rem);
+}
+
+.buttons:hover:not(:disabled) {
+ background: var(--marine-green);
+ color: white;
+ text-shadow: 0 0.1rem #bcb4b4;
+}
+
+.buttons:disabled {
+ cursor: auto;
+ color: grey;
 }
 
 
