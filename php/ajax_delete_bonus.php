@@ -24,7 +24,7 @@ $sql = "SELECT *
         
 ?>
 
-<div class="title">
+<div class="delete-title">
     <h1>Delete Bonus Points?</h1>
 </div>
 <div class="delete-wrapper">
