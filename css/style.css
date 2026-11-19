@@ -228,6 +228,7 @@ a {
  border-radius: 1rem;
  color: var(--barium-yellow);
  box-shadow: 0 0.4rem var(--deep-green);
+ text-decoration: none;
  cursor: pointer;
 }
 
