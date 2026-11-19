@@ -151,6 +151,11 @@ if (isset($_POST["bingoName"])) {
 
         $newPointsYear == $yearTotal;
 
+            echo ("old year total: ".$yearTotal."<br>");
+            echo ("old total: ".$oldTotal."<br>");
+            echo ("new total: ".$newTotal."<br>");
+            echo ("New year points: ".$newPointsYear."<br>");
+
     } else { //if new points are different from DB, remove old points and add new points
 
         $subTotal = $yearTotal - $oldTotal;
@@ -161,12 +166,14 @@ if (isset($_POST["bingoName"])) {
 
         $newPointsYear = $subTotal + $newTotal;
 
+            echo ("old year total: ".$yearTotal."<br>");
+            echo ("old total: ".$oldTotal."<br>");
+            echo ("subtotal: ".$subTotal."<br>");
+            echo ("new total: ".$newTotal."<br>");
+            echo ("New year points: ".$newPointsYear."<br>");
+
     }
-    echo ("old year total: ".$yearTotal."<br>");
-    echo ("old total: ".$oldTotal."<br>");
-    echo ("subtotal: ".$subTotal."<br>");
-    echo ("new total: ".$newTotal."<br>");
-    echo ("New year points: ".$newPointsYear."<br>");
+
     
     //second query
 //     $stmt2 = $_SESSION["conn"] -> prepare("UPDATE `users` 
