@@ -42,7 +42,7 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
             <div class="popup-content">
                 <h2>Award Points?</h2>
                 <div class="spacing">
-                    Give <span id="username"></span> 20 points for recommending <span id="rec"></span>?
+                    Give <span id="username"></span> 20 points for recommending <em><span id="rec"></span></em>?
                 </div>
                 <div class="award buttons spacing" onclick="givePoints(<?=$userID?>)">Award!</div>
                 <div id="pointsResults" class="spacing"></div>
