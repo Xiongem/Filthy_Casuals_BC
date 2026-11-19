@@ -44,9 +44,12 @@ $userID = $_SESSION["user_id"];
                 Are you <strong>certain</strong> you want to delete your account?</p>
             </div>
             <div class="button-wrapper-warning">
-                <div class="delete">
-                    <a href="php/process-deleteAccount.php" id="delete">Delete My Account</a>
-                </div>
+                <a class="delete" href="php/process-deleteAccount.php" id="delete">Delete My Account
+                    <span class="shadow"></span>
+                    <span class="edge"></span>
+                    <span class="front text"> Delete My Account
+                    </span>
+                </a>
             </div>
         </div>
     </div>
