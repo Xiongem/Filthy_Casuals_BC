@@ -20,26 +20,33 @@ $sql = "SELECT `totalPoints`
         $totalPoints = $read["totalPoints"];
 
 //gets total points user has earned
-$sql = "SELECT `pointsYear` 
+$sql = "SELECT `pointsYear`, `recPoints` 
             FROM `users` 
             WHERE `user_id` = $userID";
     $result = $_SESSION["conn"]->query($sql);
     $user = $result->fetch_assoc();
         $pointsYear = $user["pointsYear"];
+        $oldRecPoints = $user["recPoints"];
 
 //removes entry points from user points and assigns the new total to a variable
 $newTotal = $pointsYear - $totalPoints;
+$newRecPoints = $oldRecPoints - 20;
 
 if ($newTotal < 0) {
     $newTotal = 0;
 }
+if ($newRecPoints < 0) {
+    $newRecPoints = 0;
+}
 
 //statement 1: sends new point total to database
 $stmt1 = $_SESSION["conn"] -> prepare("UPDATE `users` 
-                                        SET `pointsYear` = ? 
+                                        SET `pointsYear` = ?,
+                                            `recPoints` = ? 
                                         WHERE `user_id` = ?");
-$stmt1->bind_param("ii", 
+$stmt1->bind_param("iii", 
                         $newTotal,
+                        $newRecPoints,
                         $userID);
 
 
