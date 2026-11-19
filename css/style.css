@@ -7,7 +7,7 @@
         --leather: #b17036;
         --grey: #e2dfcd;
         --cool-grey: #a6a6a7;
-    }
+    } 
 /** UNIVERSAL*/
 body {
     background-color: var(--cool-grey);
