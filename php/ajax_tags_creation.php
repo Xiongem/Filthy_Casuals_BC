@@ -11,9 +11,10 @@ dbConnect();
 $newTag = $_POST['tag'];
 $tagName = $_POST['tag'];
 $tagName = str_replace('_', ' ', $tagName);//removes underscore from visible part of tag
+$tagName = str_replace('-', "'", $tagName);//replaces dash with '
 
-$newTag = str_replace("'", '', $newTag);
-$newTag = preg_replace('/\s+/', '_', $newTag);
+$newTag = str_replace("'", '-', $newTag);//replaces ' with dashes
+$newTag = preg_replace('/\s+/', '_', $newTag);//replaces whitespaces with underscores
 
     $htmlContent = <<<HTML
         <div class="notch-arrow" id="$newTag" onclick="removeTag($newTag)">
