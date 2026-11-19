@@ -96,8 +96,7 @@ if ($now <= $ratEnd) {
             <a class="buttons" href="bingo.php">
                 <span class="shadow"></span>
                 <span class="edge"></span>
-                <span class="front text"> BINGO!
-                </span>
+                <span class="front"> Bingo! </span>
             </a>
         </div>
     <?php } ?>
