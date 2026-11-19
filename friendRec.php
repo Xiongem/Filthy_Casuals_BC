@@ -44,18 +44,19 @@ $sql = "SELECT * FROM users WHERE user_id = $userID";
                 <div class="spacing">
                     Give <span id="username"></span> 20 points for recommending <span id="rec"></span>?
                 </div>
-                <div class="award buttons spacing" onclick="givePoints()">Award!</div>
+                <div class="award buttons spacing" onclick="givePoints(<?=$userID?>)">Award!</div>
                 <div id="pointsResults" class="spacing"></div>
             </div>
             <script>
-                function givePoints() {
+                function givePoints(userID) {
                     var username = $("#username").text();
+                    var giverID = userID;
                     $.ajax({
                         url: "php/process-giveRecPoints.php",
                         method: "post",
-                        data: {
-                            username:username
-                        }, success: function(result) {
+                        data: {username:username,
+                                giverID:giverID}, 
+                        success: function(result) {
                             $("#pointsResults").html(result)
                         }
                     })

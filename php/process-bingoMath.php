@@ -317,7 +317,8 @@ $stmt1->bind_param("ii",
 if ($stmt1->execute() && $stmt1->affected_rows > 0) {
     //? ADD NEW ENTRY TO HISTORY DB
     $newBingoName = $bingoName . " Bingo";
-    $dateFinished = date('Y-m-d');
+    $time = time();
+    $dateFinished = date("Y-m-d H:i", $time);
     $month = date("n");
     $bingo = 1;
 
