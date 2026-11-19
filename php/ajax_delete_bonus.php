@@ -25,7 +25,8 @@ $sql = "SELECT *
 ?>
 
 <div class="title">
-<h1>Delete Bonus Points?</h1>
+    <h1>Delete Bonus Points?</h1>
+</div>
 <div class="delete-wrapper">
     <h3 class="spacing">Delete <?=$title?></h3>
     <?php if ($user["author"]) { ?>
