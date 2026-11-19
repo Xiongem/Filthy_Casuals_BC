@@ -268,7 +268,7 @@ a {
     rgba(99, 107, 63, 1) 100%
   );
   border: none;
-  box-shadow: 0 0.7em 1.5em -0.5em var(--deep-green);
+  box-shadow: 0 0.5em 1.5em -0.5em var(--deep-green);
   letter-spacing: 0.05em;
   border-radius: 20em;
 }
@@ -278,11 +278,11 @@ a {
 } */
 
 .buttons:hover {
-  box-shadow: 0 0.5em 1em -0.5em var(--deep-green);
+  box-shadow: 0 0.3em 1.5em -0.5em var(--deep-green);
 }
 
 .buttons:active {
-  box-shadow: 0 0.3em 0.5em -0.5em var(--deep-green);
+  box-shadow: 0 0.1em 1em -0.5em var(--deep-green);
 }
 
 
