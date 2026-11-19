@@ -238,7 +238,7 @@ a {
 }
 
 .buttons:hover:not(:disabled) {
- background: var(--leather);
+ background: var(--marine-green);
  color: white;
  text-shadow: 0 0.1rem var(--deep-green);
 }
