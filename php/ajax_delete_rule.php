@@ -28,7 +28,7 @@ $sql = "SELECT `rule_info`
     <p id="<?=$ruleID?>"><?=$ruleInfo?></p>
 </div>
 <div class="button-wrapper">
-    <div class="buttons" onclick="deleteRule(<?=$ruleID?>)">Delete</div>
+    <div class="buttons spacing" onclick="deleteRule(<?=$ruleID?>)">Delete</div>
 </div>
 
 <script>
