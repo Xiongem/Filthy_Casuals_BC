@@ -405,7 +405,7 @@ a {
         margin-bottom: 2em;
 
         background: var(--marine-green);
-        background: linear-gradient(90deg,rgba(43, 54, 28, 1) 0%, rgba(99, 107, 63, 1) 45%, rgba(99, 107, 63, 1) 100%);
+        background: linear-gradient(90deg,rgba(43, 54, 28, 1) 0%, rgba(99, 107, 63, 1) 50%, rgba(43, 54, 28, 1) 100%);
         border-bottom: 2px solid var(--deep-green);
     }
     .logo {
