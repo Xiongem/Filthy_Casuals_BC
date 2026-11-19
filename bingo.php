@@ -122,7 +122,7 @@ $year = date('y');
                         $bingoAuthor = $bingorow["author"];
                         $bingoPoints = $bingorow["totalPoints"];?>
 
-            {   val : '<?=$bingoID?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?> (<?=$bingoPoints?>)'},
+            {   val : '<?=$bingoID?>', text: '<?=$bingoTitle?> by <?=$bingoAuthor?> (<?=$bingoPoints?> points)'},
             <?php }
             } else { ?>
                 {   val : '0', text: 'No available options found'}
