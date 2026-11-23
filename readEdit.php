@@ -289,6 +289,17 @@ if ($fanfic ==1) {
             checkFanfic();
         })
 
+        $('#tags_id0').on('input', function() {
+            var c = this.selectionStart,
+                r = /[^a-z0-9_ ]/gi,
+                v = $(this).val();
+            if(r.test(v)) {
+                $(this).val(v.replace(r, ''));
+                c--;
+            }
+            this.setSelectionRange(c, c);
+        });
+
         function check() {
             var active = <?=$active?>;
             if (active == 1) {

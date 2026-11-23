@@ -1,14 +1,3 @@
-$('#tags_id0').on('input', function() {
-    var c = this.selectionStart,
-        r = /[^a-z0-9_ ]/gi,
-        v = $(this).val();
-    if(r.test(v)) {
-        $(this).val(v.replace(r, ''));
-        c--;
-    }
-    this.setSelectionRange(c, c);
-});
-
 function autocomplet0() {
     var min_length = 0; // min characters to display the autocomplete
     var keyword0 = document.getElementById('tags_id0').value;
