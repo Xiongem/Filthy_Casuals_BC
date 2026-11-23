@@ -436,8 +436,9 @@
     }
     .user-title-wrapper {
         display: grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 20% 80%;
         align-items: center;
+        justify-content: center;
     }
     /* .title-wrapper {
         display: flex;
@@ -457,7 +458,7 @@
         background-color: var(--barium-yellow);
     } */
     .pfp {
-        align-self: center;
+        /* align-self: center; */
         width: 3em;
         height: 3em;
         object-fit: cover;
