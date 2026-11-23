@@ -9,9 +9,9 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
 dbConnect();
 
 $string0 = $_POST['keyword0'];
-$string0 = str_replace("'", '-', $string0);
 
-// echo "result: " . $string0;
+$string0 = str_replace("'", '', $string0);//replaces ' with nothing
+$string0 = preg_replace('/\s+/', '_', $string0);//replaces whitespaces with underscores
 
 $sql = "SELECT tags FROM tags WHERE tags LIKE '%$string0%' ";
     $result = $_SESSION["conn"]->query($sql);
@@ -19,6 +19,7 @@ $sql = "SELECT tags FROM tags WHERE tags LIKE '%$string0%' ";
 while ($row = $result -> fetch_assoc()) {
     $tags = $row['tags'];
     
+    $tags = str_replace('_', ' ', $tags);//removes underscore from visible part of tag
     
      $htmlContent = <<<HTML
         <a href="#" class="searchResult" onclick="setTag('$tags')">$tags</a>
