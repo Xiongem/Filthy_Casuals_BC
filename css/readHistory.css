@@ -434,6 +434,11 @@
         width: 100%;
         padding-top: 3em;
     }
+    .user-title-wrapper {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+    }
     .title-wrapper {
         display: flex;
         flex-direction: row;
@@ -452,6 +457,7 @@
         background-color: var(--barium-yellow);
     } */
     .pfp {
+        align-self: center;
         width: 3em;
         height: 3em;
         object-fit: cover;
@@ -460,6 +466,9 @@
 
         border: var(--deep-green) 2px solid;
         background-color: var(--barium-yellow);
+    }
+    .username-title {
+        align-self: center;
     }
 }
 /** ####################### *//** ####################### *//** ####################### */

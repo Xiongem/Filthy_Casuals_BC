@@ -60,9 +60,9 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
     </header>
     <div class="history-wrapper" id="historyWrapper">
         <!--//? ADD MONTHLY AND YEARLY PAGE COUNT TOTALS-->
-        <div class="title-wrapper">
+        <div class="user-title-wrapper title-wrapper">
             <img class="pfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
-            <h1><?= $username ?>'s Reading History</h1>
+            <h1 class="username-title"><?= $username ?>'s Reading History</h1>
         </div>
         <div class="total-wrapper">
             <div class="total-content">
