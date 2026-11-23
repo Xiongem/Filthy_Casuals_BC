@@ -173,11 +173,11 @@
         flex-direction: column;
         width: 90%;
     }
-    .buttons {
+    /* .buttons {
         width: fit-content;
         padding: 0.5em;
         text-decoration: none;
-    }
+    } */
 
 
     .reset-wrapper {
