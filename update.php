@@ -246,7 +246,7 @@ $today = date("Y-m-d");
         </div>
 
         <script>
-            $('input').on('input', function() {
+            $('#tags_id0').on('input', function() {
                 var c = this.selectionStart,
                     r = /[^a-z0-9_ ]/gi,
                     v = $(this).val();
