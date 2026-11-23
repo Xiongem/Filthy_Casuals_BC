@@ -439,11 +439,11 @@
         grid-template-columns: 30% 70%;
         align-items: center;
     }
-    .title-wrapper {
+    /* .title-wrapper {
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
+    } */
     /* .profile {
         display: flex;
         justify-content: center;
@@ -476,7 +476,11 @@
 /** ####################### *//** ####################### *//** ####################### */
 
 @media only screen and (min-width: 601px) {
-
+    .user-title-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 /** ####################### *//** ####################### *//** ####################### */
