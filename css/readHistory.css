@@ -458,7 +458,7 @@
         background-color: var(--barium-yellow);
     } */
     .pfp {
-        /* align-self: center; */
+        justify-self: center;
         width: 3em;
         height: 3em;
         object-fit: cover;
