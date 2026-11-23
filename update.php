@@ -246,6 +246,17 @@ $today = date("Y-m-d");
         </div>
 
         <script>
+            $('input').on('input', function() {
+                var c = this.selectionStart,
+                    r = /[^a-z0-9]/gi,
+                    v = $(this).val();
+                if(r.test(v)) {
+                    $(this).val(v.replace(r, ''));
+                    c--;
+                }
+                this.setSelectionRange(c, c);
+            });
+
             $("#tags_id0").blur(function() {
                 setTimeout(hideSearch, 300)
             });
