@@ -160,7 +160,7 @@ a {
     .challenges {
         display: grid;
         grid-template-columns: 20% 80%;
-        grid-template-rows: 20% 80%;
+        /* grid-template-rows: 20% 80%; */
         align-items: center;
         justify-content: center;
         /* column-gap: 0.5em; */
@@ -183,7 +183,7 @@ a {
         border: 1px solid var(--leather);
     }
     .month {
-        grid-row: span 2 / span 2;
+        /* grid-row: span 2 / span 2; */
         display: flex;
         justify-content: end;
         align-items: center;
@@ -197,7 +197,7 @@ a {
         width: 100%;
     }
     .info {
-        grid-column-start: 2;
+        /* grid-column-start: 2; */
         display: flex;
         flex-direction: column;
         height: 100%;
