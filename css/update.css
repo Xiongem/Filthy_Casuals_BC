@@ -70,12 +70,15 @@
         padding: 0.5em;
         white-space: pre;
         white-space: pre-wrap;
-        /* overflow-wrap: break-word;
+        overflow-wrap: break-word;
         word-wrap: break-word;
 
-        word-break: break-word; */
-        word-wrap: normal;
-        overflow-wrap: normal;
+        word-break: break-word;
+        /* word-wrap: normal;
+        overflow-wrap: normal; */
+    }
+    .grid-item a {
+        color: var(--leather);
     }
     .modName {
         color: var(--marine-green);
