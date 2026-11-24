@@ -54,7 +54,7 @@
         top: 0;
         width: 1em;
         height: 1em;
-        margin-top: 0.5em;
+        margin: 0.5em 0 0 0.5em;
         cursor: pointer;
     }
     .help-grid {
