@@ -75,7 +75,7 @@ $sql2 = "SELECT * FROM `challenges`";
                 <div class="row">
                     <div class="month">Jan:</div>
                     <input class="inputs" name="month_jan" id="jan" value="<?=$jan?>">
-                    <textarea class="inputs" name="jan_Descr" id="janDescr" maxlength="400"><?=$janDescr?></textarea>
+                    <textarea class="inputs" name="jan_Descr" id="janDescr" maxlength="400" onkeypress="clickPress(event)"><?=$janDescr?></textarea>
                 </div>
                 <div class="row">
                     <div class="month">Feb:</div>
@@ -140,10 +140,11 @@ $sql2 = "SELECT * FROM `challenges`";
         </div>
     </div>
     <script>
-        function log(text) {
-            var txtArea = $('textarea');
-            txtArea.value += text + '\r\n';
-        }
+        // function clickPress(event) {
+        //     if (event.key == "Enter") {
+        //         $('textarea').
+        //     }
+        // }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
