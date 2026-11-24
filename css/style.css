@@ -298,7 +298,7 @@ a {
     color: #fefae3;
     background-image: linear-gradient(to bottom right, #636b3f, #2b361c);
     border: none;
-    border-radius: 10px;
+    border-radius: 1rem;
     box-shadow: 0px 4px 0px #2b361c;
     transition: all 0.2s ease-in-out;
     font-family: Arial, Helvetica, sans-serif;
