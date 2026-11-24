@@ -120,8 +120,24 @@ $sql2 = "SELECT * FROM `challenges`";
                     <div class="challenges">
                         <div class="month">Jan:</div>
                         <div class="info name"><?=$jan?></div>
-                        <div class="info"><?=$janDescr?></div>
+                        <div class="info" id="janContent"><?=$janDescr?></div>
                     </div>
+                    <script>
+                        $(document).ready(function(){
+
+                            function replace_content(content){
+                                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                                return new_content;
+                            }
+
+                            var content = $('#janContent').html();
+                            $('#janContent').html(replace_content(content));
+
+                        });
+                    </script>
                     <div class="challenges">
                         <div class="month">Feb:</div>
                         <div class="info name"><?=$feb?></div>
