@@ -140,7 +140,10 @@ $sql2 = "SELECT * FROM `challenges`";
         </div>
     </div>
     <script>
-        // $('textarea').html($('textarea').text().replace(/\n\r?/g, '<br />'));
+        function log(text) {
+            var txtArea = $('textarea');
+            txtArea.value += text + '\r\n';
+        }
     </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
