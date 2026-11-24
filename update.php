@@ -63,7 +63,7 @@ $today = date("Y-m-d");
                 <div class="help-grid">
                     <div class="grid-item modName">Normal:</div>
                     <div class="grid-item descript">Regular novels, fanfiction</div>
-                    <div class="grid-item modName">Manga/Comics:</div>
+                    <div class="grid-item modName">Manga/ Comics:</div>
                     <div class="grid-item descript">Things with more picture than words</div>
                     <div class="grid-item modName">Challenge:</div>
                     <div class="grid-item descript">Counts towards the monthly <a href="https://filthycasualsbc.com/challenges.php">challenge</a></div>

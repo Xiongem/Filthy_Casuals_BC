@@ -81,7 +81,7 @@
     }
     .modName {
         color: var(--marine-green);
-        justify-self: center;
+        /* justify-self: center; */
     }
 
     .mod-content {
