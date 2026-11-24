@@ -100,7 +100,15 @@ function calculateTotalPoints($pages, $mod1, $mod2) {
 } 
 
 if ($_POST["fanfic"] == 1) {
-    $pages = $_POST["pages"] / 280;
+    $newGoal = str_replace( ',', '', $_POST["pages"] );//removes , from numbers
+
+    if( is_numeric( $newGoal ) ) {
+        $pages = round($newGoal / 280);
+        
+        if ($pages < 1) {
+            $pages = 1;
+        }
+    }
 } else {
     $pages = $_POST["pages"];
 }
