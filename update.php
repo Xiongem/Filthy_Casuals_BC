@@ -64,13 +64,13 @@ $today = date("Y-m-d");
                 </div>
                 <div class="help-grid">
                     <div class="grid-item modName">Normal:</div>
-                    <div class="grid-item descript">Regular novels, fanfiction</div>
+                    <div class="grid-item descript">Regular novels, fanfiction, poems</div>
                     <div class="grid-item modName">Manga/ Comics:</div>
-                    <div class="grid-item descript">Things with more picture than words</div>
+                    <div class="grid-item descript">Things with more picture than words such as webtoons, comics, graphic novels</div>
                     <div class="grid-item modName">Challenge:</div>
                     <div class="grid-item descript">Counts towards the monthly <a href="https://filthycasualsbc.com/challenges.php">challenge</a></div>
                     <div class="grid-item modName">Buddy Read:</div>
-                    <div class="grid-item descript">Read with someone else in the challenge</div>
+                    <div class="grid-item descript">Read something together with another participant and discussed</div>
                     <div class="grid-item modName">Friend Recommendation:</div>
                     <div class="grid-item descript">Read something recommended in <a href="https://filthycasualsbc.com/friendRec.php">Friend Recs</a></div>
                     <div class="grid-item modName">Seasonal:</div>
