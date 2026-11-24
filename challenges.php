@@ -125,57 +125,57 @@ $sql2 = "SELECT * FROM `challenges`";
                     <div class="challenges">
                         <div class="month">Feb:</div>
                         <div class="info name"><?=$feb?></div>
-                        <div class="info"><?=$febDescr?></div>
+                        <div class="info" id="febContent"><?=$febDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">March:</div>
                         <div class="info name"><?=$march?></div>
-                        <div class="info"><?=$marchDescr?></div>
+                        <div class="info" id="marchContent"><?=$marchDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">April:</div>
                         <div class="info name"><?=$april?></div>
-                        <div class="info"><?=$aprilDescr?></div>
+                        <div class="info" id="aprilContent"><?=$aprilDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">May:</div>
                         <div class="info name"><?=$may?></div>
-                        <div class="info"><?=$mayDescr?></div>
+                        <div class="info" id="mayContent"><?=$mayDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">June:</div>
                         <div class="info name"><?=$june?></div>
-                        <div class="info"><?=$juneDescr?></div>
+                        <div class="info" id="juneContent"><?=$juneDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">July:</div>
                         <div class="info name"><?=$july?></div>
-                        <div class="info"><?=$julyDescr?></div>
+                        <div class="info" id="julyContent"><?=$julyDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">Aug:</div>
                         <div class="info name"><?=$aug?></div>
-                        <div class="info"><?=$augDescr?></div>
+                        <div class="info" id="augContent"><?=$augDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">Sept:</div>
                         <div class="info name"><?=$sept?></div>
-                        <div class="info"><?=$septDescr?></div>
+                        <div class="info" id="septContent"><?=$septDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">Oct:</div>
                         <div class="info name"><?=$oct?></div>
-                        <div class="info"><?=$octDescr?></div>
+                        <div class="info" id="octContent"><?=$octDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">Nov:</div>
                         <div class="info name"><?=$nov?></div>
-                        <div class="info"><?=$novDescr?></div>
+                        <div class="info" id="novContent"><?=$novDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">Dec:</div>
                         <div class="info name"><?=$dec?></div>
-                        <div class="info"><?=$decDescr?></div>
+                        <div class="info" id="decContent"><?=$decDescr?></div>
                     </div>
                 </div>
             </div>
@@ -233,9 +233,18 @@ $sql2 = "SELECT * FROM `challenges`";
                 var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
                 return new_content;
             }
-
             var content = $('#janContent').html();
             $('#janContent').html(replace_contentJan(content));
+
+            function replace_contentFeb(content){
+                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                return new_content;
+            }
+            var content = $('#febContent').html();
+            $('#febContent').html(replace_contentFeb(content));
 
         });
 
