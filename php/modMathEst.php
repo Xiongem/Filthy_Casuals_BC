@@ -99,6 +99,6 @@ function calculateTotalPoints($pages, $mod1, $mod2) {
     return round($totalPoints);
 } 
 
-$totalPoints = calculateTotalPoints($_POST["pages"], $_POST["mod-1"], $_POST["mod-2"]);
+$totalPoints = calculateTotalPoints($_POST["pages"], $_POST["mod1"], $_POST["mod2"]);
 
 echo "Total Points: ".$totalPoints;
