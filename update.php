@@ -254,6 +254,8 @@ $today = date("Y-m-d");
                     <ion-icon class="modHelp" name="help-circle" onclick="showModHelp()"></ion-icon>
                 </div>
 
+                <div id="modResults"></div>
+
                 <div class="bingo-wrapper hide" id="bingo">
                     <div class="label-wrapper" id="bingoCheckbox">
                         <label class="labels">Counts towards bingo?</label>
@@ -318,16 +320,28 @@ $today = date("Y-m-d");
 
             function check() {
                 var active = <?=$active?>;
-                if (active == 1) {
-                    var mod1 = $("#mod-1").val();
-                    var mod2 = $("#mod-2").val();
+                var mod1 = $("#mod-1").val();
+                var mod2 = $("#mod-2").val();
 
+                if (active == 1) {
                     if (mod1 == "3" || mod1 == "4" || mod2 == "2") {
                         $("#bingo").css("display", "flex");                                  
                     }else {
                         $("#bingo").hide();                    
                     }
                 }
+
+                var pages = $("#pages").val();
+                $.ajax ({
+                    url: "php/modMath.php",
+                    method: "post",
+                    data: {pages:pages,
+                        mod1:mod1,
+                        mod2:mod2},
+                    success:function(result) {
+                        $("#modResults").html(result);
+                    }
+                })
             }
 
             function showDateFinished() {
