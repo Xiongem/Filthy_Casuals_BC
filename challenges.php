@@ -124,17 +124,17 @@ $sql2 = "SELECT * FROM `challenges`";
                     </div>
                     <div class="challenges">
                         <div class="month">Feb:</div>
-                        <div class="info name"><?=$feb?></div>
+                        <div class="name"><?=$feb?></div>
                         <div class="info" id="febContent"><?=$febDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">March:</div>
-                        <div class="info name"><?=$march?></div>
+                        <div class="name"><?=$march?></div>
                         <div class="info" id="marchContent"><?=$marchDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">April:</div>
-                        <div class="info name"><?=$april?></div>
+                        <div class="name"><?=$april?></div>
                         <div class="info" id="aprilContent"><?=$aprilDescr?></div>
                     </div>
                     <div class="challenges">

@@ -194,6 +194,7 @@ a {
         grid-column-start: 2;
         display: flex;
         flex-direction: column;
+        height: 100%;
         /* align-items: center; */
         /* justify-content: center; */
         white-space: pre;
@@ -204,8 +205,9 @@ a {
         word-break: break-word;
     }
     .name {
+        display: flex;
         color: var(--marine-green);
-        justify-content: center;
+        align-items: center;
     }
 
     .activity {
