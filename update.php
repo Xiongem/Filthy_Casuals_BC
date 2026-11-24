@@ -322,6 +322,11 @@ $today = date("Y-m-d");
                 var active = <?=$active?>;
                 var mod1 = $("#mod-1").val();
                 var mod2 = $("#mod-2").val();
+                if ($('#fanfic').is(':checked')) {
+                    var fanfic = 1;
+                }else {
+                    var fanfic = 0;
+                }
 
                 if (active == 1) {
                     if (mod1 == "3" || mod1 == "4" || mod2 == "2") {
@@ -337,7 +342,8 @@ $today = date("Y-m-d");
                     method: "post",
                     data: {pages:pages,
                         mod1:mod1,
-                        mod2:mod2},
+                        mod2:mod2,
+                        fanfic:fanfic},
                     success:function(result) {
                         $("#modResults").html(result);
                     }

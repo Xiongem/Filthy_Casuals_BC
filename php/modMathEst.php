@@ -99,6 +99,12 @@ function calculateTotalPoints($pages, $mod1, $mod2) {
     return round($totalPoints);
 } 
 
-$totalPoints = calculateTotalPoints($_POST["pages"], $_POST["mod1"], $_POST["mod2"]);
+if ($_POST["fanfic"] == 1) {
+    $pages = $_POST["pages"] / 280;
+} else {
+    $pages = $_POST["pages"];
+}
+
+$totalPoints = calculateTotalPoints($pages, $_POST["mod1"], $_POST["mod2"]);
 
 echo "Total Points: ".$totalPoints;
