@@ -119,7 +119,7 @@ $sql2 = "SELECT * FROM `challenges`";
                 <div class="challenge-grid">
                     <div class="challenges">
                         <div class="month">Jan:</div>
-                        <div class="info name"><?=$jan?></div>
+                        <div class="name"><?=$jan?></div>
                         <div class="info" id="janContent"><?=$janDescr?></div>
                     </div>
                     <div class="challenges">
