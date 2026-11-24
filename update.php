@@ -59,7 +59,7 @@ $today = date("Y-m-d");
                 <ion-icon name="close" onclick="closeModHelp()"></ion-icon>
             </div>
             <div class="popup-content">
-                <h1>Reading Modifier Guide:</h1>
+                <h1 class="title">Reading Modifier Guide:</h1>
                 <div class="help-grid">
                     <div class="grid-item modName">Normal:</div>
                     <div class="grid-item descript">Regular novels, fanfiction</div>
