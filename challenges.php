@@ -139,42 +139,44 @@ $sql2 = "SELECT * FROM `challenges`";
                     </div>
                     <div class="challenges">
                         <div class="month">May:</div>
-                        <div class="info name"><?=$may?></div>
+                        <div class="name"><?=$may?></div>
                         <div class="info" id="mayContent"><?=$mayDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">June:</div>
-                        <div class="info name"><?=$june?></div>
+                        <div class="name"><?=$june?></div>
                         <div class="info" id="juneContent"><?=$juneDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">July:</div>
-                        <div class="info name"><?=$july?></div>
+                        <div class="name"><?=$july?></div>
                         <div class="info" id="julyContent"><?=$julyDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">Aug:</div>
-                        <div class="info name"><?=$aug?></div>
+                        <div class="name"><?=$aug?></div>
                         <div class="info" id="augContent"><?=$augDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">Sept:</div>
-                        <div class="info name"><?=$sept?></div>
+                        <div class="name"><?=$sept?></div>
                         <div class="info" id="septContent"><?=$septDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">Oct:</div>
-                        <div class="info name"><?=$oct?></div>
+                        <div class="name"><?=$oct?></div>
                         <div class="info" id="octContent"><?=$octDescr?></div>
                     </div>
                     <div class="challenges">
                         <div class="month">Nov:</div>
-                        <div class="info name"><?=$nov?></div>
-                        <div class="info" id="novContent"><?=$novDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$nov?></div>
+                            <div class="info" id="novContent"><?=$novDescr?></div>
+                        </div>
                     </div>
                     <div class="challenges">
                         <div class="month">Dec:</div>
-                        <div class="info name"><?=$dec?></div>
+                        <div class="name"><?=$dec?></div>
                         <div class="info" id="decContent"><?=$decDescr?></div>
                     </div>
                 </div>
