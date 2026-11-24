@@ -301,18 +301,36 @@ if ($fanfic ==1) {
         });
 
         function check() {
-            var active = <?=$active?>;
-            if (active == 1) {
+                var active = <?=$active?>;
                 var mod1 = $("#mod-1").val();
                 var mod2 = $("#mod-2").val();
-
-                if (mod1 == "3" || mod1 == "4" || mod2 == "2") {
-                    $("#bingo").css("display", "flex");                                  
+                if ($('#fanfic').is(':checked')) {
+                    var fanfic = 1;
                 }else {
-                    $("#bingo").hide();                    
+                    var fanfic = 0;
                 }
+
+                if (active == 1) {
+                    if (mod1 == "3" || mod1 == "4" || mod2 == "2") {
+                        $("#bingo").css("display", "flex");                                  
+                    }else {
+                        $("#bingo").hide();                    
+                    }
+                }
+
+                var pages = $("#pages").val();
+                $.ajax ({
+                    url: "php/modMathEst.php",
+                    method: "post",
+                    data: {pages:pages,
+                        mod1:mod1,
+                        mod2:mod2,
+                        fanfic:fanfic},
+                    success:function(result) {
+                        $("#modResults").html(result);
+                    }
+                })
             }
-        }
 
        $("#tags_id0").blur(function() {
             setTimeout(hideSearch, 300)
