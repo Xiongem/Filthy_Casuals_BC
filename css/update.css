@@ -43,10 +43,42 @@
         margin: 0 0 0 0.5em;
     }
     .mod-wrapper {
+        position: relative;
         display: grid;
         grid-template-columns: 40% 40%;
         justify-content: space-around;
         /* row-gap: 1em; */
+    }
+    .modHelp {
+        position: absolute;
+        top: 0;
+        width: 0.5em;
+        height: 0.5em;
+        cursor: pointer;
+    }
+    .help-grid {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: auto;
+        width: 100%;
+    }
+    .help-grid:nth-child(odd) {
+        background-color: var(--grey);
+    }
+    .grid-item {
+        justify-self: center;
+        padding: 0.5em;
+        white-space: pre;
+        white-space: pre-wrap;
+        /* overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        word-break: break-word; */
+        word-wrap: normal;
+        overflow-wrap: normal;
+    }
+    .modName {
+        color: var(--marine-green);
     }
 
     .mod-content {
@@ -239,8 +271,6 @@
         position: absolute;
         bottom: -1.5em;
         left: 2em;
-        
-
     }
 }
 /** ####################### *//** ####################### *//** ####################### */

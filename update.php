@@ -52,7 +52,35 @@ $today = date("Y-m-d");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/ajax_tags.js"> </script>
 </head>
-<body>
+<body id="body">
+    <div class="popup-wrapper hide" id="modHelpPopup">
+        <div class="popup-container">
+            <div class="close-wrapper">
+                <ion-icon name="close" onclick="closeModHelp()"></ion-icon>
+            </div>
+            <div class="popup-content">
+                <h1>Reading Modifier Guide:</h1>
+                <div class="help-grid">
+                    <div class="grid-item modName">Normal:</div>
+                    <div class="grid-item descript">Regular novels, fanfiction</div>
+                    <div class="grid-item modName">Manga/Comics:</div>
+                    <div class="grid-item descript">Things with more picture than words</div>
+                    <div class="grid-item modName">Challenge:</div>
+                    <div class="grid-item descript">Counts towards the monthly <a href="https://filthycasualsbc.com/challenges.php">challenge</a></div>
+                    <div class="grid-item modName">Buddy Read:</div>
+                    <div class="grid-item descript">Read with someone else in the challenge</div>
+                    <div class="grid-item modName">Friend Recommendation:</div>
+                    <div class="grid-item descript">Read something recommended in <a href="https://filthycasualsbc.com/friendRec.php">Friend Recs</a></div>
+                    <div class="grid-item modName">Seasonal:</div>
+                    <div class="grid-item descript">Read something that fits the current season. See <a href="https://filthycasualsbc.com/challenges.php">challenge</a> for more info</div>
+                    <div class="grid-item modName">Read-a-thon:</div>
+                    <div class="grid-item descript">Something read while the monthly read-a-thon is ongoing</div>
+                    <div class="grid-item modName">Educational:</div>
+                    <div class="grid-item descript">Read something academic based like research papers, or written in a foreign language</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <?= makeNav() ?>
     </header>
@@ -221,6 +249,7 @@ $today = date("Y-m-d");
                             <option value="8">Educational: Manga/Comics</option>
                         </select>
                     </div>
+                    <ion-icon class="modHelp" name="help-circle" onclick="showModHelp()"></ion-icon>
                 </div>
 
                 <div class="bingo-wrapper hide" id="bingo">
@@ -354,6 +383,17 @@ $today = date("Y-m-d");
                     $("#fanficResult").text("Number of Pages:");
                     $('#fanficMathResult').text("")
                 }
+            }
+
+            function showModHelp() {
+                $("#modHelpPopup").css({"display": "flex"});
+                var modHelpPopup = document.getElementById("modHelpPopup");
+                modHelpPopup.scrollIntoView();
+                setTimeout(hideBackground, 500);
+            }
+            function closeModHelp() {
+                $("#modHelpPopup").hide();
+                $("#body").css({"height": "unset", "overflow": "unset"});
             }
         </script>
 <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
