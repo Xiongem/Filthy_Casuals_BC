@@ -128,34 +128,6 @@ if ($now <= $ratEnd) {
         <div class="desktop-table-wrapper">
             <div class="table-wrapper">
                 <?php if ($admin == 1) { ?>
-                <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Gorogoro')"></ion-icon>
-                <?php } ?>
-                <div class="title Gorogoro">
-                    <h1>
-                        Gorogoro Ranking
-                    </h1>
-                </div>
-                <div class="content-wrapper" id="Gorogoro">
-                    <!--//? AJAX DISPLAY GOROGORO RANKINGS HERE -->
-                    <div class="loader-small" id="loaderGoro"></div>
-                </div>
-            </div>
-            <div class="table-wrapper">
-                <?php if ($admin == 1) { ?>
-                <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Futsuu')"></ion-icon>
-                <?php } ?>
-                <div class="title Futsuu">
-                    <h1>
-                        Futsuu Ranking
-                    </h1>
-                </div>
-                <div class="content-wrapper" id="Futsuu">
-                    <!--//? AJAX DISPLAY FUTSUU RANKINGS HERE -->
-                    <div class="loader-small" id="loaderFutsuu"></div>
-                </div>
-            </div>
-            <div class="table-wrapper">
-                <?php if ($admin == 1) { ?>
                 <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Hayai')"></ion-icon>
                 <?php } ?>
                 <div class="title Hayai">
@@ -180,6 +152,34 @@ if ($now <= $ratEnd) {
                 <div class="content-wrapper" id="Yabai">
                    <!--//? AJAX DISPLAY YABAI RANKINGS HERE -->
                    <div class="loader-small" id="loaderYabai"></div>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <?php if ($admin == 1) { ?>
+                <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Gorogoro')"></ion-icon>
+                <?php } ?>
+                <div class="title Gorogoro">
+                    <h1>
+                        Gorogoro Ranking
+                    </h1>
+                </div>
+                <div class="content-wrapper" id="Gorogoro">
+                    <!--//? AJAX DISPLAY GOROGORO RANKINGS HERE -->
+                    <div class="loader-small" id="loaderGoro"></div>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <?php if ($admin == 1) { ?>
+                <ion-icon class="league-edit" name="cog-outline" onclick="showLeagueEdit('Futsuu')"></ion-icon>
+                <?php } ?>
+                <div class="title Futsuu">
+                    <h1>
+                        Futsuu Ranking
+                    </h1>
+                </div>
+                <div class="content-wrapper" id="Futsuu">
+                    <!--//? AJAX DISPLAY FUTSUU RANKINGS HERE -->
+                    <div class="loader-small" id="loaderFutsuu"></div>
                 </div>
             </div>
         </div>
