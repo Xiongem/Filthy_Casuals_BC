@@ -54,7 +54,6 @@
         top: 0;
         width: 1em;
         height: 1em;
-        margin: 0.5em 0 0 0.5em;
         cursor: pointer;
     }
     .help-grid {
@@ -284,6 +283,9 @@
 @media only screen and (min-width: 601px) {
     form {
         width: 70%;
+    }
+    .modHelp {
+        margin: 0.5em 0 0 0.5em;
     }
 }
 /** ####################### *//** ####################### *//** ####################### */
