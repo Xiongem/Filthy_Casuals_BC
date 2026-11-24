@@ -333,7 +333,7 @@ $today = date("Y-m-d");
 
                 var pages = $("#pages").val();
                 $.ajax ({
-                    url: "php/modMath.php",
+                    url: "php/modMathEst.php",
                     method: "post",
                     data: {pages:pages,
                         mod1:mod1,

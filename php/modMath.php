@@ -6,15 +6,6 @@ ini_set('error_log', '/path/to/php_errors.log');
 
 ob_start();
 
-if (isset($_POST["pages"])) {
-    $pages = $_POST["pages"];
-}
-if (isset($_POST["mod1"])) {
-    $mod1 = $_POST["mod1"];
-}
-if (isset($_POST["mod2"])) {
-    $mod2 = $_POST["mod2"];
-}
 
 function modMath1($pages, $mod1) {
     if ($mod1 == 1) {
@@ -106,7 +97,5 @@ function calculateTotalPoints($pages, $mod1, $mod2) {
     $pointsMod1 = modMath1($pages, $mod1);
     $pointsMod2 = modMath2($pages, $mod2);
     $totalPoints = $pointsMod1 + $pointsMod2;
-    $estimate = round($totalPoints);
-    echo "Total Points: ".$estimate;
     return round($totalPoints);
 } 
