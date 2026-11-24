@@ -193,7 +193,7 @@ a {
         display: flex;
         flex-direction: column;
         /* align-items: center; */
-        justify-content: center;
+        /* justify-content: center; */
         white-space: pre;
         white-space: pre-wrap;
         overflow-wrap: break-word;
