@@ -248,9 +248,11 @@ a {
     #activity, #instruct {
         white-space: pre;
         white-space: pre-wrap;
-        overflow-wrap: break-word;
+        /* overflow-wrap: break-word;
         word-break: break-all;
-        hyphens: manual;
+        hyphens: manual; */
+        word-wrap: normal;
+        overflow-wrap: normal;
     }
     .actRow {
         display: flex;
