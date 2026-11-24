@@ -266,8 +266,6 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
-                <!--//! ADD AJAX TO SHOW TOTAL POINTS FOR MODIFIERS BEFORE HITTING SUBMIT -->
-
                 <label for="comment" class="labels">Comment:</label>
                 <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)" maxlength="200"></textarea>
 
