@@ -119,53 +119,73 @@ $sql2 = "SELECT * FROM `challenges`";
                 <div class="challenge-grid">
                     <div class="challenges">
                         <div class="month">Jan:</div>
-                        <div class="name"><?=$jan?></div>
-                        <div class="info" id="janContent"><?=$janDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$jan?></div>
+                            <div class="info" id="janContent"><?=$janDescr?></div>
+                        </div>
                     </div>
                     <div class="challenges">
                         <div class="month">Feb:</div>
-                        <div class="name"><?=$feb?></div>
-                        <div class="info" id="febContent"><?=$febDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$feb?></div>
+                            <div class="info" id="febContent"><?=$febDescr?></div>
+                        </div>
                     </div>
                     <div class="challenges">
                         <div class="month">March:</div>
-                        <div class="name"><?=$march?></div>
-                        <div class="info" id="marchContent"><?=$marchDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$march?></div>
+                            <div class="info" id="marchContent"><?=$marchDescr?></div>
+                        </div>
                     </div>
                     <div class="challenges">
                         <div class="month">April:</div>
-                        <div class="name"><?=$april?></div>
-                        <div class="info" id="aprilContent"><?=$aprilDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$april?></div>
+                            <div class="info" id="aprilContent"><?=$aprilDescr?></div>
+                        </div>
                     </div>
                     <div class="challenges">
                         <div class="month">May:</div>
-                        <div class="name"><?=$may?></div>
-                        <div class="info" id="mayContent"><?=$mayDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$may?></div>
+                            <div class="info" id="mayContent"><?=$mayDescr?></div>
+                        </div>
                     </div>
                     <div class="challenges">
                         <div class="month">June:</div>
-                        <div class="name"><?=$june?></div>
-                        <div class="info" id="juneContent"><?=$juneDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$june?></div>
+                            <div class="info" id="juneContent"><?=$juneDescr?></div>
+                        </div>
                     </div>
                     <div class="challenges">
                         <div class="month">July:</div>
-                        <div class="name"><?=$july?></div>
-                        <div class="info" id="julyContent"><?=$julyDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$july?></div>
+                            <div class="info" id="julyContent"><?=$julyDescr?></div>
+                        </div>
                     </div>
                     <div class="challenges">
                         <div class="month">Aug:</div>
-                        <div class="name"><?=$aug?></div>
-                        <div class="info" id="augContent"><?=$augDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$aug?></div>
+                            <div class="info" id="augContent"><?=$augDescr?></div>
+                        </div>
                     </div>
                     <div class="challenges">
                         <div class="month">Sept:</div>
-                        <div class="name"><?=$sept?></div>
-                        <div class="info" id="septContent"><?=$septDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$sept?></div>
+                            <div class="info" id="septContent"><?=$septDescr?></div>
+                        </div>
                     </div>
                     <div class="challenges">
                         <div class="month">Oct:</div>
-                        <div class="name"><?=$oct?></div>
-                        <div class="info" id="octContent"><?=$octDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$oct?></div>
+                            <div class="info" id="octContent"><?=$octDescr?></div>
+                        </div>
                     </div>
                     <div class="challenges">
                         <div class="month">Nov:</div>
@@ -176,8 +196,10 @@ $sql2 = "SELECT * FROM `challenges`";
                     </div>
                     <div class="challenges">
                         <div class="month">Dec:</div>
-                        <div class="name"><?=$dec?></div>
-                        <div class="info" id="decContent"><?=$decDescr?></div>
+                        <div class="info-wrapper">
+                            <div class="name"><?=$dec?></div>
+                            <div class="info" id="decContent"><?=$decDescr?></div>
+                        </div>
                     </div>
                 </div>
             </div>
