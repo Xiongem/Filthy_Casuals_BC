@@ -52,8 +52,8 @@
     .modHelp {
         position: absolute;
         top: 0;
-        width: 0.5em;
-        height: 0.5em;
+        width: 2em;
+        height: 2em;
         cursor: pointer;
     }
     .help-grid {
