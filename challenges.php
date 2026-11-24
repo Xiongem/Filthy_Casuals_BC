@@ -167,7 +167,7 @@ $sql2 = "SELECT * FROM `challenges`";
                         <div class="name"><?=$oct?></div>
                         <div class="info" id="octContent"><?=$octDescr?></div>
                     </div>
-                    <div class="challenges">
+                    <div class="challenges-test">
                         <div class="month">Nov:</div>
                         <div class="info-wrapper">
                             <div class="name"><?=$nov?></div>
