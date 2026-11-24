@@ -246,6 +246,105 @@ $sql2 = "SELECT * FROM `challenges`";
             var content = $('#febContent').html();
             $('#febContent').html(replace_contentFeb(content));
 
+            function replace_contentMarch(content){
+                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                return new_content;
+            }
+            var content = $('#marchContent').html();
+            $('#marchContent').html(replace_contentMarch(content));
+
+            function replace_contentApril(content){
+                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                return new_content;
+            }
+            var content = $('#aprilContent').html();
+            $('#aprilContent').html(replace_contentApril(content));
+
+            function replace_contentMay(content){
+                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                return new_content;
+            }
+            var content = $('#mayContent').html();
+            $('#mayContent').html(replace_contentMay(content));
+
+            function replace_contentJune(content){
+                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                return new_content;
+            }
+            var content = $('#juneContent').html();
+            $('#juneContent').html(replace_contentJune(content));
+
+            function replace_contentJuly(content){
+                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                return new_content;
+            }
+            var content = $('#julyContent').html();
+            $('#julyContent').html(replace_contentJuly(content));
+
+            function replace_contentAug(content){
+                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                return new_content;
+            }
+            var content = $('#augContent').html();
+            $('#augContent').html(replace_contentAug(content));
+
+            function replace_contentSept(content){
+                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                return new_content;
+            }
+            var content = $('#septContent').html();
+            $('#septContent').html(replace_contentSept(content));
+
+            function replace_contentOct(content){
+                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                return new_content;
+            }
+            var content = $('#octContent').html();
+            $('#octContent').html(replace_contentOct(content));
+
+            function replace_contentNov(content){
+                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                return new_content;
+            }
+            var content = $('#novContent').html();
+            $('#novContent').html(replace_contentNov(content));
+
+            function replace_contentDec(content){
+                var exp_match = /(\b(https?|):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+                var element_content=content.replace(exp_match, "<a href='$1'>$1</a>");
+                var new_exp_match =/(^|[^\/])(www\.[\S]+(\b|$))/gim;
+                var new_content=element_content.replace(new_exp_match, '$1<a target="_blank" href="http://$2">$2</a>');
+                return new_content;
+            }
+            var content = $('#decContent').html();
+            $('#decContent').html(replace_contentDec(content));
         });
 
         function showNewAct() {
