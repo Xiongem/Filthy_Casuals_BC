@@ -246,6 +246,8 @@ a {
         font-weight: bold;
     }
     #activity, #instruct {
+        white-space: pre;
+        white-space: pre-wrap;
         overflow-wrap: break-word;
         word-break: break-all;
         hyphens: manual;
