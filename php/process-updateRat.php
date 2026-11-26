@@ -79,7 +79,7 @@ if (isset($_POST["fanfic"])) {
     $pages = $pagesIn + $pagesOut;
 }
 
-$totalPoints = calculateTotalPoints($pagesOut, $pagesIn, $_POST["mod1Out"], $_POST["mod2Out"], $_POST["mod2In"]);
+$totalPoints = calculateTotalPoints($pagesOut, $pagesIn, $_POST["mod-1-Out"], $_POST["mod-2-Out"], $_POST["mod-2-In"]);
 
 $month = date("n",strtotime($_POST["dateFinished"]));
 $year = date('y');
