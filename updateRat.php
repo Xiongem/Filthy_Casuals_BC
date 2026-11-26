@@ -221,7 +221,7 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
-                <div class="mod-wrapper-rat">
+                <div class="mod-wrapper">
                     <h2>Modifiers for pages read OUTSIDE read-a-thon</h2>
                     <div id="mod1-wrapper" class="mod-content">
                         <label for="mod-1-Out" class="labels">Modifier 1:</label>
@@ -272,7 +272,7 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
-                <div class="mod-wrapper-rat">
+                <div class="mod-wrapper">
                     <h3>Modifiers for pages read DURING read-a-thon</h3>
                     <div id="mod1-wrapper" class="mod-content">
                         <label for="mod-1-In" class="labels">Modifier 1:</label>
