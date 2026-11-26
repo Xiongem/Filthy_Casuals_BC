@@ -202,96 +202,104 @@ $today = date("Y-m-d");
                             onclick="showFanfic();">
                 </div>
 
-                <div class="page-wrapper-rat">
-                    <h2>Read OUTSIDE read-a-thon:</h2>
-                    <div class="label-wrapper">
-                        <label for="pages" class="labels" id="fanficResultOut">Number of Pages:</label>
-                        <span class="required">*</span>
-                    </div>
-                    <div id="pageWrapperRat">
-                        <div id="showFanficWarnOut"></div>
-                        <input type="text"
-                            name="pagesOut"
-                            id="pagesOut"
-                            class="inputs"
-                            pattern="^\d+(,\d+)?$"
-                            maxlength="10"
-                            required>
-                        <div id="fanficMathResultOut"></div>
-                    </div>
-                </div>
-
-                <h2>Modifiers for pages read OUTSIDE read-a-thon</h2>
-                <div class="mod-wrapper">
-                    <div id="mod1-wrapper" class="mod-content">
-                        <label for="mod-1-Out" class="labels">Modifier 1:</label>
-                        <select name="mod-1-Out" id="mod-1-Out" class="inputs" onchange="check()">
-                            <option value="1">Normal</option>
-                            <option value="2">Manga/Comic</option>
-                            <option value="3">Challenge</option>
-                            <option value="4">Challenge: Manga/Comics</option>
-                            <option value="5">Buddy Read</option>
-                            <option value="6">Friend Recommendation</option>
-                            <option value="7">Seasonal</option>
-                            <option value="9">Educational</option>
-                            <option value="10">Educational: Manga/Comics</option>
-                        </select>
-                    </div>
-
-                    <div id="mod2-wrapper" class="mod-content">
-                        <label for="mod-2-Out" class="labels">Modifier 2:</label>
-                        <select name="mod-2-Out" id="mod-2-Out" class="inputs" onchange="check()">
-                            <option value="1">Normal</option>
-                            <option value="2">Challenge</option>
-                            <option value="3">Buddy Read</option>
-                            <option value="4">Friend Recommendation</option>
-                            <option value="5">Seasonal</option>
-                            <option value="7">Educational</option>
-                            <option value="8">Educational: Manga/Comics</option>
-                        </select>
-                    </div>
-                    <ion-icon class="modHelp" name="help-circle" onclick="showModHelp()"></ion-icon>
-                </div>
-
-                <div class="page-wrapper-rat">
-                    <h2>Read DURING read-a-thon:</h2>
-                    <div class="label-wrapper">
-                        <label for="pages" class="labels" id="fanficResultIn">Number of Pages:</label>
-                        <span class="required">*</span>
-                    </div>
-                    <div id="pageWrapperRat">
-                        <div id="showFanficWarnIn"></div>
-                        <input type="text"
-                            name="pagesIn"
-                            id="pagesIn"
-                            class="inputs"
-                            pattern="^\d+(,\d+)?$"
-                            maxlength="10"
-                            required>
-                        <div id="fanficMathResultIn"></div>
+                <div class="spacing">
+                    <div class="page-wrapper-rat">
+                        <h2>Read OUTSIDE read-a-thon:</h2>
+                        <div class="label-wrapper">
+                            <label for="pages" class="labels" id="fanficResultOut">Number of Pages:</label>
+                            <span class="required">*</span>
+                        </div>
+                        <div id="pageWrapperRat">
+                            <div id="showFanficWarnOut"></div>
+                            <input type="text"
+                                name="pagesOut"
+                                id="pagesOut"
+                                class="inputs"
+                                pattern="^\d+(,\d+)?$"
+                                maxlength="10"
+                                required>
+                            <div id="fanficMathResultOut"></div>
+                        </div>
                     </div>
                 </div>
 
-                <h3>Modifiers for pages read DURING read-a-thon</h3>
-                <div class="mod-wrapper">
-                    <div id="mod1-wrapper" class="mod-content">
-                        <label for="mod-1-In" class="labels">Modifier 1:</label>
-                        <select name="mod-1-In" id="mod-1-In" class="inputs">
-                            <option value="8">Read-a-thon</option>
-                        </select>
-                    </div>
+                <div class="spacing">
+                    <h3>Modifiers for pages read OUTSIDE read-a-thon</h3>
+                    <div class="mod-wrapper">
+                        <div id="mod1-wrapper" class="mod-content">
+                            <label for="mod-1-Out" class="labels">Modifier 1:</label>
+                            <select name="mod-1-Out" id="mod-1-Out" class="inputs" onchange="check()">
+                                <option value="1">Normal</option>
+                                <option value="2">Manga/Comic</option>
+                                <option value="3">Challenge</option>
+                                <option value="4">Challenge: Manga/Comics</option>
+                                <option value="5">Buddy Read</option>
+                                <option value="6">Friend Recommendation</option>
+                                <option value="7">Seasonal</option>
+                                <option value="9">Educational</option>
+                                <option value="10">Educational: Manga/Comics</option>
+                            </select>
+                        </div>
 
-                    <div id="mod2-wrapper" class="mod-content">
-                        <label for="mod-2-In" class="labels">Modifier 2:</label>
-                        <select name="mod-2-In" id="mod-2-In" class="inputs" onchange="check()">
-                            <option value="1">Normal</option>
-                            <option value="2">Challenge</option>
-                            <option value="3">Buddy Read</option>
-                            <option value="4">Friend Recommendation</option>
-                            <option value="5">Seasonal</option>
-                            <option value="7">Educational</option>
-                            <option value="8">Educational: Manga/Comics</option>
-                        </select>
+                        <div id="mod2-wrapper" class="mod-content">
+                            <label for="mod-2-Out" class="labels">Modifier 2:</label>
+                            <select name="mod-2-Out" id="mod-2-Out" class="inputs" onchange="check()">
+                                <option value="1">Normal</option>
+                                <option value="2">Challenge</option>
+                                <option value="3">Buddy Read</option>
+                                <option value="4">Friend Recommendation</option>
+                                <option value="5">Seasonal</option>
+                                <option value="7">Educational</option>
+                                <option value="8">Educational: Manga/Comics</option>
+                            </select>
+                        </div>
+                        <ion-icon class="modHelp" name="help-circle" onclick="showModHelp()"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="spacing">
+                    <div class="page-wrapper-rat">
+                        <h2>Read DURING read-a-thon:</h2>
+                        <div class="label-wrapper">
+                            <label for="pages" class="labels" id="fanficResultIn">Number of Pages:</label>
+                            <span class="required">*</span>
+                        </div>
+                        <div id="pageWrapperRat">
+                            <div id="showFanficWarnIn"></div>
+                            <input type="text"
+                                name="pagesIn"
+                                id="pagesIn"
+                                class="inputs"
+                                pattern="^\d+(,\d+)?$"
+                                maxlength="10"
+                                required>
+                            <div id="fanficMathResultIn"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacing">
+                    <h3>Modifiers for pages read DURING read-a-thon</h3>
+                    <div class="mod-wrapper">
+                        <div id="mod1-wrapper" class="mod-content">
+                            <label for="mod-1-In" class="labels">Modifier 1:</label>
+                            <select name="mod-1-In" id="mod-1-In" class="inputs">
+                                <option value="8">Read-a-thon</option>
+                            </select>
+                        </div>
+
+                        <div id="mod2-wrapper" class="mod-content">
+                            <label for="mod-2-In" class="labels">Modifier 2:</label>
+                            <select name="mod-2-In" id="mod-2-In" class="inputs" onchange="check()">
+                                <option value="1">Normal</option>
+                                <option value="2">Challenge</option>
+                                <option value="3">Buddy Read</option>
+                                <option value="4">Friend Recommendation</option>
+                                <option value="5">Seasonal</option>
+                                <option value="7">Educational</option>
+                                <option value="8">Educational: Manga/Comics</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
