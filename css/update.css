@@ -283,6 +283,11 @@
     .button-wrapper-rat {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+    .button-wrapper-rat a {
+        max-width: 8em;
+        overflow-wrap: normal;
     }
 }
 /** ####################### *//** ####################### *//** ####################### */
