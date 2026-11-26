@@ -202,13 +202,13 @@ $today = date("Y-m-d");
                             onclick="showFanfic();">
                 </div>
 
-                <div class="page-wrapper">
-                    <div class="labels">Read OUTSIDE read-a-thon:</div>
+                <div class="page-wrapper-rat">
+                    <h3 class="labels">Read OUTSIDE read-a-thon:</>
                     <div class="label-wrapper">
                         <label for="pages" class="labels" id="fanficResultOut">Number of Pages:</label>
                         <span class="required">*</span>
                     </div>
-                    <div id="pageWrapper">
+                    <div id="pageWrapperRat">
                         <div id="showFanficWarnOut"></div>
                         <input type="text"
                             name="pagesOut"
@@ -221,8 +221,8 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
-                <div class="mod-wrapper">
-                    <h2>Modifiers for pages read OUTSIDE read-a-thon</h2>
+                <div class="mod-wrapper-rat">
+                    <h3>Modifiers for pages read OUTSIDE read-a-thon</h2>
                     <div id="mod1-wrapper" class="mod-content">
                         <label for="mod-1-Out" class="labels">Modifier 1:</label>
                         <select name="mod-1-Out" id="mod-1-Out" class="inputs" onchange="check()">
@@ -253,13 +253,13 @@ $today = date("Y-m-d");
                     <ion-icon class="modHelp" name="help-circle" onclick="showModHelp()"></ion-icon>
                 </div>
 
-                <div class="page-wrapper">
-                    <div class="labels">Read DURING read-a-thon:</div>
+                <div class="page-wrapper-rat">
+                    <h3 class="labels">Read DURING read-a-thon:</h3>
                     <div class="label-wrapper">
                         <label for="pages" class="labels" id="fanficResultIn">Number of Pages:</label>
                         <span class="required">*</span>
                     </div>
-                    <div id="pageWrapper">
+                    <div id="pageWrapperRat">
                         <div id="showFanficWarnIn"></div>
                         <input type="text"
                             name="pagesIn"
@@ -272,8 +272,8 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
-                <div class="mod-wrapper">
-                    <h2>Modifiers for pages read DURING read-a-thon</h2>
+                <div class="mod-wrapper-rat">
+                    <h3>Modifiers for pages read DURING read-a-thon</h3>
                     <div id="mod1-wrapper" class="mod-content">
                         <label for="mod-1-In" class="labels">Modifier 1:</label>
                         <select name="mod-1-In" id="mod-1-In" class="inputs">
