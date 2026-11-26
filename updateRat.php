@@ -217,6 +217,7 @@ $today = date("Y-m-d");
                                 class="inputs"
                                 pattern="^\d+(,\d+)?$"
                                 maxlength="10"
+                                onkeyup="check()"
                                 required>
                             <div id="fanficMathResultOut"></div>
                         </div>
@@ -272,6 +273,7 @@ $today = date("Y-m-d");
                                 class="inputs"
                                 pattern="^\d+(,\d+)?$"
                                 maxlength="10"
+                                onkeyup="check()"
                                 required>
                             <div id="fanficMathResultIn"></div>
                         </div>
