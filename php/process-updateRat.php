@@ -112,8 +112,8 @@ if (isset($_POST["bingoName"])) {
     $bingoName = NULL;
 }
 
-$mod1 = '$_POST["mod-1-Out"].",8"';
-$mod2 = '$_POST["mod-2-Out"].",".$_POST["mod-2-In"]';
+$mod1 = $_POST['mod-1-Out'].",8";
+$mod2 = $_POST['mod-2-Out'].",".$_POST["mod-2-In"];
 
 echo "mod 1: ".$mod1;
 echo "mod 2: ".$mod2;
