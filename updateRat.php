@@ -319,7 +319,6 @@ $today = date("Y-m-d");
                 <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)" maxlength="200"></textarea>
 
                 <div class="button-wrapper">
-                    <a href="updateRat.php">Read both in and outside of RAT</a>
                     <button type="submit" id="updateButton" class="inputs buttons">Update</button>
                 </div>
 
@@ -388,19 +387,22 @@ $today = date("Y-m-d");
 
                 var pagesOut = $("#pagesOut").val();
                 var pagesIn = $("#pagesIn").val();
-                $.ajax ({
-                    url: "php/modMathRatEst.php",
-                    method: "post",
-                    data: {pagesOut:pagesOut,
-                        mod1Out:mod1Out,
-                        mod2Out:mod2Out,
-                        pagesIn:pagesIn,
-                        mod2In:mod2In,
-                        fanfic:fanfic},
-                    success:function(result) {
-                        $("#modResults").html(result);
-                    }
-                })
+
+                if (pagesOut && pagesIn) {
+                    $.ajax ({
+                        url: "php/modMathRatEst.php",
+                        method: "post",
+                        data: {pagesOut:pagesOut,
+                            mod1Out:mod1Out,
+                            mod2Out:mod2Out,
+                            pagesIn:pagesIn,
+                            mod2In:mod2In,
+                            fanfic:fanfic},
+                        success:function(result) {
+                            $("#modResults").html(result);
+                        }
+                    })
+                }
             }
 
             function showDateFinished() {
