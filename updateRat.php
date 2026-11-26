@@ -222,7 +222,7 @@ $today = date("Y-m-d");
                 </div>
 
                 <div class="mod-wrapper-rat">
-                    <h3>Modifiers for pages read OUTSIDE read-a-thon</h2>
+                    <h2>Modifiers for pages read OUTSIDE read-a-thon</h2>
                     <div id="mod1-wrapper" class="mod-content">
                         <label for="mod-1-Out" class="labels">Modifier 1:</label>
                         <select name="mod-1-Out" id="mod-1-Out" class="inputs" onchange="check()">
@@ -254,7 +254,7 @@ $today = date("Y-m-d");
                 </div>
 
                 <div class="page-wrapper-rat">
-                    <h3 class="labels">Read DURING read-a-thon:</h3>
+                    <h2 class="labels">Read DURING read-a-thon:</h2>
                     <div class="label-wrapper">
                         <label for="pages" class="labels" id="fanficResultIn">Number of Pages:</label>
                         <span class="required">*</span>
