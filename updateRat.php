@@ -203,7 +203,7 @@ $today = date("Y-m-d");
                 </div>
 
                 <div class="page-wrapper-rat">
-                    <h3 class="labels">Read OUTSIDE read-a-thon:</>
+                    <h2 class="labels">Read OUTSIDE read-a-thon:</h2>
                     <div class="label-wrapper">
                         <label for="pages" class="labels" id="fanficResultOut">Number of Pages:</label>
                         <span class="required">*</span>
