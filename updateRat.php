@@ -221,8 +221,8 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
+                <h2>Modifiers for pages read OUTSIDE read-a-thon</h2>
                 <div class="mod-wrapper">
-                    <h2>Modifiers for pages read OUTSIDE read-a-thon</h2>
                     <div id="mod1-wrapper" class="mod-content">
                         <label for="mod-1-Out" class="labels">Modifier 1:</label>
                         <select name="mod-1-Out" id="mod-1-Out" class="inputs" onchange="check()">
@@ -272,8 +272,8 @@ $today = date("Y-m-d");
                     </div>
                 </div>
 
+                <h3>Modifiers for pages read DURING read-a-thon</h3>
                 <div class="mod-wrapper">
-                    <h3>Modifiers for pages read DURING read-a-thon</h3>
                     <div id="mod1-wrapper" class="mod-content">
                         <label for="mod-1-In" class="labels">Modifier 1:</label>
                         <select name="mod-1-In" id="mod-1-In" class="inputs">
