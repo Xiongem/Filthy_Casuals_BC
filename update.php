@@ -270,6 +270,7 @@ $today = date("Y-m-d");
                 <textarea name="comment" id="comment" class="inputs" placeholder="(Optional)" maxlength="200"></textarea>
 
                 <div class="button-wrapper">
+                    <a href="updateRat.php">Read both during and outside of RAT</a>
                     <button type="submit" id="updateButton" class="inputs buttons">Update</button>
                 </div>
 
