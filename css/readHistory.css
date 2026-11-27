@@ -115,20 +115,21 @@
         min-width: 8em;
     }
     .mod {
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
         width: 10em;
-        height: fit-content;
+        /* height: fit-content; */
+        text-align: center;
     }
-    .mod-item {
+    /* .mod-item {
         display: flex;
         justify-content: center;
         align-items: center;
         width: fit-content;
         height: fit-content;
-    }
+    } */
     .comment {
         min-width: 14em;
         overflow-wrap: break-word;
