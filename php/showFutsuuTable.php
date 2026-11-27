@@ -24,6 +24,9 @@ if($rowFutsuu > 0) {
         $idFutsuu = $rowFutsuu["user_id"];
         $usernameFutsuu = $rowFutsuu["username"];
         $pointsFutsuu = $rowFutsuu["pointsYear"];
+        $imageName = htmlspecialchars($rowYabai["pfpName"]);
+        $imageType = $rowYabai["pfpType"];
+        $imageData = base64_encode($rowYabai["pfpData"]);
         if (isset($rowFutsuu['color'])) {
             $color = $rowFutsuu['color'];
         } else {
@@ -34,6 +37,7 @@ if($rowFutsuu > 0) {
     <div class="table-rows">
         <div class="tr"><?=$rankFutsuu?></div>
         <div class="tr userLink" onclick="goUser('<?=$idFutsuu?>')" style="color: <?=$color?>">
+            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
             <?=$usernameFutsuu?>
         </div>
         <div class="tr"><?=$pointsFutsuu?></div>

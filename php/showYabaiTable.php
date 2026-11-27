@@ -24,19 +24,20 @@ if($rowYabai > 0) {
         $idYabai = $rowYabai["user_id"];
         $usernameYabai = $rowYabai["username"];
         $pointsYabai = $rowYabai["pointsYear"];
+        $imageName = htmlspecialchars($rowYabai["pfpName"]);
+        $imageType = $rowYabai["pfpType"];
+        $imageData = base64_encode($rowYabai["pfpData"]);
         if (isset($rowYabai['color'])) {
             $color = $rowYabai['color'];
         } else {
             $color = "#2b361c";
         }
-        // $imageName = htmlspecialchars($rowYabai["pfpName"]);
-        // $imageType = $rowYabai["pfpType"];
-        // $imageData = base64_encode($rowYabai["pfpData"]);
             $rankYabai++;
 ?>
     <div class="table-rows">
         <div class="tr"><?=$rankYabai?></div>
         <div class="tr userLink" onclick="goUser('<?=$idYabai?>')" style="color: <?=$color?>">
+            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
             <?=$usernameYabai?>
         </div>
         <div class="tr"><?=$pointsYabai?></div>

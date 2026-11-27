@@ -27,6 +27,9 @@ $league = $_POST["league"];
         $idLeague = $rowLeague['user_id'];
         $usernameLeague = $rowLeague["username"];
         $pointsLeague = $rowLeague["pointsYear"];
+        $imageName = htmlspecialchars($rowYabai["pfpName"]);
+        $imageType = $rowYabai["pfpType"];
+        $imageData = base64_encode($rowYabai["pfpData"]);
         if (isset($rowLeague['color'])) {
             $color = $rowLeague['color'];
         } else {
@@ -37,6 +40,7 @@ $league = $_POST["league"];
     <div class="table-rows">
         <div class="tr"><?=$rankLeague?></div>
         <div class="tr userLink" onclick="goUser('<?=$idLeague?>')" style="color: <?=$color?>">
+            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
             <?=$usernameLeague?>
         </div>
         <div class="tr"><?=$pointsLeague?></div>

@@ -24,6 +24,9 @@ if($rowHayai > 0) {
         $idHayai = $rowHayai["user_id"];
         $usernameHayai = $rowHayai["username"];
         $pointsHayai = $rowHayai["pointsYear"];
+        $imageName = htmlspecialchars($rowYabai["pfpName"]);
+        $imageType = $rowYabai["pfpType"];
+        $imageData = base64_encode($rowYabai["pfpData"]);
         if (isset($rowHayai['color'])) {
             $color = $rowHayai['color'];
         } else {
@@ -34,6 +37,7 @@ if($rowHayai > 0) {
     <div class="table-rows">
         <div class="tr"><?=$rankHayai?></div>
         <div class="tr userLink" onclick="goUser('<?=$idHayai?>')" style="color: <?=$color?>">
+            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
             <?=$usernameHayai?>
         </div>
         <div class="tr"><?=$pointsHayai?></div>

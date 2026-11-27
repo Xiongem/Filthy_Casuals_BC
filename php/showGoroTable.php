@@ -24,6 +24,9 @@ if($rowGoro > 0) {
         $idGoro = $rowGoro["user_id"];
         $usernameGoro = $rowGoro["username"];
         $pointsGoro = $rowGoro["pointsYear"];
+        $imageName = htmlspecialchars($rowYabai["pfpName"]);
+        $imageType = $rowYabai["pfpType"];
+        $imageData = base64_encode($rowYabai["pfpData"]);
         if (isset($rowGoro['color'])) {
             $color = $rowGoro['color'];
         } else {
@@ -34,6 +37,7 @@ if($rowGoro > 0) {
     <div class="table-rows">
         <div class="tr"><?=$rankGoro?></div>
         <div class="tr userLink" onclick="goUser('<?=$idGoro?>')" style="color: <?=$color?>">
+            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
             <?=$usernameGoro?>
         </div>
         <div class="tr"><?=$pointsGoro?></div>
