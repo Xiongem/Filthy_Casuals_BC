@@ -118,73 +118,14 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                         $readID = $readHistory["read_ID"];
                         $title = $readHistory['title'];
                         $author = $readHistory['author'];
-                        $finishedDate = $readHistory['finishedDate'];
-                        if ($readHistory['startedDate'] == "0000-00-00") {
-                            $startedDate = '--';
+                        $date = strtotime($readHistory['finishedDate']);
+                        $finishedDate = date("Y-m-d H:i", $date);
+                        if ($readHistory['startedDate'] == "0000-00-00" || $readHistory['startedDate'] == NULL) {
+                            $startedDate = '- -';
                         } else {
                             $startedDate = $readHistory['startedDate'];
                         }
                         $pages = $readHistory['pages'];
-                        $mod1 = $readHistory['mod1'];
-                        switch ($mod1) {
-                            case 1:
-                                $mod1 = "normal";
-                                break;
-                            case 2:
-                                $mod1 = "manga/comic";
-                                break;
-                            case 3:
-                                $mod1 = "challenge";
-                                break;
-                            case 4:
-                                $mod1 = "challenge: manga/comic";
-                                break;
-                            case 5:
-                                $mod1 = "buddy read";
-                                break;
-                            case 6:
-                                $mod1 = "friend rec";
-                                break;
-                            case 7:
-                                $mod1 = "seasonal";
-                                break;
-                            case 8:
-                                $mod1 = "read-a-thon";
-                                break;
-                            case 9:
-                                $mod1 = "educational";
-                                break;
-                            case 10:
-                                $mod1 = "educational: manga/comic";
-                                break;
-                        }
-                        $mod2 = $readHistory['mod2'];
-                        switch ($mod2) {
-                            case 1:
-                                $mod2 = "normal";
-                                break;
-                            case 2:
-                                $mod2 = "challenge";
-                                break;
-                            case 3:
-                                $mod2 = "buddy read";
-                                break;
-                            case 4:
-                                $mod2 = "friend rec";
-                                break;
-                            case 5:
-                                $mod2 = "seasonal";
-                                break;
-                            case 6:
-                                $mod2 = "read-a-thon";
-                                break;
-                            case 7:
-                                $mod2 = "educational";
-                                break;
-                            case 8:
-                                $mod2 = "educational: manga/comic";
-                                break;
-                        }
 
                         $ongoing = $readHistory['ongoing'];
                         if ($readHistory['tags'] !== NULL) {
@@ -204,8 +145,6 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                         } else {
                             $comment = '';
                         }
-
-                        $totalPoints = $readHistory['totalPoints'];  
 
                         $month = $readHistory['month'];
                         switch ($month) {
@@ -249,14 +188,12 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                                 $tableMonth = $month;
                                 break;
                         }
+                        $totalPoints = $readHistory['totalPoints'];  
+                        $rat = $readHistory['rat'];
                 ?>
                     <div class="row" id="<?= $readID ?>">
                         <?php if ($userID === $ID || $admin == 1) { 
-                            if ($bingo == 1 || $friendRec == 1) {?>
-                                <a class="edit" id="edit" href="#" onclick="showDeletePopup(<?=$readID?>, <?=$ID?>)">
-                                    <ion-icon name="remove-circle" id="delete-icon"></ion-icon>
-                                </a>
-                            <?php } elseif ($rat == 1) { ?>
+                            if ($rat == 1) { ?>
                                 <a class="edit" id="edit" href="readEditRat.php?read_ID=<?=$readID?>&user_ID=<?=$ID?>">
                                     <ion-icon name="settings" id="edit-icon"></ion-icon>
                                 </a>
@@ -277,10 +214,147 @@ $sql = "SELECT * FROM users WHERE user_id = $ID";
                         <div class="table-item date"> <?= htmlspecialchars($startedDate) ?> </div>
                         <div class="table-item date"> <?= htmlspecialchars($finishedDate) ?></div>
                         <div class="table-item ongoing"> <?= $ongoingChecked ?> </div>
+                        <?php if ($readHistory["rat"] == 1) {
+                            $mod1 = explode(",", $readHistory['mod1']);
+                            $mod2 = explode(",", $readHistory['mod2']);
+                            ?>
+
+                            <div class="table-item mod">
+                            <?php
+                            foreach ($mod1 as $key => $value1) {
+                                switch ($value1) {
+                                    case 1:
+                                        $mod1 = "normal";
+                                        break;
+                                    case 2:
+                                        $mod1 = "manga/comic";
+                                        break;
+                                    case 3:
+                                        $mod1 = "challenge";
+                                        break;
+                                    case 4:
+                                        $mod1 = "challenge: manga/comic";
+                                        break;
+                                    case 5:
+                                        $mod1 = "buddy read";
+                                        break;
+                                    case 6:
+                                        $mod1 = "friend rec";
+                                        break;
+                                    case 7:
+                                        $mod1 = "seasonal";
+                                        break;
+                                    case 8:
+                                        $mod1 = "read-a-thon";
+                                        break;
+                                    case 9:
+                                        $mod1 = "educational";
+                                        break;
+                                    case 10:
+                                        $mod1 = "educational: manga/comic";
+                                        break;
+                                }?>
+                                    <p class="mod-item"><?=htmlspecialchars($mod1)?></p>
+                            <?php }?>
+                            </div>
+                            <div class="table-item mod">
+                            <?php 
+                            foreach ($mod2 as $key => $value2) {
+                                switch ($value2) {
+                                    case 1:
+                                        $mod2 = "normal";
+                                        break;
+                                    case 2:
+                                        $mod2 = "challenge";
+                                        break;
+                                    case 3:
+                                        $mod2 = "buddy read";
+                                        break;
+                                    case 4:
+                                        $mod2 = "friend rec";
+                                        break;
+                                    case 5:
+                                        $mod2 = "seasonal";
+                                        break;
+                                    case 6:
+                                        $mod2 = "read-a-thon";
+                                        break;
+                                    case 7:
+                                        $mod2 = "educational";
+                                        break;
+                                    case 8:
+                                        $mod2 = "educational: manga/comic";
+                                        break;
+                                }?>
+                                <p class="mod-item"><?=htmlspecialchars($mod2)?></p>
+                            <?php } ?>
+                            </div>
+                        <?php } else {
+                            $mod1 = $readHistory['mod1'];
+                            switch ($mod1) {
+                                case 1:
+                                    $mod1 = "normal";
+                                    break;
+                                case 2:
+                                    $mod1 = "manga/comic";
+                                    break;
+                                case 3:
+                                    $mod1 = "challenge";
+                                    break;
+                                case 4:
+                                    $mod1 = "challenge: manga/comic";
+                                    break;
+                                case 5:
+                                    $mod1 = "buddy read";
+                                    break;
+                                case 6:
+                                    $mod1 = "friend rec";
+                                    break;
+                                case 7:
+                                    $mod1 = "seasonal";
+                                    break;
+                                case 8:
+                                    $mod1 = "read-a-thon";
+                                    break;
+                                case 9:
+                                    $mod1 = "educational";
+                                    break;
+                                case 10:
+                                    $mod1 = "educational: manga/comic";
+                                    break;
+                            }
+                            $mod2 = $readHistory['mod2'];
+                            switch ($mod2) {
+                                case 1:
+                                    $mod2 = "normal";
+                                    break;
+                                case 2:
+                                    $mod2 = "challenge";
+                                    break;
+                                case 3:
+                                    $mod2 = "buddy read";
+                                    break;
+                                case 4:
+                                    $mod2 = "friend rec";
+                                    break;
+                                case 5:
+                                    $mod2 = "seasonal";
+                                    break;
+                                case 6:
+                                    $mod2 = "read-a-thon";
+                                    break;
+                                case 7:
+                                    $mod2 = "educational";
+                                    break;
+                                case 8:
+                                    $mod2 = "educational: manga/comic";
+                                    break;
+                            }?>
                         <div class="table-item mod"> <?= $mod1 ?> </div>
                         <div class="table-item mod"> <?= $mod2 ?> </div>
+                        <?php } ?>
                         <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
-                        <div class="table-item comment"> <?= htmlspecialchars($comment) ?> </div>
+                        <div class="table-item comment"> <?= htmlspecialchars($comment) ?></div>
                     </div>
                     <div class="notch-wrapper" id="notchWrapper">
                         <?php if (isset($readHistory['tags'])) { ?>
