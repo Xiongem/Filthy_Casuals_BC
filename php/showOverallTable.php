@@ -24,6 +24,9 @@ dbConnect();
         $idOverall = $rowOverall["user_id"];
         $usernameOverall = $rowOverall["username"];
         $pointsOverall = $rowOverall["pointsYear"];
+        $imageName = htmlspecialchars($rowOverall['pfpName']);
+        $imageType = $rowOverall['pfpType'];
+        $imageData = base64_encode($rowOverall['pfpData']);
         if (isset($rowOverall['color'])) {
             $color = $rowOverall['color'];
         } else {
@@ -35,6 +38,7 @@ dbConnect();
     <div class="table-rows">
         <div class="tr"><?=$rankOverall?></div>
         <div class="tr userLink" onclick="goUser('<?=$idOverall?>')" style="color: <?=$color?>">
+            <img class="tablePfp" src="data:<?=$imageType?>;base64,<?=$imageData?>" alt="<?=$imageName?>">
             <?=$usernameOverall?>
         </div>
         <div class="tr"><?=$pointsOverall?></div>
