@@ -123,6 +123,9 @@
         height: fit-content;
     }
     .mod-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: fit-content;
         height: fit-content;
     }
