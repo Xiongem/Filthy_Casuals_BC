@@ -123,7 +123,6 @@ if($row>0) {
         <?php if ($readHistory["rat"] == 1) {
             $mod1 = explode(",", $readHistory['mod1']);
             $mod2 = explode(",", $readHistory['mod2']);
-            print_r($mod1);
             ?>
 
             <div class="table-item mod">
@@ -161,7 +160,7 @@ if($row>0) {
                         $mod1 = "educational: manga/comic";
                         break;
                 }?>
-                    <?=$mod1?>
+                    <?=htmlspecialchars($mod1)?>
             <?php }?>
             </div>
             <div class="table-item mod">
@@ -193,7 +192,7 @@ if($row>0) {
                         $mod2 = "educational: manga/comic";
                         break;
                 }?>
-                    <?=$mod2?>
+                    <?=htmlspecialchars($mod2)?>
             <?php } ?>
             </div>
         <?php } else {
