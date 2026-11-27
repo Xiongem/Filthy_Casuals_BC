@@ -232,7 +232,90 @@ if ($fanfic ==1) {
                 </div>
             </div>
 
-            
+            <div class="spacing">
+                <h3>Modifiers for pages read OUTSIDE read-a-thon</h3>
+                <!--//? 1ST MODIFIER SELECTOR -->
+                <div class="mod-wrapper">
+                    <div id="mod1-wrapper" class="mod-content">
+                        <label for="mod-1-Out" class="labels">Modifier 1:</label>
+                        <select name="mod-1-Out" id="mod-1-Out" class="inputs" onchange="check()">
+                            <option value="1" <?php if($mod1Out==1){ ?>selected="selected"<?php } ?>>Normal</option>
+                            <option value="2" <?php if($mod1Out==2){ ?>selected="selected"<?php } ?>>Manga/Comic</option>
+                            <option value="3" <?php if($mod1Out==3){ ?>selected="selected"<?php } ?>>Challenge</option>
+                            <option value="4" <?php if($mod1Out==4){ ?>selected="selected"<?php } ?>>Challenge: Manga/Comics</option>
+                            <option value="5" <?php if($mod1Out==5){ ?>selected="selected"<?php } ?>>Buddy Read</option>
+                            <option value="6" <?php if($mod1Out==6){ ?>selected="selected"<?php } ?>>Friend Recommendation</option>
+                            <option value="7" <?php if($mod1Out==7){ ?>selected="selected"<?php } ?>>Seasonal</option>
+                            <option value="9" <?php if($mod1Out==9){ ?>selected="selected"<?php } ?>>Educational</option>
+                            <option value="10" <?php if($mod1Out==10){ ?>selected="selected"<?php } ?>>Educational: Manga/Comics</option>
+                        </select>
+                    </div>
+
+                    <!--//? 2ND MODIFIER SELECTOR -->
+                    <div id="mod2-wrapper" class="mod-content">
+                        <label for="mod-2-Out" class="labels">Modifier 2:</label>
+                        <select name="mod-2-Out" id="mod-2-Out" class="inputs" onchange="check()">
+                            <option value="1" <?php if($mod2Out==1){ ?>selected="selected"<?php } ?>>Normal</option>
+                            <option value="2" <?php if($mod2Out==2){ ?>selected="selected"<?php } ?>>Challenge</option>
+                            <option value="3" <?php if($mod2Out==3){ ?>selected="selected"<?php } ?>>Buddy Read</option>
+                            <option value="4" <?php if($mod2Out==4){ ?>selected="selected"<?php } ?>>Friend Recommendation</option>
+                            <option value="5" <?php if($mod2Out==5){ ?>selected="selected"<?php } ?>>Seasonal</option>
+                            <option value="7" <?php if($mod2Out==7){ ?>selected="selected"<?php } ?>>Educational</option>
+                            <option value="8" <?php if($mod2Out==8){ ?>selected="selected"<?php } ?>>Educational: Manga/Comics</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacing">
+                <div class="page-wrapper-rat">
+                    <h2>Read DURING read-a-thon:</h2>
+                    <div class="label-wrapper">
+                        <label for="pages" class="labels" id="fanficResultIn">Number of Pages:</label>
+                        <span class="required">*</span>
+                    </div>
+                    <div id="pageWrapperRat">
+                        <div id="showFanficWarnIn"></div>
+                        <input type="text"
+                            name="pagesIn"
+                            id="pagesIn"
+                            class="inputs"
+                            pattern="^\d+(,\d+)?$"
+                            value="<?=$pagesIn?>"
+                            maxlength="10"
+                            onkeyup="check()"
+                            required>
+                        <div id="fanficMathResultIn"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacing">
+                <h3>Modifiers for pages read DURING read-a-thon</h3>
+                <!--//? 1ST MODIFIER SELECTOR -->
+                <div class="mod-wrapper">
+                    <div id="mod1-wrapper" class="mod-content">
+                        <label for="mod-1-In" class="labels">Modifier 1:</label>
+                        <select name="mod-1-In" id="mod-1-In" class="inputs" onchange="check()">
+                            <option value="8">Read-a-thon</option>
+                        </select>
+                    </div>
+
+                    <!--//? 2ND MODIFIER SELECTOR -->
+                    <div id="mod2-wrapper" class="mod-content">
+                        <label for="mod-2-In" class="labels">Modifier 2:</label>
+                        <select name="mod-2-In" id="mod-2-In" class="inputs" onchange="check()">
+                            <option value="1" <?php if($mod2In==1){ ?>selected="selected"<?php } ?>>Normal</option>
+                            <option value="2" <?php if($mod2In==2){ ?>selected="selected"<?php } ?>>Challenge</option>
+                            <option value="3" <?php if($mod2In==3){ ?>selected="selected"<?php } ?>>Buddy Read</option>
+                            <option value="4" <?php if($mod2In==4){ ?>selected="selected"<?php } ?>>Friend Recommendation</option>
+                            <option value="5" <?php if($mod2In==5){ ?>selected="selected"<?php } ?>>Seasonal</option>
+                            <option value="7" <?php if($mod2In==7){ ?>selected="selected"<?php } ?>>Educational</option>
+                            <option value="8" <?php if($mod2In==8){ ?>selected="selected"<?php } ?>>Educational: Manga/Comics</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
             <div class="bingo-wrapper hide" id="bingo">
                 <div class="label-wrapper" id="bingoCheckbox">
