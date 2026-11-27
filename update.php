@@ -271,7 +271,7 @@ $today = date("Y-m-d");
 
                 <div class="button-wrapper-rat">
                     <a href="updateRat.php">Read both during and outside of RAT</a>
-                    <button type="submit" id="updateButton" class="inputs buttons">Update</button>
+                    <button type="submit" id="updateButton" class="buttons">Update</button>
                 </div>
 
             </form>
