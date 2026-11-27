@@ -28,6 +28,12 @@ $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID
         list($mod2Out, $mod2In) = explode(",", $read["mod2"]);
         $fanfic = $read["fanfic"];
         $words = $read["words"];
+        if (isset($read["bingo_name"])) {
+            $bingo = $read["bingo_name"];
+        } else {
+            $bingo = NULL;
+        }
+        
 
 $sql2 = "SELECT * FROM `bingoNames` WHERE `active` = 1";
 $result2 = $_SESSION["conn"]->query($sql2);
@@ -68,7 +74,6 @@ if ($fanfic ==1) {
         $pages = $words;
     }
 }
-echo $activeName;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -327,7 +332,7 @@ echo $activeName;
                             name="bingoName"
                             id="bingo"
                             class="checkbox" value="<?=$activeName?>"
-                    <?php if($activeName !== NULL){?>checked="checked"<?php } ?>> 
+                    <?php if($bingo !== NULL){?>checked="checked"<?php } ?>> 
                 </div>
             </div>
 
