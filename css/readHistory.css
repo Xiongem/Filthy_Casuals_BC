@@ -120,6 +120,7 @@
         justify-content: center;
         align-items: center;
         width: 10em;
+        height: fit-content;
     }
     .mod-item {
         width: fit-content;
