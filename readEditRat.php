@@ -68,6 +68,7 @@ if ($fanfic ==1) {
         $pages = $words;
     }
 }
+echo $activeName;
 ?>
 <!DOCTYPE html>
 <html lang="en">
