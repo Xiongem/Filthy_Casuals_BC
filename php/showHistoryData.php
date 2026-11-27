@@ -123,12 +123,12 @@ if($row>0) {
         <?php if ($readHistory["rat"] == 1) {
             $mod1 = explode(",", $readHistory['mod1']);
             $mod2 = explode(",", $readHistory['mod2']);
+            print_r($mod1);
             ?>
 
             <div class="table-item mod">
             <?php
             foreach ($mod1 as $key => $value1) {
-                echo $value1;
                 switch ($value1) {
                     case 1:
                         $mod1 = "normal";
