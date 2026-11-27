@@ -378,6 +378,7 @@ $today = date("Y-m-d");
 
                 var mod1Out = $("#mod-1-Out").val();
                 var mod2Out = $("#mod-2-Out").val();
+                var mod1In = $("#mod-1-In").val();
                 var mod2In = $("#mod-2-In").val();
                 if (active == 1) {
                     if (mod1Out == "3" || mod1Out == "4" || mod2Out == "2" ||  mod2In == "2") {
