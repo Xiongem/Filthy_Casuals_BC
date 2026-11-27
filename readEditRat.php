@@ -317,6 +317,8 @@ if ($fanfic ==1) {
                 </div>
             </div>
 
+            <div id="modResults"></div>
+
             <div class="bingo-wrapper hide" id="bingo">
                 <div class="label-wrapper" id="bingoCheckbox">
                     <label class="labels">Counts towards bingo?</label>
