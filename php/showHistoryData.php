@@ -128,6 +128,7 @@ if($row>0) {
             <div class="table-item mod">
             <?php
             foreach ($mod1 as $key => $value1) {
+                echo $value1;
                 switch ($value1) {
                     case 1:
                         $mod1 = "normal";
@@ -260,7 +261,7 @@ if($row>0) {
         <div class="table-item mod"> <?= $mod2 ?> </div>
         <?php } ?>
         <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
-        <div class="table-item comment"> <?= htmlspecialchars($comment) ?> </div>
+        <div class="table-item comment"> <?= htmlspecialchars($comment) ?></div>
     </div>
     <!-- <div class="overflow-wrapper"> -->
         <div class="notch-wrapper" id="notchWrapper">
