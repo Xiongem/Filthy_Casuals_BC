@@ -328,12 +328,12 @@ if ($fanfic ==1) {
             <div class="bingo-wrapper hide" id="bingo">
                 <div class="label-wrapper" id="bingoCheckbox">
                     <label class="labels">Counts towards bingo?</label>
-                    <input type="checkbox"
-                            name="bingoName"
-                            id="bingo"
-                            class="checkbox" value="<?=$activeName?>"
-                    <?php if($bingo !== NULL){?>checked="checked"<?php } ?>> 
                 </div>
+                <input type="checkbox"
+                        name="bingoName"
+                        id="bingo"
+                        class="checkbox" value="<?=$activeName?>"
+                <?php if($bingo !== NULL){?>checked="checked"<?php } ?>> 
             </div>
 
             <!--//? COMMENTS -->
