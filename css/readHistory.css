@@ -115,10 +115,10 @@
         min-width: 8em;
     }
     .mod {
-        /* display: flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; */
+        align-items: center;
         width: 10em;
         /* height: fit-content; */
         text-align: center;
