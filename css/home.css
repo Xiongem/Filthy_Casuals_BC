@@ -149,7 +149,7 @@
         height: 1.5em;
         border-radius: 50%;
         object-fit: cover;
-        /* background-color: var(--leather); */
+        background-color: var(--barium-yellow);
         border: 2px solid var(--marine-green);
         margin-right: 0.5em;
     }
