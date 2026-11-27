@@ -178,28 +178,167 @@ if ($row > 0) {
                 <ion-icon name="lock-closed" id="close-icon"></ion-icon>
             </div>
         <?php }?>
-        <div class="table-item month"> <?= htmlspecialchars($tableMonth) ?> </div>
-        <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
-        <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
-        <div class="table-item pages"> <?= htmlspecialchars($pages) ?> </div>
-        <div class="table-item date"> <?= htmlspecialchars($startedDate) ?> </div>
-        <div class="table-item date"> <?= htmlspecialchars($finishedDate) ?></div>
-        <div class="table-item ongoing"> <?= $ongoingChecked ?> </div>
-        <div class="table-item mod"> <?= $mod1 ?> </div>
-        <div class="table-item mod"> <?= $mod2 ?> </div>
-        <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
-        <div class="table-item comment"> <?= htmlspecialchars($comment) ?> </div>
-    </div>
-    <div class="notch-wrapper" id="notchWrapper">
-        <?php if (isset($readHistory['tags'])) { ?>
-            <?php foreach ($tags as $key => $value) { 
-                $tagName = str_replace('_', ' ', $value);//removes underscore from visible part of tag?>
-                <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>">
-                    <p class='tag-content' id='tagContent'><?= htmlspecialchars($tagName) ?></p>
+            <div class="table-item month"> <?= htmlspecialchars($tableMonth) ?> </div>
+            <div class="table-item title"> <?= htmlspecialchars($title) ?> </div>
+            <div class="table-item author"> <?= htmlspecialchars($author) ?> </div>
+            <div class="table-item pages"> <?= htmlspecialchars($pages) ?> </div>
+            <div class="table-item date"> <?= htmlspecialchars($startedDate) ?> </div>
+            <div class="table-item date"> <?= htmlspecialchars($finishedDate) ?></div>
+            <div class="table-item ongoing"> <?= $ongoingChecked ?> </div>
+            <?php if ($readHistory["rat"] == 1) {
+                $mod1 = explode(",", $readHistory['mod1']);
+                $mod2 = explode(",", $readHistory['mod2']);
+                ?>
+
+                <div class="table-item mod">
+                <?php
+                foreach ($mod1 as $key => $value1) {
+                    switch ($value1) {
+                        case 1:
+                            $mod1 = "normal";
+                            break;
+                        case 2:
+                            $mod1 = "manga/comic";
+                            break;
+                        case 3:
+                            $mod1 = "challenge";
+                            break;
+                        case 4:
+                            $mod1 = "challenge: manga/comic";
+                            break;
+                        case 5:
+                            $mod1 = "buddy read";
+                            break;
+                        case 6:
+                            $mod1 = "friend rec";
+                            break;
+                        case 7:
+                            $mod1 = "seasonal";
+                            break;
+                        case 8:
+                            $mod1 = "read-a-thon";
+                            break;
+                        case 9:
+                            $mod1 = "educational";
+                            break;
+                        case 10:
+                            $mod1 = "educational: manga/comic";
+                            break;
+                    }?>
+                        <p class="mod-item"><?=htmlspecialchars($mod1)?></p>
+                <?php }?>
                 </div>
+                <div class="table-item mod">
+                <?php 
+                foreach ($mod2 as $key => $value2) {
+                    switch ($value2) {
+                        case 1:
+                            $mod2 = "normal";
+                            break;
+                        case 2:
+                            $mod2 = "challenge";
+                            break;
+                        case 3:
+                            $mod2 = "buddy read";
+                            break;
+                        case 4:
+                            $mod2 = "friend rec";
+                            break;
+                        case 5:
+                            $mod2 = "seasonal";
+                            break;
+                        case 6:
+                            $mod2 = "read-a-thon";
+                            break;
+                        case 7:
+                            $mod2 = "educational";
+                            break;
+                        case 8:
+                            $mod2 = "educational: manga/comic";
+                            break;
+                    }?>
+                    <p class="mod-item"><?=htmlspecialchars($mod2)?></p>
+                <?php } ?>
+                </div>
+            <?php } else {
+                $mod1 = $readHistory['mod1'];
+                switch ($mod1) {
+                    case 1:
+                        $mod1 = "normal";
+                        break;
+                    case 2:
+                        $mod1 = "manga/comic";
+                        break;
+                    case 3:
+                        $mod1 = "challenge";
+                        break;
+                    case 4:
+                        $mod1 = "challenge: manga/comic";
+                        break;
+                    case 5:
+                        $mod1 = "buddy read";
+                        break;
+                    case 6:
+                        $mod1 = "friend rec";
+                        break;
+                    case 7:
+                        $mod1 = "seasonal";
+                        break;
+                    case 8:
+                        $mod1 = "read-a-thon";
+                        break;
+                    case 9:
+                        $mod1 = "educational";
+                        break;
+                    case 10:
+                        $mod1 = "educational: manga/comic";
+                        break;
+                }
+                $mod2 = $readHistory['mod2'];
+                switch ($mod2) {
+                    case 1:
+                        $mod2 = "normal";
+                        break;
+                    case 2:
+                        $mod2 = "challenge";
+                        break;
+                    case 3:
+                        $mod2 = "buddy read";
+                        break;
+                    case 4:
+                        $mod2 = "friend rec";
+                        break;
+                    case 5:
+                        $mod2 = "seasonal";
+                        break;
+                    case 6:
+                        $mod2 = "read-a-thon";
+                        break;
+                    case 7:
+                        $mod2 = "educational";
+                        break;
+                    case 8:
+                        $mod2 = "educational: manga/comic";
+                        break;
+                }?>
+            <div class="table-item mod"> <?= $mod1 ?> </div>
+            <div class="table-item mod"> <?= $mod2 ?> </div>
             <?php } ?>
-        <?php } ?>
-    </div>
-<?php }} else { ?>
-    <div class="not-found">No Reading History Found</div>       
-<?php } ?>
+            <div class="table-item points"> <?= htmlspecialchars($totalPoints) ?> </div>
+            <div class="table-item comment"> <?= htmlspecialchars($comment) ?></div>
+        </div>
+        <!-- <div class="overflow-wrapper"> -->
+            <div class="notch-wrapper" id="notchWrapper">
+                <?php if (isset($readHistory['tags'])) { ?>
+                    <?php foreach ($tags as $key => $value) { 
+                        $tagName = str_replace('_', ' ', $value);//removes underscore from visible part of tag?>
+                        <div class="notch-arrow" id="<?= htmlspecialchars($value) ?>">
+                            <p class='tag-content' id='tagContent'><?= htmlspecialchars($tagName) ?></p>
+                        </div>
+                    <?php } ?>
+                <?php } ?>
+            </div>
+        <!-- </div> -->
+    <?php }} else { ?>
+        <div class="not-found">No Reading History Found</div>       
+    <?php } ?>
