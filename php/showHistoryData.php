@@ -97,6 +97,7 @@ if($row>0) {
         $totalPoints = $readHistory['totalPoints']; 
         $bingo = $readHistory['bingo']; 
         $friendRec = $readHistory['friend_rec']; 
+        $rat = $readHistory['rat'];
     ?>
     <div class="row" id="<?= $readID ?>">
         <?php if ($userID === $ID || $admin == 1) { 
@@ -104,11 +105,16 @@ if($row>0) {
                 <a class="edit" id="edit" href="#" onclick="showDeletePopup(<?=$readID?>, <?=$ID?>)">
                     <ion-icon name="remove-circle" id="delete-icon"></ion-icon>
                 </a>
+            <?php } elseif ($rat == 1) { ?>
+                <a class="edit" id="edit" href="readEditRat.php?read_ID=<?=$readID?>&user_ID=<?=$ID?>">
+                    <ion-icon name="settings" id="edit-icon"></ion-icon>
+                </a>
             <?php } else { ?>
-            <a class="edit" id="edit" href="readEdit.php?read_ID=<?=$readID?>&user_ID=<?=$ID?>">
-                <ion-icon name="settings" id="edit-icon"></ion-icon>
-            </a>
-        <?php }} else { ?>
+                <a class="edit" id="edit" href="readEdit.php?read_ID=<?=$readID?>&user_ID=<?=$ID?>">
+                    <ion-icon name="settings" id="edit-icon"></ion-icon>
+                </a>
+            <?php }
+        } else { ?>
             <div class="edit" id="edit">
                 <ion-icon name="lock-closed" id="close-icon"></ion-icon>
             </div>

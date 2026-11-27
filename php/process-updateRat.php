@@ -138,8 +138,10 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                                                                 `bingo_name`,
                                                                 `totalPoints`,
                                                                 `year`,
-                                                                `rat`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt1->bind_param("isssssiiiissssisisi",
+                                                                `rat`,
+                                                                `pagesOut`,
+                                                                `pagesIn`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt1->bind_param("isssssiiiissssisisiii",
                         $userID,
                         $user["username"],
                         $_POST["title"],
@@ -158,7 +160,9 @@ $stmt1 = $_SESSION["conn"] -> prepare("INSERT INTO `readHistory` (`user_id`,
                         $bingoName,
                         $totalPoints,
                         $year,
-                        $rat);
+                        $rat,
+                        $pagesOut,
+                        $pagesIn);
 
 if ($stmt1 -> execute() && $stmt1 -> affected_rows > 0) {
     $newPointsYear = $yearTotal + $totalPoints;
