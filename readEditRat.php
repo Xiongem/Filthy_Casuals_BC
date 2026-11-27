@@ -68,5 +68,5 @@ if ($fanfic ==1) {
         $pages = $words;
     }
 }
-
+ echo $mod1Out;
 ?>
