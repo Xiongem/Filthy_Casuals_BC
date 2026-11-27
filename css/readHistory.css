@@ -121,6 +121,10 @@
         align-items: center;
         width: 10em;
     }
+    .mod-item {
+        width: fit-content;
+        height: fit-content;
+    }
     .comment {
         min-width: 14em;
         overflow-wrap: break-word;
