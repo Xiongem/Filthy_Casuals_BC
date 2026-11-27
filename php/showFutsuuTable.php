@@ -24,9 +24,9 @@ if($rowFutsuu > 0) {
         $idFutsuu = $rowFutsuu["user_id"];
         $usernameFutsuu = $rowFutsuu["username"];
         $pointsFutsuu = $rowFutsuu["pointsYear"];
-        $imageName = htmlspecialchars($rowYabai["pfpName"]);
-        $imageType = $rowYabai["pfpType"];
-        $imageData = base64_encode($rowYabai["pfpData"]);
+        $imageName = htmlspecialchars($rowFutsuu["pfpName"]);
+        $imageType = $rowFutsuu["pfpType"];
+        $imageData = base64_encode($rowFutsuu["pfpData"]);
         if (isset($rowFutsuu['color'])) {
             $color = $rowFutsuu['color'];
         } else {

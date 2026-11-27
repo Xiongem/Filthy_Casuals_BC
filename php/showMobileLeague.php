@@ -27,9 +27,9 @@ $league = $_POST["league"];
         $idLeague = $rowLeague['user_id'];
         $usernameLeague = $rowLeague["username"];
         $pointsLeague = $rowLeague["pointsYear"];
-        $imageName = htmlspecialchars($rowYabai["pfpName"]);
-        $imageType = $rowYabai["pfpType"];
-        $imageData = base64_encode($rowYabai["pfpData"]);
+        $imageName = htmlspecialchars($rowLeague["pfpName"]);
+        $imageType = $rowLeague["pfpType"];
+        $imageData = base64_encode($rowLeague["pfpData"]);
         if (isset($rowLeague['color'])) {
             $color = $rowLeague['color'];
         } else {

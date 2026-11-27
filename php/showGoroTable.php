@@ -24,9 +24,9 @@ if($rowGoro > 0) {
         $idGoro = $rowGoro["user_id"];
         $usernameGoro = $rowGoro["username"];
         $pointsGoro = $rowGoro["pointsYear"];
-        $imageName = htmlspecialchars($rowYabai["pfpName"]);
-        $imageType = $rowYabai["pfpType"];
-        $imageData = base64_encode($rowYabai["pfpData"]);
+        $imageName = htmlspecialchars($rowGoro["pfpName"]);
+        $imageType = $rowGoro["pfpType"];
+        $imageData = base64_encode($rowGoro["pfpData"]);
         if (isset($rowGoro['color'])) {
             $color = $rowGoro['color'];
         } else {

@@ -24,9 +24,9 @@ if($rowHayai > 0) {
         $idHayai = $rowHayai["user_id"];
         $usernameHayai = $rowHayai["username"];
         $pointsHayai = $rowHayai["pointsYear"];
-        $imageName = htmlspecialchars($rowYabai["pfpName"]);
-        $imageType = $rowYabai["pfpType"];
-        $imageData = base64_encode($rowYabai["pfpData"]);
+        $imageName = htmlspecialchars($rowHayai["pfpName"]);
+        $imageType = $rowHayai["pfpType"];
+        $imageData = base64_encode($rowHayai["pfpData"]);
         if (isset($rowHayai['color'])) {
             $color = $rowHayai['color'];
         } else {
