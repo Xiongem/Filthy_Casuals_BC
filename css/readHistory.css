@@ -123,13 +123,14 @@
         /* height: fit-content; */
         text-align: center;
     }
-    /* .mod-item {
+    .mod-item {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: fit-content;
-        height: fit-content;
-    } */
+        margin: 0.5em 0;
+        /* width: fit-content;
+        height: fit-content; */
+    }
     .comment {
         min-width: 14em;
         overflow-wrap: break-word;

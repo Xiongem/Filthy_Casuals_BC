@@ -160,7 +160,7 @@ if($row>0) {
                         $mod1 = "educational: manga/comic";
                         break;
                 }?>
-                    <p><?=htmlspecialchars($mod1)?></p>
+                    <p class="mod-item"><?=htmlspecialchars($mod1)?></p>
             <?php }?>
             </div>
             <div class="table-item mod">
@@ -192,7 +192,7 @@ if($row>0) {
                         $mod2 = "educational: manga/comic";
                         break;
                 }?>
-                <p><?=htmlspecialchars($mod2)?></p>
+                <p class="mod-item"><?=htmlspecialchars($mod2)?></p>
             <?php } ?>
             </div>
         <?php } else {
