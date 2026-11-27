@@ -6,7 +6,7 @@ ini_set('error_log', '/path/to/php_errors.log');
 
 ob_start();
 require($_SERVER['DOCUMENT_ROOT'] . '/php/utilities.php');
-require($_SERVER['DOCUMENT_ROOT'] . '/php/modMath.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/php/modMathRat.php');
 dbConnect();
 
 //assign data for user ID and entry ID to variables
