@@ -24,8 +24,8 @@ $sql = "SELECT * FROM `readHistory` WHERE `user_id` = $ID  AND read_ID = $readID
         $pagesOut = $read["pagesOut"];
         $pagesIn = $read["pagesIn"];
         $ongoing = $read["ongoing"];
-        list($mod1Out, $mod1In) = explode(",", $read["mod1"]);
-        list($mod2Out, $mod2In) = explode(",", $read["mod2"]);
+        // list($mod1Out, $mod1In) = explode(",", $read["mod1"]);
+        // list($mod2Out, $mod2In) = explode(",", $read["mod2"]);
         $fanfic = $read["fanfic"];
         $words = $read["words"];
 
