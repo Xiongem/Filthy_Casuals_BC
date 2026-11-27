@@ -446,7 +446,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        padding-top: 3em;
+        padding: 3em 0;
     }
     .user-title-wrapper {
         display: grid;
